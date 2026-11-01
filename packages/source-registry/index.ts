@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { z } from "zod";
+import { validateSourceReplacements } from "./replacements.js";
 import {
   sourceSchema,
   type Source,
@@ -126,6 +127,8 @@ export async function loadRegistry() {
         `CSDN feeds require account-scoped entry and article path: ${s.id}`,
       );
   }
-  return { sources, companies, publishers };
+  const registry = { sources, companies, publishers };
+  validateSourceReplacements(registry);
+  return registry;
 }
 export type Registry = Awaited<ReturnType<typeof loadRegistry>>;

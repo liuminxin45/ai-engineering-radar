@@ -178,7 +178,10 @@ describe("adapters", () => {
     const result = parseMetadata(
       '<meta name="description" content=""><meta name="description" content="Real summary"><span class="created-at">2026-06-09 10:57:59</span>',
       "https://tech.dewu.com/article?id=1",
-      registry.sources.find((s) => s.id === "dewu-official"),
+      {
+        ...source,
+        metadata: { dateSelector: ".created-at", timezone: "+08:00" },
+      },
     );
     expect(result.description).toBe("Real summary");
     expect(result.publishedAt).toBe("2026-06-09T02:57:59.000Z");

@@ -1,5 +1,6 @@
 import { resolve } from "node:path";
 import { loadRegistry } from "../packages/source-registry/index.js";
+import { retireReplacedSources } from "../packages/database/retire-sources.js";
 import {
   readSnapshot,
   saveSnapshot,
@@ -18,8 +19,13 @@ await withSnapshotLock(dir, async () => {
   const snapshot = await readSnapshot(dir);
   const companies = new Set(registry.companies.map((c) => c.id));
   const sources = new Map(registry.sources.map((s) => [s.id, s]));
-  const articles = snapshot.articles.filter((a) => companies.has(a.companyId));
-  let changed = articles.length !== snapshot.articles.length;
+  const domestic = snapshot.articles.filter((a) => companies.has(a.companyId));
+  const retirement = retireReplacedSources(domestic, snapshot.states, registry);
+  const articles = retirement.articles;
+  let changed =
+    articles.length !== snapshot.articles.length ||
+    retirement.removedLocations > 0 ||
+    retirement.removedStates > 0;
   for (const article of articles) {
     const publisher = registry.publishers.find(
       (p) => p.id === article.publisherId,
@@ -49,10 +55,10 @@ await withSnapshotLock(dir, async () => {
       changed = true;
     }
   }
-  const states = snapshot.states.filter((s) => sources.has(s.sourceId));
+  const states = retirement.states.filter((s) => sources.has(s.sourceId));
   if (states.length !== snapshot.states.length) changed = true;
   if (changed) await saveSnapshot(dir, articles, states, registry);
   console.log(
-    `Domestic snapshot: ${articles.length} articles; removed ${snapshot.articles.length - articles.length} overseas articles and ${snapshot.states.length - states.length} retired source states; ${changed ? "migration applied" : "already current"}.`,
+    `Domestic snapshot: ${articles.length} articles; removed ${snapshot.articles.length - domestic.length} overseas articles, ${retirement.removedArticles} replaced-source articles, ${retirement.removedLocations} retired locations and ${snapshot.states.length - states.length} retired source states; ${changed ? "migration applied" : "already current"}.`,
   );
 });

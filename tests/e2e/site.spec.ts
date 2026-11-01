@@ -1,4 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
+import { sourceReplacements } from "../../packages/source-registry/replacements.js";
 
 const searchName = "搜索所有面板的文章";
 const board = (page: Page) =>
@@ -202,9 +203,22 @@ test("domestic provenance, history labels and contribution destinations remain a
       (s: { verification: { status: string } }) =>
         s.verification.status === "suspended",
     ).length,
-  ).toBeGreaterThanOrEqual(12);
+  ).toBe(6);
+  for (const { sourceId, replacementIds } of sourceReplacements) {
+    expect(sources.some((s: { id: string }) => s.id === sourceId)).toBe(false);
+    for (const id of replacementIds)
+      expect(
+        sources.find((s: { id: string }) => s.id === id).crawl.enabled,
+      ).toBe(true);
+  }
   const articles = (await (await request.get("data/articles.json")).json())
     .articles;
+  const retiredIds = new Set<string>(sourceReplacements.map((s) => s.sourceId));
+  expect(
+    articles.every((a: { locations: { sourceId: string }[] }) =>
+      a.locations.every((l) => !retiredIds.has(l.sourceId)),
+    ),
+  ).toBe(true);
   expect(
     articles.every(
       (a: { classification: { method: string; topics: string[] } }) =>
@@ -214,9 +228,7 @@ test("domestic provenance, history labels and contribution destinations remain a
   ).toBe(true);
   await page.goto("./sources/");
   expect(await page.locator(".source-row").count()).toBeGreaterThanOrEqual(19);
-  expect(
-    await page.getByText("历史渠道", { exact: true }).count(),
-  ).toBeGreaterThanOrEqual(12);
+  expect(await page.getByText("历史渠道", { exact: true }).count()).toBe(6);
   await expect(page.getByText(/^最新收录文章/).first()).toBeVisible();
   await expectNoDocumentOverflow(page);
   await page.goto("./");

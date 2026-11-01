@@ -570,33 +570,6 @@
       }
     },
     {
-      "id": "dewu-official",
-      "publisherId": "dewu-tech",
-      "name": "得物 · dewu-official",
-      "entryUrl": "https://tech.dewu.com/",
-      "url": "https://tech.dewu.com/",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "official-site",
-      "verification": {
-        "status": "suspended",
-        "evidenceUrls": ["https://tech.dewu.com/"],
-        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-07-13，超过一个月未更新，不能承担当前更新追踪。得物自有技术站身份仍成立，官网首页也停留在2026-07-13；改用企业认证的CSDN账号。 原核验说明：公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      },
-      "selector": "a[href*=\"/article\"]",
-      "metadata": {
-        "dateSelector": ".created-at",
-        "timezone": "+08:00"
-      }
-    },
-    {
       "id": "vivo-csdn",
       "publisherId": "vivo-tech",
       "name": "vivo互联网技术 · CSDN",
@@ -619,58 +592,6 @@
       },
       "authorAllowlist": ["vivo_tech"],
       "linkPattern": "^/vivo_tech/article/details/[0-9]+/?$"
-    },
-    {
-      "id": "alibaba-csdn",
-      "publisherId": "alibaba-official",
-      "name": "阿里开发者 · CSDN",
-      "entryUrl": "https://blog.csdn.net/alitech2017",
-      "url": "https://rss.csdn.net/alitech2017/rss/map",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "csdn-feed",
-      "verification": {
-        "status": "suspended",
-        "evidenceUrls": ["https://blog.csdn.net/alitech2017"],
-        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2024-09-13，超过一个月未更新，不能承担当前更新追踪。 原核验说明：公开主页显示企业官方账号认证，简介明确为阿里巴巴官方技术号；以稳定用户名 alitech2017 限定文章与作者，账号 RSS 解析成功。最新条目停留在 2024 年，保留历史来源。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["alitech2017"],
-      "linkPattern": "^/alitech2017/article/details/[0-9]+/?$"
-    },
-    {
-      "id": "bytedance-csdn",
-      "publisherId": "bytedance-official",
-      "name": "字节跳动技术团队 · CSDN",
-      "entryUrl": "https://blog.csdn.net/ByteDanceTech",
-      "url": "https://rss.csdn.net/ByteDanceTech/rss/map",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "csdn-feed",
-      "verification": {
-        "status": "suspended",
-        "evidenceUrls": [
-          "https://blog.csdn.net/ByteDanceTech",
-          "https://juejin.cn/user/1838039172387262",
-          "https://www.toutiao.com/c/user/token/MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE/"
-        ],
-        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2024-04-16，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：CSDN 账号持续发布字节基础架构团队的原始工程实践，与掘金公司归属和头条官方账号认证相互印证。限定稳定用户名 ByteDanceTech；HTML 请求返回 521，公开 RSS 允许访问并解析成功。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["ByteDanceTech"],
-      "linkPattern": "^/ByteDanceTech/article/details/[0-9]+/?$"
     },
     {
       "id": "baidu-csdn",
@@ -891,34 +812,6 @@
       "linkPattern": "^/bilibili_TC/article/details/[0-9]+/?$"
     },
     {
-      "id": "tencent-csdn",
-      "publisherId": "tencent-official",
-      "name": "腾讯技术工程 · CSDN",
-      "entryUrl": "https://blog.csdn.net/Tencent_TEG",
-      "url": "https://rss.csdn.net/Tencent_TEG/rss/map",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "csdn-feed",
-      "verification": {
-        "status": "suspended",
-        "evidenceUrls": [
-          "https://blog.csdn.net/Tencent_TEG",
-          "https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D",
-          "https://cloud.tencent.com/developer/user/170434/articles"
-        ],
-        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2022-03-28，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：CSDN 长期发布腾讯前沿技术及腾讯团队原始工程实践，与腾讯新闻认证官方号、腾讯云认证腾讯公司身份相互印证。限定稳定用户名 Tencent_TEG；RSS 解析成功，最新文章停留在 2022 年。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["Tencent_TEG"],
-      "linkPattern": "^/Tencent_TEG/article/details/[0-9]+/?$"
-    },
-    {
       "id": "tencent-qqnews",
       "publisherId": "tencent-official",
       "name": "腾讯技术工程 · 腾讯新闻",
@@ -996,33 +889,6 @@
         "backfillLimit": 50
       },
       "authorAllowlist": ["OPPO数智技术"],
-      "linkPattern": "^/a/[0-9]+/?$"
-    },
-    {
-      "id": "kuaishou-segmentfault",
-      "publisherId": "kuaishou-official",
-      "name": "快手技术 · 思否",
-      "entryUrl": "https://segmentfault.com/blog/kuaishoujishu",
-      "url": "https://segmentfault.com/feeds/blog/kuaishoujishu",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "segmentfault-feed",
-      "verification": {
-        "status": "suspended",
-        "evidenceUrls": [
-          "https://segmentfault.com/blog/kuaishoujishu",
-          "https://segmentfault.com/blog/kuaishoujishu/about"
-        ],
-        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-04-07，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：公开专栏简介明确快手官方技术号及同名公众号，账号作者与长期工程文章一致。账号 RSS 允许访问且解析成功；全文型 Feed 的正文不会保存，仅提取元数据。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["快手技术"],
       "linkPattern": "^/a/[0-9]+/?$"
     },
     {
@@ -1112,40 +978,6 @@
       },
       "authorAllowlist": ["Jcloud"],
       "linkPattern": "^/Jcloud/p/[0-9]+(?:\\.html)?/?$",
-      "selector": ".postTitle a",
-      "metadata": {
-        "dateSelector": "#post-date",
-        "timezone": "+08:00"
-      }
-    },
-    {
-      "id": "netease-cnblogs",
-      "publisherId": "netease-official",
-      "name": "网易智企·数帆 · 博客园",
-      "entryUrl": "https://www.cnblogs.com/163yun/",
-      "url": "https://www.cnblogs.com/163yun/",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "cnblogs-account",
-      "verification": {
-        "status": "suspended",
-        "evidenceUrls": [
-          "https://www.cnblogs.com/163yun/",
-          "https://blog.csdn.net/wangyiyungw",
-          "https://sf.163.com/",
-          "https://www.cnblogs.com/163yun/rss"
-        ],
-        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-09-10，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：网易智企数帆的产品、品牌和长期原创文章与公司自有站及 CSDN 团队号相互印证。稳定博客路径 163yun；RSS 目标 robots 禁止，改用允许访问的账号 HTML 目录。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["163yun"],
-      "linkPattern": "^/163yun/p/[0-9]+(?:\\.html)?/?$",
       "selector": ".postTitle a",
       "metadata": {
         "dateSelector": "#post-date",
