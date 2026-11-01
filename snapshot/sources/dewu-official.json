@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "dewu-official",
+    "lastCheckedAt": "2026-11-01T08:56:43.765Z",
+    "lastSuccessAt": "2026-11-01T08:56:43.765Z",
+    "nextRunAt": "2026-11-02T08:56:43.953Z",
+    "consecutiveFailures": 0,
+    "etag": "\"85c25-eSo5TF94m6ShELWssrR75F3dYB0\"",
+    "status": "success",
+    "discovered": 10,
+    "httpStatus": 200
+  }
+}

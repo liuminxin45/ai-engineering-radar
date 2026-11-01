@@ -1,0 +1,648 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "0001cd78e23a24805e5a",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Beyond the patch: Protecting your NetScaler gateway against future vulnerabilities",
+      "canonicalUrl": "https://blog.cloudflare.com/protect-your-netscaler-gateway",
+      "description": "CVE-2026-88771 lets attackers run commands on NetScaler Gateway before anyone signs in. Patching takes time most teams don't have, so the sign-in decision has to move in front of the vulnerable code.",
+      "language": "en-us",
+      "publishedAt": "2026-10-19T13:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.392Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M537RHECVHNJPV12N2E54ZR7",
+          "url": "https://blog.cloudflare.com/protect-your-netscaler-gateway"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "03bd44ed7653927e19c0",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Bringing post-quantum cryptography to geographically fenced key management",
+      "canonicalUrl": "https://blog.cloudflare.com/post-quantum-geo-key-manager",
+      "description": "Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt later attacks. Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world.",
+      "language": "en-us",
+      "publishedAt": "2026-10-23T18:06:56.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          " now, decrypt later attacks. Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.387Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5MYFG0SHDEYME96N0A4Z6PH",
+          "url": "https://blog.cloudflare.com/post-quantum-geo-key-manager"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "04f899dd9b5904855f92",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Introducing tsrs: A port of TypeScript to Rust",
+      "canonicalUrl": "https://blog.cloudflare.com/typescript-rust-port",
+      "description": "Cloudflare is collaborating on tsrs, a Rust port of TypeScript that is up to 8x faster and uses 70% less memory.",
+      "language": "en-us",
+      "publishedAt": "2026-10-20T13:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          " up to 8x faster and uses 70% less memory."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.389Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5C833HV3W30PBZZYVMCVRR6",
+          "url": "https://blog.cloudflare.com/typescript-rust-port"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "20d07d14ac706a81011d",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Cutting our inference bill by 68% by being obsessive about optimization",
+      "canonicalUrl": "https://blog.cloudflare.com/obsessive-inference-optimization",
+      "author": "Ryan Skidmore",
+      "description": "When our AI code reviewer's cost per run doubled, we dug into the token usage to find out why. Learn how we used prompt caching and intelligent model routing to slash our inference bill by 68% while speeding up reviews.",
+      "language": "en-us",
+      "publishedAt": "2026-10-19T19:12:53.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Cutting our inference bill by 68% by being obsessive about optimization\nWhen our AI code reviewer's cost per run doubled, ",
+          "ll by 68% by being obsessive about optimization\nWhen our AI code reviewer's cost per run doubled, we dug into the token usage to find out why. Le",
+          "ive about optimization\nWhen our AI code reviewer's cost per run doubled, we dug into the token usage to find out why. Learn how we used prompt ca"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.390Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M58NMKW6A1DQJNZXH37VZ9JH",
+          "url": "https://blog.cloudflare.com/obsessive-inference-optimization"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2ea5e0bac1da293c6d98",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Introducing full transaction detection for Cloudflare WAF",
+      "canonicalUrl": "https://blog.cloudflare.com/full-transaction-waf",
+      "description": "Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss.",
+      "language": "en-us",
+      "publishedAt": "2026-10-21T14:10:42.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.388Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5E1HXVZGTKAKEYZ0KMZQ65Q",
+          "url": "https://blog.cloudflare.com/full-transaction-waf"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3f1657e755dd520af076",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Origin Range Requests: Serving large files without range-request tuning",
+      "canonicalUrl": "https://blog.cloudflare.com/origin-range-requests",
+      "author": "Matthew Gumport",
+      "description": "Naive byte-range caching can waste gigabytes of origin bandwidth on small requests. We rebuilt our cache architecture in Pingora to coordinate partial fetches automatically, cutting R2 p99 latency in half.",
+      "language": "en-us",
+      "publishedAt": "2026-10-23T18:22:59.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "all requests. We rebuilt our cache architecture in Pingora to coordinate partial fetches automatically, cutting R2 p99 latency in half.",
+          "Origin Range Requests: Serving large files without range-request tuning\nNaive byte-range caching can waste gigabytes of origin bandwi"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.387Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5MZPETYH27RS72QV5V85YZ8",
+          "url": "https://blog.cloudflare.com/origin-range-requests"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "480d4a8423f71fe5698c",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Cloudflare DDoS Threat Report 2026 Q3: More swarms, fewer giants",
+      "canonicalUrl": "https://blog.cloudflare.com/ddos-threat-report-2026-q3",
+      "author": "Cloudforce One",
+      "description": "Cloudflare mitigated over 8,200 DDoS attacks per hour in Q3 2026 as attackers shifted to shorter, high-frequency strikes. Explore the latest threat data, including the collapse of CLDAP vectors and the impact of recent botnet takedowns.",
+      "language": "en-us",
+      "publishedAt": "2026-10-29T12:55:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.386Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M6254V6WN4EZTWVH0BF1748Y",
+          "url": "https://blog.cloudflare.com/ddos-threat-report-2026-q3"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "67699ae156038c1fddef",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Introducing Clairic, a new System One class of extraction models",
+      "canonicalUrl": "https://blog.cloudflare.com/clairic-extraction-model",
+      "description": "Clairic is a new model from Cloudflare that is a System One extraction modeI, capable of extracting, computing, estimating, and forecasting data from unstructured inputs.",
+      "language": "en-us",
+      "publishedAt": "2026-10-19T17:48:26.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.391Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5AKCKW0449M3Q6FW10XB4K3",
+          "url": "https://blog.cloudflare.com/clairic-extraction-model"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7637fbbc9555266eb533",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Cloudflare deploys protections against php2shell vulnerability",
+      "canonicalUrl": "https://blog.cloudflare.com/php-vulnerabilities-waf-protection",
+      "description": "Cloudflare has deployed default web application firewall (WAF) protections for newly disclosed PHP vulnerabilities before public disclosure. The rules use request and response signals to stop exploit attempts and prevent exposed data from reaching attackers.",
+      "language": "en-us",
+      "publishedAt": "2026-10-21T13:56:45.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.388Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5FBPW0VHJGHYHGS7CWWKGSP",
+          "url": "https://blog.cloudflare.com/php-vulnerabilities-waf-protection"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7cededf3121ed7e5bc03",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Introducing the Cloudflare PHP Capture the Flag challenge",
+      "canonicalUrl": "https://blog.cloudflare.com/php-ctf",
+      "description": "We are launching a PHP Capture the Flag challenge integrated with our Bug Bounty program to test our WAF protections. Security researchers are invited to bypass our defenses and capture the flag to help make the Internet safer.",
+      "language": "en-us",
+      "publishedAt": "2026-10-27T13:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.386Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5YGNW60G1XYREPZQ9W8PSTD",
+          "url": "https://blog.cloudflare.com/php-ctf"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a0608d2ee64ddedcb106",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Cloudflare services for private origins is now generally available",
+      "canonicalUrl": "https://blog.cloudflare.com/private-origins-public-to-private",
+      "author": "Enrique Somoza",
+      "description": "Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer with Cloudflare One connectivity.",
+      "language": "en-us",
+      "publishedAt": "2026-10-30T14:23:43.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.386Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M64V2TDYZYSS8RE60T3MWKSM",
+          "url": "https://blog.cloudflare.com/private-origins-public-to-private"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a430f1370696eb80cefc",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "A fully programmable secure web gateway",
+      "canonicalUrl": "https://blog.cloudflare.com/programmable-gateway-dlp",
+      "description": "Cloudflare Gateway and Data Loss Prevention have inherited the flexibility and power of Cloudflare Workers through our full-stack integration with the Cloudflare Developer platform.",
+      "language": "en-us",
+      "publishedAt": "2026-10-15T17:11:12.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.393Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5072CXFWQ88M9NCXZBSPAF2",
+          "url": "https://blog.cloudflare.com/programmable-gateway-dlp"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a8a5972c4c99efc9c752",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Deploy with Void",
+      "canonicalUrl": "https://blog.cloudflare.com/deploy-with-void",
+      "description": "Introducing Void: an open-source SDK, CLI, and self-hosted platform for building full-stack Vite apps and deploying them to Cloudflare.",
+      "language": "en-us",
+      "publishedAt": "2026-10-15T14:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Deploy with Void\nIntroducing Void: an open-source SDK, CLI, and self-hosted platform for building full-stack V",
+          "d\nIntroducing Void: an open-source SDK, CLI, and self-hosted platform for building full-stack Vite apps and deploying them to Cloudflare."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.394Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M4EX2BRJ7RNGAPQTBRXWRYT1",
+          "url": "https://blog.cloudflare.com/deploy-with-void"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "adefca8ddda38a35a8ba",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Localizing compliance at scale: achieving South Korea’s ISMS certification",
+      "canonicalUrl": "https://blog.cloudflare.com/k-isms",
+      "author": "Kabin Calan",
+      "description": "Cloudflare has achieved South Korea's ISMS certification following an audit across 80 controls. Learn how we localized user consent flows, adapted social sign-up paths at the edge, and validated our global security program.",
+      "language": "en-us",
+      "publishedAt": "2026-10-22T13:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Localizing compliance at scale: achieving South Korea’s ISMS certification\nCloudflare has achieved South Korea's ISMS certification fol"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.388Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5FTVN0D8MSEXMF36ZM9WWD4",
+          "url": "https://blog.cloudflare.com/k-isms"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bfbde9cc283939d3d0f3",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "8 eMudhra certificates are compromised. Here's what you need to know",
+      "canonicalUrl": "https://blog.cloudflare.com/emudhra-certificate-compromise",
+      "description": "Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations and releasing client updates. We explain the impact, our response, and what customers and developers should do next.",
+      "language": "en-us",
+      "publishedAt": "2026-10-20T22:20:16.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "cates use weak keys, Cloudflare is deploying mitigations and releasing client updates. We explain the impact, our response, and what customers an"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.389Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5DK5J81T0VC8YTBR2FKD8A3",
+          "url": "https://blog.cloudflare.com/emudhra-certificate-compromise"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c8b9c15396b39232c4e6",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Continuous accountability for Verified bots",
+      "canonicalUrl": "https://blog.cloudflare.com/verified-bots-accountability",
+      "author": "Chris Tsoukaladelis",
+      "description": "Identity alone doesn't guarantee a bot will behave responsibly. We are introducing a system to continuously evaluate whether Verified bots honor site preferences, like robots.txt and HTTP 429s, ensuring they remain accountable over time.",
+      "language": "en-us",
+      "publishedAt": "2026-10-16T13:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "troducing a system to continuously evaluate whether Verified bots honor site preferences, like robots.txt and HTTP 429s, ensuring they remain acc"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.392Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M510YDY2PS6BYR03DF8HHG2D",
+          "url": "https://blog.cloudflare.com/verified-bots-accountability"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "cea51f3abfb3840439ef",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "How Commerce.com and Cloudflare are getting storefronts ready for AI agents",
+      "canonicalUrl": "https://blog.cloudflare.com/webmcp-commerce",
+      "description": "Almost 100,000 Commerce.com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each merchant in control.",
+      "language": "en-us",
+      "publishedAt": "2026-10-21T13:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          " are getting storefronts ready for AI agents\nAlmost 100,000 Commerce.com domains now give AI agents real shopping tools through WebMCP on Cloudfl",
+          "rough WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each merchant in control.",
+          "s now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.389Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5AYSGXBWG00KS9KC299XDR8",
+          "url": "https://blog.cloudflare.com/webmcp-commerce"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "da704dcae340021d2bf8",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang",
+      "canonicalUrl": "https://blog.cloudflare.com/kv-cache-exposure-remediation",
+      "description": "A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests. Here is how we addressed the issue.",
+      "language": "en-us",
+      "publishedAt": "2026-10-26T22:01:23.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "he exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang\nA configuration mismatch in GLM 5.3 on Workers AI triggered an SGLan",
+          "che pages across requests. Here is how we addressed the issue.",
+          "Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang\nA configuration mismatch in GL"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.387Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5X2P6CQYMNAESRJ922DG5J3",
+          "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e31b3fb435965b498569",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "4 real? Tracking exploitation and patching of eMudhra’s weak keys",
+      "canonicalUrl": "https://blog.cloudflare.com/emudhra-patching",
+      "description": "Four, just four: that’s the key to break into any unpatched connection on the Internet that is using eMudhra certificates. Here’s how we quickly patched Cloudflare, what evidence we can see of attempted exploitation, and how much of the rest of the Internet remains exposed.",
+      "language": "en-us",
+      "publishedAt": "2026-10-30T17:38:50.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "using eMudhra certificates. Here’s how we quickly patched Cloudflare, what evidence we can see of attempted exploitation, and how much of the res"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.386Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M66XYRNK559YY01V2P37EBD7",
+          "url": "https://blog.cloudflare.com/emudhra-patching"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f56e501e5921e03ae8f5",
+      "publisherId": "cloudflare-official",
+      "companyId": "cloudflare",
+      "title": "What took the Internet offline in Q3 2026",
+      "canonicalUrl": "https://blog.cloudflare.com/q3-2026-internet-disruption-summary",
+      "author": "Lai Yi Ohlsen",
+      "description": "An examination of global Internet disruptions observed by Cloudflare Radar during the third quarter of 2026. This review analyzes how power failures, natural disasters, and government shutdowns impacted network connectivity and traffic.",
+      "language": "en-us",
+      "publishedAt": "2026-10-27T13:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:04.893Z",
+      "updatedAt": "2026-11-01T08:48:04.893Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:07.387Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cloudflare",
+          "externalId": "01M5G72REK3978980FNZCPDBRR",
+          "url": "https://blog.cloudflare.com/q3-2026-internet-disruption-summary"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

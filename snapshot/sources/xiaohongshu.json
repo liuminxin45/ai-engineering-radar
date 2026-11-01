@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "xiaohongshu",
+    "lastCheckedAt": "2026-11-01T08:47:44.300Z",
+    "nextRunAt": "2026-11-02T08:47:44.300Z",
+    "consecutiveFailures": 0,
+    "status": "pending",
+    "error": "候选企业入口，尚未定位可核验的官方技术发布账号。 入口检测：robots.txt disallows this path",
+    "discovered": 0
+  }
+}

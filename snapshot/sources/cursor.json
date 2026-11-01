@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "cursor",
+    "lastCheckedAt": "2026-11-01T08:47:49.083Z",
+    "lastSuccessAt": "2026-11-01T08:47:49.083Z",
+    "nextRunAt": "2026-11-02T08:47:49.083Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 19,
+    "httpStatus": 200
+  }
+}

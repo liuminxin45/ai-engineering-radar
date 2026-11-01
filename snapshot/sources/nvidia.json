@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "nvidia",
+    "lastCheckedAt": "2026-11-01T08:48:06.972Z",
+    "lastSuccessAt": "2026-11-01T08:48:06.972Z",
+    "nextRunAt": "2026-11-02T08:48:06.972Z",
+    "consecutiveFailures": 0,
+    "etag": "\"497d7d2e305ced223a31a5847545c8fc\"",
+    "lastModified": "Fri, 30 Oct 2026 22:52:36 GMT",
+    "status": "success",
+    "discovered": 100,
+    "httpStatus": 200
+  }
+}

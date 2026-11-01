@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "meta",
+    "lastCheckedAt": "2026-11-01T08:48:02.970Z",
+    "lastSuccessAt": "2026-11-01T08:48:02.970Z",
+    "nextRunAt": "2026-11-02T08:48:02.970Z",
+    "consecutiveFailures": 0,
+    "etag": "W/\"a302a9bad86453c1c23cf949decbc5a5\"",
+    "lastModified": "Thu, 29 Oct 2026 17:42:44 GMT",
+    "status": "success",
+    "discovered": 9,
+    "httpStatus": 200
+  }
+}

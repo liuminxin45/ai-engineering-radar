@@ -1,0 +1,861 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "070b49d2b87135aa3096",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Eval awareness in Opus 4.6 on BrowseComp",
+      "canonicalUrl": "https://www.anthropic.com/research/eval-awareness-browsecomp",
+      "author": "Anthropic",
+      "description": "Evaluating Claude Opus 4.6 on BrowseComp, we found cases where the model recognized the test and decrypted its answers, raising eval integrity questions.",
+      "language": "en",
+      "publishedAt": "2026-03-05T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "evaluation"
+        ],
+        "primaryTopic": "evaluation",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          " Opus 4.6 on BrowseComp\nEvaluating Claude Opus 4.6 on BrowseComp, we found cases where the model recognized the test and decrypted its answers, r",
+          "wareness in Opus 4.6 on BrowseComp\nEvaluating Claude Opus 4.6 on BrowseComp, we found cases where the model recognized the test and decrypted its"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.428Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/eval-awareness-browsecomp"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0bcc30e1cdb01057ec2c",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Infrastructure noise in agentic coding evals",
+      "canonicalUrl": "https://www.anthropic.com/research/infrastructure-noise",
+      "author": "Anthropic",
+      "description": "Agentic coding benchmarks are treated as precise measures of model capability, but infrastructure configuration alone can meaningfully shift scores.",
+      "language": "en",
+      "publishedAt": "2026-02-04T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding",
+          "evaluation",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Infrastructure noise in agentic coding evals\nAgentic coding benchmarks are treated as precise measures of model capability, but infras",
+          "Infrastructure noise in agentic coding evals\nAgentic coding benchmarks are treated as precise measures of mode"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.429Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/infrastructure-noise"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0e4dde343fbc0b3e7f3b",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Designing AI resistant technical evaluations",
+      "canonicalUrl": "https://www.anthropic.com/research/AI-resistant-technical-evaluations",
+      "author": "Anthropic",
+      "description": "What we learned from three iterations of a performance engineering take-home that Claude keeps beating.",
+      "language": "en",
+      "publishedAt": "2026-01-21T00:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "evaluation"
+        ],
+        "primaryTopic": "evaluation",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Designing AI resistant technical evaluations\nWhat we learned from three iterations of a performance engineering take-hom",
+          "Designing AI resistant technical evaluations\nWhat we learned from three iterations of a performance engineerin",
+          "Designing AI resistant technical evaluations\nWhat we learned from three iterations of a performance engineering take-home that Claude keeps bea"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.427Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/AI-resistant-technical-evaluations"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "146a234341dad9d48a4a",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Desktop Extensions: One-click MCP installs",
+      "canonicalUrl": "https://www.anthropic.com/research/desktop-extensions",
+      "author": "Anthropic",
+      "description": "Desktop Extensions are a new packaging format that makes installing local MCP servers in Claude Desktop as simple as clicking a button.",
+      "language": "en",
+      "publishedAt": "2025-06-25T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Desktop Extensions: One-click MCP installs\nDesktop Extensions are a new packaging format that makes installing local MCP servers in Claude D"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.434Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/desktop-extensions"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1987b88ecdbaeab7cd90",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Demystifying evals for AI agents",
+      "canonicalUrl": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+      "author": "Anthropic",
+      "description": "Guidance on designing more rigorous, useful evals for AI agents across a range of architectures and real-world deployment use cases.",
+      "language": "en",
+      "publishedAt": "2026-01-08T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "evaluation",
+          "agent"
+        ],
+        "primaryTopic": "evaluation",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Demystifying evals for AI agents\nGuidance on designing more rigorous, useful evals for AI agents across a range of architectures and ",
+          "ng evals for AI agents\nGuidance on designing more rigorous, useful evals for AI agents across a range of architectures and real-world deployment "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.429Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1a4c119dfbd776ad81d2",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Redesigning source control at Anthropic",
+      "canonicalUrl": "https://www.anthropic.com/research/redesigning-source-control",
+      "author": "Anthropic",
+      "description": "As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months.",
+      "language": "en",
+      "publishedAt": "2026-10-13T00:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "lopment bottleneck. Here, we share how we migrated to an in-house version control system in five months."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.425Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/redesigning-source-control"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "22099102c5dc8b86839f",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Writing effective tools for AI agents",
+      "canonicalUrl": "https://www.anthropic.com/research/writing-tools-for-agents",
+      "author": "Anthropic",
+      "description": "Our most effective techniques for writing, evaluating, and refining tools for AI agents, including how to use Claude Code to improve them.",
+      "language": "en",
+      "publishedAt": "2025-09-10T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "ai-coding",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Writing effective tools for AI agents\nOur most effective techniques for writing, evaluating, and refining tools for AI agents, including h",
+          " effective techniques for writing, evaluating, and refining tools for AI agents, including how to use Claude Code to improve them.",
+          "Writing effective tools for AI agents\nOur most effective techniques for writing, evaluating, and refining tools for AI agents, i"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.433Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/writing-tools-for-agents"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3377939d3b1f2dd1baae",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Harness design for long-running apps",
+      "canonicalUrl": "https://www.anthropic.com/research/harness-design-long-running-apps",
+      "author": "Anthropic",
+      "description": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+      "language": "en",
+      "publishedAt": "2026-03-24T00:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "harness"
+        ],
+        "primaryTopic": "harness",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          " long-running apps\nAnthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+          "Harness design for long-running apps\nAnthropic is an AI safety and research company that's working to build reliable, "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.426Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/harness-design-long-running-apps"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3a1b34d02bddef6daf8a",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Scaling Managed Agents with stable interfaces",
+      "canonicalUrl": "https://www.anthropic.com/research/managed-agents",
+      "author": "Anthropic",
+      "description": "Harnesses encode assumptions that go stale as models improve. See how Managed Agents is built around interfaces that stay stable as harnesses change.",
+      "language": "en",
+      "publishedAt": "2026-04-07T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Scaling Managed Agents with stable interfaces\nHarnesses encode assumptions that go stale as models improve. See how Managed Ag",
+          "Scaling Managed Agents with stable interfaces\nHarnesses encode assumptions that go stale as models improve. Se"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.428Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/managed-agents"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "524f94a6d69f8e252d0a",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Introducing advanced tool use for Claude",
+      "canonicalUrl": "https://www.anthropic.com/research/advanced-tool-use",
+      "author": "Anthropic",
+      "description": "Claude can now discover, learn, and execute tools dynamically to enable agents that take action in the real world. Here’s how.",
+      "language": "en",
+      "publishedAt": "2025-11-23T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Introducing advanced tool use for Claude\nClaude can now discover, learn, and execute tools dynamically to enable agents that take action in the ",
+          "Introducing advanced tool use for Claude\nClaude can now discover, learn, and execute tools dynamically to enable agents that take a"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.430Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/advanced-tool-use"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6da8d76ce1a4fada1898",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "How we contain Claude across products",
+      "canonicalUrl": "https://www.anthropic.com/research/how-we-contain-claude",
+      "author": "Anthropic",
+      "description": "As agents grow more capable, so does their potential blast radius. Here's what we learned building containment for claude.ai, Claude Code, and Cowork.",
+      "language": "en",
+      "publishedAt": "2026-05-24T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "How we contain Claude across products\nAs agents grow more capable, so does their potential blast radius. Here's what we learn",
+          "How we contain Claude across products\nAs agents grow more capable, so does their potential blast radius. Here'"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.427Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/how-we-contain-claude"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7452ace83b4364e10381",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Equipping agents with Agent Skills",
+      "canonicalUrl": "https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills",
+      "author": "Anthropic",
+      "description": "Introducing Agent Skills: organized folders of instructions, scripts, and resources that give Claude the procedural knowledge real work requires.",
+      "language": "en",
+      "publishedAt": "2025-10-15T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Equipping agents with Agent Skills\nIntroducing Agent Skills: organized folders of instructions, scripts, and resources t"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.432Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7afa23a5efce5db947a8",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Effective context engineering for AI agents",
+      "canonicalUrl": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+      "author": "Anthropic",
+      "description": "In this post, we explore strategies for effectively curating and managing their context.",
+      "language": "en",
+      "publishedAt": "2025-09-28T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Effective context engineering for AI agents\nIn this post, we explore strategies for effectively curating and managing their context.",
+          "Effective context engineering for AI agents\nIn this post, we explore strategies for effectively curating and managing th"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.432Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8147edcdf30c8eea1e56",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "How we built Claude Code auto mode",
+      "canonicalUrl": "https://www.anthropic.com/research/claude-code-auto-mode",
+      "author": "Anthropic",
+      "description": "Claude Code users approve 93% of permission prompts. See how auto mode uses classifiers to cut approval fatigue while keeping developers safe.",
+      "language": "en",
+      "publishedAt": "2026-03-24T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "How we built Claude Code auto mode\nClaude Code users approve 93% of permission prompts. See how auto mode uses classifiers ",
+          "How we built Claude Code auto mode\nClaude Code users approve 93% of permission prompts. See how auto mode uses"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.428Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/claude-code-auto-mode"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8b3b99292cba7eed18e1",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "How we built our multi-agent research system",
+      "canonicalUrl": "https://www.anthropic.com/research/multi-agent-research-system",
+      "author": "Anthropic",
+      "description": "On the the engineering challenges and lessons learned from building Claude's Research system",
+      "language": "en",
+      "publishedAt": "2025-06-12T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "How we built our multi-agent research system\nOn the the engineering challenges and lessons learned from building Claude's Research sy",
+          "How we built our multi-agent research system\nOn the the engineering challenges and lessons learned from buildi"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.435Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/multi-agent-research-system"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "946ccbac91fce9fdd909",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Building a C compiler with parallel Claudes",
+      "canonicalUrl": "https://www.anthropic.com/research/building-c-compiler",
+      "author": "Anthropic",
+      "description": "How a team of 16 parallel Claude agents wrote a Rust-based C compiler from scratch, capable of compiling the Linux kernel, and what it taught us.",
+      "language": "en",
+      "publishedAt": "2026-02-04T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          " Claudes\nHow a team of 16 parallel Claude agents wrote a Rust-based C compiler from scratch, capable of compiling the Linux kernel, and what it t",
+          "Building a C compiler with parallel Claudes\nHow a team of 16 parallel Claude agents wrote a Rust-based C compi"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.428Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/building-c-compiler"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a61d2b3efdbb2edcbb03",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Effective harnesses for long-running agents",
+      "canonicalUrl": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
+      "author": "Anthropic",
+      "description": "How an initializer agent and an incremental coding agent help the Claude Agent SDK make steady progress across many context windows.",
+      "language": "en",
+      "publishedAt": "2025-11-25T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "fective harnesses for long-running agents\nHow an initializer agent and an incremental coding agent help the Claude Agent SDK make steady progress",
+          "coding agent help the Claude Agent SDK make steady progress across many context windows."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.429Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bee225fe9c142f722d9b",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "An update on Claude Code quality reports",
+      "canonicalUrl": "https://www.anthropic.com/research/april-23-postmortem",
+      "author": "Anthropic",
+      "description": "We traced recent reports of Claude Code quality issues to three separate changes. Here's what happened, what we fixed, and what we're changing.",
+      "language": "en",
+      "publishedAt": "2026-04-22T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "An update on Claude Code quality reports\nWe traced recent reports of Claude Code quality issues to three separate changes. "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.427Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/april-23-postmortem"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "caee6bd11b4616c93bf2",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Making Claude Code safer with sandboxing",
+      "canonicalUrl": "https://www.anthropic.com/research/claude-code-sandboxing",
+      "author": "Anthropic",
+      "description": "Learn how sandboxing in Claude Code uses filesystem and network isolation to protect developers, reduce permission prompts, and increase autonomy.",
+      "language": "en",
+      "publishedAt": "2025-10-19T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Making Claude Code safer with sandboxing\nLearn how sandboxing in Claude Code uses filesystem and network isolation to",
+          "Making Claude Code safer with sandboxing\nLearn how sandboxing in Claude Code uses filesystem and network isolation to protect developers, re"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.431Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/claude-code-sandboxing"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d997f3a7ca383f5f4ee2",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Code execution with MCP for efficient agents",
+      "canonicalUrl": "https://www.anthropic.com/research/code-execution-with-mcp",
+      "author": "Anthropic",
+      "description": "Learn how code execution with the Model Context Protocol enables agents to handle more tools while using fewer tokens, reducing context overhead by up to 98.7%.",
+      "language": "en",
+      "publishedAt": "2025-11-03T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Code execution with MCP for efficient agents\nLearn how code execution with the Model Context Protocol enables agents to handle mor",
+          " how code execution with the Model Context Protocol enables agents to handle more tools while using fewer tokens, reducing context overhead by up"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.431Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/code-execution-with-mcp"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "dbf67c77c9c7d15beb28",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Claude Code Best Practices",
+      "canonicalUrl": "https://www.anthropic.com/research/claude-code-best-practices",
+      "author": "Anthropic",
+      "description": "A blog post covering tips and tricks that have proven effective for using Claude Code across various codebases, languages, and environments.",
+      "language": "en",
+      "publishedAt": "2025-04-17T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Claude Code Best Practices\nA blog post covering tips and tricks that have proven effective for using Claude Co"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.436Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/claude-code-best-practices"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "dd32e19b50de52abffd1",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "Confidential Inference via trusted VMs",
+      "canonicalUrl": "https://www.anthropic.com/research/confidential-inference-trusted-vms",
+      "author": "Anthropic",
+      "description": "Announcing a new collaborative research paper on Confidential Inference, a set of tools to improve the security of our model weights and of our users' data.",
+      "language": "en",
+      "publishedAt": "2025-06-17T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Confidential Inference via trusted VMs\nAnnouncing a new collaborative research paper on Confidential Inference, a set of to",
+          "n Confidential Inference, a set of tools to improve the security of our model weights and of our users' data."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.434Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/confidential-inference-trusted-vms"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ebb61b77cdd85e7a9bd1",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "The \"think\" tool for complex tool use",
+      "canonicalUrl": "https://www.anthropic.com/research/claude-think-tool",
+      "author": "Anthropic",
+      "description": "A blog post for developers, describing a new method for complex tool-use situations",
+      "language": "en",
+      "publishedAt": "2025-03-19T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "The \"think\" tool for complex tool use\nA blog post for developers, describing a new method for complex tool-use situations"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.436Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/claude-think-tool"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f3f1c1d2967b65940e11",
+      "publisherId": "anthropic-official",
+      "companyId": "anthropic",
+      "title": "A postmortem of three recent issues",
+      "canonicalUrl": "https://www.anthropic.com/research/a-postmortem-of-three-recent-issues",
+      "author": "Anthropic",
+      "description": "A technical report on three bugs that intermittently degraded Claude's responses: what happened, why fixes took time, and what we're changing.",
+      "language": "en",
+      "publishedAt": "2025-09-16T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:51:08.352Z",
+      "updatedAt": "2026-11-01T08:51:08.352Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          " bugs that intermittently degraded Claude's responses: what happened, why fixes took time, and what we're changing."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:51:53.433Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "anthropic",
+          "url": "https://www.anthropic.com/research/a-postmortem-of-three-recent-issues"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

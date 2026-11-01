@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "dewu-tencent",
+    "lastCheckedAt": "2026-11-01T08:47:39.125Z",
+    "nextRunAt": "2026-11-02T08:47:39.125Z",
+    "consecutiveFailures": 0,
+    "status": "pending",
+    "error": "已登记指定账号；尚需官网反向链接或可核验的平台企业认证证据。",
+    "discovered": 0,
+    "httpStatus": 200
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "anthropic",
+    "lastCheckedAt": "2026-11-01T08:51:08.352Z",
+    "lastSuccessAt": "2026-11-01T08:51:08.352Z",
+    "nextRunAt": "2026-11-02T08:51:08.354Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 24,
+    "httpStatus": 200
+  }
+}

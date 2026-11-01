@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "3fd47e5d868a641675bc",
+      "publisherId": "github-official",
+      "companyId": "github",
+      "title": "Using the GitHub Copilot SDK for Java",
+      "canonicalUrl": "https://github.blog/engineering/using-the-github-copilot-sdk-for-java",
+      "author": "Edward Burns",
+      "description": "Enterprise Java developers have a new superpower—drive GitHub Copilot from idiomatic Java code with annotations, virtual threads, and more. The post Using the GitHub Copilot SDK for Java appeared first on The GitHub Blog.",
+      "language": "en-US",
+      "publishedAt": "2026-08-10T19:30:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:48.265Z",
+      "updatedAt": "2026-11-01T08:47:48.265Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Using the GitHub Copilot SDK for Java\nEnterprise Java developers have a new superpower—drive GitHub Copilot from idiomatic Java",
+          "Using the GitHub Copilot SDK for Java\nEnterprise Java developers have a new superpower—drive GitHub Copilot from idiomatic Java code wi"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:47:49.578Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "github",
+          "externalId": "https://github.blog/?p=97992",
+          "url": "https://github.blog/engineering/using-the-github-copilot-sdk-for-java"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "50f11a9bf4fcadab65d4",
+      "publisherId": "github-official",
+      "companyId": "github",
+      "title": "Improving site performance by shipping more CSS",
+      "canonicalUrl": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css",
+      "author": "Josh Black",
+      "description": "How we fully migrated github.com away from CSS-in-JS. The post Improving site performance by shipping more CSS appeared first on The GitHub Blog.",
+      "language": "en-US",
+      "publishedAt": "2026-09-25T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:48.265Z",
+      "updatedAt": "2026-11-01T08:47:48.265Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Improving site performance by shipping more CSS\nHow we fully migrated github.com away from CSS-in-JS. The post Improving site"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:47:49.577Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "github",
+          "externalId": "https://github.blog/?p=99030",
+          "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "531d6ff2f05dd83579a1",
+      "publisherId": "github-official",
+      "companyId": "github",
+      "title": "How we make AI coding more cost efficient without sacrificing task quality",
+      "canonicalUrl": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality",
+      "author": "Erik Kristensen",
+      "description": "Why shorter outputs can cost more, and how GitHub Copilot reduces wasted work across the complete coding task. The post How we make AI coding more cost efficient without sacrificing task quality appeared first on The GitHub Blog.",
+      "language": "en-US",
+      "publishedAt": "2026-09-02T18:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:48.265Z",
+      "updatedAt": "2026-11-01T08:47:48.265Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "How we make AI coding more cost efficient without sacrificing task quality\nWhy shorter outputs can cost more, and how GitH",
+          "How we make AI coding more cost efficient without sacrificing task quality\nWhy shorter outputs can cost more, "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:47:49.578Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "github",
+          "externalId": "https://github.blog/?p=98586",
+          "url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6d90ec3dfe1a35b12421",
+      "publisherId": "github-official",
+      "companyId": "github",
+      "title": "Building Git infrastructure for agent-scale development",
+      "canonicalUrl": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development",
+      "author": "Brian Celenza",
+      "description": "We're rebuilding GitHub's Git infrastructure while GitHub keeps running, creating a foundation for agent-scale software development. The post Building Git infrastructure for agent-scale development appeared first on The GitHub Blog.",
+      "language": "en-US",
+      "publishedAt": "2026-10-06T20:57:56.000Z",
+      "discoveredAt": "2026-11-01T08:47:48.265Z",
+      "updatedAt": "2026-11-01T08:47:48.265Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Building Git infrastructure for agent-scale development\nWe're rebuilding GitHub's Git infrastructure while GitHub keeps running, creating a fo",
+          "Building Git infrastructure for agent-scale development\nWe're rebuilding GitHub's Git infrastructure while Git",
+          "Building Git infrastructure for agent-scale development\nWe're rebuilding GitHub's Git infrastructure while GitHub keeps run"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:47:49.577Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "github",
+          "externalId": "https://github.blog/?p=99275",
+          "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6dad746772b855fef17b",
+      "publisherId": "github-official",
+      "companyId": "github",
+      "title": "From 2,500 requests to 24: Rebuilding star history without the stargazers",
+      "canonicalUrl": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers",
+      "author": "Taylor Cuilty",
+      "description": "Our new repo star history API now provides trends without returning individual identities or requiring unbounded database work. These are the engineering tradeoffs we made. The post From 2,500 requests to 24: Rebuilding star history without the stargazers appeared first on The GitHub Blog.",
+      "language": "en-US",
+      "publishedAt": "2026-10-14T19:11:33.000Z",
+      "discoveredAt": "2026-11-01T08:47:48.265Z",
+      "updatedAt": "2026-11-01T08:47:48.265Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "argazers\nOur new repo star history API now provides trends without returning individual identities or requiring unbounded database work. These ar"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:47:49.577Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "github",
+          "externalId": "https://github.blog/?p=99364",
+          "url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7a43775ac77259fea73a",
+      "publisherId": "github-official",
+      "companyId": "github",
+      "title": "Your alt text passes automated checks. That doesn’t mean it’s any good.",
+      "canonicalUrl": "https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good",
+      "author": "Taarik Ashenafi",
+      "description": "We built a plugin for the GitHub Accessibility Scanner to make sure your alt text is actually accessible. Here's how it works. The post Your alt text passes automated checks. That doesn’t mean it’s any good. appeared first on The GitHub Blog.",
+      "language": "en-US",
+      "publishedAt": "2026-08-24T20:56:32.000Z",
+      "discoveredAt": "2026-11-01T08:47:48.265Z",
+      "updatedAt": "2026-11-01T08:47:48.265Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:47:49.578Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "github",
+          "externalId": "https://github.blog/?p=98354",
+          "url": "https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8801822483c6b9bdb070",
+      "publisherId": "github-official",
+      "companyId": "github",
+      "title": "The bridge to agent-scale Git infrastructure",
+      "canonicalUrl": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure",
+      "author": "Eleanor White",
+      "description": "We moved a copy of 99.99999% of GitHub's repositories to Azure. Here's how per-reference quorums will bring over the rest, and how object storage lets reads scale independently. The post The bridge to agent-scale Git infrastructure appeared first on The GitHub Blog.",
+      "language": "en-US",
+      "publishedAt": "2026-10-21T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:48.265Z",
+      "updatedAt": "2026-11-01T08:47:48.265Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "The bridge to agent-scale Git infrastructure\nWe moved a copy of 99.99999% of GitHub's repositories to Azure. Here's how per-",
+          "The bridge to agent-scale Git infrastructure\nWe moved a copy of 99.99999% of GitHub's repositories to Azure. Here's how per-refere",
+          "The bridge to agent-scale Git infrastructure\nWe moved a copy of 99.99999% of GitHub's repositories to Azure. Here's how per-reference quorum"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:47:49.577Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "github",
+          "externalId": "https://github.blog/?p=99628",
+          "url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "95f2ec4fb1a1e4134aa4",
+      "publisherId": "github-official",
+      "companyId": "github",
+      "title": "Turn one giant AI-generated pull request to a reviewable stack",
+      "canonicalUrl": "https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack",
+      "author": "Julia Muiruri",
+      "description": "Instead of one huge, un-reviewable pull request, teach coding agents to decompose work into a clean, ordered stack with GitHub stacked pull requests. The post Turn one giant AI-generated pull request to a reviewable stack appeared first on The GitHub Blog.",
+      "language": "en-US",
+      "publishedAt": "2026-08-04T16:47:18.000Z",
+      "discoveredAt": "2026-11-01T08:47:48.265Z",
+      "updatedAt": "2026-11-01T08:47:48.265Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Turn one giant AI-generated pull request to a reviewable stack\nInstead of one huge, un-reviewable pull request, teach coding "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:47:49.579Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "github",
+          "externalId": "https://github.blog/?p=97894",
+          "url": "https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b62940314c95935b630c",
+      "publisherId": "github-official",
+      "companyId": "github",
+      "title": "Staying Evergreen: How we automated secure access and repo hygiene in a shared org",
+      "canonicalUrl": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org",
+      "author": "Greg Mohler",
+      "description": "Put native GitHub features to work to review outside collaborator access and archive stale repositories. The post Staying Evergreen: How we automated secure access and repo hygiene in a shared org appeared first on The GitHub Blog.",
+      "language": "en-US",
+      "publishedAt": "2026-10-15T18:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:48.265Z",
+      "updatedAt": "2026-11-01T08:47:48.265Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Staying Evergreen: How we automated secure access and repo hygiene in a shared org\nPut native GitHub features to work to review o"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:47:49.577Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "github",
+          "externalId": "https://github.blog/?p=99529",
+          "url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e7ef1a521529737e435f",
+      "publisherId": "github-official",
+      "companyId": "github",
+      "title": "Rendering huge pull requests in the GitHub Copilot app",
+      "canonicalUrl": "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app",
+      "author": "Alberto Gimeno",
+      "description": "How we rebuilt the diff surface in the GitHub Copilot app to open a million-line pull request with hundreds of inline review comments. The post Rendering huge pull requests in the GitHub Copilot app appeared first on The GitHub Blog.",
+      "language": "en-US",
+      "publishedAt": "2026-09-23T18:29:49.000Z",
+      "discoveredAt": "2026-11-01T08:47:48.265Z",
+      "updatedAt": "2026-11-01T08:47:48.265Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "g huge pull requests in the GitHub Copilot app\nHow we rebuilt the diff surface in the GitHub Copilot app to open a million-line pull request with",
+          "requests in the GitHub Copilot app\nHow we rebuilt the diff surface in the GitHub Copilot app to open a million-line pull request with hundreds of"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:47:49.578Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "github",
+          "externalId": "https://github.blog/?p=99002",
+          "url": "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

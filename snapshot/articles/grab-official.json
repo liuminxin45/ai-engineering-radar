@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "0d31958eaeb6aed96147",
+      "publisherId": "grab-official",
+      "companyId": "grab",
+      "title": "Data Mesh at Grab (Part III): Operationalizing data reliability with automated DPIs",
+      "canonicalUrl": "https://engineering.grab.com/data-mesh-at-grab-part-three",
+      "author": "Harvey Li",
+      "description": "Make data reliability as dependable as running water. Learn how Grab operationalises this vision using automated Data Production Issues (DPIs) to convert dat...",
+      "publishedAt": "2026-08-28T00:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:52.171Z",
+      "updatedAt": "2026-11-01T08:47:52.171Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "s this vision using automated Data Production Issues (DPIs) to convert dat..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:02.968Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "grab",
+          "externalId": "https://engineering.grab.com/data-mesh-at-grab-part-three",
+          "url": "https://engineering.grab.com/data-mesh-at-grab-part-three"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1bcd0bb4f6e8e108512b",
+      "publisherId": "grab-official",
+      "companyId": "grab",
+      "title": "Smarter personalization: How property data helps us understand user price sensitivity",
+      "canonicalUrl": "https://engineering.grab.com/price-sensitivity-profiling-using-llm",
+      "author": "Muqi Li",
+      "description": "Grab combines public residential property data, LLM-powered enrichment, and hierarchical clustering to add location context to user profiles so personalizati...",
+      "publishedAt": "2026-10-06T00:23:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:52.171Z",
+      "updatedAt": "2026-11-01T08:47:52.171Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-application"
+        ],
+        "primaryTopic": "ai-application",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          " public residential property data, LLM-powered enrichment, and hierarchical clustering to add location context to user profiles so personalizati.",
+          "rchical clustering to add location context to user profiles so personalizati..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:02.968Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "grab",
+          "externalId": "https://engineering.grab.com/price-sensitivity-profiling-using-llm",
+          "url": "https://engineering.grab.com/price-sensitivity-profiling-using-llm"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3af3ad5958cc1eb35f56",
+      "publisherId": "grab-official",
+      "companyId": "grab",
+      "title": "Automated merchant review summary system with integrated feedback",
+      "canonicalUrl": "https://engineering.grab.com/automated-merchant-review-summary-system-with-integrated-feedback",
+      "author": "Chengju Zhou",
+      "description": "The Automated Merchant Review Summary System provides concise, AI-generated summaries of merchant reviews on Grab, helping consumers make informed decisions ...",
+      "publishedAt": "2026-09-25T00:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:52.171Z",
+      "updatedAt": "2026-11-01T08:47:52.171Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "w Summary System provides concise, AI-generated summaries of merchant reviews on Grab, helping consumers make informed decisions ..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:02.968Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "grab",
+          "externalId": "https://engineering.grab.com/automated-merchant-review-summary-system-with-integrated-feedback",
+          "url": "https://engineering.grab.com/automated-merchant-review-summary-system-with-integrated-feedback"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3b8c6ff075b870cdea48",
+      "publisherId": "grab-official",
+      "companyId": "grab",
+      "title": "Grab Bench: Evaluating AI on Grab-shaped production work",
+      "canonicalUrl": "https://engineering.grab.com/grab-bench-evaluating-ai",
+      "author": "Christian Coffrant",
+      "description": "Broad AI benchmarks are good at telling us which models look strong on public leaderboards. They are less good at catching the quiet failures that break prod...",
+      "publishedAt": "2026-08-12T00:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:52.171Z",
+      "updatedAt": "2026-11-01T08:47:52.171Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Grab Bench: Evaluating AI on Grab-shaped production work\nBroad AI benchmarks are good at telling us which models look strong on publi",
+          "Grab Bench: Evaluating AI on Grab-shaped production work\nBroad AI benchmarks are good at telling us which models look stro",
+          "ab-shaped production work\nBroad AI benchmarks are good at telling us which models look strong on public leaderboards. They are less good at catch"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:02.969Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "grab",
+          "externalId": "https://engineering.grab.com/grab-bench-evaluating-ai",
+          "url": "https://engineering.grab.com/grab-bench-evaluating-ai"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "49465ac3b206f483d9f3",
+      "publisherId": "grab-official",
+      "companyId": "grab",
+      "title": "GrabMart data for faster disease outbreak detection",
+      "canonicalUrl": "https://engineering.grab.com/grabmart-data-for-faster-disease-outbreak-detection",
+      "author": "Muqi Li",
+      "description": "This article explores how aggregated GrabMart transaction data could supplement public health surveillance while protecting user privacy and accounting for t...",
+      "publishedAt": "2026-10-13T00:23:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:52.171Z",
+      "updatedAt": "2026-11-01T08:47:52.171Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:02.968Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "grab",
+          "externalId": "https://engineering.grab.com/grabmart-data-for-faster-disease-outbreak-detection",
+          "url": "https://engineering.grab.com/grabmart-data-for-faster-disease-outbreak-detection"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "50623a2ad876dc8660b2",
+      "publisherId": "grab-official",
+      "companyId": "grab",
+      "title": "Building Jarvis Pro: Route first, answer later",
+      "canonicalUrl": "https://engineering.grab.com/jarvis-pro-route-firsr-answer-later",
+      "author": "Christian Coffrant",
+      "description": "Jarvis Pro routes account-manager questions before answering. This post explains why fluent AI replies are not enough, how routing, memory, and metric reconc...",
+      "publishedAt": "2026-08-21T00:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:52.171Z",
+      "updatedAt": "2026-11-01T08:47:52.171Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "ing. This post explains why fluent AI replies are not enough, how routing, memory, and metric reconc...",
+          "Building Jarvis Pro: Route first, answer later\nJarvis Pro routes account-manager questions before answering. T",
+          "plies are not enough, how routing, memory, and metric reconc..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:02.969Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "grab",
+          "externalId": "https://engineering.grab.com/jarvis-pro-route-firsr-answer-later",
+          "url": "https://engineering.grab.com/jarvis-pro-route-firsr-answer-later"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6c60cd31e5ee800c2857",
+      "publisherId": "grab-official",
+      "companyId": "grab",
+      "title": "Powering AI-led research through simulation",
+      "canonicalUrl": "https://engineering.grab.com/powering-ai-led-research-through-simulation",
+      "author": "Henokh Fibrianto",
+      "description": "To improve production dispatch experiments, we built an offline marketplace simulator and an agent-driven research loop so strategy ideas can be tested in mi...",
+      "publishedAt": "2026-10-05T00:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:52.171Z",
+      "updatedAt": "2026-11-01T08:47:52.171Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Powering AI-led research through simulation\nTo improve production dispatch experiments, we built an offline marketplace",
+          "arch through simulation\nTo improve production dispatch experiments, we built an offline marketplace simulator and an agent-driven research loop s"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:02.968Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "grab",
+          "externalId": "https://engineering.grab.com/powering-ai-led-research-through-simulation",
+          "url": "https://engineering.grab.com/powering-ai-led-research-through-simulation"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8c49245122f0c5beee5b",
+      "publisherId": "grab-official",
+      "companyId": "grab",
+      "title": "Crowdsourced taxonomy verification: A feedback-driven framework for refining knowledge graph relationships via online search interactions",
+      "canonicalUrl": "https://engineering.grab.com/crowdsourced-taxonomy-verification",
+      "author": "Junpeng Niu",
+      "description": "Knowledge graphs power modern search and recommendation systems, but automated construction methods can introduce semantic inaccuracies. This framework verif...",
+      "publishedAt": "2026-07-30T00:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:52.171Z",
+      "updatedAt": "2026-11-01T08:47:52.171Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:02.969Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "grab",
+          "externalId": "https://engineering.grab.com/crowdsourced-taxonomy-verification",
+          "url": "https://engineering.grab.com/crowdsourced-taxonomy-verification"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b521a43710d84a4b3cfd",
+      "publisherId": "grab-official",
+      "companyId": "grab",
+      "title": "App stability at scale with a layered defense",
+      "canonicalUrl": "https://engineering.grab.com/app-stability-at-scale-with-a-layered-defense",
+      "author": "Nguyen Van Minh",
+      "description": "AI coding assistants have changed how fast we ship, not how users experience a crash. Here's how Grab keeps its superapp stable with a layered defense: lint ...",
+      "publishedAt": "2026-10-21T00:23:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:52.171Z",
+      "updatedAt": "2026-11-01T08:47:52.171Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "ty at scale with a layered defense\nAI coding assistants have changed how fast we ship, not how users experience a crash. Here's how Grab keeps it",
+          "App stability at scale with a layered defense\nAI coding assistants have changed how fast we ship, not how users experience a cr"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:02.968Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "grab",
+          "externalId": "https://engineering.grab.com/app-stability-at-scale-with-a-layered-defense",
+          "url": "https://engineering.grab.com/app-stability-at-scale-with-a-layered-defense"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ec4ee4ec48df9944507d",
+      "publisherId": "grab-official",
+      "companyId": "grab",
+      "title": "How AI is transforming analytics at Grab",
+      "canonicalUrl": "https://engineering.grab.com/how-ai-is-transforming-analytics",
+      "author": "Maanas Prabhakar",
+      "description": "As AI agents take on more of the analytics loop, Grab's analysts are moving from producing artefacts to owning questions, judgement, and decisions. This post...",
+      "publishedAt": "2026-08-01T00:23:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:52.171Z",
+      "updatedAt": "2026-11-01T08:47:52.171Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "How AI is transforming analytics at Grab\nAs AI agents take on more of the analytics loop, Grab's analysts are movi"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:02.969Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "grab",
+          "externalId": "https://engineering.grab.com/how-ai-is-transforming-analytics",
+          "url": "https://engineering.grab.com/how-ai-is-transforming-analytics"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

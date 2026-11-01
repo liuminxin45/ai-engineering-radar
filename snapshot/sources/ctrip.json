@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "ctrip",
+    "lastCheckedAt": "2026-11-01T08:58:09.541Z",
+    "nextRunAt": "2026-11-02T08:58:09.544Z",
+    "consecutiveFailures": 0,
+    "status": "pending",
+    "error": "已找到 ctriptech 博客园候选账号，公开目录最后更新于 2016 年；尚缺企业反向链接或认证证据，tech.ctrip.com 当前连接失败。",
+    "discovered": 0,
+    "httpStatus": 200
+  }
+}

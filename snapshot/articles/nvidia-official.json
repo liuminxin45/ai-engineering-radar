@@ -1,0 +1,3509 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "04edc7da493ad503da93",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How NVIDIA OpenShell Reference Architecture Secures and Governs AI Agent Workloads at Scale",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale",
+      "author": "Elizabeth Goodman",
+      "description": "Autonomous agents can work for hours on complex tasks, accessing files, tools, the internet, and spawning other agents to collaborate with. Executing complex...",
+      "publishedAt": "2026-10-21T09:50:14.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "e Architecture Secures and Governs AI Agent Workloads at Scale\nAutonomous agents can work for hours on complex tasks, accessing files, tools, the",
+          "How NVIDIA OpenShell Reference Architecture Secures and Governs AI Agent Workloads at Scale\nAutonomous agents can work for hours on complex t",
+          "on complex tasks, accessing files, tools, the internet, and spawning other agents to collaborate with. Executing complex..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.621Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123932",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "08391628cd828d387933",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Topology-Aware Workload Scheduling with NVIDIA Topograph",
+      "canonicalUrl": "https://developer.nvidia.com/blog/topology-aware-workload-scheduling-with-nvidia-topograph",
+      "author": "Elizabeth Goodman",
+      "description": "AI factories are power-limited systems that deliver maximum value when fully optimized. GPU workload placement is a key optimization. Poor workload placement...",
+      "publishedAt": "2026-09-22T17:16:28.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "d Scheduling with NVIDIA Topograph\nAI factories are power-limited systems that deliver maximum value when fully optimized. GPU workload placement",
+          "d. GPU workload placement is a key optimization. Poor workload placement...",
+          "aximum value when fully optimized. GPU workload placement is a key optimization. Poor workload placement..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.827Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122765",
+          "url": "https://developer.nvidia.com/blog/topology-aware-workload-scheduling-with-nvidia-topograph"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0b87481d9bf61d990211",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "NVIDIA Vera Rubin and Blackwell Set a New Standard for Agentic AI Performance per Watt",
+      "canonicalUrl": "https://developer.nvidia.com/blog/nvidia-vera-rubin-and-blackwell-set-a-new-standard-for-agentic-ai-performance-per-watt",
+      "author": "Elizabeth Goodman",
+      "description": "AI agents have expanded inference from single-turn interactions into multi-step workflows that reason, invoke tools, coordinate subagents, and carry growing...",
+      "publishedAt": "2026-08-24T15:00:05.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference",
+          "agent"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "d Blackwell Set a New Standard for Agentic AI Performance per Watt\nAI agents have expanded inference from single-turn interactions into multi-ste",
+          " Set a New Standard for Agentic AI Performance per Watt\nAI agents have expanded inference from single-turn interactions into multi-step workflows",
+          "-turn interactions into multi-step workflows that reason, invoke tools, coordinate subagents, and carry growing..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.296Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121715",
+          "url": "https://developer.nvidia.com/blog/nvidia-vera-rubin-and-blackwell-set-a-new-standard-for-agentic-ai-performance-per-watt"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1223419c91d0c28318d2",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Expanding AI Storage Access with NVIDIA cuObject and the NVIDIA SCADA Server SDK",
+      "canonicalUrl": "https://developer.nvidia.com/blog/expanding-ai-storage-access-with-nvidia-cuobject-and-the-nvidia-scada-server-sdk",
+      "author": "Harish Arora",
+      "description": "AI infrastructure engineers, storage developers, and cloud service providers need fast and secure access to high-capacity file and object storage to support AI...",
+      "publishedAt": "2026-09-30T19:13:02.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Expanding AI Storage Access with NVIDIA cuObject and the NVIDIA SCADA Server SDK\nAI infrastructure engineers, storage de",
+          "Object and the NVIDIA SCADA Server SDK\nAI infrastructure engineers, storage developers, and cloud service providers need fast and secure access t"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.765Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123090",
+          "url": "https://developer.nvidia.com/blog/expanding-ai-storage-access-with-nvidia-cuobject-and-the-nvidia-scada-server-sdk"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "12e311fc7e43bee9f033",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "5 Steps to Create SimReady Assets for Robotics with Frontier AI Models",
+      "canonicalUrl": "https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models",
+      "author": "Elizabeth Goodman",
+      "description": "Preparing CAD assets for robotics simulation requires more than converting geometry to OpenUSD: developers must configure and validate materials, collision...",
+      "publishedAt": "2026-10-08T20:57:55.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          " Assets for Robotics with Frontier AI Models\nPreparing CAD assets for robotics simulation requires more than converting geometry to OpenUSD: deve"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.649Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123534",
+          "url": "https://developer.nvidia.com/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "14436575546069339f4e",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How SWE-Serve Exposes the Gap Between Local Tests and Live Serving",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-swe-serve-exposes-the-gap-between-local-tests-and-live-serving",
+      "author": "Elizabeth Goodman",
+      "description": "An AI coding agent’s patch can pass tests yet fail when the server loads a real model and handles requests. Evaluating changes to inference-serving software...",
+      "publishedAt": "2026-09-23T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "ai-coding",
+          "inference",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "en Local Tests and Live Serving\nAn AI coding agent’s patch can pass tests yet fail when the server loads a real model and handles requests. Evalu",
+          "a real model and handles requests. Evaluating changes to inference-serving software...",
+          "e Gap Between Local Tests and Live Serving\nAn AI coding agent’s patch can pass tests yet fail when the server loads a real model and handles requ"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.823Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122835",
+          "url": "https://developer.nvidia.com/blog/how-swe-serve-exposes-the-gap-between-local-tests-and-live-serving"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "146c30d8d7e1bdc7dcc9",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Deploying an HSTU Generative Recommender with NVIDIA Dynamo-Triton",
+      "canonicalUrl": "https://developer.nvidia.com/blog/deploying-an-hstu-generative-recommender-with-nvidia-dynamo-triton",
+      "author": "Tanya Lenz",
+      "description": "Generative recommender (GR) systems are emerging as a powerful new approach for large-scale personalization. Instead of treating recommendation as a set of...",
+      "publishedAt": "2026-09-30T20:54:59.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Deploying an HSTU Generative Recommender with NVIDIA Dynamo-Triton\nGenerative recommender (GR) systems are eme"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.764Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123110",
+          "url": "https://developer.nvidia.com/blog/deploying-an-hstu-generative-recommender-with-nvidia-dynamo-triton"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "14d3e33b6c6eb65e5999",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Scale AV Perception Across Vehicle Platforms with NVIDIA Omniverse NuRec",
+      "canonicalUrl": "https://developer.nvidia.com/blog/scale-av-perception-across-vehicle-platforms-with-nvidia-omniverse-nurec",
+      "author": "Michelle Horton",
+      "description": "A perception stack is shaped by the vehicle that carries it. Move the same software to a new carline—for example, from an SUV to a sedan or another vehicle...",
+      "publishedAt": "2026-08-31T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Scale AV Perception Across Vehicle Platforms with NVIDIA Omniverse NuRec\nA perception stack is shaped by the v"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.258Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121899",
+          "url": "https://developer.nvidia.com/blog/scale-av-perception-across-vehicle-platforms-with-nvidia-omniverse-nurec"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "185f0eff3125e5ae4c16",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Enabling Private High-Performance Production AI Inference with NVIDIA Confidential Computing",
+      "canonicalUrl": "https://developer.nvidia.com/blog/enabling-private-high-performance-production-ai-inference-with-nvidia-confidential-computing",
+      "author": "Tanya Lenz",
+      "description": "As large language model (LLM) inference increasingly processes sensitive information and proprietary model context across personal, enterprise, and regulated...",
+      "publishedAt": "2026-09-22T17:27:41.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference",
+          "ai-application"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "rivate High-Performance Production AI Inference with NVIDIA Confidential Computing\nAs large language model (LLM) inference increasingly processes",
+          "Enabling Private High-Performance Production AI Inference with NVIDIA Confidential Computing\nAs large language model (LLM) inference",
+          " information and proprietary model context across personal, enterprise, and regulated..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.824Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122756",
+          "url": "https://developer.nvidia.com/blog/enabling-private-high-performance-production-ai-inference-with-nvidia-confidential-computing"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "196a483b42f74594f416",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Maximizing AI Factory Performance per Watt with NVIDIA DSX MaxLPS",
+      "canonicalUrl": "https://developer.nvidia.com/blog/maximizing-ai-factory-performance-per-watt-with-nvidia-dsx-maxlps",
+      "author": "Tanya Lenz",
+      "description": "AI factories are power-constrained industrial systems. The question is no longer how many GPUs fit in a data center, but how much AI output each available...",
+      "publishedAt": "2026-08-24T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Maximizing AI Factory Performance per Watt with NVIDIA DSX MaxLPS\nAI factories are power-constrained industrial systems. ",
+          "Maximizing AI Factory Performance per Watt with NVIDIA DSX MaxLPS\nAI factories are power-constrained industrial systems. The questio",
+          "The question is no longer how many GPUs fit in a data center, but how much AI output each available..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.299Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121508",
+          "url": "https://developer.nvidia.com/blog/maximizing-ai-factory-performance-per-watt-with-nvidia-dsx-maxlps"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1a1229526362d451687f",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "The Machines that Make the Machines",
+      "canonicalUrl": "https://developer.nvidia.com/blog/the-machines-that-make-the-machines",
+      "author": "Elizabeth Goodman",
+      "description": "How we taught robots to assemble GB300 tester trays and what it taught us about robot learning, mechanical intelligence, and good old-fashioned engineering The...",
+      "publishedAt": "2026-10-07T18:21:03.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "he Machines that Make the Machines\nHow we taught robots to assemble GB300 tester trays and what it taught us about robot learning, mechanical int"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.651Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123177",
+          "url": "https://developer.nvidia.com/blog/the-machines-that-make-the-machines"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1b950524620d327c9dc4",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How NVIDIA Mission Control 2.5 Brings Autonomous Recovery to Kubernetes",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-nvidia-mission-control-2-5-brings-autonomous-recovery-to-kubernetes",
+      "author": "Elizabeth Goodman",
+      "description": "Training large-scale AI models on thousands of GPUs is a high-stakes operation where monitoring and automation must be built-in to optimize cluster resiliency...",
+      "publishedAt": "2026-10-26T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "to Kubernetes\nTraining large-scale AI models on thousands of GPUs is a high-stakes operation where monitoring and automation must be built-in to ",
+          "overy to Kubernetes\nTraining large-scale AI models on thousands of GPUs is a high-stakes operation where monitoring and automation must be built-",
+          "ge-scale AI models on thousands of GPUs is a high-stakes operation where monitoring and automation must be built-in to optimize cluster resilienc"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.613Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123117",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-mission-control-2-5-brings-autonomous-recovery-to-kubernetes"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "21f3299920078dab7826",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "TensorRT Edge-LLM Completes the MLPerf Edge Agentic Benchmark 6.4x Faster on Jetson AGX Thor",
+      "canonicalUrl": "https://developer.nvidia.com/blog/tensorrt-edge-llm-completes-the-mlperf-edge-agentic-benchmark-6-4x-faster-on-jetson-agx-thor",
+      "author": "Elizabeth Goodman",
+      "description": "AI agents are moving from cloud data centers to vehicles, robots, and other edge devices. Unlike a chatbot that answers a single prompt, an agent works through...",
+      "publishedAt": "2026-09-16T20:37:07.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference",
+          "evaluation",
+          "agent",
+          "ai-application"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "TensorRT Edge-LLM Completes the MLPerf Edge Agentic Benchmark 6.4x Faster on Jetson AGX Thor\nAI agents are moving from cloud",
+          " Completes the MLPerf Edge Agentic Benchmark 6.4x Faster on Jetson AGX Thor\nAI agents are moving from cloud data centers to vehicles, robots, and"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.871Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122604",
+          "url": "https://developer.nvidia.com/blog/tensorrt-edge-llm-completes-the-mlperf-edge-agentic-benchmark-6-4x-faster-on-jetson-agx-thor"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2630cf545ba1d5d4d5fd",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Build Local AI Apps with C++ and NVIDIA TensorRT RTX Samples",
+      "canonicalUrl": "https://developer.nvidia.com/blog/build-local-ai-apps-with-c-and-nvidia-tensorrt-rtx-samples",
+      "author": "Luca Spindler",
+      "description": "Adding AI models to local applications requires a portable model format, a reliable runtime, and acceleration that works across target systems. Do Inference Now...",
+      "publishedAt": "2026-10-01T17:59:27.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Build Local AI Apps with C++ and NVIDIA TensorRT RTX Samples\nAdding AI models to local applications requires a portable mo",
+          "Build Local AI Apps with C++ and NVIDIA TensorRT RTX Samples\nAdding AI models to local applications requires a",
+          " portable model format, a reliable runtime, and acceleration that works across target systems. Do Inference Now..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.761Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123027",
+          "url": "https://developer.nvidia.com/blog/build-local-ai-apps-with-c-and-nvidia-tensorrt-rtx-samples"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2633c308a77864e3ea54",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Scaling Federated Learning Across Docker, Kubernetes, and Slurm with NVIDIA FLARE",
+      "canonicalUrl": "https://developer.nvidia.com/blog/scaling-federated-learning-across-docker-kubernetes-and-slurm-with-nvidia-flare",
+      "author": "Elizabeth Goodman",
+      "description": "Federated learning (FL) projects often begin with a straightforward setup: one server, a few clients, and one dataset at each site. As those projects grow, the...",
+      "publishedAt": "2026-09-15T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Scaling Federated Learning Across Docker, Kubernetes, and Slurm with NVIDIA FLARE\nFederated learning (FL) proj",
+          "one server, a few clients, and one dataset at each site. As those projects grow, the..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.919Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122520",
+          "url": "https://developer.nvidia.com/blog/scaling-federated-learning-across-docker-kubernetes-and-slurm-with-nvidia-flare"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2d529681f227a904f1de",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Building a Memory-Driven Agent with NVIDIA NemoClaw",
+      "canonicalUrl": "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw",
+      "author": "Tanya Lenz",
+      "description": "Enterprise work spans messages, decisions, projects, and obligations that change over time. An AI agent that starts without this context must reconstruct it...",
+      "publishedAt": "2026-09-04T18:04:55.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Building a Memory-Driven Agent with NVIDIA NemoClaw\nEnterprise work spans messages, decisions, projects, and obligations that change ov",
+          "Building a Memory-Driven Agent with NVIDIA NemoClaw\nEnterprise work spans messages, decisions, projects, and o",
+          "Building a Memory-Driven Agent with NVIDIA NemoClaw\nEnterprise work spans messages, decisions, projects, and obligations "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.983Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122286",
+          "url": "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2e4439ffe6e6258be691",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How NVIDIA Groq 3 LPX Deterministic Execution Drives Power-Efficient High-Interactivity Inference on NVIDIA Vera Rubin",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-nvidia-groq-3-lpx-deterministic-execution-drives-power-efficient-high-interactivity-inference-on-nvidia-vera-rubin",
+      "author": "Tanya Lenz",
+      "description": "Power is a defining constraint for AI factories. As AI workloads demand a full compute platform to serve them, each component of that platform must maximize...",
+      "publishedAt": "2026-09-15T16:55:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Power-Efficient High-Interactivity Inference on NVIDIA Vera Rubin\nPower is a defining constraint for AI factories. As AI workloads demand a full "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.914Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122482",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-groq-3-lpx-deterministic-execution-drives-power-efficient-high-interactivity-inference-on-nvidia-vera-rubin"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "322eb644ea2e6437343c",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "The Modern CUDA Toolbox in Practice: A Step-by-Step Optimization Walkthrough",
+      "canonicalUrl": "https://developer.nvidia.com/blog/the-modern-cuda-toolbox-in-practice-a-step-by-step-optimization-walkthrough",
+      "author": "Elizabeth Goodman",
+      "description": "NVIDIA CUDA remains the foundation of GPU-accelerated computing, powering everything from scientific simulations to large-scale AI training. But writing...",
+      "publishedAt": "2026-09-02T17:15:57.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "entific simulations to large-scale AI training. But writing...",
+          "oolbox in Practice: A Step-by-Step Optimization Walkthrough\nNVIDIA CUDA remains the foundation of GPU-accelerated computing, powering everything ",
+          "The Modern CUDA Toolbox in Practice: A Step-by-Step Optimization Walkthrough\nNVIDIA CUDA remains the foundation of GPU-acceler"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.178Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122046",
+          "url": "https://developer.nvidia.com/blog/the-modern-cuda-toolbox-in-practice-a-step-by-step-optimization-walkthrough"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3425f4f4675d354df53d",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Achieve Productive AI Capacity Faster and More Predictably with NVIDIA DSX POD",
+      "canonicalUrl": "https://developer.nvidia.com/blog/achieve-productive-ai-capacity-faster-and-more-predictably-with-nvidia-dsx-pod",
+      "author": "Tanya Lenz",
+      "description": "AI factories turn energy into intelligence. But before an AI workload can produce its first token, operators must bring an interconnected system of compute,...",
+      "publishedAt": "2026-10-21T09:35:32.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Achieve Productive AI Capacity Faster and More Predictably with NVIDIA DSX POD\nAI factories turn energy into intelligence. But be",
+          " AI workload can produce its first token, operators must bring an interconnected system of compute,..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.623Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123892",
+          "url": "https://developer.nvidia.com/blog/achieve-productive-ai-capacity-faster-and-more-predictably-with-nvidia-dsx-pod"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3a2ab0821723e2768474",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner, Part 2",
+      "canonicalUrl": "https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2",
+      "author": "Tanya Lenz",
+      "description": "The Global Performance Tuner is a feature for automatic performance tuning released in NVIDIA TensorRT 11.1. It provides automatic, accuracy-aware and...",
+      "publishedAt": "2026-10-23T17:27:52.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.613Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=124139",
+          "url": "https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3b2e8b9d8b0d5832e909",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Co-Designing AI Models Using Speculative Decoding for Faster LLM Inference",
+      "canonicalUrl": "https://developer.nvidia.com/blog/co-designing-ai-models-using-speculative-decoding-for-faster-llm-inference",
+      "author": "Tanya Lenz",
+      "description": "This post is the third in a series on AI model co-design. It explores how to accelerate LLM inference while maintaining accuracy using speculative decoding and...",
+      "publishedAt": "2026-09-02T16:04:19.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference",
+          "ai-application"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Co-Designing AI Models Using Speculative Decoding for Faster LLM Inference\nThis post is the third in a series on AI model c",
+          "Co-Designing AI Models Using Speculative Decoding for Faster LLM Inference\nThis post is the third in a series on "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.236Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122024",
+          "url": "https://developer.nvidia.com/blog/co-designing-ai-models-using-speculative-decoding-for-faster-llm-inference"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3b6076f94bd18a27d1b9",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "3 Ways to Boost MoE Inference on NVIDIA DGX Spark",
+      "canonicalUrl": "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark",
+      "author": "Yang Liu",
+      "description": "Generating tokens faster starts with identifying what limits inference performance. In the batch-size-1 evaluation of Ling-3.0-flash from Inclusion AI on NVIDIA...",
+      "publishedAt": "2026-10-27T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference",
+          "evaluation"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "3 Ways to Boost MoE Inference on NVIDIA DGX Spark\nGenerating tokens faster starts with identifying what limits inference performan",
+          " identifying what limits inference performance. In the batch-size-1 evaluation of Ling-3.0-flash from Inclusion AI on NVIDIA...",
+          "nce on NVIDIA DGX Spark\nGenerating tokens faster starts with identifying what limits inference performance. In the batch-size-1 evaluation of Lin"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.613Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=124221",
+          "url": "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3b6d287053ca12e19af3",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Control How Your GPU Shares Work with Green Contexts",
+      "canonicalUrl": "https://developer.nvidia.com/blog/control-how-your-gpu-shares-work-with-green-contexts",
+      "author": "Elizabeth Goodman",
+      "description": "GPU applications increasingly consist of multiple independent components running at the same time within a single process: a latency-sensitive operator...",
+      "publishedAt": "2026-10-06T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Control How Your GPU Shares Work with Green Contexts\nGPU applications increasingly consist of multiple independent components r"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.694Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123334",
+          "url": "https://developer.nvidia.com/blog/control-how-your-gpu-shares-work-with-green-contexts"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3b72b07402ef9bc4b803",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Build Applications on NVIDIA BlueField Faster with NVIDIA DOCA Agent Skills",
+      "canonicalUrl": "https://developer.nvidia.com/blog/build-applications-on-nvidia-bluefield-faster-with-nvidia-doca-agent-skills",
+      "author": "Tanya Lenz",
+      "description": "AI agents are becoming a standard part of development workflows, but general-purpose agents weren't built with specialized infrastructure software such as...",
+      "publishedAt": "2026-10-01T18:13:29.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          " BlueField Faster with NVIDIA DOCA Agent Skills\nAI agents are becoming a standard part of development workflows, but general-purpose agents weren",
+          "Build Applications on NVIDIA BlueField Faster with NVIDIA DOCA Agent Skills\nAI agents are becoming a standard ",
+          "ing a standard part of development workflows, but general-purpose agents weren't built with specialized infrastructure software such as..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.695Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123148",
+          "url": "https://developer.nvidia.com/blog/build-applications-on-nvidia-bluefield-faster-with-nvidia-doca-agent-skills"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "41c606cf228d8e2badb1",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner, Part 1",
+      "canonicalUrl": "https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-1",
+      "author": "Tanya Lenz",
+      "description": "Deploying a trained neural network involves more than translating each operator into a GPU kernel. It is a compilation problem with many legitimate answers. For...",
+      "publishedAt": "2026-10-23T17:27:35.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "发现相似标题，但缺少确定的跨平台原文关系，等待人工确认。",
+        "evidence": [
+          " Tuner, Part 1\nDeploying a trained neural network involves more than translating each operator into a GPU kernel. It is a compilation problem wit",
+          "Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner",
+          "n translating each operator into a GPU kernel. It is a compilation problem with many legitimate answers. For..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.614Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=124071",
+          "url": "https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-1"
+        }
+      ],
+      "duplicateCandidates": [
+        "3a2ab0821723e2768474"
+      ]
+    },
+    {
+      "id": "41f19de07dd1beadd48e",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Accelerating Dropless MoE Training in JAX with NVIDIA Transformer Engine",
+      "canonicalUrl": "https://developer.nvidia.com/blog/accelerating-dropless-moe-training-in-jax-with-nvidia-transformer-engine",
+      "author": "Tanya Lenz",
+      "description": "Mixture of experts (MoE) has become one of the defining architectural trends in large-scale AI model training. DeepSeek, Qwen, and Mixtral are examples of MoE...",
+      "publishedAt": "2026-09-14T16:39:15.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "rchitectural trends in large-scale AI model training. DeepSeek, Qwen, and Mixtral are examples of MoE...",
+          "ning architectural trends in large-scale AI model training. DeepSeek, Qwen, and Mixtral are examples of MoE..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.921Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121007",
+          "url": "https://developer.nvidia.com/blog/accelerating-dropless-moe-training-in-jax-with-nvidia-transformer-engine"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "44e15913b01763878a45",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Scale Bitwise-Deterministic Pretraining with NVIDIA Megatron Core",
+      "canonicalUrl": "https://developer.nvidia.com/blog/scale-bitwise-deterministic-pretraining-with-nvidia-megatron-core",
+      "author": "Ashwath Aithal",
+      "description": "Bitwise determinism makes large-scale pretraining easier to debug, validate, and resume reproducibly. These benefits become especially valuable when training...",
+      "publishedAt": "2026-10-06T19:58:03.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Scale Bitwise-Deterministic Pretraining with NVIDIA Megatron Core\nBitwise determinism makes large-scale pretra"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.690Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123415",
+          "url": "https://developer.nvidia.com/blog/scale-bitwise-deterministic-pretraining-with-nvidia-megatron-core"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "477a7dbd59db8fbabbbb",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "What’s New for Game Developers: DLSS 5 with 3D-Guided Neural Rendering, NVIDIA ACE Updates, and New RTX Kit Capabilities",
+      "canonicalUrl": "https://developer.nvidia.com/blog/whats-new-for-game-developers-dlss-5-with-3d-guided-neural-rendering-nvidia-ace-updates-and-new-rtx-kit-capabilities",
+      "author": "Elizabeth Goodman",
+      "description": "NVIDIA DLSS 5 introduces DLSS 3D-Guided Neural Rendering and granular controls that help game developers add lifelike lighting and material detail while...",
+      "publishedAt": "2026-09-22T13:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          " Developers: DLSS 5 with 3D-Guided Neural Rendering, NVIDIA ACE Updates, and New RTX Kit Capabilities\nNVIDIA DLSS 5 introduces DLSS 3D-Guided Neu"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.857Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122769",
+          "url": "https://developer.nvidia.com/blog/whats-new-for-game-developers-dlss-5-with-3d-guided-neural-rendering-nvidia-ace-updates-and-new-rtx-kit-capabilities"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "478e93c185f625995cd9",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "NVIDIA RTX Spark Powers Neural Rendering and AI Characters in Games",
+      "canonicalUrl": "https://developer.nvidia.com/blog/nvidia-rtx-spark-powers-neural-rendering-and-ai-characters-in-games",
+      "author": "Elizabeth Goodman",
+      "description": "NVIDIA RTX Spark is a new Windows PC platform for AI development, creation, and gaming in slim laptops and compact desktops. Powered by an NVIDIA Blackwell RTX...",
+      "publishedAt": "2026-10-27T17:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "NVIDIA RTX Spark Powers Neural Rendering and AI Characters in Games\nNVIDIA RTX Spark is a new Windows PC platform for AI development, "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.612Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=124273",
+          "url": "https://developer.nvidia.com/blog/nvidia-rtx-spark-powers-neural-rendering-and-ai-characters-in-games"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4bbdb6f597c2087cdcc1",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Benchmarking LLM Inference at Scale with AIPerf",
+      "canonicalUrl": "https://developer.nvidia.com/blog/benchmarking-llm-inference-at-scale-with-aiperf",
+      "author": "Elizabeth Goodman",
+      "description": "You’re deploying a model on a system. It starts up, prompts are getting responses. Now the hard question: Is this fast? Your instincts might lead you to send...",
+      "publishedAt": "2026-09-18T19:04:41.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference",
+          "ai-application"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Benchmarking LLM Inference at Scale with AIPerf\nYou’re deploying a model on a system. It starts up, prompts are getting res",
+          "Benchmarking LLM Inference at Scale with AIPerf\nYou’re deploying a model on a system. It starts up, prompts are getting responses. Now the h",
+          "Benchmarking LLM Inference at Scale with AIPerf\nYou’re deploying a model on a system. It starts up, prompts ar"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.868Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122587",
+          "url": "https://developer.nvidia.com/blog/benchmarking-llm-inference-at-scale-with-aiperf"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4ff076f4431101fed57b",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "From Wafer-Out to First Token: Codifying Supply Chain Expertise with Nemotron and Palantir Foundry",
+      "canonicalUrl": "https://developer.nvidia.com/blog/from-wafer-out-to-first-token-codifying-supply-chain-expertise-with-nemotron-and-palantir-foundry",
+      "author": "Elizabeth Goodman",
+      "description": "NVIDIA has one of the largest and most complex supply chains in the world, and its performance is measured from wafer-out to first token. The interval is in two...",
+      "publishedAt": "2026-09-10T09:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "upply chains in the world, and its performance is measured from wafer-out to first token. The interval is in two...",
+          "From Wafer-Out to First Token: Codifying Supply Chain Expertise with Nemotron and Palantir Foundry\nNVIDIA has one of the largest and m"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.929Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122401",
+          "url": "https://developer.nvidia.com/blog/from-wafer-out-to-first-token-codifying-supply-chain-expertise-with-nemotron-and-palantir-foundry"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "53e507557ff2fb25a5f1",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Lower the Cost of Building and Running Visual AI Agents with NVIDIA VSS Blueprint 3.3",
+      "canonicalUrl": "https://developer.nvidia.com/blog/lower-the-cost-of-building-and-running-visual-ai-agents-with-nvidia-vss-blueprint-3-3",
+      "author": "Elizabeth Goodman",
+      "description": "Vision-language models have made it possible to build visual AI agents that understand video at production scale. The harder problem is turning that capability...",
+      "publishedAt": "2026-09-29T18:35:09.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "ost of Building and Running Visual AI Agents with NVIDIA VSS Blueprint 3.3\nVision-language models have made it possible to build visual AI agents",
+          "Lower the Cost of Building and Running Visual AI Agents with NVIDIA VSS Blueprint 3.3\nVision-language models have made it possib"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.769Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123017",
+          "url": "https://developer.nvidia.com/blog/lower-the-cost-of-building-and-running-visual-ai-agents-with-nvidia-vss-blueprint-3-3"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "57922721425ca1138a85",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Solving Agentic AI Fleet Challenges with NVIDIA Vera CPU",
+      "canonicalUrl": "https://developer.nvidia.com/blog/solving-agentic-ai-fleet-challenges-with-nvidia-vera-cpu",
+      "author": "Michelle Horton",
+      "description": "AI factories are interconnected systems where fleet economics depend on how efficiently the entire stack converts power and capital into completed agent tasks....",
+      "publishedAt": "2026-08-24T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Solving Agentic AI Fleet Challenges with NVIDIA Vera CPU\nAI factories are interconnected systems where fleet economics"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.311Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121644",
+          "url": "https://developer.nvidia.com/blog/solving-agentic-ai-fleet-challenges-with-nvidia-vera-cpu"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5aaebf80374a6f7f7fc5",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Efficient MoE Training for Biological Foundation Models",
+      "canonicalUrl": "https://developer.nvidia.com/blog/efficient-moe-training-for-biological-foundation-models",
+      "author": "Michelle Horton",
+      "description": "As language models grow, scaling dense architectures becomes increasingly expensive. In a dense transformer, every token passes through every layer, so adding...",
+      "publishedAt": "2026-09-24T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "on Models\nAs language models grow, scaling dense architectures becomes increasingly expensive. In a dense transformer, every token passes through",
+          "ive. In a dense transformer, every token passes through every layer, so adding..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.816Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122860",
+          "url": "https://developer.nvidia.com/blog/efficient-moe-training-for-biological-foundation-models"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5bd0e1eaec2668c84b0a",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How to Rewrite Apache Spark UDFs for GPU Acceleration with AI Agents",
+      "canonicalUrl": "https://developer.nvidia.com/blog/rewrite-apache-spark-udfs-gpu-acceleration-ai-agents",
+      "author": "Elizabeth Goodman",
+      "description": "Enterprise applications have become increasingly demanding. Agentic AI has compounded the need for vast amounts of enterprise data with frequent, complex...",
+      "publishedAt": "2026-10-13T21:33:21.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference",
+          "agent"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "ark UDFs for GPU Acceleration with AI Agents\nEnterprise applications have become increasingly demanding. Agentic AI has compounded the need for v",
+          "w to Rewrite Apache Spark UDFs for GPU Acceleration with AI Agents\nEnterprise applications have become increasingly demanding. Agentic AI has com"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.629Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123309",
+          "url": "https://developer.nvidia.com/blog/rewrite-apache-spark-udfs-gpu-acceleration-ai-agents"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "624b9520880ff27b64fc",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How to Read Data into GPU Memory in Python with NVIDIA GPUDirect Storage",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-to-read-data-into-gpu-memory-in-python-with-nvidia-gpudirect-storage",
+      "author": "Tanya Lenz",
+      "description": "GPU applications are processing ever-growing datasets with increasingly powerful accelerators. According to the 2025 Stanford AI Index, compute for notable AI...",
+      "publishedAt": "2026-10-22T16:39:09.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "rs. According to the 2025 Stanford AI Index, compute for notable AI...",
+          "How to Read Data into GPU Memory in Python with NVIDIA GPUDirect Storage\nGPU applications are processing ever-growing datasets with "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.615Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123962",
+          "url": "https://developer.nvidia.com/blog/how-to-read-data-into-gpu-memory-in-python-with-nvidia-gpudirect-storage"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "63493f86168e7e8d9bf8",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Experiment with Qwen3.8-Flash-Next on NVIDIA GB300 NVL72 for Agentic Coding",
+      "canonicalUrl": "https://developer.nvidia.com/blog/experiment-with-qwen3-8-flash-next-on-nvidia-gb300-nvl72-for-agentic-coding",
+      "author": "Michelle Horton",
+      "description": "Alibaba released the model weights for Qwen3.8-Flash-Next as a preview of the upcoming Qwen4 architecture for developers to experiment with and evaluate. It’s...",
+      "publishedAt": "2026-08-26T17:07:12.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "ash-Next on NVIDIA GB300 NVL72 for Agentic Coding\nAlibaba released the model weights for Qwen3.8-Flash-Next as a preview of the upcoming Qwen4 ar",
+          "as a preview of the upcoming Qwen4 architecture for developers to experiment with and evaluate. It’s..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.269Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121855",
+          "url": "https://developer.nvidia.com/blog/experiment-with-qwen3-8-flash-next-on-nvidia-gb300-nvl72-for-agentic-coding"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6841869322d134f7599d",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Fine-Tuning NVIDIA Nemotron for Saudi Arabic Dialects, with a Path to Other Languages",
+      "canonicalUrl": "https://developer.nvidia.com/blog/fine-tuning-nvidia-nemotron-for-saudi-arabic-dialects-with-a-path-to-other-languages",
+      "author": "Elizabeth Goodman",
+      "description": "Automatic speech recognition must handle how people actually speak, not only the languages and styles that dominate pretraining data. Regional dialects and...",
+      "publishedAt": "2026-10-01T05:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.762Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122986",
+          "url": "https://developer.nvidia.com/blog/fine-tuning-nvidia-nemotron-for-saudi-arabic-dialects-with-a-path-to-other-languages"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6ca00defd0937420d534",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Build Specialized Agents on a Stack You Control with NVIDIA NemoClaw",
+      "canonicalUrl": "https://developer.nvidia.com/blog/build-specialized-agents-on-a-stack-you-control-with-nvidia-nemoclaw",
+      "author": "Nicola Sessions",
+      "description": "Building an autonomous agent requires a model, a harness, and domain-specific tools. To deploy an agent more securely, developers need a runtime that enforces...",
+      "publishedAt": "2026-10-30T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "harness",
+          "agent"
+        ],
+        "primaryTopic": "harness",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Build Specialized Agents on a Stack You Control with NVIDIA NemoClaw\nBuilding an autonomous agent requires a model, a harness, a",
+          "Build Specialized Agents on a Stack You Control with NVIDIA NemoClaw\nBuilding an autonomous agent requires a m",
+          "el, a harness, and domain-specific tools. To deploy an agent more securely, developers need a runtime that enforces..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.611Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=124341",
+          "url": "https://developer.nvidia.com/blog/build-specialized-agents-on-a-stack-you-control-with-nvidia-nemoclaw"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "709d5cfc887b5387b094",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Fine-Tuning NVIDIA Nemotron to Know Local Rules, Not Just Local Languages",
+      "canonicalUrl": "https://developer.nvidia.com/blog/fine-tuning-nvidia-nemotron-to-know-local-rules-not-just-local-languages",
+      "author": "Shara Tibken",
+      "description": "As AI adoption expands globally, people across languages and cultures are using it in more aspects of their daily lives. General-purpose language models serve...",
+      "publishedAt": "2026-10-27T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Rules, Not Just Local Languages\nAs AI adoption expands globally, people across languages and cultures are using it in more aspects of their daily"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.612Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=124229",
+          "url": "https://developer.nvidia.com/blog/fine-tuning-nvidia-nemotron-to-know-local-rules-not-just-local-languages"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "756ae8625fbb8c312021",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Add Runtime Controls to AI Agents with NVIDIA OpenShell",
+      "canonicalUrl": "https://developer.nvidia.com/blog/add-runtime-controls-to-ai-agents-with-nvidia-openshell",
+      "author": "Alex Watson",
+      "description": "AI agents can be given a goal, write code, use tools, and keep working as new information becomes available. This opens the door to applications that...",
+      "publishedAt": "2026-09-28T08:55:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Add Runtime Controls to AI Agents with NVIDIA OpenShell\nAI agents can be given a goal, write code, use tools, and keep working as new ",
+          "Add Runtime Controls to AI Agents with NVIDIA OpenShell\nAI agents can be given a goal, write code, use tools, and "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.813Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122891",
+          "url": "https://developer.nvidia.com/blog/add-runtime-controls-to-ai-agents-with-nvidia-openshell"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "766f4567c7f3819ea8d9",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "NVIDIA PAIR Virtual Inference Router Expands Available Compute on Your Local Network",
+      "canonicalUrl": "https://developer.nvidia.com/blog/nvidia-pair-virtual-inference-router-expands-available-compute-on-your-local-network",
+      "author": "Tanya Lenz",
+      "description": "AI agents are learning to do more by working together. A lead agent can break a complex task into smaller jobs and assign those jobs to specialized subagents....",
+      "publishedAt": "2026-09-03T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference",
+          "agent"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "NVIDIA PAIR Virtual Inference Router Expands Available Compute on Your Local Network\nAI agents are learning to do more by working "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.121Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121926",
+          "url": "https://developer.nvidia.com/blog/nvidia-pair-virtual-inference-router-expands-available-compute-on-your-local-network"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "78cacae53e11416940b9",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Run NVIDIA BioNeMo NIM Microservices for Protein Structure Prediction in Claude Science",
+      "canonicalUrl": "https://developer.nvidia.com/blog/run-nvidia-bionemo-nim-microservices-for-protein-structure-prediction-in-claude-science",
+      "author": "Michelle Horton",
+      "description": "Agentic AI is changing how research is done. AI scientists can read papers, propose hypotheses, call models, and determine which experiments to prioritize next....",
+      "publishedAt": "2026-08-31T16:30:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "or Protein Structure Prediction in Claude Science\nAgentic AI is changing how research is done. AI scientists can read papers, propose hypotheses,"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.254Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121350",
+          "url": "https://developer.nvidia.com/blog/run-nvidia-bionemo-nim-microservices-for-protein-structure-prediction-in-claude-science"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7a1d9f13b16d9918191b",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Scaling Decision Optimization to 100 Million Variables and Beyond with mPDLP in NVIDIA cuOpt",
+      "canonicalUrl": "https://developer.nvidia.com/blog/scaling-decision-optimization-to-100-million-variables-and-beyond-with-mpdlp-in-nvidia-cuopt",
+      "author": "Tanya Lenz",
+      "description": "Supply chain problems are expanding across more SKUs, lanes, and constraints than ever before, while energy grids are balancing more distributed sources in real...",
+      "publishedAt": "2026-10-07T15:45:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Scaling Decision Optimization to 100 Million Variables and Beyond with mPDLP in NVIDIA cuOpt\nSupply chain prob"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.653Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123156",
+          "url": "https://developer.nvidia.com/blog/scaling-decision-optimization-to-100-million-variables-and-beyond-with-mpdlp-in-nvidia-cuopt"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "85c4ac07e7f91c7291be",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How Full-Stack NIM Optimizations Deliver 2.5x More Users on Nemotron 3 Ultra",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-full-stack-nim-optimizations-deliver-2-5x-more-users-on-nemotron-3-ultra",
+      "author": "Elizabeth Goodman",
+      "description": "Deploying a large language model is only the first step toward production-ready serving. Production teams also need to serve as many concurrent users as...",
+      "publishedAt": "2026-09-10T16:55:32.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          ".5x More Users on Nemotron 3 Ultra\nDeploying a large language model is only the first step toward production-ready serving. Production teams also",
+          "first step toward production-ready serving. Production teams also need to serve as many concurrent users as..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.923Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122372",
+          "url": "https://developer.nvidia.com/blog/how-full-stack-nim-optimizations-deliver-2-5x-more-users-on-nemotron-3-ultra"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "88987b9d608109667242",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Building Reliable Data Analytics Agents: Lessons from the KDD Cup",
+      "canonicalUrl": "https://developer.nvidia.com/blog/building-reliable-data-analytics-agents-lessons-from-the-kdd-cup",
+      "author": "Jiwei Liu",
+      "description": "The NVIDIA KGMON team placed second in the KDD Cup 2026 Data Agents competition with a system built around a simple idea of making an agent's harness smaller,...",
+      "publishedAt": "2026-10-08T18:30:02.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "harness",
+          "agent"
+        ],
+        "primaryTopic": "harness",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Building Reliable Data Analytics Agents: Lessons from the KDD Cup\nThe NVIDIA KGMON team placed second in the KDD Cup 2026 Data Agents competiti",
+          "Building Reliable Data Analytics Agents: Lessons from the KDD Cup\nThe NVIDIA KGMON team placed second in the K"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.650Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123426",
+          "url": "https://developer.nvidia.com/blog/building-reliable-data-analytics-agents-lessons-from-the-kdd-cup"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "893cf7be8de681386bb9",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Building an Adaptive Agentic Cybersecurity System with NVIDIA Nemotron",
+      "canonicalUrl": "https://developer.nvidia.com/blog/building-an-adaptive-agentic-cybersecurity-system-with-nvidia-nemotron",
+      "author": "Michelle Horton",
+      "description": "AI is changing the pace of cybersecurity. Agentic systems can coordinate work and pursue complex objectives over long horizons. Security teams are beginning to...",
+      "publishedAt": "2026-09-01T17:00:04.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Building an Adaptive Agentic Cybersecurity System with NVIDIA Nemotron\nAI is changing the pace of cybersecurity. Agentic systems ca",
+          "Building an Adaptive Agentic Cybersecurity System with NVIDIA Nemotron\nAI is changing the pace of cybersecurit"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.245Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121995",
+          "url": "https://developer.nvidia.com/blog/building-an-adaptive-agentic-cybersecurity-system-with-nvidia-nemotron"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8a2adbdf76b0fec82ad2",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "NVIDIA BlueField-4 Powers New Scale-In Network Infrastructure for Agentic AI Factories",
+      "canonicalUrl": "https://developer.nvidia.com/blog/nvidia-bluefield-4-powers-new-scale-in-network-infrastructure-for-agentic-ai-factories",
+      "author": "Michelle Horton",
+      "description": "Traditional cloud infrastructure was designed for predictable, general-purpose workloads and standard interfaces. Agentic AI factories connect diverse users,...",
+      "publishedAt": "2026-08-24T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "cale-In Network Infrastructure for Agentic AI Factories\nTraditional cloud infrastructure was designed for predictable, general-purpose workloads ",
+          "NVIDIA BlueField-4 Powers New Scale-In Network Infrastructure for Agentic AI Factories\nTraditional cloud infrastructure was designed for pre",
+          "ield-4 Powers New Scale-In Network Infrastructure for Agentic AI Factories\nTraditional cloud infrastructure was designed for predictable, general"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.302Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121527",
+          "url": "https://developer.nvidia.com/blog/nvidia-bluefield-4-powers-new-scale-in-network-infrastructure-for-agentic-ai-factories"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8b0862adeadf46c542b3",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Using AI Agents to Teach Robots Like Microduck to Walk in Simulation",
+      "canonicalUrl": "https://developer.nvidia.com/blog/using-ai-agents-to-teach-robots-like-microduck-to-walk-in-simulation",
+      "author": "Gabriele Leone",
+      "description": "Teaching a robot to navigate an obstacle course requires more than a walking policy. It must perceive its surroundings, maintain balance, and adjust its actions...",
+      "publishedAt": "2026-10-23T14:58:32.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Using AI Agents to Teach Robots Like Microduck to Walk in Simulation\nTeaching a robot to navigate an obstacle course"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.614Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=124028",
+          "url": "https://developer.nvidia.com/blog/using-ai-agents-to-teach-robots-like-microduck-to-walk-in-simulation"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8bbb2189a091f7a0754d",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How to Use AI Agents to Prepare 3D Scenes for Simulation",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-to-use-ai-agents-to-prepare-3d-scenes-for-simulation",
+      "author": "Tanya Lenz",
+      "description": "Agentic AI workflows can be used to prepare and validate digital twins for physical AI systems. Agents can inspect 3D scenes, author simulation-relevant data in...",
+      "publishedAt": "2026-09-16T23:20:33.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "How to Use AI Agents to Prepare 3D Scenes for Simulation\nAgentic AI workflows can be used to prepare and validate digital",
+          "D Scenes for Simulation\nAgentic AI workflows can be used to prepare and validate digital twins for physical AI systems. Agents can inspect 3D sce"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.869Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122626",
+          "url": "https://developer.nvidia.com/blog/how-to-use-ai-agents-to-prepare-3d-scenes-for-simulation"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8f921d13a4f05c79442c",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Running Frontier-Class AI Models Across 8 NVIDIA DGX Spark Nodes",
+      "canonicalUrl": "https://developer.nvidia.com/blog/running-frontier-class-ai-models-across-8-nvidia-dgx-spark-nodes",
+      "author": "Shara Tibken",
+      "description": "AI developers aren’t just running a single model anymore—they’re orchestrating multiple models in parallel, chaining inference calls, and experimenting...",
+      "publishedAt": "2026-10-22T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Running Frontier-Class AI Models Across 8 NVIDIA DGX Spark Nodes\nAI developers aren’t just running a single model anymore—they’re orc",
+          "ing a single model anymore—they’re orchestrating multiple models in parallel, chaining inference calls, and experimenting..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.615Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123934",
+          "url": "https://developer.nvidia.com/blog/running-frontier-class-ai-models-across-8-nvidia-dgx-spark-nodes"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8fc75b5e7f48c68bec88",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Introducing CUDA Rust: Two Tracks for Writing GPU Kernels",
+      "canonicalUrl": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels",
+      "author": "Elizabeth Goodman",
+      "description": "In September 2026, NVIDIA announced it is leaning into native GPU programming in Rust. CUDA C++ and CUDA Python are mature, enterprise-grade toolchains, and...",
+      "publishedAt": "2026-09-08T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          " CUDA Rust: Two Tracks for Writing GPU Kernels\nIn September 2026, NVIDIA announced it is leaning into native GPU programming in Rust. CUDA C++ an"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.981Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122285",
+          "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "909bf653075d903517ff",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Run AI Models for Edge Application Development with Just a Few Commands",
+      "canonicalUrl": "https://developer.nvidia.com/blog/run-ai-models-for-edge-application-development-with-just-a-few-commands",
+      "author": "Shara Tibken",
+      "description": "AI is expanding beyond the data center as developers build a new generation of agents to act at the edge: monitoring driver attention and cabin conditions,...",
+      "publishedAt": "2026-10-30T20:33:18.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Run AI Models for Edge Application Development with Just a Few Commands\nAI is expanding beyond the data center as ",
+          "yond the data center as developers build a new generation of agents to act at the edge: monitoring driver attention and cabin conditions,..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.611Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=124453",
+          "url": "https://developer.nvidia.com/blog/run-ai-models-for-edge-application-development-with-just-a-few-commands"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "930291a9eafc28562aea",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Frontier Reasoning Reaches the Edge: How to Deploy and Optimize Models on NVIDIA Jetson",
+      "canonicalUrl": "https://developer.nvidia.com/blog/frontier-reasoning-reaches-the-edge-how-to-deploy-and-optimize-models-on-nvidia-jetson",
+      "author": "Elizabeth Goodman",
+      "description": "Running reasoning and agentic AI at the edge has been harder than it needs to be. Until recently, models capable of multi-step reasoning were too large to run...",
+      "publishedAt": "2026-09-04T16:21:04.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "VIDIA Jetson\nRunning reasoning and agentic AI at the edge has been harder than it needs to be. Until recently, models capable of multi-step reaso",
+          "Reasoning Reaches the Edge: How to Deploy and Optimize Models on NVIDIA Jetson\nRunning reasoning and agentic AI at the edge has been harder than "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.985Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122184",
+          "url": "https://developer.nvidia.com/blog/frontier-reasoning-reaches-the-edge-how-to-deploy-and-optimize-models-on-nvidia-jetson"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "93077f0c1feb73d506b3",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "CUDA Python 1.0: Stable APIs, One Foundation, Full Platform Access",
+      "canonicalUrl": "https://developer.nvidia.com/blog/cuda-python-1-0-stable-apis-one-foundation-full-platform-access",
+      "author": "Elizabeth Goodman",
+      "description": "For years, a Python developer who needed a GPU had two realistic choices: Learn NVIDIA CUDA C++ well enough to write an extension, set up a build toolchain, and...",
+      "publishedAt": "2026-08-25T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "gh to write an extension, set up a build toolchain, and...",
+          "CUDA Python 1.0: Stable APIs, One Foundation, Full Platform Access\nFor years, a Python developer who needed a GPU had two realistic ch"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.275Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121791",
+          "url": "https://developer.nvidia.com/blog/cuda-python-1-0-stable-apis-one-foundation-full-platform-access"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9a9f5350384632e43079",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Code, Test, and Deploy on One Machine with NVIDIA RTX Spark",
+      "canonicalUrl": "https://developer.nvidia.com/blog/code-test-and-deploy-on-one-machine-with-nvidia-rtx-spark",
+      "author": "Elizabeth Goodman",
+      "description": "AI agents are changing how software gets built. Developers have gone from writing every line of code by hand to directing agents that write most of the code. As...",
+      "publishedAt": "2026-10-16T17:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          " One Machine with NVIDIA RTX Spark\nAI agents are changing how software gets built. Developers have gone from writing every line of code by hand t",
+          "Code, Test, and Deploy on One Machine with NVIDIA RTX Spark\nAI agents are changing how software gets built. Developers have go"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.624Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123865",
+          "url": "https://developer.nvidia.com/blog/code-test-and-deploy-on-one-machine-with-nvidia-rtx-spark"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9b80812df0aea34e0548",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Manage Kubernetes Node Fleets with NodeWright",
+      "canonicalUrl": "https://developer.nvidia.com/blog/manage-kubernetes-node-fleets-with-nodewright",
+      "author": "Michelle Horton",
+      "description": "Kubernetes manages what runs on your nodes. Managing the nodes themselves is the challenge: kernel settings, system packages, storage layouts, security agents,...",
+      "publishedAt": "2026-09-23T18:25:49.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "ackages, storage layouts, security agents,..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.821Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122854",
+          "url": "https://developer.nvidia.com/blog/manage-kubernetes-node-fleets-with-nodewright"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9bea93eaf21561575406",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "NVIDIA NVLink Fusion Brings NVHBM to Next-Generation AI Infrastructure",
+      "canonicalUrl": "https://developer.nvidia.com/blog/nvidia-nvlink-fusion-brings-nvhbm-to-next-generation-ai-infrastructure",
+      "author": "Farshad Ghodsian",
+      "description": "AI factories must support increasingly large models and more complex reasoning workloads. To keep up with the insatiable compute demands of AI workloads,...",
+      "publishedAt": "2026-08-26T21:06:58.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "on Brings NVHBM to Next-Generation AI Infrastructure\nAI factories must support increasingly large models and more complex reasoning workloads. To",
+          "Brings NVHBM to Next-Generation AI Infrastructure\nAI factories must support increasingly large models and more complex reasoning workloads. To ke"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.264Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=120848",
+          "url": "https://developer.nvidia.com/blog/nvidia-nvlink-fusion-brings-nvhbm-to-next-generation-ai-infrastructure"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9c941d7ea94ff99df81b",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How NVIDIA Minerva Turns Telemetry Chaos Into Peak GPU Yield",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-nvidia-minerva-turns-telemetry-chaos-into-peak-gpu-yield",
+      "author": "Elizabeth Goodman",
+      "description": "AI Factories are some of the most technologically complex operational environments ever created. Hundreds of thousands of GPUs, NVIDIA Spectrum-X Ethernet...",
+      "publishedAt": "2026-10-26T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "elemetry Chaos Into Peak GPU Yield\nAI Factories are some of the most technologically complex operational environments ever created. Hundreds of t",
+          "va Turns Telemetry Chaos Into Peak GPU Yield\nAI Factories are some of the most technologically complex operational environments ever created. Hun"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.613Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123987",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-minerva-turns-telemetry-chaos-into-peak-gpu-yield"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9f4733b8333ee2626215",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How NVIDIA DSX MaxLPS Maximizes AI Factory Throughput and Efficiency",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-nvidia-dsx-maxlps-maximizes-ai-factory-throughput-and-efficiency",
+      "author": "Sarah McKenney",
+      "description": "Every unused watt is capacity left on the table. AI factories are typically provisioned for the unlikely moment when every GPU reaches peak power, creating a...",
+      "publishedAt": "2026-09-28T01:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "How NVIDIA DSX MaxLPS Maximizes AI Factory Throughput and Efficiency\nEvery unused watt is capacity left on the table. AI factories are typical",
+          "IA DSX MaxLPS Maximizes AI Factory Throughput and Efficiency\nEvery unused watt is capacity left on the table. AI factories are typically provisio"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.815Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122898",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-dsx-maxlps-maximizes-ai-factory-throughput-and-efficiency"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a25a30d9f07af0eea536",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How to Evaluate AI Agents From Tool Calls to Task Completion",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-to-evaluate-ai-agents-from-tool-calls-to-task-completion",
+      "author": "Elizabeth Goodman",
+      "description": "When you ship an AI agent, the key question is whether it can execute a chain of work across dozens of sequential tool calls against a live environment, and...",
+      "publishedAt": "2026-09-21T21:05:28.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "How to Evaluate AI Agents From Tool Calls to Task Completion\nWhen you ship an AI agent, the key question is whether it can exe",
+          "How to Evaluate AI Agents From Tool Calls to Task Completion\nWhen you ship an AI agent, the key question is whether i",
+          "How to Evaluate AI Agents From Tool Calls to Task Completion\nWhen you ship an AI agent, the key question is whether it can execute a chain of"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.863Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122686",
+          "url": "https://developer.nvidia.com/blog/how-to-evaluate-ai-agents-from-tool-calls-to-task-completion"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a53a1e546c15d550e47a",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How to Carry User Identity Across Federated Kubernetes and AI Platforms",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms",
+      "author": "Elizabeth Goodman",
+      "description": "Modern AI platforms are no longer a single application behind one login screen. A user may start in a central portal, open a governed dataset, launch a notebook...",
+      "publishedAt": "2026-09-03T22:36:02.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "ty Across Federated Kubernetes and AI Platforms\nModern AI platforms are no longer a single application behind one login screen. A user may start ",
+          " a central portal, open a governed dataset, launch a notebook..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.988Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122235",
+          "url": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a693b7c90819d5eb3842",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "NVIDIA Nemotron 3.5 Super VL Powers Specialized Agents with Multimodal Reasoning",
+      "canonicalUrl": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning",
+      "author": "Michelle Horton",
+      "description": "Always-on agents are taking on longer, more complex enterprise workflows. A single request can involve reading a document, checking information across sources,...",
+      "publishedAt": "2026-10-15T18:01:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "on 3.5 Super VL Powers Specialized Agents with Multimodal Reasoning\nAlways-on agents are taking on longer, more complex enterprise workflows. A s",
+          "on longer, more complex enterprise workflows. A single request can involve reading a document, checking information across sources,..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.626Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123590",
+          "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a6fe36636171a7a53dbf",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How to Check and Configure NVIDIA GPUDirect Storage for Your Platform",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-to-check-and-configure-nvidia-gpudirect-storage-for-your-platform",
+      "author": "Phil Carns",
+      "description": "NVIDIA GPUDirect Storage (GDS) accelerates GPU storage access in on-premises and cloud environments. It provides a robust, portable, and efficient data path...",
+      "publishedAt": "2026-10-30T15:01:36.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "How to Check and Configure NVIDIA GPUDirect Storage for Your Platform\nNVIDIA GPUDirect Storage (GDS) accelerates GPU storage access in on-premis"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.612Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=124327",
+          "url": "https://developer.nvidia.com/blog/how-to-check-and-configure-nvidia-gpudirect-storage-for-your-platform"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b004254bb5bef2bfb221",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Memory-Enforced GPU Sharing in Kubernetes with NVIDIA CUDA 13.4",
+      "canonicalUrl": "https://developer.nvidia.com/blog/memory-enforced-gpu-sharing-in-kubernetes-with-nvidia-cuda-13-4",
+      "author": "Elizabeth Goodman",
+      "description": "Many AI workloads need only a fraction of a GPU. Giving each one an entire device can leave capacity idle; sharing GPUs lets platform teams serve more workloads...",
+      "publishedAt": "2026-10-27T20:50:39.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "ernetes with NVIDIA CUDA 13.4\nMany AI workloads need only a fraction of a GPU. Giving each one an entire device can leave capacity idle; sharing ",
+          "Memory-Enforced GPU Sharing in Kubernetes with NVIDIA CUDA 13.4\nMany AI workloads need only a fraction of a GP"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.612Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=124247",
+          "url": "https://developer.nvidia.com/blog/memory-enforced-gpu-sharing-in-kubernetes-with-nvidia-cuda-13-4"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b58949ec10b169203ce1",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How NVIDIA Groq 3 LPX Unlocks Ultrafast Interactivity at Long Context on NVIDIA Vera Rubin",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-nvidia-groq-3-lpx-unlocks-ultrafast-interactivity-at-long-context-on-nvidia-vera-rubin",
+      "author": "Tanya Lenz",
+      "description": "NVIDIA Groq 3 LPX is the interactive AI inference accelerator for the NVIDIA Vera Rubin platform. At the core of the platform is NVIDIA Vera Rubin NVL72, the...",
+      "publishedAt": "2026-08-24T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "IDIA Groq 3 LPX is the interactive AI inference accelerator for the NVIDIA Vera Rubin platform. At the core of the platform is NVIDIA Vera Rubin ",
+          "ks Ultrafast Interactivity at Long Context on NVIDIA Vera Rubin\nNVIDIA Groq 3 LPX is the interactive AI inference accelerator for the NVIDIA Vera"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.315Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121675",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-groq-3-lpx-unlocks-ultrafast-interactivity-at-long-context-on-nvidia-vera-rubin"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b59e0a4071c8e374c3ea",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Design Proteins with RFD4-Proteina Using Reward-Guided Inference-Time Search",
+      "canonicalUrl": "https://developer.nvidia.com/blog/design-proteins-with-rfd4-proteina-using-reward-guided-inference-time-search",
+      "author": "Elizabeth Goodman",
+      "description": "Protein design is a search problem. Choose amino acids for an eight-residue protein sequence and more than 25 billion combinations are possible. Choose amino...",
+      "publishedAt": "2026-10-21T12:30:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          " RFD4-Proteina Using Reward-Guided Inference-Time Search\nProtein design is a search problem. Choose amino acids for an eight-residue protein sequ",
+          "Design Proteins with RFD4-Proteina Using Reward-Guided Inference-Time Search\nProtein design is a search proble"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.616Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123747",
+          "url": "https://developer.nvidia.com/blog/design-proteins-with-rfd4-proteina-using-reward-guided-inference-time-search"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bb175a573d2fb9668dc2",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Accelerating Mamba-2 with High-Performance Forward Pass Kernels in NVIDIA CUDA Tile",
+      "canonicalUrl": "https://developer.nvidia.com/blog/accelerating-mamba-2-with-high-performance-forward-pass-kernels-in-nvidia-cuda-tile",
+      "author": "Tanya Lenz",
+      "description": "NVIDIA CUDA Tile (cuTile) is a Python-based DSL and parallel programming model for NVIDIA GPUs that automatically leverages advanced hardware capabilities to...",
+      "publishedAt": "2026-10-19T17:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Accelerating Mamba-2 with High-Performance Forward Pass Kernels in NVIDIA CUDA Tile\nNVIDIA CUDA Tile (cuTile) is a Python-based DSL and paral",
+          "allel programming model for NVIDIA GPUs that automatically leverages advanced hardware capabilities to..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.624Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123793",
+          "url": "https://developer.nvidia.com/blog/accelerating-mamba-2-with-high-performance-forward-pass-kernels-in-nvidia-cuda-tile"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c208d390276fb4028ea5",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "AICR v1.0: Open, stable, and verifiable GPU cluster configuration",
+      "canonicalUrl": "https://developer.nvidia.com/blog/aicr-v1-0-open-stable-and-verifiable-gpu-cluster-configuration",
+      "author": "Elizabeth Goodman",
+      "description": "GPU-accelerated Kubernetes clusters depend on compatible versions across dozens of components, each on its own release cycle: host kernels, GPU drivers,...",
+      "publishedAt": "2026-10-06T16:13:47.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "v1.0: Open, stable, and verifiable GPU cluster configuration\nGPU-accelerated Kubernetes clusters depend on compatible versions across dozens of c"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.693Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123387",
+          "url": "https://developer.nvidia.com/blog/aicr-v1-0-open-stable-and-verifiable-gpu-cluster-configuration"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c28c08de417efe0fc81b",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Developing an AI Factory Digital Twin with an Agent-Assisted Workflow",
+      "canonicalUrl": "https://developer.nvidia.com/blog/developing-an-ai-factory-digital-twin-with-an-agent-assisted-workflow",
+      "author": "Tanya Lenz",
+      "description": "Building an AI factory digital twin requires developers to bring site plans, equipment assets, and engineering requirements into a consistent model that teams...",
+      "publishedAt": "2026-10-21T09:38:49.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Developing an AI Factory Digital Twin with an Agent-Assisted Workflow\nBuilding an AI factory digital twin requires developer",
+          "in with an Agent-Assisted Workflow\nBuilding an AI factory digital twin requires developers to bring site plans, equipment assets, and engineering",
+          "igital Twin with an Agent-Assisted Workflow\nBuilding an AI factory digital twin requires developers to bring site plans, equipment assets, and en"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.622Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123879",
+          "url": "https://developer.nvidia.com/blog/developing-an-ai-factory-digital-twin-with-an-agent-assisted-workflow"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c31613cc8c456adaa44f",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Build a Validated Kubernetes Runtime for NVIDIA Dynamo",
+      "canonicalUrl": "https://developer.nvidia.com/blog/build-a-validated-kubernetes-runtime-for-nvidia-dynamo",
+      "author": "Stefan Schimanski",
+      "description": "Teams building AI applications need a repeatable path from a model configuration to a working inference endpoint. NVIDIA Dynamo is a distributed inference...",
+      "publishedAt": "2026-10-30T21:35:31.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "e for NVIDIA Dynamo\nTeams building AI applications need a repeatable path from a model configuration to a working inference endpoint. NVIDIA Dyna",
+          "Build a Validated Kubernetes Runtime for NVIDIA Dynamo\nTeams building AI applications need a repeatable path f",
+          "Build a Validated Kubernetes Runtime for NVIDIA Dynamo\nTeams building AI applications need a repeatable path from a model configuration to "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.611Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=124424",
+          "url": "https://developer.nvidia.com/blog/build-a-validated-kubernetes-runtime-for-nvidia-dynamo"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c3d7afda179d8dc20306",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Translating CUDA Tile Operations from Python to Rust Using Agentic AI",
+      "canonicalUrl": "https://developer.nvidia.com/blog/translating-cuda-tile-operations-from-python-to-rust-using-agentic-ai",
+      "author": "Tanya Lenz",
+      "description": "cuTile Rust (cutile-rs) is a tile-based system for safe, idiomatic GPU kernel authoring in the Rust programming language. Extending the Rust ownership model to...",
+      "publishedAt": "2026-09-16T16:28:59.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference",
+          "agent"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "erations from Python to Rust Using Agentic AI\ncuTile Rust (cutile-rs) is a tile-based system for safe, idiomatic GPU kernel authoring in the Rust",
+          "e-based system for safe, idiomatic GPU kernel authoring in the Rust programming language. Extending the Rust ownership model to..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.873Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122428",
+          "url": "https://developer.nvidia.com/blog/translating-cuda-tile-operations-from-python-to-rust-using-agentic-ai"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c4c799ba417610388fa4",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Validate GPU Cluster Readiness Before AI Workloads Land",
+      "canonicalUrl": "https://developer.nvidia.com/blog/validate-gpu-cluster-readiness-before-ai-workloads-land",
+      "author": "Michelle Horton",
+      "description": "A GPU cluster can pass every health check and still fail to run an AI workload. Even when every GPU, network link, and pod reports healthy, a 512-GPU training...",
+      "publishedAt": "2026-09-23T19:45:19.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "idate GPU Cluster Readiness Before AI Workloads Land\nA GPU cluster can pass every health check and still fail to run an AI workload. Even when ev",
+          "Validate GPU Cluster Readiness Before AI Workloads Land\nA GPU cluster can pass every health check and still fail to run"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.820Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122823",
+          "url": "https://developer.nvidia.com/blog/validate-gpu-cluster-readiness-before-ai-workloads-land"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c72f2e1593c0ad00437e",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How to Size GPUs for AI Inference and TCO Without Overspending",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-to-size-gpus-for-ai-inference-and-tco-without-overspending",
+      "author": "Elizabeth Goodman",
+      "description": "The surge in AI adoption is transforming everything from chatbots to content generation. Still, a common pain point remains: How can organizations confidently...",
+      "publishedAt": "2026-09-01T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "How to Size GPUs for AI Inference and TCO Without Overspending\nThe surge in AI adoption is transforming everything from chatbots to",
+          "How to Size GPUs for AI Inference and TCO Without Overspending\nThe surge in AI adoption is transforming everything from ch"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.250Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121993",
+          "url": "https://developer.nvidia.com/blog/how-to-size-gpus-for-ai-inference-and-tco-without-overspending"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c941dc6d8a710a719a6a",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Simplifying Model Serving Across Multiple GPUs with NVIDIA TensorRT Multi-Device Integration in NVIDIA Dynamo-Triton",
+      "canonicalUrl": "https://developer.nvidia.com/blog/simplifying-model-serving-across-multiple-gpus-with-nvidia-tensorrt-multi-device-integration-in-nvidia-dynamo-triton",
+      "author": "Tanya Lenz",
+      "description": "The compute and memory demands of generative AI increasingly exceed what a single GPU can provide. NVIDIA TensorRT multi-device inference is a new capability...",
+      "publishedAt": "2026-09-21T21:51:06.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference",
+          "ai-application"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "e and memory demands of generative AI increasingly exceed what a single GPU can provide. NVIDIA TensorRT multi-device inference is a new capabili",
+          "Simplifying Model Serving Across Multiple GPUs with NVIDIA TensorRT Multi-Device Integration in NVIDIA Dynamo-Triton\nThe compute"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.861Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122739",
+          "url": "https://developer.nvidia.com/blog/simplifying-model-serving-across-multiple-gpus-with-nvidia-tensorrt-multi-device-integration-in-nvidia-dynamo-triton"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ce5fe869afa040717526",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Faster Scientific Image Analysis with NVIDIA cuPhoton",
+      "canonicalUrl": "https://developer.nvidia.com/blog/faster-scientific-image-analysis-with-nvidia-cuphoton",
+      "author": "Quynh L. Nguyen",
+      "description": "Observatories and telescopes, lasers and X-ray light sources, and other high-throughput instruments generate image data faster than CPU-bound pipelines can...",
+      "publishedAt": "2026-10-07T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "-ray light sources, and other high-throughput instruments generate image data faster than CPU-bound pipelines can..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.689Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123330",
+          "url": "https://developer.nvidia.com/blog/faster-scientific-image-analysis-with-nvidia-cuphoton"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d1abff2b7f374b8fb832",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "High-Throughput Structure Prediction with BioNeMo Inference Runtime",
+      "canonicalUrl": "https://developer.nvidia.com/blog/high-throughput-structure-prediction-with-bionemo-inference-runtime",
+      "author": "Elizabeth Goodman",
+      "description": "Biomolecular structure prediction is now often run at proteome scale, where the goal is to move an entire worklist through the pipeline efficiently. NVIDIA...",
+      "publishedAt": "2026-09-10T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          " Structure Prediction with BioNeMo Inference Runtime\nBiomolecular structure prediction is now often run at proteome scale, where the goal is to m",
+          "ction is now often run at proteome scale, where the goal is to move an entire worklist through the pipeline efficiently. NVIDIA...",
+          "High-Throughput Structure Prediction with BioNeMo Inference Runtime\nBiomolecular structure prediction is now often "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.926Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122343",
+          "url": "https://developer.nvidia.com/blog/high-throughput-structure-prediction-with-bionemo-inference-runtime"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d24e27882971481ddf61",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Accelerating a ROS 2 Node with an AI Agent and NVIDIA Isaac ROS",
+      "canonicalUrl": "https://developer.nvidia.com/blog/accelerating-a-ros-2-node-with-an-ai-agent-and-nvidia-isaac-ros",
+      "author": "Tanya Lenz",
+      "description": "GPU acceleration can speed up compute-intensive robotics workloads, but a fast CUDA kernel alone does not guarantee a fast ROS 2 graph. As messages move between...",
+      "publishedAt": "2026-09-22T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference",
+          "agent"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Accelerating a ROS 2 Node with an AI Agent and NVIDIA Isaac ROS\nGPU acceleration can speed up compute-intensive robotics workloads, but a fast C",
+          "h an AI Agent and NVIDIA Isaac ROS\nGPU acceleration can speed up compute-intensive robotics workloads, but a fast CUDA kernel alone does not guar"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.859Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122571",
+          "url": "https://developer.nvidia.com/blog/accelerating-a-ros-2-node-with-an-ai-agent-and-nvidia-isaac-ros"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d2587d9099d7d48a95f7",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Tracing Agent Harness Behavior with NVIDIA NeMo Relay",
+      "canonicalUrl": "https://developer.nvidia.com/blog/tracing-agent-harness-behavior-with-nvidia-nemo-relay",
+      "author": "William Markito Oliveira",
+      "description": "An agent can finish a task and still take an inefficient path. A failed search can trigger another search. A truncated file read can lead to a command fetching...",
+      "publishedAt": "2026-09-30T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "harness",
+          "agent"
+        ],
+        "primaryTopic": "harness",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Tracing Agent Harness Behavior with NVIDIA NeMo Relay\nAn agent can finish a task and still take an inefficient path. A"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.766Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123038",
+          "url": "https://developer.nvidia.com/blog/tracing-agent-harness-behavior-with-nvidia-nemo-relay"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d4e90e7f85af7cca33df",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "NVIDIA Open Agent Safety Platform: A Reference for Continuous In-Silicon Agent Monitoring",
+      "canonicalUrl": "https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring",
+      "author": "Tanya Lenz",
+      "description": "To understand where agentic AI stands today, consider the last seismic shift in technology: the rise of the internet in the 90s. It was new and full of...",
+      "publishedAt": "2026-09-28T08:56:55.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "NVIDIA Open Agent Safety Platform: A Reference for Continuous In-Silicon Agent Monitoring\nTo understand where agentic AI s"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.811Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122896",
+          "url": "https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d93ea353d831d1c3a94e",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "When to Use Encode-Prefill-Decode Disaggregation to Accelerate Multimodal Model Serving",
+      "canonicalUrl": "https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving",
+      "author": "Tanya Lenz",
+      "description": "Encode-prefill-decode (EPD) disaggregation is an inference optimization technique for multimodal models that separates the vision encoder stage from the prefill...",
+      "publishedAt": "2026-09-09T20:31:04.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "-decode (EPD) disaggregation is an inference optimization technique for multimodal models that separates the vision encoder stage from the prefil",
+          "PD) disaggregation is an inference optimization technique for multimodal models that separates the vision encoder stage from the prefill...",
+          "ion to Accelerate Multimodal Model Serving\nEncode-prefill-decode (EPD) disaggregation is an inference optimization technique for multimodal model"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.974Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122311",
+          "url": "https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "db40ef21a6bdf9b569b2",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Giga-Scale AI and the Ethernet Evolution: How Spectrum-X Ethernet Rewrites the Rules",
+      "canonicalUrl": "https://developer.nvidia.com/blog/giga-scale-ai-ethernet-evolution-spectrum-x-ethernet-rewrites-rules",
+      "author": "Elizabeth Goodman",
+      "description": "The massive growth of generative AI has fundamentally altered data center design. As distributed model training scales to span hundreds of thousands of GPUs,...",
+      "publishedAt": "2026-08-24T15:08:39.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "ai-application"
+        ],
+        "primaryTopic": "ai-application",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Giga-Scale AI and the Ethernet Evolution: How Spectrum-X Ethernet Rewrites the Rules\nThe massive growth of generative AI ",
+          "Giga-Scale AI and the Ethernet Evolution: How Spectrum-X Ethernet Rewrites the Rules\nThe massive growth of generati",
+          "s to span hundreds of thousands of GPUs,..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.293Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121595",
+          "url": "https://developer.nvidia.com/blog/giga-scale-ai-ethernet-evolution-spectrum-x-ethernet-rewrites-rules"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "dbcbbf45dcc9c1747d98",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Inside NVIDIA Sentry: Secure AI Agents at Runtime",
+      "canonicalUrl": "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime",
+      "author": "Ofir Arkin",
+      "description": "An AI agent can complete its assignment and still cross a security boundary. Recent incidents show that agents can circumvent security controls while using...",
+      "publishedAt": "2026-10-21T09:52:16.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Inside NVIDIA Sentry: Secure AI Agents at Runtime\nAn AI agent can complete its assignment and still cross a security boundary. Recent incid",
+          "NVIDIA Sentry: Secure AI Agents at Runtime\nAn AI agent can complete its assignment and still cross a security boundary. Recent incidents show tha"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.616Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123898",
+          "url": "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "dd028c0ac4c29e4a0e22",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Turn Your Latest Observations Into Timely Weather Decisions With NVIDIA Earth-2",
+      "canonicalUrl": "https://developer.nvidia.com/blog/turn-your-latest-observations-into-timely-weather-decisions-with-nvidia-earth-2",
+      "author": "Elizabeth Goodman",
+      "description": "Weather-sensitive industries increasingly have access to observations that offer an earlier, more local view of changing conditions. Energy companies collect...",
+      "publishedAt": "2026-09-21T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.865Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122427",
+          "url": "https://developer.nvidia.com/blog/turn-your-latest-observations-into-timely-weather-decisions-with-nvidia-earth-2"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "dd8d63dc2876d616305a",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Unlocking Tensor Core Performance for Machine Learning Interatomic Potentials",
+      "canonicalUrl": "https://developer.nvidia.com/blog/unlocking-tensor-core-performance-for-machine-learning-interatomic-potentials",
+      "author": "Anoushka Bhutani",
+      "description": "Atomistic simulations help researchers understand how molecules and materials behave, from chemical reactions and phase transitions to mechanical failure. These...",
+      "publishedAt": "2026-10-29T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-application"
+        ],
+        "primaryTopic": "ai-application",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "ocking Tensor Core Performance for Machine Learning Interatomic Potentials\nAtomistic simulations help researchers understand how molecules and ma",
+          "Unlocking Tensor Core Performance for Machine Learning Interatomic Potentials\nAtomistic simulations help researchers understand how "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.612Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=124309",
+          "url": "https://developer.nvidia.com/blog/unlocking-tensor-core-performance-for-machine-learning-interatomic-potentials"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "dea530e8312943906418",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How DOCA GPUNetIO Unifies GPU-Initiated Networking Across the NVIDIA Software Stack",
+      "canonicalUrl": "https://developer.nvidia.com/blog/doca-gpunetio-gda-ki-unified-gpu-networking",
+      "author": "Elizabeth Goodman",
+      "description": "GPU applications increasingly need networking and data movement to behave like first-class GPU-controlled operations rather than host-driven services. When the...",
+      "publishedAt": "2026-10-06T19:07:02.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "How DOCA GPUNetIO Unifies GPU-Initiated Networking Across the NVIDIA Software Stack\nGPU applications increasingly need "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.692Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123253",
+          "url": "https://developer.nvidia.com/blog/doca-gpunetio-gda-ki-unified-gpu-networking"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "dffad2241cfbd870f9ef",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Introducing NV-Reason-CT Open 3D CT VLM for Radiologist Chain-of-Thought Reasoning",
+      "canonicalUrl": "https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning",
+      "author": "Tanya Lenz",
+      "description": "Radiology AI has made remarkable strides in detecting abnormalities across chest X-rays, pathology slides, and 2D scans. Yet one of the most clinically rich and...",
+      "publishedAt": "2026-09-23T22:54:56.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "ain-of-Thought Reasoning\nRadiology AI has made remarkable strides in detecting abnormalities across chest X-rays, pathology slides, and 2D scans."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.818Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122705",
+          "url": "https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e1f828e08452d88974bb",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How NVIDIA NVLink 6 Delivers Multi-Layer Resiliency for AI Factories",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-nvidia-nvlink-6-delivers-multi-layer-resiliency-for-ai-factories",
+      "author": "Elizabeth Goodman",
+      "description": "For operators of large-scale AI factories, maximizing continuous output is essential for productivity. In massive-scale AI training, every GPU in the cluster...",
+      "publishedAt": "2026-09-15T16:55:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "elivers Multi-Layer Resiliency for AI Factories\nFor operators of large-scale AI factories, maximizing continuous output is essential for producti",
+          "I Factories\nFor operators of large-scale AI factories, maximizing continuous output is essential for productivity. In massive-scale AI training, ",
+          "n massive-scale AI training, every GPU in the cluster..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.917Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122518",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-nvlink-6-delivers-multi-layer-resiliency-for-ai-factories"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e31c416803398fb42153",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Scale Agentic Coding Workflows with Meta’s Muse Spark Open on NVIDIA GB300 NVL72",
+      "canonicalUrl": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72",
+      "author": "Tanya Lenz",
+      "description": "Meta launches Muse Spark Open, a coding-optimized 816B mixture-of-experts (MoE) model with 42B active parameters and a 1M token context window. Trained on...",
+      "publishedAt": "2026-10-15T18:00:01.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "ai-coding",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Scale Agentic Coding Workflows with Meta’s Muse Spark Open on NVIDIA GB300 NVL72\nMeta launches Muse Spark Open, a co",
+          "Scale Agentic Coding Workflows with Meta’s Muse Spark Open on NVIDIA GB300 NVL72\nMeta launches Muse Spark Open",
+          "Scale Agentic Coding Workflows with Meta’s Muse Spark Open on NVIDIA GB300 NVL72\nMeta launches Muse Spark Open, a coding-optimized "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.627Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122698",
+          "url": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e3b189fddef2a1702aa0",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "GPU-Accelerated Clustering for Financial Instruments at Scale",
+      "canonicalUrl": "https://developer.nvidia.com/blog/gpu-accelerated-clustering-for-financial-instruments-at-scale",
+      "author": "Elizabeth Goodman",
+      "description": "Use AdaptGrow, a GPU-accelerated matrix factorization algorithm, to turn rolling correlation and tail-dependence matrices into hard clusters, soft factor...",
+      "publishedAt": "2026-08-21T16:21:04.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "ering for Financial Instruments at Scale\nUse AdaptGrow, a GPU-accelerated matrix factorization algorithm, to turn rolling correlation and tail-de",
+          "GPU-Accelerated Clustering for Financial Instruments at Scale\nUse AdaptGrow, a GPU-accelerated matrix factoriz"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.318Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121550",
+          "url": "https://developer.nvidia.com/blog/gpu-accelerated-clustering-for-financial-instruments-at-scale"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e476dd555c6311f3c208",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Validate AI Factory Changes with Digital Twins and AI Agents",
+      "canonicalUrl": "https://developer.nvidia.com/blog/validate-ai-factory-changes-with-digital-twins-and-ai-agents",
+      "author": "Avi Alkobi",
+      "description": "AI factories are some of the most complex operations in the world, combining GPUs, CPUs, switches, DPUs, and SuperNICs alongside schedulers, orchestration...",
+      "publishedAt": "2026-10-07T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Validate AI Factory Changes with Digital Twins and AI Agents\nAI factories are some of the most complex operations in th",
+          "operations in the world, combining GPUs, CPUs, switches, DPUs, and SuperNICs alongside schedulers, orchestration..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.652Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123195",
+          "url": "https://developer.nvidia.com/blog/validate-ai-factory-changes-with-digital-twins-and-ai-agents"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e7aa6083b5ec6f3b76cf",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "AI Native by Design: Lessons Learned from Building NVIDIA TensorRT Model Connect",
+      "canonicalUrl": "https://developer.nvidia.com/blog/ai-native-by-design-lessons-learned-from-building-nvidia-tensorrt-model-connect",
+      "author": "Tanya Lenz",
+      "description": "Parallel work, model-family isolation, reversible changes, and GPU-backed validation shaped an open source project designed around coding agents NVIDIA TensorRT...",
+      "publishedAt": "2026-09-29T19:10:51.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "inference",
+          "agent"
+        ],
+        "primaryTopic": "inference",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "AI Native by Design: Lessons Learned from Building NVIDIA TensorRT Model Connect\nParallel work, model-family i",
+          "AI Native by Design: Lessons Learned from Building NVIDIA TensorRT Model Connect\nParallel work, model-family isolation, rev",
+          "isolation, reversible changes, and GPU-backed validation shaped an open source project designed around coding agents NVIDIA TensorRT..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.767Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123036",
+          "url": "https://developer.nvidia.com/blog/ai-native-by-design-lessons-learned-from-building-nvidia-tensorrt-model-connect"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e8964b951a6bda45f4df",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Deploy an Open Model from Checkpoint to Inference in Two Commands with NVIDIA TensorRT Model Connect",
+      "canonicalUrl": "https://developer.nvidia.com/blog/deploy-an-open-model-from-checkpoint-to-inference-in-two-commands-with-nvidia-tensorrt-model-connect",
+      "author": "Tanya Lenz",
+      "description": "Open AI models are evolving faster than ever, but bringing them into native applications can still require model-specific conversion, preprocessing,...",
+      "publishedAt": "2026-08-28T17:06:28.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "y an Open Model from Checkpoint to Inference in Two Commands with NVIDIA TensorRT Model Connect\nOpen AI models are evolving faster than ever, but",
+          "Deploy an Open Model from Checkpoint to Inference in Two Commands with NVIDIA TensorRT Model Connect\nOpen AI m"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.261Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121956",
+          "url": "https://developer.nvidia.com/blog/deploy-an-open-model-from-checkpoint-to-inference-in-two-commands-with-nvidia-tensorrt-model-connect"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ea94a57849be3f72ad8f",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Dense vs. MoE Models: Active Parameters, Throughput, and When to Choose Each",
+      "canonicalUrl": "https://developer.nvidia.com/blog/dense-vs-moe-models-active-parameters-throughput-and-when-to-choose-each",
+      "author": "Elizabeth Goodman",
+      "description": "How can a 30B-parameter model activate only 3B parameters per token, and still use the capacity of the larger model? Nemotron 3.5 Lightning illustrates the...",
+      "publishedAt": "2026-09-15T17:00:11.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "vs. MoE Models: Active Parameters, Throughput, and When to Choose Each\nHow can a 30B-parameter model activate only 3B parameters per token, and s"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.912Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=122508",
+          "url": "https://developer.nvidia.com/blog/dense-vs-moe-models-active-parameters-throughput-and-when-to-choose-each"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "eb1e92b9a8f22b71c88f",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding",
+      "canonicalUrl": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding",
+      "author": "Michelle Horton",
+      "description": "Hybrid models interleave state-space model (SSM) layers with a few attention layers. NVIDIA Nemotron 3, Qwen3.5 through Qwen3.8, Kimi-K3, and GLM-5.3-Flash are...",
+      "publishedAt": "2026-10-12T16:00:54.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.642Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123513",
+          "url": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ee226c3a6d31a594106a",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Restore LLM Inference Capacity in Seconds with Shadow Engine Recovery in NVIDIA Dynamo",
+      "canonicalUrl": "https://developer.nvidia.com/blog/restore-llm-inference-capacity-in-seconds-with-shadow-engine-recovery-in-nvidia-dynamo",
+      "author": "Michelle Horton",
+      "description": "When an LLM engine process fails, the standard recovery path involves a cold restart. This requires loading weights into HBM from storage, compiling kernels,...",
+      "publishedAt": "2026-08-25T20:57:54.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "inference",
+          "ai-application"
+        ],
+        "primaryTopic": "inference",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Restore LLM Inference Capacity in Seconds with Shadow Engine Recovery in NVIDIA Dynamo\nWhen an LLM engine process fail"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.272Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121821",
+          "url": "https://developer.nvidia.com/blog/restore-llm-inference-capacity-in-seconds-with-shadow-engine-recovery-in-nvidia-dynamo"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f15002f915b271d51ed7",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "Optimizing Agent Reliability and Tool Calling Efficiency for Chip Design Using NVIDIA NeMo Gym",
+      "canonicalUrl": "https://developer.nvidia.com/blog/optimizing-agent-reliability-and-tool-calling-efficiency-for-chip-design-using-nvidia-nemo-gym",
+      "author": "Tanya Lenz",
+      "description": "AI agents offer remarkable productivity gains in complex chip design workflows, but their tendency to generate plausible yet incorrect artifacts makes...",
+      "publishedAt": "2026-10-14T16:10:45.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Optimizing Agent Reliability and Tool Calling Efficiency for Chip Design Using NVIDIA NeMo Gym\nAI agents offer remarkable",
+          "Optimizing Agent Reliability and Tool Calling Efficiency for Chip Design Using NVIDIA NeMo Gym\nAI agents offer",
+          "Optimizing Agent Reliability and Tool Calling Efficiency for Chip Design Using NVIDIA NeMo Gym\nAI agents offer remarkable productivity gains in"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.628Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123574",
+          "url": "https://developer.nvidia.com/blog/optimizing-agent-reliability-and-tool-calling-efficiency-for-chip-design-using-nvidia-nemo-gym"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f755e96a57837e6c81e5",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "CUDA Toolkit 13.4 Adds Windows on Arm Support and Greater Control over Shared GPUs",
+      "canonicalUrl": "https://developer.nvidia.com/blog/cuda-toolkit-13-4-adds-windows-on-arm-support-and-greater-control-over-shared-gpus",
+      "author": "Jonathan Bentz",
+      "description": "Every NVIDIA CUDA Toolkit release adds functionality and performance improvements that help developers get more from NVIDIA GPUs and the broader NVIDIA software...",
+      "publishedAt": "2026-09-09T20:24:12.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "kit release adds functionality and performance improvements that help developers get more from NVIDIA GPUs and the broader NVIDIA software...",
+          "CUDA Toolkit 13.4 Adds Windows on Arm Support and Greater Control over Shared GPUs\nEvery NVIDIA CUDA Toolkit releas"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.977Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121255",
+          "url": "https://developer.nvidia.com/blog/cuda-toolkit-13-4-adds-windows-on-arm-support-and-greater-control-over-shared-gpus"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f784ac2ee6dbc63effac",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "NVIDIA Run:ai Is Now Open Source as Part of NVIDIA DSX AI Factory Platform",
+      "canonicalUrl": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform",
+      "author": "Tanya Lenz",
+      "description": "NVIDIA is making the full NVIDIA Run:ai platform available as open source software, giving customers, developers, and ecosystem partners access to...",
+      "publishedAt": "2026-10-13T14:19:40.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-infra"
+        ],
+        "primaryTopic": "ai-infra",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "NVIDIA Run:ai Is Now Open Source as Part of NVIDIA DSX AI Factory Platform\nNVIDIA is making the full NVIDIA Run:ai platfo"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:11.641Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=123356",
+          "url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fc6a7196bf14eabf5632",
+      "publisherId": "nvidia-official",
+      "companyId": "nvidia",
+      "title": "How to Train a Cross-Embodiment Robot Navigation Policy with AI Agents",
+      "canonicalUrl": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents",
+      "author": "Tanya Lenz",
+      "description": "Navigation enables a robot to turn perception and motion into purposeful autonomy. Unlike locomotion, which produces stable movement, navigation must be used to...",
+      "publishedAt": "2026-08-26T20:05:06.000Z",
+      "discoveredAt": "2026-11-01T08:48:06.972Z",
+      "updatedAt": "2026-11-01T08:48:06.972Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "iment Robot Navigation Policy with AI Agents\nNavigation enables a robot to turn perception and motion into purposeful autonomy. Unlike locomotion"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:12.266Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "nvidia",
+          "externalId": "https://developer.nvidia.com/blog/?p=121922",
+          "url": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

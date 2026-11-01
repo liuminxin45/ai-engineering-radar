@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "deepmind",
+    "lastCheckedAt": "2026-11-01T08:47:46.117Z",
+    "lastSuccessAt": "2026-11-01T08:47:46.117Z",
+    "nextRunAt": "2026-11-02T08:47:46.117Z",
+    "consecutiveFailures": 0,
+    "etag": "\"MxrWxQ\"",
+    "status": "success",
+    "error": "29 篇文章的补充元数据不可用；保留目录元数据。",
+    "discovered": 100,
+    "httpStatus": 200
+  }
+}

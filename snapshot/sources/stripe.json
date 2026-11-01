@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "stripe",
+    "lastCheckedAt": "2026-11-01T08:48:24.535Z",
+    "lastSuccessAt": "2026-11-01T08:48:24.535Z",
+    "nextRunAt": "2026-11-02T08:48:24.535Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 10,
+    "httpStatus": 200
+  }
+}

@@ -1,0 +1,630 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "1ed64a63d0bd5cef5edb",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Aug 18, 2026·ResearchGit at any scaleVMVicent Martí · 27m27 min read",
+      "canonicalUrl": "https://cursor.com/blog/git-at-any-scale",
+      "description": "Git at any scale",
+      "publishedAt": "2026-08-18T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          " Martí · 27m27 min read\nGit at any scale"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.885Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/git-at-any-scale"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "20478a4065b274e5c561",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Towards self-driving codebases · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/self-driving-codebases",
+      "author": "Wilson Lin",
+      "description": "We're making a part of our multi-agent research harness available to try today in preview.",
+      "language": "en-US",
+      "publishedAt": "2026-02-05T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding",
+          "harness",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "r\nWe're making a part of our multi-agent research harness available to try today in preview."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.888Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/self-driving-codebases"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "248f58cf1fdb66e56dd1",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Firetiger joins Cursor · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/firetiger",
+      "author": "Maxime Prades",
+      "description": "Firetiger builds agents that work on software once it reaches production. They're joining Cursor to close the loop from writing code to running it.",
+      "language": "en-US",
+      "publishedAt": "2026-08-13T19:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "s Cursor · Cursor\nFiretiger builds agents that work on software once it reaches production. They're joining Cursor to close the loop from writing",
+          "t work on software once it reaches production. They're joining Cursor to close the loop from writing code to running it."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.887Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/firetiger"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2b6dae949949fe9b4994",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Navan cuts a month-long migration down to a week, without freezing the codebaseOct 16, 2026",
+      "canonicalUrl": "https://cursor.com/blog/navan",
+      "description": "Navan cuts a month-long migration down to a week, without freezing the codebase",
+      "publishedAt": "2026-10-16T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Navan cuts a month-long migration down to a week, without freezing the codebaseOct 16, 2026\nNavan cuts a month-long migration down to "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.888Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/navan"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2d893fa12804db137561",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Press Posts · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/topic/press",
+      "description": "Read our Press blog posts.",
+      "language": "en-US",
+      "publishedAt": "2026-03-16T00:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.891Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/topic/press"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "314081097862da035a1d",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Cursor earns AIUC-1 certification for agent security and reliability · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/aiuc-1",
+      "author": "Kenneth Moras",
+      "description": "Cursor is now AIUC-1 certified after an independent audit of our controls and adversarial testing of our agents.",
+      "language": "en-US",
+      "publishedAt": "2026-08-13T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "sor earns AIUC-1 certification for agent security and reliability · Cursor\nCursor is now AIUC-1 certified after an independent audit of our contr",
+          "it of our controls and adversarial testing of our agents."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.887Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/aiuc-1"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "33a55e2a0b3792d3bcdb",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Research Posts · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/topic/research",
+      "description": "Read our Research blog posts.",
+      "language": "en-US",
+      "publishedAt": "2026-09-23T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.885Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/topic/research"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4baedc1fc9e5783b9f49",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Bots for the last mile: Rollouts, Security Review · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/rollouts-and-security-reviewer",
+      "author": "Rustam Lalkaka",
+      "description": "Today we're releasing software development bots that help you get safe, reliable code into production faster.",
+      "language": "en-US",
+      "publishedAt": "2026-09-23T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "p you get safe, reliable code into production faster."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.886Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/rollouts-and-security-reviewer"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7b3c3dcfd56c8d3cbffd",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Cloud agents start 3x faster with builds · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/builds",
+      "author": "Cursor Team",
+      "description": "Builds are ready-to-use copies of your development environment that Cursor prepares in the background, so cloud agents start up to 3x faster at no additional cost.",
+      "language": "en-US",
+      "publishedAt": "2026-08-13T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Cloud agents start 3x faster with builds · Cursor\nBuilds are ready-to-use copies of your development environment tha"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.888Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/builds"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8610a12fb1d720dd2dd3",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "How Grab put Cursor in the hands of Design, Ops, and EngineeringSep 15, 2026",
+      "canonicalUrl": "https://cursor.com/blog/grab",
+      "description": "How Grab put Cursor in the hands of Design, Ops, and Engineering",
+      "publishedAt": "2026-09-15T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "ow Grab put Cursor in the hands of Design, Ops, and EngineeringSep 15, 2026\nHow Grab put Cursor in the hands of Design, Ops, and Engineering"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.889Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/grab"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "990c7ecd606952d8958d",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Improved token efficiency for longer agent runs · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/improved-token-efficiency",
+      "author": "Jediah Katz",
+      "description": "Changes across Cursor's agent harness reduced token costs for users by 7% without reducing agent quality.",
+      "language": "en-US",
+      "publishedAt": "2026-09-23T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding",
+          "harness",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "proved token efficiency for longer agent runs · Cursor\nChanges across Cursor's agent harness reduced token costs for users by 7% without reducing",
+          "Improved token efficiency for longer agent runs · Cursor\nChanges across Cursor's agent harness reduced token costs for "
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.886Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/improved-token-efficiency"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9b4e97cd572586d13faf",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Introducing the Agent SDK · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/agent-sdk",
+      "author": "Rustam Lalkaka",
+      "description": "The Agent SDK is the framework we use to build our own managed agents like Bugbot, Security Reviewer, and Rollouts. Define agents in code and deploy them with one command.",
+      "language": "en-US",
+      "publishedAt": "2026-10-20T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [
+          "ai-coding",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
+        "evidence": [
+          "Introducing the Agent SDK · Cursor\nThe Agent SDK is the framework we use to build our own managed agents like Bugbot, Security",
+          "ent SDK is the framework we use to build our own managed agents like Bugbot, Security Reviewer, and Rollouts. Define agents in code and deploy th",
+          "Introducing the Agent SDK · Cursor\nThe Agent SDK is the framework we use to build our own managed agents like Bugbot, Security Revie"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.886Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/agent-sdk"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a84b786fbf492aaeb8e5",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Customers Posts · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/topic/customers",
+      "description": "Read our Customers blog posts.",
+      "language": "en-US",
+      "publishedAt": "2026-10-16T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.885Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/topic/customers"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "aaac1f9d89c35306060f",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Security notice — malicious version of Anthropic.claude-code (2.1.312 and 2.1.313) identified in the Cursor VS Code Extension Marketplace · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/claude-code-extension-security-notice",
+      "author": "Cursor Team",
+      "description": "Today we identified a security incident involving a specific extension in the Cursor VS Code Extension Marketplace: Anthropic.claude-code version 2.1.312 and 2.1.313 for Windows and MacOS.",
+      "language": "en-US",
+      "publishedAt": "2026-10-29T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "e — malicious version of Anthropic.claude-code (2.1.312 and 2.1.313) identified in the Cursor VS Code Extension Marketplace · Cursor\nToday we ide"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.885Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/claude-code-extension-security-notice"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b0a31e4c4e20649e0b5e",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "How Basis builds long-horizon accounting agents with CursorSep 4, 2026",
+      "canonicalUrl": "https://cursor.com/blog/basis",
+      "description": "How Basis builds long-horizon accounting agents with Cursor",
+      "publishedAt": "2026-09-04T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "sis builds long-horizon accounting agents with CursorSep 4, 2026\nHow Basis builds long-horizon accounting agents with Cursor"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.889Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/basis"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b8e3669c7304034de333",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Introducing Projects · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/projects",
+      "author": "Alexi Robbins",
+      "description": "Projects lets you take on larger bodies of work with a coordinator that maintains context, delegates to subagents, and runs recurring work.",
+      "language": "en-US",
+      "publishedAt": "2026-09-10T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          " with a coordinator that maintains context, delegates to subagents, and runs recurring work."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.886Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/projects"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bcd40eb5d2b9fb6eb841",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Aug 14, 2026·CompanyCursor is now a part of SpaceXCursor has officially been acquired by SpaceX.Cursor Team · 2m2 min read",
+      "canonicalUrl": "https://cursor.com/blog/joining-spacex",
+      "description": "Cursor is now a part of SpaceX",
+      "publishedAt": "2026-08-14T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.885Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/joining-spacex"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ddb2aa43c4d2265e23de",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Nokia analyzes 50M+ lines of code in two weeks with CursorSep 2, 2026",
+      "canonicalUrl": "https://cursor.com/blog/nokia",
+      "description": "Nokia analyzes 50M+ lines of code in two weeks with Cursor",
+      "publishedAt": "2026-09-02T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.890Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/nokia"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e374571072d6a3714dd7",
+      "publisherId": "cursor-official",
+      "companyId": "cursor",
+      "title": "Run cloud agents on machines you manage · Cursor",
+      "canonicalUrl": "https://cursor.com/blog/self-hosted-machines",
+      "author": "Jack Pertschuk",
+      "description": "Cursor cloud agents can now execute on pools of Self-Hosted Machines you manage.",
+      "language": "en-US",
+      "publishedAt": "2026-09-02T12:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:47:49.083Z",
+      "updatedAt": "2026-11-01T08:47:49.083Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Run cloud agents on machines you manage · Cursor\nCursor cloud agents can now execute on pools of Self-Hosted Machines yo"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:00.887Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "cursor",
+          "url": "https://cursor.com/blog/self-hosted-machines"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "1fead5dbf528eb2a31a0",
+      "publisherId": "databricks-official",
+      "companyId": "databricks",
+      "title": "Databricks and SAP unleash end-to-end data & AI capabilities to level up enterprise AI transformation",
+      "canonicalUrl": "https://www.databricks.com/blog/databricks-and-sap-unleash-end-end-data-ai-capabilities-level-enterprise-ai-transformation",
+      "description": "Today's AI models are more capable than ever. What they still lack is the business...",
+      "language": "en",
+      "publishedAt": "2026-10-30T21:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:11.376Z",
+      "updatedAt": "2026-11-01T08:48:11.376Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          " and SAP unleash end-to-end data & AI capabilities to level up enterprise AI transformation\nToday's AI models are more capable than ever. What th"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:14.969Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "databricks",
+          "externalId": "https://www.databricks.com/blog/databricks-and-sap-unleash-end-end-data-ai-capabilities-level-enterprise-ai-transformation",
+          "url": "https://www.databricks.com/blog/databricks-and-sap-unleash-end-end-data-ai-capabilities-level-enterprise-ai-transformation"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2308e1da770a6a78eb7a",
+      "publisherId": "databricks-official",
+      "companyId": "databricks",
+      "title": "Deliberate decisions and enterprise AI value",
+      "canonicalUrl": "https://www.databricks.com/blog/deliberate-decisions-and-enterprise-ai-value",
+      "description": "AI progress is moving quickly. Expectations are rising, experimentation is spreading...",
+      "language": "en",
+      "publishedAt": "2026-10-30T19:30:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:11.376Z",
+      "updatedAt": "2026-11-01T08:48:11.376Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "eliberate decisions and enterprise AI value\nAI progress is moving quickly. Expectations are rising, experimentation is spreading..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:14.970Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "databricks",
+          "externalId": "https://www.databricks.com/blog/deliberate-decisions-and-enterprise-ai-value",
+          "url": "https://www.databricks.com/blog/deliberate-decisions-and-enterprise-ai-value"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "51dbb9496987e509fc7c",
+      "publisherId": "databricks-official",
+      "companyId": "databricks",
+      "title": "Unlocking Investment Insights Without Migrating Your Data: Lakehouse Federation",
+      "canonicalUrl": "https://www.databricks.com/blog/unlocking-investment-insights-without-migrating-your-data-lakehouse-federation",
+      "description": "Lakehouse Federation: Query Anywhere, Move NothingIn today's enterprise landscape,...",
+      "language": "en",
+      "publishedAt": "2026-10-27T18:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:11.376Z",
+      "updatedAt": "2026-11-01T08:48:11.376Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "ocking Investment Insights Without Migrating Your Data: Lakehouse Federation\nLakehouse Federation: Query Anywhere, Move NothingIn today's enterpr"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:14.971Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "databricks",
+          "externalId": "https://www.databricks.com/blog/unlocking-investment-insights-without-migrating-your-data-lakehouse-federation",
+          "url": "https://www.databricks.com/blog/unlocking-investment-insights-without-migrating-your-data-lakehouse-federation"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5d84218f840ce55a6586",
+      "publisherId": "databricks-official",
+      "companyId": "databricks",
+      "title": "Voice Agents are here. Context turns them into real customer value.",
+      "canonicalUrl": "https://www.databricks.com/blog/voice-agents-are-here-context-turns-them-real-customer-value",
+      "description": "Why voice, and why nowConsider three moments that happen every day in consumer businesses:&nbsp;At...",
+      "language": "en",
+      "publishedAt": "2026-10-28T18:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:11.376Z",
+      "updatedAt": "2026-11-01T08:48:11.376Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "agent"
+        ],
+        "primaryTopic": "agent",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "Voice Agents are here. Context turns them into real customer value.\nWhy voice, and why nowConsider three moments tha",
+          "Voice Agents are here. Context turns them into real customer value.\nWhy voice, and why nowConsider three moments that happen every da"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:14.970Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "databricks",
+          "externalId": "https://www.databricks.com/blog/voice-agents-are-here-context-turns-them-real-customer-value",
+          "url": "https://www.databricks.com/blog/voice-agents-are-here-context-turns-them-real-customer-value"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "705e1ac77ed203a59c22",
+      "publisherId": "databricks-official",
+      "companyId": "databricks",
+      "title": "Smarter cost controls for serverless",
+      "canonicalUrl": "https://www.databricks.com/blog/smarter-cost-controls-serverless",
+      "description": "At Databricks, our serverless compute usage has grown more than 3x in the past year,...",
+      "language": "en",
+      "publishedAt": "2026-10-29T15:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:11.376Z",
+      "updatedAt": "2026-11-01T08:48:11.376Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:14.970Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "databricks",
+          "externalId": "https://www.databricks.com/blog/smarter-cost-controls-serverless",
+          "url": "https://www.databricks.com/blog/smarter-cost-controls-serverless"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9edbc849089e5569dbe8",
+      "publisherId": "databricks-official",
+      "companyId": "databricks",
+      "title": "Wealth Management Client Onboarding Needs More Than AI",
+      "canonicalUrl": "https://www.databricks.com/blog/wealth-management-client-onboarding-needs-more-ai",
+      "description": "Wealth Management client onboarding can stall even when every system has done its job. The document is collected...",
+      "language": "en",
+      "publishedAt": "2026-10-30T19:40:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:11.376Z",
+      "updatedAt": "2026-11-01T08:48:11.376Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          " Client Onboarding Needs More Than AI\nWealth Management client onboarding can stall even when every system has done its job. The document is coll"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:14.969Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "databricks",
+          "externalId": "https://www.databricks.com/blog/wealth-management-client-onboarding-needs-more-ai",
+          "url": "https://www.databricks.com/blog/wealth-management-client-onboarding-needs-more-ai"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ac668428b135a0c3ce9c",
+      "publisherId": "databricks-official",
+      "companyId": "databricks",
+      "title": "Lakebase branching for CI/CD: lessons from 100 PR databases",
+      "canonicalUrl": "https://www.databricks.com/blog/lakebase-branching-cicd-lessons-100-pr-databases",
+      "description": "The problem: testing against production data shouldn't take over 30 minutesSnorkel...",
+      "language": "en",
+      "publishedAt": "2026-10-31T21:25:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:11.376Z",
+      "updatedAt": "2026-11-01T08:48:11.376Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Lakebase branching for CI/CD: lessons from 100 PR databases\nThe problem: testing against production data shouldn't take over 30 minutesSnork",
+          "from 100 PR databases\nThe problem: testing against production data shouldn't take over 30 minutesSnorkel..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:14.969Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "databricks",
+          "externalId": "https://www.databricks.com/blog/lakebase-branching-cicd-lessons-100-pr-databases",
+          "url": "https://www.databricks.com/blog/lakebase-branching-cicd-lessons-100-pr-databases"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e795fa27f5877b5d205d",
+      "publisherId": "databricks-official",
+      "companyId": "databricks",
+      "title": "Vital Skills: Upskilling Genie Code with Healthcare and Life Sciences skills",
+      "canonicalUrl": "https://www.databricks.com/blog/vital-skills-upskilling-genie-code-healthcare-and-life-sciences-skills",
+      "description": "Code with AI on a unified, governed platformGenie Code, our coding agent optimized...",
+      "language": "en",
+      "publishedAt": "2026-10-27T19:00:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:11.376Z",
+      "updatedAt": "2026-11-01T08:48:11.376Z",
+      "classification": {
+        "status": "review",
+        "topics": [
+          "ai-coding",
+          "agent"
+        ],
+        "primaryTopic": "ai-coding",
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "and Life Sciences skills\nCode with AI on a unified, governed platformGenie Code, our coding agent optimized..."
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:14.970Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "databricks",
+          "externalId": "https://www.databricks.com/blog/vital-skills-upskilling-genie-code-healthcare-and-life-sciences-skills",
+          "url": "https://www.databricks.com/blog/vital-skills-upskilling-genie-code-healthcare-and-life-sciences-skills"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "eb0db652c14027be4433",
+      "publisherId": "databricks-official",
+      "companyId": "databricks",
+      "title": "Announcing General Availability of Real-Time Mode for Spark Declarative Pipelines on Databricks",
+      "canonicalUrl": "https://www.databricks.com/blog/announcing-general-availability-real-time-mode-spark-declarative-pipelines-databricks",
+      "description": "We introduced Real-Time Mode (RTM) last year which enabled customers to build low-latency, operational use cases...",
+      "language": "en",
+      "publishedAt": "2026-10-29T22:30:04.000Z",
+      "discoveredAt": "2026-11-01T08:48:11.376Z",
+      "updatedAt": "2026-11-01T08:48:11.376Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "st year which enabled customers to build low-latency, operational use cases...",
+          "al-Time Mode for Spark Declarative Pipelines on Databricks\nWe introduced Real-Time Mode (RTM) last year which enabled customers to build low-late"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:14.970Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "databricks",
+          "externalId": "https://www.databricks.com/blog/announcing-general-availability-real-time-mode-spark-declarative-pipelines-databricks",
+          "url": "https://www.databricks.com/blog/announcing-general-availability-real-time-mode-spark-declarative-pipelines-databricks"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fc8f167103bea89c1d62",
+      "publisherId": "databricks-official",
+      "companyId": "databricks",
+      "title": "How Procore is powering construction analytics with OpenSharing",
+      "canonicalUrl": "https://www.databricks.com/blog/how-procore-powering-construction-analytics-opensharing-0",
+      "description": "Connecting an industry built on disconnected dataConstruction runs on data that rarely sits in one place...",
+      "language": "en",
+      "publishedAt": "2026-10-29T00:29:00.000Z",
+      "discoveredAt": "2026-11-01T08:48:11.376Z",
+      "updatedAt": "2026-11-01T08:48:11.376Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T08:48:14.970Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "databricks",
+          "externalId": "https://www.databricks.com/blog/how-procore-powering-construction-analytics-opensharing-0",
+          "url": "https://www.databricks.com/blog/how-procore-powering-construction-analytics-opensharing-0"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}
