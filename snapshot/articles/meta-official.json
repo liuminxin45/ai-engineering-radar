@@ -21,8 +21,8 @@
           "Python Typing Survey 2026: AI Tools and the Shifting Checker Landscape\nThe 2026 Python Typing Survey received 1,794 responses. Type hint use"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:04.147Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -53,8 +53,8 @@
           "Human-on-the-Loop Approach at Full Scale\nOver the last year we’ve been sharing our work leveraging large language models to catch bugs on the fly"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:04.146Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -90,8 +90,8 @@
           "The Thin Orchestrator: How We Made Our AI Agents More Reliable by Giving the Router Less to Do\nSometimes, giving an AI "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:04.148Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -123,8 +123,8 @@
           "ls, we want to take you inside the infrastructure that has made it all possible. The first phase of Prometheus, our gigawatt-scale supercluster, "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:04.148Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -156,8 +156,8 @@
           "owering the Next Generation of Ads Retrieval Through Model-System Co-Design\nThis post describes the next generation of Meta Andromeda, Meta’s per"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:04.147Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -189,8 +189,8 @@
           "GenRecs Tokenization: Transforming Ads Recommendation at Meta with Stable Model Vocabulary\nGenerative Recommenders (Ge"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:04.147Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -225,8 +225,8 @@
           "tions in their Facebook groups. To build Forum, Meta engineers adopted a whole new way of working by bringing an AI agent into the development cy"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:04.148Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -258,8 +258,8 @@
           "Global Summit: Open Innovation for Scale-Up, Scale-Out, and Scale-Across AI Networks\nAt the 2026 Open Compute Project (OCP) Global Summit, Meta s"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:04.147Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -291,8 +291,8 @@
           "eep dive into Meta’s Privacy Aware Infrastructure (PAI) takes a look at PrivacyLib. A privacy requirement must hold as data moves through Meta’s "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:04.147Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [

@@ -19,8 +19,8 @@
           " Martí · 27m27 min read\nGit at any scale"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.885Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -56,8 +56,8 @@
           "r\nWe're making a part of our multi-agent research harness available to try today in preview."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.888Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -93,8 +93,8 @@
           "t work on software once it reaches production. They're joining Cursor to close the loop from writing code to running it."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.887Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -123,8 +123,8 @@
           "Navan cuts a month-long migration down to a week, without freezing the codebaseOct 16, 2026\nNavan cuts a month-long migration down to "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.888Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -152,8 +152,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.891Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -189,8 +189,8 @@
           "it of our controls and adversarial testing of our agents."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.887Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -218,8 +218,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.885Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -250,8 +250,8 @@
           "p you get safe, reliable code into production faster."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.886Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -286,8 +286,8 @@
           "Cloud agents start 3x faster with builds · Cursor\nBuilds are ready-to-use copies of your development environment tha"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.888Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -316,8 +316,8 @@
           "ow Grab put Cursor in the hands of Design, Ops, and EngineeringSep 15, 2026\nHow Grab put Cursor in the hands of Design, Ops, and Engineering"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.889Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -354,8 +354,8 @@
           "Improved token efficiency for longer agent runs · Cursor\nChanges across Cursor's agent harness reduced token costs for "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.886Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -392,8 +392,8 @@
           "Introducing the Agent SDK · Cursor\nThe Agent SDK is the framework we use to build our own managed agents like Bugbot, Security Revie"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.886Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -421,8 +421,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.885Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -456,8 +456,8 @@
           "e — malicious version of Anthropic.claude-code (2.1.312 and 2.1.313) identified in the Cursor VS Code Extension Marketplace · Cursor\nToday we ide"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.885Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -490,8 +490,8 @@
           "sis builds long-horizon accounting agents with CursorSep 4, 2026\nHow Basis builds long-horizon accounting agents with Cursor"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.889Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -522,8 +522,8 @@
           " with a coordinator that maintains context, delegates to subagents, and runs recurring work."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.886Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -550,8 +550,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.885Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -578,8 +578,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.890Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -614,8 +614,8 @@
           "Run cloud agents on machines you manage · Cursor\nCursor cloud agents can now execute on pools of Self-Hosted Machines yo"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:00.887Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [

@@ -25,8 +25,8 @@
           "on complex tasks, accessing files, tools, the internet, and spawning other agents to collaborate with. Executing complex..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.621Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -62,8 +62,8 @@
           "aximum value when fully optimized. GPU workload placement is a key optimization. Poor workload placement..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.827Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -100,8 +100,8 @@
           "-turn interactions into multi-step workflows that reason, invoke tools, coordinate subagents, and carry growing..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.296Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -133,8 +133,8 @@
           "Object and the NVIDIA SCADA Server SDK\nAI infrastructure engineers, storage developers, and cloud service providers need fast and secure access t"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.765Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -165,8 +165,8 @@
           " Assets for Robotics with Frontier AI Models\nPreparing CAD assets for robotics simulation requires more than converting geometry to OpenUSD: deve"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.649Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -204,8 +204,8 @@
           "e Gap Between Local Tests and Live Serving\nAn AI coding agent’s patch can pass tests yet fail when the server loads a real model and handles requ"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.823Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -236,8 +236,8 @@
           "Deploying an HSTU Generative Recommender with NVIDIA Dynamo-Triton\nGenerative recommender (GR) systems are eme"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.764Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -268,8 +268,8 @@
           "Scale AV Perception Across Vehicle Platforms with NVIDIA Omniverse NuRec\nA perception stack is shaped by the v"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.258Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -306,8 +306,8 @@
           " information and proprietary model context across personal, enterprise, and regulated..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.824Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -332,7 +332,10 @@
       "updatedAt": "2026-11-01T08:48:06.972Z",
       "classification": {
         "status": "accepted",
-        "topics": [],
+        "topics": [
+          "ai-application"
+        ],
+        "primaryTopic": "ai-application",
         "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
         "evidence": [
           "Maximizing AI Factory Performance per Watt with NVIDIA DSX MaxLPS\nAI factories are power-constrained industrial systems. ",
@@ -340,8 +343,8 @@
           "The question is no longer how many GPUs fit in a data center, but how much AI output each available..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.299Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -372,8 +375,8 @@
           "he Machines that Make the Machines\nHow we taught robots to assemble GB300 tester trays and what it taught us about robot learning, mechanical int"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.651Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -398,7 +401,10 @@
       "updatedAt": "2026-11-01T08:48:06.972Z",
       "classification": {
         "status": "accepted",
-        "topics": [],
+        "topics": [
+          "ai-application"
+        ],
+        "primaryTopic": "ai-application",
         "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
         "evidence": [
           "to Kubernetes\nTraining large-scale AI models on thousands of GPUs is a high-stakes operation where monitoring and automation must be built-in to ",
@@ -406,8 +412,8 @@
           "ge-scale AI models on thousands of GPUs is a high-stakes operation where monitoring and automation must be built-in to optimize cluster resilienc"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.613Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -445,8 +451,8 @@
           " Completes the MLPerf Edge Agentic Benchmark 6.4x Faster on Jetson AGX Thor\nAI agents are moving from cloud data centers to vehicles, robots, and"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.871Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -482,8 +488,8 @@
           " portable model format, a reliable runtime, and acceleration that works across target systems. Do Inference Now..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.761Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -515,8 +521,8 @@
           "one server, a few clients, and one dataset at each site. As those projects grow, the..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.919Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -552,8 +558,8 @@
           "Building a Memory-Driven Agent with NVIDIA NemoClaw\nEnterprise work spans messages, decisions, projects, and obligations "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.983Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -587,8 +593,8 @@
           "Power-Efficient High-Interactivity Inference on NVIDIA Vera Rubin\nPower is a defining constraint for AI factories. As AI workloads demand a full "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.914Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -624,8 +630,8 @@
           "The Modern CUDA Toolbox in Practice: A Step-by-Step Optimization Walkthrough\nNVIDIA CUDA remains the foundation of GPU-acceler"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.178Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -657,8 +663,8 @@
           " AI workload can produce its first token, operators must bring an interconnected system of compute,..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.623Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -689,8 +695,8 @@
           "Scaling NVIDIA TensorRT Performance Optimization Beyond a Single Build Route with the Global Performance Tuner"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.613Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -726,8 +732,8 @@
           "Co-Designing AI Models Using Speculative Decoding for Faster LLM Inference\nThis post is the third in a series on "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.236Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -764,8 +770,8 @@
           "nce on NVIDIA DGX Spark\nGenerating tokens faster starts with identifying what limits inference performance. In the batch-size-1 evaluation of Lin"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.613Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -796,8 +802,8 @@
           "Control How Your GPU Shares Work with Green Contexts\nGPU applications increasingly consist of multiple independent components r"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.694Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -833,8 +839,8 @@
           "ing a standard part of development workflows, but general-purpose agents weren't built with specialized infrastructure software such as..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.695Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -870,8 +876,8 @@
           "n translating each operator into a GPU kernel. It is a compilation problem with many legitimate answers. For..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.614Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -905,8 +911,8 @@
           "ning architectural trends in large-scale AI model training. DeepSeek, Qwen, and Mixtral are examples of MoE..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.921Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -937,8 +943,8 @@
           "Scale Bitwise-Deterministic Pretraining with NVIDIA Megatron Core\nBitwise determinism makes large-scale pretra"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.690Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -969,8 +975,8 @@
           " Developers: DLSS 5 with 3D-Guided Neural Rendering, NVIDIA ACE Updates, and New RTX Kit Capabilities\nNVIDIA DLSS 5 introduces DLSS 3D-Guided Neu"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.857Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1001,8 +1007,8 @@
           "NVIDIA RTX Spark Powers Neural Rendering and AI Characters in Games\nNVIDIA RTX Spark is a new Windows PC platform for AI development, "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.612Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1039,8 +1045,8 @@
           "Benchmarking LLM Inference at Scale with AIPerf\nYou’re deploying a model on a system. It starts up, prompts ar"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.868Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1072,8 +1078,8 @@
           "From Wafer-Out to First Token: Codifying Supply Chain Expertise with Nemotron and Palantir Foundry\nNVIDIA has one of the largest and m"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.929Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1108,8 +1114,8 @@
           "Lower the Cost of Building and Running Visual AI Agents with NVIDIA VSS Blueprint 3.3\nVision-language models have made it possib"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.769Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1143,8 +1149,8 @@
           "Solving Agentic AI Fleet Challenges with NVIDIA Vera CPU\nAI factories are interconnected systems where fleet economics"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.311Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1176,8 +1182,8 @@
           "ive. In a dense transformer, every token passes through every layer, so adding..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.816Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1213,8 +1219,8 @@
           "w to Rewrite Apache Spark UDFs for GPU Acceleration with AI Agents\nEnterprise applications have become increasingly demanding. Agentic AI has com"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.629Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1249,8 +1255,8 @@
           "How to Read Data into GPU Memory in Python with NVIDIA GPUDirect Storage\nGPU applications are processing ever-growing datasets with "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.615Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1286,8 +1292,8 @@
           "as a preview of the upcoming Qwen4 architecture for developers to experiment with and evaluate. It’s..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.269Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1316,8 +1322,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.762Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1354,8 +1360,8 @@
           "el, a harness, and domain-specific tools. To deploy an agent more securely, developers need a runtime that enforces..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.611Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1386,8 +1392,8 @@
           "Rules, Not Just Local Languages\nAs AI adoption expands globally, people across languages and cultures are using it in more aspects of their daily"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.612Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1422,8 +1428,8 @@
           "Add Runtime Controls to AI Agents with NVIDIA OpenShell\nAI agents can be given a goal, write code, use tools, and "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.813Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1458,8 +1464,8 @@
           "NVIDIA PAIR Virtual Inference Router Expands Available Compute on Your Local Network\nAI agents are learning to do more by working "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.121Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1493,8 +1499,8 @@
           "or Protein Structure Prediction in Claude Science\nAgentic AI is changing how research is done. AI scientists can read papers, propose hypotheses,"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.254Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1525,8 +1531,8 @@
           "Scaling Decision Optimization to 100 Million Variables and Beyond with mPDLP in NVIDIA cuOpt\nSupply chain prob"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.653Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1558,8 +1564,8 @@
           "first step toward production-ready serving. Production teams also need to serve as many concurrent users as..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.923Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1595,8 +1601,8 @@
           "Building Reliable Data Analytics Agents: Lessons from the KDD Cup\nThe NVIDIA KGMON team placed second in the K"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.650Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1631,8 +1637,8 @@
           "Building an Adaptive Agentic Cybersecurity System with NVIDIA Nemotron\nAI is changing the pace of cybersecurit"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.245Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1668,8 +1674,8 @@
           "ield-4 Powers New Scale-In Network Infrastructure for Agentic AI Factories\nTraditional cloud infrastructure was designed for predictable, general"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.302Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1703,8 +1709,8 @@
           "Using AI Agents to Teach Robots Like Microduck to Walk in Simulation\nTeaching a robot to navigate an obstacle course"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.614Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1739,8 +1745,8 @@
           "D Scenes for Simulation\nAgentic AI workflows can be used to prepare and validate digital twins for physical AI systems. Agents can inspect 3D sce"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.869Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1775,8 +1781,8 @@
           "ing a single model anymore—they’re orchestrating multiple models in parallel, chaining inference calls, and experimenting..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.615Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1807,8 +1813,8 @@
           " CUDA Rust: Two Tracks for Writing GPU Kernels\nIn September 2026, NVIDIA announced it is leaning into native GPU programming in Rust. CUDA C++ an"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.981Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1843,8 +1849,8 @@
           "yond the data center as developers build a new generation of agents to act at the edge: monitoring driver attention and cabin conditions,..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.611Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1879,8 +1885,8 @@
           "Reasoning Reaches the Edge: How to Deploy and Optimize Models on NVIDIA Jetson\nRunning reasoning and agentic AI at the edge has been harder than "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.985Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1912,8 +1918,8 @@
           "CUDA Python 1.0: Stable APIs, One Foundation, Full Platform Access\nFor years, a Python developer who needed a GPU had two realistic ch"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.275Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1948,8 +1954,8 @@
           "Code, Test, and Deploy on One Machine with NVIDIA RTX Spark\nAI agents are changing how software gets built. Developers have go"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.624Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1983,8 +1989,8 @@
           "ackages, storage layouts, security agents,..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.821Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2016,8 +2022,8 @@
           "Brings NVHBM to Next-Generation AI Infrastructure\nAI factories must support increasingly large models and more complex reasoning workloads. To ke"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.264Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2052,8 +2058,8 @@
           "va Turns Telemetry Chaos Into Peak GPU Yield\nAI Factories are some of the most technologically complex operational environments ever created. Hun"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.613Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2088,8 +2094,8 @@
           "IA DSX MaxLPS Maximizes AI Factory Throughput and Efficiency\nEvery unused watt is capacity left on the table. AI factories are typically provisio"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.815Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2125,8 +2131,8 @@
           "How to Evaluate AI Agents From Tool Calls to Task Completion\nWhen you ship an AI agent, the key question is whether it can execute a chain of"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.863Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2158,8 +2164,8 @@
           " a central portal, open a governed dataset, launch a notebook..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.988Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2194,8 +2200,8 @@
           "on longer, more complex enterprise workflows. A single request can involve reading a document, checking information across sources,..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.626Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2226,8 +2232,8 @@
           "How to Check and Configure NVIDIA GPUDirect Storage for Your Platform\nNVIDIA GPUDirect Storage (GDS) accelerates GPU storage access in on-premis"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.612Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2262,8 +2268,8 @@
           "Memory-Enforced GPU Sharing in Kubernetes with NVIDIA CUDA 13.4\nMany AI workloads need only a fraction of a GP"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.612Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2298,8 +2304,8 @@
           "ks Ultrafast Interactivity at Long Context on NVIDIA Vera Rubin\nNVIDIA Groq 3 LPX is the interactive AI inference accelerator for the NVIDIA Vera"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.315Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2334,8 +2340,8 @@
           "Design Proteins with RFD4-Proteina Using Reward-Guided Inference-Time Search\nProtein design is a search proble"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.616Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2367,8 +2373,8 @@
           "allel programming model for NVIDIA GPUs that automatically leverages advanced hardware capabilities to..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.624Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2399,8 +2405,8 @@
           "v1.0: Open, stable, and verifiable GPU cluster configuration\nGPU-accelerated Kubernetes clusters depend on compatible versions across dozens of c"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.693Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2436,8 +2442,8 @@
           "igital Twin with an Agent-Assisted Workflow\nBuilding an AI factory digital twin requires developers to bring site plans, equipment assets, and en"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.622Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2473,8 +2479,8 @@
           "Build a Validated Kubernetes Runtime for NVIDIA Dynamo\nTeams building AI applications need a repeatable path from a model configuration to "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.611Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2510,8 +2516,8 @@
           "e-based system for safe, idiomatic GPU kernel authoring in the Rust programming language. Extending the Rust ownership model to..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.873Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2546,8 +2552,8 @@
           "Validate GPU Cluster Readiness Before AI Workloads Land\nA GPU cluster can pass every health check and still fail to run"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.820Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2582,8 +2588,8 @@
           "How to Size GPUs for AI Inference and TCO Without Overspending\nThe surge in AI adoption is transforming everything from ch"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.250Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2619,8 +2625,8 @@
           "Simplifying Model Serving Across Multiple GPUs with NVIDIA TensorRT Multi-Device Integration in NVIDIA Dynamo-Triton\nThe compute"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.861Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2651,8 +2657,8 @@
           "-ray light sources, and other high-throughput instruments generate image data faster than CPU-bound pipelines can..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.689Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2688,8 +2694,8 @@
           "High-Throughput Structure Prediction with BioNeMo Inference Runtime\nBiomolecular structure prediction is now often "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.926Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2725,8 +2731,8 @@
           "h an AI Agent and NVIDIA Isaac ROS\nGPU acceleration can speed up compute-intensive robotics workloads, but a fast CUDA kernel alone does not guar"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.859Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2761,8 +2767,8 @@
           "Tracing Agent Harness Behavior with NVIDIA NeMo Relay\nAn agent can finish a task and still take an inefficient path. A"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.766Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2796,8 +2802,8 @@
           "NVIDIA Open Agent Safety Platform: A Reference for Continuous In-Silicon Agent Monitoring\nTo understand where agentic AI s"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.811Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2833,8 +2839,8 @@
           "ion to Accelerate Multimodal Model Serving\nEncode-prefill-decode (EPD) disaggregation is an inference optimization technique for multimodal model"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.974Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2870,8 +2876,8 @@
           "s to span hundreds of thousands of GPUs,..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.293Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2906,8 +2912,8 @@
           "NVIDIA Sentry: Secure AI Agents at Runtime\nAn AI agent can complete its assignment and still cross a security boundary. Recent incidents show tha"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.616Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2936,8 +2942,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.865Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2972,8 +2978,8 @@
           "Unlocking Tensor Core Performance for Machine Learning Interatomic Potentials\nAtomistic simulations help researchers understand how "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.612Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3004,8 +3010,8 @@
           "How DOCA GPUNetIO Unifies GPU-Initiated Networking Across the NVIDIA Software Stack\nGPU applications increasingly need "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.692Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3036,8 +3042,8 @@
           "ain-of-Thought Reasoning\nRadiology AI has made remarkable strides in detecting abnormalities across chest X-rays, pathology slides, and 2D scans."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.818Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3073,8 +3079,8 @@
           "n massive-scale AI training, every GPU in the cluster..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.917Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3111,8 +3117,8 @@
           "Scale Agentic Coding Workflows with Meta’s Muse Spark Open on NVIDIA GB300 NVL72\nMeta launches Muse Spark Open, a coding-optimized "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.627Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3144,8 +3150,8 @@
           "GPU-Accelerated Clustering for Financial Instruments at Scale\nUse AdaptGrow, a GPU-accelerated matrix factoriz"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.318Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3180,8 +3186,8 @@
           "operations in the world, combining GPUs, CPUs, switches, DPUs, and SuperNICs alongside schedulers, orchestration..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.652Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3218,8 +3224,8 @@
           "isolation, reversible changes, and GPU-backed validation shaped an open source project designed around coding agents NVIDIA TensorRT..."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.767Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3254,8 +3260,8 @@
           "Deploy an Open Model from Checkpoint to Inference in Two Commands with NVIDIA TensorRT Model Connect\nOpen AI m"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.261Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3286,8 +3292,8 @@
           "vs. MoE Models: Active Parameters, Throughput, and When to Choose Each\nHow can a 30B-parameter model activate only 3B parameters per token, and s"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.912Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.210Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3316,8 +3322,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.642Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3352,8 +3358,8 @@
           "Restore LLM Inference Capacity in Seconds with Shadow Engine Recovery in NVIDIA Dynamo\nWhen an LLM engine process fail"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.272Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3389,8 +3395,8 @@
           "Optimizing Agent Reliability and Tool Calling Efficiency for Chip Design Using NVIDIA NeMo Gym\nAI agents offer remarkable productivity gains in"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.628Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3422,8 +3428,8 @@
           "CUDA Toolkit 13.4 Adds Windows on Arm Support and Greater Control over Shared GPUs\nEvery NVIDIA CUDA Toolkit releas"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.977Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3457,8 +3463,8 @@
           "NVIDIA Run:ai Is Now Open Source as Part of NVIDIA DSX AI Factory Platform\nNVIDIA is making the full NVIDIA Run:ai platfo"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.641Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3492,8 +3498,8 @@
           "iment Robot Navigation Policy with AI Agents\nNavigation enables a robot to turn perception and motion into purposeful autonomy. Unlike locomotion"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:12.266Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [

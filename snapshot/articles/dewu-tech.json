@@ -27,8 +27,8 @@
           " 个痛点明确、规范相对清晰的场景做试点；将有效的 Prompt 设计、上下文组织方式、测试用例模板等经验在团队内分享，形成可复用知识库；从「人做」为主转向「人定规则与口径、模型执行环节」的协作模式，让大模型成为数仓同学的日常助手。未来已来。"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:57:04.344Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -64,8 +64,8 @@
           "基于 Cursor Agent 的流水线 AI CR 实践\n在实际迭代开发中，不同需求的代码规模差异很大，有些需求涉及上千行代码，有些则只有一两行。且对于前端的代码验收，主要侧重在界面功能，通过功能验收，没法确保每一行代码都测试到的，以及功能的代码逻辑是"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:57:04.345Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -100,8 +100,8 @@
           "Spec Coding（规格驱动编码） 深度实战。通过 2,754 次工具调用，我们不仅完成了从 0 到 1 的前端项目搭建，更在“约束+示范+视觉”的三层规范体系下，摸清了 AI 编程的真实能力边界。本文将复盘这场实战，拆解如何用结构化工作流消除 AI 的不确定性，重构开发者的核心竞争力"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:57:04.346Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -132,8 +132,8 @@
           "测到工程化准出｜得物技术\n搜索 C++ 引擎回归能力建设，并不是一次“工具升级”，而是一场工程化治理：把经验变成流程、把自觉变成约束、把风险前移到上线之前，最终目标只有一个：让搜索引擎的每一次升级，都更可控、更可信。"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:57:04.346Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -168,8 +168,8 @@
           "从IDE到Terminal：适合后端宝宝体质的Claude Code工作流｜得物技术\n新的开发范式需要搭建新的开发环境和匹配自己开发习惯的工作流，这就像刚学编程那会，需要挑一个自己喜欢的 IDE、熟悉 IDE 快捷键和优化 IDE 设置一样。过程中间肯定有阵痛，Java 开发者们回忆一下"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:57:04.346Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -205,8 +205,8 @@
           "aude Code + OpenSpec 正在加速 AICoding 落地：从模型博弈到工程化的范式转移｜得物技术\n在软件开发的历史进程中，每一次效率的飞跃都伴随着抽象层次的提升。从汇编语言到高级语言，从手动内存管理到垃圾回收，开发者始终在寻求降低认知负荷的方法。进入 2026 年，生成式"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:57:04.345Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -240,8 +240,8 @@
           "志诊断 Skill：用 AI + MCP 一键解决BUG\nAI 时代，工程师的核心竞争力不只是「能写代码」，更是「能把自己的经验和流程转化成可复用的 AI 能力」。/log-diagnosis 是一次小小的尝试，但背后的思路，值得在更多场景里延伸。"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:57:04.344Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -271,8 +271,8 @@
           "Redis 自动化运维最佳实践\n随着业务规模与流量的持续高速增长，自建 Redis 集群面临着更高地性能与稳定性要求，对平台化、自动化运维能力也提出了新的挑战。为进一步提升资源利用效率、保障服务稳定运行，并更好地支撑业务快速发展，我们对 Redi"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:57:04.345Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -302,8 +302,8 @@
           "大禹平台：流批一体离线Dump平台的设计与应用\n大禹平台是一个离线 Dump 平台。在不同的场景都有自己的 Dump 流程，我们这里的 Dump 特指在搜索、推荐、广告（后续简称 “搜推广”）的场景中，将异构数据源加工处理后给到索引平台做索引的流程。"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:57:04.345Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -340,8 +340,8 @@
           "得物App真实数仓建设与研发实践，系统阐述了基于Galaxy MCP的基础设施集成方案，并对智能视觉埋点、AI OneData建模、智能周报生成、策略孵化中心等典型场景的架构设计与运行逻辑进行深入分析。最后，针对大模型应用中存在的幻觉问题与合规风险，本文提出一套系统性的治理与管控机制。"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:57:04.345Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "published",
       "locations": [

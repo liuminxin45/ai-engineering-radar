@@ -18,8 +18,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.392Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -50,8 +50,8 @@
           " now, decrypt later attacks. Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.387Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -82,8 +82,8 @@
           " up to 8x faster and uses 70% less memory."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.389Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -120,8 +120,8 @@
           "ive about optimization\nWhen our AI code reviewer's cost per run doubled, we dug into the token usage to find out why. Learn how we used prompt ca"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.390Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -150,8 +150,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.388Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -184,8 +184,8 @@
           "Origin Range Requests: Serving large files without range-request tuning\nNaive byte-range caching can waste gigabytes of origin bandwi"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.387Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -215,8 +215,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.386Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -245,8 +245,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.391Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -275,8 +275,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.388Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -305,8 +305,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.386Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -336,8 +336,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.386Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -366,8 +366,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.393Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -399,8 +399,8 @@
           "d\nIntroducing Void: an open-source SDK, CLI, and self-hosted platform for building full-stack Vite apps and deploying them to Cloudflare."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.394Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -432,8 +432,8 @@
           "Localizing compliance at scale: achieving South Korea’s ISMS certification\nCloudflare has achieved South Korea's ISMS certification fol"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.388Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -464,8 +464,8 @@
           "cates use weak keys, Cloudflare is deploying mitigations and releasing client updates. We explain the impact, our response, and what customers an"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.389Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -497,8 +497,8 @@
           "troducing a system to continuously evaluate whether Verified bots honor site preferences, like robots.txt and HTTP 429s, ensuring they remain acc"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.392Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -534,8 +534,8 @@
           "s now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.389Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -560,7 +560,10 @@
       "updatedAt": "2026-11-01T08:48:04.893Z",
       "classification": {
         "status": "accepted",
-        "topics": [],
+        "topics": [
+          "ai-application"
+        ],
+        "primaryTopic": "ai-application",
         "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
         "evidence": [
           "he exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang\nA configuration mismatch in GLM 5.3 on Workers AI triggered an SGLan",
@@ -568,8 +571,8 @@
           "Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang\nA configuration mismatch in GL"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.387Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -600,8 +603,8 @@
           "using eMudhra certificates. Here’s how we quickly patched Cloudflare, what evidence we can see of attempted exploitation, and how much of the res"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.386Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -631,8 +634,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:07.387Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [

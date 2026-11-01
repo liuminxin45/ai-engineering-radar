@@ -25,8 +25,8 @@
           "dvancing Generative Recommendation Inference: our collaboration with NVIDIA on TensorRT LLM\nAt Spotify, every surface and interaction is personal"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:52.170Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -56,8 +56,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:52.170Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -94,8 +94,8 @@
           "rtal by Spotify cut my Claude Code token usage by 90%\nMost of what an AI coding agent does for me isn't thinking. It's I/O. The post Portal by Sp"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:52.171Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -127,8 +127,8 @@
           " Spotify Is Not Using Bayesian A/B Testing\nClearing the confusion about what Bayesian A/B testing is. The post Why Spotify Is Not Using Bayesian "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:52.171Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -160,8 +160,8 @@
           "AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity\nQuality and reliab"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:52.171Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [

@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "jd",
-    "lastCheckedAt": "2026-11-01T09:07:41.916Z",
-    "nextRunAt": "2026-11-02T09:07:41.916Z",
+    "lastCheckedAt": "2026-11-01T09:14:13.852Z",
+    "nextRunAt": "2026-11-02T09:14:13.852Z",
     "consecutiveFailures": 0,
     "status": "pending",
     "error": "已检测到开发者社区文章目录，但页面含社区投稿；需进一步确定京东官方作者稳定 ID，不能整站归属京东。",

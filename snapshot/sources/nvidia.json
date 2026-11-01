@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "nvidia",
-    "lastCheckedAt": "2026-11-01T09:07:59.549Z",
-    "lastSuccessAt": "2026-11-01T09:07:59.549Z",
-    "nextRunAt": "2026-11-02T09:07:59.549Z",
+    "lastCheckedAt": "2026-11-01T09:14:33.088Z",
+    "lastSuccessAt": "2026-11-01T09:14:33.088Z",
+    "nextRunAt": "2026-11-02T09:14:33.088Z",
     "consecutiveFailures": 0,
     "etag": "\"497d7d2e305ced223a31a5847545c8fc\"",
     "lastModified": "Fri, 30 Oct 2026 22:52:36 GMT",

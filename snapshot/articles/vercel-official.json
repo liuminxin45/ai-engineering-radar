@@ -25,8 +25,8 @@
           "rcel’s open-source terminal coding agent, is now a built-in provider in T3 Code. Add it from Settings to use it on web, desktop, and mobile."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.260Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -58,8 +58,8 @@
           "through Vercel AI Gateway with one API key, Zero Data Retention, spend tracking, and request traces."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.282Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -91,8 +91,8 @@
           "by default for fetch, the Temporal API, and V8 version 14.6."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.254Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -124,8 +124,8 @@
           "through Vercel AI Gateway with one API key: no provider account, spend tracking, and traces on every request."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.345Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -155,8 +155,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.286Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -188,8 +188,8 @@
           "through Vercel AI Gateway with one API key, spend tracking, and request traces."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.253Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -222,8 +222,8 @@
           "ro deployments with restored build cache."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.273Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -255,8 +255,8 @@
           "providers, models, data retention, token budgets, integrations, and policies, managed through your existing IdP."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.330Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -288,8 +288,8 @@
           "ugh expanded OIDC support, OIDC UI tooling, and Marketplace authentication requirements."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.284Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -325,8 +325,8 @@
           "s, and how customer requests reach production in as little as two hours."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.397Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -362,8 +362,8 @@
           "group requests into sessions, with cache hit rate, cost, turns, and the coding agent behind each conversation."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.317Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -398,8 +398,8 @@
           "d executives across five cities to build the future of Agentic Infastructure."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.328Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -428,8 +428,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.283Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -461,8 +461,8 @@
           " 27 on Vercel AI Gateway, with one API key, usage tracking, and shared budgets."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.287Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -494,8 +494,8 @@
           "now call private services in their deployment through service bindings, with Vercel handling routing, authentication, and TLS."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.252Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -532,8 +532,8 @@
           "Box Mount now runs in Vercel Sandbox\nUse Box Mount to sync Box files with Vercel Sandbox so agents can read and write them through the file"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.256Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -565,8 +565,8 @@
           "time on Vercel AI Gateway with one API key, spend tracking, and request traces"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.326Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -595,8 +595,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.322Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -631,8 +631,8 @@
           "AI traffic insights now available in Vercel Observability\nAI Traffic insights in Vercel Observability allow yo"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.261Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -664,8 +664,8 @@
           "hrough Vercel AI Gateway, with one API key, unified billing, and request traces"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.384Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -697,8 +697,8 @@
           "through Vercel AI Gateway with one API key, image input, spend tracking, and traces on every request."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.318Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -729,8 +729,8 @@
           "orepo no longer count against your deployment rate limits, giving teams more real deployments from the same limits."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.308Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -759,8 +759,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.252Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -798,8 +798,8 @@
           "Run Paseo agents on Vercel Sandbox\nRun Codex, Claude Code, fx, OpenCode, and Pi in Vercel Sandbox from Paseo, with snapshot recovery and "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.258Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -834,8 +834,8 @@
           "ion in Vercel Connect, eve, and AI SDK."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.353Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -870,8 +870,8 @@
           " Plugin in OpenCode 2 to give your agent Vercel skills, specialist agents, slash commands, and the Vercel MCP server."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.261Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -902,8 +902,8 @@
           "now generally available for Vercel Sandbox on all plans. Mount persistent storage, keep files across runs, and fork Drives for parallel workers."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.347Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -935,8 +935,8 @@
           "Deploy without an account using Vercel CLI\nDeploy apps to Vercel without an account using Vercel CLI. Share pr"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.285Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -970,8 +970,8 @@
           "Virtual models now available on AI Gateway\nVercel AI Gateway now supports virtual models, custom model slugs that store a model configuration "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.258Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1000,8 +1000,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.276Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1032,8 +1032,8 @@
           "y Available, containers for custom runtimes, and Vercel Daemons in Public Beta for background workers."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.334Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1065,8 +1065,8 @@
           "rough Vercel AI Gateway, using one API key with spend tracking and request traces"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.382Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1103,8 +1103,8 @@
           "Vercel Sandbox commands now support stdin\nVercel Sandbox commands now accept opt-in stdin, so CLIs that read from std"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.268Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1136,8 +1136,8 @@
           "through Vercel AI Gateway with one API key to classify text, route requests, and track usage and spend"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.399Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1173,8 +1173,8 @@
           "How Vercel Agent accesses production safely\nLearn how Vercel Agent investigates production issues, requests approval for changes, and us"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.277Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1206,8 +1206,8 @@
           "Data Cache is moving to Runtime Cache\nData Cache is exiting beta and merging into Runtime Cache, which brings faste"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.252Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1232,13 +1232,13 @@
       "discoveredAt": "2026-11-01T08:48:14.971Z",
       "updatedAt": "2026-11-01T08:48:14.971Z",
       "classification": {
-        "status": "review",
+        "status": "rejected",
         "topics": [],
-        "reason": "发现相似标题，但缺少确定的跨平台原文关系，等待人工确认。",
+        "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.281Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1276,8 +1276,8 @@
           "through Vercel AI Gateway with one API key: no provider account, spend tracking, request traces, and coding agent support."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.272Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1306,8 +1306,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.349Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1332,7 +1332,10 @@
       "updatedAt": "2026-11-01T08:48:14.971Z",
       "classification": {
         "status": "accepted",
-        "topics": [],
+        "topics": [
+          "ai-application"
+        ],
+        "primaryTopic": "ai-application",
         "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
         "evidence": [
           " and 23% of spend\nThe October 2026 AI Gateway production index covering data from September 2026: Open-weight models process more than seven in t",
@@ -1340,8 +1343,8 @@
           "Open weight takes 71.5% of tokens and 23% of spend\nThe October 2026 AI Gateway production index covering data from September 2026: Open-w"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.329Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1372,8 +1375,8 @@
           "Introducing Virtual Models on AI Gateway\nIntroducing virtual models on AI Gateway. Virtual models are an abstraction of the model string and"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.256Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1408,8 +1411,8 @@
           "Vercel Connect adds managed Stripe API keys\nVercel Connect can now create a separate restricted Stripe API key for each agent or task. Stripe is "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.279Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1441,8 +1444,8 @@
           "through Vercel AI Gateway with one API key, no provider account, automatic fallbacks, spend tracking, and request traces."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.342Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1471,8 +1474,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.267Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1501,8 +1504,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.360Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1531,8 +1534,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.271Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1563,8 +1566,8 @@
           "Simplifying runtime caching on Vercel\nSince launching last year, we continued to invest in Runtime Cache, and made it fast"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.252Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1596,8 +1599,8 @@
           "through Vercel AI Gateway with one API key: no provider account, spend tracking, and traces on every request."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.388Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1628,8 +1631,8 @@
           "Introducing Token Pass\nVercel Token Pass is now in early access for Pro teams. For $30 per month, your team gets $80 in mo"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.337Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1658,8 +1661,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.344Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1690,8 +1693,8 @@
           "Deployment Storage billing begins for existing Pro teams\nDeployment Storage and Functions Storage billing begi"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.395Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1721,8 +1724,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.254Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1756,8 +1759,8 @@
           "Agents can now buy domains with the Vercel CLI\nYour agents can now use the Vercel CLI to search for and purcha"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.391Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1789,8 +1792,8 @@
           "through Vercel AI Gateway with one API key, shared budgets, and usage tracking."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.324Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1823,8 +1826,8 @@
           "ions using familiar frameworks and tools, with automatic scaling on Fluid compute."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.335Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1859,8 +1862,8 @@
           "h product information and shopping tools designed for agents."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.320Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1892,8 +1895,8 @@
           "tiplayer apps, chat streaming, and AI Gateway's realtime models, is now GA."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.309Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1925,8 +1928,8 @@
           "through Vercel AI Gateway with one API key, no provider account, spend tracking, and request traces."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.389Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1958,8 +1961,8 @@
           "through Vercel AI Gateway with one API key, no provider account, spend tracking, and request traces."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.323Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1995,8 +1998,8 @@
           "Deployments now show build cache size\nDeployments on Vercel use an internal build cache to make deployments faster. You and your agents c"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.278Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2028,8 +2031,8 @@
           "eek V4.1 Flash is now available in Token Pass\nDeepSeek V4.1 Flash joins Kimi K3 and GLM 5.3 in Token Pass. Pro teams get $80 in monthly AI Gatewa"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.310Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2065,8 +2068,8 @@
           "el AI Gateway\nStrix autonomous pen testing framework now supports Vercel AI Gateway as the default inference provider"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.253Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2098,8 +2101,8 @@
           " to get your project ready for the build. No repository or build configuration changes needed."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.386Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2129,8 +2132,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.253Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2162,8 +2165,8 @@
           "Findings from the $1M Vercel Sandbox challenge\nVercel’s $1M Sandbox challenge drew 1,285 reports, uncovered a Linux kernel zero day, and re"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.358Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2192,8 +2195,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.257Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2224,8 +2227,8 @@
           "ew Pro teams now default to 30-day deployment retention\nNew Pro teams use 30-day deployment retention by default. Choose longer history when need"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.393Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2257,8 +2260,8 @@
           "through Vercel AI Gateway with one API key, unified spend tracking, and request logs."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.356Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2294,8 +2297,8 @@
           "Agents can now enable Web Analytics and Observability Plus with Vercel CLI\nVercel CLI now lets agents enable W"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.259Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2325,8 +2328,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.312Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2355,8 +2358,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.339Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2395,8 +2398,8 @@
           "cale AI’s AgentEnv evals on Vercel Sandbox\nRun evaluations with Scale AI’s AgentEnv using separate Vercel sandboxes for the environment and agent"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.266Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2430,8 +2433,8 @@
           "Vercel Agent sessions now cost 67% less\nVercel Agent sessions in the dashboard and Slack now cost 67% less on average"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.263Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2463,8 +2466,8 @@
           "system and shell operations in the sandbox, responding faster and unlocking new built-in capabilities."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.254Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2499,8 +2502,8 @@
           "ongside text using the standard AI SDK message format."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.264Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2532,8 +2535,8 @@
           "through Vercel AI Gateway with one API key, no provider account, spend tracking, and request traces."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.315Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2569,8 +2572,8 @@
           "tigravity agent guidance on Vercel APIs and skills for products such as AI SDK, Vercel Functions, and Workflow."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.255Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2602,8 +2605,8 @@
           "through Vercel AI Gateway with one API key, no provider account, spend tracking, and request traces."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.259Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2638,8 +2641,8 @@
           "runs its entire backend on Vercel, serving 50 million requests a month with Fluid compute, AI Gateway, and the Workflow SDK."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.280Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2668,8 +2671,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.403Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2701,8 +2704,8 @@
           "through Vercel AI Gateway with one API key, unified spend tracking, and request logs."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.340Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2733,8 +2736,8 @@
           "he flag datafile bundled with your deployment, and usage reporting no longer extends function duration."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.253Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2766,8 +2769,8 @@
           "Deploy with Vercel Drop without an account\nDeploy static sites with Vercel Drop without an account. Get a live"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.314Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2799,8 +2802,8 @@
           "through Vercel AI Gateway with one API key: no provider account, automatic fallbacks, spend tracking, and traces on every request."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.316Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2832,8 +2835,8 @@
           "Control AI crawlers and assistants separately in Vercel Firewall\nIndependently block AI Crawlers and AI Assistants bot"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.254Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2865,8 +2868,8 @@
           "through Vercel AI Gateway with one API key: no provider account, spend tracking, and traces on every request."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.362Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2895,8 +2898,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.253Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2926,8 +2929,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.256Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2953,7 +2956,10 @@
       "updatedAt": "2026-11-01T08:48:14.971Z",
       "classification": {
         "status": "review",
-        "topics": [],
+        "topics": [
+          "ai-application"
+        ],
+        "primaryTopic": "ai-application",
         "reason": "发现相似标题，但缺少确定的跨平台原文关系，等待人工确认。",
         "evidence": [
           "ons and use native Python SDKs for AI, storage, and durable workflows.",
@@ -2961,8 +2967,8 @@
           "applications and use native Python SDKs for AI, storage, and durable workflows."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.354Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2999,8 +3005,8 @@
           ". Your apps and agents can work in tools like Slack on behalf of your users, with access managed by your identity provider.Supports XAA"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.351Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3036,8 +3042,8 @@
           "urable-harness makes Pi, OpenCode, Claude Code, and Codex durable on Vercel, Postgres, or your laptop, so agent sessions survive crashes and time"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.313Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3062,7 +3068,10 @@
       "updatedAt": "2026-11-01T08:48:14.971Z",
       "classification": {
         "status": "accepted",
-        "topics": [],
+        "topics": [
+          "ai-application"
+        ],
+        "primaryTopic": "ai-application",
         "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
         "evidence": [
           "Liquid AI's d1 is available on AI Gateway\nEvaluate typed questions with Liquid d1 on Vercel AI Gateway using the AI S",
@@ -3070,8 +3079,8 @@
           " on Vercel AI Gateway using the AI SDK, HTTP API, or TypeSafe-compatible API."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.401Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3107,8 +3116,8 @@
           "now generally available for Vercel Sandbox. Persist agent files across runs and reuse saved state across execution environments."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.332Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3142,8 +3151,8 @@
           "Vercel Agent can now validate alerts before paging\nVercel Agent can triage Vercel Alerts before notifying your paging"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.257Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3179,8 +3188,8 @@
           "s, music, and sound effects on one API key, 50% off for two weeks."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.262Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3210,8 +3219,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.265Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3240,8 +3249,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.255Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3274,8 +3283,8 @@
           "eploy a container on the Container runtime when no other framework is detected."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.263Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3307,8 +3316,8 @@
           "through Vercel AI Gateway with one API key, spend tracking, and request traces."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.255Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3343,8 +3352,8 @@
           "P now includes the submit_feedback tool to sends bugs, friction reports, and feature requests directly to the Vercel team,"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:50:03.276Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [

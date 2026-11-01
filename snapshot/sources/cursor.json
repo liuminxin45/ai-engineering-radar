@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "cursor",
-    "lastCheckedAt": "2026-11-01T09:07:50.257Z",
-    "lastSuccessAt": "2026-11-01T09:07:50.257Z",
-    "nextRunAt": "2026-11-02T09:07:50.257Z",
+    "lastCheckedAt": "2026-11-01T09:14:22.967Z",
+    "lastSuccessAt": "2026-11-01T09:14:22.967Z",
+    "nextRunAt": "2026-11-02T09:14:22.967Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 19,

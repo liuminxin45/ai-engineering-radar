@@ -26,8 +26,8 @@
           ", updated guidance, and compatible tool configurations […] The post Enabling Consistent AI-Assisted Engineering with GitHub Copilot Plugins appea"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:48.264Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -62,8 +62,8 @@
           "What is Agent Experience (AX)?\nYour agent says it's done, and the code compiles, but did it pick your technology? Did "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:48.264Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -96,8 +96,8 @@
           "ure canvases with Microsoft Canvas Toolkit, from a read-only starter to a working app you can inspect, test, and adapt. The post Build Azure canv"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:48.263Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -129,8 +129,8 @@
           "sions from GitHub Actions or Azure Pipelines without storing a long-lived personal access token. The post Publish Visual Studio Marketplace exten"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:48.260Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -167,8 +167,8 @@
           "t reads a single instruction. Eval tools need a fresh folder for every run, and the easiest way to get one is a temp directory with a random name"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:48.260Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -200,8 +200,8 @@
           "PostgreSQL Like A Pro: Build, query, and troubleshoot without leaving VS Code\nBuild, query, and troubleshoot without leaving VS Code."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:48.261Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -238,8 +238,8 @@
           "\nHow presets, extensions, bundles, workflows, and governed catalogs make Spec-Driven Development adaptable at scale This article continues Spec-D"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:48.263Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -275,8 +275,8 @@
           "Build with Azure Canvases: a shared workspace for agents\nSee how Azure Canvases bring plans, code, previews, a"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:48.264Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -312,8 +312,8 @@
           " git remote replace GitHub in your agent eval?\nWe swapped GitHub for a local git remote in our agent evals. Rebasing and pushing on request were "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:48.262Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -350,8 +350,8 @@
           "book\nAI coding agents now pick the SDK, the version, and the pattern for your developers. The AX Practitioner Playbook is our method for finding "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:48.262Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [

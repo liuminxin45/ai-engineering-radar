@@ -25,8 +25,8 @@
           "Using the GitHub Copilot SDK for Java\nEnterprise Java developers have a new superpower—drive GitHub Copilot from idiomatic Java code wi"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.578Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -58,8 +58,8 @@
           "Improving site performance by shipping more CSS\nHow we fully migrated github.com away from CSS-in-JS. The post Improving site"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.577Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -95,8 +95,8 @@
           "How we make AI coding more cost efficient without sacrificing task quality\nWhy shorter outputs can cost more, "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.578Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -133,8 +133,8 @@
           "Building Git infrastructure for agent-scale development\nWe're rebuilding GitHub's Git infrastructure while GitHub keeps run"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.577Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -166,8 +166,8 @@
           "argazers\nOur new repo star history API now provides trends without returning individual identities or requiring unbounded database work. These ar"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.577Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -197,8 +197,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.578Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -235,8 +235,8 @@
           "The bridge to agent-scale Git infrastructure\nWe moved a copy of 99.99999% of GitHub's repositories to Azure. Here's how per-reference quorum"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.577Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.208Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -271,8 +271,8 @@
           "Turn one giant AI-generated pull request to a reviewable stack\nInstead of one huge, un-reviewable pull request, teach coding "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.579Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -304,8 +304,8 @@
           "Staying Evergreen: How we automated secure access and repo hygiene in a shared org\nPut native GitHub features to work to review o"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.577Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -341,8 +341,8 @@
           "requests in the GitHub Copilot app\nHow we rebuilt the diff surface in the GitHub Copilot app to open a million-line pull request with hundreds of"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.578Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.209Z"
       },
       "publicationStatus": "draft",
       "locations": [

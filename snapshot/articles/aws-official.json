@@ -22,8 +22,8 @@
           "r and an eight-phase, parity-first workflow that treats the original PHP application as the specification and verifies the Java port with a parit"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.368Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -53,8 +53,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.371Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -92,8 +92,8 @@
           "Build agentic retrieval on a Managed Amazon Bedrock Knowledge Base with CDK\nBuild enterprise agentic retrieval on a Managed "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.375Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -125,8 +125,8 @@
           "quest observable, enforce budgets, optimize platform defaults, and operate a review cadence. Written for FinOps and platform engineering teams."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.351Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -164,8 +164,8 @@
           "rts model that pairs reasoning and tool use with multimodal understanding. This post explores its architecture and use cases, then shows how to d"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.369Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -200,8 +200,8 @@
           ", Carsa, and Propulse Lab on using agentic AI and Amazon Quick to turn data into faster decisions, higher satisfaction, and scalable growth."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.367Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -237,8 +237,8 @@
           "How MoEngage turned over 400 APIs into agent tools with AgentCore Gateway\nMoEngage turned roughly 400 private REST APIs across 7 AWS Region"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.368Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -271,8 +271,8 @@
           "fecycle at the edge with SageMaker SDK v3\nFleet-wide computer vision needs a model per camera, not one model for the whole fleet. This post prese"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.373Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -307,8 +307,8 @@
           "ing-exception process with a multi-agent solution built on Amazon Bedrock. Six months after launch, the company cut active exceptions by 75%, imp"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.366Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -345,8 +345,8 @@
           "Fix evaluation bias to unlock better models on Amazon Bedrock\nProperty Finder found that 96.8% of their vision-AI "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.372Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -383,8 +383,8 @@
           ".5B with PyTorch FSDP across eight GPUs on two EFA-enabled g6.12xlarge instances on Amazon EKS, using the container exactly as published."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.370Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -421,8 +421,8 @@
           "ck in AWS GovCloud (US-West) using API-mode sign-in, a managed device policy, a named AWS profile, and network restrictions, so a security team c"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.366Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -454,8 +454,8 @@
           "g capability you can use to divide GPU capacity into quota shares per team or project, automatically lend idle capacity across shares, and use pr"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.368Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -490,8 +490,8 @@
           "ccelerating software delivery with agentic QA automation using Amazon Nova Act – Part 3\nAs QA test automation spreads across an organization, org"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.370Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -528,8 +528,8 @@
           "Building intent-driven UI testing with Amazon Nova Act\nEpsilon's Agentic Platform team delivers UI testing as a managed, multi-tenant se"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.367Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -565,8 +565,8 @@
           "kes a step, it re-reads its entire context before acting. Here is how prompt caching for OpenAI models on Amazon Bedrock lets your agent remember"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.374Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -606,8 +606,8 @@
           "ream cells, separate inference and tool gateways, and a CI/CD evaluation pipeline that gates each agent before production."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.369Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -645,8 +645,8 @@
           "them with Amazon Bedrock AgentCore runtime\nAmazon Bedrock AgentCore Session endpoints give each runtime session an authenticated URL that forward"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.366Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -679,8 +679,8 @@
           "es to your job definition. See the benchmarks and how to adopt it."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.371Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -706,7 +706,10 @@
       "updatedAt": "2026-11-01T08:48:07.394Z",
       "classification": {
         "status": "accepted",
-        "topics": [],
+        "topics": [
+          "ai-application"
+        ],
+        "primaryTopic": "ai-application",
         "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
         "evidence": [
           " how Exowatt used Amazon SageMaker AI serverless model customization to build a repeatable AI pipeline that produces task-specific fine-tuned mod",
@@ -714,8 +717,8 @@
           "omization to build a repeatable AI pipeline that produces task-specific fine-tuned models for two deployment targets, edge and cloud, achieving h"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:11.373Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.211Z"
       },
       "publicationStatus": "published",
       "locations": [

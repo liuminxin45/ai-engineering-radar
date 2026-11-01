@@ -25,8 +25,8 @@
           "wareness in Opus 4.6 on BrowseComp\nEvaluating Claude Opus 4.6 on BrowseComp, we found cases where the model recognized the test and decrypted its"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.428Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -63,8 +63,8 @@
           "Infrastructure noise in agentic coding evals\nAgentic coding benchmarks are treated as precise measures of mode"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.429Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -100,8 +100,8 @@
           "Designing AI resistant technical evaluations\nWhat we learned from three iterations of a performance engineering take-home that Claude keeps bea"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.427Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -135,8 +135,8 @@
           "Desktop Extensions: One-click MCP installs\nDesktop Extensions are a new packaging format that makes installing local MCP servers in Claude D"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.434Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -172,8 +172,8 @@
           "ng evals for AI agents\nGuidance on designing more rigorous, useful evals for AI agents across a range of architectures and real-world deployment "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.429Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -204,8 +204,8 @@
           "lopment bottleneck. Here, we share how we migrated to an in-house version control system in five months."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.425Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -242,8 +242,8 @@
           "Writing effective tools for AI agents\nOur most effective techniques for writing, evaluating, and refining tools for AI agents, i"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.433Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -278,8 +278,8 @@
           "Harness design for long-running apps\nAnthropic is an AI safety and research company that's working to build reliable, "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.426Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -314,8 +314,8 @@
           "Scaling Managed Agents with stable interfaces\nHarnesses encode assumptions that go stale as models improve. Se"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.428Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -350,8 +350,8 @@
           "Introducing advanced tool use for Claude\nClaude can now discover, learn, and execute tools dynamically to enable agents that take a"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.430Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -387,8 +387,8 @@
           "How we contain Claude across products\nAs agents grow more capable, so does their potential blast radius. Here'"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.427Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -422,8 +422,8 @@
           "Equipping agents with Agent Skills\nIntroducing Agent Skills: organized folders of instructions, scripts, and resources t"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.432Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -458,8 +458,8 @@
           "Effective context engineering for AI agents\nIn this post, we explore strategies for effectively curating and managing th"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.432Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -494,8 +494,8 @@
           "How we built Claude Code auto mode\nClaude Code users approve 93% of permission prompts. See how auto mode uses"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.428Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -530,8 +530,8 @@
           "How we built our multi-agent research system\nOn the the engineering challenges and lessons learned from buildi"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.435Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -566,8 +566,8 @@
           "Building a C compiler with parallel Claudes\nHow a team of 16 parallel Claude agents wrote a Rust-based C compi"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.428Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -603,8 +603,8 @@
           "coding agent help the Claude Agent SDK make steady progress across many context windows."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.429Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -638,8 +638,8 @@
           "An update on Claude Code quality reports\nWe traced recent reports of Claude Code quality issues to three separate changes. "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.427Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -674,8 +674,8 @@
           "Making Claude Code safer with sandboxing\nLearn how sandboxing in Claude Code uses filesystem and network isolation to protect developers, re"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.431Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -710,8 +710,8 @@
           " how code execution with the Model Context Protocol enables agents to handle more tools while using fewer tokens, reducing context overhead by up"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.431Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -745,8 +745,8 @@
           "Claude Code Best Practices\nA blog post covering tips and tricks that have proven effective for using Claude Co"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.436Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -781,8 +781,8 @@
           "n Confidential Inference, a set of tools to improve the security of our model weights and of our users' data."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.434Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -813,8 +813,8 @@
           "The \"think\" tool for complex tool use\nA blog post for developers, describing a new method for complex tool-use situations"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.436Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -845,8 +845,8 @@
           " bugs that intermittently degraded Claude's responses: what happened, why fixes took time, and what we're changing."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:51:53.433Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [

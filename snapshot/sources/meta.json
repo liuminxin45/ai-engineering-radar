@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "meta",
-    "lastCheckedAt": "2026-11-01T09:07:58.382Z",
-    "lastSuccessAt": "2026-11-01T09:07:58.382Z",
-    "nextRunAt": "2026-11-02T09:07:58.382Z",
+    "lastCheckedAt": "2026-11-01T09:14:32.404Z",
+    "lastSuccessAt": "2026-11-01T09:14:32.404Z",
+    "nextRunAt": "2026-11-02T09:14:32.404Z",
     "consecutiveFailures": 0,
     "etag": "W/\"a302a9bad86453c1c23cf949decbc5a5\"",
     "lastModified": "Thu, 29 Oct 2026 17:42:44 GMT",

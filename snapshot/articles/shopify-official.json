@@ -19,8 +19,8 @@
           "ventory reservations—and it scaled\nHow we used SKIP LOCKED, composite primary keys, and connection visibility to hit our scale targets."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.516Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -51,8 +51,8 @@
           "at frontier-model quality, and cut serving costs 96%."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.512Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -83,8 +83,8 @@
           "nds. It has changed the culture of how we build and share."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.515Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -115,8 +115,8 @@
           "Optimizing Ruby’s Memory Layout: Variable Width Allocation\nShopify is improving CRuby’s performance in Ruby 3.2 by optimizing th"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.097Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -145,8 +145,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.763Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -174,8 +174,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.105Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.212Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -203,8 +203,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.075Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -235,8 +235,8 @@
           "to Simplify Real-time Streaming at Scale\nWe walk through how we implemented an SSE server that's scalable and load-balanced to simplify and impro"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.114Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -264,8 +264,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.961Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -294,8 +294,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.765Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -330,8 +330,8 @@
           "o customer delivery—using advanced tools, infrastructure, and partnerships to solve a complex optimization challenge."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.736Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -367,8 +367,8 @@
           "tant architecture and built robust evaluation frameworks for real-world deployment."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.731Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -396,8 +396,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.110Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -427,8 +427,8 @@
           "instead of simplified signals, and building a model fast enough to serve at scale."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.520Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -457,8 +457,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.077Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -489,8 +489,8 @@
           "om GLSL visualizers, and an artist toolkit for storefronts, all in three days."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.513Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -520,8 +520,8 @@
           "SkyPilot at Shopify: Multi-cloud GPUs without the pain\nGPUs are annoying. Shopify uses SkyPilot to make them less so: one YAML file, multiple c"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.520Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -549,8 +549,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.517Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -581,8 +581,8 @@
           "Improving Shopify App’s Performance\n"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.770Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -616,8 +616,8 @@
           "Building world-class product search at Shopify: Where C++ excellence meets ML innovation\nLearn how we solved a"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.728Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -653,8 +653,8 @@
           "o its Machine Learning Platform to deploy and serve models for real-time prediction at scale."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.955Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -678,7 +678,10 @@
       "updatedAt": "2026-11-01T08:48:17.313Z",
       "classification": {
         "status": "accepted",
-        "topics": [],
+        "topics": [
+          "ai-application"
+        ],
+        "primaryTopic": "ai-application",
         "reason": "标题或摘要同时包含 AI 关联、工程行动和具体实现机制。",
         "evidence": [
           "e migration\nWe built Helix to help LLMs rebuild the Shopify app in Swift and Kotlin, using small checkpoints and strict quality gates to keep the",
@@ -686,8 +689,8 @@
           "Helix: The internal tool powering our Shopify app's native migration\nWe built Helix to help LLMs rebuild the Shopify app in Swift "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.511Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -718,8 +721,8 @@
           " experiments aimed at reducing the latency impact of the Ruby garbage collector (GC) in Shopify's monolith. In this article, Jean talks about the"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.945Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -749,8 +752,8 @@
           "cript integrity in Chrome & Safari\nHow we shipped ES module integrity in browsers and made commerce and the web better for everyone!"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.768Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -781,8 +784,8 @@
           "emix is now the recommended way to build Admin apps on Shopify. With Remix, you get a best-in-class developer experience while ensuring exception"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.940Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -813,8 +816,8 @@
           "ne of commerce’s hardest problems: building a unified, structured, and continuously evolving understanding of billions of product listings create"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.734Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -844,8 +847,8 @@
           "Horizontally scaling the Rails backend of Shop app with Vitess\nShop app horizontally scaled a Ruby on Rails app with Vitess"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.772Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -875,8 +878,8 @@
           "reated a seamless one-click manual testing experience (known as \"tophatting\") for mobile applications by creating a macOS app."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.766Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -910,8 +913,8 @@
           "ship our Slack-native agent River, lessons learned, and the substrate that runs beneath it. Co-authored by River."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.515Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -941,8 +944,8 @@
           "ond\nImport maps are great for both performance and developer experience, but their original limitations made them hard to use, especially at Shop"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.755Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -976,8 +979,8 @@
           "ach\nWe fine-tuned Qwen3-32B into a tool-calling agent that generates Flow automations from natural language—faster, cheaper, and more accurate th"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.516Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1006,8 +1009,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.865Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1035,8 +1038,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.513Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1066,8 +1069,8 @@
           "Building Overexposed: understanding application exposure\nOur first scanner read config files and missed what w"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.510Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1095,8 +1098,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.951Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1126,8 +1129,8 @@
           "ctions to Wasmtime's baseline (non-optimizing) compiler."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.941Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1155,8 +1158,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.949Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1184,8 +1187,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.959Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1216,8 +1219,8 @@
           "How We Built the BFCM 2023 Globe\n"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.764Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1250,8 +1253,8 @@
           "om a fix to merge\nRiver, Shopify’s AI agent in Slack, enables autonomous vulnerability remediation, not just detection."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.511Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1285,8 +1288,8 @@
           "omponents\nMCP UI extends the Model Context Protocol to enable AI agents to return fully interactive UI components. It solves the critical challen"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.732Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1321,8 +1324,8 @@
           "Gisting: Compressing LLM Agent context to ↑ throughput and ↓ cost\nGisting compresses context into a set of learned tokens, preserving its qua"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.512Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1352,8 +1355,8 @@
           "s have a lot of complicated helper tools, stubs, and fixtures. They’re not easy to understand as a beginner, let alone set up for yourself. This "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.070Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1382,8 +1385,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.767Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1414,8 +1417,8 @@
           "g on getting our Shopify Functions infrastructure ready for the public beta, we thought we’d use this opportunity to shine some light on how we b"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.066Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1451,8 +1454,8 @@
           " for agentic commerce with Catalog API\nBuilding an LLM-powered pipeline to match product listings across millions of merchants into a unified cat"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.514Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1483,8 +1486,8 @@
           "Building a Magic Mirror: AI retail experiences with Remix\nThe technical blueprint for an AI-powered mirror tha"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.518Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1514,8 +1517,8 @@
           "anning in Bets: Risk Mitigation at Scale\nWhat do you do with a finite amount of time to deal with an infinite number of things that can go wrong?"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.112Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1551,8 +1554,8 @@
           "asts the model\nWe built an agentic code review and test oracle harness that discovers vulnerabilities, proves them with real tests, and provides "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.513Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1588,8 +1591,8 @@
           ", and facilitating general-purpose GPU computing for tasks like machine learning. This has directly led to significant performance enhancements a"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.738Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1619,8 +1622,8 @@
           "Behind the build: 2025's BFCM globe in a pinball machine 🌎🕹️\nReal-time merchant sales rendered on our globe, Easter egg"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.626Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1650,8 +1653,8 @@
           "-up rewrite for React Native's New Architecture\nFlashList v2 is a complete rewrite, delivering faster load times, improved scrolling performance,"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.733Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1680,8 +1683,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.090Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1710,8 +1713,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.117Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1742,8 +1745,8 @@
           "L Notebooks, a powerful self-serve tool which enables merchants to explore their business metrics without any SQL expertise. Here’s how we used S"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.963Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1774,8 +1777,8 @@
           "Building a ShopifyQL Code Editor\n"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.931Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1805,8 +1808,8 @@
           " LSP. In this article, we’ll cover how we built the Ruby LSP, the features included within it, and how you can install it."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.957Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1835,8 +1838,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.774Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1867,8 +1870,8 @@
           "Remixing Shopify's Admin: How We Made It 30% Faster and AI-Ready\nLearn how we just made Shopify's Admin 30% faster while setting it up f"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.737Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1898,8 +1901,8 @@
           "fy's Tax Insights feature required building functionality to handle dynamically changing information"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.069Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1929,8 +1932,8 @@
           "rom Open-Sourcing FlashList\nHere's how we launched the React Native List library FlashList as an open-source project, and how you can make your n"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.126Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1961,8 +1964,8 @@
           "rating from Vanilla Redux to Redux Toolkit Improved State Management in Shopify POS\nA look at Shopify’s experience improving state management in "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.947Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -1993,8 +1996,8 @@
           "Migrating Shop app from React Native to native\nWe migrated the Shop app from React Native to Swift and Kotlin."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.511Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2025,8 +2028,8 @@
           "om the Inside Out\nShopify wanted a cache format that would not blow up when we shipped code changes. Part one of Caching Without Marshal describe"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.131Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2056,8 +2059,8 @@
           "Implementing Server-Driven UI Architecture on the Shop App\nAshwin explains why and how we implemented server-d"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.123Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2087,8 +2090,8 @@
           "entation platform built at Shopify scale\nTangle saves months of compute time, makes every experiment automatically reproducible, and allows teamm"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.625Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2123,8 +2126,8 @@
           "no. We built an automated curation pipeline using LLM judge consensus to close that gap."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.514Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2154,8 +2157,8 @@
           "Migrating our Largest Mobile App to React Native\nIn 2020, we announced that React Native is the future of mobi"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.095Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2187,8 +2190,8 @@
           "le maintaining weekly releases and serving millions of merchants. This migration involved a complex codebase with hundreds of screens and native "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.730Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2217,8 +2220,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.771Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2248,8 +2251,8 @@
           "Ruby 3.2’s YJIT is Production-Ready\nYJIT, a just-in-time (JIT) implementation on top of CRuby built at Shopify, is now production"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.079Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2283,8 +2286,8 @@
           "ShopGym: Realistic, reproducible sandboxes for shopping agents\nShopGym creates realistic online stores and generates shopping tasks based on ea"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.510Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2316,8 +2319,8 @@
           "th to MessagePack\nShopify wanted a cache format that would not blow up when we shipped code changes. Part two of Caching Without Marshal describe"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.128Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2347,8 +2350,8 @@
           "e commerce payments protocol\nLearn how we partnered with Coinbase to bring payments onchain at scale with a new smart contract protocol to meet t"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.740Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2382,8 +2385,8 @@
           "ng agents changed what it costs to build mobile apps twice. Here’s why Shopify is moving from React Native back to Swift and Kotlin."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.511Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2414,8 +2417,8 @@
           "Performance Testing At Scale—for BFCM and Beyond\nLet’s unpack our approach to BFCM Scale Testing to explore some of what i"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.072Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2446,8 +2449,8 @@
           "3 (More) Tips for Optimizing Apache Flink Applications\nEarlier this year, we shared our tips for optimizing large stateful Apach"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.108Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2478,8 +2481,8 @@
           " robots walk into a shop...\nSimGym infrastructure for synthetic customers at scale. A Shopify + NVIDIA collaboration."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.519Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2507,8 +2510,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.100Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2542,8 +2545,8 @@
           "ving Shopify's product taxonomy at scale\nLast year, over 875 million people bought items from Shopify merchants. Building on our prior Vision Lan"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.729Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2571,8 +2574,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.518Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2602,8 +2605,8 @@
           " Making WebViews Feel Native\nLearn how we tackled the main issues of traditional WebViews—performance, appearance, and integration—and how Mobile"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.761Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2632,8 +2635,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.093Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2664,8 +2667,8 @@
           "Automatically Rotating GitHub Tokens (So You Don’t Have To)\nWe encountered a problem that lives in the gap between two tried-and-true GitHub"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.102Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2695,8 +2698,8 @@
           "Lessons From Linguistics: i18n Best Practices for Front-End Developers\nHere are a few internationalization (i1"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.953Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2726,8 +2729,8 @@
           " open-source @shopify/react-native-performance library, which measures rendering times in React Native apps."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.120Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2758,8 +2761,8 @@
           "%\nWe rebuilt our mobile end-to-end testing framework with a strict API and computer vision, raising test stability drastically."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.512Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.213Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2790,8 +2793,8 @@
           "ck’s frontier model hands its most token-heavy work to open models that Shopify post-trains and serves itself. Here’s the loop we use to build th"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.510Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2825,8 +2828,8 @@
           " built Remote Dev so AI agents can build and test apps in parallel, without maxing out developers’ laptops."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.510Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2856,8 +2859,8 @@
           "ustering across millions of stores\nHow we group product listings across millions of stores using tiered matching models, graph partitioning, and "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.510Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2885,8 +2888,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.085Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2914,8 +2917,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.083Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -2950,8 +2953,8 @@
           "Introducing Roast: Structured AI workflows made easy\nOur Augmented Engineering DX team tackles developer productivity challenges like flaky tes"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.739Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2981,8 +2984,8 @@
           "ed from basic categorization to an AI-driven framework using Vision Language Models and the Shopify Product Taxonomy. It accurately classifies pr"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.760Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3010,8 +3013,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.727Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3045,8 +3048,8 @@
           "ndering jank and response delay in LLM chatbots with buffering parser and async content resolution."
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.933Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3076,8 +3079,8 @@
           "How we prepare Shopify for BFCM\nFrom March to October we simulated traffic tsunamis, injected chaos, and fixed"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.728Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3108,8 +3111,8 @@
           "ult to maintain mocks, misbehaving APIs or complex multi-step interactions and would like tests that are more reliable, faster, and easier to deb"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:46.087Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3143,8 +3146,8 @@
           "Building the Universal Commerce Protocol\nWe built UCP to power agentic commerce. Here's the architecture behin"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.560Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -3174,8 +3177,8 @@
           "ctions\nIn this article, I’ll cover how we added flexibility to our previous one-size-fits-all order routing system with the introduction of “rout"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:48:45.943Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.214Z"
       },
       "publicationStatus": "draft",
       "locations": [

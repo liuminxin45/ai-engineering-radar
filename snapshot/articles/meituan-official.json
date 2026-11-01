@@ -24,8 +24,8 @@
           "GeoRA: 为RLVR设计的LoRA——ACL 2026杰出论文解析\nACL 2026杰出论文奖（Outstanding Paper）揭晓，全球共 18 篇入选，其中包含美团履约技术团队的1篇论文。本文介绍了一种专为 RLVR 设计的低秩训练"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.082Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.205Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -62,8 +62,8 @@
           "Agent评测漫谈 —— 由浅入深讲解Agent评测\n本篇博客是一篇科普文章，由浅入深的介绍Agent评测。其中前两章系统介绍了评测是什么，以及如何建立评测体系；其中第二章是美团图灵Agent评测团队深入美团各业务团队BP总结出的"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.083Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -98,8 +98,8 @@
           "：LLM 语义表征在排序模型的探索与应用\n美团搜索团队正依托团垂融合新架构与生成式大模型新技术，全面重构本地生活搜索底座。本系列技术博客将持续介绍美团搜索 3.0 的技术探索，本文聚焦 LLM 语义表征在服务零售排序场景上的三期实践——从单点特征验证到系统性表征体系构建，再到跨场景迁移复用"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.082Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -134,8 +134,8 @@
           "MTFM：美团统一推荐基座大模型在外卖多业务场景的落地实践\n美团在 MTGR 基础上提出统一推荐基座大模型 MTFM，首次实现外卖多个主要业务的统一精排模型。"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.081Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -170,8 +170,8 @@
           "队被 KDD 2026 收录的 8 篇论文进行分享，这些论文覆盖了推荐大模型、生成与奖励建模框架、智能体搜索、Transformer 框架、元泛化框架等技术领域。"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.082Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -208,8 +208,8 @@
           "《Agent 评测白皮书》系列01：Agent 评测全览\n我们推出了《Agent评测白皮书》系列博客，体系化地为大家讲解评测的落地指南，分为《评测全览》、《冷启动篇》、《扩量篇》、《自进化篇》等共4篇，本文为系列的第一篇。"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.081Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -244,8 +244,8 @@
           "如何在“不能出错”的系统里使用 AI Coding？分布式存储实践与边界\n本文结合美团基础技术部在 AI 评审、问题排查和自动化开发中的真实实践，分享 AI 能帮上什么忙、容易在哪些地方犯错，以及哪些地方仍需要人来把关。比「多写代码」更重要的，是让代码和结论经得起验证。"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.081Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -281,8 +281,8 @@
           "身份不跑偏；动作自然流畅，告别「木偶戏」；边说边动、音画一致；背后还有推理加速技术支撑万路并发开播，让普惠落地成为可能。"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.081Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -313,8 +313,8 @@
           "OP 到图探索 —— 算法模型的 AutoResearch 自进化系统架构演进之路\n本文分享这套系统的设计理念、架构演进与可信度设计，希望对大家有所帮助或启发。"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.081Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -346,8 +346,8 @@
           "SLM 生成式高并发推理引擎：延迟约束下的有效吞吐优化\n本文为SLM（Small Language Model， 小参数量语言模型0.5~1B）在搜推场景的大规模落地提供了一套高性能、可复用的工程实践。"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:47:49.081Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.206Z"
       },
       "publicationStatus": "draft",
       "locations": [

@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "vivo-cnblogs",
-    "lastCheckedAt": "2026-11-01T09:07:36.262Z",
-    "nextRunAt": "2026-11-02T09:07:36.262Z",
+    "lastCheckedAt": "2026-11-01T09:14:06.273Z",
+    "nextRunAt": "2026-11-02T09:14:06.273Z",
     "consecutiveFailures": 0,
     "status": "pending",
     "error": "已登记指定账号；尚需官网反向链接或可核验的平台企业认证证据。 入口检测：Cross-origin redirect requires an explicit source entry",

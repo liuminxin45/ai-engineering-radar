@@ -25,8 +25,8 @@
           "peatable optimization sprint for a tool-using agent: measure a baseline, change one part of the workflow, and"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.600Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -60,8 +60,8 @@
           "Build an SRE agent for incident response\nAn incident alert opens a Slack thread in #oncall. The agent investig"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.600Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -91,8 +91,8 @@
           "mit updates with the ChatGPT Admin API. It includes a Node.js program you"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.599Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -123,8 +123,8 @@
           "Harness-aware evaluation of plugins\nA plugin that scores well in your own evaluation can still fail once it runs inside the "
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.599Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -154,8 +154,8 @@
           "upport messages with the Decisions API\nA support router turns a customer's message into a queue your application can assign. In this walkthrough,"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.598Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -190,8 +190,8 @@
           "Build an Agent Improvement Loop with Traces, Evals, and Codex\nAgents"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.597Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -227,8 +227,8 @@
           "Run Agents API sandboxes on AWS Lambda MicroVMs\nUse AWS Lambda MicroVMs to run your agent's tools in your AWS account. Op"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.599Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -263,8 +263,8 @@
           "tGPT plugin with the OpenAI Agents SDK and Amazon Bedrock AgentCore\nIn this cookbook, you'll build a private flight assistant for a fictional air"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.601Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -291,8 +291,8 @@
         "reason": "元数据未提供明确的 AI 技术关联。",
         "evidence": [],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.596Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -327,8 +327,8 @@
           "Run OpenAI agents on a Databricks Sandbox\nDatabricks Sandbox now supports the OpenAI Agents API, enabling developers to run AI agent code and to"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.598Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "draft",
       "locations": [
@@ -363,8 +363,8 @@
           "Build a Slack bot with the Agents API\nTag your bot in Slack to search conversations, investigate projects, analyze data, or prepare a GitHub pul"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.600Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -399,8 +399,8 @@
           "ild a data analyst with the Agents API\nAsk questions about your own business data. The agent finds relevant warehouse tables, checks metric defin"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.600Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -434,8 +434,8 @@
           "GPT-Live evaluation guide\nAudio"
         ],
         "method": "rules",
-        "version": "rules-1",
-        "classifiedAt": "2026-11-01T08:53:44.598Z"
+        "version": "rules-2",
+        "classifiedAt": "2026-11-01T09:14:48.207Z"
       },
       "publicationStatus": "published",
       "locations": [
