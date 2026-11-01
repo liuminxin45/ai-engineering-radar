@@ -45,6 +45,10 @@ test("pagination, article deep links, feeds and keyboard focus", async ({
     await expect(page).toHaveURL(/page=2/);
   }
   await page.locator(".article-row h2 a").first().click();
+  await expect(page).toHaveURL(/\/articles\/[^/?]+\/?$/);
+  await expect(
+    page.getByRole("heading", { name: "来源与发布信息" }),
+  ).toBeVisible();
   await expect(page.getByRole("link", { name: /阅读原文/ })).toBeVisible();
   await page.reload();
   await expect(
