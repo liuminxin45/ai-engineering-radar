@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "aliyun-dataphin",
-    "lastCheckedAt": "2026-11-01T12:06:21.482Z",
-    "lastSuccessAt": "2026-11-01T12:06:21.482Z",
-    "nextRunAt": "2026-11-02T12:06:21.482Z",
+    "lastCheckedAt": "2026-11-01T12:14:06.520Z",
+    "lastSuccessAt": "2026-11-01T12:14:06.520Z",
+    "nextRunAt": "2026-11-02T12:14:06.520Z",
     "consecutiveFailures": 0,
     "status": "success",
-    "discovered": 100,
+    "discovered": 50,
     "httpStatus": 200
   }
 }

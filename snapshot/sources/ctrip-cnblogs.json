@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "ctrip-cnblogs",
-    "lastCheckedAt": "2026-11-01T12:06:19.540Z",
-    "nextRunAt": "2026-11-02T12:06:19.540Z",
+    "lastCheckedAt": "2026-11-01T12:14:02.676Z",
+    "nextRunAt": "2026-11-02T12:14:02.676Z",
     "consecutiveFailures": 0,
     "status": "pending",
     "error": "已找到历史账号 ctriptech，公开 HTML 目录可访问，原 RSS 目标 robots 禁止。账号最新条目停留在 2016 年，尚缺该历史账号归属的充分证据；已另接入核实的携程 CSDN 官方号。",

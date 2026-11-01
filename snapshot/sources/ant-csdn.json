@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "ant-csdn",
-    "lastCheckedAt": "2026-11-01T12:06:17.045Z",
-    "nextRunAt": "2026-11-02T12:06:17.045Z",
+    "lastCheckedAt": "2026-11-01T12:13:58.111Z",
+    "nextRunAt": "2026-11-02T12:13:58.111Z",
     "consecutiveFailures": 0,
     "status": "pending",
     "error": "已找到 AntResearch 稳定账号，公开 RSS 允许访问且解析 20 条；文章涉及蚂蚁研究院与团队实践。暂未取得足以确认此具体账号官方归属的资料，保留待核验且关闭采集。",

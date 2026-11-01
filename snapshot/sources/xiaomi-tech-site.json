@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "xiaomi-tech-site",
-    "lastCheckedAt": "2026-11-01T12:06:20.107Z",
-    "nextRunAt": "2026-11-02T12:06:20.107Z",
+    "lastCheckedAt": "2026-11-01T12:14:05.095Z",
+    "nextRunAt": "2026-11-02T12:14:05.095Z",
     "consecutiveFailures": 0,
     "status": "reference",
     "error": "公司自有技术站，公开博客与论文入口已核实。静态 HTML 为客户端渲染壳，尚未核实公开目录 API；保留参考，未冒充已接入采集源。",
