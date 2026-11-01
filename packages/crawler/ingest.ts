@@ -271,6 +271,14 @@ export async function ingest(
         };
       }
     }
+    if (
+      article.duplicateCandidates.length &&
+      article.classification.status === "accepted"
+    ) {
+      article.classification.status = "review";
+      article.classification.reason =
+        "发现相似标题，但缺少确定的跨平台原文关系，等待人工确认。";
+    }
     article.publicationStatus =
       article.classification.status === "accepted" ? "published" : "draft";
   }

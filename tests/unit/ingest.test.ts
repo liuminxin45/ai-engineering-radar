@@ -67,6 +67,22 @@ it("does not publish a partially malformed source batch", async () => {
   expect(result.successes).toBe(0);
   expect(result.articles).toHaveLength(1);
 });
+it("keeps uncertain duplicate candidates in review after rule upgrades", async () => {
+  const data = snapshot();
+  data.articles[0].classification.version = "old";
+  data.articles[0].duplicateCandidates = ["other-article"];
+  vi.mocked(collect).mockResolvedValue({
+    items: [],
+    response: { status: 304, text: "", url: source.url },
+    warnings: [],
+  });
+  const result = await ingest(data, registry, {
+    force: true,
+    sourceId: source.id,
+  });
+  expect(result.articles[0].classification.status).toBe("review");
+  expect(result.articles[0].publicationStatus).toBe("draft");
+});
 beforeEach(() => {
   vi.resetAllMocks();
   vi.unstubAllEnvs();

@@ -1,6 +1,6 @@
 import type { Candidate, Classification } from "../shared/types.js";
 import { classificationSchema } from "../shared/types.js";
-export const RULE_VERSION = "rules-1";
+export const RULE_VERSION = "rules-2";
 const patterns: Record<string, RegExp> = {
   "ai-coding":
     /\b(copilot|codex|cursor|claude code|coding agent|ai coding|code generation|agentic coding|spec.driven)\b|智能编程|代码生成|研发提效|研发自动化|代码审查/i,

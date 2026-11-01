@@ -1,4 +1,5 @@
 import { readFile } from "node:fs/promises";
+import { z } from "zod";
 import {
   sourceSchema,
   type Source,
@@ -7,9 +8,31 @@ import {
 } from "../shared/types.js";
 
 export async function loadRegistry() {
-  const raw = JSON.parse(
-    await readFile(new URL("./registry.json", import.meta.url), "utf8"),
-  );
+  const identifier = z.string().regex(/^[a-z0-9-]+$/);
+  const raw = z
+    .object({
+      schemaVersion: z.literal(1),
+      companies: z.array(
+        z.object({
+          id: identifier,
+          name: z.string().min(1),
+          region: z.enum(["cn", "global"]),
+        }),
+      ),
+      publishers: z.array(
+        z.object({
+          id: identifier,
+          companyId: identifier,
+          name: z.string().min(1),
+        }),
+      ),
+      sources: z.array(sourceSchema),
+    })
+    .parse(
+      JSON.parse(
+        await readFile(new URL("./registry.json", import.meta.url), "utf8"),
+      ),
+    );
   const sources: Source[] = raw.sources.map((s: unknown) =>
     sourceSchema.parse(s),
   );

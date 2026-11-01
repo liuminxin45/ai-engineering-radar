@@ -14,6 +14,7 @@ import {
   parseFeed,
   parseMetadata,
   parseListing,
+  parseTencentColumn,
   date,
 } from "../../packages/crawler/adapters.js";
 import { classifyRules } from "../../packages/classifier/index.js";
@@ -136,6 +137,52 @@ describe("normalization and deduplication", () => {
   });
 });
 describe("adapters", () => {
+  it("filters Tencent column items by stable publisher UID", () => {
+    const s = registry.sources.find((s) => s.id === "dewu-tencent")!;
+    const page = {
+      props: {
+        pageProps: {
+          fallback: {
+            "/api/column/getArticlesByColumnId": [
+              {
+                list: [
+                  {
+                    articleId: 1,
+                    title: "Building AI agent sandbox runtime",
+                    uid: 9927536,
+                    author: { uid: 9927536, nickname: "得物技术" },
+                    summary: "Implementation details",
+                    createTime: "2026/10/29 10:45:34",
+                  },
+                  {
+                    articleId: 2,
+                    title: "Impersonator",
+                    uid: 123,
+                    author: { uid: 123, nickname: "得物技术" },
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      },
+    };
+    const items = parseTencentColumn(
+      `<script id="__NEXT_DATA__" type="application/json">${JSON.stringify(page)}</script>`,
+      s,
+    );
+    expect(items).toHaveLength(1);
+    expect(items[0].publishedAt).toBe("2026-10-29T02:45:34.000Z");
+  });
+  it("reads site-specific dates and skips empty duplicate metadata", () => {
+    const result = parseMetadata(
+      '<meta name="description" content=""><meta name="description" content="Real summary"><span class="created-at">2026-06-09 10:57:59</span>',
+      "https://tech.dewu.com/article?id=1",
+      registry.sources.find((s) => s.id === "dewu-official"),
+    );
+    expect(result.description).toBe("Real summary");
+    expect(result.publishedAt).toBe("2026-06-09T02:57:59.000Z");
+  });
   it("parses RSS with escaped XML", async () => {
     const items = parseFeed(
       await readFile("tests/fixtures/rss.xml", "utf8"),
@@ -183,6 +230,15 @@ describe("adapters", () => {
   });
 });
 describe("classification and publication", () => {
+  it("assigns a fallback topic to generic AI engineering", () => {
+    const c = classifyRules({
+      title: "Building an AI workflow architecture",
+      description: "We implemented production context pipelines.",
+      url: candidate.url,
+    });
+    expect(c.status).toBe("accepted");
+    expect(c.topics).toContain("ai-application");
+  });
   it.each([
     [
       "Building AI agent sandbox architecture",
