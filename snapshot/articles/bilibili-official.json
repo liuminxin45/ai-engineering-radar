@@ -1,0 +1,625 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "04be32010b750d86f873",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "2025年哔哩哔哩技术精选技术干货",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/156462674",
+      "author": "bilibili_TC",
+      "description": "一键收藏2025年哔哩哔哩技术最受欢迎的20篇文章！",
+      "language": "zh-cn",
+      "publishedAt": "2026-01-01T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/156462674",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/156462674"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "170496a8238a929ced8c",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "B站 Index LLM 团队论文开源：170亿次真实用户交互背后的UGC视频评估新范式",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/161900033",
+      "author": "bilibili_TC",
+      "description": "这项工作已被 ACL 2026 Main Conference 收录，是bilibili Index LLM Team在UGC内容理解方向的最新成果。",
+      "language": "zh-cn",
+      "publishedAt": "2026-06-12T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/161900033",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/161900033"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2f9973dfddb6bc6bd649",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "视频生成推理加速实践：基于 torch.compile 的整图编译优化",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/157438741",
+      "author": "bilibili_TC",
+      "description": "视频生成模型的推理优化是一个多层次、系统性的工程挑战。",
+      "language": "zh-cn",
+      "publishedAt": "2026-01-28T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/157438741",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/157438741"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "32038f9aeb0132c5eb80",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "SABER: 模式切换的混合思考模型训练范式",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/156061794",
+      "author": "bilibili_TC",
+      "description": "bilibili Index-llm Team提出 SABER，一种让大模型具备可切换、可控、并受 token 预算约束的推理能力的强化学习框架。",
+      "language": "zh-cn",
+      "publishedAt": "2025-12-19T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/156061794",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/156061794"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3686952fb359052f76bd",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "EMNLP 2026 Oral｜HOMURA：面向时间受限场景的 LLM 翻译强化学习优化",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/167393564",
+      "author": "bilibili_TC",
+      "description": "当前HOMURA已经大规模应用于bilibili视频原声翻译场景中，为实现高质量、高合规性的时间受限翻译提供了可行的技术路径。",
+      "language": "zh-cn",
+      "publishedAt": "2026-10-10T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/167393564",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/167393564"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3ea67cb7bd5c1ff0e28a",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "GPU隔离技术的分析与改进",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/160596994",
+      "author": "bilibili_TC",
+      "description": "本文基于NVIDIA场景，通过分析阐述业内隔离技术方案，引出他们的优势与缺陷，进而提出B站在隔离技术上的改进思路。",
+      "language": "zh-cn",
+      "publishedAt": "2026-04-29T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/160596994",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/160596994"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5222290d9f421bcbb5df",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "从JS云函数到MCP：打造跨平台AI Agent工具的工程实践",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/155826363",
+      "author": "bilibili_TC",
+      "description": "构建 AI 工具生态这件事上，过去一年我们做了不少尝试。",
+      "language": "zh-cn",
+      "publishedAt": "2025-12-12T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/155826363",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/155826363"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "55ef62989954f7453b0a",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "B站特征选择算法LeAP：模型的“精准瘦身”实践",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/162044465",
+      "author": "bilibili_TC",
+      "description": "在深度学习推荐系统中，想要自动化地筛选特征，并没那么简单。",
+      "language": "zh-cn",
+      "publishedAt": "2026-06-17T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/162044465",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/162044465"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "625e46e724c36818a153",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "从“截图大法”到真实交互：B站专栏视频卡的技术革命",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/158929047",
+      "author": "bilibili_TC",
+      "description": "回望 B 站富文本编辑器的演进史，我们经历了一个从“无”到“有”，再从“有”到“优”的过程。",
+      "language": "zh-cn",
+      "publishedAt": "2026-03-12T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/158929047",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/158929047"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "65c1548a030e0d9c48a3",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "游戏数据分析Agent的全栈架构演进",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/158703008",
+      "author": "bilibili_TC",
+      "description": "本文章主要聚焦于最核心的如何落地Agent。",
+      "language": "zh-cn",
+      "publishedAt": "2026-03-06T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/158703008",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/158703008"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6c5bf21446bfd926dbec",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "bili-fe-workflow —商业化智能开发工作流实践",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/161119720",
+      "author": "bilibili_TC",
+      "description": "我们从 prompt 工程演进 Harness Engineering，做了一系列智能开发工作流，让AI能够帮助我们执行跨越整个研发生命周期的长任务。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-15T10:36:48.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/161119720",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/161119720"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6fec96700c2100587676",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "Index-Translate：支持 150 种语言的多模态翻译模型是如何炼成的？",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/168453213",
+      "author": "bilibili_TC",
+      "description": "哔哩哔哩 Index LLM 团队推出 Index-Translate 系列。文本翻译覆盖 150 种语言，提供 2B、9B 和 35B-A3B（preview） 三种规模，同时支持图文翻译；系列还提供语音翻译、音节控制与长文档翻译能力。本文简要介绍这些功能，重点展开它们背后的训练设计。",
+      "language": "zh-cn",
+      "publishedAt": "2026-10-20T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/168453213",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/168453213"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "79e78fbe21cb44616bc1",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "IndexTTS 2.5 让声音跨越语言",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/163824713",
+      "author": "bilibili_TC",
+      "description": "最新发布的 IndexTTS 2.5，支持中/英/日/西/阿五国语言零样本配音，推理速度翻倍升级，跨语言情绪还原更自然，同时也支持原声的语速控制能力，补齐上代模型短板。",
+      "language": "zh-cn",
+      "publishedAt": "2026-08-17T07:02:13.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/163824713",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/163824713"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "91a702dff58b56a32cec",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "CVPR 2026 Highlight 丨 用“几何感知”把扩散 Transformer 采样做成免训练加速器",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/163141057",
+      "author": "bilibili_TC",
+      "description": "扩散采样不是在平直空间里走直线，而是在模型学到的弯曲特征流形上前进。",
+      "language": "zh-cn",
+      "publishedAt": "2026-07-24T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/163141057",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/163141057"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "94baafee1495b217fa3e",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "视频生成推理加速实践：基于全局时间索引的序列并行 3D 位置编码优化",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/158010439",
+      "author": "bilibili_TC",
+      "description": "本文分享B站在视频生成模型推理优化中的一系列实践，重点围绕分块自回归视频模型在序列并行场景下的计算与通信优化展开。",
+      "language": "zh-cn",
+      "publishedAt": "2026-02-13T04:02:07.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/158010439",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/158010439"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "987a2a6d43efc66fa201",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "B站社群AI智能分析系统的实践",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/155320541",
+      "author": "bilibili_TC",
+      "description": "早期运营尝试过简单的关键字分析和人工汇总的方式，但这种传统方案存在明显局限：只能捕捉预先设定的词汇，无法理解上下文和隐含含义，对新出现的话题无法及时捕获。在 BI 看板上，这些沉淀的数据以更直观的方式呈现：情绪趋势、话题聚类、反馈规模、风险事件等核心指标一目了然，让业务团队可以随时掌握用户的关注点和变化趋势，做到“数据驱动运营决策”。不再是等用户大量投诉后再处理，而是能够利用 AI 的语义理解能力，及时捕捉到群聊中不断浮现的细微变化，并将分散的用户声音转化为推动产品迭代的动力。",
+      "language": "zh-cn",
+      "publishedAt": "2025-11-28T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/155320541",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/155320541"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bfef71755142a9a725cc",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "从特效 SDK 到 AI 动效平台：Neon Vibe Motion 的技术演进之路",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/159652065",
+      "author": "bilibili_TC",
+      "description": "多媒体中台在 B 站主要负责剪辑、拍摄、直播等业务场景的动效渲染，开发维护的 SDK 在后文统一称为特效 SDK。",
+      "language": "zh-cn",
+      "publishedAt": "2026-03-31T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/159652065",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/159652065"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c44b3eb7d0bad04b8192",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "使用Compose Navigation3进行屏幕适配",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/159769265",
+      "author": "bilibili_TC",
+      "description": "这篇文章将介绍B站是怎么使用 Compose Navigation3 进行页面的宽屏适配，并解决其中遇到的问题的。",
+      "language": "zh-cn",
+      "publishedAt": "2026-04-03T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/159769265",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/159769265"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e15d48145bd1860b1b74",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "ICLR 2026 ｜用“信息增益-冲突惩罚”把数据选择做成可控的大模型微调加速器",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/160121283",
+      "author": "bilibili_TC",
+      "description": "指令微调（Instruction Tuning）已经成为大语言模型落地前的“最后一公里”。",
+      "language": "zh-cn",
+      "publishedAt": "2026-04-14T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/160121283",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/160121283"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e8c6d72b88fde2d5a786",
+      "publisherId": "bilibili-official",
+      "companyId": "bilibili",
+      "title": "我们如何用 A2UI + Vue，让大模型长出“可交互界面”",
+      "canonicalUrl": "https://blog.csdn.net/bilibili_TC/article/details/161427969",
+      "author": "bilibili_TC",
+      "description": "本文围绕一个核心问题展开：如何让AI助手从“输出文字”进化到“生成界面”？",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-27T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:35.163Z",
+      "updatedAt": "2026-11-01T09:43:35.163Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bilibili-csdn",
+          "externalId": "https://blog.csdn.net/bilibili_TC/article/details/161427969",
+          "url": "https://blog.csdn.net/bilibili_TC/article/details/161427969"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

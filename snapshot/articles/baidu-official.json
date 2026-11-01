@@ -1,0 +1,625 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "091ce9134932f173d209",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "Grep 打平向量检索？这篇论文说：你可能一直在优化错的东西",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161435689",
+      "author": "weixin_45449540",
+      "description": "评判一个 Agent 检索系统的标准，不是它用了什么算法，而是它的框架设计能不能让手里的算法发挥出应有的水平。PwC 论文最宝贵的价值不是\"grep 打平了 vector\"，而是**把注意力从\"追求更好的 Embedding\"拉回到\"构建更好的 Agent 框架\"**上。——「Beyond Semantic Similarity」论文指出，现有检索系统都只给你\"最相似的几条\"，但 Agent 需要的是和语料库的直接交互——遍历、过滤、精炼、重新搜索。让它从聊天记录里找个日期，它搜了半天搜了个不相关的。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-26T11:03:09.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161435689",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161435689"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "11c4a0b43cd3beef5422",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "文心ERNIE-Image携手艺术家方佳翮，用 AI 巨幕重构《西游记》神魔科幻宇宙",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161296185",
+      "author": "weixin_45449540",
+      "description": "他的形象是野猪头，男性壮汉的身体，身穿华丽的唐代胡服，鬓边插着一支海棠花，既具有神话力量，又带有《西游记》特有的幽默感。最关键的是：天空中若隐若现地浮现出敦煌壁画风格的飞天图案——飞天形象轻盈飘逸，身姿婀娜，长巾飞舞，如同壁画中的线描图案半透明地融入夜空之中，似幻似真，若梦若现，不抢夺画面焦点，而是作为神秘的背景意象存在。石碑旁坐着一位中年男子，体型魁梧，肌肉极为发达，赤裸上身，皮肤呈蓝色（深蓝色或青蓝色），头发为浓烈的红色，络腮胡须同为红色且浓密茂盛，面容凶悍粗犷，眉目间透出一种狂野与落寞并存的神情。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-21T11:02:44.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161296185",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161296185"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "162ba8fc1625dba87fa4",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "飞桨星河社区月度报告（2026年4月）",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161094910",
+      "author": "weixin_45449540",
+      "description": "4 月 2 日，飞桨黑客马拉松重磅推出「文心合作伙伴赛道」，联合国内外近20家合作伙伴，覆盖云端训练、边缘推理、端侧部署、操作系统、算力平台等场景，诚邀广大开发者基于各生态伙伴的平台，完成基于文心大模型（ERNIE系列、PaddleOCR-VL等）的创新任务。后续，星河社区还将围绕 Agent、Tools、Skills、模型能力接入与工程实践等方向，持续推出更多高质量实战内容，帮助更多开发者把前沿能力真正学起来、用起来、做出来，也期待与更多伙伴一起，共同推动技术内容生态建设与优质实践案例沉淀！",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-14T11:07:43.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161094910",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161094910"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1658c56ed684b9be6cf4",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "96.33% 新SOTA！PaddleOCR-VL-1.6 发布，大模型时代的数据基座再升级",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161499064",
+      "author": "weixin_45449540",
+      "description": "这个流程的关键价值在于，它同时解决了“缺数据”和“数据不可靠”两个问题：既扩展了模型在边界分布上的覆盖，也提升了监督信号的可信度，更确定了数据的难度，从而为后续 继续预训练、监督微调 和 强化学习 提供更稳定的数据基础。由此，PaddleOCR-VL-1.6 的数据建设从传统的规模驱动，转向了更高效的模型弱点驱动。如果样本过难，模型无法产生有效正向轨迹；展望未来，我们将持续推动技术创新，不断拓展模型的能力边界与应用版图，以更强大、更开放的文档解析方案，助力各行各业加速智能化转型，携手迈向文档智能的新阶段。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-28T12:31:56.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161499064",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161499064"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1dbe274fe273e7cc3cc9",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "报名开启 ｜ 2026CCIG百度企业论坛【多模态视觉与空间智能前沿论坛】",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161405133",
+      "author": "weixin_45449540",
+      "description": "刘竹琳，现任华南理工大学计算机科学与工程学院副教授，入选2025年全球前2%科学奖，长期从事多模态大模型理论与技术研究，主持与参与国家级/省部级项目6项，包括百度松果基金（2025）“基于动态稀疏机制的多模态大模型高效计算框架”，在多模态模型可控生成及高效计算等方向积累了系统性的理论与工程经验，获得2021年TNNLS最佳论文奖、2020年澳门自然科学奖二等奖、2019年Franklin V. Taylor Memorial Award。霍然，高级工程师，现任八维通科技有限公司空间智能事业部副总经理。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-25T12:03:47.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161405133",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161405133"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1e3380f1f4038397c015",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "星河实战派｜儿童绘本生成器：ERNIE-Image如何做到中文文字直出",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161403996",
+      "author": "weixin_45449540",
+      "description": "儿童绘本生成器」Skill 封装了 Baidu AI Studio 的 ERNIE-Image-Turbo API，通过提炼儿童故事核心画面，调用ERNIE-Image（Text-to-Image）核心能力生成儿童绘本。支持文本到图像的高质量生成：输入一段故事文字，自动提炼关键画面，生成精美儿童插画！绘本提供了一个可供指认、提问和讨论的视觉载体，亲子互动深度显著提升。\"调用儿童绘本生成器，生成一个关于xxx的绘本，要带旁白文字\"\"每个孩子都值得拥有一本专属的绘本，而你只需要一个故事。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-25T12:03:47.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161403996",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161403996"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "27bece33ad23203dc653",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "报名开启｜5 月 18 日，来厦门现场跑通瑞芯微 AI 实战任务",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161030600",
+      "author": "weixin_45449540",
+      "description": "技术方向环节将围绕「PaddleOCR-VL RKNN3 模型转换」打卡任务展开，讲清 RKNN3-Toolkit 工具链、PaddleOCR-VL 模型获取、模型转换、模拟机推理、截图提交等关键流程。无论是环境配置、模型转换、模拟机推理，还是作品提交与进阶任务思路，都可以在现场与技术同学直接交流。活动将聚焦瑞芯微公司生态，介绍其在芯片产品、AIoT、开发者工具、行业应用与生态合作等方面的布局，帮助大家理解端侧 AI 从芯片平台到应用落地的关键链路。本阶段打卡任务可在工作站、服务器或本地虚拟环境中完成。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-12T13:29:53.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161030600",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161030600"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2934bbb5600e7d2eef38",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "cli-trainer Skill 上线，在 AI Agent 里一键微调大模型",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161295759",
+      "author": "weixin_45449540",
+      "description": "⚠️有两个步骤依赖浏览器自动化：数据集仓库创建（自动在星河社区建仓，省去手动填表），以及训练完成后的模型标签设置（语言、任务类型、训练框架等元信息）。安装后，在对话框里描述你的需求，它会自动完成从环境检测、数据上传到训练提交、模型卡片生成的整个链路——不需要写任何训练代码，训练好的模型直接可通过API调用。必须用方括号：{\"src\": [\"问题\"], \"tgt\": [\"回答\"]}，不能 {\"src\": \"问题\", \"tgt\": \"回答\"}。如果用自己的数据，Skill 会帮你上传到星河社区的数据集仓库。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-21T11:02:44.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161295759",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161295759"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "293eafc34699348fc48a",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "李彦宏：DAA（日活智能体数）是AI时代的度量衡",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161063413",
+      "author": "weixin_45449540",
+      "description": "李彦宏提出，智能体出圈代表着AI的发展从模型阶段走向了应用阶段，“它代表着AI将以前所未有的速度向各行各业，各种职业，各类场景渗透，它代表着AI的竞争从智力转向了执行力。李彦宏指出，“在今天的智能体浪潮驱动下，人类个体也在自我进化，Builder、Founder、Creator实现了三位一体，每一个开发者，同时也是创业者，更是创造者。与此同时，开发成本被压缩到极低，甚至接近于零，成本在消失。由此，李彦宏判断，“一次性软件”或者说“日抛型软件”变得合理，软件正在成为“快消品”，软件行业被重新定义。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-13T11:54:39.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161063413",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161063413"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2e91676e03d6928b53f3",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "文心合作伙伴赛道 × 沐曦股份 Meetup 上海站｜邀你共探国产算力优化实战",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161094771",
+      "author": "weixin_45449540",
+      "description": "聚焦沐曦曦云 C 系列 GPU 国产算力平台，结合百度 PaddlePaddle 框架、FastDeploy 极速部署工具、ERNIE 文心大模型能力，全方位拆解沐曦国产算力硬件适配百度大模型的推理优化方案、落地技巧与工程实操挑战，解锁国产 AI 软硬件协同部署核心能力。作为飞桨黑客松第十期「文心合作伙伴赛道」的重要实践方向之一，文心大模型携手沐曦股份，围绕专属赛题「优化 PaddleOCR-VL-1.5 + MetaX GPU」，共同探索大模型能力在国产算力平台上的部署与推理优化实践。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-14T11:07:43.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161094771",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161094771"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "60258bb5fa430b5cf9d3",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "一键穿越二次元！这些动漫神图竟是用户AI生成的",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161030815",
+      "author": "weixin_45449540",
+      "description": "最近，我们发起了一场“文心创作周·动漫回忆杀”创意征集，邀请大家用文字描述自己心中的动漫名场面，再由ERNIE-Image“画”出来。结果，收到的作品……实在太惊喜了！有梦幻校园、末世机甲、古风幻想、奇幻冒险……一个比一个精彩，一个比一个“有番剧那味儿”。今天，我们从中挑选了一批“文心超级创作者”优秀作品进行展示。一起来看看——当ERNIE-Image读懂你的二次元脑洞，会碰撞出怎样的名场面？动漫名场面复现用户描述：木之本樱, 魔卡少女樱动画画风, 友枝小学水手服, 白色上衣配红色领结, 浅棕色短发, 金色",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-12T13:29:53.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161030815",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161030815"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "63095605fb9f18f6c702",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "CVHub x PaddleOCR：X-AnyLabeling 升级 OCR 实战工作流，服务开发者数据闭环",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161065175",
+      "author": "weixin_45449540",
+      "description": "打通训练、推理、标注全链路，深度融合主流 AI 推理引擎与丰富的交互功能，内置数百种开箱即用的业界顶尖 SOTA 模型，覆盖从图像分类、检测、分割、跟踪、姿态、车道线、旋转目标检测、深度估计及 OCR 等基础视觉任务，到文档解析、可提示概念及交互式分割（SAM）、Grounding、Counting、视觉问答（VQA）、多模态理解、强化学习（RLVR） 等大模型时代的全场景任务。这也意味着，开发者需要的不只是一个高性能模型，更是一套能够承接模型输出、支持人机协同复核、并沉淀高质量数据资产的标注工作流。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-13T11:54:39.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161065175",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161065175"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6cd622d7c51f0be67f14",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "百度智能云走进文博会：四方战略合作开启AI+IP新叙事",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161328645",
+      "author": "weixin_45449540",
+      "description": "这种“创作者主导、AI辅助迭代”的众创新范式，不仅能够最大程度提升IP的生命力，更让百度智能云成为了“超级IP永续工厂”的共同建设者。2026年，生成式人工智能正在迎来它的“工业化落脚点”——AI不再仅仅是创作者手中零散的提效工具，而是开始深度嵌入到整个内容产业链的毛细血管之中。我们愿与创新者同行，用AI为创意赋能，让好的故事、好的创意落地生花、传播更广、流传更久，做创作者最可靠的技术和生态伙伴。AI遇见IP，两者的融合绝非简单的“技术替代”，而是用科技作为创意的放大器与故事的增强器。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-22T13:39:35.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161328645",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161328645"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8c94c1fe6a77183c4c6e",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "文心大模型 × 文枢，重新定义AI长篇创作",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161467212",
+      "author": "weixin_45449540",
+      "description": "unitagain 没有公司，没有团队，一个人完成了从需求、架构、开发到迭代的全部工作——这本身，就是 OPC的一个切面：借助 AI 工具，让一个人真正做到了以前需要一支团队才能完成的事。文心大模型在中文语境下的训练深度，使其在文言与白话的转换、人物对白的语气拿捏、叙事视角的切换等环节，能生成更符合中文读者阅读习惯的文本。\"相信很多人的内心中都有一些幻想的故事，但碍于精力或是造诣，迟迟不得动笔。Bug，而是几乎所有AI写作工具共同面对的困境——模型的上下文窗口是有限的，故事越长，它能\"记住\"的比例越低。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-27T12:32:33.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161467212",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161467212"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "aefb350df492be826a58",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "百度飞桨（武汉）人工智能产业赋能中心迎来两场重磅活动",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161435091",
+      "author": "weixin_45449540",
+      "description": "分享中，他还结合制造、材料、物流、金融、电力、教育、文化传媒等多个行业的真实落地案例，从产线智能化质检、新能源电池良率提升、智慧物流园区、金融卡证识别、电网智能巡检、教学评估到智能音箱等具体场景出发，逐一拆解了大模型与产业场景深度融合的真实路径，回答了\"AI如何真正长在产业里\"这一关键命题，也让在场代表对\"AI如何赋能新质生产力\"有了更具体、更可感的认知。活动伊始，学员们走进赋能中心展厅，由专职讲解员带领参观AI技术展示区与产业落地案例，初步感受了\"飞桨+文心\"双引擎驱动下的AI产业全景；",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-25T12:03:47.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161435091",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161435091"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b556c93e78128752ea72",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "从一个月到一周：他用文心重构金融科技高管课",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161435061",
+      "author": "weixin_45449540",
+      "description": "1.受众画像：课程学员为银行、证券、保险等持牌金融机构中高层管理者、企业合伙人、投资人，平均从业年限5年以上，具备金融基础知识，缺乏体系化的金融科技战略落地认知，核心学习需求是“懂趋势、能落地、可复用”。金融科技不是放在PPT里的概念，而是正在银行、券商、保险、企业经营和投资实践里发生的变化。收材料、核信息、搭结构、写大纲、补案例、设计互动、整理参考资料，哪一步都省不掉，哪一步都吃时间。数字人民币要讲，跨境支付要讲，AI在金融领域的场景落地要讲，RWA、稳定币、风控、监管也要讲。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-26T11:03:09.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161435061",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161435061"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d5fc88e56971baae050d",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "官方证书+创作基金等你拿｜“AI绘童趣·童心创科普”庆六一活动正式启动！",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161267123",
+      "author": "weixin_45449540",
+      "description": "整体风格设定儿童绘本插画，水彩晕染风格，柔和暖色调，圆润可爱的角色造型，画面温馨治愈，适合3-8岁幼儿阅读，每幅图配有简短文字说明，图文比例协调，大面积留白，画面干净不杂乱。附加说明（可选）封面图提示词： 儿童绘本封面，标题\"守株待兔\"用圆润可爱的手写体大字，画面中央是农夫和树桩的卡通形象，周围环绕着花草蝴蝶，背景是温暖的夕阳色调，整体温馨治愈。教育页提示词： 最后一页单独设计，画面是农夫重新拿起锄头在田里劳作，兔子在旁边帮忙浇水，传达\"勤劳才能致富\"的正面教育意义，画面明亮充满希望。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-20T13:33:04.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161267123",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161267123"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e66fc4dc42b3e868ca0e",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "厦门绩牛智能科技：用文心大模型让创意与知识“零门槛“落地",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161435913",
+      "author": "weixin_45449540",
+      "description": "产品涵盖知识导入、解析、清洗、冲突检测、权限管理、审核、版本管理、检索、开放能力对接等功能，面向想要在内部建设AI业务智能体的企业。一个\"做不出来\"，一个\"找不到\"。9点，同样的办公楼。SaaS 集成多渠道采集，深度打通 OA、CRM 等内部系统，一键对接飞书、钉钉、企业微信、语雀等 30 + 主流平台，文本、图片、视频、音频等 20 + 多模态格式统一录入，实现全域知识无缝汇聚、全面覆盖。\"做不出来\"到\"一句话生成\"，从\"找不到\"到\"3秒检索\"，文心大模型正在让创意触手可及，让知识价值最大化。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-26T11:03:09.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161435913",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161435913"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f0fd550a0ceefedb99ae",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "元景LeMiCa × ERNIE-Image：全局最优缓存加速，让文生图“快且精”",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161205467",
+      "author": "weixin_45449540",
+      "description": "ERNIE-Image虽仅需24GB显卡即可流畅运行，将高质量文生图的门槛拉到新低，但即便是这样高效的模型，在推理速度上仍有进一步释放潜力的空间——如何在“快”与“精”之间找到最佳平衡点，仍是开发者和创作者追求极致体验时面临的小困扰。这说明加速后的图像在主体结构、纹理细节和整体观感上都与原始结果高度一致，真正做到了肉眼几乎难以察觉差异的高质量加速。无需重新训练，只需几行代码，即可让ERNIE-Image的生成速度提升2倍以上，同时保持画质几乎无损。上表现突出，这也是其区别于传统加速方法的核心特色。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-18T10:50:24.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161205467",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161205467"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f5ea3243ce2dc4279bf0",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "title": "10 万字研究，如何被讲成一张科研 Poster：文心帮博士抓住表达主线",
+      "canonicalUrl": "https://blog.csdn.net/weixin_45449540/article/details/161236892",
+      "author": "weixin_45449540",
+      "description": "实际上，它要求研究者完成一次复杂写作任务：穿过长篇论文，抓住核心意图，重组表达逻辑，适配现场受众，再把专业内容压缩成一条清楚、有重点、能交流的展示路径。文心把藏在论文里的研究逻辑提出来，把它变成能被压缩、能被展示、能被追问的表达主线。于是，复杂研究不再只停留在论文里，也能在会场的一面展板前，被更多人看见、听懂，并产生新的讨论。他们可能只是经过、扫一眼、停几秒。如果只是把论文逐段缩短，得到的可能是一堆信息碎片：背景有了，方法有了，结果也有了，但观众仍然不知道应该从哪里看起，也不知道这些研究之间如何关联。",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-19T11:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:30.514Z",
+      "updatedAt": "2026-11-01T09:43:30.514Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-csdn",
+          "externalId": "https://blog.csdn.net/weixin_45449540/article/details/161236892",
+          "url": "https://blog.csdn.net/weixin_45449540/article/details/161236892"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

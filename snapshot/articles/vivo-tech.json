@@ -1,0 +1,955 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "0180055a7e8b444da550",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "SmartPhotoCrafter: 先思考后修图，统一理解-生成的图像优化新范式",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/164818128",
+      "author": "vivo_tech",
+      "description": "本文提出 SmartPhotoCrafter，一种全新的统一理解—生成—优化框架，为自动图像优化提供了新的技术范式。该方法在保留原始场景的内容结构与细节的同时提升图像质量，实现兼具真实性与美感的自动图像优化。",
+      "language": "zh-cn",
+      "publishedAt": "2026-09-10T03:13:34.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/164818128",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/164818128"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "07a85c038b229bbfa56f",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "域名埋点零侵入实时校验实践：基于代理转发与规则驱动的工具设计",
+      "canonicalUrl": "https://www.cnblogs.com/vivotech/p/23397024",
+      "author": "vivotech",
+      "description": "埋点是数据驱动的基础，但大量无配套后台的域名埋点只能靠抓包加肉眼比对测试，自建后台侵入性强。本文介绍 Flyheart Monitor，一套零侵入的域名埋点实时校验工具：在请求必经之路拦截数据校验，不绑定抓包代理，用规则代替人工校验，并将结果沉淀为可归档图片。",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-22T02:22:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:37.567Z",
+      "updatedAt": "2026-11-01T09:43:37.567Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-cnblogs",
+          "externalId": "23397024",
+          "url": "https://www.cnblogs.com/vivotech/p/23397024"
+        }
+      ],
+      "duplicateCandidates": [
+        "ad0865b850141ab99544"
+      ]
+    },
+    {
+      "id": "09e591bb1e706473a7f5",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "vivo 广告小游戏：从“写代码“到“说需求“",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/164113486",
+      "author": "vivo_tech",
+      "description": "在广告营销场景中，小游戏的生命周期极短——从策划到上线往往只有数天。传统开发模式下，需求沟通、素材制作、编码联调、测试上线的每个环节都是瓶颈。本文基于 vGame 平台的实践经验，详细阐述如何通过 AI Agent、结构化场景描述和自动化管线，将广告小游戏的开发效率提升一个数量级。",
+      "language": "zh-cn",
+      "publishedAt": "2026-08-27T03:06:23.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/164113486",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/164113486"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0a9ccbb503e0633018de",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "SSR-Merge：把 LoRA 合并从\"参数算术\"变成\"信号路由\" | ICML 2026",
+      "canonicalUrl": "https://www.cnblogs.com/vivotech/p/23312203",
+      "author": "vivotech",
+      "description": "多个 LoRA 合并到一起，画风串味、角色崩坏几乎是必然。vivo BlueImage Lab与南京大学提出 SSR-Merge：不在参数空间做算术，而在信号空间做路由。路由器 R = QG⁻¹ 由数据的二阶统计量直接解出，等价于最小二乘的唯一解析解，无需训练、无需调参，部署时可重参数化为标准 LoRA，推理零额外开销。",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-15T03:17:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:37.567Z",
+      "updatedAt": "2026-11-01T09:43:37.567Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-cnblogs",
+          "externalId": "23312203",
+          "url": "https://www.cnblogs.com/vivotech/p/23312203"
+        }
+      ],
+      "duplicateCandidates": [
+        "4ab9e80c7ca34c5a54f4"
+      ]
+    },
+    {
+      "id": "19818b26d279584fba67",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "告别“散装 AI ”：用 SKILL 编排对存量代码做“微创手术”",
+      "canonicalUrl": "https://www.cnblogs.com/vivotech/p/23009536",
+      "author": "vivotech",
+      "description": "面对涉及存量代码变更的需求，挑战不在于编码，而在于如何安全、精准地修改。本文通过构建一个由1个编排器和多个单职责Skill组成的AI协作流水线，将影响分析、规则沉淀、埋点和回归检查等隐性工作流程化，确保在实现功能的同时，对存量代码实现最小侵入式改造。",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-17T03:35:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:37.567Z",
+      "updatedAt": "2026-11-01T09:43:37.567Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-cnblogs",
+          "externalId": "23009536",
+          "url": "https://www.cnblogs.com/vivotech/p/23009536"
+        }
+      ],
+      "duplicateCandidates": [
+        "271288d40fdb6261445d"
+      ]
+    },
+    {
+      "id": "1a2b8522d993a09cd6b9",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "KDC 全景：从现实到反馈的完整工程模型 ｜KDC 系列 05",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/169448596",
+      "author": "vivo_tech",
+      "description": "KDC 试图把领域现实、数字表示、知识、记忆、推理、技能、能力、行动和反馈组织成一条连续的业务因果链。本文给出 Reality-to-Feedback 闭环以及对象化、运行时化、治理化三层工程模型，同时区分已验证实践、理论推导和开放问题，说明企业如何从一个高影响业务闭环开始渐进采用。",
+      "language": "zh-cn",
+      "publishedAt": "2026-10-29T03:33:55.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/169448596",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/169448596"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "271288d40fdb6261445d",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "告别“散装 AI ”：用 SKILL 编排对存量代码做“微创手术”",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/165729154",
+      "author": "vivo_tech",
+      "description": "面对涉及存量代码变更的需求，挑战不在于编码，而在于如何安全、精准地修改。本文通过构建一个由1个编排器和多个单职责Skill组成的AI协作流水线，将影响分析、规则沉淀、埋点和回归检查等隐性工作流程化，确保在实现功能的同时，对存量代码实现最小侵入式改造。",
+      "language": "zh-cn",
+      "publishedAt": "2026-09-17T03:34:15.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/165729154",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/165729154"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2cc4fa4c1aaccfe16091",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "KDC 全景：从现实到反馈的完整工程模型 ｜KDC 系列 05",
+      "canonicalUrl": "https://www.cnblogs.com/vivotech/p/23478872",
+      "author": "vivotech",
+      "description": "KDC 试图把领域现实、数字表示、知识、记忆、推理、技能、能力、行动和反馈组织成一条连续的业务因果链。本文给出 Reality-to-Feedback 闭环以及对象化、运行时化、治理化三层工程模型，同时区分已验证实践、理论推导和开放问题，说明企业如何从一个高影响业务闭环开始渐进采用。",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-29T03:35:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:37.567Z",
+      "updatedAt": "2026-11-01T09:43:37.567Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-cnblogs",
+          "externalId": "23478872",
+          "url": "https://www.cnblogs.com/vivotech/p/23478872"
+        }
+      ],
+      "duplicateCandidates": [
+        "1a2b8522d993a09cd6b9"
+      ]
+    },
+    {
+      "id": "2d8fce33cf00e183b1cb",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "记忆不是存历史，而是治理未来行动｜KDC 系列 04",
+      "canonicalUrl": "https://www.cnblogs.com/vivotech/p/23397697",
+      "author": "vivotech",
+      "description": "记忆的价值不在于保存更多历史，而在于决定哪些历史仍然可以影响未来的判断与行动。本文把记忆放入形成、强化、衰减、冲突、遗忘、迁移和归档的生命周期，并进一步说明反馈验证与错误归因如何帮助系统修正知识、记忆、推理和治理策略。",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-22T02:57:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:37.567Z",
+      "updatedAt": "2026-11-01T09:43:37.567Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-cnblogs",
+          "externalId": "23397697",
+          "url": "https://www.cnblogs.com/vivotech/p/23397697"
+        }
+      ],
+      "duplicateCandidates": [
+        "43db456d003bf637e04b"
+      ]
+    },
+    {
+      "id": "2dea6041e46a2616221f",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "四年、十次告警、数十个技术决策：一个海外电商平台的高并发治理实录",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/164329320",
+      "author": "vivo_tech",
+      "description": "这是一篇海外电商平台近四年线上性能治理的真实复盘。从第一次大促扩容部署失败、Redis 6 节点全线灾难告警，到黄牛单账号上亿请求打垮系统、热 key 将单个 Redis 节点 CPU 压至 99.97%——每一次告警背后，都隐藏着一个更深的架构问题。文章按问题类型分四条线展开：扩容方向的演进、Redis 配置的四轮迭代、hgetall 大 hash 热 key 的三阶段根治、以及黄牛防控从 WAF 封禁到接口逻辑加固的完整过程，完整还原每次排查的推理链路和最终解法。",
+      "language": "zh-cn",
+      "publishedAt": "2026-09-03T03:26:25.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/164329320",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/164329320"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3abe8c006241ff544499",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "ART：妆容迁移框架，重新定义高保真妆容迁移 | ECCV 2026",
+      "canonicalUrl": "https://www.cnblogs.com/vivotech/p/23112494",
+      "author": "vivotech",
+      "description": "vivo 蓝图实验室提出妆容迁移框架 ART，通过两阶段训练将监督信号从合成伪目标逐步锚定到真实参考图像。该方法有效解决了复杂妆容迁移中的细节丢失与身份漂移问题，在多个数据集上取得 SOTA 效果，并发布首个 2K 妆容数据集 MF2K。",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-24T08:14:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:37.567Z",
+      "updatedAt": "2026-11-01T09:43:37.567Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-cnblogs",
+          "externalId": "23112494",
+          "url": "https://www.cnblogs.com/vivotech/p/23112494"
+        }
+      ],
+      "duplicateCandidates": [
+        "43cc1209ca77e46200c0"
+      ]
+    },
+    {
+      "id": "3cb52d82d586bf45d636",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "知识不是文件，也不是向量 | KDC 系列 02",
+      "canonicalUrl": "https://www.cnblogs.com/vivotech/p/23111756",
+      "author": "vivotech",
+      "description": "检索到相关材料，并不等于系统获得了可以用于判断的知识。本文区分 Representation、Knowledge 和 RAG 的职责，提出知识对象、来源证据、成熟度、版本与适用边界等工程要求，说明认知成果如何被验证、引用和持续更新。",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-24T07:34:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:37.567Z",
+      "updatedAt": "2026-11-01T09:43:37.567Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-cnblogs",
+          "externalId": "23111756",
+          "url": "https://www.cnblogs.com/vivotech/p/23111756"
+        }
+      ],
+      "duplicateCandidates": [
+        "7089d6a6d4ea40318661"
+      ]
+    },
+    {
+      "id": "43cc1209ca77e46200c0",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "ART：妆容迁移框架，重新定义高保真妆容迁移 | ECCV 2026",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/166595874",
+      "author": "vivo_tech",
+      "description": "vivo 蓝图实验室提出妆容迁移框架 ART，通过两阶段训练将监督信号从合成伪目标逐步锚定到真实参考图像。该方法有效解决了复杂妆容迁移中的细节丢失与身份漂移问题，在多个数据集上取得 SOTA 效果，并发布首个 2K 妆容数据集 MF2K。",
+      "language": "zh-cn",
+      "publishedAt": "2026-09-24T08:16:07.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/166595874",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/166595874"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "43db456d003bf637e04b",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "记忆不是存历史，而是治理未来行动｜KDC 系列 04",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/168752131",
+      "author": "vivo_tech",
+      "description": "记忆的价值不在于保存更多历史，而在于决定哪些历史仍然可以影响未来的判断与行动。本文把记忆放入形成、强化、衰减、冲突、遗忘、迁移和归档的生命周期，并进一步说明反馈验证与错误归因如何帮助系统修正知识、记忆、推理和治理策略。",
+      "language": "zh-cn",
+      "publishedAt": "2026-10-22T03:00:46.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/168752131",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/168752131"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4ab9e80c7ca34c5a54f4",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "SSR-Merge：把 LoRA 合并从“参数算术“变成“信号路由“ | ICML 2026",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/168008408",
+      "author": "vivo_tech",
+      "description": "多个 LoRA 合并到一起，画风串味、角色崩坏几乎是必然。vivo BlueImage Lab与南京大学提出 SSR-Merge：不在参数空间做算术，而在信号空间做路由。路由器 R = QG⁻¹ 由数据的二阶统计量直接解出，等价于最小二乘的唯一解析解，无需训练、无需调参，部署时可重参数化为标准 LoRA，推理零额外开销。",
+      "language": "zh-cn",
+      "publishedAt": "2026-10-15T03:08:16.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/168008408",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/168008408"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "588a3dae4c0d7a131b84",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "从一键检测到 AI 修复：我们如何把无障碍检查做进研发流程",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/163719331",
+      "author": "vivo_tech",
+      "description": "本文介绍一套覆盖Web端、Vue编码阶段和Android App真机页面的检测工具链：Web端覆盖PC页面与H5页面，Chrome插件发现运行时问题；VS Code插件前置检测并结合大模型辅助修复；桌面端工具基于ADB、截图和 UI XML完成App检查，帮助团队形成质量闭环。",
+      "language": "zh-cn",
+      "publishedAt": "2026-08-13T03:03:20.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/163719331",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/163719331"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "627ba44491d424c18653",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "VINS-120K: 基于大规模4K数据集的超高清图像编辑 | CVPR 2026",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/164114672",
+      "author": "vivo_tech",
+      "description": "4K+图像编辑新突破！针对数据匮乏与细节建模难题，我们发布首个指令式超高分辨率编辑数据集 VINS-120K（含12万精筛4K三元组）。同时提出高频感知适配策略，将预训练低分辨率模型轻松扩展至UHR领域，并配套评测基准 VINS-4KEval。显著提升编辑细节与纹理真实感！",
+      "language": "zh-cn",
+      "publishedAt": "2026-08-27T03:39:45.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/164114672",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/164114672"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "63e8e5d96a9b741aa37b",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "Agent 不能只记录调用了什么，还要记录为什么调用 | KDC 系列 03",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/168002943",
+      "author": "vivo_tech",
+      "description": "一次 Tool 调用即使执行成功，也不代表 Agent 做出了正确且获授权的业务行动。本文提出推理对象作为判断与行动之间的可追溯锚点，并区分 Tool、Skill、Capability 和治理基础设施的责任，让 Agent 保持动态协调能力，同时不再成为所有责任的容器。",
+      "language": "zh-cn",
+      "publishedAt": "2026-10-15T02:51:25.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/168002943",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/168002943"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6f2d61bd7494071da9c3",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "TinySR：面向真实世界图像超分辨率的轻量级扩散模型",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/164330112",
+      "author": "vivo_tech",
+      "description": "本文提出 TinySR，一种面向真实世界图像超分辨率的轻量级扩散模型，通过深度剪枝、动态块间激活以及扩张‑腐蚀策略实现高效推理。",
+      "language": "zh-cn",
+      "publishedAt": "2026-09-03T06:25:31.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/164330112",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/164330112"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7089d6a6d4ea40318661",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "知识不是文件，也不是向量 | KDC 系列 02",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/166594581",
+      "author": "vivo_tech",
+      "description": "检索到相关材料，并不等于系统获得了可以用于判断的知识。本文区分 Representation、Knowledge 和 RAG 的职责，提出知识对象、来源证据、成熟度、版本与适用边界等工程要求，说明认知成果如何被验证、引用和持续更新。",
+      "language": "zh-cn",
+      "publishedAt": "2026-09-24T07:38:34.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/166594581",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/166594581"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "87fd3515075d66cadf5c",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "从知识沉淀到编程范式：AI Coding 项目冷启动落地实践",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/169441251",
+      "author": "vivo_tech",
+      "description": "本文基于 SmartFlow 实践，提出存量业务 AI Coding 冷启动方法：从历史代码和需求中沉淀可复用 Skill，新需求通过规格化、评审、受控实现、验证联调与知识回写闭环交付，降低协同开发成本，推动 AI 成为持续积累的团队资产。",
+      "language": "zh-cn",
+      "publishedAt": "2026-10-29T02:39:59.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/169441251",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/169441251"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "91d9bd2f5e95a79072f3",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "Agent 不能只记录调用了什么，还要记录为什么调用 | KDC 系列 03",
+      "canonicalUrl": "https://www.cnblogs.com/vivotech/p/23311559",
+      "author": "vivotech",
+      "description": "一次 Tool 调用即使执行成功，也不代表 Agent 做出了正确且获授权的业务行动。本文提出推理对象作为判断与行动之间的可追溯锚点，并区分 Tool、Skill、Capability 和治理基础设施的责任，让 Agent 保持动态协调能力，同时不再成为所有责任的容器。",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-15T02:49:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:37.567Z",
+      "updatedAt": "2026-11-01T09:43:37.567Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-cnblogs",
+          "externalId": "23311559",
+          "url": "https://www.cnblogs.com/vivotech/p/23311559"
+        }
+      ],
+      "duplicateCandidates": [
+        "63e8e5d96a9b741aa37b"
+      ]
+    },
+    {
+      "id": "ad0865b850141ab99544",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "域名埋点零侵入实时校验实践：基于代理转发与规则驱动的工具设计",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/168746978",
+      "author": "vivo_tech",
+      "description": "埋点是数据驱动的基础，但大量无配套后台的域名埋点只能靠抓包加肉眼比对测试，自建后台侵入性强。本文介绍 Flyheart Monitor，一套零侵入的域名埋点实时校验工具：在请求必经之路拦截数据校验，不绑定抓包代理，用规则代替人工校验，并将结果沉淀为可归档图片。",
+      "language": "zh-cn",
+      "publishedAt": "2026-10-22T02:29:37.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/168746978",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/168746978"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "cb0086640eb897616f4d",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "从知识沉淀到编程范式：AI Coding 项目冷启动落地实践",
+      "canonicalUrl": "https://www.cnblogs.com/vivotech/p/23478254",
+      "author": "vivotech",
+      "description": "本文基于 SmartFlow 实践，提出存量业务 AI Coding 冷启动方法：从历史代码和需求中沉淀可复用 Skill，新需求通过规格化、评审、受控实现、验证联调与知识回写闭环交付，降低协同开发成本，推动 AI 成为持续积累的团队资产。",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-29T03:02:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:37.567Z",
+      "updatedAt": "2026-11-01T09:43:37.567Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-cnblogs",
+          "externalId": "23478254",
+          "url": "https://www.cnblogs.com/vivotech/p/23478254"
+        }
+      ],
+      "duplicateCandidates": [
+        "87fd3515075d66cadf5c"
+      ]
+    },
+    {
+      "id": "d95d4960d1cd10cdce8d",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "MagicBokeh：单步统一生成式框架实现真实感长焦虚化渲染 | CVPR 2026 Oral",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/163720779",
+      "author": "vivo_tech",
+      "description": "vivo蓝图实验室提出了长焦虚化渲染框架 MagicBokeh，基于一个统一的生成式架构实现长焦虚化渲染。通过交替训练策略、焦点感知掩码注意力与退化感知深度估计，解决了高倍变焦低质输入下噪声放大、边界模糊与误差累积的问题，在合成与真实数据集上均取得SOTA效果，为移动端高效真实感长焦虚化仿真提供了新方案。",
+      "language": "zh-cn",
+      "publishedAt": "2026-08-13T03:42:14.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/163720779",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/163720779"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "da1f8e10e6ce3cadb1ff",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "协同文档下的 Agent 协作闭环：可回滚、可对比的透明化编辑实现",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/163910496",
+      "author": "vivo_tech",
+      "description": "本文结合 AI 编辑器二期调研实践，拆解 Agent 在协同文档中的身份取舍、可回放事实链、side-by-side Diff 展示，以及 run 级精准撤回机制，说明如何让 AI 的改动看得见、退得掉、不误伤协作者。",
+      "language": "zh-cn",
+      "publishedAt": "2026-08-20T02:45:58.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/163910496",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/163910496"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e02cc544c7bb621f6397",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "Octopus：基于无历史数据的梯度正交化的学习框架｜CVPR 2026",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/163912378",
+      "author": "vivo_tech",
+      "description": "Octopus提出了一种基于无历史数据的梯度正交化（HiFGO）的两阶段持续学习框架，通过梯度层面的正交约束有效缓解了任务间的干扰，同时提出两阶段训练策略实现可塑性与稳定性的良好平衡。Octopus在UCIT基准上实现了当前最优性能（SOTA），Avg和Last指标分别超越现有最优方法 2.14% 和 6.82%。",
+      "language": "zh-cn",
+      "publishedAt": "2026-08-20T03:12:40.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/163912378",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/163912378"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e86d900c2c10782db447",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "软件不是从数据开始，而是从现实开始 | KDC 系列 01",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/164814736",
+      "author": "vivo_tech",
+      "description": "当 AI 应用开始在运行时解释数据、选择工具并影响业务状态时，数据表示中的遗漏和歧义可能直接转化为行动风险。本文从退款案例出发，提出 Reality First 的观察顺序：先明确系统面对的领域现实，再讨论现实模型、数字表示以及验证反馈如何共同支撑软件的判断与行动。",
+      "language": "zh-cn",
+      "publishedAt": "2026-09-10T02:52:41.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/164814736",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/164814736"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f66fd32d9f700b92a478",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "SmartPhotoCrafter: 先思考后修图，统一理解-生成的图像优化新范式",
+      "canonicalUrl": "https://www.cnblogs.com/vivotech/p/22918350",
+      "author": "vivotech",
+      "description": "本文提出 SmartPhotoCrafter，一种全新的统一理解—生成—优化框架，为自动图像优化提供了新的技术范式。该方法在保留原始场景的内容结构与细节的同时提升图像质量，实现兼具真实性与美感的自动图像优化。",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-10T03:17:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:37.567Z",
+      "updatedAt": "2026-11-01T09:43:37.567Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-cnblogs",
+          "externalId": "22918350",
+          "url": "https://www.cnblogs.com/vivotech/p/22918350"
+        }
+      ],
+      "duplicateCandidates": [
+        "0180055a7e8b444da550"
+      ]
+    },
+    {
+      "id": "fbb9bcd0852f3317286d",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "title": "扩散模型自引导新范式 SSG：直接交换Token就能变强！ | CVPR 2026 Oral",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/163531909",
+      "author": "vivo_tech",
+      "description": "本文提出了一种适用于扩散模型的全新引导范式——自交换引导。针对传统引导方法高度依赖文本条件、需专门训练或直接加噪导致图像失真的局限性，SSG 提出了一种“无需文本、不加噪声、不改模型”的轻量化策略。",
+      "language": "zh-cn",
+      "publishedAt": "2026-08-06T08:59:22.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.373Z",
+      "updatedAt": "2026-11-01T09:43:29.373Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/163531909",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/163531909"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

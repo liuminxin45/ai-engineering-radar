@@ -1,0 +1,625 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "053824e81d8c9c66e12c",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "小红书 2024 大模型论文分享会来啦，与多位顶会作者在线畅聊！",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/139864284",
+      "author": "REDtech_1024",
+      "description": "ICLR、ACL、CVPR、AAAI、SIGIR、WWW 等国际顶会论文作者在线和你交流",
+      "language": "zh-cn",
+      "publishedAt": "2024-06-21T08:26:57.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/139864284",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/139864284"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0c985020f201bedc1744",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "GitHub 斩获 8300 星，小红书爆火开源 InstantID 要开直播了！",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/136329997",
+      "author": "REDtech_1024",
+      "description": "2 月 29 日 20:00-21:00，InstantID 幕后团队揭晓技术细节！",
+      "language": "zh-cn",
+      "publishedAt": "2024-02-27T11:19:53.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/136329997",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/136329997"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1ae817a26ed88f90441f",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "CVPR 2024｜多模态场景感知，高保真运动预测框架来了！",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/138713395",
+      "author": "REDtech_1024",
+      "description": "小红书创作发布团队提出场景感知运动预测技术（SIF3D），荣获计算机视觉领域顶级会议 CVPR 2024 收录。",
+      "language": "zh-cn",
+      "publishedAt": "2024-05-11T06:42:58.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/138713395",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/138713395"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "420ce6d2d7abc3ecc513",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "时延降低 50%，小红书图数据库如何实现多跳查询性能大幅提升",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/139983435",
+      "author": "REDtech_1024",
+      "description": "小红书图数据库在分布式并行查询上的探索",
+      "language": "zh-cn",
+      "publishedAt": "2024-06-26T02:59:35.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/139983435",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/139983435"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "47181b7c8ef6367b99d3",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "小红书搜索团队提出新解码策略，降低大模型推理成本",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/137834689",
+      "author": "REDtech_1024",
+      "description": "该研究通过引入早停止策略，显著降低大模型自洽性方法的推理成本，并提供可控模式以供动态选择，此创新成果已被人工智能顶会 ICLR 2024 接收。",
+      "language": "zh-cn",
+      "publishedAt": "2024-04-16T10:16:33.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/137834689",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/137834689"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4cdb7d57f53bfe852069",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "大数据、数据架构、推荐冷启动...小红书的 AI 数据新方案都在这个会",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/137835369",
+      "author": "REDtech_1024",
+      "description": "4 月 19 日 - 20 日，探索人工智能与数据最新行业实践，抽奖赢「DataFunCon 2024 · 上海站」门票！",
+      "language": "zh-cn",
+      "publishedAt": "2024-04-16T10:41:51.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/137835369",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/137835369"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5e2ead8157c2cb397e90",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "小红书离线数仓提效新思路，提升百倍回刷性能",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/136837672",
+      "author": "REDtech_1024",
+      "description": "为了突破现有以 Spark 为核心的数仓架构在资源和时间消耗上的限制，小红书数据仓库团队将 StarRocks 融入到离线处理流程，替换掉部分 Spark 处理的任务，并优化较为耗时的 Cube 计算，大幅度提高了数据的执行效率。 小红书数据仓库团队经过一系列创新实践，通过改造离线处理链路，有效降低了任务资源消耗，提前数据产出时间，将回刷时间减少 90%，回刷成本减少 99% 以上。阅读本文，小红书技术团队和你分享离线数仓提效新思路！",
+      "language": "zh-cn",
+      "publishedAt": "2024-03-19T03:51:07.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/136837672",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/136837672"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "633c489349583fe365aa",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "小红书从记忆机制解读信息检索，提出新范式获得 EACL Oral",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/138319597",
+      "author": "REDtech_1024",
+      "description": "小红书搜索团队提出生成式密集检索范式，实现了记忆机制与向量匹配机制的优势互补，该项工作已被 EACL 2024 接收为 Oral。",
+      "language": "zh-cn",
+      "publishedAt": "2024-04-29T09:36:33.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/138319597",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/138319597"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "681748bc06e950efff66",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "直播预告｜原生 vs 跨端，聊聊鸿蒙应用开发的真实感受",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/135875161",
+      "author": "REDtech_1024",
+      "description": "“纯血鸿蒙”的出现，将给大前端&大终端带来哪些机会和挑战？",
+      "language": "zh-cn",
+      "publishedAt": "2024-01-26T13:30:39.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/135875161",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/135875161"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "872bc476cf1887cfda71",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "小红书多模态团队建立新「扩散模型」：解码脑电波，高清还原人眼所见",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/135782434",
+      "author": "REDtech_1024",
+      "description": "解锁「CV 读心术」，迈向高质量的脑电视觉信号重建",
+      "language": "zh-cn",
+      "publishedAt": "2024-01-23T11:18:04.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/135782434",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/135782434"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8c194fb403591dcb320f",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "你的新春照小红书包了！速来定制新春头像，技术让年味更浓",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/136149401",
+      "author": "REDtech_1024",
+      "description": "新年新气象，换个新春照迎龙年！",
+      "language": "zh-cn",
+      "publishedAt": "2024-02-18T04:12:37.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/136149401",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/136149401"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a62244db5e01fb470f38",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "和小红书一起参会！ 了解大模型与大数据融合的技术趋势",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/140126998",
+      "author": "REDtech_1024",
+      "description": "7 月 5 至 6 日，「DataFunCon2024·北京站」将在北京丽亭华苑酒店火热开展！",
+      "language": "zh-cn",
+      "publishedAt": "2024-07-02T07:00:33.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/140126998",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/140126998"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b3bab588d5e49269611f",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "小红书搜索团队提出全新框架：验证负样本对大模型蒸馏的价值",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/135559942",
+      "author": "REDtech_1024",
+      "description": "人工智能顶会 AAAI 2024 放榜，小红书入选论文抢先看！",
+      "language": "zh-cn",
+      "publishedAt": "2024-01-12T10:54:52.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/135559942",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/135559942"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bcac13fc467a5deb548c",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "WebGPU 引领前端未来，互动渲染如何驱动小红书业务增长？",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/139422223",
+      "author": "REDtech_1024",
+      "description": "第十期技术沙龙精彩回顾来啦～海内外专家齐聚小红书，速看 5000+人直播围观的 Web 技术干货！",
+      "language": "zh-cn",
+      "publishedAt": "2024-06-05T09:34:03.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/139422223",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/139422223"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c24c83c47daad54d9cb1",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "代码之外：工程师的成长进阶秘籍",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/135697664",
+      "author": "REDtech_1024",
+      "description": "不止会写代码，看十年互联网工程师如何成长蜕变",
+      "language": "zh-cn",
+      "publishedAt": "2024-01-19T06:45:25.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/135697664",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/135697664"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e39111d812b1042321b5",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "W3C 标准带头人开讲 WebGPU 前沿趋势，小红书线下沙龙开放报名！",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/139011784",
+      "author": "REDtech_1024",
+      "description": "大咖来袭！5月24日 19:00-21:30 François Daoust 与你会面",
+      "language": "zh-cn",
+      "publishedAt": "2024-05-17T11:48:05.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/139011784",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/139011784"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "eb313ff0dde1a4e0bdd2",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "小红书论文刷新 SOTA：人体动作预测再升级，能精准到指尖",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/135960618",
+      "author": "REDtech_1024",
+      "description": "在AAAI 2024 上，小红书提出 EAI 框架，开创性地实现了对人体躯干关节及细粒度手势的未来动作协同预测。",
+      "language": "zh-cn",
+      "publishedAt": "2024-01-31T11:17:02.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/135960618",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/135960618"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "eba83e90d2a703b1007f",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "释放数据湖潜力：小红书如何实现数仓效率与成本的双重优化",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/136458415",
+      "author": "REDtech_1024",
+      "description": "实时技术与数据湖技术的结合，成为催动数仓架构迭代的新引擎，提升数仓产出时效&查询性能，助力数据协助业务决策走上新台阶",
+      "language": "zh-cn",
+      "publishedAt": "2024-03-04T09:49:15.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/136458415",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/136458415"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f10b1f96ed47e530fe8c",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "小红书云原生 Kafka 技术剖析：分层存储与弹性伸缩",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/139199247",
+      "author": "REDtech_1024",
+      "description": "一文解析小红书 Kafka 如何基于云原生存储和负载均衡等技术，实现 60% 的存储成本节省和 10 倍的扩缩容运维效率提升, 并成功打造「弹性伸缩、按量付费」的商品化模式",
+      "language": "zh-cn",
+      "publishedAt": "2024-05-25T08:27:32.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/139199247",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/139199247"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fe60332e47774714ed7d",
+      "publisherId": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "title": "小红书 X WSDM 2024「对话式多文档问答挑战赛」火热开赛！",
+      "canonicalUrl": "https://blog.csdn.net/REDtech_1024/article/details/135429696",
+      "author": "REDtech_1024",
+      "description": "即日起- 2 月 1 日报名参赛，5 万奖金池等你来拿！",
+      "language": "zh-cn",
+      "publishedAt": "2024-01-06T09:52:53.000Z",
+      "discoveredAt": "2026-11-01T09:43:34.553Z",
+      "updatedAt": "2026-11-01T09:43:34.553Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-csdn",
+          "externalId": "https://blog.csdn.net/REDtech_1024/article/details/135429696",
+          "url": "https://blog.csdn.net/REDtech_1024/article/details/135429696"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

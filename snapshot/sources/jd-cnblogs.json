@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "jd-cnblogs",
+    "lastCheckedAt": "2026-11-01T09:43:38.397Z",
+    "lastSuccessAt": "2026-11-01T09:43:38.397Z",
+    "nextRunAt": "2026-11-02T09:43:38.397Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 11,
+    "httpStatus": 200
+  }
+}

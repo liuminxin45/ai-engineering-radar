@@ -1,0 +1,625 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "0ddfa2fcdabb9bc23f8b",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "2024 抖音欢笑中国年(二)：AnnieX互动容器创新玩法解析",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/137324306",
+      "author": "ByteDanceTech",
+      "description": "本文基于24年抖音春节活动业务背景，介绍了字节跨端容器AnnieX在游戏互动套件上的探索，致力于提升容器在游戏互动场景的优化能力。业务背景AnnieX作为字节一方游戏统一容器，服务字节内部电商、直播、UG等跨端场景业务。在字节一方游戏互动场景，有大量的一方游戏业务对容器有特定的流量、端能力和游戏优化的诉求。因此我们不断深入互动游戏业务特点，为字节游戏提供完善游戏端能力和流量运营能力，同时提供游戏互...",
+      "language": "zh-cn",
+      "publishedAt": "2024-04-02T01:03:20.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/137324306",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/137324306"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1217292ae44a116f236f",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "2024 抖音欢笑中国年(四)：渲染技术实践与探索",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/137710639",
+      "author": "ByteDanceTech",
+      "description": "作者：陈瑞、欧阳浩铸、王武俊、倪梵云前言抖音在2024年春节期间推出了欢笑中国年系列活动，为用户带来了全新的体验和乐趣。而SAR Creator则为该项目研发工作提供了重要的技术支持。SAR Creator是一款基于 Typescript 的高性能、轻量化的互动解决方案，目前支持了浏览器和跨端框架平台，服务于字节内部的各种互动业务。这些绚烂多彩的互动场景当然也离不开实时渲染技术的支持，因此本文将专...",
+      "language": "zh-cn",
+      "publishedAt": "2024-04-12T01:01:26.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/137710639",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/137710639"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "36f6954d14e4b86a3d80",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "打造企业级智能问答系统的秘密：如何使用云数据库 PostgreSQL 版实现向量检索",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/134432456",
+      "author": "ByteDanceTech",
+      "description": "本文就如何利用火山引擎云数据库 PostgreSQL 版和大语言模型技术（Large Language Model，简称 LLM），实现企业级智能交互式问答系统进行介绍。通过本文，你将会了解交互式问答系统的原理，学习 PostgreSQL 的向量化存储和检索技术，以及大语言模型交互技术等。背景在大数据的浪潮下，众多企业建立了自己的知识库，以便于信息检索和知识查询。然而，随着知识库内容的膨胀，传统的...",
+      "language": "zh-cn",
+      "publishedAt": "2023-11-15T03:23:16.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/134432456",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/134432456"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "39a120277b41eea13996",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "2024 抖音欢笑中国年(一)：招财神龙互动技术揭秘",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/137095408",
+      "author": "ByteDanceTech",
+      "description": "字节跳动旗下的抖音等 App 在 2024 年春节期间推出了欢笑中国年系列活动，在实现增长业务目标的同时，为用户带来了全新的体验和乐趣。「招财神龙」是其中的一个重要玩法。前言本次春节活动，使用到了字节内的主要前端、跨端、互动技术产品。主要涉及：跨端框架提供了首屏直出的方案使其具有较短的首屏时间，能够大大提升业务加载成功率。跨端框架也提供了 Canvas 作为 SAR Creator 等渲染引擎的...",
+      "language": "zh-cn",
+      "publishedAt": "2024-03-27T02:29:11.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/137095408",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/137095408"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3b28326792f916f84646",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "用 Addon 增强 Node.js 和 Electron 应用的原生能力",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/134609437",
+      "author": "ByteDanceTech",
+      "description": "前言Node.js Addon 是 Node.js 中为 JavaScript 环境提供 C/C++ 交互能力的机制。其形态十分类似 Java 的 JNI，都是通过提供一套 C/C++ SDK，用于在 C/C++ 中创建函数方法、进行数据转换，以便 JavaScript / Java 等语言进行调用。这样编写的代码通常叫做 Bindings。此外还有基于 C ABI Calling Convent...",
+      "language": "zh-cn",
+      "publishedAt": "2023-11-24T04:02:12.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/134609437",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/134609437"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4500f62e2dea17d8c763",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "西瓜视频RenderThread引起的闪退问题攻坚历程",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/134985982",
+      "author": "ByteDanceTech",
+      "description": "背景影响西瓜之前存在过一类RenderThread闪退，从堆栈上看，全部都是系统so调用，给人的第一印象像是一个系统bug，无从下手。闪退集中在Android 5~6上，表现为打开直播间立即闪退。该问题在2022年占据Native Crash Top5，2023年更是上升到到Top1。因此有必要投入时间和精力再重新审视一下这个问题。在历经多周的源码分析和排查后，逐步明确了问题根因并修复，最终取得了...",
+      "language": "zh-cn",
+      "publishedAt": "2023-12-13T09:45:17.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/134985982",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/134985982"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5f593e9d57ebe76d8559",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "抖音 ANR 自动归因平台建设实践",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/136576261",
+      "author": "ByteDanceTech",
+      "description": "背景介绍本文在 2024 年初最新一期『抖音客户端基础技术大揭秘』技术沙龙活动中已做过专题分享，本次将内容重新整理文章进行分享。公众号后台回复技术沙龙可查看沙龙回放及 PPT~抖音作为一个超大型的应用，我们在 ANR 问题治理上面临着很大的挑战。首先对于存量问题的优化，由于缺少有效的归因手段，一些长期的疑难问题一直难以突破解决，例如长期位于 Top 1 的 nativePollOnce 问题。同时...",
+      "language": "zh-cn",
+      "publishedAt": "2024-03-08T07:00:45.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/136576261",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/136576261"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "706a271916183d1098c9",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "Kotlin 云端差分缓存技术",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/135944707",
+      "author": "ByteDanceTech",
+      "description": "本文由字节跳动 Buildinfra 团队出品。在我们的工程上线 Monorepo 全源码后，Kotlin 编译成了整个编译中最耗时的步骤，全源码过程中大量的 BuildCache Miss 导致我们的编译数据落后原来多仓二进制时代很多，且业界没有相关的解决方案。本篇文章我们来具体阐述下 BuildInfra 团队自研的解决方案 - Kotlin 云端差分方案的原理和技术实现。一、Monorepo...",
+      "language": "zh-cn",
+      "publishedAt": "2024-01-30T02:30:43.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/135944707",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/135944707"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7196984cfd0d75bfe7f9",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "抖音大型直播的画质优化实践",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/134213436",
+      "author": "ByteDanceTech",
+      "description": "面临挑战随着抖音内容生态的不断丰富，越来越多的大型赛事在抖音平台进行直播，世界杯/春晚/亚运会等各项赛事节目引来大量用户观看。卡塔尔世界杯期间，抖音提供的稳定高质直播画面为观众带来了完美的观赛体验，决赛的 PCU 高达 3700W+。不同赛事节目涉及链路众多，且不同赛事之间存在差异，如何保障各链路的画质稳定并进一步提升画质，是一个巨大的挑战。如何应对挑战？画质优化链路大型赛事直播涉及链路较长，不同...",
+      "language": "zh-cn",
+      "publishedAt": "2023-11-03T02:30:22.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/134213436",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/134213436"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8d8a6c83ff7b9e7164b4",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "使用火山引擎 APMPlus 解决抖音Top 1 Java 崩溃的通用优化方案",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/134705372",
+      "author": "ByteDanceTech",
+      "description": "背景近3个月，抖音 Android 版面临一个多次触发线上报警的崩溃问题，全量版本和灰度版本的异常数据激增，该问题不仅容易触发报警，更成为了 Java Top 1 崩溃问题，带来巨大困扰，急需攻坚解决。本文展现了具体的分析过程、优化思路和解决方案，同时提供了已集成该方案的实用工具。初步分析多维特征我们以某发版期间数据为例进行分析：机型方面：比较分散，有聚集部分samsung sm-s9180 占比...",
+      "language": "zh-cn",
+      "publishedAt": "2023-11-29T10:41:52.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/134705372",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/134705372"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "90dabc26a8b5f072eeb0",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "字节电商双11 大促容量保障是如何做的？",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/134984198",
+      "author": "ByteDanceTech",
+      "description": "前言Rhino 简介Rhino是字节自研全链路容量评估产品，致力于构建完整的全链路容量评估解决方案（覆盖：容量预估->资源准备->数据准备->容量验证->监控->分析->决策->处理反馈）；围绕容量在稳定性、成本、效率 三方面提供业务全方位基础支撑。Rhino 目前已经成为字节各业务容量评估主流解决方案，并且历年来在业务大型活动稳定性保障中（抖音春节项目、...",
+      "language": "zh-cn",
+      "publishedAt": "2023-12-12T10:02:15.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/134984198",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/134984198"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a0bc66d1bb83b0b08a15",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "火山引擎 ByteHouse 的增强型数据导入技术实践",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/134473369",
+      "author": "ByteDanceTech",
+      "description": "作为企业数字化建设的必备要素，易用的数据引擎能帮助企业提升数据使用效率，更好提升数据应用价值，夯实数字化建设基础。数据导入是衡量OLAP引擎性能及易用性的重要标准之一，高效的数据导入能力能够加速数据实时处理和分析的效率。作为一款OLAP引擎，火山引擎云原生数据仓库ByteHouse源于开源ClickHouse，在字节跳动多年打磨下，提供更丰富的能力和更强性能，能为用户带来极速分析体验，支撑实时数据...",
+      "language": "zh-cn",
+      "publishedAt": "2023-11-17T04:01:09.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/134473369",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/134473369"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a2b79e516d44d81d579f",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "CVPR 2024 | Modular Blind Video Quality Assessment：模块化无参视频质量评估",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/136497349",
+      "author": "ByteDanceTech",
+      "description": "无参视频质量评估 (Blind Video Quality Assessment，BVQA) 在评估和改善各种视频平台并服务用户的观看体验方面发挥着关键作用。当前基于深度学习的模型主要以下采样/局部块采样的形式分析视频内容，而忽视了实际空域分辨率和时域帧率对视频质量的影响，随着高分辨率和高帧率视频投稿逐渐普及，特别是跨分辨率/帧率视频转码档位画质评估场景中，这种影响变得更加不可忽视。在本文中，我们...",
+      "language": "zh-cn",
+      "publishedAt": "2024-03-05T10:30:52.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/136497349",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/136497349"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a55bfda2307750ac938d",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "字节跳动百万级Metrics Agent性能优化的探索与实践",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/135376306",
+      "author": "ByteDanceTech",
+      "description": "背景metricserver2 （以下简称Agent）是与字节内场时序数据库 ByteTSD 配套使用的用户指标打点 Agent，用于在物理机粒度收集用户的指标打点数据，在字节内几乎所有的服务节点上均有部署集成，装机量达到百万以上。此外Agent需要负责打点数据的解析、聚合、压缩、协议转换和发送，属于CPU和Mem密集的服务。两者结合，使得Agent在监控全链路服务成本中占比达到70%以上，对Ag...",
+      "language": "zh-cn",
+      "publishedAt": "2024-01-03T03:43:45.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/135376306",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/135376306"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ab7ee41c7920656c464e",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "2024 抖音欢笑中国年(五)：Wasm、WebGL 在互动技术中的创新应用",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/137849528",
+      "author": "ByteDanceTech",
+      "description": "前言随着 Web 前端技术的不断发展，越来越多的新兴技术方案被引入到 Web 开发中，其中 Wasm 和 WebGL 作为前端领域的两大利器，为开发者带来了更多的可能性。本文将结合2024 年抖音欢笑中国年的部分项目，重点介绍如何利用 Wasm 和 WebGL 对目前流行的一些前端互动技术（比如 Lottie、渲染引擎、动画图片等）进行创新和实践，利用 Wasm 和 WebGL 等新技术方案的特性...",
+      "language": "zh-cn",
+      "publishedAt": "2024-04-16T01:01:10.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/137849528",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/137849528"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ce1ce24515ffebec3bbd",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "2024 抖音欢笑中国年(三)：编辑器技巧与实践",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/137531515",
+      "author": "ByteDanceTech",
+      "description": "前言本次春节活动中，我们大部分场景使用内部的 SAR Creator互动方案来实现。SAR Creator 是一款基于 TypeScript 的高性能、轻量化的互动解决方案，目前支持了Web和字节内部跨端框架平台，服务于字节内部的各种互动业务，包括但不限于抖音春节、抖音直播礼物、抖音UG活动等。SAR Creator 编辑器支持了图形化界面，提供了各类完善的系统（光照、动画、脚本等）供用户快速便捷...",
+      "language": "zh-cn",
+      "publishedAt": "2024-04-08T01:01:17.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/137531515",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/137531515"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "efe892fbe9ad73459d89",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "Monorepo 解决方案 — 基于 Bazel 的 Xcode 性能优化实践",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/136698882",
+      "author": "ByteDanceTech",
+      "description": "背景介绍书接上回《Monorepo 解决方案 — Bazel 在头条 iOS 的实践》，在头条工程切换至 Bazel 构建系统后，为了支持用户使用 Xcode 开发的习惯，我们使用了开源项目 Tulsi 作为生成工具，用于将 Bazel 工程转换为 Xcode 工程。但是在使用的过程中，我们发现了一些问题，其中影响较大的是，Xcode 工程卡顿：对于头条这种大型项目来说，Xcode 卡顿一直是本地...",
+      "language": "zh-cn",
+      "publishedAt": "2024-03-13T03:00:56.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/136698882",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/136698882"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f1ea68c10f2709fd1be7",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "字节跳动基础架构SRE-Copilot获得2023 CCF国际AIOps挑战赛冠军",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/135420707",
+      "author": "ByteDanceTech",
+      "description": "近日，2023 CCF国际AIOps挑战赛决赛暨“大模型时代的AIOps”研讨会在北京成功举办，活动吸引了来自互联网、运营商、科研院所、高校、软硬件厂商等领域多名专家学者参与，为智能运维的前沿学术研究、落地生产实践打开了新思路。决赛中，从初赛两百多支队伍中脱颖而出的十支入围队伍分别展示了各自的方案，并进行了现场答辩，评审专家从选题方向、创新性、实用性、完整度和实验复现结果等多角度进行了综合评定，最...",
+      "language": "zh-cn",
+      "publishedAt": "2024-01-05T02:31:07.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/135420707",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/135420707"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f4623ee7f5a4b2fb62fc",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "2024 AI & 前端：回首展望，光芒未至，破晓之前！",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/136003514",
+      "author": "ByteDanceTech",
+      "description": "前言回望 2023 年，ChatGPT 的突然爆火，让 AI 无疑成为最为值得注目的新兴领域之一，我们也一起见证了生成式 AI 的寒武纪大爆发。这一年来，国内外的生成式 AI 、大模型和相关产品以令人眼花缭乱的速度更新迭代，新的创业浪潮风起云涌。在这 AI 浪潮下，也让我们有了新的开发思考，探索着在各个环节中“前端 & AI”的应用场景。勇于探索的前端开发者们已经开始挥舞着 AI 的“魔法...",
+      "language": "zh-cn",
+      "publishedAt": "2024-02-02T07:56:28.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/136003514",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/136003514"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fee3cc6fc01f435fc35f",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "CVPR 2024 | CAMixerSR 动态注意力分配的超分辨率加速框架",
+      "canonicalUrl": "https://blog.csdn.net/ByteDanceTech/article/details/136494583",
+      "author": "ByteDanceTech",
+      "description": "背景随着相关技术和应用的发展，比如超高清屏幕、虚拟现实（VR）等沉浸式体验的增加，用户对超高分辨率图像和视频的需求变得越来越强烈。在这些场景中，图像的质量和清晰度对于提供最佳的用户体验至关重要。超高分辨率不仅能提供更清晰、更真实的视觉效果，还能在一定程度上增强人们的互动和沉浸感，在一些VR场景中我们需要8K甚至16K的才可以满足需求。然而要生成或者处理这些超高分辨率的内容，对算力的要求也是与日增长...",
+      "language": "zh-cn",
+      "publishedAt": "2024-03-05T10:30:52.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.651Z",
+      "updatedAt": "2026-11-01T09:43:29.651Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-csdn",
+          "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/136494583",
+          "url": "https://blog.csdn.net/ByteDanceTech/article/details/136494583"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

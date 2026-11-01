@@ -1,0 +1,625 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "154d681f7c4e6f50932b",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "AI专栏 | 提效4.7倍，携程机票前端迈向AI Coding自治",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/152096027",
+      "author": "ctrip_tech",
+      "description": "在做CRN转xTaro的时候，需要让大模型知道之前CRN上使用的组件，在xTaro上的平替是什么，比如在CRN工程使用View这个组件，在xTaro工程下使用的是XView，以及两个组件属性字段和API对应关系。我们基于这份数据做了可视化，方便我们检查生成质量以及后续维护，以ABTest组件为例，内容包括了组件转换概述，导入组件方式，API映射规则，相关代码样例few-shots，最后还有注意事项，是一些开发经验内容沉淀。非常期待AI Coding走向完全自治，而我们身在其中，是这一切的见证者。",
+      "language": "zh-cn",
+      "publishedAt": "2025-09-25T08:01:27.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/152096027",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/152096027"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "18a82086ed180f64f53c",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "干货 | 别让重试成为系统灾难，携程微服务重试治理之道",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/153762934",
+      "author": "ctrip_tech",
+      "description": "在某些场景下，会出现一些暂时性的错误，如网络抖动、服务重新部署等场景，可能立即发起重试结果依然是失败的，通常等待一段时间后再重试的话成功率会较高，并且也可以分散上游重试的时间，可以避免因为同时都重试而导致的下游瞬间流量高峰。我们假设微服务的调用方式如上图所示，当服务E出现异常时，服务E上报异常，随后触发服务C重试，而服务C调用服务E异常后同样选择抛出异常，这样子又会引发服务B重试，假设每个服务都接入重试机制，每个服务的重试次数为n，这样子就会导致最终的请求变成了n的4次方。",
+      "language": "zh-cn",
+      "publishedAt": "2025-10-22T09:03:37.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/153762934",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/153762934"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2aa23a06a8b8920ca92d",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "干货 | 准实时数仓落地实战：携程商旅基于Paimon的湖仓一体架构设计与批流融合实践",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/151131699",
+      "author": "ctrip_tech",
+      "description": "在我们内部实践中，基于Tag的增量计算替代全量ETL后，作业的处理速度提升了4～5倍，尤其在增量数据较少的ETL场景下，带来了显著收益。这不仅显著提升了计算效率，还增强了数据的可维护性和灵活性。在确保数据准确性的基础上，为提升数据新鲜度，我们设计了如图所示的实时与离线混合链路：订单票号等核心字段的加工使用Flink+Paimon准实时链路完成，最终的订单筛选则通过Spark批作业定时执行，产出的结果表通过携程内部DaaS服务注册为API，便于下游系统实时获取提醒订单，兼顾了数据的时效性与服务的稳定性。",
+      "language": "zh-cn",
+      "publishedAt": "2025-09-02T09:03:38.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/151131699",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/151131699"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "473467e8ec11d54a564b",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "干货 | 查询从秒级到毫秒级，携程 UBT 系统迁移 StarRocks 存算分离架构实战",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/155327074",
+      "author": "ctrip_tech",
+      "description": "该架构既提升了资源利用率，避免资源浪费，又显著降低了存储成本，同时也保证了查询速度。此外，利用 show proc compactions 命令，可以获取具体的 Compaction 任务信息，包括任务的开始与结束时间、总执行时长，以及本地与远端数据的扫描量。在 Compaction 层面，传统模式由于提交频繁，容易产生大量 KB 或 MB 级的小文件，频繁触发 Compaction，导致系统开销偏高。在 I/O 性能方面，传统写入以小文件为主，属于随机写入模式，读取时需要频繁打开大量小文件，效率低下。",
+      "language": "zh-cn",
+      "publishedAt": "2025-11-27T09:00:59.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/155327074",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/155327074"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "477e9230a9e5c7f85ba7",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "＜span class=“js_title_inner“＞出海 | 携程《全球化技术架构与实战》一书火爆上市：让全球用户“丝滑”跨域旅行，携程如何靠一套系统搞定数据合规与多活？＜/span＞",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/157684741",
+      "author": "ctrip_tech",
+      "description": "为了描述这种复杂性，我们引入合规区的概念。在合规区内采用如图12所示的简单多 Region 架构会有一定的缺陷：假如遇到单 Region 故障，用户的请求会被路由到同合规区内的其他可用 Region 进行处理，但是此时 Region 内没有该用户相关的数据，无法完成相关的业务处理。所以，为了让系统能够区分不同合规区的用户，并找到相关的用户数据位置，我们需要设计一套覆盖全链路的统一染色方案，在手机端、接入层、应用层、控制层、数据层等环节对数据进行标记，从而使得系统可以将用户的合规区信息不断传递，如图5所示。",
+      "language": "zh-cn",
+      "publishedAt": "2025-12-11T09:01:57.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/157684741",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/157684741"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "493dc6b6fb84d6d07729",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "AI专栏 | 携程“AI测试员”已上岗：每秒生成一个高质量测试用例",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/150633590",
+      "author": "ctrip_tech",
+      "description": "如下是某团队2周的试点数据情况，按照该团队内历史测试用例编写情况统计，一年的测试用例编写量达到了3万+多个，根据目前的数据，2.8万+个用例已经可以由AI生成，将极大的提升测试用例的编写效率。如下是我们进行方案探索的主要路程：前期先进行有效方案调研及不同LLM模型的对比，找到最适合的模型，然后经过提示词框架构建、多维度增强和优化，再到测试工作的集成，最终实现了一套融合。为了提高测试用例生成的效率和质量，本项目设计了一套基于AIGC技术的智能化解决方案，实现从PRD到测试用例的自动化转化。",
+      "language": "zh-cn",
+      "publishedAt": "2025-08-22T08:31:42.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/150633590",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/150633590"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "515c9a07486ed2eb9df6",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "AI专栏 | 携程数字人直播实战：成本降低90%，我们如何实现规模化落地？",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/154807090",
+      "author": "ctrip_tech",
+      "description": "系统感知到用户事件后进行策略判断，对于需要响应的事件由AI模型生成回复内容和回复形式，文字回复可以直接在评论区输出，如果需要主播语音回复，先获取当前直播的进度，找到正在播放的片段，然后根据生成回复视频所需时间计算回复需要插入的点，找到插入点的前一个视频，获取到其最后一帧画面，用于生成回复视频，生成好后插入到播放点，待直播进度到回复视频时就会进行播讲。数字人直播合成的视频可以设置循环规则，在之后的一段时间内进行不断的直播，直播的次数越多，则均摊的成本越低，相比实时合成推流的方式大幅降低了成本。",
+      "language": "zh-cn",
+      "publishedAt": "2025-11-13T08:00:44.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/154807090",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/154807090"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "64e138bfa91f3fc26137",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "出海 | 携程《全球化技术架构与实战》一书火爆上市：让全球用户“丝滑”跨域旅行，携程如何靠一套系统搞定数据合规与多活？",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/155829326",
+      "author": "ctrip_tech",
+      "description": "为了描述这种复杂性，我们引入合规区的概念。在合规区内采用如图12所示的简单多 Region 架构会有一定的缺陷：假如遇到单 Region 故障，用户的请求会被路由到同合规区内的其他可用 Region 进行处理，但是此时 Region 内没有该用户相关的数据，无法完成相关的业务处理。所以，为了让系统能够区分不同合规区的用户，并找到相关的用户数据位置，我们需要设计一套覆盖全链路的统一染色方案，在手机端、接入层、应用层、控制层、数据层等环节对数据进行标记，从而使得系统可以将用户的合规区信息不断传递，如图5所示。",
+      "language": "zh-cn",
+      "publishedAt": "2025-12-11T09:01:57.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/155829326",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/155829326"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6b5cbf800fab2b3470a0",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "干货 | 9亿数据归因分析跑进15秒：携程智能归因系统如何用 Ray+DuckDB 破解算力危机？",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/160229446",
+      "author": "ctrip_tech",
+      "description": "通过 REST API 把节点任务提交后，Ray 的“任务分解器”会对节点逻辑再做一次更细粒度的拆解：解析用户输入的多维分析 SQL，依据其中的 Union/Join 键以及数据分布特征，将原本庞大的查询拆成数十甚至上百个完全独立的微任务。作为 Ray 集群的核心编排组件，通过 K8s 自定义资源（CR）RayCluster定义集群配置（如 Head/Worker 节点资源规格、副本数、镜像版本），实现 Ray 集群的自动化部署、扩容、缩容与销毁，无需人工干预集群生命周期。这是架构改造的第一步，也是基础。",
+      "language": "zh-cn",
+      "publishedAt": "2026-04-16T09:04:52.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/160229446",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/160229446"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "80cad2595ce0d011cb2b",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "干货 | 携程 JDK25 升级踩坑记：一场由 G1GC “偷走”对象引发的数据静默损坏",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/159773107",
+      "author": "ctrip_tech",
+      "description": "生产环境中 Spark 已基于 JDK21 运行，为使用 JDK25 LTS 版本的新特性紧凑对象头（Compact Object Headers）（JEP 519，开启参数-XX:+UseCompactObjectHeaders），实现内存占用节省、GC 效率提升与性能优化，计划将运行环境升级至 JDK25，并完成了 Spark 对 JDK25 的适配工作，支持灰度切换。当 Native 的压缩代码正在向指定的内存地址写入压缩后的数据时，G1 GC 把这个 Java 数组的内存地址给转移了。",
+      "language": "zh-cn",
+      "publishedAt": "2026-04-02T09:02:04.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/159773107",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/159773107"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "81fbf8555f9b5dd3a908",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "出海 | 携程《全球化技术架构与实战》一书火爆上市，看全球流量调度“最强大脑” UCS 如何破解合规与高可用难题",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/156083147",
+      "author": "ctrip_tech",
+      "description": "以下是一个基础的 UDL 策略模型，它描述的调度场景是：在ComplianceArea_1所标记的合规区下，目前包含两个Region（REGION_A、REGION_B）和四组UDL（UDL_A、UDL_B、UDL_C、UDL_D）的用户数据，其中所有来自 UDL_A 与 UDL_B 的用户都路由到 REGION_A ，来自 UDL_C 与 UDL_D 的用户都路由到 REGION_B。为了满足全球化架构下的流量调度需求，UCS 实现了灵活的策略模型，具备了描述全球流量调度策略的能力。",
+      "language": "zh-cn",
+      "publishedAt": "2025-12-18T09:05:32.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/156083147",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/156083147"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "827581efc8e95469b3ff",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "出海 | 携程《全球化技术架构与实战》一书火爆上市，看 DRC 如何支撑全球旅游业务无缝切换",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/155619218",
+      "author": "ctrip_tech",
+      "description": "由于复制两端的 MySQL 实例执行 DDL 的过程存在时间差，目标端数据库的表结构与源端数据库的表结构可能存在差异，此时待复制的MySQL二进制日志可能和目标端表结构不匹配（举个例子，源端数据库在 T1 时刻执行完 DDL，目标端数据库在 T2 时刻执行完 DDL，则 T1 ～ T2 期间源端 源数据库产生的二进制日志对应的表结构与目标端数据库的表结构不一致），导致同步模块执行二进制文件中的SQL时报错。对于数据同步模块到目标数据库这条链路，在实际运维过程中，我们发现数据复制的瓶颈往往在对端数据库性能。",
+      "language": "zh-cn",
+      "publishedAt": "2025-12-05T03:46:01.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/155619218",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/155619218"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8f7266bcfa9c8f0b6430",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "携程问道（workbuddy 合作版）技能接入与使用文档",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/161060695",
+      "author": "ctrip_tech",
+      "description": "本文档详细介绍携程问道（workbuddy 合作版）技能（wendao-partner-workbuddy-skill）的接入流程、使用方法、环境配置及注意事项，适用于需要集成该技能并调用携程问道 API 获取旅行相关信息的开发 / 运维人员。该技能针对各类旅行相关问询场景触发（如酒店 / 机票预订、景点推荐、行程规划、签证查询等），触发后通过调用携程问道 API 返回专业的旅行规划与攻略信息，不依赖通用知识库回答。用户的旅行相关自然语言查询（完整问句，如 “暑假去成都的景点推荐”）",
+      "language": "zh-cn",
+      "publishedAt": "2026-05-13T02:08:50.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/161060695",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/161060695"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9f34bebfe7b61aaa957e",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "AI专栏 | 告别“黑盒评审”：我们让LLM为数据仓库模型打了分，效率提升70%+",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/156996861",
+      "author": "ctrip_tech",
+      "description": "数仓建模本质上是面向业务的抽象过程，即便采用业界通用的维度建模方法论，不同工程师在实践中的理解与实现也存在显著差异，这使得建模质量的标准化评估成为行业难题。的数据仓库模型评价体系。其他模型特征包括：表名、任务ID、表类型、层级、数据域、业务域、业务过程、粒度、对应主表、字段明细、需求链接、飞书云链接、业务说明、关联关系、血缘明细、DQC明细等，均可通过公共元数据直接获取。重复建设探查是数据仓库的重复建设评价核心量化手段，是控制数据仓库规模，节约算力成本的深度手段，是保障数据仓库健康成长的重要指标。",
+      "language": "zh-cn",
+      "publishedAt": "2026-01-15T09:01:06.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/156996861",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/156996861"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b54f2e882afcba711e4a",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "干货 | 执行个 systemd 命令，竟然让容器CPU“打架”？一文看懂绑核错乱的根因",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/158980525",
+      "author": "ctrip_tech",
+      "description": "发布通过 systemd 管理的组件时，会执行 systemd daemon-reload , 这会触发 systemd 对账，将它自己持有的配置数据同步到 cgroup , 从上图我们可以看到它持有的配置数据是错的，同步到 cgroup 后就导致不同的绑核容器使用同样的 cpu 核了，这就是业务超时的原因。当时的 CPU 核上在做什么？容器创建时，systemd 拿到了错误的绑核信息，runc 拿到了正确的绑核信息，由于 systemd 先写入配置，runc 后覆盖写入，此时容器的绑核信息最终保持正确。",
+      "language": "zh-cn",
+      "publishedAt": "2026-03-12T08:30:46.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/158980525",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/158980525"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c7e9b5528fbd8e757a87",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "AI论文 | 携程提出多任务服务框架，让大模型“一人成军”，节省成本90.9%",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/151841113",
+      "author": "ctrip_tech",
+      "description": "提出一个三阶段框架：过滤不相似的任务、在高资源任务上进行微调，以及在所有任务的混合体上进行微调。在高资源任务上进行微调，然后在混合体上进行微调的策略，通过允许不同任务具有不同的训练轮次，从而有效实现提前停止，防止低资源任务的过拟合或高资源任务的欠拟合。进行了全面的实验，结果表明我们的方案在不同基准上都具有实用性，并能够替代单任务方法训练的任务。提出了一种多任务服务框架，该框架利用大语言模型（LLMs）来提升多任务方法的效果，该方法可以同时处理多个任务，并且性能与单任务方法相当。图 1: 两种在线服务策略。",
+      "language": "zh-cn",
+      "publishedAt": "2025-09-18T08:01:43.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/151841113",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/151841113"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ccac0125683a9fe4fe64",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "干货 | 告别人工测试困局，携程 BDD 驱动的自动化测试落地与效能跃迁",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/154168507",
+      "author": "ctrip_tech",
+      "description": "为了提高代码质量，降低风险，必须采取更加系统化和自动化的测试方法，来弥补人工编写测试用例中的不足，确保更高的行覆盖率和分支覆盖率，从而提升软件的稳定性和可靠性。未来，随着跨端测试能力的完善和智能化技术的引入，自动化测试将在软件质量保障中扮演更核心的角色。当前 Mock 用例代码仓库的结构，可以较快实现已有数据的复用，例如 A 和 B 两个场景下所需的 Mock 数据中 10 个接口有 8 个接口数据完全相同，那仅需额外创建不同的 2 个接口数据，新增的 Mock 用例 B 可复用 A 的接口数据。",
+      "language": "zh-cn",
+      "publishedAt": "2025-10-30T09:01:31.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/154168507",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/154168507"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d7ab9c091506b3f042cb",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "干货 | 从 T+1 到分钟级：携程基于 Flink 与 Paimon 的近实时湖仓建设实践",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/155079060",
+      "author": "ctrip_tech",
+      "description": "无论是基于时间戳的补数，还是带有条件的特殊补数，cdc 二阶段的作业都会在补数完成之后自动切换到增量消费的模式。用户可以通过配置，可以进行一键补数。从 MySQL 到 Kafka，再到 Paimon，数据流在各环节的出入口均增加了表级别的指标埋点，用户可基于这些指标配置数据断流、延迟等告警，实现了精细化的可观测性（图 9-图 10）。两者的深度融合有效提升了查询性能与数据一致性，实现了计算与存储的高效协同，进一步完善了湖仓一体的生态体系，为用户带来更灵活、更高效的数据分析体验， 如图 11 所示。",
+      "language": "zh-cn",
+      "publishedAt": "2025-11-20T08:00:40.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/155079060",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/155079060"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "da88ffcbc6ca0d6423d6",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "AI论文 | 当旅游数据遇见二维 Transformer：TripCast 如何预测机票需求？",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/154505473",
+      "author": "ctrip_tech",
+      "description": "携程机票团队在模型迭代过程中，经历了从机器学习模型、深度学习模型，到自研模型的过程，并没有陷入惯性思维，去卷“更长序列、更复杂的模型结构”，而是从问题本身出发，思考手中的数据特点，从数据出发设计更匹配的模型，用简单的transformer encoder加上patch tokenization、progressive masking等技巧就打。传统的时间序列预测模型，像 ARIMA、LSTM、Transformer，都是基于“一维时间序列”设计的：过去的销量数据 → 预测未来的销量数据。",
+      "language": "zh-cn",
+      "publishedAt": "2025-11-06T09:00:51.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/154505473",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/154505473"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f791ce670022175f7124",
+      "publisherId": "ctrip-official",
+      "companyId": "ctrip",
+      "title": "AI专栏 | 告别人工写脚本！多模态大模型驱动携程UI自动化测试迈入“描述即生成”阶段",
+      "canonicalUrl": "https://blog.csdn.net/ctrip_tech/article/details/150404736",
+      "author": "ctrip_tech",
+      "description": "系统启动AI生成服务模块，开始核心的智能生成流程。该方法以页面截图、DOM树结构以及自然语言用例描述作为输入，充分利用多模态大模型的跨模态理解能力和逻辑推理能力，实现对UI元素的智能识别与定位，并自动生成可持续执行的UI自动化测试用例。在大模型技术发展的初期阶段，本研究采用大模型结合页面控件的文本属性信息和自然语言用例描述，实现UI自动化用例的自动生成。该阶段的核心技术是构建了一个基于多模态大模型的自主推理与动态调试框架，能够根据高层次的用例描述和页面截图信息，自动进行测试步骤的规划和分解。",
+      "language": "zh-cn",
+      "publishedAt": "2025-08-14T10:25:54.000Z",
+      "discoveredAt": "2026-11-01T09:43:33.089Z",
+      "updatedAt": "2026-11-01T09:43:33.089Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ctrip-csdn",
+          "externalId": "https://blog.csdn.net/ctrip_tech/article/details/150404736",
+          "url": "https://blog.csdn.net/ctrip_tech/article/details/150404736"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

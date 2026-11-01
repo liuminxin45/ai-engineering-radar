@@ -1,0 +1,1507 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "0138032b320f82714266",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "QCon-OPPO大规模CV预训模型技术及实践",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041242363",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2022-01-07T06:16:08.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041242363",
+          "url": "https://segmentfault.com/a/1190000041242363"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "03d9afc5e075ea2965d2",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "OPPO数据湖统一存储技术实践",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040526841",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-08-17T02:35:18.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040526841",
+          "url": "https://segmentfault.com/a/1190000040526841"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0cfdf11572a446816db1",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "如何识别并解决复杂的dcache问题",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040256987",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-06-29T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040256987",
+          "url": "https://segmentfault.com/a/1190000040256987"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "13f273f12a2be51204fc",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "潜藏在手机中的新威胁：免安装应用安全指北",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040967869",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-11-16T06:16:15.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040967869",
+          "url": "https://segmentfault.com/a/1190000040967869"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "16d195dd33532dbe35c3",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "虚拟机与容器的混合管理实践",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040926384",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-11-08T07:25:32.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040926384",
+          "url": "https://segmentfault.com/a/1190000040926384"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1bc5ab43dfab8cdf0069",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "QCon-小布助手对话系统工程实践",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041195360",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-12-29T01:54:34.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041195360",
+          "url": "https://segmentfault.com/a/1190000041195360"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "22d8eb21c262f5698bde",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "大数据SQL优化之数据倾斜解决案例全集",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041228713",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2022-01-05T06:43:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041228713",
+          "url": "https://segmentfault.com/a/1190000041228713"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "255128babf5ef65e933b",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "深入理解Flutter的图形图像绘制原理——图形库skia剖析",
+      "canonicalUrl": "https://segmentfault.com/a/1190000038827450",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-01-05T08:30:05.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000038827450",
+          "url": "https://segmentfault.com/a/1190000038827450"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2da25553a9e2bc2ce3f4",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "ORTC与SIP融合通信服务架构",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041261952",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2022-01-11T01:30:06.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041261952",
+          "url": "https://segmentfault.com/a/1190000041261952"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2e7cd51113c14f8009c2",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "Docker hung住问题解析系列(一)：pipe容量不够",
+      "canonicalUrl": "https://segmentfault.com/a/1190000037737270",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2020-11-05T08:54:49.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000037737270",
+          "url": "https://segmentfault.com/a/1190000037737270"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "31174972866ea93f6564",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "如何用 CI (持续集成) 保证研发质量",
+      "canonicalUrl": "https://segmentfault.com/a/1190000038162287",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2020-11-13T08:37:36.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000038162287",
+          "url": "https://segmentfault.com/a/1190000038162287"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "32184ff081aff5a0eca8",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "PendingIntent重定向：一种针对安卓系统和流行App的通用提权方法——BlackHat EU 2021议题详解（上）",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041532963",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2022-03-11T07:23:42.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041532963",
+          "url": "https://segmentfault.com/a/1190000041532963"
+        }
+      ],
+      "duplicateCandidates": [
+        "4e6cbf9f9ac64bb96c92"
+      ]
+    },
+    {
+      "id": "33d6a93616d82fd1548d",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "图数据库平台建设及业务落地",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040985325",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-11-19T02:24:42.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040985325",
+          "url": "https://segmentfault.com/a/1190000040985325"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3d3a620904eb27f1cde4",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "oCPX简介——广告界的“无人驾驶”技术",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040141809",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-06-08T07:13:29.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040141809",
+          "url": "https://segmentfault.com/a/1190000040141809"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "45187edc5516a2c678a6",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "关于java单线程经常占用cpu 100%的分析",
+      "canonicalUrl": "https://segmentfault.com/a/1190000039995011",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-05-13T07:41:48.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000039995011",
+          "url": "https://segmentfault.com/a/1190000039995011"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4e6cbf9f9ac64bb96c92",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "PendingIntent重定向：一种针对安卓系统和流行App的通用提权方法——BlackHat EU 2021议题详解 （下）",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041550819",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2022-03-15T07:05:16.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041550819",
+          "url": "https://segmentfault.com/a/1190000041550819"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5a85d82a6fed606d6618",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "由IDC余热回收创新技术实践引出的跨界合作探讨",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041152308",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-12-21T02:16:15.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041152308",
+          "url": "https://segmentfault.com/a/1190000041152308"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5d3219f2eb65beb577b0",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "OPPO大数据离线任务调度系统OFLOW",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041166580",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-12-23T03:20:15.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041166580",
+          "url": "https://segmentfault.com/a/1190000041166580"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5e4a348e5940fc6a5509",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "智能语音技术：从哪儿来？往何处去？",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040567568",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-08-24T09:33:39.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040567568",
+          "url": "https://segmentfault.com/a/1190000040567568"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5e82ded302d18a1b88ec",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "OPPO大数据计算集群资源调度架构演进",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041174533",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-12-24T07:19:18.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041174533",
+          "url": "https://segmentfault.com/a/1190000041174533"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6dd94c24ceb714d776a5",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "基于Kubernetes和OpenKruise的可变基础设施实践",
+      "canonicalUrl": "https://segmentfault.com/a/1190000038290468",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2020-11-26T03:18:19.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000038290468",
+          "url": "https://segmentfault.com/a/1190000038290468"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "708a74d04e8cfb3a2e21",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "OPPO云VPC网络实践",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041112371",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-12-14T01:26:29.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041112371",
+          "url": "https://segmentfault.com/a/1190000041112371"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8a62a4b91b861a6c4b05",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "我就获取个时间，机器就down了",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040979111",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-11-18T01:56:31.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040979111",
+          "url": "https://segmentfault.com/a/1190000040979111"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8c0f436418b7b1bb79cc",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "QCon-OPPO数据平台Cloud Lake 降本增效实践",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041075271",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-12-07T01:58:31.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041075271",
+          "url": "https://segmentfault.com/a/1190000041075271"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8f78e93511b4aac43ddd",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "下一代人工智能：逻辑理解？物理理解？",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040338181",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-07-13T04:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040338181",
+          "url": "https://segmentfault.com/a/1190000040338181"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "900bcf2ad759f96dcacc",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "10分钟掌握Java性能分析诀窍",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040332531",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-07-12T05:11:45.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040332531",
+          "url": "https://segmentfault.com/a/1190000040332531"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9a4003c8964bd63bd0a8",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "QCon-oCPX多目标多场景联合建模在OPPO的实践",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041201607",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-12-30T02:28:52.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041201607",
+          "url": "https://segmentfault.com/a/1190000041201607"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a1b6a291f290466a11fe",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "一例智能网卡(mellanox)的网卡故障分析",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040408205",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-07-27T02:54:08.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040408205",
+          "url": "https://segmentfault.com/a/1190000040408205"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a5cf8dbf2590ada358d7",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "全链路异步Rest客户端 ESA RestClient",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041579589",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2022-03-21T02:42:10.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041579589",
+          "url": "https://segmentfault.com/a/1190000041579589"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a5e0605e4d86cbc9a1ba",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "docker的衰落与kubernetes的兴起",
+      "canonicalUrl": "https://segmentfault.com/a/1190000038422821",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2020-12-09T03:02:09.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000038422821",
+          "url": "https://segmentfault.com/a/1190000038422821"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a8db90f21572a44d2bae",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "云原生Web服务框架ESA Restlight",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040299102",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-07-06T07:35:31.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040299102",
+          "url": "https://segmentfault.com/a/1190000040299102"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ac3ecae327cb1c9058fc",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "关于numa loadbance的死锁分析",
+      "canonicalUrl": "https://segmentfault.com/a/1190000038258147",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2020-11-23T07:42:52.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000038258147",
+          "url": "https://segmentfault.com/a/1190000038258147"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "aef6b499af8d016f4b47",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "OPPO互联网业务多活架构演进和实践",
+      "canonicalUrl": "https://segmentfault.com/a/1190000038531206",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2020-12-18T07:38:21.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000038531206",
+          "url": "https://segmentfault.com/a/1190000038531206"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "af57925249463200e3af",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "深度学习中的分布式训练",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040445734",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-08-03T02:28:39.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040445734",
+          "url": "https://segmentfault.com/a/1190000040445734"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b073530c3dbc45b3ad90",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "AI算力加速之道",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041485197",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2022-03-02T10:01:39.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041485197",
+          "url": "https://segmentfault.com/a/1190000041485197"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b0bd2bd78470497a35eb",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "Realtime DB技术详解",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040375240",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-07-20T07:23:32.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040375240",
+          "url": "https://segmentfault.com/a/1190000040375240"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b3a61c1d9eb5af2f6a0c",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "统一预估引擎的设计与实现",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040192624",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-06-17T09:33:32.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040192624",
+          "url": "https://segmentfault.com/a/1190000040192624"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b484549916bdddcb2955",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "Flink Sql Gateway的原理与实践",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041127869",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-12-16T06:21:30.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041127869",
+          "url": "https://segmentfault.com/a/1190000041127869"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b6f70cc48700d0f76a00",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "OPPO加入LF AI & Data基金会，持续推动可持续生态建设",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040225328",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-06-23T06:07:02.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040225328",
+          "url": "https://segmentfault.com/a/1190000040225328"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ce3fe7f149617d3d76a0",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "数据库查询性能优化指南",
+      "canonicalUrl": "https://segmentfault.com/a/1190000039989132",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-05-12T10:13:01.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000039989132",
+          "url": "https://segmentfault.com/a/1190000039989132"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d6457b8fdb50aad2a7e2",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "qiankun 微前端原理与实践",
+      "canonicalUrl": "https://segmentfault.com/a/1190000038396151",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2020-12-07T02:39:57.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000038396151",
+          "url": "https://segmentfault.com/a/1190000038396151"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d9d06dfbeb49afdcf920",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "MySQL 分布式事务的“路”与“坑”",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041557115",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2022-03-17T13:00:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041557115",
+          "url": "https://segmentfault.com/a/1190000041557115"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d9dccfe377f9eb829c3d",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "中间件运维之故障自愈",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040491126",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-08-10T03:28:32.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040491126",
+          "url": "https://segmentfault.com/a/1190000040491126"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e0d82c7af9858530b4dd",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "揭秘QUIC的性能与安全",
+      "canonicalUrl": "https://segmentfault.com/a/1190000038852325",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-01-06T08:42:58.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000038852325",
+          "url": "https://segmentfault.com/a/1190000038852325"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ef0931a989d7242c9816",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "实体链接在小布助手和OGraph的实践应用",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041109316",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-12-13T07:18:01.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041109316",
+          "url": "https://segmentfault.com/a/1190000041109316"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ef23c37eb63d40546273",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "OPPO云数据库访问服务技术揭秘",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041660251",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2022-04-06T02:31:09.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041660251",
+          "url": "https://segmentfault.com/a/1190000041660251"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f70571e47136ff0eeee2",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "如何设计并实现存储QoS？",
+      "canonicalUrl": "https://segmentfault.com/a/1190000037774276",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2020-11-09T07:51:24.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000037774276",
+          "url": "https://segmentfault.com/a/1190000037774276"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f7f4b61f1be5e6ed03b2",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "OPPO小布助手算法系统探索、实践与思考",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041189363",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-12-28T01:43:13.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041189363",
+          "url": "https://segmentfault.com/a/1190000041189363"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fb58e618d64259735479",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "OPPO大数据离线计算平台架构演进",
+      "canonicalUrl": "https://segmentfault.com/a/1190000041133735",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-12-17T02:57:03.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000041133735",
+          "url": "https://segmentfault.com/a/1190000041133735"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fe3ff21d47be8894c9fb",
+      "publisherId": "oppo-official",
+      "companyId": "oppo",
+      "title": "Elastic-Job的执行原理及优化实践",
+      "canonicalUrl": "https://segmentfault.com/a/1190000040903752",
+      "author": "OPPO数智技术",
+      "language": "zh-CN",
+      "publishedAt": "2021-11-03T03:05:35.000Z",
+      "discoveredAt": "2026-11-01T09:43:36.755Z",
+      "updatedAt": "2026-11-01T09:43:36.755Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "oppo-segmentfault",
+          "externalId": "https://segmentfault.com/a/1190000040903752",
+          "url": "https://segmentfault.com/a/1190000040903752"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

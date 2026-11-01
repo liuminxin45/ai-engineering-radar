@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "dewu-official",
-    "lastCheckedAt": "2026-11-01T09:14:35.134Z",
-    "lastSuccessAt": "2026-11-01T09:14:35.134Z",
-    "nextRunAt": "2026-11-02T09:14:35.134Z",
+    "lastCheckedAt": "2026-11-01T09:43:28.589Z",
+    "lastSuccessAt": "2026-11-01T09:43:28.589Z",
+    "nextRunAt": "2026-11-02T09:43:28.589Z",
     "consecutiveFailures": 0,
-    "etag": "\"85c25-1G8gBHuMbA7nUqtj2A1Cu12VWm0\"",
+    "etag": "\"85c25-7fORTu6lTsmYlZNVPTS433UiHH0\"",
     "status": "success",
     "discovered": 10,
     "httpStatus": 200

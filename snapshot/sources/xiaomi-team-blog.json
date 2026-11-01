@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "xiaomi-team-blog",
+    "lastCheckedAt": "2026-11-01T09:43:41.541Z",
+    "lastSuccessAt": "2026-11-01T09:43:41.541Z",
+    "nextRunAt": "2026-11-02T09:43:41.541Z",
+    "consecutiveFailures": 0,
+    "etag": "W/\"60ab208b-c71e3\"",
+    "lastModified": "Mon, 24 May 2021 03:42:03 GMT",
+    "status": "success",
+    "discovered": 20,
+    "httpStatus": 200
+  }
+}

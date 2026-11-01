@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "oppo-segmentfault",
+    "lastCheckedAt": "2026-11-01T09:43:36.755Z",
+    "lastSuccessAt": "2026-11-01T09:43:36.755Z",
+    "nextRunAt": "2026-11-02T09:43:36.755Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 50,
+    "httpStatus": 200
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "bilibili-csdn",
+    "lastCheckedAt": "2026-11-01T09:43:35.163Z",
+    "lastSuccessAt": "2026-11-01T09:43:35.163Z",
+    "nextRunAt": "2026-11-02T09:43:35.163Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 20,
+    "httpStatus": 200
+  }
+}

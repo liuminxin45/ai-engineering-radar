@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "08b51a01359b131e6109",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "title": "Codex 驱动的移动端AI全栈开发：从 Relay 原型图到可交付链路",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/22824796",
+      "author": "jcloud",
+      "description": "摘要 AI 编程工具降低了跨端开发门槛，但“让 AI 写页面”并不等于“完成移动端交付”。PC 运营端页面通常以功能闭环为中心，设计约束较弱，研发可以基于组件库快速搭建；移动端 C 端页面直接面对用户，Relay 原型图和 UI 设计稿不仅是视觉参考，更是交互、信息层级、状态反馈和业务信任感的综合契",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-03T06:37:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:38.397Z",
+      "updatedAt": "2026-11-01T09:43:38.397Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "22824796",
+          "url": "https://www.cnblogs.com/Jcloud/p/22824796"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "34d623bd3e49efa28693",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "title": "ScoAI：面向供应链的运筹原生决策智能",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/23367542",
+      "author": "jcloud",
+      "description": "核心观点：可复用学习组件的设计与评价，应以其支持的决策为中心，而非仅考察其输出内容。 本文导读 供应链库存管理需要在需求与供给均存在不确定性的条件下，对补货数量、库存配置和执行时点作出决策。基础模型与智能体已可用于需求估计、供应商信息解析和候选计划生成，但模型输出并不等同于业务决策。只有将其纳入明确",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-20T01:48:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:38.397Z",
+      "updatedAt": "2026-11-01T09:43:38.397Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "23367542",
+          "url": "https://www.cnblogs.com/Jcloud/p/23367542"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3ce0d853e1e08ea2d93f",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "title": "数据涅槃：Agentic 重塑搜推数据生产体系",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/23059071",
+      "author": "jcloud",
+      "description": "写在前面：AI 进入生产，不等于 AI 接管生产 当前大模型已经能够理解需求、生成代码和解释错误，但数据生产的难点并不只是“写出一段 SQL”。一个需求还要经过数据源确认、口径澄清、加工编排、资源规划、任务提交、调度运行、结果交付和故障处置。任何一步缺少都可能让“看起来正确”的任务变成生产事故。 因",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-21T02:35:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:38.397Z",
+      "updatedAt": "2026-11-01T09:43:38.397Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "23059071",
+          "url": "https://www.cnblogs.com/Jcloud/p/23059071"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "61bc1feab997f2291120",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "title": "DDD落地实践-架构师眼中的餐厅 | 京东云技术团队",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/17942507",
+      "author": "jcloud",
+      "description": "在去年、我整理了一篇名为《如何做架构设计？》的文章，主要探讨了架构设计的目标和过程，然而、那是一篇概括性的文章，用于启发思路，并不是具体的实践指南，因此、我一直期望给出具体参考案例。 我几乎忘了这件事，如今回顾、我发现并没有合适的案例可供参考，现有的案例要么不完整、要么是与业务耦合的特定场景，要么无",
+      "language": "zh-CN",
+      "publishedAt": "2024-01-03T01:35:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:38.397Z",
+      "updatedAt": "2026-11-01T09:43:38.397Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "17942507",
+          "url": "https://www.cnblogs.com/Jcloud/p/17942507"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "766b04863a4b81bdbf81",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "title": "Claude Code vs Codex 记忆体系深度对比",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/22787431",
+      "author": "jcloud",
+      "description": "从分层记忆模型、持久化策略、自动整理机制、跨会话传递等维度，对两大 AI Agent 记忆体系进行架构级深度剖析。 一句话总结 Claude Code 让机器主动替你记忆，Codex 让你亲手为机器立约—— 要经验自动沉淀与生态扩展，选 Claude Code；要行为确定与审计可控，选 Codex；",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-01T03:09:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:38.397Z",
+      "updatedAt": "2026-11-01T09:43:38.397Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "22787431",
+          "url": "https://www.cnblogs.com/Jcloud/p/22787431"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9a21da0ada544ac6032e",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "title": "拆解海博 AI-Native 落地保障：海博团队 AI 知识库能力建设",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/23093316",
+      "author": "jcloud",
+      "description": "海博系统：京东海博隶属于北京达冠信息技术有限公司，是京东集团本地生活事业部自主研发的数字化中台SaaS系统，专注为本地零售商家提供全流程的即时零售数字化解决方案。海博系统从商品管理、履约管理、库存管理、员工管理、财务管理、供应链管理等商家经营环节着手 ，全链路、全场景的助力商家降本增效 ，提升经营效",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-23T05:39:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:38.397Z",
+      "updatedAt": "2026-11-01T09:43:38.397Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "23093316",
+          "url": "https://www.cnblogs.com/Jcloud/p/23093316"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "aa8a35284b4992716a21",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "title": "OxygenData-Vibe搭建：用 AI Coding重新定义数据看板搭建",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/23467127",
+      "author": "jcloud",
+      "description": "前言：让数据看板开发变得像对话一样简单 长期以来，数据看板开发主要有两种方式：一种是使用标准化 BI 工具，交付快、成本低，但图表样式、交互体验和功能扩展都受限于 BI 本身的能力；另一种是自研定制开发，能够充分满足复杂和个性化需求，但需要投入大量研发资源，交付周期也更长。比如一个通过 BI 只需要",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-28T06:08:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:38.397Z",
+      "updatedAt": "2026-11-01T09:43:38.397Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "23467127",
+          "url": "https://www.cnblogs.com/Jcloud/p/23467127"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bad4ff318c4ecf0580c6",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "title": "上游给空、下游拿到 -1，我把故障一直追到了 commons-beanutils 的构造函数",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/22722919",
+      "author": "jcloud",
+      "description": "引 这篇手记是一份事后复盘，写在我们已经把修复推上线、把测试用例跑绿、把约束文档沉淀进团队库之后。 非研发同事，可以直接从第八章开始看，前七章都是讲排障和代码分析。 故障本身不复杂，修复也不复杂，但这次排查真正让我想写下来的，不是技术本身——而是从问题提报到解决全程AI的作用： 问题定位：业务方反馈",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-27T10:13:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:38.397Z",
+      "updatedAt": "2026-11-01T09:43:38.397Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "22722919",
+          "url": "https://www.cnblogs.com/Jcloud/p/22722919"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c73162414f5e31fabbc7",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "title": "从零构建一个生产级记忆型 AI Agent —— AgentScope 项目全景技术与学习指南",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/23083883",
+      "author": "jcloud",
+      "description": "从零构建一个生产级记忆型 AI Agent —— AgentScope 项目全景技术与学习指南 本文既是本项目的完整技术文档，也是一份以真实工程为载体的 AI Agent 开发学习教程。全文遵循「先讲理论、再结合本项目真实代码印证」的写法，所有结论均有据可依（源自项目 md 设计文档、.joycod",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-22T11:55:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:38.397Z",
+      "updatedAt": "2026-11-01T09:43:38.397Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "23083883",
+          "url": "https://www.cnblogs.com/Jcloud/p/23083883"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f188799d8dab1b75b036",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "title": "81.8 秒的视频，我们改了 15 个版本：一次纯 Codex 驱动的 AI-native 视频实践",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/23002534",
+      "author": "jcloud",
+      "description": "大家好，如果现在给你一份产品资料，让你在几天内做成一支有传播力的视频，你会从哪里开始？写脚本、找素材、做画面、试配音、挑音乐……每一步都像在提醒你：这件事需要一整支团队。 这一次，我们换了一种做法。你只用负责把目标说清楚、挑选喜欢的方向，并在每一轮说出真实感受；Codex 接住后面的脚本、分镜、动效",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-16T13:20:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:38.397Z",
+      "updatedAt": "2026-11-01T09:43:38.397Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "23002534",
+          "url": "https://www.cnblogs.com/Jcloud/p/23002534"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fc2b37a024b570d99436",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "title": "SKill测评：谁才是真正的Skill之王？",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/22679409",
+      "author": "jcloud",
+      "description": "背景 2026年，Skill 的热度不减，已成为 AI 辅助编程领域的标配。在日常研发中，无论是沉淀个人经验，还是将团队的优秀范本标准化，将知识“蒸馏”为 Skill 已是大家的常规操作。但随之而来的问题是：一个 Skill 的“好坏”，究竟由谁定义？评判它的标准又是什么？ 带着这个困惑，我近期翻阅",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-25T08:13:00.000Z",
+      "discoveredAt": "2026-11-01T09:43:38.397Z",
+      "updatedAt": "2026-11-01T09:43:38.397Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "22679409",
+          "url": "https://www.cnblogs.com/Jcloud/p/22679409"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

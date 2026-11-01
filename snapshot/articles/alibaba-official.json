@@ -1,0 +1,625 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "0c3075558902ba33856d",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "Sparkplug 规范中涉及 MQTT Broker 的 5 个关键概念",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131640034",
+      "author": "alitech2017",
+      "description": "Sparkplug 是一种为 SCADA 系统量身定制的工业物联网通信协议。它为工业设备和应用提供了一种标准的通信格式，实现了不同厂商设备的互操作性。Sparkplug 规范由 Cirrus Link Solutions 和 Eclipse Foundation 共同制定。它是开放的，不属于某一家公司。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-10T07:24:37.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131640034",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131640034"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "215582fca37d708888d1",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "【OpenVI—论文解读系列】达摩院高清人像美肤模型ABPN CVPR论文深入解读",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131575730",
+      "author": "alitech2017",
+      "description": "相较于互娱场景的磨皮美颜，广告级、影楼级的精细化美肤给算法带来了更高的要求与挑战。另一方面，在去除瑕疵的过程中，需要尽可能的保留皮肤的纹理、质感，实现高精度的皮肤修饰；最后也是十分重要的一点，随着摄影设备的不断迭代，专业摄影领域目前常用的图像分辨率已经达到了4K甚至8K，这对算法的处理效率提出了极其严苛的要求。为此，我们以实现专业级的智能美肤为出发点，研发了一套高清图像的超精细局部修图算法ABPN，在超清图像中的美肤与服饰去皱任务中都实现了很好的效果与应用。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-06T06:19:16.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131575730",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131575730"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2afd0b805e03cba50796",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "数据隐私为先：EMQX Cloud BYOC 架构解析",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131640199",
+      "author": "alitech2017",
+      "description": "EMQ 近期推出了 EMQX Cloud BYOC，采用了以数据隐私为先的架构，为解决这些问题提供了一个理想的方案。用户可以在自己的云环境中部署 MQTT 集群，完全掌控自己的数据隐私和安全。随着物联网的飞速发展，保护数据隐私和安全变得愈发重要。构建一个安全、可靠、可扩展的物联网基础设施成为企业的首要任务。本文将深入剖析 EMQX Cloud BYOC 的架构，并探讨它如何保障您的物联网基础设施安全。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-10T07:29:15.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131640199",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131640199"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "31df31acfebb0e8b8326",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "谈一谈文件系统的多租户实践",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131640074",
+      "author": "alitech2017",
+      "description": "多租户是云服务的重要属性。通过集群级别调度云服务实例，亦或是机器级别调度来自不同云服务实例的请求，云服务既要保证整个集群的物理资源都得到高效的利用，同时也要保证每个租户都能达到预期的性能指标。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-10T07:25:29.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131640074",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131640074"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "397781fc069fa5f62998",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "Seata Saga 模式快速入门和最佳实践",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131575709",
+      "author": "alitech2017",
+      "description": "本文主要介绍 Seata Saga 模式的使用以及最佳实践，围绕三个部分展开，第一部分是 Seata Saga 的简介、第二部分是带大家快速入门，学习怎么使用 Seata Saga 模式，最后一部分将会给大家分享一些 Seata Saga 实践中的经验，帮助用户更快、更好得使用 Seata Saga 模式。Seata 是一款开源的分布式事务解决方案，致力于在微服务架构下提供高性能和简单易用的分布式事务服务。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-06T06:16:05.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131575709",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131575709"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4716909cf12b3e8abb38",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "2023 年最适用于工业物联网领域的三款开源 MQTT Broker",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131655432",
+      "author": "alitech2017",
+      "description": "MQTT 最初作为一种轻量级的发布/订阅消息传递协议而设计，如今已经成为工业物联网（IIoT）和工业 4.0 发展的重要基础。它的意义在于实现了各类工业设备与云端的无缝连接，促进了运营技术（OT）和信息技术（IT）的融合。本文对比分析了 2023 年工业物联网领域最优秀的三款 MQTT Broker，介绍了它们的优点、缺点和应用场景。同时，还展示了如何利用这三款 MQTT Broker，为您的工业物联网解决方案打造统一命名空间（UNS）架构。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-11T02:51:11.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131655432",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131655432"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "51c503b6168f19b5a9ff",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "【达摩院OpenVI—通用检测系列之视频目标检测】(ICASSP 2023) 针对流感知的长短支路网络 LongShortNet",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131591713",
+      "author": "alitech2017",
+      "description": "传统视频目标检测（Video Object Detection, VOD）任务以一段视频作为输入，利用视频的时序信息进行目标检测，并最终输出每一帧视频帧的检测结果。其相比图像目标检测（Image Object Detection, IOD）任务，优势在于能够利用视频的时序信息，对运动模糊、图像失焦、遮挡、物体姿态变化等困难的场景具有更强的鲁棒性。然而，传统的VOD和IOD都是离线（offline）的检测，即仅考虑算法的检测精度，未考虑算法的延时。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-07T02:37:28.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131591713",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131591713"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "536c1e3205f2cd26e1c8",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "阿里云斩获 4 项年度云原生技术服务优秀案例",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131554175",
+      "author": "alitech2017",
+      "description": "云原生是一种基于容器化、微服务等技术的应用开发和部署模式，它可以帮助企业快速构建和部署应用程序，提高应用的可靠性、弹性和可扩展性，让企业可以更加敏捷地响应市场需求，快速上线新产品和服务，提高数字化转型的效率和速度，利用云原生技术架构和理念构建数字化新底座正在成为各行各业数字创新的实践重点。日前，在 ICT 中国·2023 高层论坛-云原生产业发展论坛上，由阿里云容器服务提供技术支持的。两大产品技术方案，共同获得 2023 年度云原生应用实践先锋——云原生技术服务优秀案例。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-05T05:59:30.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131554175",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131554175"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5f6c2e4df3c1c7c0b019",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "10分钟速成！在微信公众号增加AI助手的超简单攻略",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/142203349",
+      "author": "alitech2017",
+      "description": "在阿里云上，只需 10 分钟即可在您的微信公众号（订阅号）上部署集成一个 AI 智能客服，以便全天候（7x24）回应客户咨询，提升用户体验、增强业务竞争力！按照本方案即可实现0元体验部署（免费试用额度内）、无技术门槛，人人皆可快速上手玩转AI。",
+      "language": "zh-cn",
+      "publishedAt": "2024-09-13T03:54:56.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/142203349",
+          "url": "https://blog.csdn.net/alitech2017/article/details/142203349"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "66a18fea78dd6cce4e5f",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "浅谈对象存储分布式缓存",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131591737",
+      "author": "alitech2017",
+      "description": "下图是用户读取数据的系统路径图，红线部分是键值存储系统直读飞天盘古优化。随着键值存储系统直读飞天盘古功能的上线开通，块数据的读取可以绕过键值存储系统，直接请求飞天盘古系统读取，这在一定程度缩短了数据读取的路径，减少了整体对象存储系统的响应时间，但是同时也使得键值存储系统路径上对数据读取的缓存优化失效，导致飞天盘古的请求压力上升。针对一次对象数据读取，用户请求会通过负载均衡到业务前端系统，业务前端系统通过计算得到对象的块列表并进行遍历，请求键值存储系统获取块数据，最后将读取的块数据有序地返回给用户。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-07T02:38:08.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131591737",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131591737"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "68a8c927afd6dc249280",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "福利来了！计算巢支持在已经购买的 ECS 上搭建幻兽帕鲁服务器，支持图形化管理配置",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/135955495",
+      "author": "alitech2017",
+      "description": "现在你可以参考这篇教程，将原来搭建的幻兽帕鲁服务器迁移到计算巢上，享受计算巢上所支持的界面化调整游戏配置（死亡掉落、服务器密码等）。或者也可以用于重新安装，升级到最新版本的计算巢幻兽帕鲁服务。",
+      "language": "zh-cn",
+      "publishedAt": "2024-01-31T07:58:41.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/135955495",
+          "url": "https://blog.csdn.net/alitech2017/article/details/135955495"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "69304cf8fc6bdd553a48",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "对象存储异地多活容灾架构解析",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131591771",
+      "author": "alitech2017",
+      "description": "作为一个分布式的存储，对象存储底层是采用多副本方式实现的，以便在一个可用区内，保证每个写入的对象都有极高的可靠性，其数据可靠性不低于“12个9”、服务设计可用性（或业务连续性）不低于99.995%。虽然硬盘故障、单机异常等情况不会影响到数据可用性和可靠性，但是在面对机房级别故障（如停电、网络异常）或自然灾难（如地震、海啸）等导致的一个数据中心无法提供服务时，使用该数据中心的客户服务还是会受到影响的，因此异地容灾能力不可或缺，当某集群发生异常时，需要快速切换服务，保障业务的可用性。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-07T02:39:01.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131591771",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131591771"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7a8ddf623927eada034f",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "达摩院|视觉智能AI场景解决方案——AI智慧运动",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131575643",
+      "author": "alitech2017",
+      "description": "由阿里云|达摩院——视觉智能平台推出的新功能AI智慧运动健身/线上体育由摄像头拍摄人像动作视频，通过AI进行图像和实时检测出，识别出人体关键点，检测不规范肢体动作，同时可实现实时反馈和计数。已支持的健身动作有15种，还可支持定制健身动作。主要涉及：肢体动作计数离线SDK；肢体动作计数反馈离线SDK；动作打分离线SDK。【达摩院|视觉智能AI场景解决方案——AI智慧运动】-阿里云开发者社区本文内容由阿里云实名注册用户自发贡献，版权归原作者所有，阿里云开发者社区不拥有其著作权，亦不承担相应法律责任。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-06T06:14:06.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131575643",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131575643"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "97b2d3c931094b095acc",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "MaxCompute中如何处理异常字符",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131655377",
+      "author": "alitech2017",
+      "description": "在处理数据时，当业务数据同步至MaxCompute后，会产生一些含异常字符的脏数据，比如字段中包含了一个不可见字符，在DataWorks中显示不出来，但在BI界面又会显示成其他字符，影响整体观感。这种情况，通常我们的解法是，将异常的字符洗掉，下面来介绍几种常见的处理异常字符的方法。如下图，可以看到“异常name”和“正常name”的 length值 不同，多了个不可见字符，但是我们并不能看出来啥。后期做数据处理或数据展示可能成为一个难以定位的问题。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-11T02:49:43.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131655377",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131655377"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9c2d2310ef81e5d344dc",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "【达摩院OpenVI-视觉评价系列之MOS评价实战篇】手机存储不够用，清理照片太痛苦？MOS评价帮你挑选“垃圾”照片",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131575668",
+      "author": "alitech2017",
+      "description": "传统的主观评价方法需要大量人力和时间成本，使得其在实际应用中受到一定限制。而深度学习模型可以在大规模数据集上进行训练，从而可以在更广泛的场景下进行应用。相比于传统的主观评价方法需要大量受试者进行评估，使用深度学习模型可以大大减少评估时间和人力成本，从而提高评估效率。使用深度学习模型进行评价可以使得评估结果具有可重复性，不会像传统的主观评价方法一样受到个体差异的影响。深度学习模型可以通过训练来学习人类主观评价的规律和模式，从而使得评估结果更加一致和准确。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-06T06:17:22.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131575668",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131575668"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bca657b5df17ee7c8123",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "使用 Terraform 在 GCP 上一键部署 EMQX MQTT Broker",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131655402",
+      "author": "alitech2017",
+      "description": "MQTT 是一种轻量级的消息传递协议，适用于物联网应用实现设备间通信。作为一款主流的开源 MQTT Broker，EMQX 能够提供高扩展性、可靠性和安全性的 MQTT 消息传递服务。借助广泛应用的基础设施即代码（IaC）工具 Terraform，您可以轻松在 GCP 上自动部署 EMQX MQTT Broker，从而简化和规范 MQTT 基础设施的设置和管理。本文将指导您如何设置 GCP 项目、创建服务账户、编写 Terraform 配置文件，实现轻松部署 EMQX MQTT Broker。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-11T02:50:26.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131655402",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131655402"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c73fc9834d32198e9732",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "如何保证分布式文件系统的数据一致性",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131591680",
+      "author": "alitech2017",
+      "description": "分布式文件系统在设计实现的时候面临的一个首要问题是数据一致性，即需要向用户提供一个合理的数据一致性模型（Consistency Model)，这个数据一致性模型成为用户程序和系统之间的一个合约（Contract）。这个合约里的规则保证程序对数据的读写结果是可预期和可理解的。具体到分布式文件系统的客户端，如果没有缓存，数据一致性和多个进程访问本地文件系统的场景是类似的。如共享模式，当客户端打开一个文件时，可以指定被分配的文件句柄在被关闭以前该文件是否允许被再次打开，如果允许，就可以指定允许的请求读写权限。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-07T02:36:37.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131591680",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131591680"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d594b6eb50f29376d922",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "MQTT Broker 规则引擎入门：快速指南",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131655505",
+      "author": "alitech2017",
+      "description": "本文将向您介绍 EMQX MQTT Broker 的规则引擎功能，并阐述其在 MQTT 消息转换和数据集成方面的重要作用。同时，我们还将提供一份快速入门指南，通过实例帮助您快速上手 MQTT 规则引擎。MQTT 是一种高效可靠的消息传输协议，特别适用于低带宽、高延迟网络（在物联网领域十分常见）。在 MQTT 的发布/订阅模型中，MQTT Broker 扮演着关键角色，负责接收发布者发送的消息并将其可靠高效地分发给订阅者，确保消息的顺利传递。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-11T02:53:01.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131655505",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131655505"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e0faf86d04cc533377f1",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "阿里云携手开放原子开源基金会倡议发起云原生工作委员会，两大开源项目达成捐赠意向",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131554159",
+      "author": "alitech2017",
+      "description": "6月11日，2023开放原子全球开源峰会正式拉开帷幕。本届峰会以“开源赋能，普惠未来”为主题，设置了开幕式暨高峰论坛、20余场分论坛和开源成果及重点项目展览。在峰会主论坛，开放原子开源基金会理事长孙文龙协各家单位共同倡议发起云原生工作委员会。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-05T05:58:40.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131554159",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131554159"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f46808bc0a88e45f4db6",
+      "publisherId": "alibaba-official",
+      "companyId": "alibaba",
+      "title": "构建可靠的物联网系统：了解 MQTT 性能测试",
+      "canonicalUrl": "https://blog.csdn.net/alitech2017/article/details/131640226",
+      "author": "alitech2017",
+      "description": "近十年来，物联网迎来了爆炸式的增长。面对海量的设备及其产生的数据，物联网应用和服务变得越来越复杂。我们不仅要保证这些物联网系统的业务功能正确无误，还要保证系统能够支持大量设备之间持续稳定地通信。性能测试是一种检验系统健壮性的方法，它关注扩展性、可用性、可靠性等指标，可以帮助发现系统在正常使用场景下以及在极限使用场景下的表现。对物联网系统进行集成测试和端到端测试，以保证系统功能的正确性，已经是业界的通用做法。因此，我们需要通过性能测试以确保所构建的物联网系统是稳定可靠的。",
+      "language": "zh-cn",
+      "publishedAt": "2023-07-10T07:30:06.000Z",
+      "discoveredAt": "2026-11-01T09:43:29.606Z",
+      "updatedAt": "2026-11-01T09:43:29.606Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T09:44:11.421Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-csdn",
+          "externalId": "https://blog.csdn.net/alitech2017/article/details/131640226",
+          "url": "https://blog.csdn.net/alitech2017/article/details/131640226"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}
