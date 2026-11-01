@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { site, statusNames, companyName, asset } from "../../lib";
 import { LocalTime } from "../../components/local-time";
+import { DocumentFrame } from "../../components/document-frame";
 export const metadata: Metadata = { title: "来源目录" };
 export default function Sources() {
   return (
-    <>
+    <DocumentFrame>
       <section className="intro source-intro">
         <h1>从可信来源开始</h1>
         <p className="lede">
@@ -129,6 +130,6 @@ export default function Sources() {
             ))}
         </section>
       ))}
-    </>
+    </DocumentFrame>
   );
 }

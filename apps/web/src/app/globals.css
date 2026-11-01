@@ -43,6 +43,9 @@ body {
   line-height: 1.7;
 }
 .desktop-ui-root.radar-ui {
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--ink);
   --desktop-font-sans:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
     "Microsoft YaHei", sans-serif;
@@ -60,6 +63,36 @@ body {
   --desktop-color-border: var(--line);
   --desktop-color-border-strong: var(--muted);
   --desktop-radius-control: 6px;
+}
+.radar-ui[data-preference="dark"] {
+  color-scheme: dark;
+  --bg: #18181b;
+  --surface: #222225;
+  --ink: #e4e4e7;
+  --muted: #a1a1aa;
+  --line: #505057;
+  --accent: #b6acf5;
+  --subtle: #27272a;
+  --good: #78d2a8;
+  --focus: #b6acf5;
+  --heading-highlight: color-mix(in srgb, #fbd7e9 28%, var(--bg));
+}
+.radar-ui[data-preference="light"] {
+  color-scheme: light;
+  --bg: #fafaf8;
+  --surface: #fff;
+  --ink: #27272a;
+  --muted: #6b6b65;
+  --line: #cecec7;
+  --accent: #625a8c;
+  --subtle: #f0f0ec;
+  --good: #18754c;
+  --focus: #625a8c;
+  --heading-highlight: #fbd7e9;
+}
+html:has(.board-layout) {
+  scrollbar-gutter: auto;
+  overflow: hidden;
 }
 a {
   color: var(--accent);

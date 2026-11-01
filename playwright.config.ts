@@ -20,6 +20,8 @@ export default defineConfig({
       use: {
         ...devices["Desktop Chrome"],
         viewport: { width: 375, height: 812 },
+        isMobile: true,
+        hasTouch: true,
         colorScheme: "dark",
         reducedMotion: "reduce",
       },

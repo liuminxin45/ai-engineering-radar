@@ -2,7 +2,7 @@
 
 聚合一线团队的 AI 工程实践，让值得学习的经验更容易被发现和持续追踪。
 
-A radar for AI engineering practice from teams building and operating real systems. Follow official publications, discover new approaches, and learn from implementation choices and lessons from production. This initial release follows teams at Chinese companies. Full articles stay on their original sites.
+A radar for AI engineering practice from teams building and operating real systems. Follow official publications in company columns, discover new approaches, and learn from implementation choices and lessons from production. Browse columns side by side on desktop or swipe between them on mobile. This initial release follows teams at Chinese companies. Full articles stay on their original sites.
 
 [网站](https://liuminxin45.github.io/ai-engineering-radar/) · [About / 关于](https://liuminxin45.github.io/ai-engineering-radar/about/) · [RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) · [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom) · [来源目录](https://liuminxin45.github.io/ai-engineering-radar/sources/)
 
@@ -16,9 +16,22 @@ AI Engineering Radar 把这些分散的发布渠道聚集起来，持续追踪�
 
 ## 如何使用
 
-- **发现新实践**：打开[文章列表](https://liuminxin45.github.io/ai-engineering-radar/)，按时间浏览更新，或选择想跟进的公司。
-- **带着问题查找**：搜索标题、摘要或作者，找到相关经验，回到原文查看实现细节和适用条件。
-- **持续追踪**：订阅[全站 RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) / [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom)，也可以选择公司的独立订阅。
+- **并排追踪公司**：打开[阅读看板](https://liuminxin45.github.io/ai-engineering-radar/)，先看“最新”列，再横向浏览各公司的文章。PC 可以同时看多列，每列独立上下滚动；手机左右滑动切换，也可以点击顶部公司名称或底部箭头定位。
+- **带着问题查找**：搜索标题、摘要或作者，找到相关经验。手机点击搜索图标展开输入框；在更多菜单中切换最新或最早优先。
+- **回到原文学习**：点击标题查看文章详情、发布主体和收录信息，点击“原文”阅读完整实现与适用条件。
+- **持续追踪更新**：订阅[全站 RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) / [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom)，或在公司列菜单中订阅该公司的更新。
+
+每列先显示 20 篇文章，滚动到底部可继续加载 20 篇。搜索、当前公司列和排序保存在链接中，支持刷新及浏览器前进后退，方便继续阅读或分享。
+
+## 阅读界面
+
+PC：公司分列，横向浏览。
+
+![PC 多面板阅读看板](docs/images/board-desktop.png)
+
+手机：单列阅读，露出下一列边缘，提示可以左右切换。
+
+![手机多面板阅读看板](docs/images/board-mobile.png)
 
 ## 收录范围与来源
 
@@ -78,7 +91,7 @@ pnpm exec playwright install chromium
 pnpm test:e2e
 ```
 
-浏览器验收服务器默认使用 `/ai-engineering-radar/`，运行对应测试前设置 `BASE_PATH=/ai-engineering-radar`、`SITE_URL=https://example.org` 并重新构建。测试包含桌面浅色和 375px 手机深色、减少动态效果两种配置。
+浏览器验收服务器默认使用 `/ai-engineering-radar/`，运行对应测试前设置 `BASE_PATH=/ai-engineering-radar`、`SITE_URL=https://example.org` 并重新构建。验收覆盖横向浏览、列内滚动、搜索、加载更多、详情直达和 URL 恢复；包含桌面浅色、375px 手机深色及减少动态效果。
 
 ## 来源贡献与人工复核
 
