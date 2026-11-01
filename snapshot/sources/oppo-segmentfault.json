@@ -4,9 +4,9 @@
     "sourceId": "oppo-segmentfault",
     "lastCheckedAt": "2026-11-01T10:02:50.360Z",
     "lastSuccessAt": "2026-11-01T10:02:50.360Z",
-    "nextRunAt": "2026-11-02T10:02:50.360Z",
     "consecutiveFailures": 0,
-    "status": "success",
+    "status": "suspended",
+    "error": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2022-04-06，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：公开专栏简介明确OPPO 前沿互联网技术分享和公众号 OPPO_tech，账号作者与长期工程文章一致。账号 RSS 允许访问且解析成功；全文型 Feed 的正文不会保存，仅提取元数据。",
     "discovered": 20,
     "httpStatus": 200
   }

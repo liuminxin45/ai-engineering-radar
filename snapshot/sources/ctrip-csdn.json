@@ -4,9 +4,9 @@
     "sourceId": "ctrip-csdn",
     "lastCheckedAt": "2026-11-01T10:02:44.647Z",
     "lastSuccessAt": "2026-11-01T10:02:44.647Z",
-    "nextRunAt": "2026-11-02T10:02:44.647Z",
     "consecutiveFailures": 0,
-    "status": "success",
+    "status": "suspended",
+    "error": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-05-13，超过一个月未更新，不能承担当前更新追踪。 原核验说明：账号公开简介明确携程技术官方帐号；与掘金账号的携程公司归属、2016 年以来文章历史相互印证。限定稳定用户名 ctrip_tech；HTML 请求返回 521，公开 RSS 解析成功。",
     "discovered": 20,
     "httpStatus": 200
   }

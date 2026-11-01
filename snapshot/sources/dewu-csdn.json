@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "dewu-csdn",
+    "lastCheckedAt": "2026-11-01T12:06:20.983Z",
+    "lastSuccessAt": "2026-11-01T12:06:20.983Z",
+    "nextRunAt": "2026-11-02T12:06:20.983Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 20,
+    "httpStatus": 200
+  }
+}

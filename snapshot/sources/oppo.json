@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "oppo",
-    "lastCheckedAt": "2026-11-01T10:02:32.137Z",
-    "nextRunAt": "2026-11-02T10:02:32.137Z",
+    "lastCheckedAt": "2026-11-01T12:06:12.854Z",
+    "nextRunAt": "2026-11-02T12:06:12.854Z",
     "consecutiveFailures": 0,
     "status": "reference",
     "error": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",

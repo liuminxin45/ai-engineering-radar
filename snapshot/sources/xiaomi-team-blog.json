@@ -4,11 +4,11 @@
     "sourceId": "xiaomi-team-blog",
     "lastCheckedAt": "2026-11-01T10:02:56.720Z",
     "lastSuccessAt": "2026-11-01T10:02:56.720Z",
-    "nextRunAt": "2026-11-02T10:02:56.720Z",
     "consecutiveFailures": 0,
     "etag": "W/\"60ab208b-c71e3\"",
     "lastModified": "Mon, 24 May 2021 03:42:03 GMT",
-    "status": "not-modified",
+    "status": "suspended",
+    "error": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2020-05-24，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：团队博客的投稿须知明确仅接受部门内部投稿，并同步运营信息技术部公众号；文章持续自署小米信息技术部团队成员。稳定站点 xiaomi-info.github.io，公开 Atom 允许访问并解析成功。最新条目停留在 2020 年，作为历史来源；Feed 正文不保存。",
     "discovered": 0,
     "httpStatus": 304
   }

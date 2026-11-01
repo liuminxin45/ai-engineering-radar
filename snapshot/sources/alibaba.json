@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "alibaba",
-    "lastCheckedAt": "2026-11-01T10:02:26.842Z",
-    "nextRunAt": "2026-11-02T10:02:26.842Z",
+    "lastCheckedAt": "2026-11-01T12:06:09.475Z",
+    "nextRunAt": "2026-11-02T12:06:09.475Z",
     "consecutiveFailures": 0,
     "status": "pending",
     "error": "社区含第三方投稿；需核验具体官方作者账号与稳定标识，禁止整站归属公司。",

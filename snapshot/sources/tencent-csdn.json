@@ -4,9 +4,9 @@
     "sourceId": "tencent-csdn",
     "lastCheckedAt": "2026-11-01T10:02:48.467Z",
     "lastSuccessAt": "2026-11-01T10:02:48.467Z",
-    "nextRunAt": "2026-11-02T10:02:48.467Z",
     "consecutiveFailures": 0,
-    "status": "success",
+    "status": "suspended",
+    "error": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2022-03-28，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：CSDN 长期发布腾讯前沿技术及腾讯团队原始工程实践，与腾讯新闻认证官方号、腾讯云认证腾讯公司身份相互印证。限定稳定用户名 Tencent_TEG；RSS 解析成功，最新文章停留在 2022 年。",
     "discovered": 20,
     "httpStatus": 200
   }

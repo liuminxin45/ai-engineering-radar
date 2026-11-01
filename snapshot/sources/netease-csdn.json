@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "netease-csdn",
-    "lastCheckedAt": "2026-11-01T10:02:45.601Z",
-    "lastSuccessAt": "2026-11-01T10:02:45.601Z",
-    "nextRunAt": "2026-11-02T10:02:45.601Z",
+    "lastCheckedAt": "2026-11-01T12:06:17.653Z",
+    "lastSuccessAt": "2026-11-01T12:06:17.653Z",
+    "nextRunAt": "2026-11-02T12:06:17.653Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

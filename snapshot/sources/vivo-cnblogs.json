@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "vivo-cnblogs",
-    "lastCheckedAt": "2026-11-01T10:02:51.794Z",
-    "lastSuccessAt": "2026-11-01T10:02:51.794Z",
-    "nextRunAt": "2026-11-02T10:02:51.794Z",
+    "lastCheckedAt": "2026-11-01T12:06:19.325Z",
+    "lastSuccessAt": "2026-11-01T12:06:19.325Z",
+    "nextRunAt": "2026-11-02T12:06:19.325Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 10,

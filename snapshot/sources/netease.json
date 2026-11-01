@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "netease",
-    "lastCheckedAt": "2026-11-01T10:02:35.083Z",
-    "nextRunAt": "2026-11-02T10:02:35.083Z",
+    "lastCheckedAt": "2026-11-01T12:06:14.626Z",
+    "nextRunAt": "2026-11-02T12:06:14.626Z",
     "consecutiveFailures": 0,
     "status": "pending",
     "error": "已找到名为网易智企·数帆的博客园账号 163yun；尚缺官网反向链接或可核验企业认证，保持待核验。",

@@ -1,0 +1,3009 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "001ad707de59641087b7",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "0 元领 RocketMQ for AI 极客时间公开课，照着搭百炼、Qoder 同款异步通信架构",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755378",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-12T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755378",
+          "url": "https://developer.aliyun.com/article/1755378"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "02bbdd062a7ed6ecf0fd",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "Agent 审计：从海量噪音中捞出真风险",
+      "canonicalUrl": "https://developer.aliyun.com/article/1762204",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-09T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1762204",
+          "url": "https://developer.aliyun.com/article/1762204"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "04a0c4c405d3de1c7bc9",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "STAROps RUM 智能巡检实践：把体验退化提前看清楚",
+      "canonicalUrl": "https://developer.aliyun.com/article/1750833",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-23T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1750833",
+          "url": "https://developer.aliyun.com/article/1750833"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0766db56268f9a54c5b8",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "云栖剧透丨四场论坛，看清智能体走进生产的关键路径",
+      "canonicalUrl": "https://developer.aliyun.com/article/1764749",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-19T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1764749",
+          "url": "https://developer.aliyun.com/article/1764749"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "08560ced7d3f1ffdd67d",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "MCP 重回 HTTP 范式，再次证明架构设计和工程实践才是稀缺资源",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755287",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-11T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755287",
+          "url": "https://developer.aliyun.com/article/1755287"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0c41cdae999fdd77e450",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "AgentLoop 数据飞轮实践（一）：总览 —— 让 Agent 持续调优的闭环",
+      "canonicalUrl": "https://developer.aliyun.com/article/1760457",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-02T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1760457",
+          "url": "https://developer.aliyun.com/article/1760457"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0ec15a913ea51fb23b10",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "OpenAgentPack 开源：让云端 Agent 像代码一样可管理、可迁移",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755288",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-11T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755288",
+          "url": "https://developer.aliyun.com/article/1755288"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "103c3e5fbb177c5f4f9f",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "一个多 Agent 零人工运维系统的设计复盘：4 个 Agent、7 个 Skill 与 9 条工程判断",
+      "canonicalUrl": "https://developer.aliyun.com/article/1753141",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-03T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1753141",
+          "url": "https://developer.aliyun.com/article/1753141"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "131a7f2faf46d676b725",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "STAROps 云拨测智能分析实践：从任务分析到 APM 跨域定界",
+      "canonicalUrl": "https://developer.aliyun.com/article/1756599",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-17T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1756599",
+          "url": "https://developer.aliyun.com/article/1756599"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1327e897871831b13f92",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "让 Agent 越用越准、成本越来越低：AgentLoop 的 Agent 经验自进化闭环",
+      "canonicalUrl": "https://developer.aliyun.com/article/1751530",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-27T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1751530",
+          "url": "https://developer.aliyun.com/article/1751530"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "13b65c801170795e2f23",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "从 ReAct 到 Agent Teams：一个工程师视角的 Agent 协作机制思考",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761922",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-08T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761922",
+          "url": "https://developer.aliyun.com/article/1761922"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "13ccbb0b884b458eba65",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "从容面对收银高峰，乐檬的零售连锁智能运维实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1763133",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-13T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1763133",
+          "url": "https://developer.aliyun.com/article/1763133"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "16347df2690c7c182f3c",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "阿里云发布 Alibaba Cloud AI Agent Handbook，阐述“智能面积”",
+      "canonicalUrl": "https://developer.aliyun.com/article/1774447",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-22T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1774447",
+          "url": "https://developer.aliyun.com/article/1774447"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1634892356750ed80073",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "Higress 推出 Serverless 企业版，对比开源成本降低 90%，认证性能提升 30 倍",
+      "canonicalUrl": "https://developer.aliyun.com/article/1751516",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-27T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1751516",
+          "url": "https://developer.aliyun.com/article/1751516"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1a0f2ecb69573840fc2a",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "周五 21:47，checkout 又慢了：云监控 MCP 想接住的那二十分钟",
+      "canonicalUrl": "https://developer.aliyun.com/article/1764793",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-19T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1764793",
+          "url": "https://developer.aliyun.com/article/1764793"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1eb11a0d0d05a0790966",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "Higress 接入 Qwen3Guard：不改一行业务代码，把 AI 内容安全做进网关主链路",
+      "canonicalUrl": "https://developer.aliyun.com/article/1758462",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-25T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1758462",
+          "url": "https://developer.aliyun.com/article/1758462"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1eec84b9c906678940ed",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "玩家说“充值没到账”，日志只回了一句 BAG_FULL",
+      "canonicalUrl": "https://developer.aliyun.com/article/1764747",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-19T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1764747",
+          "url": "https://developer.aliyun.com/article/1764747"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "21b6c7dff4fab1761231",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "评估：从黄金指标到 Rubric丨AgentLoop 数据飞轮实践（三）",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761365",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761365",
+          "url": "https://developer.aliyun.com/article/1761365"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "23fd1e301b62ec764f18",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "剧透丨AI 原生研发组织的探索和实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1764752",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-19T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1764752",
+          "url": "https://developer.aliyun.com/article/1764752"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "25540a45f9b71776e94b",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "实验：回测、离线实验平台与题目级 Rubric丨AgentLoop 数据飞轮实践（四）",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761370",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761370",
+          "url": "https://developer.aliyun.com/article/1761370"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2774ff21e7ad1b245c3f",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "免费送 10 张三天通票！邀你共赴 ApacheCon 2026",
+      "canonicalUrl": "https://developer.aliyun.com/article/1753207",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-03T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1753207",
+          "url": "https://developer.aliyun.com/article/1753207"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "277f42bceebff4488a6c",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "阿里云 Agent Native Cloud：让智能体成为企业原生的能力",
+      "canonicalUrl": "https://developer.aliyun.com/article/1750824",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-23T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1750824",
+          "url": "https://developer.aliyun.com/article/1750824"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "290d122fad3a08b0de65",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "云效工作项智能优化：先澄清，再开工",
+      "canonicalUrl": "https://developer.aliyun.com/article/1776498",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-28T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1776498",
+          "url": "https://developer.aliyun.com/article/1776498"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "29dae1e0c21c0b4adbf3",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "代码不出内网，也能用上 AI 智能评审：云效现已支持 GitLab",
+      "canonicalUrl": "https://developer.aliyun.com/article/1750820",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-23T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1750820",
+          "url": "https://developer.aliyun.com/article/1750820"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2f432bbf2613421e2272",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "还在给 AI “喂冷饭”？8.28 上海沙龙：带你跨越 AI 实时上下文鸿沟",
+      "canonicalUrl": "https://developer.aliyun.com/article/1758157",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-24T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1758157",
+          "url": "https://developer.aliyun.com/article/1758157"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2f57eb04a0f5c86152b1",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "基于阿里云 AgentLoop 的 DeepSeek Harness 评测实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1758156",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-24T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1758156",
+          "url": "https://developer.aliyun.com/article/1758156"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "30245b9c66127907b975",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "模型后训练视角：DeepSeek Harness 把企业进化做进了架构",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761910",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-08T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761910",
+          "url": "https://developer.aliyun.com/article/1761910"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "320869d5320562b0368a",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "8.28 上海见丨AI 实时数据沙龙报名中",
+      "canonicalUrl": "https://developer.aliyun.com/article/1756571",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-17T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1756571",
+          "url": "https://developer.aliyun.com/article/1756571"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3721273ee0e51faa98f2",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "支持 DeepSeek Harness 接入：AgentScope Service 开源智能体服务控制面解读",
+      "canonicalUrl": "https://developer.aliyun.com/article/1758174",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-24T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1758174",
+          "url": "https://developer.aliyun.com/article/1758174"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "37b1ef531373373d8018",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "阿里云 AgentTeams 7月第二周产品动态",
+      "canonicalUrl": "https://developer.aliyun.com/article/1750826",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-23T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1750826",
+          "url": "https://developer.aliyun.com/article/1750826"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "381b08b7a95092268a88",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "从“自己造轮子”到“OpenAPI 嵌进来”：精臣全栈上云后的智能运维底座之选",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755280",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-11T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755280",
+          "url": "https://developer.aliyun.com/article/1755280"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3e39cdf46299dfd3c509",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "STAROps 主机智能巡检：给你的 ECS 请个 24 小时在线的 AI 医生",
+      "canonicalUrl": "https://developer.aliyun.com/article/1753197",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-03T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1753197",
+          "url": "https://developer.aliyun.com/article/1753197"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3ebd36510aed861e43cf",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "Agent 做了这么多轮重构，企业到底该留下什么？",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761386",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761386",
+          "url": "https://developer.aliyun.com/article/1761386"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "425171e09693d3b81950",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "让 AI Agent 看见正在发生的业务，阿里云 EventHouse 正式商业化",
+      "canonicalUrl": "https://developer.aliyun.com/article/1751506",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-27T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1751506",
+          "url": "https://developer.aliyun.com/article/1751506"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "44480478665e1dd47156",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "论坛剧透丨当企业有 1000 个智能体后怎么跑怎么管？",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761911",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-08T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761911",
+          "url": "https://developer.aliyun.com/article/1761911"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4602eb23a6f547fec68e",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "经验自进化：自动挖掘经验资产，消融实验验证真实收益丨AgentLoop 数据飞轮实践（五）",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761385",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761385",
+          "url": "https://developer.aliyun.com/article/1761385"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "46fe092df68c192b9e1a",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "WAIC 2026 阿里云主题论坛倒计时！",
+      "canonicalUrl": "https://developer.aliyun.com/article/1748659",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-16T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1748659",
+          "url": "https://developer.aliyun.com/article/1748659"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4913857ab214eb4d225f",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "Agent 观测与优化开发者摸底报告",
+      "canonicalUrl": "https://developer.aliyun.com/article/1763100",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-13T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1763100",
+          "url": "https://developer.aliyun.com/article/1763100"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5050c1a3d1e819ad37db",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "阿里云亮相开源 AI 三大顶会！我们上海见",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761387",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761387",
+          "url": "https://developer.aliyun.com/article/1761387"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "54255962e06db4c00151",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "云效智能评审：让团队规则持续生效",
+      "canonicalUrl": "https://developer.aliyun.com/article/1774221",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-22T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1774221",
+          "url": "https://developer.aliyun.com/article/1774221"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "57864237fd52739da6a7",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "一切皆插件之后，Agent 工程的新范式",
+      "canonicalUrl": "https://developer.aliyun.com/article/1756597",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-17T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1756597",
+          "url": "https://developer.aliyun.com/article/1756597"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "59895ccc29adf65d2fe1",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "RocketMQ-A2A 创新论文入选 ACM FSE，定义 AI Agent 可靠协作新范式",
+      "canonicalUrl": "https://developer.aliyun.com/article/1753147",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-03T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1753147",
+          "url": "https://developer.aliyun.com/article/1753147"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5fc711e7bdcb6a5c0ad8",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "智能体构建与进化——Agent 开源开发者沙龙·广州站精彩回顾 & PPT 下载",
+      "canonicalUrl": "https://developer.aliyun.com/article/1756568",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-17T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1756568",
+          "url": "https://developer.aliyun.com/article/1756568"
+        }
+      ],
+      "duplicateCandidates": [
+        "a0be76ae6ea13acf26d1"
+      ]
+    },
+    {
+      "id": "6033fee4ae337372aab8",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "Ingress NGINX 再爆多项高危漏洞，10 分钟迁移到阿里云 API 网关",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761353",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761353",
+          "url": "https://developer.aliyun.com/article/1761353"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "644d199d13fdded600b1",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "AI Agent 时代，需要的不是更多数据，而是一个语义层",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761914",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-08T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761914",
+          "url": "https://developer.aliyun.com/article/1761914"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "68da7d7767aa16b770c5",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "阿里云日志服务 SLS 全新升级，打造 Agent 时代的智能数据引擎",
+      "canonicalUrl": "https://developer.aliyun.com/article/1775359",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-25T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1775359",
+          "url": "https://developer.aliyun.com/article/1775359"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6b5da5f5368617085632",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "DeepSeek Harness 全景可观测实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1758142",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-24T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1758142",
+          "url": "https://developer.aliyun.com/article/1758142"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6bc8d268f4eaeec90775",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "迈向生产级 AgenticOps：STAROps 如何构建可泛化的根因定位能力",
+      "canonicalUrl": "https://developer.aliyun.com/article/1758148",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-24T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1758148",
+          "url": "https://developer.aliyun.com/article/1758148"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6c7329b9ace3fe16ee5c",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "阿里云微服务引擎 MSE 及 API 网关 2026 年 8 月产品动态",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761346",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761346",
+          "url": "https://developer.aliyun.com/article/1761346"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6ed854fedfc1abf98ea5",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "从“看得见”到“自己治”：畅捷通可观测与智能运维实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1753204",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-03T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1753204",
+          "url": "https://developer.aliyun.com/article/1753204"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6ef1a042907d7a4c9aa5",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "RocketMQ for AI：基于 LiteTopic 的 Agent 异步通信架构与生产实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1773435",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-20T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1773435",
+          "url": "https://developer.aliyun.com/article/1773435"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "70dcaba52c4fdd9ebe75",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "从“治已病”到“治未病”：浩瀚能源与阿里云共建充电补能异地双活高可用体系实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1775335",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-25T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1775335",
+          "url": "https://developer.aliyun.com/article/1775335"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "76e55bcad35339932d92",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "零代码改造：让 AI Agent Sandbox 不再是黑盒",
+      "canonicalUrl": "https://developer.aliyun.com/article/1760437",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-02T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1760437",
+          "url": "https://developer.aliyun.com/article/1760437"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7a4daa68b878ae05d426",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "一周上线！信永中和基于阿里云 AgentTeams + AI 网关打造多智能体 AI 平台",
+      "canonicalUrl": "https://developer.aliyun.com/article/1752126",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-29T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1752126",
+          "url": "https://developer.aliyun.com/article/1752126"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7f995d1c7011c6c63203",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "数据飞轮的起点：四种方式把 Agent 连进 AgentLoop丨AgentLoop 数据飞轮实践（二）",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761364",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761364",
+          "url": "https://developer.aliyun.com/article/1761364"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8116855e292abd2883f6",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "从查账单到运营云成本：STAROps 如何把 FinOps 跑成一条闭环",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761369",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761369",
+          "url": "https://developer.aliyun.com/article/1761369"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "853a2bec303778cc1280",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "阿里云可观测 2026 年 8 月产品动态",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761367",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761367",
+          "url": "https://developer.aliyun.com/article/1761367"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "85c34452946059efc8ec",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "从新版 MCP 到 Gateway API 推理扩展：读懂 Higress v2.2.4 的关键变化",
+      "canonicalUrl": "https://developer.aliyun.com/article/1758162",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-24T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1758162",
+          "url": "https://developer.aliyun.com/article/1758162"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "87e8d8f039ae177dc45a",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "阿里云刚发布的 AgentCore 有何不同？",
+      "canonicalUrl": "https://developer.aliyun.com/article/1776525",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-28T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1776525",
+          "url": "https://developer.aliyun.com/article/1776525"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8965d8070c465724205a",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "看清 Coding Agent：从执行记录到风险调查",
+      "canonicalUrl": "https://developer.aliyun.com/article/1774435",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-22T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1774435",
+          "url": "https://developer.aliyun.com/article/1774435"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8c0770545ad965a822ac",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "存算分离不只是弹性：一份 Kafka 数据如何同时服务当下与未来",
+      "canonicalUrl": "https://developer.aliyun.com/article/1760416",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-02T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1760416",
+          "url": "https://developer.aliyun.com/article/1760416"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "95ef3957235105633ed1",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "从业务告警追到数据库根因：STAROps 与瑶池 Agent 提升跨层诊断精度",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761357",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761357",
+          "url": "https://developer.aliyun.com/article/1761357"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "97fa55aa69d886ba2e2a",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "智能聚类：从海量 Trace 中理解 Agent 的行为和表现",
+      "canonicalUrl": "https://developer.aliyun.com/article/1768666",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-07T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1768666",
+          "url": "https://developer.aliyun.com/article/1768666"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9838a3bf3da5ba7485c1",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "国内首批，阿里云 STAROps 通过《智能原生软件工程》系列标准认证",
+      "canonicalUrl": "https://developer.aliyun.com/article/1753195",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-03T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1753195",
+          "url": "https://developer.aliyun.com/article/1753195"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9bbdbb757364e6bb4d0f",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "AI Coding 的观测与科学降本：从一次 Trace 到自动调优闭环",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761376",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761376",
+          "url": "https://developer.aliyun.com/article/1761376"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a05f1c039372ab036924",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "千问办公 × AgentBridge：连接企业数据，让智能分析触手可及",
+      "canonicalUrl": "https://developer.aliyun.com/article/1773443",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-20T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1773443",
+          "url": "https://developer.aliyun.com/article/1773443"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a0be76ae6ea13acf26d1",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "智能体构建与进化——Agent 开源开发者沙龙·上海站精彩回顾 & PPT 下载",
+      "canonicalUrl": "https://developer.aliyun.com/article/1760418",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-02T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1760418",
+          "url": "https://developer.aliyun.com/article/1760418"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a5284c887e4166b49101",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "Agent 观测与优化三城巡演丨第二站深圳精彩回顾 & PPT 下载",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761359",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761359",
+          "url": "https://developer.aliyun.com/article/1761359"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "aafd7d6895bccd374f3c",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "基于阿里云 AgentLoop 的 Skill 评估与优化最佳实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755376",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-12T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755376",
+          "url": "https://developer.aliyun.com/article/1755376"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ab57c0f3b1186bbbc43f",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "从 Agent Framework 到 Agent Harness，开源 AgentScope 项目新定位",
+      "canonicalUrl": "https://developer.aliyun.com/article/1768655",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-07T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1768655",
+          "url": "https://developer.aliyun.com/article/1768655"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "abcdb858a39a3174c491",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "专为 Managed Agents 而生的 Harness 底座：AgentScope 2.0",
+      "canonicalUrl": "https://developer.aliyun.com/article/1753134",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-03T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1753134",
+          "url": "https://developer.aliyun.com/article/1753134"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "acb5d0791666de0fbd39",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "实时上下文：当模型能力趋于充裕，AI 生产化的瓶颈正移向实时数据链路",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761350",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761350",
+          "url": "https://developer.aliyun.com/article/1761350"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ae1fbff8519a658325eb",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "一本 Agent 白皮书，值得连续写两年么？",
+      "canonicalUrl": "https://developer.aliyun.com/article/1764753",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-19T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1764753",
+          "url": "https://developer.aliyun.com/article/1764753"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bcc5e3a3f360bce9a02e",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "百万用户，一人一 Topic：百炼资产中心用 RocketMQ LiteTopic 实现隔离与限流",
+      "canonicalUrl": "https://developer.aliyun.com/article/1761936",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-08T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1761936",
+          "url": "https://developer.aliyun.com/article/1761936"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bd3c06ac2ec58e4f13f2",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "AgentScope 2.0 生产可用，企业级 Harness 底座全解析！",
+      "canonicalUrl": "https://developer.aliyun.com/article/1749475",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-19T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1749475",
+          "url": "https://developer.aliyun.com/article/1749475"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bde334f322b9df1361f9",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "亚太唯一！阿里云跻身 Gartner 可观测魔力象限“挑战者”象限",
+      "canonicalUrl": "https://developer.aliyun.com/article/1751531",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-27T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1751531",
+          "url": "https://developer.aliyun.com/article/1751531"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "be4c8f2510e1f1475492",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "快上车，Agent 评估和优化开发者沙龙三城联动",
+      "canonicalUrl": "https://developer.aliyun.com/article/1758143",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-24T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1758143",
+          "url": "https://developer.aliyun.com/article/1758143"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bf2f6a1b00aa6adc7844",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "从钉群提问到任务交付：团队级 Agent 基础设施全链路实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1763144",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-13T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1763144",
+          "url": "https://developer.aliyun.com/article/1763144"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c0dd8dacc177ed18c081",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "Agent 评估与优化三城巡演丨北京站精彩回顾 & PPT 下载",
+      "canonicalUrl": "https://developer.aliyun.com/article/1758180",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-24T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1758180",
+          "url": "https://developer.aliyun.com/article/1758180"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c1c6e36b8ac6ef6df731",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "3天7个步骤，基于 AgentLoop 的游戏 Agent 效果优化实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755514",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-12T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755514",
+          "url": "https://developer.aliyun.com/article/1755514"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c5473b77647b436db63e",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "阿里云微服务引擎 MSE 及 API 网关 2026 年 7 月产品动态",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755283",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-11T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755283",
+          "url": "https://developer.aliyun.com/article/1755283"
+        }
+      ],
+      "duplicateCandidates": [
+        "6c7329b9ace3fe16ee5c"
+      ]
+    },
+    {
+      "id": "cb7ec9dece5a5bab60e6",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "多个AI Agent工程化岗位开放！阿里云云原生2027应届生热招中",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755286",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-11T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755286",
+          "url": "https://developer.aliyun.com/article/1755286"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "cc4052b84d8663a907b8",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "你的 AI 应用，该有一个流量入口了：AI 网关 Serverless 免费公测",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755368",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-12T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755368",
+          "url": "https://developer.aliyun.com/article/1755368"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d19f5346573fc9043863",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "2026 Agent 开发者调研报告丨Alibaba Cloud AI Agent Handbook",
+      "canonicalUrl": "https://developer.aliyun.com/article/1774000",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-21T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1774000",
+          "url": "https://developer.aliyun.com/article/1774000"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d247101c65585c5bdfe6",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "阿里云 AgentBridge：为生产级 Agent 构建多源实时上下文",
+      "canonicalUrl": "https://developer.aliyun.com/article/1773425",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-20T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1773425",
+          "url": "https://developer.aliyun.com/article/1773425"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d6b443dee801e5119ccd",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "AI 创新实践论坛·上海站精彩回顾 & PPT 下载",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755281",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-11T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755281",
+          "url": "https://developer.aliyun.com/article/1755281"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "db6bca5952f19255bfb7",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "来聊聊，怎么让 AI Agent 用实时数据做决策",
+      "canonicalUrl": "https://developer.aliyun.com/article/1760411",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-02T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1760411",
+          "url": "https://developer.aliyun.com/article/1760411"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "dc175102d419c8544048",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "RocketMQ 高可用创新论文入选 ACM FSE：无需复制业务数据，实现有状态服务秒级接管",
+      "canonicalUrl": "https://developer.aliyun.com/article/1753193",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-03T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1753193",
+          "url": "https://developer.aliyun.com/article/1753193"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ddfc641a520d9c9f1fcc",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "一张告警卡片到一键 RCA：塔斯汀万店连锁的智能运维闭环实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755525",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-12T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755525",
+          "url": "https://developer.aliyun.com/article/1755525"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "deafbbeec83c19e45dea",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "CFP 开放丨KCD 杭州站邀您共议 Agent 时代的云原生、可观测与大模型推理",
+      "canonicalUrl": "https://developer.aliyun.com/article/1758455",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-25T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1758455",
+          "url": "https://developer.aliyun.com/article/1758455"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e197de1e3be115084395",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "Kafka 不止于消息：阿里云发布面向 AI 的流算湖一体化实时数据平台",
+      "canonicalUrl": "https://developer.aliyun.com/article/1773428",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-20T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1773428",
+          "url": "https://developer.aliyun.com/article/1773428"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e770d5d7782f60215d01",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "模型这么多，请求该交给谁？阿里云 AI 网关智能路由，正式上线！",
+      "canonicalUrl": "https://developer.aliyun.com/article/1756573",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-17T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1756573",
+          "url": "https://developer.aliyun.com/article/1756573"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e99a19763c0bf7f21940",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "重新思考 Apache RocketMQ 云上高可用：基于协议级 Fencing 的秒级接管实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1758161",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-24T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1758161",
+          "url": "https://developer.aliyun.com/article/1758161"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ec9485ea3e9895312e0d",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "基于 AgentScope 构建金融级智能体底座实战",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755279",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-11T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755279",
+          "url": "https://developer.aliyun.com/article/1755279"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f4f8dbbb88697ce8a3c7",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "凌晨告警不再慌！SysOM 巡检 Skill 一键锁定根因",
+      "canonicalUrl": "https://developer.aliyun.com/article/1753136",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-03T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1753136",
+          "url": "https://developer.aliyun.com/article/1753136"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f62ad4ff0a483db6f7e7",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "云栖剧透丨AI 应用进入生产，开始拼「实时数据智能」",
+      "canonicalUrl": "https://developer.aliyun.com/article/1768656",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-07T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1768656",
+          "url": "https://developer.aliyun.com/article/1768656"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f62dc53a407ad182de0f",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "Flutter RUM 监控实践：还原 AI 应用一次等待的完整现场",
+      "canonicalUrl": "https://developer.aliyun.com/article/1755391",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-12T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1755391",
+          "url": "https://developer.aliyun.com/article/1755391"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f844a85f69ed35eb419d",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "阿里云联合 Datadog，补齐 Go 可观测性最后短板",
+      "canonicalUrl": "https://developer.aliyun.com/article/1756570",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-17T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1756570",
+          "url": "https://developer.aliyun.com/article/1756570"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fc17104807466c1eec6d",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "从个人生产力到企业生产力，阿里云发布企业级 Agent 平台 AgentCore",
+      "canonicalUrl": "https://developer.aliyun.com/article/1774482",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-22T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1774482",
+          "url": "https://developer.aliyun.com/article/1774482"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fdd58f1f2cac414a3108",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "title": "GPU 利用率低却难定位根因？试试这款零侵入 AI Profiling 工具",
+      "canonicalUrl": "https://developer.aliyun.com/article/1758465",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-25T16:00:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:21.223Z",
+      "updatedAt": "2026-11-01T12:06:21.223Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.524Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-cloud-native",
+          "externalId": "1758465",
+          "url": "https://developer.aliyun.com/article/1758465"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

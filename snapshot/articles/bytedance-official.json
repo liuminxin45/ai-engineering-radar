@@ -2,6 +2,37 @@
   "schemaVersion": 1,
   "articles": [
     {
+      "id": "01d3931ec0b0cc5fa689",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "SoCC 论文解读：字节跳动如何在大规模集群中进行统一资源调度",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7361240155513946149",
+      "author": "字节跳动开源",
+      "description": "作为字节跳动在离线混部场景中最核心的调度系统，Gödel 提供丰富的资源 QoS 管理能力，可以统一调度在线和离线应用，极大提升资源利用率。",
+      "language": "zh-CN",
+      "publishedAt": "2024-04-24T16:00:33.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7361240155513946149",
+          "url": "https://developer.volcengine.com/articles/7361240155513946149"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
       "id": "0ddfa2fcdabb9bc23f8b",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
@@ -20,7 +51,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -51,7 +82,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -59,6 +90,68 @@
           "sourceId": "bytedance-csdn",
           "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/137710639",
           "url": "https://blog.csdn.net/ByteDanceTech/article/details/137710639"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1da07e2b462ea5c42949",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "Kitex v0.10.0 正式发布！",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112559451766796",
+      "author": "字节跳动开源",
+      "description": "Kitex v0.10.0 正式发布：新版本探索了更多性能优化的方向和非常规的一些优化手段。",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:36.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112559451766796",
+          "url": "https://developer.volcengine.com/articles/7389112559451766796"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "232d53b68ebcaa7d69e5",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "VisActor全新图可视化开源项目：VGraph",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7680871851639521334",
+      "author": "字节跳动开源",
+      "description": "VGraph 正式开源了🎉。如果你正在做数据血缘、知识图谱、关系网络、树图分析、流程编排或图编辑器，现在可以用一套更贴近真实业务场景的关系图库，直接把复杂关系变成可读、可交互、可落地的产品体验。VGraph 是一套面向真实业务场景的关系图库，聚焦关系数据的可视化表达、交互编辑与产品化落地。关系图产品常常不是输在算法或数据，而是输在体验：用户看不明白、交互不顺、细节做不深、工程接不住。VGraph",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-02T09:55:06.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7680871851639521334",
+          "url": "https://developer.volcengine.com/articles/7680871851639521334"
         }
       ],
       "duplicateCandidates": []
@@ -82,7 +175,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -90,6 +183,37 @@
           "sourceId": "bytedance-csdn",
           "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/134432456",
           "url": "https://blog.csdn.net/ByteDanceTech/article/details/134432456"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "381646ae6849bb749ea1",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "ByteDance 2026 上半年 Linux 内核贡献回顾",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7698691370294181915",
+      "author": "字节跳动开源",
+      "description": "字节跳动 STE 团队Linux 内核运行在形态丰富、规模各异的计算基础设施之上。它的每一项机制调整，都需要同时面对性能、正确性、可维护性、硬件差异和长期兼容性等多重约束。对我们而言，参与 Linux 社区建设，不只是把代码提交到上游。它既包括将生产环境中发现的问题抽象为通用方案，也包括参与讨论、审阅其他开发者的工作，与社区一起把有价值的改动打磨成熟。为什么我们要参与社区？改动进入主线后，无需在每",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-20T12:14:30.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7698691370294181915",
+          "url": "https://developer.volcengine.com/articles/7698691370294181915"
         }
       ],
       "duplicateCandidates": []
@@ -113,7 +237,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -144,7 +268,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -152,6 +276,99 @@
           "sourceId": "bytedance-csdn",
           "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/134609437",
           "url": "https://blog.csdn.net/ByteDanceTech/article/details/134609437"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3b66012a0aff73160d33",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "方正证券｜金融科技云原生微服务建设实践",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112559384657939",
+      "author": "字节跳动开源",
+      "description": "本文将详细介绍方正证券金融科技工程院在云原生微服务建设实践经验，分享包含 3 个方面：微服务治理工作、微服务可观测性工作和微服务接口管理。上述能力统一集成到了方正公司的夸克开发平台上。",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:35.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112559384657939",
+          "url": "https://developer.volcengine.com/articles/7389112559384657939"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3e68157ca8e9e7f5bc15",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "2024 开源之夏｜字节跳动开源议题邀你报名",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112559527755830",
+      "author": "字节跳动开源",
+      "description": "0 1活动简介“开源之夏（英文简称 OSPP）”是中国科学院软件研究所“开源软件供应链点亮计划”指导下的系列暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，培养和发掘更多优秀的开发者，促进优秀开源软件社区的蓬勃发展，助力开源软件供应链建设。字节跳动开源积极参与 2024 开源之夏，推动开源社区报名加入，并将作为合作伙伴在校园行、企业交流等活动中提供支持。此次开源之夏字节跳动开源共有 5 个开",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:35.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112559527755830",
+          "url": "https://developer.volcengine.com/articles/7389112559527755830"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "43c877ad2d0e70f003b3",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "灵魂画手有救了！字节开放模型 Hyper-SD，最快 1 步生成 SOTA 级图片（有demo 来试试",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112572001124364",
+      "author": "字节跳动开源",
+      "description": "超快速度，超高质量。",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:39.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112572001124364",
+          "url": "https://developer.volcengine.com/articles/7389112572001124364"
         }
       ],
       "duplicateCandidates": []
@@ -175,7 +392,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -183,6 +400,37 @@
           "sourceId": "bytedance-csdn",
           "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/134985982",
           "url": "https://blog.csdn.net/ByteDanceTech/article/details/134985982"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4b959a33f41ca6a002b9",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "自回归超越扩散！北大、字节 VAR 范式解锁视觉生成 Scaling Law",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7357978518103441459",
+      "author": "字节跳动开源",
+      "description": "VAR 为如何定义图像的自回归顺序提供了一个全新的视角。",
+      "language": "zh-CN",
+      "publishedAt": "2024-04-16T16:00:42.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7357978518103441459",
+          "url": "https://developer.volcengine.com/articles/7357978518103441459"
         }
       ],
       "duplicateCandidates": []
@@ -206,7 +454,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -214,6 +462,68 @@
           "sourceId": "bytedance-csdn",
           "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/136576261",
           "url": "https://blog.csdn.net/ByteDanceTech/article/details/136576261"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "62d29422e7c17c101d94",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "用户案例｜ByConity 助力烽火星空架构优化，产品性能平均提升 3 倍",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112559485648937",
+      "author": "字节跳动开源",
+      "description": "ByConity 是字节跳动开源的云原生数据仓库，在满足数仓用户对资源弹性扩缩容，读写分离，资源隔离，数据强一致性等多种需求的同时，提供优异的查询，写入性能。来源｜ByConity 开源社区作者｜殷鹏，烽火星空，大数据开发工程师烽火星空（文中简称“烽火”）在搭建其 HSAP 数据库 FMDB 的过程中遇到了高并发场景下查询性能不理想，并且某些查询 SQL 有长尾现象等问题。通过接入 ByConit",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:35.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112559485648937",
+          "url": "https://developer.volcengine.com/articles/7389112559485648937"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "66cc55390495d404c13f",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "活动报名 ｜ByConity⼀周年：云原⽣数仓创新之路",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112572064399401",
+      "author": "字节跳动开源",
+      "description": "报名开启！",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:38.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112572064399401",
+          "url": "https://developer.volcengine.com/articles/7389112572064399401"
         }
       ],
       "duplicateCandidates": []
@@ -237,7 +547,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -268,7 +578,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -276,6 +586,68 @@
           "sourceId": "bytedance-csdn",
           "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/134213436",
           "url": "https://blog.csdn.net/ByteDanceTech/article/details/134213436"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "74409ce85bc4a4d6c69a",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "Rspack v0.7 正式发布！",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112559388852263",
+      "author": "字节跳动开源",
+      "description": "Rspack 是由 ByteDance Web Infra 团队孵化的基于 Rust 语言开发的 Bundler，拥有高性能、兼容 Webpack 生态、定制性强等多种优点，它解决了我们在业务场景中遇到的非常多的问题，让很多开发者的体验有了质的提升。文章来源｜Rspack 开源社区Rspack v0.7 版本已经正式发布！这是 Rspack v1.0 版本发布前的最后一个 minor 版本，此后",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:35.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112559388852263",
+          "url": "https://developer.volcengine.com/articles/7389112559388852263"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "84612de58eb3793a8b07",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "Katalyst v0.5.0 发布：进一步解耦，进一步优化",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112557635633215",
+      "author": "字节跳动开源",
+      "description": "Katalyst 是字节跳动开源的成本优化实践系统，致力于解决云原生场景下的资源不合理利用问题，为资源管理和成本优化提供解决方案。来源 | KubeWharf 社区项目 | github.com/kubewharf/katalyst-core经过几个月时间的开发测试工作，Katalyst 近日完成了 v0.5.0 版本的发布。在该版本中，我们解耦了 Katalyst 常态混部能力对 kubewha",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:35.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112557635633215",
+          "url": "https://developer.volcengine.com/articles/7389112557635633215"
         }
       ],
       "duplicateCandidates": []
@@ -299,7 +671,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -330,7 +702,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -361,7 +733,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -392,7 +764,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -400,6 +772,37 @@
           "sourceId": "bytedance-csdn",
           "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/136497349",
           "url": "https://blog.csdn.net/ByteDanceTech/article/details/136497349"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a2df73e29c404a11e5bf",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "Katalyst 如何基于 NRI 实现精细化且可插拔的容器资源管理",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112559418212391",
+      "author": "字节跳动开源",
+      "description": "本文根据 2024 Kuberntes Community Days 上海站现场演讲内容整理。来源 | KubeWharf 社区项目 | github.com/kubewharf/katalyst-coreKatalyst 是字节跳动开源的精细化资源管理项目，通过在离线业务混合部署、拓扑感知调度、资源超分、潮汐混部等方式提升 Kubernetes 集群的资源利用率和工作负载的性能。自 2023 年",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:36.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112559418212391",
+          "url": "https://developer.volcengine.com/articles/7389112559418212391"
         }
       ],
       "duplicateCandidates": []
@@ -423,7 +826,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -431,6 +834,37 @@
           "sourceId": "bytedance-csdn",
           "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/135376306",
           "url": "https://blog.csdn.net/ByteDanceTech/article/details/135376306"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a73b3ba3a1987716324c",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "豆包全新图像Tokenizer：生成图像最低只需32个token，最高提速410倍",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112555626561555",
+      "author": "字节跳动开源",
+      "description": "相比扩散模型百倍提速",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:11:00.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112555626561555",
+          "url": "https://developer.volcengine.com/articles/7389112555626561555"
         }
       ],
       "duplicateCandidates": []
@@ -454,7 +888,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -462,6 +896,130 @@
           "sourceId": "bytedance-csdn",
           "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/137849528",
           "url": "https://blog.csdn.net/ByteDanceTech/article/details/137849528"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "aedb8cdf1a684a67d1f4",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "火山引擎开源 Agent 驱动的搜索自迭代技术",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7667161751409917994",
+      "author": "字节跳动开源",
+      "description": "By Viking AI 搜索 GitHub | volcengine/SearchCLI: Open CLI for integrating AI search, recommendation, and conversational retrieval into agent systems and business systems会调用搜索，只是 Agent 搜索能力的第一步。更难的是：当结果不",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-27T11:55:13.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7667161751409917994",
+          "url": "https://developer.volcengine.com/articles/7667161751409917994"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c15105e9d91ddd1f9c3d",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "活动报名｜字节跳动开源三场 Meetup 即将落地狮城",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112253687005238",
+      "author": "字节跳动开源",
+      "description": "火热 7 月，相约狮城！",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:32.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112253687005238",
+          "url": "https://developer.volcengine.com/articles/7389112253687005238"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c9e8a9849176f86ec824",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "Volo 0.10.0 正式发布！",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7359237650131845147",
+      "author": "字节跳动开源",
+      "description": "Volo v0.10.0 正式发布，提升了可扩展性和易用性。",
+      "language": "zh-CN",
+      "publishedAt": "2024-04-18T16:00:49.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7359237650131845147",
+          "url": "https://developer.volcengine.com/articles/7359237650131845147"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "cacec31499c4775c768a",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "活动报名｜CloudWeGo 技术沙龙 · 上海站，共议云原生 x AI 时代的微服务架构最佳实践",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112572051456063",
+      "author": "字节跳动开源",
+      "description": "CloudWeGo技术沙龙上海站报名开启！点击阅读原文报名注册，5月25日上海不见不散",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:38.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112572051456063",
+          "url": "https://developer.volcengine.com/articles/7389112572051456063"
         }
       ],
       "duplicateCandidates": []
@@ -485,7 +1043,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -493,6 +1051,37 @@
           "sourceId": "bytedance-csdn",
           "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/137531515",
           "url": "https://blog.csdn.net/ByteDanceTech/article/details/137531515"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e081a8a75f2313f88b50",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "字节跳动 AI 技术菁英论坛——世界模型探索：视频和3D 生成与理解模型",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112553802039315",
+      "author": "字节跳动开源",
+      "description": "7 月 19 日下午 4:00-8:30 我们不见不散！",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:36.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112553802039315",
+          "url": "https://developer.volcengine.com/articles/7389112553802039315"
         }
       ],
       "duplicateCandidates": []
@@ -516,7 +1105,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -547,7 +1136,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -578,7 +1167,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -586,6 +1175,37 @@
           "sourceId": "bytedance-csdn",
           "externalId": "https://blog.csdn.net/ByteDanceTech/article/details/136003514",
           "url": "https://blog.csdn.net/ByteDanceTech/article/details/136003514"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f97477da6d945f96a91e",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "title": "CCF 开源创新大赛暨第二届 Bio-OS 开源开放大赛酷燃来袭！持续报名中！",
+      "canonicalUrl": "https://developer.volcengine.com/articles/7389112558273183798",
+      "author": "字节跳动开源",
+      "description": "报名进行中！",
+      "language": "zh-CN",
+      "publishedAt": "2024-07-08T04:10:35.000Z",
+      "discoveredAt": "2026-11-01T12:06:22.025Z",
+      "updatedAt": "2026-11-01T12:06:22.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-01T12:06:57.525Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112558273183798",
+          "url": "https://developer.volcengine.com/articles/7389112558273183798"
         }
       ],
       "duplicateCandidates": []
@@ -609,7 +1229,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-01T10:03:18.323Z"
+        "classifiedAt": "2026-11-01T12:06:57.523Z"
       },
       "publicationStatus": "published",
       "locations": [

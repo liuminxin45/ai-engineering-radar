@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "aliyun-cloud-native",
+    "lastCheckedAt": "2026-11-01T12:06:21.223Z",
+    "lastSuccessAt": "2026-11-01T12:06:21.223Z",
+    "nextRunAt": "2026-11-02T12:06:21.223Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 100,
+    "httpStatus": 200
+  }
+}

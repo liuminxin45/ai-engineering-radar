@@ -4,9 +4,9 @@
     "sourceId": "alibaba-csdn",
     "lastCheckedAt": "2026-11-01T10:02:39.917Z",
     "lastSuccessAt": "2026-11-01T10:02:39.917Z",
-    "nextRunAt": "2026-11-02T10:02:39.917Z",
     "consecutiveFailures": 0,
-    "status": "success",
+    "status": "suspended",
+    "error": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2024-09-13，超过一个月未更新，不能承担当前更新追踪。 原核验说明：公开主页显示企业官方账号认证，简介明确为阿里巴巴官方技术号；以稳定用户名 alitech2017 限定文章与作者，账号 RSS 解析成功。最新条目停留在 2024 年，保留历史来源。",
     "discovered": 20,
     "httpStatus": 200
   }
