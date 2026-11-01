@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "xiaohongshu-csdn",
-    "lastCheckedAt": "2026-11-01T09:43:34.553Z",
-    "lastSuccessAt": "2026-11-01T09:43:34.553Z",
-    "nextRunAt": "2026-11-02T09:43:34.553Z",
+    "lastCheckedAt": "2026-11-01T10:02:46.604Z",
+    "lastSuccessAt": "2026-11-01T10:02:46.604Z",
+    "nextRunAt": "2026-11-02T10:02:46.604Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

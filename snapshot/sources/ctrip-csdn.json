@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "ctrip-csdn",
-    "lastCheckedAt": "2026-11-01T09:43:33.089Z",
-    "lastSuccessAt": "2026-11-01T09:43:33.089Z",
-    "nextRunAt": "2026-11-02T09:43:33.089Z",
+    "lastCheckedAt": "2026-11-01T10:02:44.647Z",
+    "lastSuccessAt": "2026-11-01T10:02:44.647Z",
+    "nextRunAt": "2026-11-02T10:02:44.647Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

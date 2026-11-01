@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "bilibili-csdn",
-    "lastCheckedAt": "2026-11-01T09:43:35.163Z",
-    "lastSuccessAt": "2026-11-01T09:43:35.163Z",
-    "nextRunAt": "2026-11-02T09:43:35.163Z",
+    "lastCheckedAt": "2026-11-01T10:02:47.537Z",
+    "lastSuccessAt": "2026-11-01T10:02:47.537Z",
+    "nextRunAt": "2026-11-02T10:02:47.537Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "oppo-segmentfault",
-    "lastCheckedAt": "2026-11-01T09:43:36.755Z",
-    "lastSuccessAt": "2026-11-01T09:43:36.755Z",
-    "nextRunAt": "2026-11-02T09:43:36.755Z",
+    "lastCheckedAt": "2026-11-01T10:02:50.360Z",
+    "lastSuccessAt": "2026-11-01T10:02:50.360Z",
+    "nextRunAt": "2026-11-02T10:02:50.360Z",
     "consecutiveFailures": 0,
     "status": "success",
-    "discovered": 50,
+    "discovered": 20,
     "httpStatus": 200
   }
 }

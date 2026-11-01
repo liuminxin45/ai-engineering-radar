@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "baidu-csdn",
-    "lastCheckedAt": "2026-11-01T09:43:30.514Z",
-    "lastSuccessAt": "2026-11-01T09:43:30.514Z",
-    "nextRunAt": "2026-11-02T09:43:30.514Z",
+    "lastCheckedAt": "2026-11-01T10:02:41.767Z",
+    "lastSuccessAt": "2026-11-01T10:02:41.767Z",
+    "nextRunAt": "2026-11-02T10:02:41.767Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

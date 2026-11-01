@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "xiaomi-csdn-candidate",
-    "lastCheckedAt": "2026-11-01T09:43:41.920Z",
-    "nextRunAt": "2026-11-02T09:43:41.920Z",
+    "lastCheckedAt": "2026-11-01T10:02:57.377Z",
+    "nextRunAt": "2026-11-02T10:02:57.377Z",
     "consecutiveFailures": 0,
     "status": "pending",
     "error": "发现显示名小米技术的账号 pengzhouzhou，但未取得企业认证或官方归属的充分证据；大量转载不能单独证明账号身份，禁止仅凭显示名启用。已继续查找掘金历史官方号和小米自有技术站。",

@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "vivo-csdn",
-    "lastCheckedAt": "2026-11-01T09:43:29.373Z",
-    "lastSuccessAt": "2026-11-01T09:43:29.373Z",
-    "nextRunAt": "2026-11-02T09:43:29.373Z",
+    "lastCheckedAt": "2026-11-01T10:02:38.849Z",
+    "lastSuccessAt": "2026-11-01T10:02:38.849Z",
+    "nextRunAt": "2026-11-02T10:02:38.849Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

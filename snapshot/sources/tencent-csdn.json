@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "tencent-csdn",
-    "lastCheckedAt": "2026-11-01T09:43:35.712Z",
-    "lastSuccessAt": "2026-11-01T09:43:35.712Z",
-    "nextRunAt": "2026-11-02T09:43:35.712Z",
+    "lastCheckedAt": "2026-11-01T10:02:48.467Z",
+    "lastSuccessAt": "2026-11-01T10:02:48.467Z",
+    "nextRunAt": "2026-11-02T10:02:48.467Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

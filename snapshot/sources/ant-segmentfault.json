@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "ant-segmentfault",
-    "lastCheckedAt": "2026-11-01T09:43:36.906Z",
-    "lastSuccessAt": "2026-11-01T09:43:36.906Z",
-    "nextRunAt": "2026-11-02T09:43:36.906Z",
+    "lastCheckedAt": "2026-11-01T10:02:50.726Z",
+    "lastSuccessAt": "2026-11-01T10:02:50.726Z",
+    "nextRunAt": "2026-11-02T10:02:50.726Z",
     "consecutiveFailures": 0,
     "status": "success",
-    "discovered": 50,
+    "discovered": 20,
     "httpStatus": 200
   }
 }
