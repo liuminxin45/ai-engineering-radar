@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "tencent",
-    "lastCheckedAt": "2026-11-01T08:47:39.125Z",
-    "nextRunAt": "2026-11-02T08:47:39.125Z",
+    "lastCheckedAt": "2026-11-01T09:07:36.263Z",
+    "nextRunAt": "2026-11-02T09:07:36.263Z",
     "consecutiveFailures": 0,
     "status": "pending",
     "error": "社区含第三方投稿；需核验具体官方作者账号与稳定标识，禁止整站归属公司。",

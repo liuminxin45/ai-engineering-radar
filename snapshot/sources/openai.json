@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "openai",
-    "lastCheckedAt": "2026-11-01T08:53:22.232Z",
-    "lastSuccessAt": "2026-11-01T08:53:22.232Z",
-    "nextRunAt": "2026-11-02T08:53:22.233Z",
+    "lastCheckedAt": "2026-11-01T09:07:47.640Z",
+    "lastSuccessAt": "2026-11-01T09:07:47.640Z",
+    "nextRunAt": "2026-11-02T09:07:47.640Z",
     "consecutiveFailures": 0,
-    "etag": "W/\"2df3e22b3a3f1eeecd6f8c32058264e2\"",
+    "etag": "\"2df3e22b3a3f1eeecd6f8c32058264e2\"",
     "lastModified": "Sun, 01 Nov 2026 04:12:45 GMT",
-    "status": "success",
-    "discovered": 13,
-    "httpStatus": 200
+    "status": "not-modified",
+    "discovered": 0,
+    "httpStatus": 304
   }
 }

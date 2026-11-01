@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "grab",
-    "lastCheckedAt": "2026-11-01T08:47:52.171Z",
-    "lastSuccessAt": "2026-11-01T08:47:52.171Z",
-    "nextRunAt": "2026-11-02T08:47:52.171Z",
+    "lastCheckedAt": "2026-11-01T09:07:52.825Z",
+    "lastSuccessAt": "2026-11-01T09:07:52.825Z",
+    "nextRunAt": "2026-11-02T09:07:52.825Z",
     "consecutiveFailures": 0,
     "etag": "W/\"6ad82913-29378\"",
     "lastModified": "Wed, 21 Oct 2026 02:53:07 GMT",
-    "status": "success",
-    "discovered": 10,
-    "httpStatus": 200
+    "status": "not-modified",
+    "discovered": 0,
+    "httpStatus": 304
   }
 }

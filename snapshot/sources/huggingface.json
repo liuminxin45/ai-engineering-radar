@@ -2,11 +2,12 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "huggingface",
-    "lastCheckedAt": "2026-11-01T08:48:12.327Z",
-    "nextRunAt": "2026-11-02T08:48:12.327Z",
+    "lastCheckedAt": "2026-11-01T09:08:00.209Z",
+    "nextRunAt": "2026-11-02T09:08:00.209Z",
     "consecutiveFailures": 0,
     "status": "pending",
-    "error": "社区含第三方投稿；需核验具体官方作者账号与稳定标识，禁止整站归属公司。 入口检测：网络请求失败",
-    "discovered": 0
+    "error": "社区含第三方投稿；需核验具体官方作者账号与稳定标识，禁止整站归属公司。",
+    "discovered": 0,
+    "httpStatus": 200
   }
 }

@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "0ab8746ee66b422c32af",
+      "publisherId": "netflix-official",
+      "companyId": "netflix",
+      "title": "Beyond API Compatibility: Building a Tool to Measure the Blast Radius of Library Changes",
+      "canonicalUrl": "https://netflixtechblog.com/beyond-api-compatibility-building-a-tool-to-measure-the-blast-radius-of-library-changes-9474f2fd4f90?source=rss----2615bd06b42e---4",
+      "author": "Netflix Technology Blog",
+      "description": "",
+      "publishedAt": "2026-10-23T18:32:51.000Z",
+      "discoveredAt": "2026-11-01T09:07:53.461Z",
+      "updatedAt": "2026-11-01T09:07:53.461Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Beyond API Compatibility: Building a Tool to Measure the Blast Radius of Library Changes\n",
+          "Beyond API Compatibility: Building a Tool to Measure the Blast Radius of Library Changes\n"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T09:07:58.379Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "netflix",
+          "externalId": "https://medium.com/p/9474f2fd4f90",
+          "url": "https://netflixtechblog.com/beyond-api-compatibility-building-a-tool-to-measure-the-blast-radius-of-library-changes-9474f2fd4f90?source=rss----2615bd06b42e---4"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0b21ec6316e1f1a2268d",
+      "publisherId": "netflix-official",
+      "companyId": "netflix",
+      "title": "Multi‑Ratio Video Resizing for Mobile Feed and Marketing",
+      "canonicalUrl": "https://netflixtechblog.com/multi-ratio-video-resizing-for-mobile-feed-and-marketing-2e6b42810f49?source=rss----2615bd06b42e---4",
+      "author": "Netflix Technology Blog",
+      "description": "",
+      "publishedAt": "2026-10-26T16:01:02.000Z",
+      "discoveredAt": "2026-11-01T09:07:53.461Z",
+      "updatedAt": "2026-11-01T09:07:53.461Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T09:07:58.378Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "netflix",
+          "externalId": "https://medium.com/p/2e6b42810f49",
+          "url": "https://netflixtechblog.com/multi-ratio-video-resizing-for-mobile-feed-and-marketing-2e6b42810f49?source=rss----2615bd06b42e---4"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1ca62af9505225ee411f",
+      "publisherId": "netflix-official",
+      "companyId": "netflix",
+      "title": "Integrating Netflix’s Foundation Model into Personalization applications",
+      "canonicalUrl": "https://netflixtechblog.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss----2615bd06b42e---4",
+      "author": "Netflix Technology Blog",
+      "description": "",
+      "publishedAt": "2026-10-14T20:02:22.000Z",
+      "discoveredAt": "2026-11-01T09:07:53.461Z",
+      "updatedAt": "2026-11-01T09:07:53.461Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T09:07:58.380Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "netflix",
+          "externalId": "https://medium.com/p/cf176b5860eb",
+          "url": "https://netflixtechblog.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss----2615bd06b42e---4"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2253a474f67972095e3f",
+      "publisherId": "netflix-official",
+      "companyId": "netflix",
+      "title": "Making Failure Diagnosis Reliable with Pensive AI",
+      "canonicalUrl": "https://netflixtechblog.com/making-failure-diagnosis-reliable-with-pensive-ai-6b0811a1c015?source=rss----2615bd06b42e---4",
+      "author": "Netflix Technology Blog",
+      "description": "",
+      "publishedAt": "2026-10-26T17:04:57.000Z",
+      "discoveredAt": "2026-11-01T09:07:53.461Z",
+      "updatedAt": "2026-11-01T09:07:53.461Z",
+      "classification": {
+        "status": "review",
+        "topics": [],
+        "reason": "与 AI 相关，但现有元数据不足以确认实质工程实现，等待复核。",
+        "evidence": [
+          "re Diagnosis Reliable with Pensive AI\n"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T09:07:58.377Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "netflix",
+          "externalId": "https://medium.com/p/6b0811a1c015",
+          "url": "https://netflixtechblog.com/making-failure-diagnosis-reliable-with-pensive-ai-6b0811a1c015?source=rss----2615bd06b42e---4"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "376f2cf69b7ac7f4efe8",
+      "publisherId": "netflix-official",
+      "companyId": "netflix",
+      "title": "Measuring the Impact of Personalized Recommendations",
+      "canonicalUrl": "https://netflixtechblog.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss----2615bd06b42e---4",
+      "author": "Netflix Technology Blog",
+      "description": "",
+      "publishedAt": "2026-10-14T19:57:43.000Z",
+      "discoveredAt": "2026-11-01T09:07:53.461Z",
+      "updatedAt": "2026-11-01T09:07:53.461Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T09:07:58.381Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "netflix",
+          "externalId": "https://medium.com/p/4c26be3a4d96",
+          "url": "https://netflixtechblog.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss----2615bd06b42e---4"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "389dcf84826fc6ff307b",
+      "publisherId": "netflix-official",
+      "companyId": "netflix",
+      "title": "Behind the Scenes: Evolving Netflix’s Ads Event Pipeline for Live — Part II",
+      "canonicalUrl": "https://netflixtechblog.com/behind-the-scenes-evolving-netflixs-ads-event-pipeline-for-live-part-ii-826ebf9ad9fb?source=rss----2615bd06b42e---4",
+      "author": "Netflix Technology Blog",
+      "description": "",
+      "publishedAt": "2026-10-14T19:51:35.000Z",
+      "discoveredAt": "2026-11-01T09:07:53.461Z",
+      "updatedAt": "2026-11-01T09:07:53.461Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "enes: Evolving Netflix’s Ads Event Pipeline for Live — Part II\n"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T09:07:58.382Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "netflix",
+          "externalId": "https://medium.com/p/826ebf9ad9fb",
+          "url": "https://netflixtechblog.com/behind-the-scenes-evolving-netflixs-ads-event-pipeline-for-live-part-ii-826ebf9ad9fb?source=rss----2615bd06b42e---4"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3b6f0fa9047c83fe9666",
+      "publisherId": "netflix-official",
+      "companyId": "netflix",
+      "title": "DataJunction as Netflix’s answer to the missing piece of the modern data stack",
+      "canonicalUrl": "https://netflixtechblog.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss----2615bd06b42e---4",
+      "author": "Netflix Technology Blog",
+      "description": "",
+      "publishedAt": "2026-10-14T19:59:08.000Z",
+      "discoveredAt": "2026-11-01T09:07:53.461Z",
+      "updatedAt": "2026-11-01T09:07:53.461Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T09:07:58.381Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "netflix",
+          "externalId": "https://medium.com/p/92af926b40a5",
+          "url": "https://netflixtechblog.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss----2615bd06b42e---4"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8c81000a260505678b1c",
+      "publisherId": "netflix-official",
+      "companyId": "netflix",
+      "title": "TimeSeries Tiered Storage Journey: Kafka/Flink Streams to Native Cassandra Cold Reads",
+      "canonicalUrl": "https://netflixtechblog.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss----2615bd06b42e---4",
+      "author": "Netflix Technology Blog",
+      "description": "",
+      "publishedAt": "2026-10-14T19:56:08.000Z",
+      "discoveredAt": "2026-11-01T09:07:53.461Z",
+      "updatedAt": "2026-11-01T09:07:53.461Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T09:07:58.381Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "netflix",
+          "externalId": "https://medium.com/p/e59d597c9d60",
+          "url": "https://netflixtechblog.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss----2615bd06b42e---4"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9b1f0c2f7ea32c2f8cf4",
+      "publisherId": "netflix-official",
+      "companyId": "netflix",
+      "title": "Single-tenant Titus: VM-level isolation on a multi-tenant container platform",
+      "canonicalUrl": "https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163?source=rss----2615bd06b42e---4",
+      "author": "Netflix Technology Blog",
+      "description": "",
+      "publishedAt": "2026-10-22T22:19:12.000Z",
+      "discoveredAt": "2026-11-01T09:07:53.461Z",
+      "updatedAt": "2026-11-01T09:07:53.461Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T09:07:58.380Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "netflix",
+          "externalId": "https://medium.com/p/6d8b1909d163",
+          "url": "https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163?source=rss----2615bd06b42e---4"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b79e988e8827334c6ba9",
+      "publisherId": "netflix-official",
+      "companyId": "netflix",
+      "title": "Ontology-Driven Observability: Building an End-to-End Knowledge Graph at Netflix Scale",
+      "canonicalUrl": "https://netflixtechblog.com/ontology-driven-observability-building-an-end-to-end-knowledge-graph-at-netflix-scale-421392cf5adf?source=rss----2615bd06b42e---4",
+      "author": "Netflix Technology Blog",
+      "description": "",
+      "publishedAt": "2026-10-16T16:01:02.000Z",
+      "discoveredAt": "2026-11-01T09:07:53.461Z",
+      "updatedAt": "2026-11-01T09:07:53.461Z",
+      "classification": {
+        "status": "rejected",
+        "topics": [],
+        "reason": "元数据未提供明确的 AI 技术关联。",
+        "evidence": [
+          "Ontology-Driven Observability: Building an End-to-End Knowledge Graph at Netflix Scale\n"
+        ],
+        "method": "rules",
+        "version": "rules-1",
+        "classifiedAt": "2026-11-01T09:07:58.380Z"
+      },
+      "publicationStatus": "draft",
+      "locations": [
+        {
+          "sourceId": "netflix",
+          "externalId": "https://medium.com/p/421392cf5adf",
+          "url": "https://netflixtechblog.com/ontology-driven-observability-building-an-end-to-end-knowledge-graph-at-netflix-scale-421392cf5adf?source=rss----2615bd06b42e---4"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

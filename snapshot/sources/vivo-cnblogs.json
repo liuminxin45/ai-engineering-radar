@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "vivo-cnblogs",
-    "lastCheckedAt": "2026-11-01T08:47:39.124Z",
-    "nextRunAt": "2026-11-02T08:47:39.124Z",
+    "lastCheckedAt": "2026-11-01T09:07:36.262Z",
+    "nextRunAt": "2026-11-02T09:07:36.262Z",
     "consecutiveFailures": 0,
     "status": "pending",
-    "error": "已登记指定账号；尚需官网反向链接或可核验的平台企业认证证据。 入口检测：Redirect outside reviewed source hosts",
+    "error": "已登记指定账号；尚需官网反向链接或可核验的平台企业认证证据。 入口检测：Cross-origin redirect requires an explicit source entry",
     "discovered": 0
   }
 }

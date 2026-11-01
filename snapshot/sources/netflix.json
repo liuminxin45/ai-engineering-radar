@@ -2,11 +2,13 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "netflix",
-    "lastCheckedAt": "2026-11-01T08:48:00.891Z",
-    "nextRunAt": "2026-11-01T10:48:02.287Z",
-    "consecutiveFailures": 1,
-    "status": "blocked",
-    "error": "Redirect outside reviewed source hosts",
-    "discovered": 0
+    "lastCheckedAt": "2026-11-01T09:07:53.461Z",
+    "nextRunAt": "2026-11-02T09:07:53.461Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "error": "10 篇文章的补充元数据不可用；保留目录元数据。",
+    "discovered": 10,
+    "httpStatus": 200,
+    "lastSuccessAt": "2026-11-01T09:07:53.461Z"
   }
 }

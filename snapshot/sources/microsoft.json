@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "microsoft",
-    "lastCheckedAt": "2026-11-01T08:47:46.912Z",
-    "lastSuccessAt": "2026-11-01T08:47:46.912Z",
-    "nextRunAt": "2026-11-02T08:47:46.912Z",
+    "lastCheckedAt": "2026-11-01T09:07:49.116Z",
+    "lastSuccessAt": "2026-11-01T09:07:49.116Z",
+    "nextRunAt": "2026-11-02T09:07:49.116Z",
     "consecutiveFailures": 0,
     "etag": "W/\"e11226951b23eff1ea37006d497876a3\"",
     "lastModified": "Fri, 30 Oct 2026 12:49:17 GMT",
-    "status": "success",
-    "discovered": 10,
-    "httpStatus": 200
+    "status": "not-modified",
+    "discovered": 0,
+    "httpStatus": 304
   }
 }

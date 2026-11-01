@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "bytedance",
-    "lastCheckedAt": "2026-11-01T08:47:40.404Z",
-    "nextRunAt": "2026-11-01T10:47:41.342Z",
-    "consecutiveFailures": 1,
+    "lastCheckedAt": "2026-11-01T09:07:38.040Z",
+    "nextRunAt": "2026-11-01T13:07:39.671Z",
+    "consecutiveFailures": 2,
     "status": "failed",
     "error": "No article entries parsed; source adapter or publisher filter requires review",
     "discovered": 0

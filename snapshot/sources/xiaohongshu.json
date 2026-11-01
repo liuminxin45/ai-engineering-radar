@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "xiaohongshu",
-    "lastCheckedAt": "2026-11-01T08:47:44.300Z",
-    "nextRunAt": "2026-11-02T08:47:44.300Z",
+    "lastCheckedAt": "2026-11-01T09:07:44.157Z",
+    "nextRunAt": "2026-11-02T09:07:44.157Z",
     "consecutiveFailures": 0,
     "status": "pending",
-    "error": "候选企业入口，尚未定位可核验的官方技术发布账号。 入口检测：robots.txt disallows this path",
+    "error": "已发现小红书技术REDtech公众号线索，但缺少可独立核验的官方文章采集入口；不采集第三方公众号镜像。 入口检测：robots.txt disallows this path",
     "discovered": 0
   }
 }

@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "spotify",
-    "lastCheckedAt": "2026-11-01T08:47:49.579Z",
-    "lastSuccessAt": "2026-11-01T08:47:49.579Z",
-    "nextRunAt": "2026-11-02T08:47:49.579Z",
+    "lastCheckedAt": "2026-11-01T09:07:51.482Z",
+    "lastSuccessAt": "2026-11-01T09:07:51.482Z",
+    "nextRunAt": "2026-11-02T09:07:51.482Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 5,

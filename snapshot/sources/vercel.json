@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "vercel",
-    "lastCheckedAt": "2026-11-01T08:48:14.971Z",
-    "lastSuccessAt": "2026-11-01T08:48:14.971Z",
-    "nextRunAt": "2026-11-02T08:48:14.971Z",
+    "lastCheckedAt": "2026-11-01T09:08:00.439Z",
+    "lastSuccessAt": "2026-11-01T09:08:00.439Z",
+    "nextRunAt": "2026-11-02T09:08:00.439Z",
     "consecutiveFailures": 0,
     "etag": "W/\"a65d0ec27040489cf1b2c20a518a3df5\"",
-    "status": "success",
-    "discovered": 100,
-    "httpStatus": 200
+    "status": "not-modified",
+    "discovered": 0,
+    "httpStatus": 304
   }
 }

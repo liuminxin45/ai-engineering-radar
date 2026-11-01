@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "uber",
-    "lastCheckedAt": "2026-11-01T08:48:02.287Z",
-    "nextRunAt": "2026-11-01T10:48:06.972Z",
-    "consecutiveFailures": 1,
+    "lastCheckedAt": "2026-11-01T09:07:58.244Z",
+    "nextRunAt": "2026-11-01T13:07:59.549Z",
+    "consecutiveFailures": 2,
     "status": "failed",
     "error": "HTTP 404",
     "discovered": 0,

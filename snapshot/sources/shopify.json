@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "shopify",
-    "lastCheckedAt": "2026-11-01T08:48:17.313Z",
-    "lastSuccessAt": "2026-11-01T08:48:17.313Z",
-    "nextRunAt": "2026-11-02T08:48:17.313Z",
+    "lastCheckedAt": "2026-11-01T09:08:00.764Z",
+    "lastSuccessAt": "2026-11-01T09:08:00.764Z",
+    "nextRunAt": "2026-11-02T09:08:00.764Z",
     "consecutiveFailures": 0,
     "lastModified": "Sun, 01 Nov 2026 08:06:04 GMT",
     "status": "success",
-    "discovered": 100,
+    "discovered": 50,
     "httpStatus": 200
   }
 }

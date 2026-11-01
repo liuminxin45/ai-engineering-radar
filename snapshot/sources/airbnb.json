@@ -2,11 +2,12 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "airbnb",
-    "lastCheckedAt": "2026-11-01T08:48:19.339Z",
-    "nextRunAt": "2026-11-02T08:48:19.339Z",
+    "lastCheckedAt": "2026-11-01T09:08:00.871Z",
+    "nextRunAt": "2026-11-02T09:08:00.871Z",
     "consecutiveFailures": 0,
     "status": "pending",
-    "error": "已登记指定账号；尚需官网反向链接或可核验的平台企业认证证据。 入口检测：网络请求失败",
-    "discovered": 0
+    "error": "已登记指定账号；尚需官网反向链接或可核验的平台企业认证证据。",
+    "discovered": 0,
+    "httpStatus": 200
   }
 }

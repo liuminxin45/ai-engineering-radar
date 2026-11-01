@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "cloudflare",
-    "lastCheckedAt": "2026-11-01T08:48:04.893Z",
-    "lastSuccessAt": "2026-11-01T08:48:04.893Z",
-    "nextRunAt": "2026-11-02T08:48:04.893Z",
+    "lastCheckedAt": "2026-11-01T09:07:58.998Z",
+    "lastSuccessAt": "2026-11-01T09:07:58.998Z",
+    "nextRunAt": "2026-11-02T09:07:58.998Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "bilibili",
-    "lastCheckedAt": "2026-11-01T08:47:45.045Z",
-    "nextRunAt": "2026-11-02T08:47:45.045Z",
+    "lastCheckedAt": "2026-11-01T09:07:46.457Z",
+    "nextRunAt": "2026-11-02T09:07:46.457Z",
     "consecutiveFailures": 0,
     "status": "pending",
-    "error": "候选企业入口，尚未定位可核验的官方技术发布账号。",
+    "error": "B站官方 ESG 报告确认哔哩哔哩技术公众号与B站账号存在；尚未核定稳定账号 ID 及允许采集的文章目录。",
     "discovered": 0,
     "httpStatus": 200
   }

@@ -10,7 +10,7 @@
       "author": "Anthropic",
       "description": "Evaluating Claude Opus 4.6 on BrowseComp, we found cases where the model recognized the test and decrypted its answers, raising eval integrity questions.",
       "language": "en",
-      "publishedAt": "2026-03-05T16:00:00.000Z",
+      "publishedAt": "2026-03-06T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -46,7 +46,7 @@
       "author": "Anthropic",
       "description": "Agentic coding benchmarks are treated as precise measures of model capability, but infrastructure configuration alone can meaningfully shift scores.",
       "language": "en",
-      "publishedAt": "2026-02-04T16:00:00.000Z",
+      "publishedAt": "2026-02-05T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -121,7 +121,7 @@
       "author": "Anthropic",
       "description": "Desktop Extensions are a new packaging format that makes installing local MCP servers in Claude Desktop as simple as clicking a button.",
       "language": "en",
-      "publishedAt": "2025-06-25T16:00:00.000Z",
+      "publishedAt": "2025-06-26T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -156,7 +156,7 @@
       "author": "Anthropic",
       "description": "Guidance on designing more rigorous, useful evals for AI agents across a range of architectures and real-world deployment use cases.",
       "language": "en",
-      "publishedAt": "2026-01-08T16:00:00.000Z",
+      "publishedAt": "2026-01-09T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -225,7 +225,7 @@
       "author": "Anthropic",
       "description": "Our most effective techniques for writing, evaluating, and refining tools for AI agents, including how to use Claude Code to improve them.",
       "language": "en",
-      "publishedAt": "2025-09-10T16:00:00.000Z",
+      "publishedAt": "2025-09-11T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -299,7 +299,7 @@
       "author": "Anthropic",
       "description": "Harnesses encode assumptions that go stale as models improve. See how Managed Agents is built around interfaces that stay stable as harnesses change.",
       "language": "en",
-      "publishedAt": "2026-04-07T16:00:00.000Z",
+      "publishedAt": "2026-04-08T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -335,7 +335,7 @@
       "author": "Anthropic",
       "description": "Claude can now discover, learn, and execute tools dynamically to enable agents that take action in the real world. Here’s how.",
       "language": "en",
-      "publishedAt": "2025-11-23T16:00:00.000Z",
+      "publishedAt": "2025-11-24T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -371,7 +371,7 @@
       "author": "Anthropic",
       "description": "As agents grow more capable, so does their potential blast radius. Here's what we learned building containment for claude.ai, Claude Code, and Cowork.",
       "language": "en",
-      "publishedAt": "2026-05-24T16:00:00.000Z",
+      "publishedAt": "2026-05-25T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -408,7 +408,7 @@
       "author": "Anthropic",
       "description": "Introducing Agent Skills: organized folders of instructions, scripts, and resources that give Claude the procedural knowledge real work requires.",
       "language": "en",
-      "publishedAt": "2025-10-15T16:00:00.000Z",
+      "publishedAt": "2025-10-16T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -443,7 +443,7 @@
       "author": "Anthropic",
       "description": "In this post, we explore strategies for effectively curating and managing their context.",
       "language": "en",
-      "publishedAt": "2025-09-28T16:00:00.000Z",
+      "publishedAt": "2025-09-29T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -479,7 +479,7 @@
       "author": "Anthropic",
       "description": "Claude Code users approve 93% of permission prompts. See how auto mode uses classifiers to cut approval fatigue while keeping developers safe.",
       "language": "en",
-      "publishedAt": "2026-03-24T16:00:00.000Z",
+      "publishedAt": "2026-03-25T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -515,7 +515,7 @@
       "author": "Anthropic",
       "description": "On the the engineering challenges and lessons learned from building Claude's Research system",
       "language": "en",
-      "publishedAt": "2025-06-12T16:00:00.000Z",
+      "publishedAt": "2025-06-13T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -551,7 +551,7 @@
       "author": "Anthropic",
       "description": "How a team of 16 parallel Claude agents wrote a Rust-based C compiler from scratch, capable of compiling the Linux kernel, and what it taught us.",
       "language": "en",
-      "publishedAt": "2026-02-04T16:00:00.000Z",
+      "publishedAt": "2026-02-05T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -587,7 +587,7 @@
       "author": "Anthropic",
       "description": "How an initializer agent and an incremental coding agent help the Claude Agent SDK make steady progress across many context windows.",
       "language": "en",
-      "publishedAt": "2025-11-25T16:00:00.000Z",
+      "publishedAt": "2025-11-26T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -624,7 +624,7 @@
       "author": "Anthropic",
       "description": "We traced recent reports of Claude Code quality issues to three separate changes. Here's what happened, what we fixed, and what we're changing.",
       "language": "en",
-      "publishedAt": "2026-04-22T16:00:00.000Z",
+      "publishedAt": "2026-04-23T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -659,7 +659,7 @@
       "author": "Anthropic",
       "description": "Learn how sandboxing in Claude Code uses filesystem and network isolation to protect developers, reduce permission prompts, and increase autonomy.",
       "language": "en",
-      "publishedAt": "2025-10-19T16:00:00.000Z",
+      "publishedAt": "2025-10-20T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -695,7 +695,7 @@
       "author": "Anthropic",
       "description": "Learn how code execution with the Model Context Protocol enables agents to handle more tools while using fewer tokens, reducing context overhead by up to 98.7%.",
       "language": "en",
-      "publishedAt": "2025-11-03T16:00:00.000Z",
+      "publishedAt": "2025-11-04T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -731,7 +731,7 @@
       "author": "Anthropic",
       "description": "A blog post covering tips and tricks that have proven effective for using Claude Code across various codebases, languages, and environments.",
       "language": "en",
-      "publishedAt": "2025-04-17T16:00:00.000Z",
+      "publishedAt": "2025-04-18T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -766,7 +766,7 @@
       "author": "Anthropic",
       "description": "Announcing a new collaborative research paper on Confidential Inference, a set of tools to improve the security of our model weights and of our users' data.",
       "language": "en",
-      "publishedAt": "2025-06-17T16:00:00.000Z",
+      "publishedAt": "2025-06-18T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -802,7 +802,7 @@
       "author": "Anthropic",
       "description": "A blog post for developers, describing a new method for complex tool-use situations",
       "language": "en",
-      "publishedAt": "2025-03-19T16:00:00.000Z",
+      "publishedAt": "2025-03-20T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {
@@ -834,7 +834,7 @@
       "author": "Anthropic",
       "description": "A technical report on three bugs that intermittently degraded Claude's responses: what happened, why fixes took time, and what we're changing.",
       "language": "en",
-      "publishedAt": "2025-09-16T16:00:00.000Z",
+      "publishedAt": "2025-09-17T00:00:00.000Z",
       "discoveredAt": "2026-11-01T08:51:08.352Z",
       "updatedAt": "2026-11-01T08:51:08.352Z",
       "classification": {

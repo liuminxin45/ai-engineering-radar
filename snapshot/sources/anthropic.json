@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "anthropic",
-    "lastCheckedAt": "2026-11-01T08:51:08.352Z",
-    "lastSuccessAt": "2026-11-01T08:51:08.352Z",
-    "nextRunAt": "2026-11-02T08:51:08.354Z",
+    "lastCheckedAt": "2026-11-01T09:07:47.153Z",
+    "lastSuccessAt": "2026-11-01T09:07:47.153Z",
+    "nextRunAt": "2026-11-02T09:07:47.153Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 24,

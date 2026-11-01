@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "vivo-site",
-    "lastCheckedAt": "2026-11-01T08:47:39.125Z",
-    "nextRunAt": "2026-11-02T08:47:39.125Z",
+    "lastCheckedAt": "2026-11-01T09:07:36.263Z",
+    "nextRunAt": "2026-11-02T09:07:36.263Z",
     "consecutiveFailures": 0,
     "status": "reference",
     "error": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
