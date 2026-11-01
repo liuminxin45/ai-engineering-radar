@@ -2,37 +2,6 @@
   "schemaVersion": 1,
   "articles": [
     {
-      "id": "063cc2672577b5397163",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "速抢免费红包封面！",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/122659826",
-      "author": "Tencent_TEG",
-      "description": "虎年很快就要到，马上就是小年了，提取预祝大家过个开心年。过年怎能没有礼物？按照惯例，今天来带给大家带来了全新的三款红包封面。第一款是程序员专属封面，长这个样子：中间老虎里面的编程语言取自：...",
-      "language": "zh-cn",
-      "publishedAt": "2022-01-23T07:15:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/122659826",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/122659826"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "0650c6372c32b1dd96cc",
       "publisherId": "tencent-official",
       "companyId": "tencent",
@@ -90,37 +59,6 @@
           "sourceId": "tencent-qqnews",
           "externalId": "20261012A0994S00",
           "url": "https://news.qq.com/rain/a/20261012A0994S00"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "0c9f72c209e25cc2f566",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "万字长文助你上手软件领域驱动设计 DDD",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123812990",
-      "author": "Tencent_TEG",
-      "description": "作者：faryrong，腾讯 CSIG 后台开发工程师最近看了一本书《解构-领域驱动设计》，书中提出了领域驱动设计统一过程（DDDRUP），它指明了实践 DDD 的具体步骤，并很好地串联了各种概念、模式和思想。因此，我对书本内容做了梳理、简化，融入自己的理解，并结合之前阅读的书籍以及实践经验，最终形成这篇文章。希望可以帮助大伙理顺 DDD 的各种概念、模式和思想，降低上手...",
-      "language": "zh-cn",
-      "publishedAt": "2022-03-28T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123812990",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123812990"
         }
       ],
       "duplicateCandidates": []
@@ -188,37 +126,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "1dd2e037660045beea6d",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "一篇详文带你入门 Redis",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123013162",
-      "author": "Tencent_TEG",
-      "description": "作者：QQ 音乐前端团队本文将会从：Redis 使用场景与介绍 -> 数据结构与简单使用 -> 小功能大用处 -> 持久化、主从同步与缓存设计 -> 知识拓展 来书...",
-      "language": "zh-cn",
-      "publishedAt": "2022-02-18T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123013162",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123013162"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "232b72087a27c299bd5e",
       "publisherId": "tencent-official",
       "companyId": "tencent",
@@ -245,37 +152,6 @@
           "sourceId": "tencent-qqnews",
           "externalId": "20260917A0C6YR00",
           "url": "https://news.qq.com/rain/a/20260917A0C6YR00"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "3062149b19bd0edd3112",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "腾讯 PB 级大数据计算如何做到秒级？",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/122631795",
-      "author": "Tencent_TEG",
-      "description": "天穹 SuperSQL 是腾讯自研，基于统一的 SQL 语言模型，面向机器学习智能调优，提供虚拟化数据和开放式计算引擎的大数据智能融合平台。在开放融合的 Data Cloud 上，业务方可...",
-      "language": "zh-cn",
-      "publishedAt": "2022-01-21T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/122631795",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/122631795"
         }
       ],
       "duplicateCandidates": []
@@ -312,130 +188,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "48e6848db4f0089601db",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "大规模 Node.js 网关架构设计与工程实践",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/122871892",
-      "author": "Tencent_TEG",
-      "description": "作者：王伟嘉，腾讯云 CloudBase 前端负责人。本文是王伟嘉在 GMTC 2021 全球大前端技术大会（深圳站）上的演讲内容：《十亿级 Node.js 网关的架构设计与工程实践》。今...",
-      "language": "zh-cn",
-      "publishedAt": "2022-02-10T11:20:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/122871892",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/122871892"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "4e5d3a6f5de83bb89e6e",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "2021年，腾讯研发人员增长41%，Go首次超越C++成为最热门语言",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123649926",
-      "author": "Tencent_TEG",
-      "description": "腾讯人最爱的编程语言是什么？这么多的程序员每天提交多少行代码，改bug要耗费多长时间等等？这些大家关心的问题，在今天刚刚发布的《2021年腾讯研发大数据报告》中给出了答案。这份由腾讯技术委...",
-      "language": "zh-cn",
-      "publishedAt": "2022-03-21T08:07:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123649926",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123649926"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "5074d6e39f0327e44e20",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "C++ 学习笔记",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123195804",
-      "author": "Tencent_TEG",
-      "description": "作者：readywang(王玉龙)template 是 c++ 相当重要的组成部分，堪称 c++语言的一大利器。在大大小小的 c++ 程序中，模板无处不在。c++ templates 作为...",
-      "language": "zh-cn",
-      "publishedAt": "2022-02-28T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123195804",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123195804"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "50d109d03f48f367b1b5",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "一个运维老将的自我修养",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/122816763",
-      "author": "Tencent_TEG",
-      "description": "作者：huashionxu，腾讯 TEG 业务运维专家运维同学作为站在研发团队背后的男人们，一直在担任着举重若轻的角色，而这两年盛行的 Devops、研效变革也直接影响到运维同学岗位职责的...",
-      "language": "zh-cn",
-      "publishedAt": "2022-02-07T12:13:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/122816763",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/122816763"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "597c3a473f867aec1441",
       "publisherId": "tencent-official",
       "companyId": "tencent",
@@ -462,37 +214,6 @@
           "sourceId": "tencent-qqnews",
           "externalId": "20261030A0B2KI00",
           "url": "https://news.qq.com/rain/a/20261030A0B2KI00"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "5b9c494f74724f341f22",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "Golang 简洁架构实战",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123059032",
-      "author": "Tencent_TEG",
-      "description": "作者：bearluo，腾讯 IEG 运营开发工程师文中项目代码位置：https://github.com/devYun/go-clean-architecture由于 golang 不像 ...",
-      "language": "zh-cn",
-      "publishedAt": "2022-02-21T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123059032",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123059032"
         }
       ],
       "duplicateCandidates": []
@@ -622,99 +343,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "7d0ef49069e36738499d",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "2021 大前端技术回顾及未来展望",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/122934714",
-      "author": "Tencent_TEG",
-      "description": "作者：腾讯 IMWeb 前端团队2021 年大前端领域没有出现革命性的明星项目，但在各个细分的技术领域都有一定的拓展与深耕，有很多新技术或者新特性有望在 2022 年迎来爆发。在互联网 “...",
-      "language": "zh-cn",
-      "publishedAt": "2022-02-14T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/122934714",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/122934714"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "7ffda45cc6d00725ddd0",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "从C++转向最受欢迎的Rust语言",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123267147",
-      "author": "Tencent_TEG",
-      "description": "作者：孟杰，腾讯 TEG后台开发工程师在日常开发过程中，若长期使用C++语言，在初次使用Rust的过程中可能会碰到一些问题。本文尝试从C++的角度来说明在使用Rust时需要特别注意的一些地...",
-      "language": "zh-cn",
-      "publishedAt": "2022-03-03T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123267147",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123267147"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "858d99100a93936cc9bd",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "交付架构师工作指引",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/122710902",
-      "author": "Tencent_TEG",
-      "description": "作者：yeedomliu非常重要，非常必要，甚至来得有点晚。介绍为什么写公司在往产业互联网方向转型（仅3-4年），公司在这方面沉淀较少，交付架构师变动又比较大，项目在交付中碰到很多问题，导...",
-      "language": "zh-cn",
-      "publishedAt": "2022-01-26T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/122710902",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/122710902"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "8acf5a5c024f699351d7",
       "publisherId": "tencent-official",
       "companyId": "tencent",
@@ -746,37 +374,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "8b04ad00be04facc3466",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "深入揭秘 epoll 是如何实现 IO 多路复用的",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123748651",
-      "author": "Tencent_TEG",
-      "description": "作者：yanfeizhang，腾讯 PCG 后开开发工程师提起 epoll，大家都不陌生，知道它性能不错。但是它内部是如何工作的，如何达到高性能的效果呢，鲜有文章能把原理介绍清楚，所以我就撸起袖子搞了一篇文章，献给大家。进程在 Linux 上是一个开销不小的家伙，先不说创建，光是上下文切换一次就得几个微秒。所以为了高效地对海量用户提供服务，必须要让一个进程能同时处理很多个...",
-      "language": "zh-cn",
-      "publishedAt": "2022-03-25T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123748651",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123748651"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "96faf14148668658c2ac",
       "publisherId": "tencent-official",
       "companyId": "tencent",
@@ -803,37 +400,6 @@
           "sourceId": "tencent-qqnews",
           "externalId": "20260924A0CGM800",
           "url": "https://news.qq.com/rain/a/20260924A0CGM800"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "9a98cacdba34bc2ef3b8",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "低代码是什么？有什么优势",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123700297",
-      "author": "Tencent_TEG",
-      "description": "通过简单的拖拉拽操作，而不用编写复杂的代码，实现少写代码或者不写代码，就能快速高效完成业务目标。01 低代码平台演进1. 低代码概念低代码是无需编码（0 代码）或通过少量代码就可以快速生成应用程序的开发平台。通过可视化进行应用程序开发的方法，具有不同经验水平的开发人员可以通过图形化的用户界面，使用拖拽组件和模型驱动的逻辑来创建网页和移动应用程序。2. 低代码衍生历程20 ...",
-      "language": "zh-cn",
-      "publishedAt": "2022-03-23T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123700297",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123700297"
         }
       ],
       "duplicateCandidates": []
@@ -896,130 +462,6 @@
           "sourceId": "tencent-qqnews",
           "externalId": "20261015A0AWM800",
           "url": "https://news.qq.com/rain/a/20261015A0AWM800"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "bfb9df61b60701898693",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "Go 高性能编程技法",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123564198",
-      "author": "Tencent_TEG",
-      "description": "作者：dablelv，腾讯 IEGggG 后台开发工程师代码的稳健、可读和高效是我们每一个 coder 的共同追求。本文将结合 Go 语言特性，为书写效率更高的代码，从常用数据结构、内存管...",
-      "language": "zh-cn",
-      "publishedAt": "2022-03-17T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123564198",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123564198"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "c638db652114244b89d7",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "Web内核微信小程序框架实践",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123102497",
-      "author": "Tencent_TEG",
-      "description": "作者：boxuechen，腾讯 WXG 客户端开发工程师背景在正式进入分享之前，简单介绍一下做这个小程序新框架的背景思路，主要目的有以下几点：新框架和微信的主客户端解耦，能够独立运行，并且...",
-      "language": "zh-cn",
-      "publishedAt": "2022-02-23T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123102497",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123102497"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "c71280b1cf9eede405f0",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "从萌新玩家到游戏开发，IEG首位女专家的升级之路",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/122749407",
-      "author": "Tencent_TEG",
-      "description": "我们为什么叫「递归」 “递归”(recursion) 是一种在程序设计语言中被广泛使用的算法。它有两大特点，一是调用自己，二是化繁为简。我们当中那些优秀的技术人又何尝不是如此？他们以身作...",
-      "language": "zh-cn",
-      "publishedAt": "2022-01-29T08:13:39.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/122749407",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/122749407"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "cbdeb59f603be3d85b13",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "在鹅厂工作1到11年的程序媛",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123343198",
-      "author": "Tencent_TEG",
-      "description": "一年一度的“国际妇女节”马上要到了，预祝各位女同胞节日快乐。“手如柔荑，肤如凝脂，领如蝤蛴，齿如瓠犀，螓首蛾眉，巧笑倩兮，美目盼兮”，自古以来，因为女性的存在，世界才变得丰富多彩起来。最近...",
-      "language": "zh-cn",
-      "publishedAt": "2022-03-07T01:25:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123343198",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123343198"
         }
       ],
       "duplicateCandidates": []
@@ -1144,68 +586,6 @@
           "sourceId": "tencent-qqnews",
           "externalId": "20261013A0AYGU00",
           "url": "https://news.qq.com/rain/a/20261013A0AYGU00"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "e2cd09b18a7d9e607517",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "技术她力量，鹅厂女博士的寻“豹”之旅",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123366656",
-      "author": "Tencent_TEG",
-      "description": "我们为什么叫「递归」“递归”(recursion) 是一种在程序设计语言中被广泛使用的算法。它有两大特点，一是调用自己，二是化繁为简。我们当中那些优秀的技术人又何尝不是如此？他们以身作则...",
-      "language": "zh-cn",
-      "publishedAt": "2022-03-08T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123366656",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123366656"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "ee3a183754f5bd5f0c43",
-      "publisherId": "tencent-official",
-      "companyId": "tencent",
-      "title": "一致性 Hash 算法原理总结",
-      "canonicalUrl": "https://blog.csdn.net/Tencent_TEG/article/details/123414758",
-      "author": "Tencent_TEG",
-      "description": "作者：kylinkzhang，腾讯 CSIG 后台开发工程师一致性 Hash 算法是解决分布式缓存等问题的一种算法，本文介绍了一致性 Hash 算法的原理，并给出了一种实现和实际运用的案例...",
-      "language": "zh-cn",
-      "publishedAt": "2022-03-10T10:00:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:35.712Z",
-      "updatedAt": "2026-11-01T09:43:35.712Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "tencent-csdn",
-          "externalId": "https://blog.csdn.net/Tencent_TEG/article/details/123414758",
-          "url": "https://blog.csdn.net/Tencent_TEG/article/details/123414758"
         }
       ],
       "duplicateCandidates": []

@@ -2,68 +2,6 @@
   "schemaVersion": 1,
   "articles": [
     {
-      "id": "01839acadc0aa76d2a37",
-      "publisherId": "netease-official",
-      "companyId": "netease",
-      "title": "云音乐数据资产化建设的思考与实践",
-      "canonicalUrl": "https://www.cnblogs.com/163yun/p/17150661.html",
-      "author": "163yun",
-      "description": "本文介绍是云音乐数据资产化建设相关的内容，介绍了近一年在具体实践过程中的一些阶段性的成果和思考；详细内容将从资产化建设的背景、近期的实践成果以及下一阶段的思考与规划共三个方面来展开。 1 从几个典型的问题出发 “我要取个数有没有现成的表？”，“按xx报表这个指标的口径，我想取清单明细怎么弄？”，“这",
-      "language": "zh-CN",
-      "publishedAt": "2023-02-24T03:23:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:39.041Z",
-      "updatedAt": "2026-11-01T09:43:39.041Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "netease-cnblogs",
-          "externalId": "17150661",
-          "url": "https://www.cnblogs.com/163yun/p/17150661.html"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "18099a1ebcd782c06e1d",
-      "publisherId": "netease-official",
-      "companyId": "netease",
-      "title": "网易数帆数据治理体系、工具、流程、制度与管理概述",
-      "canonicalUrl": "https://www.cnblogs.com/163yun/p/17198766.html",
-      "author": "163yun",
-      "description": "导读 本文将介绍网易数帆在数据治理方面的一些总结和思考。文章将围绕以下三点展开： 1. 数据治理解决了什么问题 2. 数据治理体系 3. 浅谈数据治理的实现 01数据治理解决了什么问题 首先看一下数据治理解决了什么问题，可以总结为六个方面： 1. 数据开发与数据治理脱节 在许多企业中存在这样一个现象",
-      "language": "zh-CN",
-      "publishedAt": "2023-03-09T07:46:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:39.041Z",
-      "updatedAt": "2026-11-01T09:43:39.041Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "netease-cnblogs",
-          "externalId": "17198766",
-          "url": "https://www.cnblogs.com/163yun/p/17198766.html"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "2522cee002527caf87ee",
       "publisherId": "netease-official",
       "companyId": "netease",
@@ -121,68 +59,6 @@
           "sourceId": "netease-csdn",
           "externalId": "https://blog.csdn.net/wangyiyungw/article/details/163570574",
           "url": "https://blog.csdn.net/wangyiyungw/article/details/163570574"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "2a9edd0ffa3bae46d918",
-      "publisherId": "netease-official",
-      "companyId": "netease",
-      "title": "如何做好一场NPS调研？",
-      "canonicalUrl": "https://www.cnblogs.com/163yun/p/17237336.html",
-      "author": "163yun",
-      "description": "NPS调研该怎么做？下面将根据笔者的个人经历复盘，带领大家重温NPS的调研方法。",
-      "language": "zh-CN",
-      "publishedAt": "2023-03-20T10:50:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:39.041Z",
-      "updatedAt": "2026-11-01T09:43:39.041Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "netease-cnblogs",
-          "externalId": "17237336",
-          "url": "https://www.cnblogs.com/163yun/p/17237336.html"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "2b7328c0ff338ac135f7",
-      "publisherId": "netease-official",
-      "companyId": "netease",
-      "title": "如何在有数BI中实现千人千面的数据推送？",
-      "canonicalUrl": "https://www.cnblogs.com/163yun/p/18303077",
-      "author": "163yun",
-      "description": "问题背景 前几天有个项目管理的同学来咨询我一个问题，该项目有一个项目进度信息表，表中有项目名称，项目阶段，项目状态，项目任务等字段，在实际工作中想要实现如下场景： 当项目名称为A时，且项目阶段是需求阶段，把相关的项目人物信息推送给张三，且不让看到其他项目信息。 当项目名称为B时，且项目阶段是验收阶段",
-      "language": "zh-CN",
-      "publishedAt": "2024-07-15T06:43:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:39.041Z",
-      "updatedAt": "2026-11-01T09:43:39.041Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "netease-cnblogs",
-          "externalId": "18303077",
-          "url": "https://www.cnblogs.com/163yun/p/18303077"
         }
       ],
       "duplicateCandidates": []
@@ -250,37 +126,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "379b2e58c1d4800bb378",
-      "publisherId": "netease-official",
-      "companyId": "netease",
-      "title": "一图看懂网易数帆指标平台EasyMetrics",
-      "canonicalUrl": "https://www.cnblogs.com/163yun/p/18230699",
-      "author": "163yun",
-      "description": "🚀 简化数据分析，提升决策速度！EasyMetrics，指标的全生命周期管理平台。 👀 为何EasyMetrics？ 集中化管理，降低门槛。开箱即用，提升查询速度。 👥 适合人群？ 业务用户、开发者、数据团队，EasyMetrics让数据分析零门槛~ 💡 价值所在？ 提升效率，缩短响应时间，",
-      "language": "zh-CN",
-      "publishedAt": "2024-06-04T06:32:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:39.041Z",
-      "updatedAt": "2026-11-01T09:43:39.041Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "netease-cnblogs",
-          "externalId": "18230699",
-          "url": "https://www.cnblogs.com/163yun/p/18230699"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "3aaad404bdaf7fac66ee",
       "publisherId": "netease-official",
       "companyId": "netease",
@@ -338,37 +183,6 @@
           "sourceId": "netease-csdn",
           "externalId": "https://blog.csdn.net/wangyiyungw/article/details/167491044",
           "url": "https://blog.csdn.net/wangyiyungw/article/details/167491044"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "43abb406f742b318fe52",
-      "publisherId": "netease-official",
-      "companyId": "netease",
-      "title": "3种常见的数据分析场景梳理",
-      "canonicalUrl": "https://www.cnblogs.com/163yun/p/18321348",
-      "author": "163yun",
-      "description": "数据分析在各个领域广泛应用，其本质在于发现数据深层规律和机理以预测未来。常见场景包括描述现状、分析原因和预测未来。描述现状用合理指标评估业务状态，分析原因诊断业务异常并提出策略，预测未来则基于现有数据预测业务发展。",
-      "language": "zh-CN",
-      "publishedAt": "2024-07-24T09:27:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:39.041Z",
-      "updatedAt": "2026-11-01T09:43:39.041Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "netease-cnblogs",
-          "externalId": "18321348",
-          "url": "https://www.cnblogs.com/163yun/p/18321348"
         }
       ],
       "duplicateCandidates": []
@@ -498,37 +312,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "909b99da51fad0024150",
-      "publisherId": "netease-official",
-      "companyId": "netease",
-      "title": "网易知数Data Agent 发布：让智能问数进化为企业级数据智能体",
-      "canonicalUrl": "https://www.cnblogs.com/163yun/p/22917598",
-      "author": "163yun",
-      "description": "上期内容中，介绍了网易智企·数帆 V10.0 全链路数据智能平台的整体能力布局。围绕企业数据应用全流程，平台打造了四大核心能力——EasyData、指标平台、有数 BI、知数DataAgent，助力企业实现从数据治理到智能应用的价值闭环。 本期，我们聚焦知数DataAgent，探索其如何推动数据消费",
-      "language": "zh-CN",
-      "publishedAt": "2026-09-10T02:45:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:39.041Z",
-      "updatedAt": "2026-11-01T09:43:39.041Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "netease-cnblogs",
-          "externalId": "22917598",
-          "url": "https://www.cnblogs.com/163yun/p/22917598"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "9587aea3f6afc259907d",
       "publisherId": "netease-official",
       "companyId": "netease",
@@ -617,99 +400,6 @@
           "sourceId": "netease-csdn",
           "externalId": "https://blog.csdn.net/wangyiyungw/article/details/166571371",
           "url": "https://blog.csdn.net/wangyiyungw/article/details/166571371"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "a29fa6a9c2b3ab5030c1",
-      "publisherId": "netease-official",
-      "companyId": "netease",
-      "title": "任务运维 | 怎么补数据？这有一篇实践案例",
-      "canonicalUrl": "https://www.cnblogs.com/163yun/p/17276808.html",
-      "author": "163yun",
-      "description": "通过本篇文章，你能够了解补数据的场景和流程，掌握补数据的步骤和内容~",
-      "language": "zh-CN",
-      "publishedAt": "2023-03-31T08:56:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:39.041Z",
-      "updatedAt": "2026-11-01T09:43:39.041Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "netease-cnblogs",
-          "externalId": "17276808",
-          "url": "https://www.cnblogs.com/163yun/p/17276808.html"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "b3acc6240460daed42f7",
-      "publisherId": "netease-official",
-      "companyId": "netease",
-      "title": "数据治理实践 | 网易某业务线的计算资源治理",
-      "canonicalUrl": "https://www.cnblogs.com/163yun/p/17332851.html",
-      "author": "163yun",
-      "description": "从计算资源治理实践出发，带大家清楚认识计算资源治理到底该如何进行，并如何运用到其他项目中",
-      "language": "zh-CN",
-      "publishedAt": "2023-04-19T03:50:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:39.041Z",
-      "updatedAt": "2026-11-01T09:43:39.041Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "netease-cnblogs",
-          "externalId": "17332851",
-          "url": "https://www.cnblogs.com/163yun/p/17332851.html"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "bac27d1a9f1471e7b160",
-      "publisherId": "netease-official",
-      "companyId": "netease",
-      "title": "大数据技术沙龙来袭！2023走进网易：创新重塑数据生产力",
-      "canonicalUrl": "https://www.cnblogs.com/163yun/p/17406285.html",
-      "author": "163yun",
-      "description": "随着大数据平台和技术在企业内部的推进与落地，长效价值逐渐成为关注点。 ❓如何更好地管理数据资产？ ❓是否有可参考的建设方法 ❓AIGC和ChatGPT热点是否能高效结合企业数据需求？ ❓企业IT部门又该如何更好地发挥其能力? 网易将为您解答！！ 网易数帆联合信通院云大所、CSDN共同发起大数据技术沙",
-      "language": "zh-CN",
-      "publishedAt": "2023-05-16T09:20:00.000Z",
-      "discoveredAt": "2026-11-01T09:43:39.041Z",
-      "updatedAt": "2026-11-01T09:43:39.041Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "netease-cnblogs",
-          "externalId": "17406285",
-          "url": "https://www.cnblogs.com/163yun/p/17406285.html"
         }
       ],
       "duplicateCandidates": []

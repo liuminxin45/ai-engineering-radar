@@ -157,35 +157,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "2401cd4f5fa5f9b59611",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "财务数仓 Claude AI Coding 应用实战",
-      "canonicalUrl": "https://tech.dewu.com/article?id=220",
-      "description": "使用大模型的能力不仅仅局限在财务、局限在个人，也要向整个团队推广，包括：优先选择 1-2 个痛点明确、规范相对清晰的场景做试点；将有效的 Prompt 设计、上下文组织方式、测试用例模板等经验在团队内分享，形成可复用知识库；从「人做」为主转向「人定规则与口径、模型执行环节」的协作模式，让大模型成为数仓同学的日常助手。未来已来。",
-      "language": "en",
-      "publishedAt": "2026-07-13T09:07:05.000Z",
-      "discoveredAt": "2026-11-01T08:48:25.730Z",
-      "updatedAt": "2026-11-01T08:56:43.765Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-official",
-          "url": "https://tech.dewu.com/article?id=220"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "2453bcf0a312b9e7bca3",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
@@ -248,35 +219,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "4177c695b9e1ff27326a",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "基于 Cursor Agent 的流水线 AI CR 实践",
-      "canonicalUrl": "https://tech.dewu.com/article?id=214",
-      "description": "在实际迭代开发中，不同需求的代码规模差异很大，有些需求涉及上千行代码，有些则只有一两行。且对于前端的代码验收，主要侧重在界面功能，通过功能验收，没法确保每一行代码都测试到的，以及功能的代码逻辑是否合理，是否健壮、是否规范等问题，都需要通过人工代码 CR 来进一步兜底验收代码的质量，尽量降低业务线上出错的可能。但当面对上千行的代码变更时，人工 CR 也是心有余而力不足。 传统的代码审查依赖人工，面对大规模代码变更时效率有限，而 AI 代码审查能够实现自动化、标准化的质量检查，有效补充人工审查的不足。",
-      "language": "en",
-      "publishedAt": "2026-06-09T02:57:59.000Z",
-      "discoveredAt": "2026-11-01T08:48:25.730Z",
-      "updatedAt": "2026-11-01T08:56:43.765Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-official",
-          "url": "https://tech.dewu.com/article?id=214"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "46dcdd6dec7b4a5c4cac",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
@@ -303,35 +245,6 @@
           "sourceId": "dewu-csdn",
           "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/164811946",
           "url": "https://blog.csdn.net/SmartCodeTech/article/details/164811946"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "4c5bdd209a5757fc9127",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "AI编程能力边界探索：基于 Claude Code 的 Spec Coding 项目实战｜得物技术",
-      "canonicalUrl": "https://tech.dewu.com/article?id=212",
-      "description": "10 天，2.5 万行代码，提效 36%。 基于 Claude Code 的 Spec Coding（规格驱动编码） 深度实战。通过 2,754 次工具调用，我们不仅完成了从 0 到 1 的前端项目搭建，更在“约束+示范+视觉”的三层规范体系下，摸清了 AI 编程的真实能力边界。本文将复盘这场实战，拆解如何用结构化工作流消除 AI 的不确定性，重构开发者的核心竞争力。",
-      "language": "en",
-      "publishedAt": "2026-05-21T06:00:46.000Z",
-      "discoveredAt": "2026-11-01T08:48:25.730Z",
-      "updatedAt": "2026-11-01T08:56:43.765Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-official",
-          "url": "https://tech.dewu.com/article?id=212"
         }
       ],
       "duplicateCandidates": []
@@ -399,35 +312,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "5aedbc55adde15689a2b",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "搜索 C++ 引擎回归能力建设：从自测到工程化准出｜得物技术",
-      "canonicalUrl": "https://tech.dewu.com/article?id=211",
-      "description": "搜索 C++ 引擎回归能力建设，并不是一次“工具升级”，而是一场工程化治理：把经验变成流程、把自觉变成约束、把风险前移到上线之前，最终目标只有一个：让搜索引擎的每一次升级，都更可控、更可信。",
-      "language": "en",
-      "publishedAt": "2026-05-13T11:57:36.000Z",
-      "discoveredAt": "2026-11-01T08:48:25.730Z",
-      "updatedAt": "2026-11-01T08:56:43.765Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-official",
-          "url": "https://tech.dewu.com/article?id=211"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "5f31a2cbf3a571928066",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
@@ -454,35 +338,6 @@
           "sourceId": "dewu-csdn",
           "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/163249990",
           "url": "https://blog.csdn.net/SmartCodeTech/article/details/163249990"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "68d2474b700962e4fa64",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "从IDE到Terminal：适合后端宝宝体质的Claude Code工作流｜得物技术",
-      "canonicalUrl": "https://tech.dewu.com/article?id=213",
-      "description": "新的开发范式需要搭建新的开发环境和匹配自己开发习惯的工作流，这就像刚学编程那会，需要挑一个自己喜欢的 IDE、熟悉 IDE 快捷键和优化 IDE 设置一样。过程中间肯定有阵痛，Java 开发者们回忆一下多年之前从 Eclipse 转 IDEA 那会的阵痛吧，但是磨刀不误砍柴工，阵痛之后一定是生产力提升。借本文分享下我摸索后的方案，供大家参考。",
-      "language": "en",
-      "publishedAt": "2026-05-27T08:09:16.000Z",
-      "discoveredAt": "2026-11-01T08:48:25.730Z",
-      "updatedAt": "2026-11-01T08:56:43.765Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-official",
-          "url": "https://tech.dewu.com/article?id=213"
         }
       ],
       "duplicateCandidates": []
@@ -581,35 +436,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "8476d10aff17059d006b",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "Claude Code + OpenSpec 正在加速 AICoding 落地：从模型博弈到工程化的范式转移｜得物技术",
-      "canonicalUrl": "https://tech.dewu.com/article?id=216",
-      "description": "在软件开发的历史进程中，每一次效率的飞跃都伴随着抽象层次的提升。从汇编语言到高级语言，从手动内存管理到垃圾回收，开发者始终在寻求降低认知负荷的方法。进入 2026 年，生成式人工智能（GenAI）已成为编程领域不可或缺的力量。然而，行业正经历从 “模型崇拜” 向 “工程落地” 的深刻转型，单纯依靠增加大语言模型（LLM）的参数规模已无法解决复杂业务逻辑中的幻觉与失控问题。",
-      "language": "en",
-      "publishedAt": "2026-06-15T06:31:24.000Z",
-      "discoveredAt": "2026-11-01T08:48:25.730Z",
-      "updatedAt": "2026-11-01T08:56:43.765Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-official",
-          "url": "https://tech.dewu.com/article?id=216"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "930ae92ba09dbb8157a0",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
@@ -672,93 +498,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "95657b96e4daedb9eb01",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "日志诊断 Skill：用 AI + MCP 一键解决BUG",
-      "canonicalUrl": "https://tech.dewu.com/article?id=219",
-      "description": "AI 时代，工程师的核心竞争力不只是「能写代码」，更是「能把自己的经验和流程转化成可复用的 AI 能力」。/log-diagnosis 是一次小小的尝试，但背后的思路，值得在更多场景里延伸。",
-      "language": "en",
-      "publishedAt": "2026-07-08T09:51:54.000Z",
-      "discoveredAt": "2026-11-01T08:48:25.730Z",
-      "updatedAt": "2026-11-01T08:56:43.765Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-official",
-          "url": "https://tech.dewu.com/article?id=219"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "a70647c09383773ff509",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "Redis 自动化运维最佳实践",
-      "canonicalUrl": "https://tech.dewu.com/article?id=218",
-      "description": "随着业务规模与流量的持续高速增长，自建 Redis 集群面临着更高地性能与稳定性要求，对平台化、自动化运维能力也提出了新的挑战。为进一步提升资源利用效率、保障服务稳定运行，并更好地支撑业务快速发展，我们对 Redis 平台进行了自动化能力的建设与升级，通过系统化的平台能力优化，降低人工运维费力度，提升整体运维效率与服务质量。",
-      "language": "en",
-      "publishedAt": "2026-06-29T06:02:24.000Z",
-      "discoveredAt": "2026-11-01T08:48:25.730Z",
-      "updatedAt": "2026-11-01T08:56:43.765Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-official",
-          "url": "https://tech.dewu.com/article?id=218"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "aa3e13373908902fb76e",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "大禹平台：流批一体离线Dump平台的设计与应用",
-      "canonicalUrl": "https://tech.dewu.com/article?id=215",
-      "description": "大禹平台是一个离线 Dump 平台。在不同的场景都有自己的 Dump 流程，我们这里的 Dump 特指在搜索、推荐、广告（后续简称 “搜推广”）的场景中，将异构数据源加工处理后给到索引平台做索引的流程。",
-      "language": "en",
-      "publishedAt": "2026-06-09T03:25:52.000Z",
-      "discoveredAt": "2026-11-01T08:48:25.730Z",
-      "updatedAt": "2026-11-01T08:56:43.765Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-official",
-          "url": "https://tech.dewu.com/article?id=215"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "b7fb0f9dfa2a80e03ced",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
@@ -785,35 +524,6 @@
           "sourceId": "dewu-csdn",
           "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/169158940",
           "url": "https://blog.csdn.net/SmartCodeTech/article/details/169158940"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "dc2494c71878a264b7a3",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "Claude在得物App数仓的深度集成与效能演进",
-      "canonicalUrl": "https://tech.dewu.com/article?id=217",
-      "description": "大模型在企业级数据仓库中的落地核心，主要体现在两大维度：一是数据确权（Data Rights Confirmation），二是规范化输入输出（Standardized I/O）。以此为框架，结合得物App真实数仓建设与研发实践，系统阐述了基于Galaxy MCP的基础设施集成方案，并对智能视觉埋点、AI OneData建模、智能周报生成、策略孵化中心等典型场景的架构设计与运行逻辑进行深入分析。最后，针对大模型应用中存在的幻觉问题与合规风险，本文提出一套系统性的治理与管控机制。",
-      "language": "en",
-      "publishedAt": "2026-06-22T10:00:11.000Z",
-      "discoveredAt": "2026-11-01T08:48:25.730Z",
-      "updatedAt": "2026-11-01T08:56:43.765Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-01T12:14:33.939Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-official",
-          "url": "https://tech.dewu.com/article?id=217"
         }
       ],
       "duplicateCandidates": []
