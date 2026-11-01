@@ -1,0 +1,41 @@
+{
+  "name": "ai-engineering-radar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "pnpm@10.20.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @radar/web dev",
+    "registry:check": "tsx scripts/cli.ts registry",
+    "ingest": "tsx scripts/cli.ts ingest",
+    "data:init": "tsx scripts/cli.ts init",
+    "data:check": "tsx scripts/cli.ts validate",
+    "export": "tsx scripts/cli.ts export",
+    "build": "pnpm export && pnpm --filter @radar/web build",
+    "typecheck": "tsc --noEmit && pnpm --filter @radar/web typecheck",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:fixture": "tsx scripts/fixtures.ts",
+    "check:public": "tsx scripts/check-public.ts",
+    "verify:live": "tsx scripts/verify-live.ts"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "fast-xml-parser": "^5.3.0",
+    "feed": "^5.1.0",
+    "robots-parser": "^3.0.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^22.18.0",
+    "prettier": "3.6.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

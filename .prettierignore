@@ -1,0 +1,9 @@
+node_modules
+.radar
+work
+apps/web/src/generated
+apps/web/out
+apps/web/.next
+pnpm-lock.yaml
+playwright-report
+test-results

@@ -1,0 +1,95 @@
+name: Collect and publish
+on:
+  schedule:
+    - cron: "17 1 * * *"
+  workflow_dispatch:
+    inputs:
+      collect:
+        description: Collect sources before publishing
+        type: boolean
+        default: true
+  push:
+    branches: [main]
+concurrency:
+  group: radar-data-and-pages
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  build:
+    if: github.repository == 'liuminxin45/ai-engineering-radar'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    env:
+      RADAR_DATA_DIR: .radar/data
+      BASE_PATH: /ai-engineering-radar
+      SITE_URL: https://liuminxin45.github.io
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: data
+          path: .radar/state
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Restore durable snapshot
+        run: cp -a .radar/state/snapshot .radar/data
+      - run: pnpm registry:check && pnpm data:check && pnpm test
+      - name: Collect reviewed sources
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect)
+        env:
+          CLASSIFIER_BASE_URL: ${{ vars.CLASSIFIER_BASE_URL }}
+          CLASSIFIER_MODEL: ${{ vars.CLASSIFIER_MODEL }}
+          CLASSIFIER_API_KEY: ${{ secrets.CLASSIFIER_API_KEY }}
+          CLASSIFIER_MAX_ITEMS: "20"
+        run: pnpm ingest --daily
+      - run: pnpm data:check && pnpm build && pnpm typecheck && pnpm check:public
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:e2e
+      - name: Commit validated snapshot
+        run: |
+          rsync -a --delete .radar/data/ .radar/state/snapshot/
+          cd .radar/state
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add snapshot
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: update reviewed engineering metadata'
+            git push origin HEAD:data
+          fi
+      - name: Publish source acceptance summary
+        run: cat work/source-acceptance.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/web/out
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm verify:live

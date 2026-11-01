@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+.radar/
+work/
+playwright-report/
+test-results/
+apps/web/public/data/
+apps/web/public/feed*
+apps/web/src/generated/
+*.tsbuildinfo

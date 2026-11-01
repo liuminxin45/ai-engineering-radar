@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Engineering</title><entry><id>tag:team:1</id><title>Implementing RAG retrieval pipelines</title><link rel="alternate" href="https://tech.meituan.com/rag"/><summary>Building a retrieval augmented AI pipeline with evaluation benchmarks.</summary><published>2026-10-29T08:00:00Z</published><author><name>Official Team</name></author></entry></feed>

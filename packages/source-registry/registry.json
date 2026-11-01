@@ -1,0 +1,1316 @@
+{
+  "schemaVersion": 1,
+  "companies": [
+    {
+      "id": "meituan",
+      "name": "美团",
+      "region": "cn"
+    },
+    {
+      "id": "vivo",
+      "name": "vivo",
+      "region": "cn"
+    },
+    {
+      "id": "dewu",
+      "name": "得物",
+      "region": "cn"
+    },
+    {
+      "id": "tencent",
+      "name": "腾讯",
+      "region": "cn"
+    },
+    {
+      "id": "alibaba",
+      "name": "阿里巴巴 / 阿里云",
+      "region": "cn"
+    },
+    {
+      "id": "bytedance",
+      "name": "字节跳动",
+      "region": "cn"
+    },
+    {
+      "id": "baidu",
+      "name": "百度",
+      "region": "cn"
+    },
+    {
+      "id": "huawei",
+      "name": "华为",
+      "region": "cn"
+    },
+    {
+      "id": "kuaishou",
+      "name": "快手",
+      "region": "cn"
+    },
+    {
+      "id": "ant",
+      "name": "蚂蚁集团",
+      "region": "cn"
+    },
+    {
+      "id": "xiaomi",
+      "name": "小米",
+      "region": "cn"
+    },
+    {
+      "id": "oppo",
+      "name": "OPPO",
+      "region": "cn"
+    },
+    {
+      "id": "jd",
+      "name": "京东",
+      "region": "cn"
+    },
+    {
+      "id": "ctrip",
+      "name": "携程",
+      "region": "cn"
+    },
+    {
+      "id": "xiaohongshu",
+      "name": "小红书",
+      "region": "cn"
+    },
+    {
+      "id": "netease",
+      "name": "网易",
+      "region": "cn"
+    },
+    {
+      "id": "bilibili",
+      "name": "B站",
+      "region": "cn"
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "region": "global"
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "region": "global"
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "region": "global"
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "region": "global"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "region": "global"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "region": "global"
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "region": "global"
+    },
+    {
+      "id": "grab",
+      "name": "Grab",
+      "region": "global"
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "region": "global"
+    },
+    {
+      "id": "uber",
+      "name": "Uber",
+      "region": "global"
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "region": "global"
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "region": "global"
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "region": "global"
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "region": "global"
+    },
+    {
+      "id": "aws",
+      "name": "AWS",
+      "region": "global"
+    },
+    {
+      "id": "databricks",
+      "name": "Databricks",
+      "region": "global"
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face",
+      "region": "global"
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "region": "global"
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "region": "global"
+    },
+    {
+      "id": "airbnb",
+      "name": "Airbnb",
+      "region": "global"
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "region": "global"
+    }
+  ],
+  "publishers": [
+    {
+      "id": "meituan-official",
+      "companyId": "meituan",
+      "name": "美团 技术团队"
+    },
+    {
+      "id": "vivo-tech",
+      "companyId": "vivo",
+      "name": "vivo 技术团队"
+    },
+    {
+      "id": "dewu-tech",
+      "companyId": "dewu",
+      "name": "得物 技术团队"
+    },
+    {
+      "id": "tencent-official",
+      "companyId": "tencent",
+      "name": "腾讯 技术团队"
+    },
+    {
+      "id": "alibaba-official",
+      "companyId": "alibaba",
+      "name": "阿里巴巴 / 阿里云 技术团队"
+    },
+    {
+      "id": "bytedance-official",
+      "companyId": "bytedance",
+      "name": "字节跳动 技术团队"
+    },
+    {
+      "id": "baidu-official",
+      "companyId": "baidu",
+      "name": "百度 技术团队"
+    },
+    {
+      "id": "huawei-official",
+      "companyId": "huawei",
+      "name": "华为 技术团队"
+    },
+    {
+      "id": "kuaishou-official",
+      "companyId": "kuaishou",
+      "name": "快手 技术团队"
+    },
+    {
+      "id": "ant-official",
+      "companyId": "ant",
+      "name": "蚂蚁集团 技术团队"
+    },
+    {
+      "id": "xiaomi-official",
+      "companyId": "xiaomi",
+      "name": "小米 技术团队"
+    },
+    {
+      "id": "oppo-official",
+      "companyId": "oppo",
+      "name": "OPPO 技术团队"
+    },
+    {
+      "id": "jd-official",
+      "companyId": "jd",
+      "name": "京东 技术团队"
+    },
+    {
+      "id": "ctrip-official",
+      "companyId": "ctrip",
+      "name": "携程 技术团队"
+    },
+    {
+      "id": "xiaohongshu-official",
+      "companyId": "xiaohongshu",
+      "name": "小红书 技术团队"
+    },
+    {
+      "id": "netease-official",
+      "companyId": "netease",
+      "name": "网易 技术团队"
+    },
+    {
+      "id": "bilibili-official",
+      "companyId": "bilibili",
+      "name": "B站 技术团队"
+    },
+    {
+      "id": "anthropic-official",
+      "companyId": "anthropic",
+      "name": "Anthropic 技术团队"
+    },
+    {
+      "id": "openai-official",
+      "companyId": "openai",
+      "name": "OpenAI 技术团队"
+    },
+    {
+      "id": "google-official",
+      "companyId": "google",
+      "name": "Google 技术团队"
+    },
+    {
+      "id": "deepmind-official",
+      "companyId": "google",
+      "name": "Google DeepMind 技术团队"
+    },
+    {
+      "id": "microsoft-official",
+      "companyId": "microsoft",
+      "name": "Microsoft 技术团队"
+    },
+    {
+      "id": "github-official",
+      "companyId": "github",
+      "name": "GitHub 技术团队"
+    },
+    {
+      "id": "cursor-official",
+      "companyId": "cursor",
+      "name": "Cursor 技术团队"
+    },
+    {
+      "id": "spotify-official",
+      "companyId": "spotify",
+      "name": "Spotify 技术团队"
+    },
+    {
+      "id": "grab-official",
+      "companyId": "grab",
+      "name": "Grab 技术团队"
+    },
+    {
+      "id": "netflix-official",
+      "companyId": "netflix",
+      "name": "Netflix 技术团队"
+    },
+    {
+      "id": "uber-official",
+      "companyId": "uber",
+      "name": "Uber 技术团队"
+    },
+    {
+      "id": "meta-official",
+      "companyId": "meta",
+      "name": "Meta 技术团队"
+    },
+    {
+      "id": "linkedin-official",
+      "companyId": "linkedin",
+      "name": "LinkedIn 技术团队"
+    },
+    {
+      "id": "cloudflare-official",
+      "companyId": "cloudflare",
+      "name": "Cloudflare 技术团队"
+    },
+    {
+      "id": "nvidia-official",
+      "companyId": "nvidia",
+      "name": "NVIDIA 技术团队"
+    },
+    {
+      "id": "aws-official",
+      "companyId": "aws",
+      "name": "AWS 技术团队"
+    },
+    {
+      "id": "databricks-official",
+      "companyId": "databricks",
+      "name": "Databricks 技术团队"
+    },
+    {
+      "id": "huggingface-official",
+      "companyId": "huggingface",
+      "name": "Hugging Face 技术团队"
+    },
+    {
+      "id": "vercel-official",
+      "companyId": "vercel",
+      "name": "Vercel 技术团队"
+    },
+    {
+      "id": "shopify-official",
+      "companyId": "shopify",
+      "name": "Shopify 技术团队"
+    },
+    {
+      "id": "airbnb-official",
+      "companyId": "airbnb",
+      "name": "Airbnb 技术团队"
+    },
+    {
+      "id": "stripe-official",
+      "companyId": "stripe",
+      "name": "Stripe 技术团队"
+    }
+  ],
+  "sources": [
+    {
+      "id": "meituan",
+      "publisherId": "meituan-official",
+      "name": "美团 · meituan",
+      "entryUrl": "https://tech.meituan.com/",
+      "url": "https://tech.meituan.com/feed/",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://tech.meituan.com/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "metadata": {
+        "dateSelector": ".vp-post-date",
+        "timezone": "+08:00"
+      }
+    },
+    {
+      "id": "vivo-cnblogs",
+      "publisherId": "vivo-tech",
+      "name": "vivo · vivo-cnblogs",
+      "entryUrl": "https://www.cnblogs.com/vivotech/",
+      "url": "https://www.cnblogs.com/vivotech/rss",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "thirdparty",
+      "verification": {
+        "status": "pending",
+        "evidenceUrls": [],
+        "note": "已登记指定账号；尚需官网反向链接或可核验的平台企业认证证据。",
+        "reviewedAt": null
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "vivo-site",
+      "publisherId": "vivo-tech",
+      "name": "vivo · vivo-site",
+      "entryUrl": "https://tech.vivo.com/",
+      "url": "https://tech.vivo.com/",
+      "priority": "B",
+      "adapter": "reference",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://tech.vivo.com/"],
+        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "dewu-tencent",
+      "publisherId": "dewu-tech",
+      "name": "得物 · dewu-tencent",
+      "entryUrl": "https://developer.cloud.tencent.com/column/96340",
+      "url": "https://cloud.tencent.com/developer/column/96340",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "tencent-column",
+      "verification": {
+        "status": "pending",
+        "evidenceUrls": [],
+        "note": "专栏结构化数据确认创作者 UID 9927536，company 为得物App；平台显示未做职业认证，仍需官方反向链接或企业认证证据。",
+        "reviewedAt": null
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "authorAllowlist": ["9927536"]
+    },
+    {
+      "id": "tencent",
+      "publisherId": "tencent-official",
+      "name": "腾讯 · tencent",
+      "entryUrl": "https://cloud.tencent.com/developer",
+      "url": "https://cloud.tencent.com/developer",
+      "priority": "B",
+      "adapter": "reference",
+      "platform": "community",
+      "verification": {
+        "status": "pending",
+        "evidenceUrls": [],
+        "note": "社区含第三方投稿；需核验具体官方作者账号与稳定标识，禁止整站归属公司。",
+        "reviewedAt": null
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "alibaba",
+      "publisherId": "alibaba-official",
+      "name": "阿里巴巴 / 阿里云 · alibaba",
+      "entryUrl": "https://developer.aliyun.com/",
+      "url": "https://developer.aliyun.com/",
+      "priority": "B",
+      "adapter": "reference",
+      "platform": "community",
+      "verification": {
+        "status": "pending",
+        "evidenceUrls": [],
+        "note": "社区含第三方投稿；需核验具体官方作者账号与稳定标识，禁止整站归属公司。",
+        "reviewedAt": null
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "bytedance",
+      "publisherId": "bytedance-official",
+      "name": "字节跳动 · bytedance",
+      "entryUrl": "https://opensource.bytedance.com/blog",
+      "url": "https://opensource.bytedance.com/blog",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://opensource.bytedance.com/blog"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "selector": "a[href*=\"/blog/\"]"
+    },
+    {
+      "id": "baidu",
+      "publisherId": "baidu-official",
+      "name": "百度 · baidu",
+      "entryUrl": "https://ai.baidu.com/",
+      "url": "https://ai.baidu.com/",
+      "priority": "B",
+      "adapter": "reference",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://ai.baidu.com/"],
+        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "huawei",
+      "publisherId": "huawei-official",
+      "name": "华为 · huawei",
+      "entryUrl": "https://developer.huawei.com/",
+      "url": "https://developer.huawei.com/",
+      "priority": "B",
+      "adapter": "reference",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://developer.huawei.com/"],
+        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "kuaishou",
+      "publisherId": "kuaishou-official",
+      "name": "快手 · kuaishou",
+      "entryUrl": "https://ai.kuaishou.com/",
+      "url": "https://ai.kuaishou.com/",
+      "priority": "B",
+      "adapter": "reference",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://ai.kuaishou.com/"],
+        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "ant",
+      "publisherId": "ant-official",
+      "name": "蚂蚁集团 · ant",
+      "entryUrl": "https://open.alipay.com/",
+      "url": "https://open.alipay.com/",
+      "priority": "B",
+      "adapter": "reference",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://open.alipay.com/"],
+        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "xiaomi",
+      "publisherId": "xiaomi-official",
+      "name": "小米 · xiaomi",
+      "entryUrl": "https://dev.mi.com/",
+      "url": "https://dev.mi.com/",
+      "priority": "B",
+      "adapter": "reference",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://dev.mi.com/"],
+        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "oppo",
+      "publisherId": "oppo-official",
+      "name": "OPPO · oppo",
+      "entryUrl": "https://open.oppomobile.com/",
+      "url": "https://open.oppomobile.com/",
+      "priority": "B",
+      "adapter": "reference",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://open.oppomobile.com/"],
+        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "jd",
+      "publisherId": "jd-official",
+      "name": "京东 · jd",
+      "entryUrl": "https://developer.jdcloud.com/",
+      "url": "https://developer.jdcloud.com/",
+      "priority": "B",
+      "adapter": "reference",
+      "platform": "community",
+      "verification": {
+        "status": "pending",
+        "evidenceUrls": ["https://developer.jdcloud.com/"],
+        "note": "已检测到开发者社区文章目录，但页面含社区投稿；需进一步确定京东官方作者稳定 ID，不能整站归属京东。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "ctrip",
+      "publisherId": "ctrip-official",
+      "name": "携程 · ctrip",
+      "entryUrl": "https://www.ctrip.com/",
+      "url": "https://www.cnblogs.com/ctriptech/",
+      "priority": "C",
+      "adapter": "html",
+      "platform": "thirdparty",
+      "verification": {
+        "status": "pending",
+        "evidenceUrls": [],
+        "note": "已找到 ctriptech 博客园候选账号，公开目录最后更新于 2016 年；尚缺企业反向链接或认证证据，tech.ctrip.com 当前连接失败。",
+        "reviewedAt": null
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "selector": ".postTitle a"
+    },
+    {
+      "id": "xiaohongshu",
+      "publisherId": "xiaohongshu-official",
+      "name": "小红书 · xiaohongshu",
+      "entryUrl": "https://www.xiaohongshu.com/",
+      "url": "https://www.xiaohongshu.com/",
+      "priority": "C",
+      "adapter": "reference",
+      "platform": "candidate",
+      "verification": {
+        "status": "pending",
+        "evidenceUrls": [],
+        "note": "已发现小红书技术REDtech公众号线索，但缺少可独立核验的官方文章采集入口；不采集第三方公众号镜像。",
+        "reviewedAt": null
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "netease",
+      "publisherId": "netease-official",
+      "name": "网易 · netease",
+      "entryUrl": "https://www.163.com/",
+      "url": "https://www.cnblogs.com/163yun/",
+      "priority": "C",
+      "adapter": "html",
+      "platform": "thirdparty",
+      "verification": {
+        "status": "pending",
+        "evidenceUrls": [],
+        "note": "已找到名为网易智企·数帆的博客园账号 163yun；尚缺官网反向链接或可核验企业认证，保持待核验。",
+        "reviewedAt": null
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "selector": ".postTitle a"
+    },
+    {
+      "id": "bilibili",
+      "publisherId": "bilibili-official",
+      "name": "B站 · bilibili",
+      "entryUrl": "https://www.bilibili.com/",
+      "url": "https://www.bilibili.com/",
+      "priority": "C",
+      "adapter": "reference",
+      "platform": "candidate",
+      "verification": {
+        "status": "pending",
+        "evidenceUrls": [
+          "https://ir.bilibili.com/media/ftcjhpj4/bps23090002_bilibili-2023esg_sc_c4856.pdf"
+        ],
+        "note": "B站官方 ESG 报告确认哔哩哔哩技术公众号与B站账号存在；尚未核定稳定账号 ID 及允许采集的文章目录。",
+        "reviewedAt": null
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "anthropic",
+      "publisherId": "anthropic-official",
+      "name": "Anthropic · anthropic",
+      "entryUrl": "https://www.anthropic.com/engineering",
+      "url": "https://www.anthropic.com/engineering",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://www.anthropic.com/engineering"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "selector": "main a[href^=\"/research/\"]:not([href*=\"/team/\"])"
+    },
+    {
+      "id": "openai",
+      "publisherId": "openai-official",
+      "name": "OpenAI · openai",
+      "entryUrl": "https://developers.openai.com/cookbook/",
+      "url": "https://developers.openai.com/cookbook",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://developers.openai.com/cookbook/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "selector": "a[href*=\"/cookbook/examples/\"]"
+    },
+    {
+      "id": "google",
+      "publisherId": "google-official",
+      "name": "Google · google",
+      "entryUrl": "https://developers.googleblog.com/",
+      "url": "https://developers.googleblog.com/feeds/posts/default",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://developers.googleblog.com/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "deepmind",
+      "publisherId": "deepmind-official",
+      "name": "Google DeepMind · deepmind",
+      "entryUrl": "https://deepmind.google/discover/blog/",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "priority": "B",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://deepmind.google/discover/blog/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "microsoft",
+      "publisherId": "microsoft-official",
+      "name": "Microsoft · microsoft",
+      "entryUrl": "https://devblogs.microsoft.com/",
+      "url": "https://devblogs.microsoft.com/feed/",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://devblogs.microsoft.com/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "github",
+      "publisherId": "github-official",
+      "name": "GitHub · github",
+      "entryUrl": "https://github.blog/category/engineering/",
+      "url": "https://github.blog/engineering/feed/",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://github.blog/category/engineering/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "cursor",
+      "publisherId": "cursor-official",
+      "name": "Cursor · cursor",
+      "entryUrl": "https://cursor.com/blog",
+      "url": "https://cursor.com/blog",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://cursor.com/blog"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "selector": "a[href*=\"/blog/\"]"
+    },
+    {
+      "id": "spotify",
+      "publisherId": "spotify-official",
+      "name": "Spotify · spotify",
+      "entryUrl": "https://engineering.atspotify.com/",
+      "url": "https://engineering.atspotify.com/feed/",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://engineering.atspotify.com/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "grab",
+      "publisherId": "grab-official",
+      "name": "Grab · grab",
+      "entryUrl": "https://engineering.grab.com/",
+      "url": "https://engineering.grab.com/feed.xml",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://engineering.grab.com/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "netflix",
+      "publisherId": "netflix-official",
+      "name": "Netflix · netflix",
+      "entryUrl": "https://netflixtechblog.com/",
+      "url": "https://netflixtechblog.com/feed",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://netflixtechblog.com/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "uber",
+      "publisherId": "uber-official",
+      "name": "Uber · uber",
+      "entryUrl": "https://www.uber.com/blog/engineering/",
+      "url": "https://www.uber.com/blog/engineering/rss/",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://www.uber.com/blog/engineering/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "meta",
+      "publisherId": "meta-official",
+      "name": "Meta · meta",
+      "entryUrl": "https://engineering.fb.com/",
+      "url": "https://engineering.fb.com/feed/",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://engineering.fb.com/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "linkedin",
+      "publisherId": "linkedin-official",
+      "name": "LinkedIn · linkedin",
+      "entryUrl": "https://engineering.linkedin.com/blog",
+      "url": "https://www.linkedin.com/blog/engineering",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://engineering.linkedin.com/blog"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "selector": "a[href*=\"/blog/engineering/\"]"
+    },
+    {
+      "id": "cloudflare",
+      "publisherId": "cloudflare-official",
+      "name": "Cloudflare · cloudflare",
+      "entryUrl": "https://blog.cloudflare.com/",
+      "url": "https://blog.cloudflare.com/rss/",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://blog.cloudflare.com/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "nvidia",
+      "publisherId": "nvidia-official",
+      "name": "NVIDIA · nvidia",
+      "entryUrl": "https://developer.nvidia.com/blog/",
+      "url": "https://developer.nvidia.com/blog/feed/",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://developer.nvidia.com/blog/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "aws",
+      "publisherId": "aws-official",
+      "name": "AWS · aws",
+      "entryUrl": "https://aws.amazon.com/blogs/machine-learning/",
+      "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://aws.amazon.com/blogs/machine-learning/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "databricks",
+      "publisherId": "databricks-official",
+      "name": "Databricks · databricks",
+      "entryUrl": "https://www.databricks.com/blog",
+      "url": "https://www.databricks.com/feed",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://www.databricks.com/blog"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "huggingface",
+      "publisherId": "huggingface-official",
+      "name": "Hugging Face · huggingface",
+      "entryUrl": "https://huggingface.co/blog",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "priority": "B",
+      "adapter": "feed",
+      "platform": "community",
+      "verification": {
+        "status": "pending",
+        "evidenceUrls": [],
+        "note": "社区含第三方投稿；需核验具体官方作者账号与稳定标识，禁止整站归属公司。",
+        "reviewedAt": null
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "vercel",
+      "publisherId": "vercel-official",
+      "name": "Vercel · vercel",
+      "entryUrl": "https://vercel.com/blog",
+      "url": "https://vercel.com/atom",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://vercel.com/blog"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "shopify",
+      "publisherId": "shopify-official",
+      "name": "Shopify · shopify",
+      "entryUrl": "https://shopify.engineering/",
+      "url": "https://shopify.engineering/blog.atom",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://shopify.engineering/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "airbnb",
+      "publisherId": "airbnb-official",
+      "name": "Airbnb · airbnb",
+      "entryUrl": "https://medium.com/airbnb-engineering",
+      "url": "https://medium.com/feed/airbnb-engineering",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "thirdparty",
+      "verification": {
+        "status": "pending",
+        "evidenceUrls": [],
+        "note": "已登记指定账号；尚需官网反向链接或可核验的平台企业认证证据。",
+        "reviewedAt": null
+      },
+      "crawl": {
+        "enabled": false,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "stripe",
+      "publisherId": "stripe-official",
+      "name": "Stripe · stripe",
+      "entryUrl": "https://stripe.com/blog/engineering",
+      "url": "https://stripe.com/blog/feed.rss",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://stripe.com/blog/engineering"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "linkPattern": "/blog/"
+    },
+    {
+      "id": "dewu-official",
+      "publisherId": "dewu-tech",
+      "name": "得物 · dewu-official",
+      "entryUrl": "https://tech.dewu.com/",
+      "url": "https://tech.dewu.com/",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "official-site",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://tech.dewu.com/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "selector": "a[href*=\"/article\"]",
+      "metadata": {
+        "dateSelector": ".created-at",
+        "timezone": "+08:00"
+      }
+    }
+  ]
+}
