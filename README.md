@@ -20,13 +20,13 @@ An open article index for official engineering teams at Chinese companies. This 
 
 ## 技术与运行方式
 
-TypeScript、Node.js 22、pnpm workspace、Next.js 静态导出。全部业务状态使用带校验和的版本化 JSON，无数据库、ORM 或常驻后端。
+TypeScript、Node.js 24.19.0、pnpm workspace、Next.js 静态导出。全部业务状态使用带校验和的版本化 JSON，无数据库、ORM 或常驻后端。
 
 `main` 保存代码和来源注册表。`data` 分支的 `snapshot/` 保存文章、来源状态及快照清单。Actions 每日北京时间 09:17 恢复快照，采集、构建和验证，通过后保存数据并部署 GitHub Pages。Actions 可能延迟执行，不能视为严格时间保证。
 
 ## 本地启动
 
-需要 Node.js 22 或更新版本，以及 pnpm 10.20.0。
+需要 Node.js 24.19.0 和 pnpm 10.20.0。共享组件库从固定 Git 版本构建，要求此精确 Node.js 版本；本地与 CI 使用相同版本。
 
 ```sh
 pnpm install --frozen-lockfile
