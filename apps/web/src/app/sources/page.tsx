@@ -61,7 +61,13 @@ export default function Sources() {
                 <p>{s.verification.note}</p>
                 <div className="source-facts">
                   <span>优先级 {s.priority}</span>
-                  <span>{s.crawl.enabled ? "已启用" : "未启用"}</span>
+                  <span>
+                    {s.verification.status === "suspended"
+                      ? "历史渠道"
+                      : s.crawl.enabled
+                        ? "已启用"
+                        : "未启用"}
+                  </span>
                   <span
                     className={
                       s.state.status === "success" ||
@@ -78,6 +84,14 @@ export default function Sources() {
                   <p className="source-error">最近说明：{s.state.error}</p>
                 )}
                 <div className="source-timestamps small muted">
+                  <span>
+                    最新收录文章{" "}
+                    {s.latestPublishedAt ? (
+                      <LocalTime value={s.latestPublishedAt} dateOnly />
+                    ) : (
+                      "暂无发布日期"
+                    )}
+                  </span>
                   {s.state.lastCheckedAt && (
                     <span>
                       最近检测 <LocalTime value={s.state.lastCheckedAt} />

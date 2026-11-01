@@ -130,6 +130,10 @@ it("suspended source is not collected", async () => {
   });
   expect(collect).not.toHaveBeenCalled();
   expect(result.articles).toHaveLength(1);
+  expect(result.states[0].status).toBe("suspended");
+  expect(result.states[0].lastSuccessAt).toBe(
+    snapshot().states[0].lastSuccessAt,
+  );
 });
 it("publishes legacy review entries without a model or content rules", async () => {
   const data = snapshot();

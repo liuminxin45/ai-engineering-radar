@@ -11,6 +11,8 @@ import {
   parseCnblogsAccount,
   parseTencentNews,
 } from "./platforms/community.js";
+import { parseAliyunGroup, nextAliyunPage } from "./platforms/aliyun.js";
+import { parseVolcengineAccount } from "./platforms/volcengine.js";
 export const plain = (s: unknown, max = 800) =>
   cheerio
     .load(`<body>${String(s ?? "")}</body>`)
@@ -106,6 +108,9 @@ export function parseFeed(xml: string, source: Source): Candidate[] {
   });
 }
 export function parseListing(html: string, source: Source): Candidate[] {
+  if (source.platform === "aliyun-group") return parseAliyunGroup(html, source);
+  if (source.platform === "volcengine-account")
+    return parseVolcengineAccount(html, source);
   if (source.platform === "tencent-news") return parseTencentNews(html, source);
   if (source.platform === "cnblogs-account")
     return parseCnblogsAccount(html, source);
@@ -267,6 +272,28 @@ export async function collect(
       ? parseFeed(response.text, source)
       : parseListing(response.text, source)
   ).slice(0, limit);
+  if (source.platform === "aliyun-group") {
+    const unique = new Map(items.map((item) => [item.url, item]));
+    const visited = new Set([source.url]);
+    let current = response;
+    while (unique.size < limit && visited.size < 10) {
+      const pageSource = { ...source, url: current.url };
+      const next = nextAliyunPage(current.text, pageSource);
+      if (!next || visited.has(next)) break;
+      visited.add(next);
+      current = await fetchReviewed(next, source);
+      const pageItems = parseAliyunGroup(current.text, {
+        ...source,
+        url: next,
+      });
+      if (!pageItems.length)
+        throw new CrawlError(
+          "Aliyun paginated listing has no reviewed article metadata",
+        );
+      for (const item of pageItems) unique.set(item.url, item);
+    }
+    items.splice(0, items.length, ...[...unique.values()].slice(0, limit));
+  }
   if (!items.length)
     throw new CrawlError(
       "No article entries parsed; source adapter or publisher filter requires review",
@@ -278,6 +305,8 @@ export async function collect(
     "csdn-feed",
     "segmentfault-feed",
     "team-blog-feed",
+    "aliyun-group",
+    "volcengine-account",
   ].includes(source.platform);
   for (const item of items) {
     // Only retrieve metadata when a listing/feed lacks a useful excerpt or date.

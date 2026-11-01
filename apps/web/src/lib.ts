@@ -13,7 +13,9 @@ export const site = raw as unknown as {
   companies: Company[];
   publishers: Publisher[];
   topics: Array<{ id: string; name: string }>;
-  sources: Array<Source & { state: SourceState }>;
+  sources: Array<
+    Source & { state: SourceState; latestPublishedAt: string | null }
+  >;
   health: {
     articleCount: number;
     sourceCount: number;

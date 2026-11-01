@@ -14,6 +14,8 @@ An open article index for official engineering teams at Chinese companies. This 
 
 来源是否经过身份核验、是否启用、是否采集成功是三个独立状态，均可在来源目录查看。待核验账号可以继续补充官方证据；缺少文章目录的入口可以继续贡献适配器。
 
+来源还需要核查近期活跃度。HTTP 成功或能解析历史文章，不代表覆盖了近期更新。超过一个月没有新文章的渠道会人工复查；确认过时后暂停新增，保留已收录文章和原始入口，不对文章年龄增加过滤规则。本轮补充了得物 CSDN、阿里云云原生与 Dataphin 官方栏目、字节跳动开源火山引擎账号，具体依据及未解决来源见[来源核验记录](docs/source-research.md)。
+
 不保存或提供文章全文，不提供登录、收藏、推荐榜单和评论。文章保留原始语言。
 
 项目介绍见 [中文 / English About](docs/about.md)。欢迎[提交 PR 适配新来源](CONTRIBUTING.md)，也可以用[来源提议模板](https://github.com/liuminxin45/ai-engineering-radar/issues/new?template=source.yml)提供线索。

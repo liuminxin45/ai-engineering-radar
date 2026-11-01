@@ -177,6 +177,7 @@ export const sourceStateSchema = z.object({
     "blocked",
     "pending",
     "reference",
+    "suspended",
   ]),
   error: z.string().optional(),
   discovered: z.number().int().nonnegative().default(0),

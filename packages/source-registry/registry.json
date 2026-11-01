@@ -172,6 +172,16 @@
       "id": "bilibili-official",
       "companyId": "bilibili",
       "name": "B站 技术团队"
+    },
+    {
+      "id": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "name": "阿里云云原生"
+    },
+    {
+      "id": "aliyun-dataphin",
+      "companyId": "alibaba",
+      "name": "瓴羊 Dataphin"
     }
   ],
   "sources": [
@@ -186,9 +196,7 @@
       "platform": "official-feed",
       "verification": {
         "status": "verified",
-        "evidenceUrls": [
-          "https://tech.meituan.com/"
-        ],
+        "evidenceUrls": ["https://tech.meituan.com/"],
         "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
         "reviewedAt": "2026-11-01T00:00:00Z"
       },
@@ -214,9 +222,7 @@
       "platform": "official-site",
       "verification": {
         "status": "verified",
-        "evidenceUrls": [
-          "https://tech.vivo.com/"
-        ],
+        "evidenceUrls": ["https://tech.vivo.com/"],
         "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
         "reviewedAt": "2026-11-01T00:00:00Z"
       },
@@ -248,9 +254,7 @@
         "maxItems": 50,
         "backfillLimit": 100
       },
-      "authorAllowlist": [
-        "9927536"
-      ]
+      "authorAllowlist": ["9927536"]
     },
     {
       "id": "tencent",
@@ -307,9 +311,7 @@
       "platform": "official-site",
       "verification": {
         "status": "verified",
-        "evidenceUrls": [
-          "https://opensource.bytedance.com/blog"
-        ],
+        "evidenceUrls": ["https://opensource.bytedance.com/blog"],
         "note": "官方自有开源博客身份已确认；静态 HTML 为客户端渲染壳，未核实可用公开目录 API，保留原入口参考。已另接入 ByteDanceTech 官方团队 CSDN 账号 RSS，避免将空目录作为成功来源。",
         "reviewedAt": "2026-11-01T00:00:00Z"
       },
@@ -332,9 +334,7 @@
       "platform": "official-site",
       "verification": {
         "status": "verified",
-        "evidenceUrls": [
-          "https://ai.baidu.com/"
-        ],
+        "evidenceUrls": ["https://ai.baidu.com/"],
         "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
         "reviewedAt": "2026-11-01T00:00:00Z"
       },
@@ -356,9 +356,7 @@
       "platform": "official-site",
       "verification": {
         "status": "verified",
-        "evidenceUrls": [
-          "https://developer.huawei.com/"
-        ],
+        "evidenceUrls": ["https://developer.huawei.com/"],
         "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
         "reviewedAt": "2026-11-01T00:00:00Z"
       },
@@ -380,9 +378,7 @@
       "platform": "official-site",
       "verification": {
         "status": "verified",
-        "evidenceUrls": [
-          "https://ai.kuaishou.com/"
-        ],
+        "evidenceUrls": ["https://ai.kuaishou.com/"],
         "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
         "reviewedAt": "2026-11-01T00:00:00Z"
       },
@@ -404,9 +400,7 @@
       "platform": "official-site",
       "verification": {
         "status": "verified",
-        "evidenceUrls": [
-          "https://open.alipay.com/"
-        ],
+        "evidenceUrls": ["https://open.alipay.com/"],
         "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
         "reviewedAt": "2026-11-01T00:00:00Z"
       },
@@ -428,9 +422,7 @@
       "platform": "official-site",
       "verification": {
         "status": "verified",
-        "evidenceUrls": [
-          "https://dev.mi.com/"
-        ],
+        "evidenceUrls": ["https://dev.mi.com/"],
         "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
         "reviewedAt": "2026-11-01T00:00:00Z"
       },
@@ -452,9 +444,7 @@
       "platform": "official-site",
       "verification": {
         "status": "verified",
-        "evidenceUrls": [
-          "https://open.oppomobile.com/"
-        ],
+        "evidenceUrls": ["https://open.oppomobile.com/"],
         "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
         "reviewedAt": "2026-11-01T00:00:00Z"
       },
@@ -476,9 +466,7 @@
       "platform": "community",
       "verification": {
         "status": "pending",
-        "evidenceUrls": [
-          "https://developer.jdcloud.com/"
-        ],
+        "evidenceUrls": ["https://developer.jdcloud.com/"],
         "note": "已检测到开发者社区文章目录，但页面含社区投稿；需进一步确定京东官方作者稳定 ID，不能整站归属京东。",
         "reviewedAt": "2026-11-01T00:00:00Z"
       },
@@ -591,15 +579,13 @@
       "adapter": "html",
       "platform": "official-site",
       "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://tech.dewu.com/"
-        ],
-        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
-        "reviewedAt": "2026-11-01T00:00:00Z"
+        "status": "suspended",
+        "evidenceUrls": ["https://tech.dewu.com/"],
+        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-07-13，超过一个月未更新，不能承担当前更新追踪。得物自有技术站身份仍成立，官网首页也停留在2026-07-13；改用企业认证的CSDN账号。 原核验说明：公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
       },
       "crawl": {
-        "enabled": true,
+        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 50,
         "backfillLimit": 100
@@ -621,9 +607,7 @@
       "platform": "csdn-feed",
       "verification": {
         "status": "verified",
-        "evidenceUrls": [
-          "https://blog.csdn.net/vivo_tech"
-        ],
+        "evidenceUrls": ["https://blog.csdn.net/vivo_tech"],
         "note": "用户指定账号。公开主页显示企业官方账号认证；稳定用户名 vivo_tech，2019 年以来持续发布 vivo 工程文章。公开账号 RSS 已通过 robots 与真实文章解析验证。",
         "reviewedAt": "2026-11-01T09:39:54.440Z"
       },
@@ -633,9 +617,7 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "vivo_tech"
-      ],
+      "authorAllowlist": ["vivo_tech"],
       "linkPattern": "^/vivo_tech/article/details/[0-9]+/?$"
     },
     {
@@ -648,22 +630,18 @@
       "adapter": "feed",
       "platform": "csdn-feed",
       "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://blog.csdn.net/alitech2017"
-        ],
-        "note": "公开主页显示企业官方账号认证，简介明确为阿里巴巴官方技术号；以稳定用户名 alitech2017 限定文章与作者，账号 RSS 解析成功。最新条目停留在 2024 年，保留历史来源。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
+        "status": "suspended",
+        "evidenceUrls": ["https://blog.csdn.net/alitech2017"],
+        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2024-09-13，超过一个月未更新，不能承担当前更新追踪。 原核验说明：公开主页显示企业官方账号认证，简介明确为阿里巴巴官方技术号；以稳定用户名 alitech2017 限定文章与作者，账号 RSS 解析成功。最新条目停留在 2024 年，保留历史来源。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
       },
       "crawl": {
-        "enabled": true,
+        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "alitech2017"
-      ],
+      "authorAllowlist": ["alitech2017"],
       "linkPattern": "^/alitech2017/article/details/[0-9]+/?$"
     },
     {
@@ -676,24 +654,22 @@
       "adapter": "feed",
       "platform": "csdn-feed",
       "verification": {
-        "status": "verified",
+        "status": "suspended",
         "evidenceUrls": [
           "https://blog.csdn.net/ByteDanceTech",
           "https://juejin.cn/user/1838039172387262",
           "https://www.toutiao.com/c/user/token/MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE/"
         ],
-        "note": "人工核验：CSDN 账号持续发布字节基础架构团队的原始工程实践，与掘金公司归属和头条官方账号认证相互印证。限定稳定用户名 ByteDanceTech；HTML 请求返回 521，公开 RSS 允许访问并解析成功。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
+        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2024-04-16，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：CSDN 账号持续发布字节基础架构团队的原始工程实践，与掘金公司归属和头条官方账号认证相互印证。限定稳定用户名 ByteDanceTech；HTML 请求返回 521，公开 RSS 允许访问并解析成功。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
       },
       "crawl": {
-        "enabled": true,
+        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "ByteDanceTech"
-      ],
+      "authorAllowlist": ["ByteDanceTech"],
       "linkPattern": "^/ByteDanceTech/article/details/[0-9]+/?$"
     },
     {
@@ -706,22 +682,18 @@
       "adapter": "feed",
       "platform": "csdn-feed",
       "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://blog.csdn.net/weixin_45449540"
-        ],
-        "note": "账号公开资料标注百度大脑官方内容输出平台及企业官方账号；稳定用户名 weixin_45449540，持续发布飞桨与文心工程内容。HTML 请求返回 521，公开账号 RSS 允许访问并解析成功。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
+        "status": "suspended",
+        "evidenceUrls": ["https://blog.csdn.net/weixin_45449540"],
+        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-05-28，超过一个月未更新，不能承担当前更新追踪。 原核验说明：账号公开资料标注百度大脑官方内容输出平台及企业官方账号；稳定用户名 weixin_45449540，持续发布飞桨与文心工程内容。HTML 请求返回 521，公开账号 RSS 允许访问并解析成功。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
       },
       "crawl": {
-        "enabled": true,
+        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "weixin_45449540"
-      ],
+      "authorAllowlist": ["weixin_45449540"],
       "linkPattern": "^/weixin_45449540/article/details/[0-9]+/?$"
     },
     {
@@ -749,9 +721,7 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "devcloud"
-      ],
+      "authorAllowlist": ["devcloud"],
       "linkPattern": "^/devcloud/article/details/[0-9]+/?$"
     },
     {
@@ -778,9 +748,7 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "kuaishoutech"
-      ],
+      "authorAllowlist": ["kuaishoutech"],
       "linkPattern": "^/kuaishoutech/article/details/[0-9]+/?$"
     },
     {
@@ -807,9 +775,7 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "AntResearch"
-      ],
+      "authorAllowlist": ["AntResearch"],
       "linkPattern": "^/AntResearch/article/details/[0-9]+/?$"
     },
     {
@@ -822,24 +788,22 @@
       "adapter": "feed",
       "platform": "csdn-feed",
       "verification": {
-        "status": "verified",
+        "status": "suspended",
         "evidenceUrls": [
           "https://blog.csdn.net/ctrip_tech",
           "https://blog.csdn.net/ctrip_tech/category_6546352.html",
           "https://juejin.cn/user/149189310818861"
         ],
-        "note": "账号公开简介明确携程技术官方帐号；与掘金账号的携程公司归属、2016 年以来文章历史相互印证。限定稳定用户名 ctrip_tech；HTML 请求返回 521，公开 RSS 解析成功。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
+        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-05-13，超过一个月未更新，不能承担当前更新追踪。 原核验说明：账号公开简介明确携程技术官方帐号；与掘金账号的携程公司归属、2016 年以来文章历史相互印证。限定稳定用户名 ctrip_tech；HTML 请求返回 521，公开 RSS 解析成功。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
       },
       "crawl": {
-        "enabled": true,
+        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "ctrip_tech"
-      ],
+      "authorAllowlist": ["ctrip_tech"],
       "linkPattern": "^/ctrip_tech/article/details/[0-9]+/?$"
     },
     {
@@ -867,9 +831,7 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "wangyiyungw"
-      ],
+      "authorAllowlist": ["wangyiyungw"],
       "linkPattern": "^/wangyiyungw/article/details/[0-9]+/?$"
     },
     {
@@ -882,24 +844,22 @@
       "adapter": "feed",
       "platform": "csdn-feed",
       "verification": {
-        "status": "verified",
+        "status": "suspended",
         "evidenceUrls": [
           "https://blog.csdn.net/REDtech_1024",
           "https://juejin.cn/user/899824537578279",
           "https://juejin.cn/post/7218758481577984056"
         ],
-        "note": "人工核验：团队首发公告明确将同时运营 CSDN、掘金等渠道；两个账号简介与持续文章历史一致。限定稳定用户名 REDtech_1024；HTML 请求返回 521，公开 RSS 解析成功。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
+        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2024-07-02，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：团队首发公告明确将同时运营 CSDN、掘金等渠道；两个账号简介与持续文章历史一致。限定稳定用户名 REDtech_1024；HTML 请求返回 521，公开 RSS 解析成功。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
       },
       "crawl": {
-        "enabled": true,
+        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "REDtech_1024"
-      ],
+      "authorAllowlist": ["REDtech_1024"],
       "linkPattern": "^/REDtech_1024/article/details/[0-9]+/?$"
     },
     {
@@ -927,9 +887,7 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "bilibili_TC"
-      ],
+      "authorAllowlist": ["bilibili_TC"],
       "linkPattern": "^/bilibili_TC/article/details/[0-9]+/?$"
     },
     {
@@ -942,24 +900,22 @@
       "adapter": "feed",
       "platform": "csdn-feed",
       "verification": {
-        "status": "verified",
+        "status": "suspended",
         "evidenceUrls": [
           "https://blog.csdn.net/Tencent_TEG",
           "https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D",
           "https://cloud.tencent.com/developer/user/170434/articles"
         ],
-        "note": "人工核验：CSDN 长期发布腾讯前沿技术及腾讯团队原始工程实践，与腾讯新闻认证官方号、腾讯云认证腾讯公司身份相互印证。限定稳定用户名 Tencent_TEG；RSS 解析成功，最新文章停留在 2022 年。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
+        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2022-03-28，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：CSDN 长期发布腾讯前沿技术及腾讯团队原始工程实践，与腾讯新闻认证官方号、腾讯云认证腾讯公司身份相互印证。限定稳定用户名 Tencent_TEG；RSS 解析成功，最新文章停留在 2022 年。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
       },
       "crawl": {
-        "enabled": true,
+        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "Tencent_TEG"
-      ],
+      "authorAllowlist": ["Tencent_TEG"],
       "linkPattern": "^/Tencent_TEG/article/details/[0-9]+/?$"
     },
     {
@@ -986,12 +942,8 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "8QMZ23lf74UYuTs="
-      ],
-      "linkHosts": [
-        "news.qq.com"
-      ]
+      "authorAllowlist": ["8QMZ23lf74UYuTs="],
+      "linkHosts": ["news.qq.com"]
     },
     {
       "id": "tencent-cloud-official",
@@ -1017,9 +969,7 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "170434"
-      ]
+      "authorAllowlist": ["170434"]
     },
     {
       "id": "oppo-segmentfault",
@@ -1031,23 +981,21 @@
       "adapter": "feed",
       "platform": "segmentfault-feed",
       "verification": {
-        "status": "verified",
+        "status": "suspended",
         "evidenceUrls": [
           "https://segmentfault.com/blog/oppotech",
           "https://segmentfault.com/blog/oppotech/about"
         ],
-        "note": "人工核验：公开专栏简介明确OPPO 前沿互联网技术分享和公众号 OPPO_tech，账号作者与长期工程文章一致。账号 RSS 允许访问且解析成功；全文型 Feed 的正文不会保存，仅提取元数据。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
+        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2022-04-06，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：公开专栏简介明确OPPO 前沿互联网技术分享和公众号 OPPO_tech，账号作者与长期工程文章一致。账号 RSS 允许访问且解析成功；全文型 Feed 的正文不会保存，仅提取元数据。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
       },
       "crawl": {
-        "enabled": true,
+        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "OPPO数智技术"
-      ],
+      "authorAllowlist": ["OPPO数智技术"],
       "linkPattern": "^/a/[0-9]+/?$"
     },
     {
@@ -1060,23 +1008,21 @@
       "adapter": "feed",
       "platform": "segmentfault-feed",
       "verification": {
-        "status": "verified",
+        "status": "suspended",
         "evidenceUrls": [
           "https://segmentfault.com/blog/kuaishoujishu",
           "https://segmentfault.com/blog/kuaishoujishu/about"
         ],
-        "note": "人工核验：公开专栏简介明确快手官方技术号及同名公众号，账号作者与长期工程文章一致。账号 RSS 允许访问且解析成功；全文型 Feed 的正文不会保存，仅提取元数据。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
+        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-04-07，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：公开专栏简介明确快手官方技术号及同名公众号，账号作者与长期工程文章一致。账号 RSS 允许访问且解析成功；全文型 Feed 的正文不会保存，仅提取元数据。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
       },
       "crawl": {
-        "enabled": true,
+        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "快手技术"
-      ],
+      "authorAllowlist": ["快手技术"],
       "linkPattern": "^/a/[0-9]+/?$"
     },
     {
@@ -1089,23 +1035,21 @@
       "adapter": "feed",
       "platform": "segmentfault-feed",
       "verification": {
-        "status": "verified",
+        "status": "suspended",
         "evidenceUrls": [
           "https://segmentfault.com/blog/ant-techfin",
           "https://segmentfault.com/blog/ant-techfin/about"
         ],
-        "note": "人工核验：公开专栏简介明确蚂蚁集团技术官方账号，账号作者与长期工程文章一致。账号 RSS 允许访问且解析成功；全文型 Feed 的正文不会保存，仅提取元数据。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
+        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2024-04-22，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：公开专栏简介明确蚂蚁集团技术官方账号，账号作者与长期工程文章一致。账号 RSS 允许访问且解析成功；全文型 Feed 的正文不会保存，仅提取元数据。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
       },
       "crawl": {
-        "enabled": true,
+        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "蚂蚁技术"
-      ],
+      "authorAllowlist": ["蚂蚁技术"],
       "linkPattern": "^/a/[0-9]+/?$"
     },
     {
@@ -1133,9 +1077,7 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "vivotech"
-      ],
+      "authorAllowlist": ["vivotech"],
       "linkPattern": "^/vivotech/p/[0-9]+(?:\\.html)?/?$",
       "selector": ".postTitle a",
       "metadata": {
@@ -1168,9 +1110,7 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "Jcloud"
-      ],
+      "authorAllowlist": ["Jcloud"],
       "linkPattern": "^/Jcloud/p/[0-9]+(?:\\.html)?/?$",
       "selector": ".postTitle a",
       "metadata": {
@@ -1188,25 +1128,23 @@
       "adapter": "html",
       "platform": "cnblogs-account",
       "verification": {
-        "status": "verified",
+        "status": "suspended",
         "evidenceUrls": [
           "https://www.cnblogs.com/163yun/",
           "https://blog.csdn.net/wangyiyungw",
           "https://sf.163.com/",
           "https://www.cnblogs.com/163yun/rss"
         ],
-        "note": "人工核验：网易智企数帆的产品、品牌和长期原创文章与公司自有站及 CSDN 团队号相互印证。稳定博客路径 163yun；RSS 目标 robots 禁止，改用允许访问的账号 HTML 目录。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
+        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-09-10，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：网易智企数帆的产品、品牌和长期原创文章与公司自有站及 CSDN 团队号相互印证。稳定博客路径 163yun；RSS 目标 robots 禁止，改用允许访问的账号 HTML 目录。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
       },
       "crawl": {
-        "enabled": true,
+        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "163yun"
-      ],
+      "authorAllowlist": ["163yun"],
       "linkPattern": "^/163yun/p/[0-9]+(?:\\.html)?/?$",
       "selector": ".postTitle a",
       "metadata": {
@@ -1239,9 +1177,7 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "ctriptech"
-      ],
+      "authorAllowlist": ["ctriptech"],
       "linkPattern": "^/ctriptech/p/[0-9]+(?:\\.html)?/?$",
       "selector": ".postTitle a",
       "metadata": {
@@ -1273,9 +1209,7 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "676954893719742"
-      ]
+      "authorAllowlist": ["676954893719742"]
     },
     {
       "id": "xiaomi-tech-site",
@@ -1288,9 +1222,7 @@
       "platform": "official-site",
       "verification": {
         "status": "verified",
-        "evidenceUrls": [
-          "https://tech.mi.com/blog"
-        ],
+        "evidenceUrls": ["https://tech.mi.com/blog"],
         "note": "公司自有技术站，公开博客与论文入口已核实。静态 HTML 为客户端渲染壳，尚未核实公开目录 API；保留参考，未冒充已接入采集源。",
         "reviewedAt": "2026-11-01T09:39:54.440Z"
       },
@@ -1312,22 +1244,18 @@
       "adapter": "feed",
       "platform": "team-blog-feed",
       "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://xiaomi-info.github.io/"
-        ],
-        "note": "人工核验：团队博客的投稿须知明确仅接受部门内部投稿，并同步运营信息技术部公众号；文章持续自署小米信息技术部团队成员。稳定站点 xiaomi-info.github.io，公开 Atom 允许访问并解析成功。最新条目停留在 2020 年，作为历史来源；Feed 正文不保存。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
+        "status": "suspended",
+        "evidenceUrls": ["https://xiaomi-info.github.io/"],
+        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2020-05-24，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：团队博客的投稿须知明确仅接受部门内部投稿，并同步运营信息技术部公众号；文章持续自署小米信息技术部团队成员。稳定站点 xiaomi-info.github.io，公开 Atom 允许访问并解析成功。最新条目停留在 2020 年，作为历史来源；Feed 正文不保存。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
       },
       "crawl": {
-        "enabled": true,
+        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "小米信息部技术团队"
-      ],
+      "authorAllowlist": ["小米信息部技术团队"],
       "linkPattern": "^/20[0-9]{2}/[0-9]{2}/[0-9]{2}/"
     },
     {
@@ -1341,9 +1269,7 @@
       "platform": "csdn-feed",
       "verification": {
         "status": "pending",
-        "evidenceUrls": [
-          "https://blog.csdn.net/pengzhouzhou"
-        ],
+        "evidenceUrls": ["https://blog.csdn.net/pengzhouzhou"],
         "note": "发现显示名小米技术的账号 pengzhouzhou，但未取得企业认证或官方归属的充分证据；大量转载不能单独证明账号身份，禁止仅凭显示名启用。已继续查找掘金历史官方号和小米自有技术站。",
         "reviewedAt": null
       },
@@ -1353,9 +1279,122 @@
         "maxItems": 20,
         "backfillLimit": 50
       },
-      "authorAllowlist": [
-        "pengzhouzhou"
-      ]
+      "authorAllowlist": ["pengzhouzhou"]
+    },
+    {
+      "id": "dewu-csdn",
+      "publisherId": "dewu-tech",
+      "name": "得物技术 · CSDN",
+      "entryUrl": "https://blog.csdn.net/SmartCodeTech",
+      "url": "https://rss.csdn.net/SmartCodeTech/rss/map",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "csdn-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://blog.csdn.net/SmartCodeTech",
+          "https://rss.csdn.net/SmartCodeTech/rss/map"
+        ],
+        "note": "平台企业认证已核验：账号主页真实HTML展示title为“企业官方账号认证”的平台图标，achievementList标注“得物技术官方账号”，公司为上海得物信息集团有限公司。限定稳定用户名SmartCodeTech及同账号文章路径。公开RSS试采20条，最新发布时间2026-10-29；详情HTML可能返回521，不补抓或绕过。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "authorAllowlist": ["SmartCodeTech"],
+      "linkHosts": ["blog.csdn.net"],
+      "linkPattern": "^/SmartCodeTech/article/details/[0-9]+/?$"
+    },
+    {
+      "id": "aliyun-cloud-native",
+      "publisherId": "aliyun-cloud-native",
+      "name": "阿里云云原生 · 官方博客",
+      "entryUrl": "https://developer.aliyun.com/group/apphub/article/",
+      "url": "https://developer.aliyun.com/group/apphub/article/",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "aliyun-group",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://developer.aliyun.com/group/apphub/article/",
+          "https://developer.aliyun.com/profile/pawmkwdq37c7s",
+          "https://developer.aliyun.com/article/1776525"
+        ],
+        "note": "阿里云自有域名的云原生应用开发与管理官方博客栏目。条目发布者为阿里云云原生，稳定profile标识pawmkwdq37c7s；原文1776525明确发布时间2026-10-29。专用适配器逐条匹配作者profile，不把社区其他作者或整站文章归属阿里。账号动态页缓存可能滞后，使用官方栏目目录。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "authorAllowlist": ["pawmkwdq37c7s"],
+      "linkHosts": ["developer.aliyun.com"],
+      "linkPattern": "^/article/[0-9]+/?$"
+    },
+    {
+      "id": "aliyun-dataphin",
+      "publisherId": "aliyun-dataphin",
+      "name": "瓴羊 Dataphin · 官方博客",
+      "entryUrl": "https://developer.aliyun.com/group/dataphin/",
+      "url": "https://developer.aliyun.com/group/dataphin/",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "aliyun-group",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://developer.aliyun.com/group/dataphin/",
+          "https://developer.aliyun.com/profile/ylyeppx3vlhce",
+          "https://developer.aliyun.com/article/1777073"
+        ],
+        "note": "阿里云自有官方栏目明确说明为阿里云智能集团瓴羊旗下产品团队。原文1777073及目录显示2026-10-30，发布者瓴羊Dataphin的稳定profile为ylyeppx3vlhce。与云原生团队分别建模，专用适配器逐条校验profile，避免跨发布主体混入或合并。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "authorAllowlist": ["ylyeppx3vlhce"],
+      "linkHosts": ["developer.aliyun.com"],
+      "linkPattern": "^/article/[0-9]+/?$"
+    },
+    {
+      "id": "bytedance-volcengine",
+      "publisherId": "bytedance-official",
+      "name": "字节跳动开源 · 火山引擎",
+      "entryUrl": "https://developer.volcengine.com/user/1333053764416295",
+      "url": "https://developer.volcengine.com/user/1333053764416295",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "volcengine-account",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://developer.volcengine.com/user/1333053764416295",
+          "https://developer.volcengine.com/articles/7698691370294181915",
+          "https://opensource.bytedance.com/blog"
+        ],
+        "note": "字节系自有火山引擎社区的字节跳动开源团队账号，稳定作者ID1333053764416295。原文7698691370294181915署名字节跳动STE团队，公开SSR中作者ID与publish_time对应2026-10-20；与原开源官网团队内容交叉印证。仅采该作者目录，逐条验证稳定ID，不将火山引擎整站当成官方团队。",
+        "reviewedAt": "2026-11-01T12:05:01.533Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "authorAllowlist": ["1333053764416295"],
+      "linkHosts": ["developer.volcengine.com"],
+      "linkPattern": "^/articles/[0-9]+/?$"
     }
   ]
 }

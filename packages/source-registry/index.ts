@@ -7,6 +7,49 @@ import {
   type Publisher,
 } from "../shared/types.js";
 
+export function validateAccountScope(source: Source) {
+  if (!source.crawl.enabled) return;
+  if (!["aliyun-group", "volcengine-account"].includes(source.platform)) return;
+  const url = new URL(source.url);
+  if (!source.authorAllowlist?.length)
+    throw new Error(
+      `Community source needs reviewed account identifiers: ${source.id}`,
+    );
+  if (
+    url.protocol !== "https:" ||
+    url.username ||
+    url.password ||
+    url.search ||
+    url.hash
+  )
+    throw new Error(
+      `Official account endpoint must be an exact HTTPS directory: ${source.id}`,
+    );
+  if (source.platform === "aliyun-group") {
+    if (
+      url.hostname !== "developer.aliyun.com" ||
+      !/^\/group\/[a-z0-9-]+\/(?:article\/)?$/.test(url.pathname) ||
+      source.authorAllowlist.some((id) => !/^[a-z0-9]{8,64}$/.test(id)) ||
+      source.linkPattern !== "^/article/[0-9]+/?$"
+    )
+      throw new Error(
+        `Aliyun groups require an official directory and stable profile IDs: ${source.id}`,
+      );
+  } else {
+    const id = url.pathname.match(/^\/user\/([0-9]+)\/?$/)?.[1];
+    if (
+      url.hostname !== "developer.volcengine.com" ||
+      !id ||
+      source.authorAllowlist.length !== 1 ||
+      source.authorAllowlist[0] !== id ||
+      source.linkPattern !== "^/articles/[0-9]+/?$"
+    )
+      throw new Error(
+        `Volcengine accounts require matching directory and author IDs: ${source.id}`,
+      );
+  }
+}
+
 export async function loadRegistry() {
   const identifier = z.string().regex(/^[a-z0-9-]+$/);
   const raw = z
@@ -54,6 +97,7 @@ export async function loadRegistry() {
     if (!publishers.some((p) => p.id === s.publisherId))
       throw new Error(`Unknown publisher: ${s.publisherId}`);
   for (const s of sources) {
+    validateAccountScope(s);
     if (
       [
         "csdn-feed",
@@ -64,6 +108,8 @@ export async function loadRegistry() {
         "segmentfault-feed",
         "team-blog-feed",
         "juejin-account",
+        "aliyun-group",
+        "volcengine-account",
       ].includes(s.platform) &&
       s.crawl.enabled &&
       !s.authorAllowlist?.length

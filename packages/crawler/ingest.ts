@@ -132,6 +132,12 @@ export async function ingest(
           };
           states.push(state);
         }
+        if (source.verification.status === "suspended") {
+          state.status = "suspended";
+          state.error = source.verification.note;
+          state.nextRunAt = undefined;
+          continue;
+        }
         if (
           !options.force &&
           !(options.daily && source.crawl.intervalMinutes <= 1440) &&

@@ -57,6 +57,15 @@ test("pagination, article deep links, feeds and keyboard focus", async ({
   await page.goto("./sources/");
   expect(await page.locator(".source-row").count()).toBeGreaterThanOrEqual(19);
   await expect(page.getByText("来源目录", { exact: true })).toBeVisible();
+  expect(
+    await page.getByText("历史渠道", { exact: true }).count(),
+  ).toBeGreaterThanOrEqual(12);
+  await expect(page.getByText(/^最新收录文章/).first()).toBeVisible();
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
   for (const path of [
     "feed.xml",
     "feed.atom",
@@ -88,6 +97,25 @@ test("domestic sources, direct indexing and contribution links", async ({
   expect(companies.every((c: { region: string }) => c.region === "cn")).toBe(
     true,
   );
+  const sources = (await (await request.get("data/sources.json")).json())
+    .sources;
+  for (const id of [
+    "dewu-csdn",
+    "aliyun-cloud-native",
+    "aliyun-dataphin",
+    "bytedance-volcengine",
+  ]) {
+    const source = sources.find((s: { id: string }) => s.id === id);
+    expect(source.crawl.enabled).toBe(true);
+    expect(source.verification.status).toBe("verified");
+    expect(source).toHaveProperty("latestPublishedAt");
+  }
+  expect(
+    sources.filter(
+      (s: { verification: { status: string } }) =>
+        s.verification.status === "suspended",
+    ).length,
+  ).toBeGreaterThanOrEqual(12);
   const articles = (await (await request.get("data/articles.json")).json())
     .articles;
   expect(

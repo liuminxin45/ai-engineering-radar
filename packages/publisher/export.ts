@@ -75,6 +75,13 @@ export async function exportSite(
   await mkdir(join(root, "apps/web/src/generated"), { recursive: true });
   const sources = registry.sources.map((s) => ({
     ...s,
+    latestPublishedAt:
+      articles
+        .filter((a) => a.locations.some((l) => l.sourceId === s.id))
+        .map((a) => a.publishedAt)
+        .filter((value): value is string => !!value)
+        .sort()
+        .at(-1) ?? null,
     state: snapshot.states.find((state) => state.sourceId === s.id) ?? {
       sourceId: s.id,
       status: "new",
@@ -88,11 +95,12 @@ export async function exportSite(
     articleCount: articles.length,
     sourceCount: sources.length,
     enabledSources: sources.filter((s) => s.crawl.enabled).length,
-    successfulSources: sources.filter((s) =>
-      ["success", "not-modified"].includes(s.state.status),
+    successfulSources: sources.filter(
+      (s) =>
+        s.crawl.enabled && ["success", "not-modified"].includes(s.state.status),
     ).length,
-    failedSources: sources.filter((s) =>
-      ["failed", "blocked"].includes(s.state.status),
+    failedSources: sources.filter(
+      (s) => s.crawl.enabled && ["failed", "blocked"].includes(s.state.status),
     ).length,
     lastSuccessAt:
       snapshot.states
@@ -160,11 +168,11 @@ export async function exportSite(
     "",
     `快照时间：${generatedAt}`,
     "",
-    "| 入口 | 身份 | 启用 | 实测状态 | 条目数 | 最近成功 | 说明 |",
-    "| --- | --- | --- | --- | --- | --- | --- |",
+    "| 入口 | 身份 | 启用 | 实测状态 | 条目数 | 最新文章 | 最近成功 | 说明 |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- |",
     ...sources.map(
       (s) =>
-        `| [${s.name}](${s.entryUrl}) | ${s.verification.status} | ${s.crawl.enabled ? "是" : "否"} | ${s.state.status} | ${s.state.discovered} | ${s.state.lastSuccessAt ?? "—"} | ${(s.state.error ?? s.verification.note).replace(/\|/g, "／").replace(/\n/g, " ")} |`,
+        `| [${s.name}](${s.entryUrl}) | ${s.verification.status} | ${s.crawl.enabled ? "是" : "否"} | ${s.state.status} | ${s.state.discovered} | ${s.latestPublishedAt ?? "—"} | ${s.state.lastSuccessAt ?? "—"} | ${(s.state.error ?? s.verification.note).replace(/\|/g, "／").replace(/\n/g, " ")} |`,
     ),
   ];
   await mkdir(join(root, "work"), { recursive: true });
