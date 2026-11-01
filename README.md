@@ -1,12 +1,26 @@
 # AI Engineering Radar
 
-发现工程实践，回到原文阅读。首批追踪国内公司官方技术团队，提供可搜索、可溯源的文章索引和 RSS / Atom 订阅。
+聚合一线团队的 AI 工程实践，让值得学习的经验更容易被发现和持续追踪。
 
-An open article index for official engineering teams at Chinese companies. This initial release offers source provenance, search, and RSS / Atom feeds. Read the full articles on their original sites.
+A radar for AI engineering practice from teams building and operating real systems. Follow official publications, discover new approaches, and learn from implementation choices and lessons from production. This initial release follows teams at Chinese companies. Full articles stay on their original sites.
 
 [网站](https://liuminxin45.github.io/ai-engineering-radar/) · [About / 关于](https://liuminxin45.github.io/ai-engineering-radar/about/) · [RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) · [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom) · [来源目录](https://liuminxin45.github.io/ai-engineering-radar/sources/)
 
-## 项目做什么
+## 为什么做这个项目
+
+一线技术团队公开的实践，记录了 AI 从技术尝试走进真实业务的过程。这里有前沿方法的探索，也有架构取舍、部署经验、性能优化和踩坑复盘。许多具体的工程问题，可以从这些实践中找到值得借鉴的思路。
+
+这些经验分散在公司技术博客、开发者社区和团队账号里。想持续跟进，往往需要记住多个入口，反复查看更新；有价值的文章也容易被错过，等到需要时又难以找回。
+
+AI Engineering Radar 把这些分散的发布渠道聚集起来，持续追踪官方团队的新文章。希望每位开发者都能及时发现正在发生的工程探索，带着自己的问题去阅读、学习，再把合适的方法用到实践中。
+
+## 如何使用
+
+- **发现新实践**：打开[文章列表](https://liuminxin45.github.io/ai-engineering-radar/)，按时间浏览更新，或选择想跟进的公司。
+- **带着问题查找**：搜索标题、摘要或作者，找到相关经验，回到原文查看实现细节和适用条件。
+- **持续追踪**：订阅[全站 RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) / [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom)，也可以选择公司的独立订阅。
+
+## 收录范围与来源
 
 首批仅收录国内公司官方技术团队。已核验且启用的官方来源文章直接建立索引，保留身份核验、去重和数据校验，不按内容相关性筛选，也不做自动主题分类。本批暂不接入海外来源。
 
