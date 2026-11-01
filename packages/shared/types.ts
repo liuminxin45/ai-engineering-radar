@@ -43,7 +43,7 @@ export const classificationSchema = z
       .optional(),
     reason: z.string().min(1).max(1000),
     evidence: z.array(z.string().max(300)).max(10),
-    method: z.enum(["rules", "model", "manual"]),
+    method: z.enum(["source", "rules", "model", "manual"]),
     version: z.string(),
     classifiedAt: timestamp,
     model: z.string().optional(),

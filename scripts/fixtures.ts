@@ -14,9 +14,14 @@ if (
   );
 const articles: Article[] = [];
 for (let i = 0; i < 45; i++) {
-  const source = registry.sources.find(
-    (s) => s.id === (i % 2 ? "anthropic" : "meituan"),
-  )!;
+  const choices = registry.sources.filter(
+    (s) => s.crawl.enabled && s.verification.status === "verified",
+  );
+  const source =
+    i % 2
+      ? (choices.find((s) => s.publisherId !== "meituan-official") ??
+        choices[0])
+      : registry.sources.find((s) => s.id === "meituan")!;
   upsert(
     articles,
     {

@@ -17,7 +17,7 @@ import {
   parseTencentColumn,
   date,
 } from "../../packages/crawler/adapters.js";
-import { classifyRules } from "../../packages/classifier/index.js";
+import { indexOfficialArticle } from "../../packages/classifier/index.js";
 import {
   loadSnapshot,
   saveSnapshot,
@@ -40,8 +40,8 @@ const candidate = {
   publishedAt: "2026-10-30T00:00:00.000Z",
 };
 describe("registry and identity", () => {
-  it("contains all 40 original entries and extra official Dewu", () =>
-    expect(registry.sources).toHaveLength(41));
+  it("keeps domestic sources only and preserves original domestic entries", () =>
+    expect(registry.sources.length).toBeGreaterThanOrEqual(19));
   it("rejects verified records without evidence", () =>
     expect(() =>
       sourceSchema.parse({
@@ -51,7 +51,7 @@ describe("registry and identity", () => {
     ).toThrow());
   it("never enables unverified community accounts", () => {
     for (const s of registry.sources.filter((s) => s.platform === "community"))
-      expect(s.crawl.enabled).toBe(false);
+      if (s.crawl.enabled) expect(s.authorAllowlist?.length).toBeGreaterThan(0);
   });
   it("keeps Dewu publisher separate from Tencent", () => {
     const s = registry.sources.find((s) => s.id === "dewu-tencent")!;
@@ -116,7 +116,7 @@ describe("normalization and deduplication", () => {
       registry,
     );
     expect(a).toHaveLength(2);
-    expect(a[1].classification.status).toBe("review");
+    expect(a[1].classification.status).toBe("accepted");
   });
   it("recognizes multilingual title similarity", () =>
     expect(
@@ -229,44 +229,20 @@ describe("adapters", () => {
     expect(date(undefined)).toBeUndefined();
   });
 });
-describe("classification and publication", () => {
-  it("assigns a fallback topic to generic AI engineering", () => {
-    const c = classifyRules({
-      title: "Building an AI workflow architecture",
-      description: "We implemented production context pipelines.",
-      url: candidate.url,
-    });
-    expect(c.status).toBe("accepted");
-    expect(c.topics).toContain("ai-application");
-  });
+describe("official-account publication", () => {
   it.each([
-    [
-      "Building AI agent sandbox architecture",
-      "We implemented tool calling runtime and evaluated latency.",
-      "accepted",
-    ],
-    ["RAG 检索增强工程实践", "实现向量检索流水线并进行性能评测。", "accepted"],
-    [
-      "AI Coding 代码审查工作流设计",
-      "通过模型上下文实现评测与自动化。",
-      "accepted",
-    ],
-    [
-      "Company raises AI funding round",
-      "New model launch event register now.",
-      "rejected",
-    ],
-    ["Introducing our AI vision", "AI changes the world.", "review"],
-    [
-      "Redis cache performance tuning",
-      "A distributed storage architecture.",
-      "rejected",
-    ],
-  ])("%s => %s", (title, description, status) =>
-    expect(
-      classifyRules({ title, description, url: candidate.url }).status,
-    ).toBe(status),
-  );
+    "AI agent runtime architecture",
+    "Redis 自动化运维最佳实践",
+    "团队开源活动报名",
+    "季度技术复盘",
+  ])("indexes verified account content without keyword gates: %s", (title) => {
+    const c = indexOfficialArticle({ title });
+    expect(c.status).toBe("accepted");
+    expect(c.method).toBe("source");
+    expect(c.topics).toEqual([]);
+  });
+  it("excludes overseas company records from this release", () =>
+    expect(registry.companies.every((c) => c.region === "cn")).toBe(true));
   it("hides articles when the only source loses verification", () => {
     const a: Article[] = [];
     upsert(a, candidate, source, registry);

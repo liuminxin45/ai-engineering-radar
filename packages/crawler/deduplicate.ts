@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import type { Article, Candidate, Source } from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
-import { classifyRules } from "../classifier/index.js";
+import { indexOfficialArticle } from "../classifier/index.js";
 export function normalizeUrl(input: string) {
   const u = new URL(input);
   if (!["https:", "http:"].includes(u.protocol))
@@ -85,14 +85,14 @@ export function upsert(
     if (metadataChanged) {
       existing.updatedAt = now;
       if (existing.classification.method !== "manual") {
-        existing.classification = classifyRules(item);
+        existing.classification = indexOfficialArticle(item);
         existing.publicationStatus =
           existing.classification.status === "accepted" ? "published" : "draft";
       }
     }
     return existing;
   }
-  const classification = classifyRules(item);
+  const classification = indexOfficialArticle(item);
   const id = createHash("sha256")
     .update(`${source.publisherId}\n${canonical}`)
     .digest("hex")
@@ -103,11 +103,6 @@ export function upsert(
         a.publisherId === source.publisherId && similar(a.title, item.title),
     )
     .map((a) => a.id);
-  if (duplicates.length) {
-    classification.status = "review";
-    classification.reason =
-      "发现相似标题，但缺少确定的跨平台原文关系，等待人工确认。";
-  }
   const article: Article = {
     id,
     publisherId: source.publisherId,

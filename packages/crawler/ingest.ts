@@ -3,11 +3,7 @@ import { z } from "zod";
 import type { Article, Snapshot, SourceState } from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
 import { classificationSchema } from "../shared/types.js";
-import {
-  RULE_VERSION,
-  classifyRules,
-  classifyModel,
-} from "../classifier/index.js";
+import { indexOfficialArticle } from "../classifier/index.js";
 import { upsert } from "./deduplicate.js";
 import { collect } from "./adapters.js";
 import { CrawlError, fetchReviewed } from "./http.js";
@@ -117,12 +113,6 @@ export async function ingest(
   const states = structuredClone(snapshot.states);
   let successes = 0,
     attempted = 0;
-  let modelBudget = Number(process.env.CLASSIFIER_MAX_ITEMS ?? 20);
-  const hasModel = !!(
-    process.env.CLASSIFIER_BASE_URL &&
-    process.env.CLASSIFIER_API_KEY &&
-    process.env.CLASSIFIER_MODEL
-  );
   const sources = registry.sources.filter(
     (s) => !options.sourceId || s.id === options.sourceId,
   );
@@ -236,51 +226,9 @@ export async function ingest(
     }),
   );
   for (const article of articles) {
-    if (
-      article.classification.method === "manual" ||
-      article.publicationStatus === "hidden"
-    )
-      continue;
-    if (
-      article.classification.method === "rules" &&
-      article.classification.version !== RULE_VERSION
-    )
-      article.classification = classifyRules({
-        title: article.title,
-        url: article.canonicalUrl,
-        description: article.description,
-      });
-    if (
-      hasModel &&
-      modelBudget > 0 &&
-      ["review", "pending"].includes(article.classification.status) &&
-      !article.duplicateCandidates.length
-    ) {
-      modelBudget--;
-      try {
-        article.classification = await classifyModel({
-          title: article.title,
-          url: article.canonicalUrl,
-          description: article.description,
-        });
-      } catch {
-        article.classification = {
-          ...article.classification,
-          status: "pending",
-          reason: "模型分类暂不可用，保留待处理状态，等待后续重试。",
-        };
-      }
-    }
-    if (
-      article.duplicateCandidates.length &&
-      article.classification.status === "accepted"
-    ) {
-      article.classification.status = "review";
-      article.classification.reason =
-        "发现相似标题，但缺少确定的跨平台原文关系，等待人工确认。";
-    }
-    article.publicationStatus =
-      article.classification.status === "accepted" ? "published" : "draft";
+    if (article.publicationStatus === "hidden") continue;
+    article.classification = indexOfficialArticle(article);
+    article.publicationStatus = "published";
   }
   await applyOverrides(articles);
   return { articles, states, successes, attempted };

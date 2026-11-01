@@ -80,10 +80,7 @@ export function validateRelations(
     stateIds.add(state.sourceId);
   }
 }
-export async function loadSnapshot(
-  dir: string,
-  registry: Registry,
-): Promise<Snapshot> {
+export async function readSnapshot(dir: string): Promise<Snapshot> {
   const manifest = manifestSchema.parse(
     JSON.parse(await readFile(join(dir, "manifest.json"), "utf8")),
   );
@@ -108,8 +105,15 @@ export async function loadSnapshot(
     states.length !== manifest.sourceCount
   )
     throw new Error("Snapshot counts do not match");
-  validateRelations(articles, states, registry);
   return { manifest, articles, states };
+}
+export async function loadSnapshot(
+  dir: string,
+  registry: Registry,
+): Promise<Snapshot> {
+  const snapshot = await readSnapshot(dir);
+  validateRelations(snapshot.articles, snapshot.states, registry);
+  return snapshot;
 }
 export async function saveSnapshot(
   dir: string,

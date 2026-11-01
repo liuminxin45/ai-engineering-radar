@@ -8,6 +8,9 @@ export function publishedArticles(articles: Article[], registry: Registry) {
   return articles
     .filter(
       (a) =>
+        registry.companies.some(
+          (c) => c.id === a.companyId && c.region === "cn",
+        ) &&
         a.publicationStatus === "published" &&
         a.classification.status === "accepted" &&
         a.locations.some((l) => {
@@ -28,7 +31,7 @@ export function makeFeed(
   const url = siteUrl.replace(/\/$/, "");
   const feed = new Feed({
     title,
-    description: "来自官方技术团队的 AI 工程实践索引",
+    description: "国内公司官方技术账号文章索引",
     id: `${url}/${path.replace(/\.(xml|atom)$/, "")}`,
     link: url,
     language: "zh-CN",
@@ -104,7 +107,7 @@ export async function exportSite(
     articles,
     companies: registry.companies,
     publishers: registry.publishers,
-    topics,
+    topics: [],
     sources,
     health,
   };
@@ -123,7 +126,7 @@ export async function exportSite(
     });
   for (const [name, data] of Object.entries({
     companies: registry.companies,
-    topics,
+    topics: [],
     sources,
     health,
   }))
@@ -151,12 +154,6 @@ export async function exportSite(
       `feed/company/${c.id}`,
       `AI Engineering Radar · ${c.name}`,
       articles.filter((a) => a.companyId === c.id),
-    );
-  for (const t of topics)
-    await feeds(
-      `feed/topic/${t.id}`,
-      `AI Engineering Radar · ${t.name}`,
-      articles.filter((a) => a.classification.topics.includes(t.id)),
     );
   const lines = [
     "# 来源验收表",

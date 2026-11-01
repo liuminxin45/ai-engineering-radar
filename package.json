@@ -21,7 +21,8 @@
     "test:e2e": "playwright test",
     "test:fixture": "tsx scripts/fixtures.ts",
     "check:public": "tsx scripts/check-public.ts",
-    "verify:live": "tsx scripts/verify-live.ts"
+    "verify:live": "tsx scripts/verify-live.ts",
+    "data:migrate-domestic": "tsx scripts/migrate-domestic.ts"
   },
   "dependencies": {
     "cheerio": "^1.1.2",

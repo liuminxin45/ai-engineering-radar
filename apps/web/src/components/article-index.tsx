@@ -1,18 +1,17 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import { Button, Input, Select } from "chatgpt-desktop-kit";
 import { site, asset } from "../lib";
 import { ArticleRow } from "./article-row";
 type Filter = {
   q: string;
   company: string;
-  topic: string;
   sort: string;
   page: number;
 };
 const initial: Filter = {
   q: "",
   company: "",
-  topic: "",
   sort: "newest",
   page: 1,
 };
@@ -21,7 +20,6 @@ function readQuery(): Filter {
   return {
     q: p.get("q") ?? "",
     company: p.get("company") ?? "",
-    topic: p.get("topic") ?? "",
     sort: p.get("sort") === "oldest" ? "oldest" : "newest",
     page: Math.max(1, Number(p.get("page")) || 1),
   };
@@ -41,7 +39,6 @@ export function ArticleIndex() {
     const p = new URLSearchParams();
     if (next.q) p.set("q", next.q);
     if (next.company) p.set("company", next.company);
-    if (next.topic) p.set("topic", next.topic);
     if (next.sort !== "newest") p.set("sort", next.sort);
     if (next.page > 1) p.set("page", String(next.page));
     const url = `${location.pathname}${p.size ? "?" + p : ""}`;
@@ -53,8 +50,6 @@ export function ArticleIndex() {
       .filter(
         (a) =>
           (!filter.company || a.companyId === filter.company) &&
-          (!filter.topic ||
-            a.classification.topics.includes(filter.topic as never)) &&
           (!q ||
             `${a.title} ${a.description ?? ""} ${a.author ?? ""}`
               .toLocaleLowerCase()
@@ -71,23 +66,14 @@ export function ArticleIndex() {
   const pages = Math.max(1, Math.ceil(results.length / 20)),
     page = Math.min(filter.page, pages);
   const displayed = results.slice((page - 1) * 20, page * 20);
-  const selected = !!(
-    filter.q ||
-    filter.company ||
-    filter.topic ||
-    filter.sort !== "newest"
-  );
-  const feed = filter.topic
-    ? `/feed/topic/${filter.topic}`
-    : filter.company
-      ? `/feed/company/${filter.company}`
-      : "/feed";
+  const selected = !!(filter.q || filter.company || filter.sort !== "newest");
+  const feed = filter.company ? `/feed/company/${filter.company}` : "/feed";
   return (
     <section aria-label="文章索引">
       <div className="filters">
         <div className="search-field">
           <label htmlFor="search">搜索文章</label>
-          <input
+          <Input
             id="search"
             type="search"
             value={filter.q}
@@ -97,66 +83,43 @@ export function ArticleIndex() {
         </div>
         <div className="filter-field">
           <label htmlFor="company">公司</label>
-          <select
+          <Select
             id="company"
             value={filter.company}
-            onChange={(e) => update({ company: e.target.value })}
-          >
-            <option value="">全部公司</option>
-            {site.companies.map((c) => (
-              <option key={c.id} value={c.id}>
-                {c.name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="filter-field">
-          <label htmlFor="topic">主题</label>
-          <select
-            id="topic"
-            value={filter.topic}
-            onChange={(e) => update({ topic: e.target.value })}
-          >
-            <option value="">全部主题</option>
-            {site.topics.map((t) => (
-              <option key={t.id} value={t.id}>
-                {t.name}
-              </option>
-            ))}
-          </select>
+            onValueChange={(company) => update({ company })}
+            options={[
+              { value: "", label: "全部公司" },
+              ...site.companies.map((c) => ({ value: c.id, label: c.name })),
+            ]}
+          />
         </div>
         <div className="filter-field sort-field">
           <label htmlFor="sort">排序</label>
-          <select
+          <Select
             id="sort"
             value={filter.sort}
-            onChange={(e) => update({ sort: e.target.value })}
-          >
-            <option value="newest">最新优先</option>
-            <option value="oldest">最早优先</option>
-          </select>
+            onValueChange={(sort) => update({ sort })}
+            options={[
+              { value: "newest", label: "最新优先" },
+              { value: "oldest", label: "最早优先" },
+            ]}
+          />
         </div>
       </div>
       <div className="result-bar">
         <p aria-live="polite">
-          <strong>{results.length}</strong> 篇工程实践{" "}
-          <span className="muted">· 按发布或发现日期</span>
+          <strong>{results.length}</strong> 篇文章
         </p>
         <div className="result-actions">
           {selected && (
-            <button className="text-button" onClick={() => update(initial)}>
+            <Button variant="ghost" size="sm" onClick={() => update(initial)}>
               清空筛选
-            </button>
+            </Button>
           )}
           <a href={asset(`${feed}.xml`)}>RSS</a>
           <a href={asset(`${feed}.atom`)}>Atom</a>
         </div>
       </div>
-      {filter.company && filter.topic && (
-        <p className="small muted">
-          订阅入口按当前主题提供；公司与主题组合筛选仅用于页面浏览。
-        </p>
-      )}
       <div className="article-list">
         {displayed.map((a) => (
           <ArticleRow key={a.id} article={a} />
@@ -165,15 +128,15 @@ export function ArticleIndex() {
       {!results.length && (
         <div className="empty">
           <h2>暂时没有匹配的文章</h2>
-          <p>试试其他关键词，或清空筛选查看全部工程实践。</p>
+          <p>试试其他关键词，或清空筛选查看全部文章。</p>
           {selected && (
-            <button onClick={() => update(initial)}>查看全部文章</button>
+            <Button onClick={() => update(initial)}>查看全部文章</Button>
           )}
         </div>
       )}
       {pages > 1 && (
         <nav className="pagination" aria-label="文章分页">
-          <button
+          <Button
             disabled={page === 1}
             onClick={() => {
               update({ page: page - 1 });
@@ -181,11 +144,11 @@ export function ArticleIndex() {
             }}
           >
             上一页
-          </button>
+          </Button>
           <span>
             第 {page} / {pages} 页
           </span>
-          <button
+          <Button
             disabled={page === pages}
             onClick={() => {
               update({ page: page + 1 });
@@ -193,7 +156,7 @@ export function ArticleIndex() {
             }}
           >
             下一页
-          </button>
+          </Button>
         </nav>
       )}
     </section>

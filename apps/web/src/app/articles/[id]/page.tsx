@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { site, companyName, topicName, asset } from "../../../lib";
+import { site, companyName, asset } from "../../../lib";
 import { LocalTime } from "../../../components/local-time";
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -41,13 +41,6 @@ export default async function Detail({
         {!a.publishedAt && <span>发现日期，原文未提供发布时间</span>}
       </div>
       <h1>{a.title}</h1>
-      <div className="tags">
-        {a.classification.topics.map((t) => (
-          <Link href={`/?topic=${t}`} key={t}>
-            {topicName(t)}
-          </Link>
-        ))}
-      </div>
       {a.description && <p className="detail-description">{a.description}</p>}
       <a
         className="primary-link"
@@ -60,26 +53,6 @@ export default async function Detail({
       <p className="small muted">
         本站仅提供文章索引和简短介绍，完整内容请在原站阅读。
       </p>
-      <section className="detail-section">
-        <h2>为什么收录</h2>
-        <p>{a.classification.reason}</p>
-        <p className="small muted">
-          分类方式：
-          {a.classification.method === "rules"
-            ? "规则筛选"
-            : a.classification.method === "model"
-              ? "模型辅助"
-              : "人工复核"}{" "}
-          · {a.classification.version}
-        </p>
-        {a.classification.evidence.length > 0 && (
-          <ul className="evidence">
-            {a.classification.evidence.map((e, i) => (
-              <li key={i}>{e}</li>
-            ))}
-          </ul>
-        )}
-      </section>
       <section className="detail-section">
         <h2>来源与发布信息</h2>
         <dl>

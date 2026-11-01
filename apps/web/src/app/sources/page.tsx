@@ -6,7 +6,6 @@ export default function Sources() {
   return (
     <>
       <section className="intro source-intro">
-        <p className="eyebrow">THE SOURCE MATTERS.</p>
         <h1>从可信来源开始</h1>
         <p className="lede">
           每个入口都保留发布主体、官方核验证据和采集结果。登记来源不代表已经启用，社区平台中的第三方投稿不会自动归属平台公司。
@@ -20,10 +19,17 @@ export default function Sources() {
           <span aria-hidden="true">·</span>
           <a href={asset("/data/sources.json")}>下载来源 JSON</a>
         </div>
+        <p className="small muted">
+          知道更多官方技术账号？欢迎
+          <a href="https://github.com/liuminxin45/ai-engineering-radar/blob/main/CONTRIBUTING.md">
+            提交 PR 适配新来源
+          </a>
+          ，支持官网及大型博客社区上的官方账号。
+        </p>
       </section>
-      {(["cn", "global"] as const).map((region) => (
+      {(["cn"] as const).map((region) => (
         <section className="source-group" key={region}>
-          <h2>{region === "cn" ? "国内公司" : "海外工程团队"}</h2>
+          <h2>国内公司</h2>
           {site.sources
             .filter(
               (s) =>

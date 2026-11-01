@@ -1,0 +1,29 @@
+# 关于 AI Engineering Radar / About
+
+## 中文
+
+AI Engineering Radar 是一个开放的工程文章索引。首批仅追踪国内公司官方技术团队，帮助读者发现团队实践，回到原文阅读。本批暂不接入海外来源。
+
+每篇文章保留公司、发布主体、原文地址和来源关系。来源目录展示官方身份的公开证据、核验状态和最近采集结果，方便读者回到原始材料核对。官方团队可以发布在自有网站，也可以使用第三方博客社区；托管平台的域名不等于文章的公司归属。
+
+项目从允许采集的入口提取必要元数据和原站提供的短介绍。已核验且启用的官方来源文章直接建立索引，保留身份核验、去重与数据校验，不做内容相关性筛选、模型审核或自动主题分类。
+
+网站提供搜索、公司筛选，以及全站和公司的 RSS / Atom 订阅。文章保留原始语言，全文在原站阅读。项目不复制、存储或分发文章全文；代码的 MIT 许可不改变原文、摘要、名称和商标的权利归属。
+
+欢迎[提交 PR 适配国内官方新来源](../CONTRIBUTING.md)，包括第三方博客社区中的国内公司官方账号。请提供公司、发布主体、稳定账号 ID、官方证据、允许采集的入口，以及适配器 fixture 和测试。线索尚不完整时，也可以先提交[来源提议](https://github.com/liuminxin45/ai-engineering-radar/issues/new?template=source.yml)。登记、身份核验和采集成功分别记录，具体覆盖情况以[来源目录](https://liuminxin45.github.io/ai-engineering-radar/sources/)为准。
+
+发现错误归属、失效链接或版权问题时，请在[仓库 Issue](https://github.com/liuminxin45/ai-engineering-radar/issues)中提供文章地址和更正依据。
+
+## English
+
+AI Engineering Radar is an open index of engineering articles. This initial release follows official engineering teams at Chinese companies, helping readers discover their work and read it at the source. Overseas sources are outside this batch.
+
+Each article keeps its company, publisher, original URL, and source relationships. The source directory shows public evidence of official ownership, verification status, and collection results. Teams may publish on their own sites or through third-party blogging communities. A hosting platform's domain does not establish who wrote an article.
+
+The project collects essential metadata and short descriptions supplied by the original site from permitted endpoints. Articles from verified, enabled official sources enter the index directly, with identity verification, deduplication, and data validation. There is no content relevance screening, model review, or automatic topic classification.
+
+Readers can search the index, filter by company, and subscribe to site-wide or company RSS / Atom feeds. Articles keep their original language. Full articles remain on their original sites: this project does not copy, store, or redistribute their full text. The code's MIT license does not relicense source content, descriptions, names, or trademarks.
+
+We welcome [PRs that add or repair sources](../CONTRIBUTING.md) for Chinese companies, including official accounts on third-party blogging communities. Include the company, publisher, stable account ID, public ownership evidence, permitted collection endpoint, and adapter fixtures with tests. If you have an incomplete lead, [suggest a source](https://github.com/liuminxin45/ai-engineering-radar/issues/new?template=source.yml). Registration, verification, and successful collection are tracked separately; consult the [source directory](https://liuminxin45.github.io/ai-engineering-radar/sources/) for current coverage.
+
+For attribution errors, broken links, or content removal requests, open a [repository issue](https://github.com/liuminxin45/ai-engineering-radar/issues) with the article URL and supporting details.

@@ -7,6 +7,10 @@ import {
   type HttpResult,
   CrawlError,
 } from "./http.js";
+import {
+  parseCnblogsAccount,
+  parseTencentNews,
+} from "./platforms/community.js";
 export const plain = (s: unknown, max = 800) =>
   cheerio
     .load(`<body>${String(s ?? "")}</body>`)
@@ -32,7 +36,7 @@ const value = (v: any): string =>
     : String(v ?? "");
 function shortSummary(input: unknown) {
   const t = plain(input, 1601);
-  return t.length <= 1600 ? t.slice(0, 800) : undefined;
+  return t && t.length <= 1600 ? t.slice(0, 800) : undefined;
 }
 export function parseFeed(xml: string, source: Source): Candidate[] {
   if (XMLValidator.validate(xml) !== true)
@@ -60,11 +64,16 @@ export function parseFeed(xml: string, source: Source): Candidate[] {
     } catch {
       return [];
     }
-    if (!["http:", "https:"].includes(new URL(url).protocol)) return [];
+    if (
+      !["http:", "https:"].includes(new URL(url).protocol) ||
+      !allowedHost(source, url)
+    )
+      return [];
     const title = plain(value(item.title), 600);
     if (!title || !link) return [];
     const author =
-      plain(value(item.author ?? item["dc:creator"]), 300) || undefined;
+      plain(value(item.author ?? item["dc:creator"] ?? atom?.author), 300) ||
+      undefined;
     if (
       source.authorAllowlist?.length &&
       !source.authorAllowlist.includes(author ?? "")
@@ -81,7 +90,13 @@ export function parseFeed(xml: string, source: Source): Candidate[] {
         url,
         externalId: value(item.guid ?? item.id) || undefined,
         author,
-        description: shortSummary(value(item.description ?? item.summary)),
+        // These publishers place full article bodies in description/summary.
+        // Read only metadata here; a page's own meta description may supply an excerpt.
+        description: ["segmentfault-feed", "team-blog-feed"].includes(
+          source.platform,
+        )
+          ? undefined
+          : shortSummary(value(item.description ?? item.summary)),
         publishedAt: date(
           item.pubDate ?? item.published ?? item["dc:date"] ?? item.updated,
         ),
@@ -91,6 +106,9 @@ export function parseFeed(xml: string, source: Source): Candidate[] {
   });
 }
 export function parseListing(html: string, source: Source): Candidate[] {
+  if (source.platform === "tencent-news") return parseTencentNews(html, source);
+  if (source.platform === "cnblogs-account")
+    return parseCnblogsAccount(html, source);
   if (source.platform === "tencent-column")
     return parseTencentColumn(html, source);
   if (!source.selector)
@@ -254,11 +272,19 @@ export async function collect(
       "No article entries parsed; source adapter or publisher filter requires review",
     );
   const warnings: string[] = [];
+  // Public account feeds already provide the index metadata. Never fan out into
+  // CSDN's restricted article HTML or full-text feed pages just for an excerpt.
+  const skipArticleMetadata = [
+    "csdn-feed",
+    "segmentfault-feed",
+    "team-blog-feed",
+  ].includes(source.platform);
   for (const item of items) {
     // Only retrieve metadata when a listing/feed lacks a useful excerpt or date.
     if (
       (item.description && item.publishedAt) ||
-      !allowedHost(source, item.url)
+      !allowedHost(source, item.url) ||
+      skipArticleMetadata
     )
       continue;
     try {

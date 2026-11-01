@@ -1,22 +1,28 @@
 # AI Engineering Radar
 
-发现真实的 AI 工程实践。追踪公司官方技术团队，提供可搜索的文章索引和 RSS / Atom 订阅。
+发现工程实践，回到原文阅读。首批追踪国内公司官方技术团队，提供可搜索、可溯源的文章索引和 RSS / Atom 订阅。
 
-[网站](https://liuminxin45.github.io/ai-engineering-radar/) · [RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) · [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom) · [来源目录](https://liuminxin45.github.io/ai-engineering-radar/sources/)
+An open article index for official engineering teams at Chinese companies. This initial release offers source provenance, search, and RSS / Atom feeds. Read the full articles on their original sites.
+
+[网站](https://liuminxin45.github.io/ai-engineering-radar/) · [About / 关于](https://liuminxin45.github.io/ai-engineering-radar/about/) · [RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) · [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom) · [来源目录](https://liuminxin45.github.io/ai-engineering-radar/sources/)
 
 ## 项目做什么
 
-来源注册与官方身份核验、增量采集、元数据去重、AI 工程分类、网页索引和开放订阅。覆盖 Agent、AI Coding、Harness、RAG、推理、评测、AI 基础设施和工程应用。
+首批仅收录国内公司官方技术团队。已核验且启用的官方来源文章直接建立索引，保留身份核验、去重和数据校验，不按内容相关性筛选，也不做自动主题分类。本批暂不接入海外来源。
 
-首批登记 40 条指定入口，另补充得物技术官网。来源是否经过身份核验、是否启用、是否采集成功是三个独立状态，均可在来源目录查看。未通过核验的第三方账号和缺少文章目录的开发者门户不会自动产生公开文章。
+来源包括国内公司自有技术站，也欢迎博客园、腾讯云开发者社区、阿里云开发者社区等第三方博客社区中的国内公司官方团队账号。公司归属依据具体发布主体核验，不按托管平台的域名推断。
+
+来源是否经过身份核验、是否启用、是否采集成功是三个独立状态，均可在来源目录查看。待核验账号可以继续补充官方证据；缺少文章目录的入口可以继续贡献适配器。
 
 不保存或提供文章全文，不提供登录、收藏、推荐榜单和评论。文章保留原始语言。
+
+项目介绍见 [中文 / English About](docs/about.md)。欢迎[提交 PR 适配新来源](CONTRIBUTING.md)，也可以用[来源提议模板](https://github.com/liuminxin45/ai-engineering-radar/issues/new?template=source.yml)提供线索。
 
 ## 技术与运行方式
 
 TypeScript、Node.js 22、pnpm workspace、Next.js 静态导出。全部业务状态使用带校验和的版本化 JSON，无数据库、ORM 或常驻后端。
 
-`main` 保存代码和来源注册表。`data` 分支的 `snapshot/` 保存文章、来源状态及快照清单。Actions 每日北京时间 09:17 恢复快照，采集、分类、构建和验证，通过后保存数据并部署 GitHub Pages。Actions 可能延迟执行，不能视为严格时间保证。
+`main` 保存代码和来源注册表。`data` 分支的 `snapshot/` 保存文章、来源状态及快照清单。Actions 每日北京时间 09:17 恢复快照，采集、构建和验证，通过后保存数据并部署 GitHub Pages。Actions 可能延迟执行，不能视为严格时间保证。
 
 ## 本地启动
 
@@ -60,7 +66,9 @@ pnpm test:e2e
 
 ## 来源贡献与人工复核
 
-修改 `packages/source-registry/registry.json` 后提交 PR。来源必须关联公司和发布主体；社区中的文章不得根据托管域名判断公司归属。
+欢迎提交 PR，补充国内官方来源、官方身份材料或已有来源的解析修复。完整步骤、字段说明及测试要求见 [贡献指南](CONTRIBUTING.md)。你可以先提供公开线索，再一起补全证据与适配器。
+
+修改 `packages/source-registry/registry.json` 时，来源必须关联公司和发布主体；社区中的文章不得根据托管域名判断公司归属。
 
 - A/B/C 为接入优先级，不等于身份已认证。
 - `verified` 必须附带官方域名、官网反向链接或平台企业认证等证据、核验说明及日期。
@@ -68,46 +76,23 @@ pnpm test:e2e
 - RSS / Atom 优先；公开 API 及站点 HTML 解析必须使用经审核的入口和站点专用适配。
 - 社区来源必须设置 `authorAllowlist`，匹配稳定可核验的发布主体；无法确认时保持禁用。
 
-规则仅发布具有 AI 关联、工程行动和具体实现机制的条目。元数据不足进入 `review`，模型失败进入 `pending`，商业新闻和营销内容进入 `rejected`。
+We welcome PRs for official engineering sources at Chinese companies, including team accounts hosted by third-party blogging communities. Overseas sources are outside this batch. Include the company, publisher, stable account ID, public evidence of ownership, permitted collection endpoint, and adapter fixtures with tests. See [CONTRIBUTING.md](CONTRIBUTING.md) for the current adapter requirements.
 
-人工修改 `config/overrides.json`，例如：
-
-```json
-{
-  "schemaVersion": 1,
-  "articles": {
-    "文章的20位十六进制ID": {
-      "status": "accepted",
-      "topics": ["agent"],
-      "reason": "已阅读原文，包含工具调用与沙箱运行时实现。"
-    }
-  },
-  "merges": []
-}
-```
-
-设置 `hidden: true` 隐藏文章。确定的跨平台重复可在 `merges` 添加 `from`、`into` 和 `reason`；只允许相同发布主体。相似标题只提示复核，不自动合并。人工决定优先于自动分类。
-
-## 可选模型
-
-默认无需模型或付费密钥。需要模型处理不确定条目时，在 GitHub Repository Variables 配置 `CLASSIFIER_BASE_URL`（兼容接口地址，包含 `/v1`）、`CLASSIFIER_MODEL`，在 Secrets 配置 `CLASSIFIER_API_KEY`。单次最多处理 20 条，超时或输出不合格保留待处理。
-
-不要将密钥写入来源配置、数据分支、客户端代码或日志。外部 PR 不读取密钥。
+文章无需经过相关性规则或模型审核。发现归属、链接、日期或重复关系有误时，请提供原文地址与证据。`config/overrides.json` 可用于人工更正或隐藏记录；确定的同一发布主体跨平台重复可在 `merges` 添加 `from`、`into` 和 `reason`。相似标题只提示复核，不自动合并。
 
 ## 静态接口与订阅
 
 所有路径均相对站点基路径。JSON 为公开快照，不接受服务端搜索或游标参数。
 
-| 路径 | 内容 |
-| --- | --- |
-| `/data/articles.json` | 已发布文章索引 |
-| `/data/articles/{id}.json` | 单篇元数据 |
-| `/data/companies.json`、`/data/topics.json` | 公司和主题 |
-| `/data/sources.json` | 来源及检测状态 |
-| `/data/health.json` | 最近采集快照 |
-| `/feed.xml`、`/feed.atom` | 全站最近 50 篇 |
-| `/feed/company/{id}.xml`、`.atom` | 公司订阅 |
-| `/feed/topic/{id}.xml`、`.atom` | 主题订阅 |
+| 路径                              | 内容           |
+| --------------------------------- | -------------- |
+| `/data/articles.json`             | 已发布文章索引 |
+| `/data/articles/{id}.json`        | 单篇元数据     |
+| `/data/companies.json`            | 公司目录       |
+| `/data/sources.json`              | 来源及检测状态 |
+| `/data/health.json`               | 最近采集快照   |
+| `/feed.xml`、`/feed.atom`         | 全站最近 50 篇 |
+| `/feed/company/{id}.xml`、`.atom` | 公司订阅       |
 
 订阅 ID 不随标题、URL 修改或站点域名变化。原文没有发布时间时使用发现时间，详情页明确说明。缓存及响应头由 GitHub Pages 管理。
 

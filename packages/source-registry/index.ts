@@ -53,6 +53,33 @@ export async function loadRegistry() {
   for (const s of sources)
     if (!publishers.some((p) => p.id === s.publisherId))
       throw new Error(`Unknown publisher: ${s.publisherId}`);
+  for (const s of sources) {
+    if (
+      [
+        "csdn-feed",
+        "cnblogs-account",
+        "tencent-news",
+        "tencent-user",
+        "tencent-column",
+        "segmentfault-feed",
+        "team-blog-feed",
+        "juejin-account",
+      ].includes(s.platform) &&
+      s.crawl.enabled &&
+      !s.authorAllowlist?.length
+    )
+      throw new Error(
+        `Community source needs reviewed account identifiers: ${s.id}`,
+      );
+    if (
+      s.platform === "csdn-feed" &&
+      s.crawl.enabled &&
+      (!s.linkPattern || new URL(s.url).hostname !== "rss.csdn.net")
+    )
+      throw new Error(
+        `CSDN feeds require account-scoped entry and article path: ${s.id}`,
+      );
+  }
   return { sources, companies, publishers };
 }
 export type Registry = Awaited<ReturnType<typeof loadRegistry>>;

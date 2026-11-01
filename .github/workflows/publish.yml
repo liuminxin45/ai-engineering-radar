@@ -40,14 +40,9 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - name: Restore durable snapshot
         run: cp -a .radar/state/snapshot .radar/data
-      - run: pnpm registry:check && pnpm data:check && pnpm test
+      - run: pnpm registry:check && pnpm data:migrate-domestic && pnpm data:check && pnpm test
       - name: Collect reviewed sources
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect)
-        env:
-          CLASSIFIER_BASE_URL: ${{ vars.CLASSIFIER_BASE_URL }}
-          CLASSIFIER_MODEL: ${{ vars.CLASSIFIER_MODEL }}
-          CLASSIFIER_API_KEY: ${{ secrets.CLASSIFIER_API_KEY }}
-          CLASSIFIER_MAX_ITEMS: "20"
         run: pnpm ingest --daily
       - run: pnpm data:check && pnpm build && pnpm typecheck && pnpm check:public
       - run: pnpm exec playwright install --with-deps chromium

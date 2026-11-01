@@ -11,7 +11,7 @@ for (const path of [
   "/feed.xml",
   "/feed.atom",
   "/feed/company/meituan.xml",
-  "/feed/topic/agent.atom",
+  "/feed/company/meituan.atom",
 ]) {
   const response = await fetch(base + path);
   if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);

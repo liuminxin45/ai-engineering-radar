@@ -5,7 +5,6 @@ import { ingest } from "../../packages/crawler/ingest.js";
 import { upsert } from "../../packages/crawler/deduplicate.js";
 import { loadRegistry } from "../../packages/source-registry/index.js";
 import type { Article, Snapshot } from "../../packages/shared/types.js";
-import { classifyModel } from "../../packages/classifier/index.js";
 const registry = await loadRegistry(),
   source = registry.sources.find((s) => s.id === "meituan")!;
 const candidate = {
@@ -67,7 +66,7 @@ it("does not publish a partially malformed source batch", async () => {
   expect(result.successes).toBe(0);
   expect(result.articles).toHaveLength(1);
 });
-it("keeps uncertain duplicate candidates in review after rule upgrades", async () => {
+it("does not hide distinct official articles merely because titles are similar", async () => {
   const data = snapshot();
   data.articles[0].classification.version = "old";
   data.articles[0].duplicateCandidates = ["other-article"];
@@ -80,8 +79,8 @@ it("keeps uncertain duplicate candidates in review after rule upgrades", async (
     force: true,
     sourceId: source.id,
   });
-  expect(result.articles[0].classification.status).toBe("review");
-  expect(result.articles[0].publicationStatus).toBe("draft");
+  expect(result.articles[0].classification.status).toBe("accepted");
+  expect(result.articles[0].publicationStatus).toBe("published");
 });
 beforeEach(() => {
   vi.resetAllMocks();
@@ -132,12 +131,9 @@ it("suspended source is not collected", async () => {
   expect(collect).not.toHaveBeenCalled();
   expect(result.articles).toHaveLength(1);
 });
-it("classification timeout cannot publish an uncertain article", async () => {
-  vi.stubEnv("CLASSIFIER_BASE_URL", "https://classifier.example/v1");
-  vi.stubEnv("CLASSIFIER_API_KEY", "test-key");
-  vi.stubEnv("CLASSIFIER_MODEL", "test-model");
+it("publishes legacy review entries without a model or content rules", async () => {
   const data = snapshot();
-  data.articles[0].title = "An AI vision";
+  data.articles[0].title = "Redis 自动化运维最佳实践";
   data.articles[0].classification.status = "review";
   data.articles[0].publicationStatus = "draft";
   vi.mocked(collect).mockResolvedValue({
@@ -145,44 +141,18 @@ it("classification timeout cannot publish an uncertain article", async () => {
     response: { status: 304, text: "", url: source.url },
     warnings: [],
   });
-  vi.stubGlobal("fetch", vi.fn().mockRejectedValue(new Error("timeout")));
+  vi.stubGlobal(
+    "fetch",
+    vi.fn().mockRejectedValue(new Error("No model calls allowed")),
+  );
   try {
     const result = await ingest(data, registry, {
       force: true,
       sourceId: source.id,
     });
-    expect(result.articles[0].classification.status).toBe("pending");
-    expect(result.articles[0].publicationStatus).toBe("draft");
-  } finally {
-    vi.unstubAllGlobals();
-  }
-});
-it("rejects model decisions with invented evidence", async () => {
-  vi.stubEnv("CLASSIFIER_BASE_URL", "https://classifier.example/v1");
-  vi.stubEnv("CLASSIFIER_API_KEY", "test-key");
-  vi.stubEnv("CLASSIFIER_MODEL", "test-model");
-  vi.stubGlobal(
-    "fetch",
-    vi.fn().mockResolvedValue({
-      ok: true,
-      json: async () => ({
-        choices: [
-          {
-            message: {
-              content: JSON.stringify({
-                status: "accepted",
-                topics: ["agent"],
-                reason: "Engineering",
-                evidence: ["Invented benchmark"],
-              }),
-            },
-          },
-        ],
-      }),
-    }),
-  );
-  try {
-    await expect(classifyModel(candidate)).rejects.toThrow("not grounded");
+    expect(result.articles[0].classification.method).toBe("source");
+    expect(result.articles[0].publicationStatus).toBe("published");
+    expect(fetch).not.toHaveBeenCalled();
   } finally {
     vi.unstubAllGlobals();
   }

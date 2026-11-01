@@ -1,0 +1,9 @@
+{
+  "ret": 0,
+  "newslist": [
+    {"id":"20261030A0B2KI00","title":"腾讯TGR：以生成式范式重塑推荐系统","timestamp":1793353008,"abstract":"生成式推荐技术栈的工程实践。","card":{"suid":"8QMZ23lf74UYuTs=","chlid":"6093642","chlname":"腾讯技术工程"},"html_content":"FULL ARTICLE MUST NOT BE STORED"},
+    {"id":"20261028A0B11F00","title":"一句话生成看板｜灯塔AI数据分析从0到1完整指南","time":"2026-10-28 17:35:54","card":{"suid":"8QMZ23lf74UYuTs=","chlname":"腾讯技术工程"}},
+    {"id":"20261030A0FALSE00","title":"Same nickname from another account","card":{"suid":"impostor","chlname":"腾讯技术工程"}},
+    {"id":"../../outside","title":"Untrusted article ID","card":{"suid":"8QMZ23lf74UYuTs=","chlname":"腾讯技术工程"}}
+  ]
+}
