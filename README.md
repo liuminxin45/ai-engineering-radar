@@ -45,6 +45,28 @@ PC：公司分列，横向浏览。
 
 小米博文已按维护者指定改用 [MiMo 官网](https://mimo.xiaomi.com/)，实采 15 篇。小米只保留此源，其余未启用的参考入口已移除。最新明确发布日期为 2026-09-27；继续追踪更新，不视为近月活跃。OPPO、携程、小红书及快手更完整的长文渠道仍待补充，详见[来源核验记录](docs/source-research.md)。
 
+当前采集源如下，按 2026-11-02 的[来源注册表](packages/source-registry/registry.json)整理。表中状态表示是否启用采集；最近采集结果见[来源验收表](docs/source-acceptance.md)。暂停新增的来源保留历史文章。
+
+| 公司 | 来源入口 | 采集方式 | 状态 |
+| --- | --- | --- | --- |
+| 美团 | [美团技术团队](https://tech.meituan.com/) | RSS | 启用 |
+| vivo | [vivo 互联网技术 · CSDN](https://blog.csdn.net/vivo_tech) | RSS | 启用 |
+| 得物 | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles) | 账号文章目录 | 启用 |
+| 腾讯 | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D) | 公开作者列表 API | 启用 |
+| 阿里巴巴 / 阿里云 | [阿里云云原生 · 官方博客](https://developer.aliyun.com/group/apphub/article/) | 栏目 HTML | 启用 |
+| 字节跳动 | [字节跳动开源 · 火山引擎](https://developer.volcengine.com/user/1333053764416295) | 账号文章目录 | 启用 |
+| 百度 | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283) | RSS | 启用 |
+| 华为 | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud) | RSS | 启用 |
+| 快手 | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech) | RSS | 启用 |
+| 蚂蚁集团 | [蚂蚁百灵 · 官方博客](https://developer.ant-ling.com/zh-CN/blogs) | 博客 HTML | 启用 |
+| 小米 | [小米 MiMo · 官方博客](https://mimo.xiaomi.com/) | 官网博客列表与文章页 | 启用 |
+| OPPO | [OPPO 数智技术 · 思否](https://segmentfault.com/blog/oppotech) | RSS | 暂停新增 |
+| 京东 | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/) | 账号 HTML 目录 | 启用 |
+| 携程 | [携程技术 · CSDN](https://blog.csdn.net/ctrip_tech) | RSS | 暂停新增 |
+| 小红书 | [小红书技术 REDtech · CSDN](https://blog.csdn.net/REDtech_1024) | RSS | 暂停新增 |
+| 网易 | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw) | RSS | 启用 |
+| B站 | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC) | RSS | 启用 |
+
 不保存或提供文章全文，不提供登录、收藏、推荐榜单和评论。文章保留原始语言。
 
 项目介绍见 [中文 / English About](docs/about.md)。欢迎[提交 PR 适配新来源](CONTRIBUTING.md)，也可以用[来源提议模板](https://github.com/liuminxin45/ai-engineering-radar/issues/new?template=source.yml)提供线索。
