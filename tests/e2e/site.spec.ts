@@ -277,7 +277,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
     "dewu-tencent",
     "aliyun-cloud-native",
     "qwen-research",
-    "bytedance-volcengine",
+    "bytedance-tech-volcengine",
     "ant-ling",
     "baidu-cloud-csdn-candidate",
   ]) {
@@ -304,6 +304,10 @@ test("domestic provenance stays public while the interface exposes only whole-pr
     }
   }
   expect(sources).toHaveLength(companies.length);
+  expect(
+    sources.find((s: { id: string }) => s.id === "bytedance-tech-volcengine")
+      .entryUrl,
+  ).toBe("https://developer.volcengine.com/user/2772312065061673");
   const articles = (await (await request.get("data/articles.json")).json())
     .articles;
   const retiredIds = new Set<string>(sourceReplacements.map((s) => s.sourceId));

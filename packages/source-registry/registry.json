@@ -588,23 +588,21 @@
       "linkPattern": "^/article/[0-9]+/?$"
     },
     {
-      "id": "bytedance-volcengine",
+      "id": "bytedance-tech-volcengine",
       "publisherId": "bytedance-official",
-      "name": "字节跳动开源 · 火山引擎",
-      "entryUrl": "https://developer.volcengine.com/user/1333053764416295",
-      "url": "https://developer.volcengine.com/user/1333053764416295",
+      "name": "字节跳动技术团队 · 火山引擎",
+      "entryUrl": "https://developer.volcengine.com/user/2772312065061673",
+      "url": "https://developer.volcengine.com/user/2772312065061673",
       "priority": "A",
       "adapter": "html",
       "platform": "volcengine-account",
       "verification": {
         "status": "verified",
         "evidenceUrls": [
-          "https://developer.volcengine.com/user/1333053764416295",
-          "https://developer.volcengine.com/articles/7698691370294181915",
-          "https://opensource.bytedance.com/blog"
+          "https://developer.volcengine.com/user/2772312065061673"
         ],
-        "note": "字节系自有火山引擎社区的字节跳动开源团队账号，稳定作者ID1333053764416295。原文7698691370294181915署名字节跳动STE团队，公开SSR中作者ID与publish_time对应2026-10-20；与原开源官网团队内容交叉印证。仅采该作者目录，逐条验证稳定ID，不将火山引擎整站当成官方团队。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
+        "note": "用户指定字节跳动技术团队账号，稳定用户 ID 2772312065061673。公开账号 SSR 与逐篇 content.user_id、user.user_id 均匹配，仅采集该账号发布的文章元数据。普通公开请求实采 20 篇，最新北京时间 2026-06-25；按用户指定继续追踪，不代表近月活跃。原字节跳动开源账号已移除。",
+        "reviewedAt": "2026-11-02T03:55:15.410Z"
       },
       "crawl": {
         "enabled": true,
@@ -612,7 +610,7 @@
         "maxItems": 50,
         "backfillLimit": 100
       },
-      "authorAllowlist": ["1333053764416295"],
+      "authorAllowlist": ["2772312065061673"],
       "linkHosts": ["developer.volcengine.com"],
       "linkPattern": "^/articles/[0-9]+/?$"
     },

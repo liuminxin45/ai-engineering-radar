@@ -16,7 +16,7 @@
 | 腾讯 | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D) | tencent-qqnews | 启用 |
 | 阿里巴巴 / 阿里云 | [阿里云云原生 · 账号主页](https://developer.aliyun.com/profile/pawmkwdq37c7s) | aliyun-cloud-native | 启用 |
 | 千问 | [千问 · Research](https://qwen.ai/research) | qwen-research | 启用 |
-| 字节跳动 | [字节跳动开源 · 火山引擎](https://developer.volcengine.com/user/1333053764416295) | bytedance-volcengine | 启用 |
+| 字节跳动 | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673) | bytedance-tech-volcengine | 启用 |
 | 百度 | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283) | baidu-cloud-csdn-candidate | 启用 |
 | 华为 | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud) | huawei-csdn | 启用 |
 | 快手 | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech) | kuaishou-csdn | 启用 |
@@ -58,3 +58,9 @@ OPPO、携程和小红书仍无已验证的近期可持续采集入口，保留�
 按维护者要求新增“千问”独立栏目，归属阿里品牌的事实不变。该栏目只有 Qwen 官方 Research 一个来源，不给阿里云增加第二个来源。读取页面实际使用的两个同域公开 JSON 接口：历史研究目录 `research.research-list` 和类型为 `qwen_ai` 的英文文章接口。历史记录限定为本轮核验的官网前端研究 ID 清单，新发布记录核对类型、语言和 QwenTeam 作者。剔除草稿标记，合并同一公开文章 ID。
 
 千问实采 92 篇，最早为 2022-11-14，最新为 2026-09-20，不代表近月更新；按维护者指定持续追踪。文章使用官网真实路由 `https://qwen.ai/blog?id=文章ID`。接口可能返回正文和内部仓库字段，采集只保留标题、作者、语言、原始日期和原文链接，不保存正文、长介绍或内部字段。
+
+## 字节跳动技术团队账号切换
+
+按维护者指定，将字节跳动唯一来源切换为火山引擎账号 `2772312065061673`。移除 URL 中的 `utm_source` 参数，只使用账号公开文章目录。账号页及每篇文章的两个稳定作者 ID 均需匹配，保留原始发布时间，不使用更新日期。
+
+新账号实采 20 篇，最新北京时间为 2026-06-25，按用户指定继续追踪，不代表近月更新。旧开源账号 `1333053764416295` 的来源及独占文章在新源成功采集后清理；其他公司的文章及有效文章 ID 保持不变。

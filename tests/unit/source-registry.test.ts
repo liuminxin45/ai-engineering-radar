@@ -41,7 +41,9 @@ describe("official community account scope", () => {
   it("accepts the retained Aliyun and Volcengine accounts", async () => {
     const registry = await loadRegistry();
     const cloud = registry.sources.find((s) => s.id === "aliyun-cloud-native")!;
-    const volc = registry.sources.find((s) => s.id === "bytedance-volcengine")!;
+    const volc = registry.sources.find(
+      (s) => s.id === "bytedance-tech-volcengine",
+    )!;
     for (const source of [cloud, volc])
       expect(() => validateAccountScope(source)).not.toThrow();
   });
@@ -62,12 +64,12 @@ describe("official community account scope", () => {
 
   it("rejects a Volcengine account whose stable ID differs from the directory", async () => {
     const source = (await loadRegistry()).sources.find(
-      (s) => s.id === "bytedance-volcengine",
+      (s) => s.id === "bytedance-tech-volcengine",
     )!;
     expect(() =>
       validateAccountScope({
         ...source,
-        authorAllowlist: ["2772312065061673"],
+        authorAllowlist: ["1333053764416295"],
       }),
     ).toThrow();
     expect(() =>
@@ -79,7 +81,7 @@ describe("official community account scope", () => {
     expect(() =>
       validateAccountScope({
         ...source,
-        url: "https://developer.volcengine.com/user/1333053764416295?tab=all",
+        url: "https://developer.volcengine.com/user/2772312065061673?tab=all",
       }),
     ).toThrow();
   });

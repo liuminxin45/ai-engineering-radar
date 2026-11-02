@@ -53,8 +53,9 @@ PC：公司分列，横向浏览。
 | vivo | [vivo 互联网技术 · CSDN](https://blog.csdn.net/vivo_tech) | RSS | 启用 |
 | 得物 | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles) | 账号文章目录 | 启用 |
 | 腾讯 | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D) | 公开作者列表 API | 启用 |
-| 阿里巴巴 / 阿里云 | [阿里云云原生 · 官方博客](https://developer.aliyun.com/group/apphub/article/) | 栏目 HTML | 启用 |
-| 字节跳动 | [字节跳动开源 · 火山引擎](https://developer.volcengine.com/user/1333053764416295) | 账号文章目录 | 启用 |
+| 阿里巴巴 / 阿里云 | [阿里云云原生 · 账号主页](https://developer.aliyun.com/profile/pawmkwdq37c7s) | 账号文章目录 | 启用 |
+| 千问 | [千问 · Research](https://qwen.ai/research) | 官方研究目录 JSON | 启用 |
+| 字节跳动 | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673) | 账号文章目录 | 启用 |
 | 百度 | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283) | RSS | 启用 |
 | 华为 | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud) | RSS | 启用 |
 | 快手 | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech) | RSS | 启用 |
