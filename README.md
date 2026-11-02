@@ -4,6 +4,14 @@
 
 [阅读看板](https://liuminxin45.github.io/ai-engineering-radar/) · [关于](https://liuminxin45.github.io/ai-engineering-radar/about/) · [RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) · [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom)
 
+AI Engineering Radar indexes official engineering blogs and attributed research papers from Chinese companies, with company columns, search, source evidence, and RSS / Atom feeds.
+
+## 适合怎样的阅读需求
+
+想持续跟踪国内公司的工程实践，可以按公司浏览博文或论文，也可以订阅全站更新。这里保留原文入口和发布主体证据，方便从索引回到原始材料。
+
+收录范围以注册表中的具体团队和论文归属为准，不代表覆盖集团全部内容。采集计划可能延迟，缺失记录也不代表原团队没有更新。
+
 ## 为什么做这个项目
 
 一线团队的技术博客与研究论文，记录了 AI 走进真实业务的探索、架构取舍和实践经验。这些内容分散在公司官网、开发者社区和团队账号里，持续跟进费时，有价值的文章也容易被错过。
