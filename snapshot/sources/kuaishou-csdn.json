@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "kuaishou-csdn",
-    "lastCheckedAt": "2026-11-02T11:50:43.876Z",
-    "lastSuccessAt": "2026-11-02T11:50:43.876Z",
-    "nextRunAt": "2026-11-03T11:50:43.876Z",
+    "lastCheckedAt": "2026-11-02T12:20:02.986Z",
+    "lastSuccessAt": "2026-11-02T12:20:02.986Z",
+    "nextRunAt": "2026-11-03T12:20:02.986Z",
     "consecutiveFailures": 0,
     "etag": "\"46bc018ce23c351a353713c0621753a5c70a15b20c9def620be8ef3d79cbad69\"",
     "status": "not-modified",

@@ -61,7 +61,7 @@
     "sourceId": "huawei-csdn",
     "sourceUrl": "https://blog.csdn.net/devcloud/article/details/169164752",
     "ruleId": "csdn",
-    "ruleVersion": "2",
+    "ruleVersion": "3",
     "engineVersion": "radar-reader-2",
     "contentHash": "adaacc53766e5fcded7480316183e6f2c847a41afe32768879281b0a73d1b328",
     "fetchedAt": "2026-11-02T11:40:00.604Z",

@@ -66,7 +66,7 @@
     "sourceId": "vivo-csdn",
     "sourceUrl": "https://blog.csdn.net/vivo_tech/article/details/166594581",
     "ruleId": "csdn",
-    "ruleVersion": "2",
+    "ruleVersion": "3",
     "engineVersion": "radar-reader-2",
     "contentHash": "028c18bf634ec84ce6be16abb7cda13843dd1048adb5b17c200700e7c36b4dce",
     "fetchedAt": "2026-11-02T11:39:45.349Z",

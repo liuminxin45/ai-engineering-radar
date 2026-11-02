@@ -10,7 +10,7 @@
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/154189495",
     "ruleId": "csdn",
-    "ruleVersion": "2",
+    "ruleVersion": "3",
     "engineVersion": "radar-reader-2",
     "contentHash": "4ed58e8d2837b7f1f460da8e845bafd396fe6502bba16d48f92e373227aa2eb5",
     "fetchedAt": "2026-11-02T11:44:45.981Z",

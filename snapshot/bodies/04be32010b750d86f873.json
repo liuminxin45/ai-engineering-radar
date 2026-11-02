@@ -10,7 +10,7 @@
     "sourceId": "bilibili-csdn",
     "sourceUrl": "https://blog.csdn.net/bilibili_TC/article/details/156462674",
     "ruleId": "csdn",
-    "ruleVersion": "2",
+    "ruleVersion": "3",
     "engineVersion": "radar-reader-2",
     "contentHash": "15d798b3851e12e69d3eee2dd5ed4bfa36c291c06118467a5b33fc831151a5d0",
     "fetchedAt": "2026-11-02T11:44:15.240Z",

@@ -46,7 +46,7 @@
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/158068105",
     "ruleId": "csdn",
-    "ruleVersion": "2",
+    "ruleVersion": "3",
     "engineVersion": "radar-reader-2",
     "contentHash": "540e32e0142df5dd15452a848a57b152c5a7cf0ae1e97d410fdbadd45bd8616b",
     "fetchedAt": "2026-11-02T11:43:55.210Z",

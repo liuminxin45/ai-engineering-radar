@@ -10,7 +10,7 @@
     "sourceId": "netease-csdn",
     "sourceUrl": "https://blog.csdn.net/wangyiyungw/article/details/167491044",
     "ruleId": "csdn",
-    "ruleVersion": "2",
+    "ruleVersion": "3",
     "engineVersion": "radar-reader-2",
     "contentHash": "97555c9e8177222134592f0f1c9ed3436d315d2990c0872440f6b5edeb3563c1",
     "fetchedAt": "2026-11-02T11:41:21.093Z",

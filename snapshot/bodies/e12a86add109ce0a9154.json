@@ -26,7 +26,7 @@
     "sourceId": "netease-csdn",
     "sourceUrl": "https://blog.csdn.net/wangyiyungw/article/details/168130867",
     "ruleId": "csdn",
-    "ruleVersion": "2",
+    "ruleVersion": "3",
     "engineVersion": "radar-reader-2",
     "contentHash": "a19837658906c5ef34c8405bd25b6cd77adf19300f1b4c38b80daea80a4113ce",
     "fetchedAt": "2026-11-02T11:41:00.168Z",

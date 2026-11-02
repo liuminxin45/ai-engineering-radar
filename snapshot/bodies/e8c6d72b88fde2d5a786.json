@@ -126,7 +126,7 @@
     "sourceId": "bilibili-csdn",
     "sourceUrl": "https://blog.csdn.net/bilibili_TC/article/details/161427969",
     "ruleId": "csdn",
-    "ruleVersion": "2",
+    "ruleVersion": "3",
     "engineVersion": "radar-reader-2",
     "contentHash": "2a96329ea5bfa5f34487341631241a26d44d2ef20cd8d3cd2fce6e546c0a4ced",
     "fetchedAt": "2026-11-02T11:43:14.161Z",

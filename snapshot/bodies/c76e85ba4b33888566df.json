@@ -16,7 +16,7 @@
     "sourceId": "kuaishou-csdn",
     "sourceUrl": "https://blog.csdn.net/kuaishoutech/article/details/156853656",
     "ruleId": "csdn",
-    "ruleVersion": "2",
+    "ruleVersion": "3",
     "engineVersion": "radar-reader-2",
     "contentHash": "1d97316b87f980ca3c2c725d0f4c8a3f728ea7acaede7693dc20f4cb98d2eded",
     "fetchedAt": "2026-11-02T11:44:11.510Z",

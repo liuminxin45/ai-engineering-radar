@@ -76,7 +76,7 @@
     "sourceId": "baidu-cloud-csdn-candidate",
     "sourceUrl": "https://blog.csdn.net/2301_82040283/article/details/163946123",
     "ruleId": "csdn",
-    "ruleVersion": "2",
+    "ruleVersion": "3",
     "engineVersion": "radar-reader-2",
     "contentHash": "2d60e386b8b2d17d365968941762e9fec26dbdefa4a5fc39f61602a2aad54db7",
     "fetchedAt": "2026-11-02T11:42:34.662Z",

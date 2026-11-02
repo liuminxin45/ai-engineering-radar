@@ -31,7 +31,7 @@
     "sourceId": "netease-csdn",
     "sourceUrl": "https://blog.csdn.net/wangyiyungw/article/details/164369017",
     "ruleId": "csdn",
-    "ruleVersion": "2",
+    "ruleVersion": "3",
     "engineVersion": "radar-reader-2",
     "contentHash": "9c8851d317f3c7a042bde996a3cb0db24237d3d26deca46717fc3359faafe472",
     "fetchedAt": "2026-11-02T11:42:10.797Z",
