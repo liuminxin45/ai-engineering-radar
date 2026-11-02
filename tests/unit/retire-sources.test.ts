@@ -47,50 +47,64 @@ function fixture() {
   return { articles: [...articles, old], states };
 }
 describe("explicit source retirement", () => {
-  it("withdraws OPPO articles and states without a replacement and preserves other companies", () => {
-    const data = fixture();
-    const current = structuredClone(data.articles[0]);
-    const withdrawn = structuredClone(current);
-    withdrawn.id = "00000000000000000005";
-    withdrawn.companyId = "oppo";
-    withdrawn.publisherId = "oppo-official";
-    withdrawn.locations = [
-      {
-        sourceId: "oppo-segmentfault",
-        url: "https://segmentfault.com/a/1190000040000001",
-      },
-    ];
-    current.duplicateCandidates = [withdrawn.id];
-    const articles = [current, withdrawn];
-    const states: SourceState[] = [
-      data.states[1],
-      {
-        sourceId: "oppo",
-        status: "reference",
-        discovered: 0,
-        consecutiveFailures: 0,
-      },
-      {
-        sourceId: "oppo-segmentfault",
-        status: "suspended",
-        discovered: 50,
-        consecutiveFailures: 0,
-      },
-    ];
-    const before = structuredClone({ articles, states });
-    const result = retireReplacedSources(articles, states, registry);
-    expect(result.articles.map((a) => a.id)).toEqual([current.id]);
-    expect(result.articles[0].duplicateCandidates).toEqual([]);
-    expect(result.removedArticles).toBe(1);
-    expect(result.removedStates).toBe(2);
-    expect(registry.companies.some((c) => c.id === "oppo")).toBe(false);
-    expect({ articles, states }).toEqual(before);
-    validateRelations(result.articles, result.states, registry);
-    expect(
-      retireReplacedSources(result.articles, result.states, registry)
-        .removedArticles,
-    ).toBe(0);
-  });
+  it.each([
+    {
+      companyId: "oppo",
+      sourceId: "oppo-segmentfault",
+      publisherId: "oppo-official",
+    },
+    {
+      companyId: "xiaohongshu",
+      sourceId: "xiaohongshu-csdn",
+      publisherId: "xiaohongshu-official",
+    },
+  ])(
+    "withdraws $companyId articles and states without a replacement and preserves other companies",
+    ({ companyId, sourceId, publisherId }) => {
+      const data = fixture();
+      const current = structuredClone(data.articles[0]);
+      const withdrawn = structuredClone(current);
+      withdrawn.id = "00000000000000000005";
+      withdrawn.companyId = companyId;
+      withdrawn.publisherId = publisherId;
+      withdrawn.locations = [
+        {
+          sourceId,
+          url: "https://segmentfault.com/a/1190000040000001",
+        },
+      ];
+      current.duplicateCandidates = [withdrawn.id];
+      const articles = [current, withdrawn];
+      const states: SourceState[] = [
+        data.states[1],
+        {
+          sourceId: companyId,
+          status: "reference",
+          discovered: 0,
+          consecutiveFailures: 0,
+        },
+        {
+          sourceId,
+          status: "suspended",
+          discovered: 50,
+          consecutiveFailures: 0,
+        },
+      ];
+      const before = structuredClone({ articles, states });
+      const result = retireReplacedSources(articles, states, registry);
+      expect(result.articles.map((a) => a.id)).toEqual([current.id]);
+      expect(result.articles[0].duplicateCandidates).toEqual([]);
+      expect(result.removedArticles).toBe(1);
+      expect(result.removedStates).toBe(2);
+      expect(registry.companies.some((c) => c.id === companyId)).toBe(false);
+      expect({ articles, states }).toEqual(before);
+      validateRelations(result.articles, result.states, registry);
+      expect(
+        retireReplacedSources(result.articles, result.states, registry)
+          .removedArticles,
+      ).toBe(0);
+    },
+  );
   it("removes empty reference states while preserving the company's suspended historical source", () => {
     const source = registry.sources.find((s) => s.id === "ctrip-csdn")!;
     const articles: Article[] = [];

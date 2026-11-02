@@ -128,12 +128,6 @@ export const sourceReplacements = [
     referenceOnly: true,
   },
   {
-    sourceId: "xiaohongshu",
-    companyId: "xiaohongshu",
-    replacementIds: ["xiaohongshu-csdn"],
-    referenceOnly: true,
-  },
-  {
     sourceId: "netease",
     companyId: "netease",
     replacementIds: ["netease-csdn"],
@@ -193,6 +187,9 @@ export const sourceReplacements = [
 
 // Explicit removals requested by the maintainer; these have no replacement.
 export const sourceWithdrawals = [
+  { sourceId: "xiaohongshu-papers-crossref", companyId: "xiaohongshu" },
+  { sourceId: "xiaohongshu", companyId: "xiaohongshu" },
+  { sourceId: "xiaohongshu-csdn", companyId: "xiaohongshu" },
   { sourceId: "oppo", companyId: "oppo" },
   { sourceId: "oppo-segmentfault", companyId: "oppo" },
 ] as const;

@@ -274,6 +274,9 @@ test("domestic provenance stays public while the interface exposes only whole-pr
     .companies;
   expect(companies.length).toBeGreaterThan(0);
   expect(companies.some((c: { id: string }) => c.id === "oppo")).toBe(false);
+  expect(companies.some((c: { id: string }) => c.id === "xiaohongshu")).toBe(
+    false,
+  );
   expect(companies.every((c: { region: string }) => c.region === "cn")).toBe(
     true,
   );
@@ -297,7 +300,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
       (s: { verification: { status: string } }) =>
         s.verification.status === "suspended",
     ).length,
-  ).toBe(2);
+  ).toBe(1);
   for (const rule of sourceReplacements) {
     const { sourceId, replacementIds } = rule;
     expect(sources.some((s: { id: string }) => s.id === sourceId)).toBe(false);

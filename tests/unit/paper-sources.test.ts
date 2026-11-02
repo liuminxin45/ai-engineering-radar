@@ -89,7 +89,7 @@ describe("publication affiliation verification", () => {
       ).map((p) => p.companyId),
     ).toEqual(["dewu"]);
   });
-  it("keeps all explicitly signed registered companies and excludes universities", () => {
+  it("keeps registered companies and excludes universities and withdrawn companies", () => {
     const papers = parseCrossref(
       payload({
         ...work,
@@ -103,6 +103,7 @@ describe("publication affiliation verification", () => {
             ],
           },
           { affiliation: [{ name: "Tsinghua University" }] },
+          { affiliation: [{ name: "Xiaohongshu / Rednote 小红书" }] },
         ],
       }),
       source,

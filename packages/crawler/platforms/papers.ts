@@ -31,7 +31,6 @@ const institutions: Record<string, RegExp> = {
   baidu: /\bBaidu\b|百度/i,
   ant: /\bAnt (?:Group|Research|Financial)\b|\bAntGroup\b|蚂蚁(?:集团|金服)/i,
   ctrip: /\bTrip\.com\b|\bCtrip\b|携程/i,
-  xiaohongshu: /\bXiaohongshu\b|\bRednote\b|小红书/i,
   xiaomi: /\bXiaomi\b|小米/i,
 };
 export function affiliationEvidence(

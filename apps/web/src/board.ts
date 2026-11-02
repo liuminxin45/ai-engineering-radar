@@ -37,7 +37,6 @@ const order = [
   "baidu",
   "ant",
   "ctrip",
-  "xiaohongshu",
   "xiaomi",
 ];
 export function boardCompanies(companies: Company[]) {

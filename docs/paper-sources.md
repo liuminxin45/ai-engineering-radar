@@ -1,6 +1,6 @@
 # 论文来源与公司归属核验
 
-核验日期：2026-11-02。本轮真实快照收录 473 篇论文，覆盖当前 16 家公司，其中 7 篇涉及多家已注册公司。博文保持每家公司一个渠道，论文按独立的出版或研究渠道核验。
+核验日期：2026-11-02。本轮真实快照收录 443 篇论文，覆盖当前 15 家公司，其中 7 篇涉及多家已注册公司。博文保持每家公司一个渠道，论文按独立的出版或研究渠道核验。
 
 ## 收录依据
 
@@ -29,7 +29,6 @@
 | 小米              |         31 | [原文](https://doi.org/10.23919/ipec-nagasaki2026-ec64663.2026.11597572) | [机构记录](https://api.crossref.org/works/10.23919%2Fipec-nagasaki2026-ec64663.2026.11597572) |
 | 京东              |         30 | [原文](https://doi.org/10.1109/itherm55368.2023.10177639)                | [机构记录](https://api.crossref.org/works/10.1109%2Fitherm55368.2023.10177639)                |
 | 携程              |         10 | [原文](https://doi.org/10.1145/3239546)                                  | [机构记录](https://api.crossref.org/works/10.1145%2F3239546)                                  |
-| 小红书            |         30 | [原文](https://doi.org/10.1145/3746252.3761605)                          | [机构记录](https://api.crossref.org/works/10.1145%2F3746252.3761605)                          |
 | 网易              |         31 | [原文](https://doi.org/10.1109/iccv51701.2025.01639)                     | [机构记录](https://api.crossref.org/works/10.1109%2Ficcv51701.2025.01639)                     |
 | B站               |         30 | [原文](https://doi.org/10.1109/cvprw53098.2021.00030)                    | [机构记录](https://api.crossref.org/works/10.1109%2Fcvprw53098.2021.00030)                    |
 
@@ -37,7 +36,7 @@
 
 ## 采集渠道与结果
 
-16 家公司均有 Crossref 正式出版物渠道。本轮共登记 30 个论文入口，26 个启用并经实采与机构复核，4 个仅保留为参考。除正式出版渠道外，已成功接入腾讯混元、ByteDance Seed、百度、美团 LongCat、蚂蚁和小米 MiMo 的机构论文页，ByteDance Seed 与华为诺亚的官方论文目录，以及直接核验的 TripScore 和 AAAI 联合论文记录。
+15 家公司均有 Crossref 正式出版物渠道。本轮共登记 29 个论文入口，25 个启用并经实采与机构复核，4 个仅保留为参考。除正式出版渠道外，已成功接入腾讯混元、ByteDance Seed、百度、美团 LongCat、蚂蚁和小米 MiMo 的机构论文页，ByteDance Seed 与华为诺亚的官方论文目录，以及直接核验的 TripScore 和 AAAI 联合论文记录。
 
 | 入口                                                                                                                              | 启用 | 本轮状态  | 说明                                                                                                                                                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------------- | ---- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -54,7 +53,6 @@
 | [xiaomi-papers-crossref](https://api.crossref.org/works?query.affiliation=Xiaomi&sort=published&order=desc&rows=100)              | 是   | success   | 已取得可核验的论文元数据                                                                                                                                                                                                                                         |
 | [jd-papers-crossref](https://api.crossref.org/works?query.affiliation=JD.com&sort=score&order=desc&rows=100)                      | 是   | success   | 已取得可核验的论文元数据                                                                                                                                                                                                                                         |
 | [ctrip-papers-crossref](https://api.crossref.org/works?query.affiliation=Ctrip&sort=published&order=desc&rows=100)                | 是   | success   | 已取得可核验的论文元数据                                                                                                                                                                                                                                         |
-| [xiaohongshu-papers-crossref](https://api.crossref.org/works?query.affiliation=Xiaohongshu&sort=published&order=desc&rows=100)    | 是   | success   | 已取得可核验的论文元数据                                                                                                                                                                                                                                         |
 | [netease-papers-crossref](https://api.crossref.org/works?query.affiliation=NetEase&sort=published&order=desc&rows=100)            | 是   | success   | 已取得可核验的论文元数据                                                                                                                                                                                                                                         |
 | [bilibili-papers-crossref](https://api.crossref.org/works?query.affiliation=Bilibili&sort=published&order=desc&rows=100)          | 是   | success   | 已取得可核验的论文元数据                                                                                                                                                                                                                                         |
 | [seed-hf-papers](https://huggingface.co/ByteDance-Seed/papers)                                                                    | 是   | success   | 部分论文候选缺少可核验机构信息，已跳过。                                                                                                                                                                                                                         |
@@ -85,3 +83,5 @@ arXiv 请求遵守 robots.txt 的 15 秒 crawl-delay，已有作者机构证据�
 本轮对 26 篇 arXiv 作者机构证据重新抓取核验，隐藏 12 篇无法取得明确机构署名的记录；同时移除了将作者姓名 Jingdong Chen 错认成京东的归属。上述隐藏记录不进入公开 JSON、RSS 或论文面板。
 
 发布前同步维护者最新移除 OPPO 的变更，论文渠道及其归属一并退出当前范围；上表与公开数据反映合入后的结果。
+
+小红书栏目按维护者要求移除，相应的 30 篇独占论文及 Crossref 来源已退出当前索引，其他公司的论文记录保留。

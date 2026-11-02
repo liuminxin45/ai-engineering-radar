@@ -72,11 +72,6 @@
       "region": "cn"
     },
     {
-      "id": "xiaohongshu",
-      "name": "小红书",
-      "region": "cn"
-    },
-    {
       "id": "netease",
       "name": "网易",
       "region": "cn"
@@ -152,11 +147,6 @@
       "id": "ctrip-official",
       "companyId": "ctrip",
       "name": "携程 技术团队"
-    },
-    {
-      "id": "xiaohongshu-official",
-      "companyId": "xiaohongshu",
-      "name": "小红书 技术团队"
     },
     {
       "id": "netease-official",
@@ -257,11 +247,6 @@
       "id": "ctrip-research-papers",
       "companyId": "ctrip",
       "name": "携程 研究论文署名团队"
-    },
-    {
-      "id": "xiaohongshu-research-papers",
-      "companyId": "xiaohongshu",
-      "name": "小红书 研究论文署名团队"
     },
     {
       "id": "netease-research-papers",
@@ -461,34 +446,6 @@
       },
       "authorAllowlist": ["wangyiyungw"],
       "linkPattern": "^/wangyiyungw/article/details/[0-9]+/?$"
-    },
-    {
-      "id": "xiaohongshu-csdn",
-      "publisherId": "xiaohongshu-official",
-      "name": "小红书技术REDtech · CSDN",
-      "entryUrl": "https://blog.csdn.net/REDtech_1024",
-      "url": "https://rss.csdn.net/REDtech_1024/rss/map",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "csdn-feed",
-      "verification": {
-        "status": "suspended",
-        "evidenceUrls": [
-          "https://blog.csdn.net/REDtech_1024",
-          "https://juejin.cn/user/899824537578279",
-          "https://juejin.cn/post/7218758481577984056"
-        ],
-        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2024-07-02，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：团队首发公告明确将同时运营 CSDN、掘金等渠道；两个账号简介与持续文章历史一致。限定稳定用户名 REDtech_1024；HTML 请求返回 521，公开 RSS 解析成功。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["REDtech_1024"],
-      "linkPattern": "^/REDtech_1024/article/details/[0-9]+/?$"
     },
     {
       "id": "bilibili-csdn",
@@ -1101,34 +1058,6 @@
         "backfillLimit": 30
       },
       "authorAllowlist": ["Ctrip"],
-      "linkHosts": ["doi.org"]
-    },
-    {
-      "id": "xiaohongshu-papers-crossref",
-      "publisherId": "xiaohongshu-research-papers",
-      "contentType": "paper",
-      "name": "小红书 · 出版方论文元数据",
-      "entryUrl": "https://search.crossref.org/?q=Xiaohongshu",
-      "url": "https://api.crossref.org/works?query.affiliation=Xiaohongshu&sort=published&order=desc&rows=100",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "paper-crossref",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
-          "https://api.crossref.org/works?query.affiliation=Xiaohongshu&sort=published&order=desc&rows=100"
-        ],
-        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
-        "reviewedAt": "2026-11-02T00:00:00.000Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 30
-      },
-      "authorAllowlist": ["Xiaohongshu"],
       "linkHosts": ["doi.org"]
     },
     {
