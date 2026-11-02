@@ -2,7 +2,7 @@
 
 ## 职责与范围
 
-当前仅引入 RSSHub，用于七个已核验 CSDN 账号的文章发现，并接收路由取得的正文。原有阅读页和独立解析引擎继续负责清洗、目录和渲染。Jina Reader、Trafilatura 和 Crawl4AI 均未引入。
+RSSHub 用于七个已核验 CSDN 账号的文章发现与普通正文请求。请求或正文验收失败后，可由独立 Camoufox 服务取得 HTML，再交给同一解析引擎。职责与接口见[获取层维护](acquisition.md)。Jina Reader、Trafilatura 和 Crawl4AI 均未引入。
 
 `services/rsshub/` 是独立 Node.js 服务，固定使用 `rsshub@1.0.0-master.23f13e4`。主采集器通过 HTTP 调用服务，不导入 RSSHub。服务仅监听 `127.0.0.1`，只开放注册表中已启用且已核验的 CSDN 账号路由，不开放任意 URL 代理。RSSHub 的全局网络钩子不会影响主采集器。
 

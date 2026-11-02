@@ -1,0 +1,2 @@
+camoufox==0.5.9
+playwright==1.60.0

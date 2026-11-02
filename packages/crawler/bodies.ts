@@ -10,12 +10,13 @@ import type { Registry } from "../source-registry/index.js";
 import { createBodyLoader } from "./body-fetchers.js";
 import { compareArticles } from "../shared/types.js";
 import { upgradeBodyPolicy } from "./body-policy.js";
+import type { AcquisitionTrace } from "../shared/acquisition.js";
 
 export type BodyLoader = (
   article: Article,
   source: Source,
   url: string,
-) => Promise<ParsedArticle>;
+) => Promise<ParsedArticle & { acquisition?: AcquisitionTrace }>;
 export async function collectBodies(
   articles: Article[],
   previous: ArticleBody[],
@@ -169,6 +170,7 @@ export async function collectBodies(
                 Date.now() + (parsed.status === "ready" ? 30 : 7) * 86400000,
               ).toISOString(),
               warnings: parsed.warnings,
+              acquisition: parsed.acquisition,
             });
             if (next.status === "ready") {
               result = next;

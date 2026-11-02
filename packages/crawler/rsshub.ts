@@ -3,6 +3,8 @@ import { z } from "zod";
 import type { Candidate, Source } from "../shared/types.js";
 import { CrawlError } from "./http.js";
 import { normalizeUrl } from "./deduplicate.js";
+import { csdnAccount } from "./platforms/csdn.js";
+export { csdnAccount } from "./platforms/csdn.js";
 
 const itemSchema = z.object({
   title: z.string(),
@@ -24,26 +26,6 @@ type FeedItem = z.infer<typeof itemSchema>;
 const text = (html: string) =>
   cheerio.load(html).text().replace(/\s+/g, " ").trim();
 
-export function csdnAccount(source: Source) {
-  const url = new URL(source.url);
-  const account = url.pathname.match(/^\/([A-Za-z0-9_]+)\/rss\/map$/)?.[1];
-  if (
-    source.platform !== "csdn-feed" ||
-    url.origin !== "https://rss.csdn.net" ||
-    url.username ||
-    url.password ||
-    url.search ||
-    url.hash ||
-    !account ||
-    source.authorAllowlist?.length !== 1 ||
-    source.authorAllowlist[0] !== account ||
-    source.linkPattern !== `^/${account}/article/details/[0-9]+/?$`
-  )
-    throw new CrawlError(
-      "RSSHub CSDN route requires a reviewed account and article path",
-    );
-  return account;
-}
 function reviewedItem(item: FeedItem, source: Source) {
   const account = csdnAccount(source);
   const url = new URL(item.link);

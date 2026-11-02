@@ -9,6 +9,7 @@ README 面向产品读者，优先介绍产品目标、核心功能、界面与�
 - [技术设计](docs/design.md)：数据流、实体、去重、页面行为和 URL 状态。
 - [阅读页维护](docs/article-reader.md)：解析引擎、正文补抓及重试。
 - [RSSHub 维护](docs/rsshub.md)：独立服务与增量正文请求。
+- [获取层维护](docs/acquisition.md)：文档接口、CSDN 浏览器回退与正式工作流。
 - [运行维护](docs/operations.md)：采集调度、数据分支、来源迁移、恢复与发布。
 - [贡献指南](CONTRIBUTING.md)：来源材料、适配器与测试要求。
 - [软文标记试运行](docs/advertorial-trial.md)：标记范围、人工复核与更正方法。

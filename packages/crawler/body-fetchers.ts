@@ -1,9 +1,14 @@
 import { XMLParser } from "fast-xml-parser";
-import { articleParser, type ParseInput } from "../article-parser/index.js";
+import {
+  articleParser,
+  type ParseInput,
+  type ParsedArticle,
+} from "../article-parser/index.js";
+import type { AcquisitionTrace } from "../shared/acquisition.js";
 import type { Article, Source } from "../shared/types.js";
 import { fetchReviewed } from "./http.js";
 import { normalizeUrl } from "./deduplicate.js";
-import { createRssHubClient } from "./rsshub.js";
+import { createCsdnBodyLoader } from "./platforms/csdn-body.js";
 import {
   QWEN_CURRENT,
   QWEN_LEGACY,
@@ -17,8 +22,12 @@ const string = (value: any): string =>
 
 // A loader is scoped to one collection run. Feed/API requests are shared across
 // articles; no response bytes or executable source pages are persisted.
-export function createBodyLoader() {
-  const rssHub = createRssHubClient();
+export function createBodyLoader(): (
+  article: Article,
+  source: Source,
+  url: string,
+) => Promise<ParsedArticle & { acquisition?: AcquisitionTrace }> {
+  const csdn = createCsdnBodyLoader();
   const feeds = new Map<string, Promise<Map<string, string>>>();
   const qwen = new Map<string, Promise<Map<string, string>>>();
   const archivedQwen = new Map<string, Promise<any[]>>();
@@ -58,15 +67,8 @@ export function createBodyLoader() {
     return feeds.get(source.id)!;
   }
   return async (article: Article, source: Source, url: string) => {
+    if (source.platform === "csdn-feed") return csdn(article, source, url);
     let input: ParseInput = { url, title: article.title, content: "" };
-    if (source.platform === "csdn-feed" && rssHub) {
-      input = {
-        ...input,
-        content: await rssHub.body(source, url),
-        fragment: true,
-        ruleId: "rsshub-csdn",
-      };
-    }
     if (source.platform === "qwen-research") {
       validateQwenSource(source);
       if (!qwen.has(source.id))

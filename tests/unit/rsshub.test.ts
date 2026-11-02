@@ -148,7 +148,8 @@ describe("RSSHub CSDN boundary", () => {
     expect(result.items).toHaveLength(1);
     const loader = createBodyLoader();
     const parsed = await loader({ title: item.title } as Article, source, url);
-    expect(parsed.ruleId).toBe("rsshub-csdn");
+    expect(parsed.ruleId).toBe("csdn");
+    expect(parsed.acquisition?.provider).toBe("rsshub-http");
     expect(parsed.status).toBe("ready");
     expect(parsed.html).not.toContain("<script>");
     expect(

@@ -15,6 +15,7 @@ import {
   type StructuredExtractor,
 } from "./structured.js";
 import { tokensToMarkdown } from "./tokens.js";
+import { normalizeCsdnCode } from "./csdn.js";
 
 export const ENGINE_VERSION = "radar-reader-2";
 export { parserRuleSchema } from "./types.js";
@@ -100,6 +101,8 @@ function safeUrl(value: string | undefined, base: string, image = false) {
 // the reader; only classes/attributes generated here are allowed through.
 export function normalizeArticleHtml(raw: string, url: string, title = "") {
   const $ = cheerio.load(raw, {}, false);
+  if (["blog.csdn.net", "devpress.csdn.net"].includes(new URL(url).hostname))
+    normalizeCsdnCode($);
   $("script[type^='math/tex']").each((_, element) => {
     const replacement = $("<span></span>").text($(element).text());
     $(element).replaceWith(replacement);
@@ -285,6 +288,7 @@ export class ArticleParser {
     );
   }
   revision(id: string) {
+    if (id === "rsshub-csdn") id = "csdn";
     return (
       this.rules.find((rule) => rule.id === id)?.version ||
       this.extractors.find((extractor) => extractor.id === id)?.version ||

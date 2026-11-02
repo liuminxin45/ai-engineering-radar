@@ -43,6 +43,33 @@ jobs:
       - name: Restore durable snapshot
         run: cp -a .radar/state/snapshot .radar/data
       - run: pnpm registry:check && pnpm data:migrate-domestic && pnpm data:check && pnpm test
+      - uses: actions/setup-python@v5
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect)
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: services/browser-fetch/requirements.txt
+      - uses: actions/cache@v4
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect)
+        with:
+          path: ~/.cache/camoufox
+          key: ${{ runner.os }}-${{ runner.arch }}-camoufox-0.5.9-browser-158.0.1-beta.41
+      - name: Prepare isolated browser acquisition
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python -m pip install -r services/browser-fetch/requirements.txt
+          python -m camoufox fetch official/158.0.1-beta.41
+          python -m playwright install-deps firefox
+          python -m unittest discover -s services/browser-fetch -p 'test_*.py'
+          mkdir -p work
+          python services/browser-fetch/server.py > work/browser-fetch-service.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:1201/healthz; then exit 0; fi
+            sleep 1
+          done
+          exit 1
       - name: Start isolated RSSHub for CSDN
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect)
         run: |
@@ -59,6 +86,7 @@ jobs:
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect)
         env:
           RSSHUB_URL: http://127.0.0.1:1200
+          BROWSER_FETCH_URL: http://127.0.0.1:1201
         run: pnpm ingest --daily
       - run: pnpm data:check && pnpm build && pnpm typecheck && pnpm check:public
       - run: pnpm exec playwright install --with-deps chromium

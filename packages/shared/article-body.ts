@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { acquisitionTraceSchema } from "./acquisition.ts";
 
 export const articleBodySchema = z
   .object({
@@ -34,6 +35,7 @@ export const articleBodySchema = z
     error: z.string().max(500).optional(),
     refreshPending: z.boolean().optional(),
     warnings: z.array(z.string()).default([]),
+    acquisition: acquisitionTraceSchema.optional(),
   })
   .superRefine((body, context) => {
     if (
