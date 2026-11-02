@@ -100,6 +100,56 @@
       "duplicateCandidates": []
     },
     {
+      "id": "0652f5098a5f01871324",
+      "publisherId": "alibaba-research-papers",
+      "companyId": "alibaba",
+      "contentType": "paper",
+      "companyIds": [
+        "alibaba"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "alibaba",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3239546",
+          "method": "paper-authors",
+          "excerpt": "Alibaba Cloud Computing"
+        }
+      ],
+      "title": "People logistics in smart cities",
+      "canonicalUrl": "https://doi.org/10.1145/3239546",
+      "author": "Wanli Min, Liang Yu, Lei Yu, Shubo He",
+      "language": "en",
+      "publishedAt": "2018-10-26T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:30.791Z",
+      "updatedAt": "2026-11-02T06:00:13.948Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "alibaba-papers-crossref",
+          "externalId": "10.1145/3239546",
+          "url": "https://doi.org/10.1145/3239546"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
       "id": "1123cb1540d9b364c9bd",
       "publisherId": "alibaba-research-papers",
       "companyId": "alibaba",
