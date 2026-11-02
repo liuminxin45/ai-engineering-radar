@@ -1,25 +1,22 @@
 import { expect, it } from "vitest";
-import { readFile } from "node:fs/promises";
-import {
-  loadRegistry,
-  validateAccountScope,
-} from "../../packages/source-registry/index.js";
-import { parseFeed, parseListing } from "../../packages/crawler/adapters.js";
+import { loadRegistry } from "../../packages/source-registry/index.js";
+import { parseFeed } from "../../packages/crawler/adapters.js";
 
-it("routes the reviewed Ant Ling directory through its adapter and rejects a different account", async () => {
-  const r = await loadRegistry();
-  const s = r.sources.find((s) => s.id === "ant-ling")!;
-  const html = await readFile("tests/fixtures/ant-ling-blog.html", "utf8");
-  expect(parseListing(html, s)[0].publishedAt).toBe("2026-10-14T16:00:00.000Z");
-  expect(() =>
-    validateAccountScope({ ...s, authorAllowlist: ["some-other-team"] }),
-  ).toThrow("official blog directory");
-  expect(() =>
-    validateAccountScope({
-      ...s,
-      url: "https://developer.ant-ling.com/zh-CN/docs",
-    }),
-  ).toThrow("official blog directory");
+it("collects only the reviewed AntData author and account article paths", async () => {
+  const source = (await loadRegistry()).sources.find(
+    (s) => s.id === "ant-data-csdn",
+  )!;
+  expect(source.entryUrl).toBe("https://devpress.csdn.net/user/DB_GPT");
+  const item = (author: string, account: string, id: string) =>
+    `<item><title>蚂蚁数据工程实践</title><link>https://blog.csdn.net/${account}/article/details/${id}</link><author>${author}</author><guid>${id}</guid><pubDate>Fri, 12 Jun 2026 07:03:51 GMT</pubDate></item>`;
+  const rss = `<rss version="2.0"><channel>${item("DB_GPT", "DB_GPT", "1")}${item("db_gpt", "DB_GPT", "2")}${item("DB_GPT", "other", "3")}</channel></rss>`;
+  expect(parseFeed(rss, source)).toMatchObject([
+    {
+      author: "DB_GPT",
+      externalId: "1",
+      publishedAt: "2026-06-12T07:03:51.000Z",
+    },
+  ]);
 });
 it("accepts the actual case-sensitive OceanBase RSS identity and excludes unrelated authors", async () => {
   const base = (await loadRegistry()).sources.find(

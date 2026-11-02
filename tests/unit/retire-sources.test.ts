@@ -144,13 +144,13 @@ describe("explicit source retirement", () => {
   });
 
   it("requires collected evidence before removing the other active team source", () => {
-    const source = registry.sources.find((s) => s.id === "ant-ling")!;
+    const source = registry.sources.find((s) => s.id === "ant-data-csdn")!;
     const articles: Article[] = [];
     upsert(
       articles,
       {
-        title: "Ant Ling blog",
-        url: "https://developer.ant-ling.com/zh-CN/blogs/example",
+        title: "AntData engineering article",
+        url: "https://blog.csdn.net/DB_GPT/article/details/123",
       },
       source,
       registry,
@@ -164,6 +164,15 @@ describe("explicit source retirement", () => {
         url: "https://blog.csdn.net/OceanBaseGFBK/article/details/1",
       },
     ];
+    const ling = structuredClone(old);
+    ling.id = "00000000000000000005";
+    ling.publisherId = "ant-ling";
+    ling.locations = [
+      {
+        sourceId: "ant-ling",
+        url: "https://developer.ant-ling.com/zh-CN/blogs/example",
+      },
+    ];
     const states: SourceState[] = [
       {
         sourceId: source.id,
@@ -174,11 +183,15 @@ describe("explicit source retirement", () => {
       },
     ];
     expect(() =>
-      retireReplacedSources([...articles, old], [], registry),
+      retireReplacedSources([...articles, old, ling], [], registry),
     ).toThrow("successful collected article");
-    const result = retireReplacedSources([...articles, old], states, registry);
+    const result = retireReplacedSources(
+      [...articles, old, ling],
+      states,
+      registry,
+    );
     expect(result.articles.map((a) => a.id)).toEqual([articles[0].id]);
-    expect(result.removedArticles).toBe(1);
+    expect(result.removedArticles).toBe(2);
   });
   it("retires Xiaomi's old blog and reference states without changing MiMo articles or IDs", () => {
     const source = registry.sources.find((s) => s.id === "xiaomi-tech-site")!;

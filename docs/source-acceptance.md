@@ -1,13 +1,13 @@
 # 来源验收表
 
-快照时间：2026-11-02T04:31:13.687Z
+快照时间：2026-11-02T04:43:55.011Z
 
 | 入口 | 身份 | 启用 | 实测状态 | 条目数 | 最新文章 | 最近成功 | 说明 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | [美团 · meituan](https://tech.meituan.com/) | verified | 是 | success | 10 | 2026-10-28T16:00:00.000Z | 2026-11-02T02:28:00.014Z | 公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。 |
 | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles) | verified | 是 | success | 20 | 2026-10-29T02:45:34.000Z | 2026-11-02T03:14:35.381Z | 用户指定得物技术账号，稳定 UID 9927536。公开主页列出得物App及公众号得物技术，持续发布得物团队文章；此依据不代表平台职业认证。只读取该用户文章目录，逐篇核对作者 UID，仅保存索引元数据。 |
 | [vivo互联网技术 · CSDN](https://blog.csdn.net/vivo_tech) | verified | 是 | success | 20 | 2026-10-29T03:33:55.000Z | 2026-11-02T02:28:10.877Z | 用户指定账号。公开主页显示企业官方账号认证；稳定用户名 vivo_tech，2019 年以来持续发布 vivo 工程文章。公开账号 RSS 已通过 robots 与真实文章解析验证。 |
-| [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud) | verified | 是 | success | 20 | 2026-10-30T08:46:50.000Z | 2026-11-02T02:28:11.212Z | 公开博客标注华为云官方博客；华为云开发者联盟企业微博列出 CSDN 渠道，文章长期关联华为云产品实践。限定稳定用户名 devcloud，公开账号 RSS 解析成功。 |
+| [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud) | verified | 是 | success | 20 | 2026-10-30T08:46:50.000Z | 2026-11-02T02:28:11.212Z | 维护者指定的华为云 CSDN 账号。公开主页标注华为云官方博客，并链接华为云 AI 开发者空间；华为云开发者联盟企业微博列出 CSDN 渠道。去掉 utm_source 追踪参数，限定稳定作者 devcloud 与同账号文章路径，通过公开 RSS 采集元数据。 |
 | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech) | verified | 是 | success | 20 | 2026-10-15T08:29:11.000Z | 2026-11-02T02:28:11.353Z | 人工核验：快手技术思否资料明确快手官方技术号，CSDN 与该号持续发布相同快手团队实践和活动。限定稳定用户名 kuaishoutech；HTML 请求返回 521，公开账号 RSS 允许访问并解析成功。 |
 | [携程技术 · CSDN](https://blog.csdn.net/ctrip_tech) | suspended | 否 | suspended | 20 | 2026-05-13T02:08:50.000Z | 2026-11-01T10:02:44.647Z | 已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-05-13，超过一个月未更新，不能承担当前更新追踪。 原核验说明：账号公开简介明确携程技术官方帐号；与掘金账号的携程公司归属、2016 年以来文章历史相互印证。限定稳定用户名 ctrip_tech；HTML 请求返回 521，公开 RSS 解析成功。 |
 | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw) | verified | 是 | success | 20 | 2026-10-28T10:17:09.000Z | 2026-11-02T02:28:12.591Z | 人工核验：公开账号资料列出目前就职网易、网易数智旗下产品介绍；长期文章自署网易云社区，与数帆官方产品和博客园同名团队历史相互印证。限定用户名 wangyiyungw，公开 RSS 解析成功。 |
@@ -17,7 +17,7 @@
 | [小米 MiMo · 官方博客](https://mimo.xiaomi.com/) | verified | 是 | success | 15 | 2026-09-26T16:00:00.000Z | 2026-11-02T02:28:18.457Z | 用户指定小米自有 MiMo 官网。首页署名 Xiaomi MiMo Team，页脚版权归 Xiaomi。读取中文首页博客列表，从官网同域静态资源解析文章链接，逐篇补充原文日期，必要时读取同域文章 iframe；只保存索引元数据。月份不推算为具体日期。2026-11-02 核验：最新明确发布日期为 2026-09-27，不代表近月更新。 |
 | [阿里云云原生 · 账号主页](https://developer.aliyun.com/profile/pawmkwdq37c7s) | verified | 是 | blocked | 0 | 2026-10-28T16:00:00.000Z | — | Aliyun profile requires login or access verification |
 | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673) | verified | 是 | success | 20 | 2026-06-24T17:28:03.000Z | 2026-11-02T03:56:07.442Z | 用户指定字节跳动技术团队账号，稳定用户 ID 2772312065061673。公开账号 SSR 与逐篇 content.user_id、user.user_id 均匹配，仅采集该账号发布的文章元数据。普通公开请求实采 20 篇，最新北京时间 2026-06-25；按用户指定继续追踪，不代表近月活跃。原字节跳动开源账号已移除。 |
-| [蚂蚁百灵 · 官方博客](https://developer.ant-ling.com/zh-CN/blogs) | verified | 是 | not-modified | 0 | 2026-10-14T16:00:00.000Z | 2026-11-02T02:28:21.794Z | 蚂蚁百灵自营开发者博客，页面页脚明确蚂蚁智能（杭州）科技有限公司及备案信息，主站说明为Ant Group foundation model platform。普通公开HTTP与robots校验通过，目录及详情原始发布日期一致，最新2026-10-15；仅采集官网博客卡片，不追踪页面中的微信外链。 |
+| [蚂蚁数据 AntData · CSDN](https://devpress.csdn.net/user/DB_GPT) | verified | 是 | success | 20 | 2026-06-12T07:03:51.000Z | 2026-11-02T04:10:25.973Z | 维护者指定的蚂蚁数据团队账号。DevPress 显示蚂蚁数据 AntData、稳定用户名 DB_GPT，CSDN 同名账号为蚂蚁数据智能技术，持续发布蚂蚁数据团队实践、DB-GPT、VSAG 与 ASystem 工程文章。依据账号连续性、团队自述和维护者指定核验，不表述为平台企业认证。去掉 utm_source 参数，通过同账号公开 RSS 采集，仅接受作者 DB_GPT 与同账号文章路径。 |
 | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283) | verified | 是 | success | 20 | 2026-10-29T14:25:14.000Z | 2026-11-02T02:28:23.590Z | 经维护者按现有交叉证据人工确认，为百度智能云技术团队发布渠道。账号持续发表团队原创工程文章，与同品牌掘金及百度自有社区长期近同步；RLinf、KVCache 等多篇 CSDN 原始发文先于百度社区数分钟。依据上述团队内容、账号连续性和自有社区对应关系核验，不以企业认证徽标为前提。限定稳定用户名2301_82040283及同账号文章路径，公开RSS实测可采集。 |
 | [千问 · Research](https://qwen.ai/research) | verified | 是 | success | 92 | 2026-09-20T12:00:00.000Z | 2026-11-02T03:41:27.647Z | 用户指定的 Qwen 官方研究目录，官网署名 Qwen 并标明 Powered by Alibaba Cloud。按用户要求作为千问独立栏目。读取研究页面使用的同域公开 JSON 接口；限定 QwenTeam、研究目录历史 ID 与新发布类型 qwen_ai。只保存标题、原始日期、作者与原文链接，不保存正文或接口内部字段。 |
 | [美团 · 出版方论文元数据](https://search.crossref.org/?q=Meituan) | verified | 是 | success | 30 | 2026-09-28T00:00:00.000Z | 2026-11-02T03:23:51.374Z | 正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。 |

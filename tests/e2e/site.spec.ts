@@ -287,7 +287,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
     "aliyun-cloud-native",
     "qwen-research",
     "bytedance-tech-volcengine",
-    "ant-ling",
+    "ant-data-csdn",
     "baidu-cloud-csdn-candidate",
   ]) {
     const source = sources.find((s: { id: string }) => s.id === id);

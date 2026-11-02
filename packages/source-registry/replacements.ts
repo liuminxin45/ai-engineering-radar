@@ -3,6 +3,11 @@ import type { Registry } from "./index.js";
 // Explicit retirements: do not infer deletion from publication age.
 export const sourceReplacements = [
   {
+    sourceId: "ant-ling",
+    companyId: "ant",
+    replacementIds: ["ant-data-csdn"],
+  },
+  {
     sourceId: "dewu-official",
     companyId: "dewu",
     replacementIds: ["dewu-tencent"],
@@ -40,7 +45,7 @@ export const sourceReplacements = [
   {
     sourceId: "ant-segmentfault",
     companyId: "ant",
-    replacementIds: ["ant-ling"],
+    replacementIds: ["ant-data-csdn"],
   },
   {
     sourceId: "baidu-csdn",
@@ -112,7 +117,7 @@ export const sourceReplacements = [
   {
     sourceId: "ant",
     companyId: "ant",
-    replacementIds: ["ant-ling"],
+    replacementIds: ["ant-data-csdn"],
     referenceOnly: true,
   },
   {
@@ -142,7 +147,7 @@ export const sourceReplacements = [
   {
     sourceId: "ant-csdn",
     companyId: "ant",
-    replacementIds: ["ant-ling"],
+    replacementIds: ["ant-data-csdn"],
     referenceOnly: true,
   },
   {
@@ -170,7 +175,7 @@ export const sourceReplacements = [
   {
     sourceId: "ant-oceanbase-csdn",
     companyId: "ant",
-    replacementIds: ["ant-ling"],
+    replacementIds: ["ant-data-csdn"],
   },
   {
     sourceId: "kuaishou-infoq",

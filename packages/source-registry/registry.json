@@ -257,6 +257,11 @@
       "id": "bilibili-research-papers",
       "companyId": "bilibili",
       "name": "B站 研究论文署名团队"
+    },
+    {
+      "id": "ant-data",
+      "companyId": "ant",
+      "name": "蚂蚁数据 AntData"
     }
   ],
   "sources": [
@@ -349,11 +354,11 @@
         "status": "verified",
         "evidenceUrls": [
           "https://blog.csdn.net/devcloud",
-          "https://weibo.com/esdk",
-          "https://blog.csdn.net/devcloud/category_8705547.html"
+          "https://devstation.developer.huaweicloud.com/",
+          "https://weibo.com/esdk"
         ],
-        "note": "公开博客标注华为云官方博客；华为云开发者联盟企业微博列出 CSDN 渠道，文章长期关联华为云产品实践。限定稳定用户名 devcloud，公开账号 RSS 解析成功。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
+        "note": "维护者指定的华为云 CSDN 账号。公开主页标注华为云官方博客，并链接华为云 AI 开发者空间；华为云开发者联盟企业微博列出 CSDN 渠道。去掉 utm_source 追踪参数，限定稳定作者 devcloud 与同账号文章路径，通过公开 RSS 采集元数据。",
+        "reviewedAt": "2026-11-02T04:06:02.288Z"
       },
       "crawl": {
         "enabled": true,
@@ -615,32 +620,32 @@
       "linkPattern": "^/articles/[0-9]+/?$"
     },
     {
-      "id": "ant-ling",
-      "publisherId": "ant-ling",
-      "name": "蚂蚁百灵 · 官方博客",
-      "entryUrl": "https://developer.ant-ling.com/zh-CN/blogs",
-      "url": "https://developer.ant-ling.com/zh-CN/blogs",
+      "id": "ant-data-csdn",
+      "publisherId": "ant-data",
+      "name": "蚂蚁数据 AntData · CSDN",
+      "entryUrl": "https://devpress.csdn.net/user/DB_GPT",
+      "url": "https://rss.csdn.net/DB_GPT/rss/map",
       "priority": "A",
-      "adapter": "html",
-      "platform": "ant-ling-blog",
-      "authorAllowlist": ["ant-ling"],
-      "linkPattern": "^/zh-CN/blogs/[a-z0-9][a-z0-9.-]*/?$",
+      "adapter": "feed",
+      "platform": "csdn-feed",
       "verification": {
         "status": "verified",
         "evidenceUrls": [
-          "https://developer.ant-ling.com/zh-CN/blogs",
-          "https://developer.ant-ling.com/zh-CN/blogs/ling-3.1-flash-open-source",
-          "https://www.ant-ling.com/"
+          "https://devpress.csdn.net/user/DB_GPT",
+          "https://blog.csdn.net/DB_GPT"
         ],
-        "note": "蚂蚁百灵自营开发者博客，页面页脚明确蚂蚁智能（杭州）科技有限公司及备案信息，主站说明为Ant Group foundation model platform。普通公开HTTP与robots校验通过，目录及详情原始发布日期一致，最新2026-10-15；仅采集官网博客卡片，不追踪页面中的微信外链。",
-        "reviewedAt": "2026-11-02T00:52:17.187Z"
+        "note": "维护者指定的蚂蚁数据团队账号。DevPress 显示蚂蚁数据 AntData、稳定用户名 DB_GPT，CSDN 同名账号为蚂蚁数据智能技术，持续发布蚂蚁数据团队实践、DB-GPT、VSAG 与 ASystem 工程文章。依据账号连续性、团队自述和维护者指定核验，不表述为平台企业认证。去掉 utm_source 参数，通过同账号公开 RSS 采集，仅接受作者 DB_GPT 与同账号文章路径。",
+        "reviewedAt": "2026-11-02T04:10:24.587Z"
       },
       "crawl": {
         "enabled": true,
         "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
+        "maxItems": 20,
+        "backfillLimit": 50
+      },
+      "linkPattern": "^/DB_GPT/article/details/[0-9]+/?$",
+      "authorAllowlist": ["DB_GPT"],
+      "linkHosts": ["blog.csdn.net"]
     },
     {
       "id": "baidu-cloud-csdn-candidate",
