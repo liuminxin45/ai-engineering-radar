@@ -11,6 +11,7 @@ import { site } from "../lib";
 import { BoardActions } from "./board-actions";
 import { Button, IconButton } from "./action-button";
 import { BrandMark } from "./brand-mark";
+import { useBoardWheel } from "./use-board-wheel";
 import {
   BOARD_BATCH_SIZE,
   boardArticles,
@@ -55,6 +56,7 @@ export function ArticleBoard() {
   const pagesRef = useRef(pages);
   const [searching, setSearching] = useState(false);
   const viewport = useRef<HTMLElement>(null);
+  const companyNav = useRef<HTMLElement>(null);
   const panels = useRef<Record<string, HTMLElement | null>>({});
   const lists = useRef<Record<string, HTMLDivElement | null>>({});
   const scrollTops = useRef<Record<string, number>>({});
@@ -62,6 +64,7 @@ export function ArticleBoard() {
   const navigation = useRef(false);
   const navigationTarget = useRef(0);
   const scrollFrame = useRef<number | null>(null);
+  useBoardWheel(viewport, companyNav, navigation);
   const active = query.company || "latest";
   const contentName = query.type === "paper" ? "论文" : "文章";
   const activeIndex = ids.indexOf(active);
@@ -352,7 +355,11 @@ export function ArticleBoard() {
           </span>
         </div>
       </header>
-      <nav className={styles.companyNav} aria-label="定位公司面板">
+      <nav
+        ref={companyNav}
+        className={styles.companyNav}
+        aria-label="定位公司面板"
+      >
         {ids.map((id) => (
           <Button
             id={`company-${id}`}
@@ -380,9 +387,6 @@ export function ArticleBoard() {
           ref={viewport}
           tabIndex={0}
           aria-label={`横向浏览公司${contentName}面板`}
-          onWheel={() => {
-            navigation.current = false;
-          }}
           onTouchStart={() => {
             navigation.current = false;
           }}
@@ -434,6 +438,7 @@ export function ArticleBoard() {
                     lists.current[id] = el;
                   }}
                   className={styles.panelList}
+                  data-board-list
                   role="region"
                   aria-label={`${name}${contentName}列表`}
                   tabIndex={0}

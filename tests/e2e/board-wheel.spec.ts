@@ -1,0 +1,221 @@
+import { test, expect, type Page } from "@playwright/test";
+
+const board = (page: Page) =>
+  page.getByRole("main", { name: /^横向浏览公司(?:文章|论文)面板$/ });
+const nav = (page: Page) =>
+  page.getByRole("navigation", { name: "定位公司面板" });
+const latest = (page: Page) =>
+  page.getByRole("region", { name: /^最新(?:文章|论文)列表$/ });
+async function left(page: Page) {
+  return board(page).evaluate((e) => e.scrollLeft);
+}
+async function expectLeft(page: Page, value: number) {
+  await expect
+    .poll(async () => Math.abs((await left(page)) - value))
+    .toBeLessThanOrEqual(1);
+}
+async function pointAtHeader(page: Page) {
+  const viewport = (await board(page).boundingBox())!;
+  const head = (await page.locator("#panel-latest h2").boundingBox())!;
+  await page.mouse.move(
+    viewport.x + viewport.width / 2,
+    head.y + head.height / 2,
+  );
+}
+async function wheelEvent(page: Page, patch: Record<string, number | boolean>) {
+  return nav(page).evaluate((e, patch) => {
+    const event = new WheelEvent("wheel", {
+      bubbles: true,
+      cancelable: true,
+      deltaY: 100,
+      ...patch,
+    });
+    e.dispatchEvent(event);
+    return event.defaultPrevented;
+  }, patch);
+}
+
+test("navigation, titles and gutters wheel horizontally without double movement or history entries", async ({
+  page,
+}) => {
+  const errors: string[] = [];
+  page.on("console", (m) => {
+    if (m.type() === "error" && /passive|preventDefault/i.test(m.text()))
+      errors.push(m.text());
+  });
+  await page.goto("./");
+  await expect(latest(page).locator("article").first()).toBeVisible();
+  const history = await page.evaluate(() => window.history.length);
+  const box = (await nav(page).boundingBox())!;
+  await page.mouse.move(box.x + 90, box.y + box.height / 2);
+  await page.mouse.wheel(0, 100);
+  await expectLeft(page, 100);
+  // A burst before the next animation frame must retain all three increments.
+  await nav(page).evaluate((e) => {
+    for (const deltaY of [100, 100, -50])
+      e.dispatchEvent(
+        new WheelEvent("wheel", { deltaY, bubbles: true, cancelable: true }),
+      );
+  });
+  await expectLeft(page, 250);
+  await pointAtHeader(page);
+  await page.mouse.wheel(80, 0);
+  await expectLeft(page, 330);
+  await page.mouse.wheel(60, 20);
+  await expectLeft(page, 390);
+  await expect(page).toHaveURL(/company=tencent/);
+  await expect(page.locator("#company-tencent")).toHaveAttribute(
+    "aria-current",
+    "location",
+  );
+  const gap = await board(page).evaluate((e) => {
+    const r = e.getBoundingClientRect(),
+      y = r.top + r.height * 0.5;
+    for (let x = r.left + 1; x < r.right - 1; x += 2)
+      if (document.elementFromPoint(x, y) === e) return { x, y };
+    throw new Error("No visible board gutter");
+  });
+  await page.mouse.move(gap.x, gap.y);
+  await page.mouse.wheel(0, 70);
+  await expectLeft(page, 460);
+  expect(await latest(page).evaluate((e) => e.scrollTop)).toBe(0);
+  expect(await page.evaluate(() => window.history.length)).toBe(history);
+  // The wheel stop remains continuous instead of snapping back to a column.
+  await expect
+    .poll(() => board(page).evaluate((e) => getComputedStyle(e).scrollSnapType))
+    .toBe("none");
+  await page.getByRole("button", { name: "最新", exact: true }).click();
+  await expectLeft(page, 0);
+  await page.getByRole("button", { name: "腾讯", exact: true }).click();
+  await expect(page).toHaveURL(/company=tencent/);
+  await page.reload();
+  await expect(page.locator("#company-tencent")).toHaveAttribute(
+    "aria-current",
+    "location",
+  );
+  expect(errors).toEqual([]);
+});
+
+test("article scrolling stays vertical even at the end and horizontal trackpad input stays native", async ({
+  page,
+  isMobile,
+}) => {
+  await page.goto("./?page=1000");
+  const list = latest(page);
+  await expect(list.locator("article").first()).toBeVisible();
+  const box = (await list.boundingBox())!;
+  await page.mouse.move(box.x + 100, box.y + 100);
+  await page.mouse.wheel(0, 260);
+  await expect
+    .poll(() => list.evaluate((e) => e.scrollTop))
+    .toBeGreaterThan(100);
+  await expectLeft(page, 0);
+  await list.evaluate((e) => {
+    e.scrollTop = e.scrollHeight;
+  });
+  await expect
+    .poll(() =>
+      list.evaluate((e) =>
+        Math.abs(e.scrollHeight - e.clientHeight - e.scrollTop),
+      ),
+    )
+    .toBeLessThanOrEqual(1);
+  await page.mouse.wheel(0, 200);
+  await expectLeft(page, 0);
+  // A body event is not consumed, including when its list cannot scroll further.
+  expect(
+    await list.evaluate((e) => {
+      const w = new WheelEvent("wheel", {
+        deltaY: 80,
+        bubbles: true,
+        cancelable: true,
+      });
+      e.dispatchEvent(w);
+      return w.defaultPrevented;
+    }),
+  ).toBe(false);
+  if (!isMobile) {
+    await page.mouse.wheel(120, 0);
+    await expect.poll(() => left(page)).toBeGreaterThan(90);
+  } else {
+    expect(
+      await board(page).evaluate((e) => getComputedStyle(e).scrollSnapType),
+    ).toBe("x mandatory");
+  }
+});
+
+test("edges, zoom modifiers and touch mode are preserved", async ({
+  page,
+  isMobile,
+}) => {
+  await page.goto("./");
+  await expect(latest(page).locator("article").first()).toBeVisible();
+  expect(await wheelEvent(page, { deltaY: -100 })).toBe(false);
+  await expectLeft(page, 0);
+  const maximum = await board(page).evaluate((e) => {
+    const x = e.scrollWidth - e.clientWidth;
+    e.scrollTo({ left: x, behavior: "instant" });
+    return x;
+  });
+  await expectLeft(page, maximum);
+  expect(await wheelEvent(page, { deltaY: 100 })).toBe(false);
+  await expectLeft(page, maximum);
+  expect(await wheelEvent(page, { deltaY: -100 })).toBe(true);
+  await expectLeft(page, maximum - 100);
+  for (const modifier of ["ctrlKey", "metaKey"]) {
+    expect(await wheelEvent(page, { [modifier]: true })).toBe(false);
+    await expectLeft(page, maximum - 100);
+  }
+  expect(
+    await page.locator("header").evaluate((e) => {
+      const w = new WheelEvent("wheel", {
+        deltaY: 100,
+        bubbles: true,
+        cancelable: true,
+      });
+      e.dispatchEvent(w);
+      return w.defaultPrevented;
+    }),
+  ).toBe(false);
+  await expectLeft(page, maximum - 100);
+  if (isMobile) {
+    expect(
+      await board(page).evaluate((e) => getComputedStyle(e).scrollSnapType),
+    ).toBe("none");
+    await board(page).dispatchEvent("touchstart");
+    expect(
+      await board(page).evaluate((e) => getComputedStyle(e).scrollSnapType),
+    ).toBe("x mandatory");
+  }
+});
+
+test("paper tab keeps horizontal wheel handling and native list scrolling", async ({
+  page,
+}) => {
+  await page.goto("./");
+  await page.getByRole("tab", { name: "论文", exact: true }).click();
+  await expect(page.locator("#panel-latest h2")).toHaveText("最新论文");
+  const box = (await nav(page).boundingBox())!;
+  await page.mouse.move(box.x + 90, box.y + box.height / 2);
+  await page.mouse.wheel(0, 100);
+  await expectLeft(page, 100);
+  await pointAtHeader(page);
+  await page.mouse.wheel(0, 260);
+  await expectLeft(page, 360);
+  await expect(page).toHaveURL(/company=tencent/);
+  await expect(page).toHaveURL(/type=paper/);
+  await page.getByRole("button", { name: "最新", exact: true }).click();
+  await expectLeft(page, 0);
+  const list = latest(page);
+  const bounds = (await list.boundingBox())!;
+  await page.mouse.move(bounds.x + 100, bounds.y + 100);
+  await page.mouse.wheel(0, 240);
+  await expect
+    .poll(() => list.evaluate((e) => e.scrollTop))
+    .toBeGreaterThan(100);
+  await expectLeft(page, 0);
+  await page.reload();
+  await expect(
+    page.getByRole("tab", { name: "论文", exact: true }),
+  ).toHaveAttribute("aria-selected", "true");
+});
