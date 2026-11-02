@@ -160,9 +160,9 @@
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
-  padding: 17px 16px 15px;
+  padding: 12px 16px;
   border-bottom: 1px solid var(--hair);
-  min-height: 78px;
+  min-height: 48px;
   gap: 12px;
 }
 .panelHead h2 {
@@ -171,12 +171,6 @@
   margin: 0;
   font-weight: 600;
   letter-spacing: normal;
-}
-.panelHead p {
-  font-size: 12px;
-  margin: 5px 0 0;
-  line-height: 1.4;
-  color: var(--muted);
 }
 .latest .panelHead h2 {
   width: fit-content;
@@ -333,13 +327,6 @@
   .panel {
     width: calc(100vw - 48px);
     flex-basis: calc(100vw - 48px);
-  }
-  .panelHead {
-    min-height: 75px;
-    padding: 16px;
-  }
-  .panelHead h2 {
-    font-size: 16px;
   }
   .panelList {
     padding: 0 17px 16px;

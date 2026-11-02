@@ -42,11 +42,6 @@ const calendar = new Intl.DateTimeFormat("zh-CN", {
   timeZone: "Asia/Shanghai",
 });
 const day = (value: string) => calendar.format(new Date(value));
-const activeCompanies = new Set(
-  site.sources
-    .filter((s) => s.crawl.enabled)
-    .map((s) => site.publishers.find((p) => p.id === s.publisherId)?.companyId),
-);
 
 export function ArticleBoard() {
   const [query, setQuery] = useState<BoardQuery>(initialBoardQuery);
@@ -374,9 +369,6 @@ export function ArticleBoard() {
               : articles.filter((a) => a.companyId === id);
           const shown = items.slice(0, (pages[id] ?? 1) * BOARD_BATCH_SIZE),
             name = label(id);
-          const latest = site.articles.find(
-            (a) => id === "latest" || a.companyId === id,
-          );
           return (
             <section
               id={`panel-${id}`}
@@ -388,16 +380,7 @@ export function ArticleBoard() {
               aria-label={`${name}文章面板`}
             >
               <div className={styles.panelHead}>
-                <div>
-                  <h2>{id === "latest" ? "最新文章" : name}</h2>
-                  <p>
-                    {id === "latest"
-                      ? "所有公司的最新发布"
-                      : activeCompanies.has(id)
-                        ? `最新 ${latest ? day(time(latest)) : "—"}`
-                        : "历史收录 · 暂停新增"}
-                  </p>
-                </div>
+                <h2>{id === "latest" ? "最新文章" : name}</h2>
               </div>
               <div
                 ref={(el) => {
