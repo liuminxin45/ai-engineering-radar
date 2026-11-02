@@ -92,7 +92,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen-robotworld",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "134c949b28e310819b532eb5ee29eeae0f23bc8954fa64498d7db57c4a2e9cda",
     "fetchedAt": "2026-11-02T06:25:45.369Z",
     "checkedAt": "2026-11-02T06:25:45.369Z",

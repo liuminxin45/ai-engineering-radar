@@ -57,7 +57,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen-scope",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "f563a58f3277c53af5067df1f197bb7089ff8d52b2e0f9b0852e7e2198051a90",
     "fetchedAt": "2026-11-02T06:26:02.004Z",
     "checkedAt": "2026-11-02T06:26:02.004Z",

@@ -67,7 +67,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=sapo",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "7953c998d85fb95a0f091436af8147a68ad8b94ad1c5758e3b1221646f7466d1",
     "fetchedAt": "2026-11-02T06:27:10.059Z",
     "checkedAt": "2026-11-02T06:27:10.059Z",

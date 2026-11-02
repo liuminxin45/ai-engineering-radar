@@ -122,7 +122,7 @@
     "sourceUrl": "https://tech.meituan.com/2026/09/22/Meituan-Foundation-Model-for-Recommendation.html",
     "ruleId": "publisher-feed",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "5da95cc0e961e1038595d3ad4075f68cb757895d78d4d74638d433ea18185118",
     "fetchedAt": "2026-11-02T06:24:16.080Z",
     "checkedAt": "2026-11-02T06:24:16.080Z",

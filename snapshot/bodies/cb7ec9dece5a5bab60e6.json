@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "cb7ec9dece5a5bab60e6",
-    "status": "partial",
+    "status": "ready",
     "html": "<p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_e9915bf10f2d45d7ae59cd34a6d06301.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
     "headings": [],
     "textLength": 0,
@@ -11,13 +11,11 @@
     "sourceUrl": "https://developer.aliyun.com/article/1755286",
     "ruleId": "aliyun-lake",
     "ruleVersion": "2",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "0d20d11e722d118d010ad121ae3ecc06469d5bbb330baf637954da2dcf942943",
     "fetchedAt": "2026-11-02T07:13:48.621Z",
     "checkedAt": "2026-11-02T09:07:30.089Z",
     "nextRetryAt": "2026-11-09T09:07:30.089Z",
-    "warnings": [
-      "取得的正文较短，可能不完整。"
-    ]
+    "warnings": []
   }
 }

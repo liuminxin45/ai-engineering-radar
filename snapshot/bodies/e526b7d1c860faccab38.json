@@ -42,7 +42,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/qwen2-audio/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "4660002f9a28b5290d846f51dc2875d9b20d18a9d0090e8919f2917d9045df9f",
     "fetchedAt": "2026-11-02T06:38:35.982Z",
     "checkedAt": "2026-11-02T06:38:35.982Z",

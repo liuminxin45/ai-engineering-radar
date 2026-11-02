@@ -32,7 +32,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen-image-layered",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "65896c4dfc6fab2b798c2a48750b534679aeedc5d45ed47c432210a2c2e9b9f1",
     "fetchedAt": "2026-11-02T06:26:49.122Z",
     "checkedAt": "2026-11-02T06:26:49.122Z",

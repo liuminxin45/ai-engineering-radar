@@ -42,7 +42,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/ofasys/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "cf7b58ac8daf5d1499863c54d14122522cd826abd1e2b7b8379f3738313eddf1",
     "fetchedAt": "2026-11-02T06:44:30.819Z",
     "checkedAt": "2026-11-02T06:44:30.819Z",

@@ -9,7 +9,7 @@
     "readingMinutes": 0,
     "sourceId": "bilibili-csdn",
     "sourceUrl": "https://blog.csdn.net/bilibili_TC/article/details/160121283",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "checkedAt": "2026-11-02T09:07:56.643Z",
     "nextRetryAt": "2026-11-09T09:07:56.643Z",
     "error": "RSSHub HTTP 502",

@@ -102,7 +102,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3.8",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "13063759bfac94cb769e6296e30fffc7e68e8fed00fdfa00639c6abd2918cd7c",
     "fetchedAt": "2026-11-02T06:25:33.712Z",
     "checkedAt": "2026-11-02T06:25:33.712Z",

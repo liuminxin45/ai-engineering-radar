@@ -27,7 +27,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen-image-2.0",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "93a237f3d9fd39c99195a75da3263e7b761c68f9fd6cdaec6a0cf32f10841f43",
     "fetchedAt": "2026-11-02T06:26:33.907Z",
     "checkedAt": "2026-11-02T06:26:33.907Z",

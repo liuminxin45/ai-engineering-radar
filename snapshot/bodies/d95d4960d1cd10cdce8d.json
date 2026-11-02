@@ -9,7 +9,7 @@
     "readingMinutes": 0,
     "sourceId": "vivo-csdn",
     "sourceUrl": "https://blog.csdn.net/vivo_tech/article/details/163720779",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "checkedAt": "2026-11-02T09:07:50.951Z",
     "nextRetryAt": "2026-11-09T09:07:50.951Z",
     "error": "RSSHub HTTP 502",

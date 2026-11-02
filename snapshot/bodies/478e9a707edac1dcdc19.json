@@ -37,7 +37,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3-max-thinking",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "a27f650fb0994f1d4624edc144943184bfe86cbcb3c180976f63ef570dc84c65",
     "fetchedAt": "2026-11-02T06:26:37.528Z",
     "checkedAt": "2026-11-02T06:26:37.528Z",

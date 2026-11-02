@@ -42,7 +42,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/qwen2-math/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "f20ffd188973957322fa5622638d8553c076ef5fdb2459c6ddf57f274268305e",
     "fetchedAt": "2026-11-02T06:38:38.655Z",
     "checkedAt": "2026-11-02T06:38:38.655Z",

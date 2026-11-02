@@ -152,7 +152,7 @@
     "sourceUrl": "https://tech.meituan.com/2026/10/15/Small-Language-Model-in-meituan.html",
     "ruleId": "publisher-feed",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "358727ca16c0145891d6ba7cffa0685359ddc1e1851a04a3c1238389d06931df",
     "fetchedAt": "2026-11-02T06:23:52.740Z",
     "checkedAt": "2026-11-02T06:23:52.740Z",

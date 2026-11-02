@@ -47,7 +47,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/qwen2.5-math-prm/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "39efdcdd5a0030887fb121ddab29a21759964ac562c5a7b04a0c529063ce453d",
     "fetchedAt": "2026-11-02T06:38:27.420Z",
     "checkedAt": "2026-11-02T06:38:27.420Z",

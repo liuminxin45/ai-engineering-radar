@@ -47,7 +47,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen-robotnav",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "5e14cb0ee25ee719a4fb9b12fb40f11865f752063579a962d99bbb130499d6d1",
     "fetchedAt": "2026-11-02T06:25:45.405Z",
     "checkedAt": "2026-11-02T06:25:45.405Z",

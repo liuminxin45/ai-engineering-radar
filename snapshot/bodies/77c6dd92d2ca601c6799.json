@@ -142,7 +142,7 @@
     "sourceUrl": "https://tech.meituan.com/2026/09/10/Agent-Evaluation-White-Paper-01.html",
     "ruleId": "publisher-feed",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "85f7bfc44f2fea0ffa7183bb19779e314bd85fcace44931d7d4bfd41e02a9a0e",
     "fetchedAt": "2026-11-02T06:24:33.728Z",
     "checkedAt": "2026-11-02T06:24:33.728Z",

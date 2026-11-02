@@ -6,9 +6,9 @@
     "lastSuccessAt": "2026-11-02T09:03:47.206Z",
     "nextRunAt": "2026-11-03T09:03:47.206Z",
     "consecutiveFailures": 0,
+    "etag": "\"1ab56b08b0cfa97d83045aec86a6389e9a7b51bdf2a92b5e7b3044a1df2b9ad1\"",
     "status": "success",
     "discovered": 20,
-    "httpStatus": 200,
-    "etag": "\"1ab56b08b0cfa97d83045aec86a6389e9a7b51bdf2a92b5e7b3044a1df2b9ad1\""
+    "httpStatus": 200
   }
 }

@@ -72,7 +72,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=flashqla",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "760ad769d81591be3d4ae39c56c4aaa8acf105e74b7c83d35715a31013e95202",
     "fetchedAt": "2026-11-02T06:26:03.314Z",
     "checkedAt": "2026-11-02T06:26:03.314Z",

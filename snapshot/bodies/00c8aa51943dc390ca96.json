@@ -42,7 +42,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen-robotsuite",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "25652659264eb00fe3c303a7fb18655912d339980a170b0080aba40d364e69d8",
     "fetchedAt": "2026-11-02T06:25:45.133Z",
     "checkedAt": "2026-11-02T06:25:45.133Z",

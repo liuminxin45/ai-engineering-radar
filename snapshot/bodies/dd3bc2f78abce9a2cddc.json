@@ -122,7 +122,7 @@
     "sourceUrl": "https://tech.meituan.com/2026/09/03/meituan-Digital-Human-practice.html",
     "ruleId": "publisher-feed",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "cb13e98b0fb8149425411f1d8480b09ab6bba34e2988ea560afd4d1fb41cbc38",
     "fetchedAt": "2026-11-02T06:24:59.764Z",
     "checkedAt": "2026-11-02T06:24:59.764Z",

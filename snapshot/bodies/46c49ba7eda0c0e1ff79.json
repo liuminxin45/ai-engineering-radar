@@ -27,7 +27,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3-omni-flash-20251201",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "007a4d37e1dad35fa7d065365f047d2c86d0c4fb54a140148d4b2d7881ece11d",
     "fetchedAt": "2026-11-02T06:27:03.237Z",
     "checkedAt": "2026-11-02T06:27:03.237Z",

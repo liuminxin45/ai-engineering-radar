@@ -9,7 +9,7 @@
     "readingMinutes": 0,
     "sourceId": "kuaishou-csdn",
     "sourceUrl": "https://blog.csdn.net/kuaishoutech/article/details/157505623",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "checkedAt": "2026-11-02T09:08:00.623Z",
     "nextRetryAt": "2026-11-09T09:08:00.623Z",
     "error": "RSSHub HTTP 502",

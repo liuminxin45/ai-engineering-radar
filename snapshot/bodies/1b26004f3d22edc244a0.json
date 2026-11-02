@@ -42,7 +42,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=e-commerce-bench",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "0b71815ce787d25dffdf3faef7adaf07f5e672a52ab7e3b2b8038e2bff9fd47b",
     "fetchedAt": "2026-11-02T06:24:59.705Z",
     "checkedAt": "2026-11-02T06:24:59.705Z",

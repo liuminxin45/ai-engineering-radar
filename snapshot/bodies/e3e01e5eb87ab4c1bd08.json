@@ -177,7 +177,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "15be528e9c16dc45a9ffa0f1889906307b8158232933acd78355652d795be3a3",
     "fetchedAt": "2026-11-02T06:24:20.816Z",
     "checkedAt": "2026-11-02T06:24:20.816Z",

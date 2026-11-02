@@ -17,7 +17,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/qwen-image-edit-2509/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "697ff856ccbe08f8ef34410ca95c5b3fb47702c95dfe0e24b81246d664a2cd72",
     "fetchedAt": "2026-11-02T06:38:01.022Z",
     "checkedAt": "2026-11-02T06:38:01.022Z",

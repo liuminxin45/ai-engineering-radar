@@ -32,7 +32,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/chinese-clip/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "34fcedaf13bc53449bbd37864c2bdf364ae182401741b81bf051cb3457d178e5",
     "fetchedAt": "2026-11-02T06:44:32.205Z",
     "checkedAt": "2026-11-02T06:44:32.205Z",

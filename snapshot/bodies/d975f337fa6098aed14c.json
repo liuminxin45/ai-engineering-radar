@@ -42,7 +42,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/qwen1.5-110b/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "5597e009816ea0a5b68ae90007d2ec1ff0967edacbede2f60ec23f4359aec211",
     "fetchedAt": "2026-11-02T06:38:41.792Z",
     "checkedAt": "2026-11-02T06:38:41.792Z",

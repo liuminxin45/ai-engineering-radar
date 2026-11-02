@@ -107,7 +107,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/qwen3-vl/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "519a3426c59468082adaab1e1fec2e87226566aa32dafcf799da034cd3b45cdc",
     "fetchedAt": "2026-11-02T06:37:59.438Z",
     "checkedAt": "2026-11-02T06:37:59.438Z",

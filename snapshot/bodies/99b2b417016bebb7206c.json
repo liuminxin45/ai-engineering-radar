@@ -32,7 +32,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/qvq-72b-preview/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "1c92635362c713dec54dd698235fe85a40659eed840a5896b55ed1705d963477",
     "fetchedAt": "2026-11-02T06:38:28.168Z",
     "checkedAt": "2026-11-02T06:38:28.168Z",

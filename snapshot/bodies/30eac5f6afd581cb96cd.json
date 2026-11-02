@@ -47,7 +47,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/qwen3-max/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "ecff59f0a3a4f2cce4aece9415bb87a03af88040604c2151f7ba9e60d8a99069",
     "fetchedAt": "2026-11-02T06:44:31.532Z",
     "checkedAt": "2026-11-02T06:44:31.532Z",

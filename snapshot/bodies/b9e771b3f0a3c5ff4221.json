@@ -107,7 +107,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen-agentworld",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "89d9d9bd918817e223e597335f7d76f909ae6900776a4c29df97ed5292dcfcb8",
     "fetchedAt": "2026-11-02T06:25:44.451Z",
     "checkedAt": "2026-11-02T06:25:44.451Z",

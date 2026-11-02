@@ -97,7 +97,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen-robotmanip",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "cd9c576d83d80f7cc3fa3f8f1b84faca8f7694aa2bb562e022eff40014d0fe44",
     "fetchedAt": "2026-11-02T06:25:45.256Z",
     "checkedAt": "2026-11-02T06:25:45.256Z",

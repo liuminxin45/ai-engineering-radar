@@ -32,7 +32,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3-tts-1128",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "f214c78b9dda20f454154eb1e9c9d8475fbf0d1144a975a08381c91800c44149",
     "fetchedAt": "2026-11-02T06:27:10.117Z",
     "checkedAt": "2026-11-02T06:27:10.117Z",

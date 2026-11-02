@@ -47,7 +47,7 @@
     "sourceUrl": "https://developer.aliyun.com/article/1755525",
     "ruleId": "aliyun-lake",
     "ruleVersion": "2",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "55bddd67132b9aca617921d038728cb04f5875ec0a957cef724eb2d407738358",
     "fetchedAt": "2026-11-02T07:09:28.325Z",
     "checkedAt": "2026-11-02T07:09:28.325Z",

@@ -92,7 +92,7 @@
     "sourceUrl": "https://tech.meituan.com/2026/08/27/ACL-Outstanding-Paper-GeoRA.html",
     "ruleId": "publisher-feed",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "d24bee4a6ef41490c0caab0ca25594dc0088f92fbb2c24008329799b839f1101",
     "fetchedAt": "2026-11-02T06:25:04.891Z",
     "checkedAt": "2026-11-02T06:25:04.891Z",

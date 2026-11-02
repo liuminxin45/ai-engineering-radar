@@ -42,7 +42,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/global-load-balance/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "59501651b542ffd91e03dcc621306220527fb3acc845601da8b2eb29e864ee52",
     "fetchedAt": "2026-11-02T06:38:26.637Z",
     "checkedAt": "2026-11-02T06:38:26.637Z",

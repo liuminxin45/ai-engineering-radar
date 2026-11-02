@@ -11,7 +11,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-max-preview",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "796b89e4f040dfd5100a9f4bf96b44e742f33c80dc12abb455dce2980cc20761",
     "fetchedAt": "2026-11-02T06:26:26.887Z",
     "checkedAt": "2026-11-02T06:26:26.887Z",

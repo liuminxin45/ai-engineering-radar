@@ -87,7 +87,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3-coder-next",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "abeefebfa75df0aab258218c27dc55ce752465338499c394cde61c2dfdddd4e9",
     "fetchedAt": "2026-11-02T06:26:33.949Z",
     "checkedAt": "2026-11-02T06:26:33.949Z",

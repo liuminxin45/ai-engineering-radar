@@ -197,7 +197,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "e9fc8e1f6a0e562f8d34bc56511995cda8cc85e06c4f93576aab39f8c02323ce",
     "fetchedAt": "2026-11-02T06:26:25.595Z",
     "checkedAt": "2026-11-02T06:26:25.595Z",

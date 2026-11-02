@@ -97,7 +97,7 @@
     "sourceUrl": "https://tech.meituan.com/2026/08/07/Agent-Evaluation.html",
     "ruleId": "publisher-feed",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "91918ed2c2d2368d2fcb1dbd3afdceca385d287967427ebb9fbd610516f16106",
     "fetchedAt": "2026-11-02T06:25:27.891Z",
     "checkedAt": "2026-11-02T06:25:27.891Z",

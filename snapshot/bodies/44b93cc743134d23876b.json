@@ -52,7 +52,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/gspo/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "5d665c6b2fc7be0665ea4690ea0543e6a3910db61ed516901e3a82421ddb3c06",
     "fetchedAt": "2026-11-02T06:38:14.722Z",
     "checkedAt": "2026-11-02T06:38:14.722Z",

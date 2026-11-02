@@ -9,7 +9,7 @@
     "readingMinutes": 0,
     "sourceId": "netease-csdn",
     "sourceUrl": "https://blog.csdn.net/wangyiyungw/article/details/153473063",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "checkedAt": "2026-11-02T09:08:14.278Z",
     "nextRetryAt": "2026-11-09T09:08:14.278Z",
     "error": "RSSHub HTTP 502",

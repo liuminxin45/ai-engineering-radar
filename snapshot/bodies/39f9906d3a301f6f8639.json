@@ -57,7 +57,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3-tts-vc-voicedesign",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "a1f77c0b84c24a470e12a42bc8eede86f0b58b358c32a1918639de3ced81ee3f",
     "fetchedAt": "2026-11-02T06:26:49.098Z",
     "checkedAt": "2026-11-02T06:26:49.098Z",

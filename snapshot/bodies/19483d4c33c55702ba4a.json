@@ -11,7 +11,7 @@
     "sourceUrl": "https://news.qq.com/rain/a/20261023A0BDI100",
     "ruleId": "tencent-news",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "76ab0ed1db85b55a5ceaf21c025260b99d580062b42107b1a5ab60f60c118b32",
     "fetchedAt": "2026-11-02T06:23:24.867Z",
     "checkedAt": "2026-11-02T06:23:24.867Z",

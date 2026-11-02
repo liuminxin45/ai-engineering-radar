@@ -57,7 +57,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3-vl-embedding",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "c208904a8edfe5d028e0cb0834ee37047d7a115b0aacaebb5ab70e0d7efe7af4",
     "fetchedAt": "2026-11-02T06:26:46.341Z",
     "checkedAt": "2026-11-02T06:26:46.341Z",

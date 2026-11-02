@@ -57,7 +57,7 @@
     "sourceUrl": "https://tech.meituan.com/2026/08/13/KDD-2026-meituan-papers.html",
     "ruleId": "publisher-feed",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "ec5b10f54cb2f9dfcec508ce8eea6335d6af8ca19c49e6aed87401c2ae530ca7",
     "fetchedAt": "2026-11-02T06:25:23.202Z",
     "checkedAt": "2026-11-02T06:25:23.202Z",

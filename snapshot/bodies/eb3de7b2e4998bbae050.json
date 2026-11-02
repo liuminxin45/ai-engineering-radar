@@ -87,7 +87,7 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-livetranslate",
     "ruleId": "qwen",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "660ed443e31045ffa5452e29b3c22e0edfd8fb24b2fcc64c576704e235ac6355",
     "fetchedAt": "2026-11-02T06:25:59.920Z",
     "checkedAt": "2026-11-02T06:25:59.920Z",

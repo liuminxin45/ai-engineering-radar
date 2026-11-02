@@ -137,7 +137,7 @@
     "sourceUrl": "https://developer.cloud.tencent.com/article/2761592",
     "ruleId": "tencent-article-json",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "59a4b707d9a5a6df3b8fc0cc943a181f73f35716daafd93deae0a42a608a9bfd",
     "fetchedAt": "2026-11-02T06:23:51.346Z",
     "checkedAt": "2026-11-02T06:23:51.346Z",

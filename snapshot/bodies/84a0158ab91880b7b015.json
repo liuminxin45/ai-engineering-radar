@@ -37,7 +37,7 @@
     "sourceUrl": "https://blog.csdn.net/devcloud/article/details/169842070",
     "ruleId": "rsshub-csdn",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "dfb6d360271b4aa1a38f86487d4ed00dc15fd4897005384ada0b3abc5e26629d",
     "fetchedAt": "2026-11-02T09:07:29.032Z",
     "checkedAt": "2026-11-02T09:07:29.032Z",

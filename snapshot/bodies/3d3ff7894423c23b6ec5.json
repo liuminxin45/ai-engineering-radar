@@ -9,7 +9,7 @@
     "readingMinutes": 0,
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/152330243",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "checkedAt": "2026-11-02T09:08:15.777Z",
     "nextRetryAt": "2026-11-09T09:08:15.777Z",
     "error": "RSSHub HTTP 502",

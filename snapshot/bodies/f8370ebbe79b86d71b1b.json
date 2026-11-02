@@ -37,7 +37,7 @@
     "sourceUrl": "https://docs.qwenlm.ai/research/qwen3-livetranslate/index.json",
     "ruleId": "qwen-publisher-tokens",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "594337756e642ff42d92f41d78434bedf617ab159a50582fdefc5ed87ad16d94",
     "fetchedAt": "2026-11-02T06:37:55.524Z",
     "checkedAt": "2026-11-02T06:37:55.524Z",

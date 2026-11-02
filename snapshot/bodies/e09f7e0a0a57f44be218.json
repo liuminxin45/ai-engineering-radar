@@ -142,7 +142,7 @@
     "sourceUrl": "https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html",
     "ruleId": "publisher-feed",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "36283f3c0c7bfeba2b437db0497d7edc646a96a17723a5f78cd80a977143f110",
     "fetchedAt": "2026-11-02T06:23:31.111Z",
     "checkedAt": "2026-11-02T06:23:31.111Z",

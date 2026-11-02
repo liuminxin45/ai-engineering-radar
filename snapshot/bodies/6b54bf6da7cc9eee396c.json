@@ -137,7 +137,7 @@
     "sourceUrl": "https://news.qq.com/rain/a/20260923A0A8W700",
     "ruleId": "tencent-news",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "372965ced17ebe68145734ac69491438fb2e1009745adbc4fabbe7179149711a",
     "fetchedAt": "2026-11-02T06:24:12.496Z",
     "checkedAt": "2026-11-02T06:24:12.496Z",

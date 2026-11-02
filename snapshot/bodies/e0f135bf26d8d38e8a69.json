@@ -77,7 +77,7 @@
     "sourceUrl": "https://news.qq.com/rain/a/20260921A03YKX00",
     "ruleId": "tencent-news",
     "ruleVersion": "1",
-    "engineVersion": "radar-reader-1",
+    "engineVersion": "radar-reader-2",
     "contentHash": "db30c49144ef045f8ebb971d8c46d9f9410ee8fbd70f8a8dc81efc2f89e5a6bf",
     "fetchedAt": "2026-11-02T06:24:16.823Z",
     "checkedAt": "2026-11-02T06:24:16.823Z",
