@@ -227,13 +227,6 @@
   line-height: 1.5;
   min-height: 24px;
 }
-.storyMeta > div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 9px;
-  min-width: 0;
-  flex: 1 1 130px;
-}
 .advertorialBadge {
   position: relative;
   display: inline-flex;

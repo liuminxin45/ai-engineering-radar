@@ -36,23 +36,13 @@ const labels: Record<string, string> = {
 const label = (id: string) =>
   labels[id] ?? companies.find((c) => c.id === id)?.name ?? id;
 const time = (a: Article) => a.publishedAt ?? a.discoveredAt;
-const day = (value: string) =>
-  new Date(value).toLocaleDateString("zh-CN", {
-    month: "2-digit",
-    day: "2-digit",
-    timeZone: "Asia/Shanghai",
-  });
-const sourceNames: Record<string, string> = {
-  "csdn-feed": "CSDN",
-  "cnblogs-account": "博客园",
-  "aliyun-group": "阿里云官方博客",
-  "volcengine-account": "火山引擎",
-  "tencent-news": "腾讯新闻",
-};
-const sourceName = (a: Article) =>
-  sourceNames[
-    site.sources.find((s) => s.id === a.locations[0]?.sourceId)?.platform ?? ""
-  ] ?? "团队技术博客";
+const calendar = new Intl.DateTimeFormat("zh-CN", {
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  timeZone: "Asia/Shanghai",
+});
+const day = (value: string) => calendar.format(new Date(value));
 const activeCompanies = new Set(
   site.sources
     .filter((s) => s.crawl.enabled)
@@ -439,15 +429,17 @@ export function ArticleBoard() {
                       </a>
                     </h3>
                     <div className={styles.storyMeta}>
-                      <div>
-                        <span>
-                          {id === "latest" ? label(a.companyId) : sourceName(a)}
-                        </span>
-                        <time dateTime={time(a)}>
-                          {!a.publishedAt && "发现 "}
-                          {day(time(a))}
-                        </time>
-                      </div>
+                      <time
+                        dateTime={time(a)}
+                        title={
+                          a.publishedAt
+                            ? "发布时间"
+                            : "发现时间：来源未提供发布日期"
+                        }
+                        aria-label={`${a.publishedAt ? "发布时间" : "发现时间"} ${day(time(a))}`}
+                      >
+                        {day(time(a))}
+                      </time>
                       {a.advertorial?.status === "suspected" && (
                         <Link
                           className={styles.advertorialBadge}
