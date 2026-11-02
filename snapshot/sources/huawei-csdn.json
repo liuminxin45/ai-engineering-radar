@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "huawei-csdn",
-    "lastCheckedAt": "2026-11-01T12:13:56.672Z",
-    "lastSuccessAt": "2026-11-01T12:13:56.672Z",
-    "nextRunAt": "2026-11-02T12:13:56.672Z",
+    "lastCheckedAt": "2026-11-02T02:21:09.679Z",
+    "lastSuccessAt": "2026-11-02T02:21:09.679Z",
+    "nextRunAt": "2026-11-03T02:21:09.679Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

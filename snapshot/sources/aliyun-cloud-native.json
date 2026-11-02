@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "aliyun-cloud-native",
-    "lastCheckedAt": "2026-11-01T12:14:06.428Z",
-    "lastSuccessAt": "2026-11-01T12:14:06.428Z",
-    "nextRunAt": "2026-11-02T12:14:06.428Z",
+    "lastCheckedAt": "2026-11-02T02:21:18.708Z",
+    "lastSuccessAt": "2026-11-02T02:21:18.708Z",
+    "nextRunAt": "2026-11-03T02:21:18.708Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 50,
