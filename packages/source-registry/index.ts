@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { z } from "zod";
 import { validateSourceReplacements } from "./replacements.js";
+import { validateMiMoSource } from "../crawler/platforms/xiaomi-mimo.js";
 import {
   sourceSchema,
   type Source,
@@ -10,6 +11,10 @@ import {
 
 export function validateAccountScope(source: Source) {
   if (!source.crawl.enabled) return;
+  if (source.platform === "xiaomi-mimo") {
+    validateMiMoSource(source);
+    return;
+  }
   if (source.platform === "ant-ling-blog") {
     const u = new URL(source.url);
     if (

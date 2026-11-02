@@ -14,6 +14,7 @@ import {
 import { parseAliyunGroup, nextAliyunPage } from "./platforms/aliyun.js";
 import { parseVolcengineAccount } from "./platforms/volcengine.js";
 import { parseAntLingBlog } from "./platforms/ant-ling.js";
+import { collectMiMo } from "./platforms/xiaomi-mimo.js";
 export const plain = (s: unknown, max = 800) =>
   cheerio
     .load(`<body>${String(s ?? "")}</body>`)
@@ -270,6 +271,8 @@ export async function collect(
   if (state.lastModified) headers["If-Modified-Since"] = state.lastModified;
   const response = await fetchReviewed(source.url, source, headers);
   if (response.status === 304) return { items: [], response, warnings: [] };
+  if (source.platform === "xiaomi-mimo")
+    return collectMiMo(source, response, limit);
   const items = (
     source.adapter === "feed"
       ? parseFeed(response.text, source)
