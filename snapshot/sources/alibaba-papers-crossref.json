@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "alibaba-papers-crossref",
+    "lastCheckedAt": "2026-11-02T03:23:51.379Z",
+    "lastSuccessAt": "2026-11-02T03:23:51.379Z",
+    "nextRunAt": "2026-11-03T03:23:51.379Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 30,
+    "httpStatus": 200
+  }
+}

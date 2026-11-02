@@ -1,0 +1,1982 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "05a6a602491a1ce3b176",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Flpt.2026.3706142",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Italia Srl, Milan, Italy"
+        }
+      ],
+      "title": "9.5-bit/s/Hz Radio-Over-FSO Link Resilient to Atmospheric Turbulence",
+      "canonicalUrl": "https://doi.org/10.1109/lpt.2026.3706142",
+      "author": "Andrés Martínez, Damiano Badini, Salvatore Moscato, Luca Menichetti, Francesco Morichetti, Andrea Melloni",
+      "publishedAt": "2026-11-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1109/lpt.2026.3706142",
+          "url": "https://doi.org/10.1109/lpt.2026.3706142"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1c00ee57d617434b975c",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://www.noahlab.com.hk/en/research_paper",
+          "method": "official-directory",
+          "excerpt": "华为 · Huawei Noah 论文：Analysing Multi-Task Regression via Random Matrix Theory with Application to Time Series Forecasting"
+        }
+      ],
+      "title": "Analysing Multi-Task Regression via Random Matrix Theory with Application to Time Series Forecasting",
+      "canonicalUrl": "https://arxiv.org/abs/2406.10327",
+      "discoveredAt": "2026-11-02T03:36:44.597Z",
+      "updatedAt": "2026-11-02T03:36:44.597Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "noah-official-papers",
+          "externalId": "156",
+          "url": "https://arxiv.org/abs/2406.10327"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1c2a6a8f3138f29e1891",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1137%2F24m1684025",
+          "method": "paper-authors",
+          "excerpt": "nology, Hong Kong. Part of this work was done while the author was at Huawei Taylor Lab."
+        }
+      ],
+      "title": "Benchmark-Tight Approximation Ratio of Simple Mechanism for a Unit-Demand Buyer",
+      "canonicalUrl": "https://doi.org/10.1137/24m1684025",
+      "author": "Yaonan Jin, Pinyan Lu",
+      "description": "Abstract. We study revenue maximization in the unit-demand single-buyer setting. Our main result is that Uniform-Ironed-Virtual-Value Item Pricing guarantees a tight 3-approximation to Duality Relaxation Benchmark (Chawla, Malec, and Sivan, EC’10 and GEB’15; Cai, Devanur, and Weinberg, STOC’16 and [ SIAM J. Comput., 50 (2021), pp. STOC16-160–STOC16-200]), breaking the barrier of 4 since Chawla et al. [ Proceedings of STOC’10, 2010, pp. 311–320] and Chawla, Malec, and Sivan (EC’10 and GEB’15). To our knowledge, this is the first benchmark-tight revenue guarantee of any simple multi-item mechanism. Technically, all previous work employs Myerson Auction as an intermediary. The barrier of 4 follows as Uniform-Ironed-Virtual-Value Item Pricing achieves a tight 2-approximation to Myerson Auction",
+      "language": "en",
+      "publishedAt": "2026-10-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1137/24m1684025",
+          "url": "https://doi.org/10.1137/24m1684025"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1d5736d9d7f8d214bf01",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3848123",
+          "method": "paper-authors",
+          "excerpt": "Huawei Noah’s Ark Lab, Toronto, Ontario, Canada"
+        }
+      ],
+      "title": "Mobility Network Forecasting: A Trajectory-based Contact Prediction Approach",
+      "canonicalUrl": "https://doi.org/10.1145/3848123",
+      "author": "Amirhossein Nadiri, Jing Li, Ghadeer Abuoda, Mahdi Biparva, Manos Papagelis",
+      "description": "Predicting human mobility patterns is crucial for various applications, including urban planning, traffic management, and public health. A key challenge in this domain is identifying when and where interactions, or contacts , occur between moving individuals (i.e., objects) based on their recent positions. To address this, we represent object movement using a mobility network , where individuals establish connections when they come into close physical proximity. This network framework enables the analysis of individual interactions within a given time frame, providing valuable insights into mobility dynamics. Traditional methods for predicting future interactions typically focus on predicting static snapshots of the mobility network at future time points. These temporal link prediction met",
+      "language": "en",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3848123",
+          "url": "https://doi.org/10.1145/3848123"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1e18345c24427e7e8b01",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1080%2F09500340.2026.2746743",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies"
+        }
+      ],
+      "title": "Point spread function of linear polarized aspherical vector fields in high-NA optical systems",
+      "canonicalUrl": "https://doi.org/10.1080/09500340.2026.2746743",
+      "author": "Rafael G. González-Acuña",
+      "language": "en",
+      "publishedAt": "2026-10-15T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1080/09500340.2026.2746743",
+          "url": "https://doi.org/10.1080/09500340.2026.2746743"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "25a7f8082067ee9cd909",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3834381",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Co., Ltd., Beijing, China"
+        }
+      ],
+      "title": "Every Scenario Matters: Scenario-Guided White-Box Testing for Static Code Checkers Powered by LLMs",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3834381",
+      "author": "Jun Liu, Liqiang Ji, Jiwei Yan, Linjie Pan, Jinsong Ren, Jun Yan, Jian Zhang",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3832783.3834381",
+          "url": "https://doi.org/10.1145/3832783.3834381"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "36d84a1e640f6a935dbf",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1108%2Fijis-04-2026-0258",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Co Ltd , Shenzhen,"
+        }
+      ],
+      "title": "Executive military experience and corporate innovation in China: evidence from listed firms",
+      "canonicalUrl": "https://doi.org/10.1108/ijis-04-2026-0258",
+      "author": "Ao Yu, Haoran Jin, Yanxi Xia, Yufeng Zhang, Jin Li",
+      "description": "Purpose This study aims to examine how executives’ military experience is associated with corporate innovation in Chinese listed firms. It further investigates whether financing constraints and the market environment shape the relationship between military experience and innovation. Design/methodology/approach Using panel data from Chinese listed firms, this study uses regression analysis to examine the relationship between executives’ military experience and both innovation input and innovation output. This study further explores heterogeneity across different firm types and tests the moderating roles of financing constraints and the market environment. Findings The results suggest that executives’ military experience is negatively associated with both innovation input and innovation outp",
+      "language": "en",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1108/ijis-04-2026-0258",
+          "url": "https://doi.org/10.1108/ijis-04-2026-0258"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3800732cc4276b6bb27a",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://www.noahlab.com.hk/en/research_paper",
+          "method": "official-directory",
+          "excerpt": "华为 · Huawei Noah 论文：DWLR: Domain Adaptation under Label Shift for Wearable Sensor"
+        }
+      ],
+      "title": "DWLR: Domain Adaptation under Label Shift for Wearable Sensor",
+      "canonicalUrl": "https://www.ijcai.org/proceedings/2024/489",
+      "discoveredAt": "2026-11-02T03:36:44.597Z",
+      "updatedAt": "2026-11-02T03:36:44.597Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "noah-official-papers",
+          "externalId": "157",
+          "url": "https://www.ijcai.org/proceedings/2024/489"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "386f868386d8620a1c99",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://www.noahlab.com.hk/en/research_paper",
+          "method": "official-directory",
+          "excerpt": "华为 · Huawei Noah 论文：LightGTS: A Lightweight General Time Series Forecasting Model"
+        }
+      ],
+      "title": "LightGTS: A Lightweight General Time Series Forecasting Model",
+      "canonicalUrl": "https://arxiv.org/abs/2506.06005",
+      "discoveredAt": "2026-11-02T03:36:44.597Z",
+      "updatedAt": "2026-11-02T03:36:44.597Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "noah-official-papers",
+          "externalId": "141",
+          "url": "https://arxiv.org/abs/2506.06005"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "38df8555ea4f26a1b6dc",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://www.noahlab.com.hk/en/research_paper",
+          "method": "official-directory",
+          "excerpt": "华为 · Huawei Noah 论文：Disentangling Domain and General Representations for Time Series Classification"
+        }
+      ],
+      "title": "Disentangling Domain and General Representations for Time Series Classification",
+      "canonicalUrl": "https://www.ijcai.org/proceedings/2024/424",
+      "discoveredAt": "2026-11-02T03:36:44.597Z",
+      "updatedAt": "2026-11-02T03:36:44.597Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "noah-official-papers",
+          "externalId": "158",
+          "url": "https://www.ijcai.org/proceedings/2024/424"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3f15be618236be52a0a6",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3843848",
+          "method": "paper-authors",
+          "excerpt": "Digital Trust Laboratory, Singapore Research Centre, Huawei International, Singapore, Singapore"
+        }
+      ],
+      "title": "Introduction to the Special Issue on Blockchain for 6G Trust, Security, and Privacy",
+      "canonicalUrl": "https://doi.org/10.1145/3843848",
+      "author": "Mingjun Wang, Tieyan Li, Chonggang Wang, Erol Gelenbe, Zheng Yan",
+      "language": "en",
+      "publishedAt": "2026-10-14T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3843848",
+          "url": "https://doi.org/10.1145/3843848"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4244f72fff954db3bfa9",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3857278",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies, China"
+        }
+      ],
+      "title": "EffBench: A Holistic Efficiency Benchmark for CTR Models",
+      "canonicalUrl": "https://doi.org/10.1145/3857278",
+      "author": "Dezhi Yi, Dongzhe Li, Xiaolong Wei, Huifeng Guo, Hang Liu, Kenan Song, Wei Guo, Bo Chen, Yong Liu, Ruiming Tang, Ye Lu",
+      "description": "Click-Through Rate (CTR) prediction is a critical task in recommender systems and online advertising, so CTR models design has been widely researched in both academia and industry. However, since the model parameters increase larger and their computations become more complex, the inefficiency severely hinders practical deployment and application. Especially, the lack of a unified benchmark for the computational efficiency of CTR models complicates matters. To address the issues, we propose a holistic efficiency benchmark for CTR models named EffBench. a) A comprehensive evaluation metric system is constructed for CTR models, including seven metrics to assess accuracy and strongly emphasize computational efficiency. b) EffBench benchmark is implemented based on industrial mainstream framewo",
+      "language": "en",
+      "publishedAt": "2026-10-26T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3857278",
+          "url": "https://doi.org/10.1145/3857278"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "464c42495bc5d3a451bf",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Flpt.2026.3666271",
+          "method": "paper-authors",
+          "excerpt": "Huawei Heisenberg Research Center, Munich, Germany"
+        }
+      ],
+      "title": "FWM Nonlinearity Reduction Techniques for 2 and 10 km 3.2 Tb/s (16 × 200 Gb/s) O-Band IM/DD Systems",
+      "canonicalUrl": "https://doi.org/10.1109/lpt.2026.3666271",
+      "author": "Silas Oettinghaus, Tom Wettlin, Stefano Calabró, Nebojša Stojanovic, Stephan Pachnicke",
+      "publishedAt": "2026-11-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1109/lpt.2026.3666271",
+          "url": "https://doi.org/10.1109/lpt.2026.3666271"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4b220236db477e807ff2",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1177%2F10519815261493103",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Co., Ltd"
+        }
+      ],
+      "title": "Artificial intelligence at work: Balancing opportunity and fear in shaping employee well-being in the IT sector",
+      "canonicalUrl": "https://doi.org/10.1177/10519815261493103",
+      "author": "Eimad Hafeez Gogia, Zhen Shao, Muhammad Asif Khan, Tianhui Gao, István Vajna",
+      "description": "Background This study investigates the complex relationship between perceptions of artificial intelligence (AI) opportunities and well-being, exploring the underlying psychological processes. Using conservation of resources theory, we examine how employees who view AI as an opportunity report better workplace well-being and show greater adaptive thinking capacity. Conversely, perceptions of unemployment risk appear to be linked to challenges in cognitive reappraisal, which, in turn, correlate with diminished well-being. Objective To assess the relationships among these constructs, including the specific relationship between employment insecurity and well-being, to understand how AI is experienced as both a valuable tool and a source of stress. Methods This research, conducted among 201 pro",
+      "language": "en",
+      "publishedAt": "2026-10-12T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1177/10519815261493103",
+          "url": "https://doi.org/10.1177/10519815261493103"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "64b5d0bb952d94d71ae3",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://www.noahlab.com.hk/en/research_paper",
+          "method": "official-directory",
+          "excerpt": "华为 · Huawei Noah 论文：OpenPyRo-A1: An Open Python-Based Low-Cost Bimanual Robot for Embodied AI"
+        }
+      ],
+      "title": "OpenPyRo-A1: An Open Python-Based Low-Cost Bimanual Robot for Embodied AI",
+      "canonicalUrl": "https://ieeexplore.ieee.org/document/11260951",
+      "discoveredAt": "2026-11-02T03:36:44.597Z",
+      "updatedAt": "2026-11-02T03:36:44.597Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "noah-official-papers",
+          "externalId": "145",
+          "url": "https://ieeexplore.ieee.org/document/11260951"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6ae1d46f5e7e26e20b85",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3847659",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Co Ltd"
+        }
+      ],
+      "title": "DMMU: SmartNIC-Based On-Device MMU for Scalable Virtualized I/O and Memory Overcommitment",
+      "canonicalUrl": "https://doi.org/10.1145/3847659",
+      "author": "Chenggang Wu, Yun Wang, Xiubin Mao, Jiwei Lu, Rong Zhang, Guo Kaicheng, Chen Chen, Jie Wu, Zhengwei Qi, Haibing Guan",
+      "description": "Cloud data centers increasingly rely on device virtualization to share high-bandwidth network adapters and accelerators among virtual machines (VMs). Single Root I/O Virtualization (SR-IOV) exposes Virtual Functions (VFs) directly to guest VMs, but the Input/Output Memory Management Unit (IOMMU) on the host processor becomes a bottleneck as the number of VFs grows: its small translation lookaside buffer (TLB) causes severe throughput degradation. Meanwhile, because the hypervisor cannot determine which guest memory regions are used for Direct Memory Access (DMA), it must pin the entire VM memory, preventing memory overcommitment and wasting physical resources. Existing solutions, including Address Translation Services (ATS), the Page Request Interface (PRI), and software-emulated virtual I",
+      "language": "en",
+      "publishedAt": "2026-10-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3847659",
+          "url": "https://doi.org/10.1145/3847659"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6f6ef414050db4d26a73",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3846376",
+          "method": "paper-authors",
+          "excerpt": "Huawei Noah’s Ark Lab"
+        }
+      ],
+      "title": "Multi-Task Deep Recommender Systems: A Survey",
+      "canonicalUrl": "https://doi.org/10.1145/3846376",
+      "author": "Yuhao Wang, Ha Tsz Lam, Yi Wong, Ziru Liu, Wanyu Wang, Maolin Wang, Yichao Wang, Bo Chen, Huifeng Guo, Ruiming Tang, Xiangyu Zhao",
+      "description": "Multi-task learning (MTL) aims at learning related tasks in a unified model to achieve mutual improvement among tasks considering their shared knowledge. It is an important topic in recommendation due to the demand for multi-task prediction considering performance and efficiency. Although MTL has been well studied and developed, there is still a lack of systematic review in the recommendation community. To fill the gap, we provide a comprehensive review of existing multi-task deep recommender systems (MTDRS) in this survey. To be specific, the problem definition of MTDRS is first given, and it is compared with other related areas. Next, the development of MTDRS is depicted and the taxonomy is introduced from the task relation and methodology aspects. Specifically, the task relation is cate",
+      "language": "en",
+      "publishedAt": "2026-10-30T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3846376",
+          "url": "https://doi.org/10.1145/3846376"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7b354d724eeed11ed803",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1017%2Faer.2026.10252",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Co Ltd"
+        }
+      ],
+      "title": "Measurement of electromagnetic field strength of GSM antennas by using unmanned aerial vehicles",
+      "canonicalUrl": "https://doi.org/10.1017/aer.2026.10252",
+      "author": "Cemal Işilak, Hakan Çevikalp, Helin Dutağaci, Yusuf Şalk, Alperen Enes Bayar, Tufan Girgin",
+      "description": "Abstract Conventional electromagnetic field (EMF) assessment around Global System for Mobile Communications (GSM) antennas is typically performed from accessible ground-level or rooftop locations, which may not adequately capture the spatial variability around elevated directional antennas. This study presents an integrated unmanned aerial vehicle (UAV)-based platform for three-dimensional electromagnetic field-strength (EMFS) assessment, combining broadband EMFS measurements with real-time antenna detection, camera–Light Detection and Ranging (LiDAR) fusion, 3D mapping, telemetry and onboard computing. To enable autonomous antenna localisation, a dedicated antenna image dataset was created, and You Only Look Once (YOLO)-based detectors were evaluated for real-time antenna identification. ",
+      "language": "en",
+      "publishedAt": "2026-10-28T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1017/aer.2026.10252",
+          "url": "https://doi.org/10.1017/aer.2026.10252"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8a35ca41b0cde1384376",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3843775.3844544",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Research & Development (UK) Ltd, Cambridge, United Kingdom"
+        }
+      ],
+      "title": "From C to Idiomatic Rust: A Ship-of-Theseus Agentic Translation",
+      "canonicalUrl": "https://doi.org/10.1145/3843775.3844544",
+      "author": "Vasily A. Sartakov",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3843775.3844544",
+          "url": "https://doi.org/10.1145/3843775.3844544"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "94a4b9ae05eae94a00ae",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1364%2Foe.611451",
+          "method": "paper-authors",
+          "excerpt": "Huawei Heisenberg Research Center (Munich)"
+        }
+      ],
+      "title": "Pipelined spiking neural network equalizer architecture designed for CMOS implementation in IM/DD optical transmission systems",
+      "canonicalUrl": "https://doi.org/10.1364/oe.611451",
+      "author": "Shuangxu Li, Vincent Scholl, Georg Böcherer, Stefano Calabrò",
+      "description": "High-capacity optical communication systems require nonlinear equalization with high throughput and low activity in intensity-modulation/direct-detection (IM/DD) receivers. We propose a pipelined leaky integrate, discharge, and firing (LIDF) spiking neural network (SNN) architecture designed for future CMOS implementation. LIDF separates integration from discharge and firing into two stages and combines reversed receptive field encoding with end-of-time membrane decoding. The behavioral model builds on a previously reported non-leaky two-phase circuit evaluated through SPICE simulations in the SkyWater 130 nm PDK. The synaptic-current and membrane-leakage dynamics introduced here are evaluated behaviorally on the PyTorch/Norse platform. In simulated IM/DD links, LIDF achieves gains of appr",
+      "language": "en",
+      "publishedAt": "2026-10-15T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1364/oe.611451",
+          "url": "https://doi.org/10.1364/oe.611451"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "94af1133f6246e96c2f0",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://www.noahlab.com.hk/en/research_paper",
+          "method": "official-directory",
+          "excerpt": "华为 · Huawei Noah 论文：Learning causal relations from subsampled time series with two time-slices"
+        }
+      ],
+      "title": "Learning causal relations from subsampled time series with two time-slices",
+      "canonicalUrl": "https://doi.org/10.5555/3692070.3694268",
+      "discoveredAt": "2026-11-02T03:36:44.597Z",
+      "updatedAt": "2026-11-02T03:36:44.597Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "noah-official-papers",
+          "externalId": "155",
+          "url": "https://doi.org/10.5555/3692070.3694268"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9772ab278c938d21b0e0",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3834521",
+          "method": "paper-authors",
+          "excerpt": "Huawei, Shenzhen, China"
+        }
+      ],
+      "title": "LLM-Assisted Joint Ticket and Log Analysis for Incident Triage in Intelligent and Connected Vehicles",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3834521",
+      "author": "Ruowei Fu, Shenglin Zhang, Wenwei Gu, Weiguo Li, Yongqian Sun, Dan Pei",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3832783.3834521",
+          "url": "https://doi.org/10.1145/3832783.3834521"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9b24246100c4f8496875",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://www.noahlab.com.hk/en/research_paper",
+          "method": "official-directory",
+          "excerpt": "华为 · Huawei Noah 论文：Leveraging Gradients for Unsupervised Accuracy Estimation under Distribution Shift"
+        }
+      ],
+      "title": "Leveraging Gradients for Unsupervised Accuracy Estimation under Distribution Shift",
+      "canonicalUrl": "https://openreview.net/forum?id=FIWHRSuoos",
+      "discoveredAt": "2026-11-02T03:36:44.597Z",
+      "updatedAt": "2026-11-02T03:36:44.597Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "noah-official-papers",
+          "externalId": "159",
+          "url": "https://openreview.net/forum?id=FIWHRSuoos"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a4ccaa3ad4e6f1fe291b",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1002%2Fadvs.78134",
+          "method": "paper-authors",
+          "excerpt": "Theory Lab, Central Research Institute, 2012 Labs Huawei Technologies Co., Ltd. Sha Tin Hong Kong"
+        }
+      ],
+      "title": "Analytical Prediction of Critical Transitions in Oscillator Networks With Non‐Local Links",
+      "canonicalUrl": "https://doi.org/10.1002/advs.78134",
+      "author": "Qiang Li, Chumin Sun, David Waxman, Renaud Lambiotte, Jie Sun, Peng Ji",
+      "description": "ABSTRACT A wide range of dynamical systems can be modeled as oscillators coupled through an interaction network. Such frameworks have been widely used to explore the emergence of collective phenomena across diverse applications. Here, we develop an analytical framework for oscillator‐based Ising systems with Kuramoto‐type pairwise coupling and a second harmonic term. Spectral dimension reduction identifies a stability boundary governed by the balance between global coupling and second‐harmonic strength, while a mean‐field Fokker–Planck analysis predicts the transition between single‐cluster and two‐cluster stationary states and clarifies the role of noise. Low‐energy Ising configurations are predominantly obtained when the second harmonic term is strong relative to noise. Partition‐functio",
+      "language": "en",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1002/advs.78134",
+          "url": "https://doi.org/10.1002/advs.78134"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a64d4aa8b177b876b594",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3834501",
+          "method": "paper-authors",
+          "excerpt": "Huawei, Dongguan, China"
+        }
+      ],
+      "title": "OpsLens: Runbook-Free Root Cause Analysis via Multi-agent Collaboration and Tool Management",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3834501",
+      "author": "Haiyu Huang, Jiewei Lyu, Gou Tan, Pengfei Chen, Zhihan Jiang, Guangba Yu, Penghui Mi, Fuqiang Wang, Jian Han, Chongkang Tan, Michael R. Lyu",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3832783.3834501",
+          "url": "https://doi.org/10.1145/3832783.3834501"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ac3beb83d9e58298913a",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.54097%2Fz6caqg52",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Co., Ltd., Shanghai, 201206, China"
+        }
+      ],
+      "title": "Factors Influencing User Satisfaction with Artificial Intelligence Applications: An Integrated Approach of Semantic Network and BP Neural Network",
+      "canonicalUrl": "https://doi.org/10.54097/z6caqg52",
+      "author": "Yizhe Wang, Chaojie Han, Guan Zhang, Qiang He",
+      "description": "Generative AI has moved quickly from laboratory demos to everyday mobile apps in China, and user satisfaction has become the clearest test of whether these products actually deliver value. Yet most satisfaction studies still lean on questionnaires — useful, but too structured to capture what people really complain about or praise after prolonged use. This paper looks instead at what users themselves wrote. We collected 63,032 online reviews of ByteDance's DouBao APP (54,248 positive and 8,784 negative, November 2024 to October 2025, compiled via DianDian Data) and asked a simple question: what drives satisfaction, and how much does each driver matter? Rather than relying on a single method, we combined four steps. First, an IWE-AS keyword extraction model — which adds position encoding and",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.54097/z6caqg52",
+          "url": "https://doi.org/10.54097/z6caqg52"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ae03a46deb44eddf1163",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://www.noahlab.com.hk/en/research_paper",
+          "method": "official-directory",
+          "excerpt": "华为 · Huawei Noah 论文：ManGo: Learning design-score manifold to guide diffusion models for offline optimization"
+        }
+      ],
+      "title": "ManGo: Learning design-score manifold to guide diffusion models for offline optimization",
+      "canonicalUrl": "https://www.nature.com/articles/s44387-025-00055-1",
+      "discoveredAt": "2026-11-02T03:36:44.597Z",
+      "updatedAt": "2026-11-02T03:36:44.597Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "noah-official-papers",
+          "externalId": "144",
+          "url": "https://www.nature.com/articles/s44387-025-00055-1"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bc1b35c277632e6109af",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3795866.3844455",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Co., Ltd, Beijing, Beijing, China and Peking University, Beijing, Beijing, China"
+        }
+      ],
+      "title": "CFMoE: Cache-Friendly Mixture of Experts Model Serving System on Edge Devices",
+      "canonicalUrl": "https://doi.org/10.1145/3795866.3844455",
+      "author": "Haoyu Zhang, Hongyi Wang, Jianwei Zheng, Yu Li, Tianyang Jiang, Zhenhua Li, Ning Jia",
+      "publishedAt": "2026-10-26T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3795866.3844455",
+          "url": "https://doi.org/10.1145/3795866.3844455"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bc482a0de541f5c81237",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3860054",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Co Ltd, China"
+        }
+      ],
+      "title": "ER-RAG: Enhance RAG with ER-Based Unified Modeling of Heterogeneous Data Source",
+      "canonicalUrl": "https://doi.org/10.1145/3860054",
+      "author": "Yikuan Xia, Jiazun Chen, Yirui Zhan, Suifeng Zhao, Linke Wang, Suchen Liu, Weipeng Jiang, Chaorui Zhang, Wei Han, Bo Bai, Jun Gao",
+      "description": "Retrieval-Augmented Generation (RAG) enhances the reliability of large language models (LLMs) by integrating external evidence for question-answering tasks. However, when supporting evidence is scattered across heterogeneous data sources ( e.g., web pages, databases, and knowledge graphs), current RAG methods based on dedicated retrieval modules for each source face limitations like resource inefficiency in training modules, complex interaction among different sources, and lack of effective source selection. To address these challenges, we propose ER-RAG, a novel framework that allows efficient and effective evidence utilization. By observing that the evidence access patterns are restricted in RAG systems, ER-RAG introduces unified APIs based on the classic entity-relationship (ER) modelin",
+      "language": "en",
+      "publishedAt": "2026-10-26T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3860054",
+          "url": "https://doi.org/10.1145/3860054"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "be9da10d27c6161c3179",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://www.noahlab.com.hk/en/research_paper",
+          "method": "official-directory",
+          "excerpt": "华为 · Huawei Noah 论文：SAMformer: Unlocking the Potential of Transformers in Time Series Forecasting with Sharpness-Aware Minimization and Channel-Wise Attention"
+        }
+      ],
+      "title": "SAMformer: Unlocking the Potential of Transformers in Time Series Forecasting with Sharpness-Aware Minimization and Channel-Wise Attention",
+      "canonicalUrl": "https://arxiv.org/abs/2402.10198",
+      "discoveredAt": "2026-11-02T03:36:44.597Z",
+      "updatedAt": "2026-11-02T03:36:44.597Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "noah-official-papers",
+          "externalId": "154",
+          "url": "https://arxiv.org/abs/2402.10198"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c638000a467eaf20a140",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1097%2Frd9.0000000000000201",
+          "method": "paper-authors",
+          "excerpt": "Huawei Device Co., Ltd., Shenzhen 518129, China"
+        }
+      ],
+      "title": "Objective and subjective sleep quality and diminished ovarian reserve in women of reproductive age: a cross-sectional study",
+      "canonicalUrl": "https://doi.org/10.1097/rd9.0000000000000201",
+      "author": "Ya-Long Liu, Yun-Fei Su, Bin Li, Ying-Li Shi, Shu-Hui Huang, Li Jin, Chun-Lin Su, Xi Chen, Ting Guo, Guo-Lian Ding, Jie-Xue Pan, Cheng Li, Chen Zhang, Yan-Hui Hao, An-Qi Zhang, Hao Zhang, He-Feng Huang, Yan-Ting Wu",
+      "description": "Objective: The mechanisms underlying diminished ovarian reserve (DOR) remain incompletely understood. Although preliminary evidence suggests a link between sleep and ovarian function, comprehensive assessments using both objective and subjective sleep measures are needed. This study aimed to investigate the associations of sleep quality, assessed using both wearable-based objective measures and the Pittsburgh Sleep Quality Index (PSQI), with DOR among women of reproductive age. Methods: This cross-sectional study included 165 patients with DOR recruited from a tertiary hospital in Shanghai (March–December 2024) and 314 controls from two prior cohorts (August–November 2020 and November 2021–September 2022). Sleep quality was assessed using wearable devices and the PSQI. Multivariable logist",
+      "language": "en",
+      "publishedAt": "2026-10-14T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1097/rd9.0000000000000201",
+          "url": "https://doi.org/10.1097/rd9.0000000000000201"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "cb3e290425525621065e",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1021%2Fprechem.6c00099",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Co. Ltd. , , ,"
+        }
+      ],
+      "title": "Agentic, Autonomous Design Evolution of Machine-Learned Interatomic Potentials",
+      "canonicalUrl": "https://doi.org/10.1021/prechem.6c00099",
+      "author": "Muyu Lu, Danyang Chen, Fan Yu, Jun Jiang, Linjiang Chen",
+      "description": "Abstract Recent AI systems can autonomously execute scientific workflows and empirical software tasks. We investigate whether an autonomous agent can use evaluation feedback to iteratively develop a scientific model. To address this question, we developed AutoResearch-MLIP, a research protocol in which the agent follows predefined instructions to propose, implement, and evaluate MLIP designs, with outcomes carried forward to guide subsequent iterations. Starting from a simple pair-distance MLIP, each generation selects a parent model by balancing exploration and exploitation, while structured design records guide subsequent proposals. Across 40 generations, the agent explores MLIP designs spanning local message passing, radial representations, scalar-vector states, body-order terms, residu",
+      "language": "en",
+      "publishedAt": "2026-10-29T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1021/prechem.6c00099",
+          "url": "https://doi.org/10.1021/prechem.6c00099"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e01b0226e5e3c6402ab6",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1093%2Fnsr%2Fnwag597",
+          "method": "paper-authors",
+          "excerpt": "Central Software Institute, Huawei Technologies Co., Ltd. , Shanghai 201206 ,"
+        }
+      ],
+      "title": "PDEformer-2: a versatile foundation model for two-dimensional partial differential equations",
+      "canonicalUrl": "https://doi.org/10.1093/nsr/nwag597",
+      "author": "Zhanhong Ye, Zining Liu, Bingyang Wu, Hongjie Jiang, Leheng Chen, Minyan Zhang, Xiang Huang, Qinghe Meng, Jingyuan Zou, Hongsheng Liu, Bin Dong",
+      "description": "Abstract Partial differential equations (PDEs) are fundamental to modeling physical systems. Traditional PDE solvers are often computationally expensive. Neural operators require independent training for different PDEs, and tend to be data-greedy when adapted to new scenarios. To this end, we introduce PDEformer-2, a versatile foundation model for solving diverse two-dimensional PDEs. The model receives the PDE form as input through a flexible computational graph representation and outputs solutions that can be queried at any spatio-temporal point. Pretrained on a 40 TB dataset spanning varied equation types, domains, boundary conditions, variable counts, and time dependence, PDEformer-2 enables instant zero-shot predictions for familiar PDEs and adapts faster to unseen ones than specializ",
+      "language": "en",
+      "publishedAt": "2026-10-12T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1093/nsr/nwag597",
+          "url": "https://doi.org/10.1093/nsr/nwag597"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e8d8b4037f8a22cdb559",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3834485",
+          "method": "paper-authors",
+          "excerpt": "Centre for Software Excellence, Huawei Canada, Markham, Canada"
+        }
+      ],
+      "title": "DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3834485",
+      "author": "Kishanthan Thangarajah, Boyuan Chen, Ahmed E. Hassan",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3832783.3834485",
+          "url": "https://doi.org/10.1145/3832783.3834485"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "eba6e87f914f4ecb44dd",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3821417",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Co Ltd"
+        }
+      ],
+      "title": "Multimodal Diffusion-Based Depth Estimation Framework with Wi-Fi and Vision",
+      "canonicalUrl": "https://doi.org/10.1145/3821417",
+      "author": "Shijie Cheng, Yuchong Gao, Zheng Yang, Guoxuan Chi, Hanyu Liu, Xiao Han",
+      "description": "Depth estimation is essential for applications such as autonomous driving, robotic navigation, and augmented reality. While LiDAR-based and mmWave-based approaches offer high accuracy, they come with substantial deployment costs, whereas monocular vision methods often struggle with precision. To overcome these challenges, we propose WiViD , a novel diffusion-based depth estimation framework that integrates commercial Wi-Fi and visual data. By leveraging the iterative refinement capabilities of diffusion models, WiViD achieves high-precision depth predictions. WiViD features two key encoding modules: the Complex-Valued CSI Encoder (CCE), which extracts rich spatio-temporal features from Wi-Fi signals, and the Residual Image Encoder (RIE), which processes visual data. Additionally, we introd",
+      "language": "en",
+      "publishedAt": "2026-10-17T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3821417",
+          "url": "https://doi.org/10.1145/3821417"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ef0a117b781977a1e6a3",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3834522",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies, Shanghai, China"
+        }
+      ],
+      "title": "No Isolated Evolution, No Blind Search: Memory-Guided Prompt Co-evolution for Industrial Multi-agent Vulnerability Detection",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3834522",
+      "author": "Jie Xu, Zihan Wu, Yun Peng, Chun Yong Chong, Linghan Meng, Kui Liu, Xiaohua Jia",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3832783.3834522",
+          "url": "https://doi.org/10.1145/3832783.3834522"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "efc3ea2b5dbdb82dc61b",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3849868",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Co., Ltd, China"
+        }
+      ],
+      "title": "ChronoSteer: Bridging Large Language Model and Time Series Foundation Model via Synthetic Cross-Modal Alignment Dataset",
+      "canonicalUrl": "https://doi.org/10.1145/3849868",
+      "author": "Chengsen Wang, Qi Qi, Zhongwen Rao, Lujia Pan, Jingyu Wang",
+      "description": "Conventional forecasting methods are trained end-to-end on unimodal time series, which limits their ability to exploit textual information and undermines their generalization in data-scarce scenarios. Recently, large language models (LLMs) and time series foundation models (TSFMs) have demonstrated powerful capabilities in complex textual reasoning and zero-shot temporal modeling, respectively. Integrating these strengths to construct a multimodal time series foundation model that jointly leverages temporal and textual information for zero-shot future inference has emerged as a promising research direction. However, the scarcity of large-scale, high-quality multimodal datasets remains a fundamental obstacle. To address this challenge, we propose ChronoSteer, a decoupled agentic framework t",
+      "language": "en",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3849868",
+          "url": "https://doi.org/10.1145/3849868"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f9e9a9e46584fdf72ca0",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3837358.3837360",
+          "method": "paper-authors",
+          "excerpt": "Wireless Technology Lab, 2012 Labs, Huawei Technologies Co., Ltd., Shenzhen, China"
+        }
+      ],
+      "title": "ns3-agent: Fostering Integrated Perception-Communication-Computing Research for Agentic AI Services via Cross-Platform Co-Simulations",
+      "canonicalUrl": "https://doi.org/10.1145/3837358.3837360",
+      "author": "Chengxiang Mi, Ce Wang, Kai Zhang, Qiao Lan, Peng Liu, Yayu Gao",
+      "publishedAt": "2026-10-18T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1145/3837358.3837360",
+          "url": "https://doi.org/10.1145/3837358.3837360"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fb9f4fa0a4d69be957e0",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://www.noahlab.com.hk/en/research_paper",
+          "method": "official-directory",
+          "excerpt": "华为 · Huawei Noah 论文：Beyond Masks: Efficient, Flexible Diffusion Language Models via Deletion-Insertion Processes"
+        }
+      ],
+      "title": "Beyond Masks: Efficient, Flexible Diffusion Language Models via Deletion-Insertion Processes",
+      "canonicalUrl": "https://openreview.net/forum?id=VbvXjs5f72",
+      "discoveredAt": "2026-11-02T03:36:44.597Z",
+      "updatedAt": "2026-11-02T03:36:44.597Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "noah-official-papers",
+          "externalId": "205",
+          "url": "https://openreview.net/forum?id=VbvXjs5f72"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fd9effcdab9b0bc24c2f",
+      "publisherId": "huawei-research-papers",
+      "companyId": "huawei",
+      "contentType": "paper",
+      "companyIds": [
+        "huawei"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "huawei",
+          "evidenceUrl": "https://api.crossref.org/works/10.1364%2Fprj.605375",
+          "method": "paper-authors",
+          "excerpt": "Huawei Technologies Co., Ltd."
+        }
+      ],
+      "title": "10-mode PM-QPSK transmission over 2320 km enabled by optimized mode permutation strategies",
+      "canonicalUrl": "https://doi.org/10.1364/prj.605375",
+      "author": "Yanze Wang, Xiaochuan Liu, Qiushi Huang, Dechao Zhang, Xutao Wang, Qiang Guo, Tianyu Gao, Zhiqun Yang, Yaping Liu, Haofeng Hu, Rui Zhou, Wei Sun, Mingqing Zuo, Min Yan, Xianyu Zhang, Zhanhua Huang, Dong Wang, Xinhua Xiao, Lin Zhang",
+      "description": "In order to overcome the capacity limits of long-haul communication systems in single-mode fibers, mode-division multiplexing based on few-mode fibers (FMFs) is expected to greatly increase the per-fiber capacity. However, the signal pulse spread, induced by differential mode delay (DMD), and mode-dependent loss (MDL) are limiting factors in long-haul transmission, especially for a high mode count. Here, we develop the guidelines for identifying superior mode permutation strategies (MPSs) among a huge number of MPSs; 25 MPSs are found by taking DMD distribution of the FMFs into account and verified in experiments to greatly mitigate the DMD and MDL. For the first time, to our knowledge, we demonstrate a 15-Gbaud PM-QPSK 10-mode transmission over 2320 km, with a reach extension by 1000 km a",
+      "language": "en",
+      "publishedAt": "2026-10-28T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:02.482Z",
+      "updatedAt": "2026-11-02T03:24:02.482Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-papers-crossref",
+          "externalId": "10.1364/prj.605375",
+          "url": "https://doi.org/10.1364/prj.605375"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

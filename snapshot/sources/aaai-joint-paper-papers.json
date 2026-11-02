@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "aaai-joint-paper-papers",
+    "lastCheckedAt": "2026-11-02T03:40:59.528Z",
+    "lastSuccessAt": "2026-11-02T03:40:59.528Z",
+    "nextRunAt": "2026-11-03T03:40:59.528Z",
+    "consecutiveFailures": 0,
+    "etag": "1882480352",
+    "status": "success",
+    "discovered": 1,
+    "httpStatus": 200
+  }
+}

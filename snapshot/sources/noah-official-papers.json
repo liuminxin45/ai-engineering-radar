@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "noah-official-papers",
+    "lastCheckedAt": "2026-11-02T03:36:44.597Z",
+    "lastSuccessAt": "2026-11-02T03:36:44.597Z",
+    "nextRunAt": "2026-11-03T03:36:44.597Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 10,
+    "httpStatus": 200
+  }
+}

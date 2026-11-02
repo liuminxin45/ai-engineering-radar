@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "ant-hf-papers",
+    "lastCheckedAt": "2026-11-02T03:35:46.158Z",
+    "lastSuccessAt": "2026-11-02T03:35:46.158Z",
+    "nextRunAt": "2026-11-03T03:35:46.158Z",
+    "consecutiveFailures": 0,
+    "etag": "W/\"32043-ITSysUB3eaZs9g9KElJQUSzBqz4\"",
+    "status": "success",
+    "error": "1 条候选未通过严格作者机构复核，已隐藏；仅发布证据完整条目。",
+    "discovered": 4,
+    "httpStatus": 200
+  }
+}

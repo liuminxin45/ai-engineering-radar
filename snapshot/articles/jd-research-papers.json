@@ -1,0 +1,1475 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "0a9ba1003cdd822a14e8",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fitherm55368.2023.10177639",
+          "method": "paper-authors",
+          "excerpt": "JD Technology"
+        }
+      ],
+      "title": "Data Center Power Density Rack Evolution with 54V for Sustainable Computing",
+      "canonicalUrl": "https://doi.org/10.1109/itherm55368.2023.10177639",
+      "author": "Sheng Li, Guofeng Chen, Guilin Wang, Yuehlin Tsai, Jun Zhang, Jialiang Xu, Hongxing Zhou, Ming Gao, Nishi Ahuja, Qing Qiao",
+      "publishedAt": "2023-05-30T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/itherm55368.2023.10177639",
+          "url": "https://doi.org/10.1109/itherm55368.2023.10177639"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "14cbd25d0d3dd570d2a1",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3534678.3539027",
+          "method": "paper-authors",
+          "excerpt": "Southwest Jiaotong University, & JD Technology, Chengdu, China"
+        }
+      ],
+      "title": "Service Time Prediction for Delivery Tasks via Spatial Meta-Learning",
+      "canonicalUrl": "https://doi.org/10.1145/3534678.3539027",
+      "author": "Sijie Ruan, Cheng Long, Zhipeng Ma, Jie Bao, Tianfu He, Ruiyuan Li, Yiheng Chen, Shengnan Wu, Yu Zheng",
+      "publishedAt": "2022-08-14T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3534678.3539027",
+          "url": "https://doi.org/10.1145/3534678.3539027"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "1c3300f5b138d4b4fd5e",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fijcnn60899.2024.10649950",
+          "method": "paper-authors",
+          "excerpt": "JD Technology,JD Intelligent Cities Research & JD iCity,Beijing,China,100176"
+        }
+      ],
+      "title": "VQGG: Generating Adaptive Graphs for Traffic Forecasting via a Vector-Quantized Graph Generator",
+      "canonicalUrl": "https://doi.org/10.1109/ijcnn60899.2024.10649950",
+      "author": "Songyu Ke, Chenyu Wu, Jinjin Guo, Junbo Zhang, Yu Zheng",
+      "publishedAt": "2024-06-30T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/ijcnn60899.2024.10649950",
+          "url": "https://doi.org/10.1109/ijcnn60899.2024.10649950"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "41a4ac308eb9615a608f",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fijcnn60899.2024.10650924",
+          "method": "paper-authors",
+          "excerpt": "JD Logistics,Autonomous Driving Department of X Division,Beijing,China"
+        }
+      ],
+      "title": "Focus on your Geometry: Exploiting the Potential of Multi-Frame Stereo Depth Estimation Pre-training for 3D Object Detection",
+      "canonicalUrl": "https://doi.org/10.1109/ijcnn60899.2024.10650924",
+      "author": "Zichen Wang, Zhuokun Yao, Jianwei Zhang, Ye Zheng, Zhengyuan Zhang, Shuang Deng, Yajing Liu, Hao Liu",
+      "publishedAt": "2024-06-30T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/ijcnn60899.2024.10650924",
+          "url": "https://doi.org/10.1109/ijcnn60899.2024.10650924"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "424e165ab5b18caa9657",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficassp49357.2023.10096298",
+          "method": "paper-authors",
+          "excerpt": "JD AI,Beijing,China"
+        }
+      ],
+      "title": "Improving Disfluency Detection with Multi-Scale Self Attention and Contrastive Learning",
+      "canonicalUrl": "https://doi.org/10.1109/icassp49357.2023.10096298",
+      "author": "Peiying Wang, Chaoqun Duan, Meng Chen, Xiaodong He",
+      "publishedAt": "2023-06-04T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/icassp49357.2023.10096298",
+          "url": "https://doi.org/10.1109/icassp49357.2023.10096298"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4d91b914467ac2123f25",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3580305.3599915",
+          "method": "paper-authors",
+          "excerpt": "Southeast University & JD Logistics, Nanjing, China"
+        }
+      ],
+      "title": "Towards Equitable Assignment: Data-Driven Delivery Zone Partition at Last-mile Logistics",
+      "canonicalUrl": "https://doi.org/10.1145/3580305.3599915",
+      "author": "Baoshen Guo, Shuai Wang, Haotian Wang, Yunhuai Liu, Fanshuo Kong, Desheng Zhang, Tian He",
+      "publishedAt": "2023-08-04T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3580305.3599915",
+          "url": "https://doi.org/10.1145/3580305.3599915"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "54db0744e7bec4982776",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficassp49357.2023.10096387",
+          "method": "paper-authors",
+          "excerpt": "JD AI Research,Beijing,China"
+        }
+      ],
+      "title": "UFO2: A Unified Pre-Training Framework for Online and Offline Speech Recognition",
+      "canonicalUrl": "https://doi.org/10.1109/icassp49357.2023.10096387",
+      "author": "Li Fu, Siqi Li, Qingtao Li, Liping Deng, Fangzhu Li, Lu Fan, Meng Chen, Xiaodong He",
+      "publishedAt": "2023-06-04T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/icassp49357.2023.10096387",
+          "url": "https://doi.org/10.1109/icassp49357.2023.10096387"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "55b15817f69e8643b9f9",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3503161.3548427",
+          "method": "paper-authors",
+          "excerpt": "Beijing Institute of Technology; JD AI, Beijing, China"
+        }
+      ],
+      "title": "Query Prior Matters",
+      "canonicalUrl": "https://doi.org/10.1145/3503161.3548427",
+      "author": "Meihuizi Jia, Xin Shen, Lei Shen, Jinhui Pang, Lejian Liao, Yang Song, Meng Chen, Xiaodong He",
+      "publishedAt": "2022-10-10T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3503161.3548427",
+          "url": "https://doi.org/10.1145/3503161.3548427"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6682eb4f8cada4ab3e4f",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3503161.3551581",
+          "method": "paper-authors",
+          "excerpt": "JD Explore Academy, Beijing, China"
+        }
+      ],
+      "title": "Auto-captions on GIF",
+      "canonicalUrl": "https://doi.org/10.1145/3503161.3551581",
+      "author": "Yingwei Pan, Yehao Li, Jianjie Luo, Jun Xu, Ting Yao, Tao Mei",
+      "publishedAt": "2022-10-10T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3503161.3551581",
+          "url": "https://doi.org/10.1145/3503161.3551581"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6edc2d0dea019fb35b95",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficassp43922.2022.9747056",
+          "method": "paper-authors",
+          "excerpt": "JD AI,Beijing,China"
+        }
+      ],
+      "title": "Gated Multimodal Fusion with Contrastive Learning for Turn-Taking Prediction in Human-Robot Dialogue",
+      "canonicalUrl": "https://doi.org/10.1109/icassp43922.2022.9747056",
+      "author": "Jiudong Yang, Peiying Wang, Yi Zhu, Mingchao Feng, Meng Chen, Xiaodong He",
+      "publishedAt": "2022-05-23T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/icassp43922.2022.9747056",
+          "url": "https://doi.org/10.1109/icassp43922.2022.9747056"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7217bc8f87af87c85a4b",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficassp43922.2022.9747198",
+          "method": "paper-authors",
+          "excerpt": "JD AI,Beijing,China"
+        }
+      ],
+      "title": "Building Robust Spoken Language Understanding by Cross Attention Between Phoneme Sequence and ASR Hypothesis",
+      "canonicalUrl": "https://doi.org/10.1109/icassp43922.2022.9747198",
+      "author": "Zexun Wang, Yuquan Le, Yi Zhu, Yuming Zhao, Mingchao Feng, Meng Chen, Xiaodong He",
+      "publishedAt": "2022-05-23T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/icassp43922.2022.9747198",
+          "url": "https://doi.org/10.1109/icassp43922.2022.9747198"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7bab4d49b700b0bdeeba",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3746252.3761499",
+          "method": "paper-authors",
+          "excerpt": "JD ICity, JD Technology, Beijing, China"
+        }
+      ],
+      "title": "Spatial Semantic-based Enhanced Address Parsing via Adaptive Weighted Learning",
+      "canonicalUrl": "https://doi.org/10.1145/3746252.3761499",
+      "author": "Huiling Qin, Ming Wang, Yuanxun Li, Junbo Zhang, Yu Zheng",
+      "publishedAt": "2025-11-10T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3746252.3761499",
+          "url": "https://doi.org/10.1145/3746252.3761499"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "816b93ecd9d0fb1461fc",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3746252.3761196",
+          "method": "paper-authors",
+          "excerpt": "JD Intelligent Cities Research, Beijing, China and JD iCity, JD Technology, Beijing, China"
+        }
+      ],
+      "title": "General Adaptive Memory Allocation for Learned Bloom Filters",
+      "canonicalUrl": "https://doi.org/10.1145/3746252.3761196",
+      "author": "You Shang, Xiang He, Ruiyuan Li, Yingying Sun, Guanyao Li, Guangchao Yang, Junbo Zhang, Yu Zheng",
+      "publishedAt": "2025-11-10T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3746252.3761196",
+          "url": "https://doi.org/10.1145/3746252.3761196"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8b9c5857f3c84ed8dda2",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3589132.3625632",
+          "method": "paper-authors",
+          "excerpt": "JD iCity - JD Technology, Beijing, China"
+        }
+      ],
+      "title": "Epidemic Amplifier Detection: Finding High-Risk Locations in COVID-19 Cases' Location Sequences via Multi-task Learning",
+      "canonicalUrl": "https://doi.org/10.1145/3589132.3625632",
+      "author": "Yue Hu, Xiaoli Wang, Huimin Ren, Tianfu He, Tan Tang, Huajun He, Chuishi Meng, Boyang Han, Jie Bao, Ying Sun, Gang Li, Quanyi Wang, Peng Yang, Yu Zheng",
+      "publishedAt": "2023-11-13T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3589132.3625632",
+          "url": "https://doi.org/10.1145/3589132.3625632"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "92feb6ad46fad1bcf9e1",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Findin58382.2024.10774373",
+          "method": "paper-authors",
+          "excerpt": "JD Logistics,Beijing,China"
+        }
+      ],
+      "title": "ALNS Framework for Platform-Based Vehicle Scheduling in Logistics Industrial Park CPSs",
+      "canonicalUrl": "https://doi.org/10.1109/indin58382.2024.10774373",
+      "author": "Botong Liu, Yuqiao Wang, Yang Liu, Wenming Zhe, Yan Cheng",
+      "publishedAt": "2024-08-18T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/indin58382.2024.10774373",
+          "url": "https://doi.org/10.1109/indin58382.2024.10774373"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "993f8818c8963837960e",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fcvpr52734.2025.01717",
+          "method": "paper-authors",
+          "excerpt": "JD.com Inc.,JD Explore Academy"
+        }
+      ],
+      "title": "Scaling Down Text Encoders of Text-to-Image Diffusion Models",
+      "canonicalUrl": "https://doi.org/10.1109/cvpr52734.2025.01717",
+      "author": "Lifu Wang, Daqing Liu, Xinchen Liu, Xiaodong He",
+      "publishedAt": "2025-06-10T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/cvpr52734.2025.01717",
+          "url": "https://doi.org/10.1109/cvpr52734.2025.01717"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9c25eaaf5c420ff6e54e",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fbigdata66926.2025.11402227",
+          "method": "paper-authors",
+          "excerpt": "JD Logistics,Beijing,China"
+        }
+      ],
+      "title": "SOP-Guided Co-Enhanced CLIP for Action Recognition in Logistics Warehouse Packaging",
+      "canonicalUrl": "https://doi.org/10.1109/bigdata66926.2025.11402227",
+      "author": "Wenting Qi, Kexin Zhang, Yan Sun, Haichao Zhang, Xiaoyin Xu, Hengle Qin",
+      "publishedAt": "2025-12-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/bigdata66926.2025.11402227",
+          "url": "https://doi.org/10.1109/bigdata66926.2025.11402227"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a6f93c53ed8452336240",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3487553.3524232",
+          "method": "paper-authors",
+          "excerpt": "JD AI Research, China"
+        }
+      ],
+      "title": "A Two-stage User Intent Detection Model on Complicated Utterances with Multi-task Learning",
+      "canonicalUrl": "https://doi.org/10.1145/3487553.3524232",
+      "author": "Shuangyong Song, Xiangyan Chen, Chao Wang, Xiaoguang Yu, Jia Wang, Xiaodong He",
+      "publishedAt": "2022-04-25T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3487553.3524232",
+          "url": "https://doi.org/10.1145/3487553.3524232"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "aba75f55830813f9b2b2",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ftpami.2022.3164083",
+          "method": "paper-authors",
+          "excerpt": "JD Explore Academy, Beijing, China"
+        }
+      ],
+      "title": "Contextual Transformer Networks for Visual Recognition",
+      "canonicalUrl": "https://doi.org/10.1109/tpami.2022.3164083",
+      "author": "Yehao Li, Ting Yao, Yingwei Pan, Tao Mei",
+      "publishedAt": "2023-02-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/tpami.2022.3164083",
+          "url": "https://doi.org/10.1109/tpami.2022.3164083"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b3ad18b5866fcc11f051",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fwsc63780.2024.10838734",
+          "method": "paper-authors",
+          "excerpt": "JD Logistics,Department of OpsAI,Beijing,CHINA"
+        }
+      ],
+      "title": "Catalyzing Intelligent Logistics System Simulation with Data-Driven Decision Strategies",
+      "canonicalUrl": "https://doi.org/10.1109/wsc63780.2024.10838734",
+      "author": "Shiqi Hao, Yang Liu, Yu Wang, Xiaopeng Huang, Muchuan Zhao, Xiaotian Zhuang",
+      "publishedAt": "2024-12-15T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/wsc63780.2024.10838734",
+          "url": "https://doi.org/10.1109/wsc63780.2024.10838734"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b5c12d7a50c67c842e82",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficassp55912.2026.11462669",
+          "method": "paper-authors",
+          "excerpt": "JD AI Research"
+        }
+      ],
+      "title": "PAC: Pronunciation-Aware Contextualized Large Language Model-Based Automatic Speech Recognition",
+      "canonicalUrl": "https://doi.org/10.1109/icassp55912.2026.11462669",
+      "author": "Li Fu, Yu Xin, Sunlu Zeng, Lu Fan, Youzheng Wu, Xiaodong He",
+      "publishedAt": "2026-05-03T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/icassp55912.2026.11462669",
+          "url": "https://doi.org/10.1109/icassp55912.2026.11462669"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b956dc806adc864a6829",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ftkde.2021.3138195",
+          "method": "paper-authors",
+          "excerpt": "JD iCity, JD Technology and JD Intelligent Cities Research, Beijing, China"
+        }
+      ],
+      "title": "Crowd-Sensing Enhanced Parking Patrol Using Sharing Bikes’ Trajectories",
+      "canonicalUrl": "https://doi.org/10.1109/tkde.2021.3138195",
+      "author": "Tianfu He, Jie Bao, Yexin Li, Hui He, Yu Zheng",
+      "publishedAt": "2023-04-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/tkde.2021.3138195",
+          "url": "https://doi.org/10.1109/tkde.2021.3138195"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bff9943f763b99c95e9f",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3581783.3613460",
+          "method": "paper-authors",
+          "excerpt": "JD Explore Academy, Beijing, China"
+        }
+      ],
+      "title": "FastReID: A Pytorch Toolbox for General Instance Re-identification",
+      "canonicalUrl": "https://doi.org/10.1145/3581783.3613460",
+      "author": "Lingxiao He, Xingyu Liao, Wu Liu, Xinchen Liu, Peng Cheng, Tao Mei",
+      "publishedAt": "2023-10-26T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3581783.3613460",
+          "url": "https://doi.org/10.1145/3581783.3613460"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c5ea9f6e50177c9ed327",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3580305.3599952",
+          "method": "paper-authors",
+          "excerpt": "Southwest Jiaotong University & JD iCity, JD Technology, Chengdu, China"
+        }
+      ],
+      "title": "SAInf: Stay Area Inference of Vehicles using Surveillance Camera Records",
+      "canonicalUrl": "https://doi.org/10.1145/3580305.3599952",
+      "author": "Zhipeng Ma, Chuishi Meng, Huimin Ren, Sijie Ruan, Jie Bao, Xiaoting Wang, Tianrui Li, Yu Zheng",
+      "publishedAt": "2023-08-04T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3580305.3599952",
+          "url": "https://doi.org/10.1145/3580305.3599952"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c95d576b78b50de33338",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3637528.3671608",
+          "method": "paper-authors",
+          "excerpt": "Southwest Jiaotong University & JD iCity, JD Technology, Chengdu, China"
+        }
+      ],
+      "title": "Spatio-Temporal Consistency Enhanced Differential Network for Interpretable Indoor Temperature Prediction",
+      "canonicalUrl": "https://doi.org/10.1145/3637528.3671608",
+      "author": "Dekang Qi, Xiuwen Yi, Chengjie Guo, Yanyong Huang, Junbo Zhang, Tianrui Li, Yu Zheng",
+      "publishedAt": "2024-08-24T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3637528.3671608",
+          "url": "https://doi.org/10.1145/3637528.3671608"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e82116314ccd3695d3df",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficassp49660.2025.10890533",
+          "method": "paper-authors",
+          "excerpt": "JD AI Research,Beijing,China"
+        }
+      ],
+      "title": "UME: Upcycling Mixture-of-Experts for Scalable and Efficient Automatic Speech Recognition",
+      "canonicalUrl": "https://doi.org/10.1109/icassp49660.2025.10890533",
+      "author": "Li Fu, Shanyong Yu, Siqi Li, Lu Fan, Youzheng Wu, Xiaodong He",
+      "publishedAt": "2025-04-06T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/icassp49660.2025.10890533",
+          "url": "https://doi.org/10.1109/icassp49660.2025.10890533"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "edfc3f839580c47ffcec",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3583780.3615197",
+          "method": "paper-authors",
+          "excerpt": "JD AI Research, Beijing, China"
+        }
+      ],
+      "title": "POSPAN: Position-Constrained Span Masking for Language Model Pre-training",
+      "canonicalUrl": "https://doi.org/10.1145/3583780.3615197",
+      "author": "Zhenyu Zhang, Lei Shen, Yuming Zhao, Meng Chen, Xiaodong He",
+      "publishedAt": "2023-10-21T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3583780.3615197",
+          "url": "https://doi.org/10.1145/3583780.3615197"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f0531c272d60b7fe52e3",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3534678.3539024",
+          "method": "paper-authors",
+          "excerpt": "JD Logistics, Beijing, China"
+        }
+      ],
+      "title": "Three-Stage Root Cause Analysis for Logistics Time Efficiency via Explainable Machine Learning",
+      "canonicalUrl": "https://doi.org/10.1145/3534678.3539024",
+      "author": "Shiqi Hao, Yang Liu, Yu Wang, Yuan Wang, Wenming Zhe",
+      "publishedAt": "2022-08-14T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3534678.3539024",
+          "url": "https://doi.org/10.1145/3534678.3539024"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fa8d1327d8721336500c",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fcvpr52734.2025.02235",
+          "method": "paper-authors",
+          "excerpt": "JD Explore Academy"
+        }
+      ],
+      "title": "HOIGen-1M: A Large-scale Dataset for Human-Object Interaction Video Generation",
+      "canonicalUrl": "https://doi.org/10.1109/cvpr52734.2025.02235",
+      "author": "Kun Liu, Qi Liu, Xinchen Liu, Jie Li, Yongdong Zhang, Jiebo Luo, Xiaodong He, Wu Liu",
+      "publishedAt": "2025-06-10T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1109/cvpr52734.2025.02235",
+          "url": "https://doi.org/10.1109/cvpr52734.2025.02235"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fffd14243b358a7f8360",
+      "publisherId": "jd-research-papers",
+      "companyId": "jd",
+      "contentType": "paper",
+      "companyIds": [
+        "jd"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "jd",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3534678.3539028",
+          "method": "paper-authors",
+          "excerpt": "JD Intelligent Cities Research & JD Technology, Beijing, China"
+        }
+      ],
+      "title": "Precision CityShield Against Hazardous Chemicals Threats via Location Mining and Self-Supervised Learning",
+      "canonicalUrl": "https://doi.org/10.1145/3534678.3539028",
+      "author": "Jiahao Ji, Jingyuan Wang, Junjie Wu, Boyang Han, Junbo Zhang, Yu Zheng",
+      "publishedAt": "2022-08-14T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:26.716Z",
+      "updatedAt": "2026-11-02T03:24:26.716Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-papers-crossref",
+          "externalId": "10.1145/3534678.3539028",
+          "url": "https://doi.org/10.1145/3534678.3539028"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

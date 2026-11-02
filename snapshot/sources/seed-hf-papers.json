@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "seed-hf-papers",
+    "lastCheckedAt": "2026-11-02T03:29:38.979Z",
+    "lastSuccessAt": "2026-11-02T03:29:38.979Z",
+    "nextRunAt": "2026-11-03T03:29:38.979Z",
+    "consecutiveFailures": 0,
+    "etag": "W/\"583ed-IRXvCJaYqp99GggROWsl0ybqOaE\"",
+    "status": "success",
+    "error": "部分论文候选缺少可核验机构信息，已跳过。",
+    "discovered": 1,
+    "httpStatus": 200
+  }
+}

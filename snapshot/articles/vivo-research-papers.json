@@ -1,0 +1,1492 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "019dbfc8926ef5511f45",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.36227%2Ftechrxiv.176107519.98547757%2Fv1",
+          "method": "paper-authors",
+          "excerpt": "The University of Queensland 3 vivo Mobile Communication Co"
+        }
+      ],
+      "title": "REFINESHOT: RETHINKING CINEMATOGRAPHY UNDERSTANDING WITH FOUNDATIONAL SKILL EVALUATION",
+      "canonicalUrl": "https://doi.org/10.36227/techrxiv.176107519.98547757/v1",
+      "author": "Hang Wu, Yujun Cai, Haonan Ge, Hongkai Chen, Ming-Hsuan Yang, Yiwei Wang",
+      "description": "Cinematography understanding refers to the ability to recognize not only the visual content of a scene but also the cinematic techniques that shape narrative meaning. This capability is attracting increasing attention, as it enhances multimodal understanding in real-world applications and underpins coherent content creation in film and media. As the most comprehensive benchmark for this task, ShotBench spans a wide range of cinematic concepts and VQA-style evaluations, with ShotVL achieving state-of-the-art results on it. However, our analysis reveals that ambiguous option design in ShotBench and ShotVL's shortcomings in reasoning consistency and instruction adherence undermine evaluation reliability, limiting fair comparison and hindering future progress. To overcome these issues, we syst",
+      "publishedAt": "2025-10-21T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.36227/techrxiv.176107519.98547757/v1",
+          "url": "https://doi.org/10.36227/techrxiv.176107519.98547757/v1"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "06f414344a64364dd457",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1080%2F00221309.2025.2478002",
+          "method": "paper-authors",
+          "excerpt": "Software Quality Department, vivo Mobile Communication Co., Ltd."
+        }
+      ],
+      "title": "If colors have gender: Color-gender stereotype and the impact on impression evaluation and interpersonal interaction",
+      "canonicalUrl": "https://doi.org/10.1080/00221309.2025.2478002",
+      "author": "Chenyu Wang, Chengquan Zhu, Bin Zuo",
+      "language": "en",
+      "publishedAt": "2025-03-24T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1080/00221309.2025.2478002",
+          "url": "https://doi.org/10.1080/00221309.2025.2478002"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0942e356f1bc0073c6b1",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficmsp68723.2025.11407854",
+          "method": "paper-authors",
+          "excerpt": "Vivo Mobile Communication Co., Ltd,Communications Research Institute,Beijing,China"
+        }
+      ],
+      "title": "Framework and Implementation of a Frequency Hopping Bistatic Integrated Sensing and Communication for Indoor Single Dynamic Target Localization",
+      "canonicalUrl": "https://doi.org/10.1109/icmsp68723.2025.11407854",
+      "author": "Xingbing Cao, Quanhua Cheng, Xiaolin Li, Baolong Chen, Shengli Ding",
+      "publishedAt": "2025-11-28T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/icmsp68723.2025.11407854",
+          "url": "https://doi.org/10.1109/icmsp68723.2025.11407854"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0d0f0addebaa826f0a2c",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fjsen.2025.3569691",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Company Ltd., Hangzhou, China"
+        }
+      ],
+      "title": "NIR-Guided Facial Image Beautification",
+      "canonicalUrl": "https://doi.org/10.1109/jsen.2025.3569691",
+      "author": "Zili Zhou, Zhu Yu, Jiacheng Ying, Xue Zhang, Si-Yuan Cao, Hong Gu, Huaqi Zhang, Hui-Liang Shen",
+      "publishedAt": "2025-07-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/jsen.2025.3569691",
+          "url": "https://doi.org/10.1109/jsen.2025.3569691"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "148804e0bbacf9100863",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fapsipaasc63619.2025.10848923",
+          "method": "paper-authors",
+          "excerpt": "AI Lab,Vivo Mobile Communication Co,. Ltd,Nanjing,China"
+        }
+      ],
+      "title": "SDNet: Noise-Robust Bandwidth Extension under Flexible Sampling Rates",
+      "canonicalUrl": "https://doi.org/10.1109/apsipaasc63619.2025.10848923",
+      "author": "Junkang Yang, Hongqing Liu, Lu Gan, Yi Zhou, Xing Li, Jie Jia, Jinzhuo Yao",
+      "publishedAt": "2024-12-03T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/apsipaasc63619.2025.10848923",
+          "url": "https://doi.org/10.1109/apsipaasc63619.2025.10848923"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2ee1883b1e8cc0d2f0e6",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fjsen.2025.3573031",
+          "method": "paper-authors",
+          "excerpt": "Vivo Mobile Communication Company Ltd., Shenzhen, China"
+        }
+      ],
+      "title": "Weighted Sum-Rate Optimal in Near-Field THz-MIMO Systems: A Multigroup IRS- Assisted Hybrid Beamforming Approach",
+      "canonicalUrl": "https://doi.org/10.1109/jsen.2025.3573031",
+      "author": "Rui Tang, Zufan Zhang, Chenlu Zhang",
+      "publishedAt": "2025-07-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/jsen.2025.3573031",
+          "url": "https://doi.org/10.1109/jsen.2025.3573031"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2eedcbf7294e312a087e",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficcv51701.2025.00887",
+          "method": "paper-authors",
+          "excerpt": "Vivo Mobile Communication Co., Ltd."
+        }
+      ],
+      "title": "BokehDiff: Neural Lens Blur with One-Step Diffusion",
+      "canonicalUrl": "https://doi.org/10.1109/iccv51701.2025.00887",
+      "author": "Chengxuan Zhu, Qingnan Fan, Qi Zhang, Jinwei Chen, Huaqi Zhang, Chao Xu, Boxin Shi",
+      "publishedAt": "2025-10-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/iccv51701.2025.00887",
+          "url": "https://doi.org/10.1109/iccv51701.2025.00887"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "37e65b4ca64f99e3e81b",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficcv51701.2025.02273",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Co., Ltd"
+        }
+      ],
+      "title": "ViM-VQ: Efficient Post-Training Vector Quantization for Visual Mamba",
+      "canonicalUrl": "https://doi.org/10.1109/iccv51701.2025.02273",
+      "author": "Juncan Deng, Shuaiting Li, Zeyu Wang, Kedong Xu, Hong Gu, Kejie Huang",
+      "publishedAt": "2025-10-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/iccv51701.2025.02273",
+          "url": "https://doi.org/10.1109/iccv51701.2025.02273"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "46f6ab8f2d85d16c73c4",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fsensors59705.2025.11330403",
+          "method": "paper-authors",
+          "excerpt": "Center for Image Sensor Technology, vivo Mobile Communication Co., Ltd.,Shenzhen,Guangdong,China"
+        }
+      ],
+      "title": "A 120dB Dynamic Range CMOS Image Sensor with Dual Programmable Conversion Gains and Pixelwise QCG Modulation for Single-Frame Adaptive QCG-HDR Imaging",
+      "canonicalUrl": "https://doi.org/10.1109/sensors59705.2025.11330403",
+      "author": "Yi Luo, Shahriar Mirabbasi",
+      "publishedAt": "2025-10-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/sensors59705.2025.11330403",
+          "url": "https://doi.org/10.1109/sensors59705.2025.11330403"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4b1a37e59a7c38551681",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo",
+        "ant"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3746027.3755165",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Co., Ltd., Hangzhou, China"
+        },
+        {
+          "companyId": "ant",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3746027.3755165",
+          "method": "paper-authors",
+          "excerpt": "Ant Group, Hangzhou, China"
+        }
+      ],
+      "title": "AuthFace: Towards Authentic Blind Face Restoration with Face-oriented Generative Diffusion Prior",
+      "canonicalUrl": "https://doi.org/10.1145/3746027.3755165",
+      "author": "Guoqiang Liang, Qingnan Fan, Bingtao Fu, Jinwei Chen, Hong Gu, Lin Wang",
+      "publishedAt": "2025-10-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1145/3746027.3755165",
+          "url": "https://doi.org/10.1145/3746027.3755165"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4cdf33e3b3d26ddf71f4",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficcv51701.2025.01413",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Co., Ltd."
+        }
+      ],
+      "title": "SDMATTE: Grafting Diffusion Models for Interactive Matting",
+      "canonicalUrl": "https://doi.org/10.1109/iccv51701.2025.01413",
+      "author": "Longfei Huang, Yu Liang, Hao Zhang, Jinwei Chen, Wei Dong, Lunde Chen, Wanyu Liu, Bo Li, Peng-Tao Jiang",
+      "publishedAt": "2025-10-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/iccv51701.2025.01413",
+          "url": "https://doi.org/10.1109/iccv51701.2025.01413"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "532b448252f555fdf223",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fcvpr52734.2025.02158",
+          "method": "paper-authors",
+          "excerpt": "Vivo Mobile Communication Co. Ltd"
+        }
+      ],
+      "title": "TSD-SR: One-Step Diffusion with Target Score Distillation for Real-World Image Super-Resolution",
+      "canonicalUrl": "https://doi.org/10.1109/cvpr52734.2025.02158",
+      "author": "Linwei Dong, Qingnan Fan, Yihong Guo, Zhonghao Wang, Qi Zhang, Jinwei Chen, Yawei Luo, Changqing Zou",
+      "publishedAt": "2025-06-10T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/cvpr52734.2025.02158",
+          "url": "https://doi.org/10.1109/cvpr52734.2025.02158"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5bd050a3a8c823dc6984",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3799902.3811065",
+          "method": "paper-authors",
+          "excerpt": "vivo BlueImage Lab, vivo Mobile Communication Co., Ltd., Shanghai, China"
+        }
+      ],
+      "title": "VeraRetouch: A Lightweight Fully Differentiable Framework for Multi-Task Reasoning Photo Retouching",
+      "canonicalUrl": "https://doi.org/10.1145/3799902.3811065",
+      "author": "Yihong Guo, Youwei Lyu, Jiajun Tang, Yizhuo Zhou, Hongliang Wang, Jinwei Chen, Changqing Zou, Qingnan Fan",
+      "publishedAt": "2026-07-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1145/3799902.3811065",
+          "url": "https://doi.org/10.1145/3799902.3811065"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "63b70678047f4e061b32",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficcvit63928.2024.10872516",
+          "method": "paper-authors",
+          "excerpt": "Vivo Mobile Communication Co., Ltd,Hangzhou,China"
+        }
+      ],
+      "title": "An Image-to-image Target Reconstruction Network for Capacitively Coupled Electrical Resistance Tomography Based on Transfer Learning",
+      "canonicalUrl": "https://doi.org/10.1109/iccvit63928.2024.10872516",
+      "author": "Chunfen Luo, Yandan Jiang",
+      "publishedAt": "2024-11-24T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/iccvit63928.2024.10872516",
+          "url": "https://doi.org/10.1109/iccvit63928.2024.10872516"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "66316646f6e3ddbca871",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fap-s%2Fcnc-usnc-ursi55537.2025.11266511",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Co., Ltd.,Dongguan,Guangdong Province,China"
+        }
+      ],
+      "title": "Dual-Band Omnidirectional Folded Waveguide Antenna for Handset Devices",
+      "canonicalUrl": "https://doi.org/10.1109/ap-s/cnc-usnc-ursi55537.2025.11266511",
+      "author": "Yunfeng Dong, Yue Qin",
+      "publishedAt": "2025-07-13T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/ap-s/cnc-usnc-ursi55537.2025.11266511",
+          "url": "https://doi.org/10.1109/ap-s/cnc-usnc-ursi55537.2025.11266511"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6d69eff6148e6c006d47",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent",
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3746027.3754698",
+          "method": "paper-authors",
+          "excerpt": "Tencent, Singapore, Singapore"
+        },
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3746027.3754698",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Co., Ltd, Hangzhou, China"
+        }
+      ],
+      "title": "DSDNet: Raw Domain Demoiréing via Dual Color-Space Synergy",
+      "canonicalUrl": "https://doi.org/10.1145/3746027.3754698",
+      "author": "Qirui Yang, Fangpu Zhang, Yeying Jin, Qihua Cheng, Pengtao Jiang, Huanjing Yue, Jingyu Yang",
+      "publishedAt": "2025-10-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1145/3746027.3754698",
+          "url": "https://doi.org/10.1145/3746027.3754698"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8178f3c7904f6112381f",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fap-s%2Fcnc-usnc-ursi55537.2025.11266426",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Co.Ltd,Dongguan,Guangdong Province,China"
+        }
+      ],
+      "title": "A Novel Design of Low-SAR and Wideband Antenna for 5G Mobile Phones",
+      "canonicalUrl": "https://doi.org/10.1109/ap-s/cnc-usnc-ursi55537.2025.11266426",
+      "author": "Yue Qin, Yunfeng Dong",
+      "publishedAt": "2025-07-13T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/ap-s/cnc-usnc-ursi55537.2025.11266426",
+          "url": "https://doi.org/10.1109/ap-s/cnc-usnc-ursi55537.2025.11266426"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8a949f03cf5c35c9ce58",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficcv51701.2025.01291",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Co., Ltd"
+        }
+      ],
+      "title": "Proxy-Bridged Game Transformer for Interactive Extreme Motion Prediction",
+      "canonicalUrl": "https://doi.org/10.1109/iccv51701.2025.01291",
+      "author": "Yanwen Fang, Wenqi Jia, Xu Cao, Peng-Tao Jiang, Guodong Li, Jintai Chen",
+      "publishedAt": "2025-10-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/iccv51701.2025.01291",
+          "url": "https://doi.org/10.1109/iccv51701.2025.01291"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8b34c6e3a194a1c17439",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.36227%2Ftechrxiv.175086178.86227111%2Fv1",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Co"
+        }
+      ],
+      "title": "Structured Attention Matters to Multimodal LLMs in Document Understanding",
+      "canonicalUrl": "https://doi.org/10.36227/techrxiv.175086178.86227111/v1",
+      "author": "Chang Liu, Hongkai Chen, Yujun Cai, Hang Wu, Qingwen Ye, Ming-Hsuan Yang, Yiwei Wang",
+      "description": "Document understanding remains a significant challenge for multimodal large language models (MLLMs). While previous research has primarily focused on locating evidence pages through precise multimodal queries, our work investigates a fundamental yet overlooked aspect: how input format influences document comprehension performance. Through systematic analysis, we discover that raw OCR text often impairs rather than improves MLLMs' performance, which is a counterintuitive finding we attribute to attention dispersion and structure loss. To further substantiate our hypothesis, we propose a novel structurepreserving approach that encodes document elements using the LATEX paradigm, maintaining the hierarchical organization and spatial relationships critical for comprehension. Our attention analy",
+      "publishedAt": "2025-06-25T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.36227/techrxiv.175086178.86227111/v1",
+          "url": "https://doi.org/10.36227/techrxiv.175086178.86227111/v1"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "92d90f56be7690ba6538",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficsps66615.2025.11347986",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Co., Ltd.,Shenzhen,China"
+        }
+      ],
+      "title": "A Signal Processing Framework for Cuffless Blood Pressure Estimation Using Convolutional Blind Source Separation on Multi-Wavelength Photoplethysmography Signals",
+      "canonicalUrl": "https://doi.org/10.1109/icsps66615.2025.11347986",
+      "author": "Yuke Zheng, Yuchen Hu, Ruishi Zhou, Long Yu, Hongwei Wang, Xuesong Ye, Congcong Zhou",
+      "publishedAt": "2025-10-24T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/icsps66615.2025.11347986",
+          "url": "https://doi.org/10.1109/icsps66615.2025.11347986"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "96df43d1e2d62a2b550d",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fasp-dac66049.2026.11420794",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Co., Ltd,IC Department,Shanghai,China"
+        }
+      ],
+      "title": "ALMA: Adaptive Co-optimization of Loop–Memory Uneven Mappings and Architectures for DNN Accelerators",
+      "canonicalUrl": "https://doi.org/10.1109/asp-dac66049.2026.11420794",
+      "author": "Xiaodong Liu, Zhihui Wang, Xiangcong Kong, Weixin Zhou, Xiaofei Xia, Yuqi Jiang",
+      "publishedAt": "2026-01-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/asp-dac66049.2026.11420794",
+          "url": "https://doi.org/10.1109/asp-dac66049.2026.11420794"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9d4fe84ccd29fdded5a7",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficcv51701.2025.01269",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Co., Ltd"
+        }
+      ],
+      "title": "MOERL: When Mixture-Of-Experts Meet Reinforcement Learning for Adverse Weather Image Restoration",
+      "canonicalUrl": "https://doi.org/10.1109/iccv51701.2025.01269",
+      "author": "Tao Wang, Peiwen Xia, Bo Li, Peng-Tao Jiang, Zhe Kong, Kaihao Zhang, Tong Lu, Wenhan Luo",
+      "publishedAt": "2025-10-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/iccv51701.2025.01269",
+          "url": "https://doi.org/10.1109/iccv51701.2025.01269"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9e505e907ba159c766e1",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Faixvr67263.2026.00033",
+          "method": "paper-authors",
+          "excerpt": "Vivo Mobile Communication Co. Ltd.,Shenzhen"
+        }
+      ],
+      "title": "AI-Driven Prognosis Visualization and Behavioral Change Induction for Diabetic Foot Ulcers via XR Glasses",
+      "canonicalUrl": "https://doi.org/10.1109/aixvr67263.2026.00033",
+      "author": "Jason Hahne, Ma Chen, Kanzhi Wu, Wei Li",
+      "publishedAt": "2026-01-26T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/aixvr67263.2026.00033",
+          "url": "https://doi.org/10.1109/aixvr67263.2026.00033"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a9907810891dcfafe515",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fjiot.2025.3580803",
+          "method": "paper-authors",
+          "excerpt": "Communication Research Institute, vivo Mobile Communication Company Ltd., Chaoyang, China"
+        }
+      ],
+      "title": "Bi-Static ISAC With Asynchronous Transceivers: Mechanism, Solution, and Field Test",
+      "canonicalUrl": "https://doi.org/10.1109/jiot.2025.3580803",
+      "author": "Shengli Ding, Baolong Chen, Dajie Jiang, Junjie Tan, Yannan Yuan, Jianzhi Li, Jian Yao, Fei Qin, Daqing Zhang, Chih-Lin Ⅰ",
+      "publishedAt": "2025-09-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/jiot.2025.3580803",
+          "url": "https://doi.org/10.1109/jiot.2025.3580803"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c315272ca692ced8bb0b",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fjiot.2026.3686456",
+          "method": "paper-authors",
+          "excerpt": "Communication Research Institute, vivo Mobile Communication Company Ltd., Beijing, China"
+        }
+      ],
+      "title": "A Synchronization Solution for Bistatic ISAC Under NLOS With Rich Multipaths",
+      "canonicalUrl": "https://doi.org/10.1109/jiot.2026.3686456",
+      "author": "Shengli Ding, Baolong Chen, Yannan Yuan, Junjie Tan, Dajie Jiang, Chih-Lin, Daqing Zhang",
+      "publishedAt": "2026-07-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/jiot.2026.3686456",
+          "url": "https://doi.org/10.1109/jiot.2026.3686456"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "daf8e02c7b07ba7955ab",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fcvpr52734.2025.01178",
+          "method": "paper-authors",
+          "excerpt": "Vivo Mobile Communication Co., Ltd"
+        }
+      ],
+      "title": "OSDFace: One-Step Diffusion Model for Face Restoration",
+      "canonicalUrl": "https://doi.org/10.1109/cvpr52734.2025.01178",
+      "author": "Jingkai Wang, Jue Gong, Lin Zhang, Zheng Chen, Xing Liu, Hong Gu, Yutong Liu, Yulun Zhang, Xiaokang Yang",
+      "publishedAt": "2025-06-10T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/cvpr52734.2025.01178",
+          "url": "https://doi.org/10.1109/cvpr52734.2025.01178"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e0c7a3217aaa49a12536",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficce67443.2026.11449624",
+          "method": "paper-authors",
+          "excerpt": "Vivo Mobile Communication Co. Ltd.,Shenzhen,China"
+        }
+      ],
+      "title": "Proactive Dermatosis Management and Status Updates via XR Glasses and Machine Learning-Based Skin Lesion Detection",
+      "canonicalUrl": "https://doi.org/10.1109/icce67443.2026.11449624",
+      "author": "Jason Hahne, Ma Chen, Kanzhi Wu, Wei Li",
+      "publishedAt": "2026-02-03T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/icce67443.2026.11449624",
+          "url": "https://doi.org/10.1109/icce67443.2026.11449624"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e4b75119decadfaddaed",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficcv51701.2025.02201",
+          "method": "paper-authors",
+          "excerpt": "vivo Mobile Communication Co., Ltd"
+        }
+      ],
+      "title": "SSVQ: Unleashing the Potential of Vector Quantization with Sign-Splitting",
+      "canonicalUrl": "https://doi.org/10.1109/iccv51701.2025.02201",
+      "author": "Shuaiting Li, Juncan Deng, Chengxuan Wang, Kedong Xu, Rongtao Deng, Hong Gu, Haibin Shen, Kejie Huang",
+      "publishedAt": "2025-10-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/iccv51701.2025.02201",
+          "url": "https://doi.org/10.1109/iccv51701.2025.02201"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e631d8a387542f230a02",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ftrustcom63139.2024.00228",
+          "method": "paper-authors",
+          "excerpt": "Vivo Mobile Communication Co., Ltd.,Dongguan,China"
+        }
+      ],
+      "title": "From Liberty to 1984: A Methodology for Systematically Deteriorating LLM Outputs through Habituation Tendencies",
+      "canonicalUrl": "https://doi.org/10.1109/trustcom63139.2024.00228",
+      "author": "Dong Zhang, Zhiyuan Hu, Huijun Chen, Guangming Liu, YinFeng Zheng, Jinghui Lu",
+      "publishedAt": "2024-12-17T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/trustcom63139.2024.00228",
+          "url": "https://doi.org/10.1109/trustcom63139.2024.00228"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "eadd953c19ddd31a54f9",
+      "publisherId": "vivo-research-papers",
+      "companyId": "vivo",
+      "contentType": "paper",
+      "companyIds": [
+        "vivo"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "vivo",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fcvpr52734.2025.00562",
+          "method": "paper-authors",
+          "excerpt": "Vivo Mobile Communication Co., Ltd"
+        }
+      ],
+      "title": "GaussHDR: High Dynamic Range Gaussian Splatting via Learning Unified 3D and 2D Local Tone Mapping",
+      "canonicalUrl": "https://doi.org/10.1109/cvpr52734.2025.00562",
+      "author": "Jinfeng Liu, Lingtong Kong, Bo Li, Dan Xu",
+      "publishedAt": "2025-06-10T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-papers-crossref",
+          "externalId": "10.1109/cvpr52734.2025.00562",
+          "url": "https://doi.org/10.1109/cvpr52734.2025.00562"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

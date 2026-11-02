@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "ctrip-papers-crossref",
+    "lastCheckedAt": "2026-11-02T03:24:30.791Z",
+    "lastSuccessAt": "2026-11-02T03:24:30.791Z",
+    "nextRunAt": "2026-11-03T03:24:30.791Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 9,
+    "httpStatus": 200
+  }
+}

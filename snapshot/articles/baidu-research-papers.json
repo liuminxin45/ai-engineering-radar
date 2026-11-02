@@ -1,0 +1,1737 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "0c78ab5656882dc8ae66",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3805712.3809941",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "Is a Busy Search Agent a Good One? Overthinking and Overretrieval at Scale",
+      "canonicalUrl": "https://doi.org/10.1145/3805712.3809941",
+      "author": "Xin Liu, Ruqing Zhang, Yu-An Liu, Lixin Su, Jiafeng Guo, Xueqi Cheng",
+      "publishedAt": "2026-07-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3805712.3809941",
+          "url": "https://doi.org/10.1145/3805712.3809941"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "260f35e5d81d2526c843",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818469",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "RELATE: A Reinforcement-Learning-Enhanced LLM Framework for Advertising Text Generation",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818469",
+      "author": "Jinfang Wang, Jiajie Liu, Jianwei Wu, Ziqin Luo, Zhen Chen, Chunlei Li, Biao Han, Tao Deng, Yi Li, Shuanglong Li, Lin Liu",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3770855.3818469",
+          "url": "https://doi.org/10.1145/3770855.3818469"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "27f34491de3aab0b8cba",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1364%2Foe.608298",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc."
+        }
+      ],
+      "title": "Attention-constrained diffusion-prior super-resolution for scan-free terahertz focal-plane-array imaging",
+      "canonicalUrl": "https://doi.org/10.1364/oe.608298",
+      "author": "Xinhua Li, Jiandong Sun, Wanqian Zhang, Bingyu Duan, Yihao Li, Shengji Wang, Yinong Xie, Lin Liu, Xiaoping Zheng",
+      "description": "Compact scan-free terahertz focal-plane arrays provide full-frame acquisition, but the measured images are constrained by diffraction blur, finite pixel integration, array nonuniformity, and weak material contrast. We report TeraDiff, a training-free super-resolution method that uses a frozen latent diffusion model as a measurement-constrained prior for THz focal-plane-array reconstruction. A forward model and a parameterized blur simulation show that fixed point-spread-function inversion becomes unstable when the effective transfer function is unknown. TeraDiff constructs attention constraints from the measured frame and applies them during denoising, with gradients applied to the latent variable rather than to model weights. Experiments were performed on a 290–330 GHz multiplier-chain pl",
+      "language": "en",
+      "publishedAt": "2026-08-18T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1364/oe.608298",
+          "url": "https://doi.org/10.1364/oe.608298"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "33e832923cbad55062da",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3842745",
+          "method": "paper-authors",
+          "excerpt": "Baidu, P. R. China"
+        }
+      ],
+      "title": "DynaStyle: Mitigating Content Leakage by Dynamic Layer Routing in Stylized Image Generation",
+      "canonicalUrl": "https://doi.org/10.1145/3842745",
+      "author": "Sheng Shi, Bing Hao, Peng Wang, Jianping Fan",
+      "description": "Diffusion models have become a dominant framework for image generation, demonstrating greater stability and performance compared to generative adversarial networks (GANs). Recent developments in text-to-image diffusion models have significantly enhanced capabilities in style transfer. However, existing adapter-based approaches face significant challenges in disentangling content and style representations. We observe that current methods, such as IP-Adapter, are prone to substantial content leakage, wherein features from the style image interfere with the integrity of the target content, leading to semantic distortions and degradation in output quality. This issue arises primarily from fixed-weight cross-attention mechanisms that fail to account for the hierarchical structure of the diffusi",
+      "language": "en",
+      "publishedAt": "2026-09-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3842745",
+          "url": "https://doi.org/10.1145/3842745"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "42ba3632b312ef922af3",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3817586",
+          "method": "paper-authors",
+          "excerpt": "Frontier Research Department, Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "Clarify-Then-Search: A Clarification Benchmark for Deep Search with End-to-End Nugget Restoration",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3817586",
+      "author": "Deqiang Huang, Jingbo Zhou, Xinjiang Lu, Tong Xu, Hua Wu, Enhong Chen",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3770855.3817586",
+          "url": "https://doi.org/10.1145/3770855.3817586"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5482c01a88d0c2bd1b57",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://arxiv.org/html/2606.07299",
+          "method": "paper-authors",
+          "excerpt": "DuMate Team Baidu AI Cloud"
+        }
+      ],
+      "title": "DuMate-DeepResearch: An Auditable Multi-Agent System with Recursive Search and Rubric-Grounded Reasoning",
+      "canonicalUrl": "https://arxiv.org/abs/2606.07299",
+      "author": "DuMate Team , Baidu AI Cloud",
+      "publishedAt": "2026-06-04T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:29:38.985Z",
+      "updatedAt": "2026-11-02T03:29:38.985Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "新版机构校验未取得原所属公司的有效署名，暂不发布。",
+        "evidence": [],
+        "method": "manual",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:51:12.816Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "hidden",
+      "locations": [
+        {
+          "sourceId": "baidu-hf-papers",
+          "externalId": "2606.07299",
+          "url": "https://arxiv.org/abs/2606.07299"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5d46655db243c4695803",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818144",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "EPMD: A Framework for LLM-Enhanced Ad Auctions",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818144",
+      "author": "Bingzhe Wang, Bowei Zhang, Jiarui Gong, Changyuan Yu, Qi Qi",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3770855.3818144",
+          "url": "https://doi.org/10.1145/3770855.3818144"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "66ecc213d39d5698b18d",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3805712.3809579",
+          "method": "paper-authors",
+          "excerpt": "Baidu, Beijing, China"
+        }
+      ],
+      "title": "Learning Noise-Resilient and Transferable Graph-Text Alignment via Dynamic Quality Assessment",
+      "canonicalUrl": "https://doi.org/10.1145/3805712.3809579",
+      "author": "Yuhang Liu, Minglai Shao, Zengyi Wo, Yunlong Chu, Bing Hao, Shengzhong Liu, Ruijie Wang, Jianxin Li",
+      "publishedAt": "2026-07-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3805712.3809579",
+          "url": "https://doi.org/10.1145/3805712.3809579"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6887a6a664c9b3a7a822",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818439",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "Large Language Model-Powered Query-Driven Event Timeline Summarization in Industrial Search",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818439",
+      "author": "Mingyue Wang, Xingyu Xie, Hang Yang, Li Gao, Lixin Su, Ge Chen, Dawei Yin, Daiting Shi",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3770855.3818439",
+          "url": "https://doi.org/10.1145/3770855.3818439"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6ff74dac87950c659cf4",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3817631",
+          "method": "paper-authors",
+          "excerpt": "Tsinghua University, Beijing, China and Baidu Inc, Beijing, China"
+        }
+      ],
+      "title": "VaaWIT: Visual-Aware Adaptation of Large Language Models for Multilingual Web Image Translation",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3817631",
+      "author": "Bo Li, Ronghao Chen, Ningyuan Deng, Huacan Wang, Shaolin Zhu, Lijie Wen",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3770855.3817631",
+          "url": "https://doi.org/10.1145/3770855.3817631"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7557331dd17c27b83aed",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.21203%2Frs.3.rs-10741604%2Fv1",
+          "method": "paper-authors",
+          "excerpt": "Baidu (China)"
+        }
+      ],
+      "title": "OmegaUse-SOP: SOP Engineering for Professional Computer Use from Human Demonstrations",
+      "canonicalUrl": "https://doi.org/10.21203/rs.3.rs-10741604/v1",
+      "author": "Yixiong Xiao",
+      "description": "Abstract Large language models (LLMs) are increasingly evolving from conversational assistants into agents capable of operating external digital environments. Graphical user interface (GUI) agents play an important role in this transition, as many real-world workflows remain accessible only through user-facing software interfaces. However, despite recent progress on general computer-use benchmarks, domain-specific professional standard operating procedures (SOPs) remain challenging for GUI agents because they often involve implicit domain knowledge, software-specific conventions, and task-level verification requirements. We introduce OmegaUse-SOP , a human-in-the-loop SOP Engineering system for transforming human demonstrations of professional computer use into reusable SOP skills for GUI ",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.21203/rs.3.rs-10741604/v1",
+          "url": "https://doi.org/10.21203/rs.3.rs-10741604/v1"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "76d34935e68de3b83ee1",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://arxiv.org/html/2606.23050",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc."
+        }
+      ],
+      "title": "Unlimited OCR Works Welcome the Era of One-shot Long-horizon Parsing",
+      "canonicalUrl": "https://arxiv.org/abs/2606.23050",
+      "author": "Baidu Inc.",
+      "publishedAt": "2026-06-21T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:29:38.985Z",
+      "updatedAt": "2026-11-02T03:29:38.985Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "新版机构校验未取得原所属公司的有效署名，暂不发布。",
+        "evidence": [],
+        "method": "manual",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:51:12.816Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "hidden",
+      "locations": [
+        {
+          "sourceId": "baidu-hf-papers",
+          "externalId": "2606.23050",
+          "url": "https://arxiv.org/abs/2606.23050"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "79c66da1315e8f318345",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770743.3804108",
+          "method": "paper-authors",
+          "excerpt": "Baidu, Beijing, Beijing, China"
+        }
+      ],
+      "title": "XSearch: Exploring Microarchitecture Design Space through Bayesian Optimization and Cross Evaluation on Multi-Fidelity Simulators",
+      "canonicalUrl": "https://doi.org/10.1145/3770743.3804108",
+      "author": "Honghua Zhu, Chunjie Luo, Xinke Zhao, Jianfeng Zhan",
+      "publishedAt": "2026-07-26T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3770743.3804108",
+          "url": "https://doi.org/10.1145/3770743.3804108"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7e671573ba5a2c9e078f",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://arxiv.org/html/2610.17901",
+          "method": "paper-authors",
+          "excerpt": "Affiliation: Baidu Inc."
+        }
+      ],
+      "title": "FlashMask-3: Efficient and Expressive Mask-Aware Distributed AttentionThanks: Corresponding author.",
+      "canonicalUrl": "https://arxiv.org/abs/2610.17901",
+      "author": "Guoxia Wang , Qianyue He11footnotemark: 1 , Siming Wu11footnotemark: 1 , Haoyang Xie11footnotemark: 1",
+      "publishedAt": "2026-10-12T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:29:38.985Z",
+      "updatedAt": "2026-11-02T03:29:38.985Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-hf-papers",
+          "externalId": "2610.17901",
+          "url": "https://arxiv.org/abs/2610.17901"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7f80925de13ad7dc5421",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3805712.3808457",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "RAG-Enhanced Large Language Models for Dynamic Content Expiration Prediction in Web Search",
+      "canonicalUrl": "https://doi.org/10.1145/3805712.3808457",
+      "author": "Tingyu Chen, Wenkai Zhang, Li Gao, Lixin Su, Ge Chen, Dawei Yin, Daiting Shi",
+      "publishedAt": "2026-07-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3805712.3808457",
+          "url": "https://doi.org/10.1145/3805712.3808457"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "82785baa773ce7e21142",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.3828%2Fidpr.2026.12",
+          "method": "paper-authors",
+          "excerpt": "Yaa Ntiamoa-Baidu is an Emerita Professor of Zoology and Chair of the Centre for Biodiversity Conservation Research, University of Ghana, Legon;"
+        }
+      ],
+      "title": "Attitude and behaviour of women traders towards (in)formal insurance schemes in the context of COVID-19 impacts in Ghana",
+      "canonicalUrl": "https://doi.org/10.3828/idpr.2026.12",
+      "author": "Charlotte Wrigley-Asante, Fidelia Ohemeng, Joseph Mensah, Emmanuel Odame, Kofi Amponsah-Mensah, Yaa Ntiamoa-Baidu",
+      "description": "The onset of the COVID-19 pandemic impacted negatively on informal sector workers, especially those with micro businesses, the majority of whom are women with little or no formal social protection. Drawing on data obtained from 377 women traders from major markets in Ghana, and using a mixed-methods paradigm, we sought to ascertain the types of social protection schemes women traders subscribe to in the post-COVID era to cope with shocks and to ensure better safety nets. The findings show different forms and scales of social protection measures, with women leveraging both formal and informal systems as means to support their businesses in the event of shocks. The study offers policymakers and relevant stakeholders’ insight to provide more inclusive social security and insurance policies to",
+      "language": "en",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.3828/idpr.2026.12",
+          "url": "https://doi.org/10.3828/idpr.2026.12"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "85f2a4fa83f85c596b8a",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818329",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "Bridging the Gap: Real-Time Cost Control for Autobidding",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818329",
+      "author": "Bingzhe Wang, Bo Shen, Yuejia Dou, Qi Qi, Ruohan Qian, Changyuan Li, Xin Yuan, Bin Zou, Wen Yi, Zhi Guo, Shuanglong Li, Lin Liu, Yixuan Zhang, Yixin Su, Wenqiang Liu",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3770855.3818329",
+          "url": "https://doi.org/10.1145/3770855.3818329"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8a8d38271e15cf447b3c",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818443",
+          "method": "paper-authors",
+          "excerpt": "Tsinghua University, Beijing, China and Baidu, Beijing, China"
+        }
+      ],
+      "title": "MapAgent: An Industrial-Grade Agentic Framework for City-scale Lane-level Map Generation",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818443",
+      "author": "Deguo Xia, Zihan Li, Haochen Zhao, Dong Xie, Yuyao Kong, Xiyan Liu, Jizhou Huang, Mengmeng Yang, Diange Yang",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3770855.3818443",
+          "url": "https://doi.org/10.1145/3770855.3818443"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "92d3230f9e36d17ef01e",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3818614",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "R 2 GCurL: Reinforced Robust Knowledge Tracing via Dynamic Graph Curriculum Learning",
+      "canonicalUrl": "https://doi.org/10.1145/3818614",
+      "author": "Tianhao Peng, Yanjun Pu, Yongqi Zhang, Yuchen Li, Jian Ren, Jie Luo, Kui Zhang, Haitao Yuan, Shuaiqiang Wang, Dawei Yin, Wenjun Wu",
+      "description": "With the rise of AI in education, knowledge tracing (KT) has become important for modeling students’ knowledge from interaction data. However, existing methods still face three major challenges, including limited modeling of personalized exercise–concept relations, low robustness to noisy interactions, and inefficient training due to suboptimal data selection. To address these issues, we propose R 2 GCurL, a novel KT framework with two key designs. First, we recast KT as a graph classification problem and construct dynamic graphs from student responses, enabling the model to capture structural relations between exercises and concepts for more personalized KT. Second, we introduce a data-centric curriculum learning strategy based on dynamic graph entropy. Under our definition, pairwise dyna",
+      "language": "en",
+      "publishedAt": "2026-07-23T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3818614",
+          "url": "https://doi.org/10.1145/3818614"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9ae87245117a37c3edf8",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3817654",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "SUDER: Self-Improving Unified Large Multimodal Models for Understanding and Generation with Dual Self-rewards",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3817654",
+      "author": "Jixiang Hong, Yiran Zhang, Guanzhong Wang, Yi Liu, Ji-Rong Wen, Rui Yan",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3770855.3817654",
+          "url": "https://doi.org/10.1145/3770855.3817654"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9ddf78056d94213c7397",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818323",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "Beyond End-to-End Video Models: An LLM-Based Multi-Agent System for Educational Video Generation",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818323",
+      "author": "Lingyong Yan, Jiulong Wu, Dong Xie, Weixian Shi, Deguo Xia, Jizhou Huang",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3770855.3818323",
+          "url": "https://doi.org/10.1145/3770855.3818323"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a94c028d350c348cc31b",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://arxiv.org/html/2610.17959",
+          "method": "paper-authors",
+          "excerpt": "Affiliation: Baidu Inc. Peking University"
+        }
+      ],
+      "title": "Virtual Head Attention",
+      "canonicalUrl": "https://arxiv.org/abs/2610.17959",
+      "author": "Xibo Ding , Guoxia Wang11footnotemark: 1 , Jinle Zeng , Jiabin Yang , Sirui Tao , Chao Yang , Dianhai Yu",
+      "publishedAt": "2026-10-12T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:29:38.985Z",
+      "updatedAt": "2026-11-02T03:29:38.985Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-hf-papers",
+          "externalId": "2610.17959",
+          "url": "https://arxiv.org/abs/2610.17959"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ad5736ef72188b8775fa",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818383",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "DuCCAE: A Hybrid Engine for Immersive Conversation via Collaboration, Augmentation, and Evolution",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818383",
+      "author": "Xin Shen, Zhishu Jiang, Jiaye Yang, Haibo Liu, Yichen Wan, Jiarui Zhang, Tingzhi Dai, Luodong Xu, Shuchen Wu, Guanqiang Qi, Chenxi Miao, Jiahui Liang, Weikang Li, Deguo Xia, Jizhou Huang",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3770855.3818383",
+          "url": "https://doi.org/10.1145/3770855.3818383"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b03b33ddbddaa1416fc5",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3817904",
+          "method": "paper-authors",
+          "excerpt": "Baidu, Inc., Beijing, China"
+        }
+      ],
+      "title": "Alignment-Free Multi-Modality Large-Small Model Bidirectional Collaboration with Missing Modality",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3817904",
+      "author": "Wei Guo, Jiale Mao, Yiqi Tong, Chuyu Fang, Xiao Zhang, Yikun Ban, Zhaojun Hu, Yiyang Duan, Fuzhen Zhuang",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3770855.3817904",
+          "url": "https://doi.org/10.1145/3770855.3817904"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b4ed44e5af3a423448f1",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3812652",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "Embedding in Recommender Systems: A Survey",
+      "canonicalUrl": "https://doi.org/10.1145/3812652",
+      "author": "Maolin Wang, Xinjian Zhao, Wanyu Wang, Sheng Zhang, Jiansheng Li, Bowen Yu, Binhao Wang, Shucheng Zhou, Dawei Yin, Qing Li, Ruocheng Guo, Xiangyu Zhao",
+      "description": "Recommender systems have become an essential component of many online platforms, providing personalized recommendations to users. A crucial aspect is embedding techniques that convert the high-dimensional discrete features, such as user and item IDs, into low-dimensional continuous vectors, which can enhance the recommendation performance. Embedding techniques have revolutionized the capture of complex entity relationships, generating significant research interest. This survey presents a comprehensive analysis of recent advances in recommender system embedding techniques. We examine centralized embedding approaches across matrix, sequential, and graph structures. In matrix-based scenarios, collaborative filtering generates embeddings that effectively model user-item preferences, particular",
+      "language": "en",
+      "publishedAt": "2026-06-30T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3812652",
+          "url": "https://doi.org/10.1145/3812652"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bad28dc25c020b05dd27",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.14778%2F3827998.3828017",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc."
+        }
+      ],
+      "title": "CoeusBI: A Comprehensive Interactive Business Intelligence System Powered by LLMs at Baidu",
+      "canonicalUrl": "https://doi.org/10.14778/3827998.3828017",
+      "author": "Jinqing Lian, Chaofan Li, Yingxia Shao, Ming Wang, Yang Dong, Xinyi Liu, Wei Zhang, Chaoxian Gui, Tianqi Wan, Ming Dong",
+      "description": "The advent of Large Language Models has catalyzed the emergence of interactive Business Intelligence (BI) systems. Although commercial BI products increasingly adopt semantic layers paired with natural language interfaces, they predominantly rely on manual configurations to define metrics and dimensions. Real-world deployments continue to face critical challenges: (a) frequent JOIN operations degrade the accuracy of SQL generation; (b) wide schemas exacerbate the challenge of schema linking; and (c) the generation of dialect-specific queries and the accurate support for multi-round dialogues incur high costs and yield limited accuracy. We introduce CoeusBI, an industrial-scale interactive BI system that addresses these barriers through a novel Dual-Agent Architecture paired with a Hierarch",
+      "language": "en",
+      "publishedAt": "2026-08-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.14778/3827998.3828017",
+          "url": "https://doi.org/10.14778/3827998.3828017"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "baeb3448afb5cce81a1f",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3799902.3811085",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "Graphical X Splatting (GraphiXS): A Graphical Model for 4D Gaussian Splatting under Uncertainty",
+      "canonicalUrl": "https://doi.org/10.1145/3799902.3811085",
+      "author": "Doğa Yılmaz, Jialin Zhu, Deshan Gong, He Wang",
+      "publishedAt": "2026-07-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3799902.3811085",
+          "url": "https://doi.org/10.1145/3799902.3811085"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "bfc833aa527500463bd0",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3805712.3808487",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc, Beijing, China"
+        }
+      ],
+      "title": "Population-Guided Intent-Aware Query Rewriting for Web Search",
+      "canonicalUrl": "https://doi.org/10.1145/3805712.3808487",
+      "author": "Yuanzhao Guo, Shuai Zhang, Anqi Li, Jiaming Zhang, Wei Li, Shihao Liu, Daiting Shi, Yuan Tian",
+      "publishedAt": "2026-07-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3805712.3808487",
+          "url": "https://doi.org/10.1145/3805712.3808487"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c6e85f5cd4d71076b27c",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831936",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "UNIQUE: A Unified Retrieval and Ranking System for Large-Scale Feed Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831936",
+      "author": "Zhuang Liu, Yongkang Fu, Zuodong Yang, Guangxing Chen, Zonggang Wu, Yuqi Lu, Shouke Qin, Shantao Li, Maolin Wang",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3773078.3831936",
+          "url": "https://doi.org/10.1145/3773078.3831936"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c99cd3ddb4f6b6a53135",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1093%2Fnsr%2Fnwag599",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc. , Beijing 100085 ,"
+        }
+      ],
+      "title": "A Survey on Parallel Reasoning",
+      "canonicalUrl": "https://doi.org/10.1093/nsr/nwag599",
+      "author": "Ziqi Wang, Boye Niu, Zipeng Gao, Zhi Zheng, Tong Xu, Linghui Meng, Zhongli Li, Jing Liu, Yilong Chen, Chen Zhu, Hua Wu, Haifeng Wang, Enhong Chen",
+      "description": "Abstract As Large Language Models (LLMs) evolve, parallel reasoning has emerged as a vital inference paradigm that enhances robustness by concurrently exploring multiple thought trajectories. Unlike fragile sequential methods, parallel reasoning expands inference breadth to significantly improve problem-solving performance. This paper provides a comprehensive survey of the progress and challenges in this burgeoning field. We first formally define parallel reasoning and distinguish it from sequential paradigms like Chain-of-Thought. Then, we propose a novel taxonomy to categorize advanced techniques into non-interactive reasoning, interactive collaboration, and efficiency-oriented decoding strategies. Furthermore, we examine diverse application scenarios, including complex problem-solving a",
+      "language": "en",
+      "publishedAt": "2026-09-24T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1093/nsr/nwag599",
+          "url": "https://doi.org/10.1093/nsr/nwag599"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ca6a4f08a96e19d17cf8",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1177%2F15578666261469586",
+          "method": "paper-authors",
+          "excerpt": "Baidu Online Network Technology(Beijing)Co., Ltd., Beijing, China."
+        }
+      ],
+      "title": "A Structure-Aware Multimodal Framework for Drug–Target Interaction Prediction via Heterogeneous Graph Learning",
+      "canonicalUrl": "https://doi.org/10.1177/15578666261469586",
+      "author": "Hua Qian, Deng Pan, Liangpeng Nie, Yelu Jiang, Lijun Quan",
+      "description": "Predicting drug–target interactions is critical for drug discovery, yet many deep learning methods overlook atom–residue–level relationships. We propose Protein Heterogeneous Graph learning for Drug–Target Interaction prediction (PHGDTI), a multimodal framework that integrates sequence and structural cues for binding prediction. Drug and protein sequences are embedded with Mol2Vec and Tasks Assessing Protein Embeddings (TAPE) and refined by a self-attention module. In parallel, a drug–protein graph encoder models three complementary graphs: a drug atom graph, a protein residue graph, and a heterogeneous atom–residue graph. Graph attention layers propagate intra- and intermolecular information, and SAGPooling yields compact structural representations. Fusing these structural and sequence fe",
+      "language": "en",
+      "publishedAt": "2026-07-21T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1177/15578666261469586",
+          "url": "https://doi.org/10.1177/15578666261469586"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "cccc3cd5c4bfb8bac062",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3805712.3808597",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., China, Beijing, China"
+        }
+      ],
+      "title": "DeepResearch-9K: A Challenging Benchmark Dataset of Deep-Research Agent",
+      "canonicalUrl": "https://doi.org/10.1145/3805712.3808597",
+      "author": "Tongzhou Wu, Yuhao Wang, Xinyu Ma, Xiuqiang He, Shuaiqiang Wang, Dawei Yin, Xiangyu Zhao",
+      "publishedAt": "2026-07-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3805712.3808597",
+          "url": "https://doi.org/10.1145/3805712.3808597"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e32d30a6c6ffda57de0e",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://arxiv.org/html/2606.14667",
+          "method": "paper-authors",
+          "excerpt": "Affiliation: ERNIE Team, Baidu Inc.[1mm] , {jilongbin,zhangzhenyu07}@baidu.com[1mm] ‡Work done during internship at Baidu. §Project Lead. †Corresponding author."
+        }
+      ],
+      "title": "Memento: Reconstruct to Remember for Consistent Long Video Generation",
+      "canonicalUrl": "https://arxiv.org/abs/2606.14667",
+      "author": "Xuan Wei , Longbin Ji , Guan Wang , Xiangrui Liu , Zhenyu Zhang , Shuohuan Wang , Yu Sun , Qingqi Hong , [2mm] Xiamen University",
+      "publishedAt": "2026-06-11T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:29:38.985Z",
+      "updatedAt": "2026-11-02T03:29:38.985Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-hf-papers",
+          "externalId": "2606.14667",
+          "url": "https://arxiv.org/abs/2606.14667"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e4614d69f45878521951",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3797905.3800548",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China and The Hong Kong University of Science and Technology (Guangzhou), Guangzhou, China"
+        }
+      ],
+      "title": "DynSpAttn: Efficient Attention via Dual-Side Dynamic Sparsity on Sparse Tensor Cores",
+      "canonicalUrl": "https://doi.org/10.1145/3797905.3800548",
+      "author": "Xiangrui Yu, Ruibo Fan, Zeyu Li, Weile Luo, Gu Gong, Xiaowen Chu",
+      "publishedAt": "2026-07-05T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3797905.3800548",
+          "url": "https://doi.org/10.1145/3797905.3800548"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ee323360605be654ab9b",
+      "publisherId": "baidu-research-papers",
+      "companyId": "baidu",
+      "contentType": "paper",
+      "companyIds": [
+        "baidu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "baidu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3805712.3809695",
+          "method": "paper-authors",
+          "excerpt": "Baidu Inc., Beijing, China"
+        }
+      ],
+      "title": "Reconstructing Content with Collaborative Attention for Universal Multimodal Representation Learning",
+      "canonicalUrl": "https://doi.org/10.1145/3805712.3809695",
+      "author": "Jiahan Chen, Da Li, Hengran Zhang, Yinqiong Cai, Lixin Su, Jiafeng Guo, Daiting Shi, Dawei Yin, Keping Bi",
+      "publishedAt": "2026-07-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:00.220Z",
+      "updatedAt": "2026-11-02T03:24:00.220Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-papers-crossref",
+          "externalId": "10.1145/3805712.3809695",
+          "url": "https://doi.org/10.1145/3805712.3809695"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

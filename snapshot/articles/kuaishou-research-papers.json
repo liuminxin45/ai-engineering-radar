@@ -1,0 +1,1483 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "024bb56530ae9792873a",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831930",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "RECAP: Feedback-Driven Streaming Semantic User Profiles for Short-Video Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831930",
+      "author": "Ziyi Zhao, Xiaoyou Zhou, Xiao Lv, Yangyang Li, Chubo He, Zhao Liu, Jiayao Shen, Yuqi Liu, He Li, Chengyi Zhang, Jian Liang, Ming Li, Chongming Gao, Fuli Feng, Ruiming Tang, Han Li",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3773078.3831930",
+          "url": "https://doi.org/10.1145/3773078.3831930"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "027ff95da274ad7b7ea2",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831769",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Inc., Beijing, China"
+        }
+      ],
+      "title": "Coarse-to-Fine Long-term Interest Modeling for Generative Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831769",
+      "author": "Shiteng Cao, Junda She, Bin Zeng, Ji Liu, Chengcheng Guo, Kuo Cai, Qiang Luo, Ruiming Tang, Han Li, Kun Gai, Zhiheng Li, Cheng Yang",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3773078.3831769",
+          "url": "https://doi.org/10.1145/3773078.3831769"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "2420dafc6b43dcb0763b",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832182",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "Self-Adaptive Code Representation: Grammar-Guided or Token-Based?",
+      "canonicalUrl": "https://doi.org/10.1145/3832182",
+      "author": "Qingyuan Liang, Zhao Zhang, Chen Liu, Zeyu Sun, Zheng Lin, Yueyi Xiao, Haotian Zhang, Yingfei Xiong, Lu Zhang",
+      "description": "Recent advances in code intelligence are largely driven by large language models (LLMs), which represent code as token sequences and achieve strong results on many software engineering tasks. However, standard token-based approaches often struggle to capture the inherent structural regularities of programming languages. While grammar-guided approaches can alleviate this limitation by modeling syntax more explicitly, they may sacrifice flexibility. In this work, we propose the Self-Adaptive Code Representation (SACR) framework, which enables models to dynamically select between token-based and grammar-guided representations depending on the problem context. SACR operates in two stages: first, the model is jointly trained on both representations to learn their respective strengths; second, a",
+      "language": "en",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3832182",
+          "url": "https://doi.org/10.1145/3832182"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "25567a7c44bf2e0704a6",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3834462",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "Characterizing and Mitigating Productivity Loss in Large-Scale Model Training: An Empirical Study",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3834462",
+      "author": "Dinghao Xue, Yanxiang Chen, Junhong Liu, Yepeng Zhang, Guangsen Ni, Menghao Zhang, Tianyu Wo, Zheng Zheng, Chunming Hu, Jin Ouyang, Renyu Yang",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3832783.3834462",
+          "url": "https://doi.org/10.1145/3832783.3834462"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "353507123d3f6045fce6",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3834457",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou, Beijing, China"
+        }
+      ],
+      "title": "MicroWeaver: A Constraint-Guided Structure–Semantic Aware Approach to Automated Microservice Decomposition",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3834457",
+      "author": "Huitian Xue, Kairui Zhang, Chenxi Zhang, Zheng Li, Chuan Luo, Yilong Yang, Tianyu Wo, Chunming Hu, Yanliang Li, Yang Zhou, Penghao Zhang, Tiezi Zhang, Renyu Yang",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3832783.3834457",
+          "url": "https://doi.org/10.1145/3832783.3834457"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3bf6fa297d74ab487975",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3839836",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "Erratum: LVT: A Learned Video Transcoding Framework",
+      "canonicalUrl": "https://doi.org/10.1145/3839836",
+      "author": "Nianxiang Fu, Daiqin Yang, Zhenan Lin, Chao Zhou",
+      "description": "This is an erratum for the article “LVT: A Learned Video Transcoding Framework” published in ACM Trans. Multimedia Comput. Commun. Appl. 22, 8, Article 222 (July 2026), 23 pages.",
+      "language": "en",
+      "publishedAt": "2026-09-09T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3839836",
+          "url": "https://doi.org/10.1145/3839836"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3d7a28339459bc6a3c85",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818417",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "From Bootstrapping to Sequence Modeling: A Unified Generative Framework for Personalized Landing-Page Modeling",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818417",
+      "author": "Fan Li, Chang Meng, Jiaqi Fu, Shuchang Liu, Tianke Zhang, Xueliang Wang, Xiaoqiang Feng, Yongqi Liu, Kaiqiao Zhan",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3770855.3818417",
+          "url": "https://doi.org/10.1145/3770855.3818417"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4a30673df3e5f3235e7d",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831741",
+          "method": "paper-authors",
+          "excerpt": "KuaiShou Inc., Beijing, China"
+        }
+      ],
+      "title": "PROMISE: Process Reward Models for Unlocking Test-Time Scaling Laws in Generative Recommendations",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831741",
+      "author": "Chengcheng Guo, Kuo Cai, Yu Zhou, Qiang Luo, Ruiming Tang, Han Li, Kun Gai, Guorui Zhou",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3773078.3831741",
+          "url": "https://doi.org/10.1145/3773078.3831741"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4ef1b1b815cf33d7f252",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831909",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Hangzhou, Zhejiang, China"
+        }
+      ],
+      "title": "HIPA-Net: Heterogeneous Intent Projection Alignment for Feedback Calibration in CVR Prediction",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831909",
+      "author": "Mengqing Ye, Jianwei Zhai, Bobo Cheng, Fei Pan, Peng Jiang",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3773078.3831909",
+          "url": "https://doi.org/10.1145/3773078.3831909"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5bb8ef75a85488ccbaeb",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818977",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China and Tsinghua University, Beijing, China"
+        }
+      ],
+      "title": "Are LLMs Socially Adaptive? Contrasting Belief Evolution in Large Language Models and Humans",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818977",
+      "author": "Yu Lei, Hao Liu, Chengxing Xie, Songjia Liu, Zhiyu Yin, Canyu Chen, Guohao Li, Philip Torr, Zhen Wu",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3770855.3818977",
+          "url": "https://doi.org/10.1145/3770855.3818977"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6bb709c7ec10f6b5f895",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831873",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "ConAlign: Conditional Alignment Framework for Balancing Biased and Unbiased Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831873",
+      "author": "Jingcheng Zhang, Yihan Wang, Qi Song, Liyin Hong",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3773078.3831873",
+          "url": "https://doi.org/10.1145/3773078.3831873"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7098cab0f4456896e8f3",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831884",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "PLAIN: An Explainable Generative Search System Enhanced by Multi-granularity Semantic Alignment",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831884",
+      "author": "Guoliang Zhang, Weifan Wang, Junyao Zhao, Zhuo Li, Hongjing Zhang, Xiaobo Guo, Zhixin Zhai, Yonghui Zhao, Zhihao Wang, Jiayang Liu, Yingjie Cui, Jiwei Tan, Xuanping Li",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3773078.3831884",
+          "url": "https://doi.org/10.1145/3773078.3831884"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "739d6480fd3a0505fc39",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818320",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "Atomic Intent Reasoning: Bringing LLM Semantics to Industrial Cross-Domain Recommendations",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818320",
+      "author": "Zhuohang Jiang, Yuxin Chen, Shijie Wang, Haohao Qu, Jindong Zhou, Wenqi Fan, Qing Li, Dongxu Liang, Jun Wang",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3770855.3818320",
+          "url": "https://doi.org/10.1145/3770855.3818320"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "775c3dca51e28095079d",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831872",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "POEM: Partial-Order Enhanced Real-Time Sequential Modeling for Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831872",
+      "author": "Linxiao Che, Yijia Sun, Siyuan Lou, Shanshan Huang, Qiang Luo, Ruiming Tang, Han Li, Kun Gai",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3773078.3831872",
+          "url": "https://doi.org/10.1145/3773078.3831872"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7ec614be8e661c52773b",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818367",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "Denoising Implicit Feedback for Cold-start Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818367",
+      "author": "Gaode Chen, Shicheng Wang, Shikun Li, Rui Huang, Xinghua Zhang, Yunze Luo, Shipeng Li, Shiming Ge, Ruina Sun, Yinjie Jiang, Jun Zhang",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3770855.3818367",
+          "url": "https://doi.org/10.1145/3770855.3818367"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8e506aebe236a92d0545",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818423",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "Generative Optimization for Incentivized Advertising with Global Level Constraints",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818423",
+      "author": "Gege Chen, Ning Luo, Hao Jiang, Da Li, Wenzheng Shu, Teng Sha, Yanxiang Zeng, Wenxin Tai, Fan Zhou, Xialong Liu",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3770855.3818423",
+          "url": "https://doi.org/10.1145/3770855.3818423"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "96979abb503d654e9cb1",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3834468",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "KRCA: An Efficient Root Cause Analysis System in Hyper-scale Microservice Systems via Agentic AI",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3834468",
+      "author": "Jiamin Jiang, Jingfei Feng, Yu Luo, Qingliang Zhang, Yongqian Sun, Wenwei Gu, Shenglin Zhang, Tianyu Cui, Yao Wu, Jielong Huang, Nan Qi, Dan Pei",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3832783.3834468",
+          "url": "https://doi.org/10.1145/3832783.3834468"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9c4cf7cf206eb9f4239c",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818422",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "Generative Auto-Bidding in Large-Scale Auctions via Diffusion Completer-Aligner",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818422",
+      "author": "Yewen Li, Jingtong Gao, Peng Jiang, Ruyi An, Xiangyu Zhao, Bo An, Fei Pan, Qingpeng Cai, Peng Jiang, Kun Gai",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3770855.3818422",
+          "url": "https://doi.org/10.1145/3770855.3818422"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a289da70b4f5b94e83cc",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831883",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "CAPTS: Channel-Aware, Preference-Aligned Trigger Selection for Multi-Channel Item-to-Item Retrieval",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831883",
+      "author": "Xiaoyou Zhou, Yuqi Liu, Zhao Liu, Xiao Lv, Bo Chen, Ruiming Tang, Guorui Zhou, Han Li, Kun Gai",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3773078.3831883",
+          "url": "https://doi.org/10.1145/3773078.3831883"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a5a4dd98a9234093c61d",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818327",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "Breaking the Listwise-Shuffle Dilemma: A Streaming-Compatible Listwise Framework for Industrial CTR Prediction",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818327",
+      "author": "Junlin He, Rui Tang, Liyin Hong",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3770855.3818327",
+          "url": "https://doi.org/10.1145/3770855.3818327"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "aabaa1d06f9e02e1a562",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818143",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "FlowTime: Towards Continuous Generative Watch Time Prediction via Flow-based Personalized Priors",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818143",
+      "author": "Hongxu Ma, Han Zhou, Chenghou Jin, Jie Zhang, Xiaoyu Yang, Chunjie Chen, Jihong Guan, Shuigeng Zhou",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3770855.3818143",
+          "url": "https://doi.org/10.1145/3770855.3818143"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b86a5a9a5752ee6bc2ab",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831889",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "UniShare: A Unified Framework for Joint Video and Receiver Recommendation in Social Sharing",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831889",
+      "author": "Caimeng Wang, Li Chong, Dongxu Liu, Xu Min, Jianhui Bu",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3773078.3831889",
+          "url": "https://doi.org/10.1145/3773078.3831889"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b8761706d5c6983c1cd5",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3834487",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "CAPMix: Robust KPI Anomaly Detection for AIOps in Noisy and Dynamic Environments",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3834487",
+      "author": "Xudong Mou, Rui Wang, Tiejun Wang, Zexin Wu, Fangda Guo, Jie Sun, Shiru Chen, Penghao Zhang, Tiezi Zhang, Tianyu Wo, Hao Peng, Chunming Hu, Xudong Liu, Renyu Yang",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3832783.3834487",
+          "url": "https://doi.org/10.1145/3832783.3834487"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "ca731ebb132e288bfc9f",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3849695",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, China"
+        }
+      ],
+      "title": "Heterogeneous Treatment Effect Estimation with Distribution Shift and Unmeasured Confounding",
+      "canonicalUrl": "https://doi.org/10.1145/3849695",
+      "author": "Wenyang Liu, Yuling Zhang, Anpeng Wu, Kun Kuang, Ming Ma, Zhi Wang",
+      "description": "Heterogeneous treatment effect (HTE) estimation is vital for understanding how treatment effects vary across individuals or subgroups. Recently, numerous HTE models, such as balancing methods and instrumental variable (IV) methods, have been developed to eliminate confounding bias from both observed variables and unmeasured confounders. However, many of these models overlook distribution shifts across populations, limiting their applicability to in-distribution (ID) scenarios, where the sample distribution matches that of the training dataset. In real-world applications where population distributions are subject to continuous change, there is an urgent need to develop methods for stable HTE estimation across out-of-distribution (OOD) populations. As pioneers in resolving this problem, we p",
+      "language": "en",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3849695",
+          "url": "https://doi.org/10.1145/3849695"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d19624bb0b0ee1a79942",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831736",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "Addressing Cross-Stage Decoupling of Semantic and Collaborative Signals in Generative Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831736",
+      "author": "Jiayi Dan, Weijian Li, Yongqi Liu, Kaiqiao Zhan",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3773078.3831736",
+          "url": "https://doi.org/10.1145/3773078.3831736"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d773ea4aeed81882ecd4",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831902",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "Attending to the Core: Core-Task Attention for Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831902",
+      "author": "Jingyan Chen, Chenye Sun, Man Zhou, Yunhe Guo, Siyu Gu, Peng Jiang",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3773078.3831902",
+          "url": "https://doi.org/10.1145/3773078.3831902"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "df11b443a3900a66b439",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818326",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "Breaking the Likelihood Trap: Consistent Generative Recommendation with Graph-structured Model",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818326",
+      "author": "Qiya Yang, Xiaoxi Liang, Zeping Xiao, Ying Cao, YingJie Deng, Yuxin Ren, Yalong Wang, Yongqi Liu",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3770855.3818326",
+          "url": "https://doi.org/10.1145/3770855.3818326"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "e64a6dbeaf5263d24775",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3849805",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, China"
+        }
+      ],
+      "title": "Filtering LLM-Synthesized Data for Cold-Start Recommendation: A Progressive Influence Function Approach",
+      "canonicalUrl": "https://doi.org/10.1145/3849805",
+      "author": "Tianhao Shi, Yang Zhang, Xiaoxue Zang, Chenyi Lei, Han Li, Yang Song, Fuli Feng",
+      "description": "Leveraging Large Language Models (LLMs)-synthesized data to enable representation learning for cold-start entities has emerged as a promising solution for addressing cold-start recommendations. However, existing studies often over-rely on LLM-generated data while neglecting the detrimental noise it may introduce. This work investigates data filtering mechanisms to remove detrimental synthetic samples. One promising approach is to use influence functions to measure the influence of each data. Nevertheless, a technical challenge arises because accurate influence estimation requires an unbiased reference model, which cannot be satisfied due to the existence of unknown noise. To address this, we conduct a theoretical analysis, revealing that when the goal is to identify a small subset of highl",
+      "language": "en",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3849805",
+          "url": "https://doi.org/10.1145/3849805"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f524fcc6ece98d42a0f6",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831886",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou Technology, Beijing, China"
+        }
+      ],
+      "title": "Towards Reliable Social A/B Testing: Spillover-Contained Clustering with Robust Post-Experiment Analysis",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831886",
+      "author": "Xu Min, Zhaoxu Yang, Kaixuan Tan, Juan Yan, Xunbin Xiong, Zihao Zhu, Kaiyu Zhu, Fenglin Cui, Yang Yang, Sihua Yang, Jianhui Bu",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3773078.3831886",
+          "url": "https://doi.org/10.1145/3773078.3831886"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "facd8d7d6fb333b4a4ac",
+      "publisherId": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "contentType": "paper",
+      "companyIds": [
+        "kuaishou"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "kuaishou",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818149",
+          "method": "paper-authors",
+          "excerpt": "Kuaishou, Beijing, China"
+        }
+      ],
+      "title": "DiffoR: A Unified Continuous Generative Framework for Universal Ordinal Regression",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818149",
+      "author": "Hongxu Ma, Lin Wang, Chenghou Jin, Han Zhou, Jie Zhang, Xiaoyu Yang, Chunjie Chen, Jihong Guan, Shuigeng Zhou",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:07.694Z",
+      "updatedAt": "2026-11-02T03:24:07.694Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "kuaishou-papers-crossref",
+          "externalId": "10.1145/3770855.3818149",
+          "url": "https://doi.org/10.1145/3770855.3818149"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

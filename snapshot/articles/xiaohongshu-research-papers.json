@@ -1,0 +1,1491 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "01d5af6e50346bd2a60b",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3746252.3761605",
+          "method": "paper-authors",
+          "excerpt": "NLP Team, Xiaohongshu Inc., Beijing, China"
+        }
+      ],
+      "title": "Pet-Bench: Benchmarking the Abilities of Large Language Models as E-Pets in Social Network Services",
+      "canonicalUrl": "https://doi.org/10.1145/3746252.3761605",
+      "author": "Hongcheng Guo, Zheyong Xie, Shaosheng Cao, Boyang Wang, Weiting Liu, Zheyu Ye, Zhoujun Li, Zuozhu Liu, Wei Lu",
+      "publishedAt": "2025-11-10T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3746252.3761605",
+          "url": "https://doi.org/10.1145/3746252.3761605"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "03a84b891c6158892fa0",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818503",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu, Beijing, China"
+        }
+      ],
+      "title": "UniNote: A Unified Embedding Model for Multimodal Representation and Ranking",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818503",
+      "author": "Jinghan Zhao, Wenwei Jin, Anqi Li, Jintao Tong, Luya Mo, Jiawei Li, Yao Hu, Bin Li",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3770855.3818503",
+          "url": "https://doi.org/10.1145/3770855.3818503"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "060979f0e52eb431eb80",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3822594",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc, China"
+        }
+      ],
+      "title": "P4Q: Learning to Prompt for Quantization in Low-Bit CLIP",
+      "canonicalUrl": "https://doi.org/10.1145/3822594",
+      "author": "Huixin Sun, Runqi Wang, Yanjing Li, Chang Gao, Liping Jing, Xiaolong Jiang, Yao Hu, Baochang Zhang, Xianbin Cao",
+      "description": "Large-scale pre-trained Vision-Language Models (VLMs) have demonstrated remarkable performance across various visual and multimodal tasks. However, deploying these models on downstream application platforms remains challenging due to computational demands and domain gaps. Quantization offers a promising solution by significantly reducing these costs, making VLMs more feasible for deployment in such environments. There are two prevailing paradigms: Quantization-Aware Training (QAT), which preserves model performance but incurs substantial training costs; and Post-Training Quantization (PTQ), which offers greater efficiency but introduces multimodal gaps and leads to performance degradation on downstream tasks. To reduce computational costs and bridge domain gaps, we propose the “Prompt for ",
+      "language": "en",
+      "publishedAt": "2026-07-21T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3822594",
+          "url": "https://doi.org/10.1145/3822594"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "06bd1f64894efa9cc265",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3774904.3792217",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc., Beijing, China and Fudan University, Shanghai, China"
+        }
+      ],
+      "title": "HyMiRec: A Hybrid Multi-interest Learning Framework for LLM-based Sequential Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3774904.3792217",
+      "author": "Jingyi Zhou, Cheng Chen, Kai Zuo, Manjie Xu, Zhendong Fu, Yibo Chen, Xu Tang, Yao Hu",
+      "publishedAt": "2026-04-12T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3774904.3792217",
+          "url": "https://doi.org/10.1145/3774904.3792217"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "089093b09b306fd170e1",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3746027.3754900",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc., Shanghai, China"
+        }
+      ],
+      "title": "Single Trajectory Distillation for Accelerating Image and Video Style Transfer",
+      "canonicalUrl": "https://doi.org/10.1145/3746027.3754900",
+      "author": "Sijie Xu, Runqi Wang, Wei Zhu, Dejia Song, Nemo Chen, Xu Tang, Yao Hu",
+      "publishedAt": "2025-10-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3746027.3754900",
+          "url": "https://doi.org/10.1145/3746027.3754900"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "28b5b0912d3a75a44ca9",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3774905.3793118",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu inc., Shanghai, China"
+        }
+      ],
+      "title": "GCAgent: Enhancing Group Chat Communication through Dialogue Agents System",
+      "canonicalUrl": "https://doi.org/10.1145/3774905.3793118",
+      "author": "Zijie Meng, Zheyong Xie, Zheyu Ye, Chonggang Lu, Zuozhu Liu, Zihan Niu, Yao Hu, Shaosheng Cao",
+      "publishedAt": "2026-05-28T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3774905.3793118",
+          "url": "https://doi.org/10.1145/3774905.3793118"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "29355c3ad43002be8569",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Fase63991.2025.00050",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc.,Intelligence and Offensive Defense Lab,China"
+        }
+      ],
+      "title": "GlassWing: A Tailored Static Analysis Approach for Flutter Android Apps",
+      "canonicalUrl": "https://doi.org/10.1109/ase63991.2025.00050",
+      "author": "Xiangyu Zhang, Yucheng Su, Lingling Fan, Miaoying Cai, Sen Chen",
+      "publishedAt": "2025-11-16T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1109/ase63991.2025.00050",
+          "url": "https://doi.org/10.1109/ase63991.2025.00050"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3c293d8cbb6253687b22",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3801489.3806869",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu, Beijing, China"
+        }
+      ],
+      "title": "Guiding the Recommender: Information-Aware Auto-Bidding for Content Promotion",
+      "canonicalUrl": "https://doi.org/10.1145/3801489.3806869",
+      "author": "Yumou Liu, Zhenzhe Zheng, Jiang Rong, Yao Hu, Fan Wu, Guihai Chen",
+      "publishedAt": "2026-06-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3801489.3806869",
+          "url": "https://doi.org/10.1145/3801489.3806869"
+        }
+      ],
+      "duplicateCandidates": [
+        "d34c06bd4c5bfb44024f"
+      ]
+    },
+    {
+      "id": "440bb11271855d70e1a9",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3774904.3792460",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc., Beijing, China"
+        }
+      ],
+      "title": "DeepAgent: A General Reasoning Agent with Scalable Toolsets",
+      "canonicalUrl": "https://doi.org/10.1145/3774904.3792460",
+      "author": "Xiaoxi Li, Wenxiang Jiao, Jiarui Jin, Guanting Dong, Jiajie Jin, Yinuo Wang, Hao Wang, Yutao Zhu, Ji-Rong Wen, Yuan Lu, Zhicheng Dou",
+      "publishedAt": "2026-04-12T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3774904.3792460",
+          "url": "https://doi.org/10.1145/3774904.3792460"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "51888f210b9c53021922",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818490",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc, Shanghai, China"
+        }
+      ],
+      "title": "The Best of Both Worlds: Harmonizing Semantic and Hash IDs for Sequential Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818490",
+      "author": "Ziwei Liu, Yejing Wang, Wanyu Wang, Wang Zejian, Qidong Liu, Zijian Zhang, Wei Huang, Chong Chen, Xiangyu Zhao",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3770855.3818490",
+          "url": "https://doi.org/10.1145/3770855.3818490"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5629bf110701949d2718",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1080%2F17538947.2025.2577884",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu"
+        }
+      ],
+      "title": "ShapefileGPT: a multi-agent large language model framework for automated shapefile processing",
+      "canonicalUrl": "https://doi.org/10.1080/17538947.2025.2577884",
+      "author": "Qingming Lin, Rui Hu, Huaxia Li, Sensen Wu, Yadong Li, Kai Fang, Hailin Feng, Zhenhong Du, Liuchang Xu",
+      "language": "en",
+      "publishedAt": "2025-11-14T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1080/17538947.2025.2577884",
+          "url": "https://doi.org/10.1080/17538947.2025.2577884"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "597a166de0eff47da699",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818488",
+          "method": "paper-authors",
+          "excerpt": "University of Toronto, Toronto, ON, Canada and Xiaohongshu Inc., Shanghai, China"
+        }
+      ],
+      "title": "SWE-Bench Mobile: Can Large Language Model Agents Develop Industry-Level Mobile Applications?",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818488",
+      "author": "Muxin Tian, Zhe Wang, Zhenwei Tang, Blair Yang, Kunlun Zhu, Honghua Dong, Hanchen Li, Xinni Xie, Guangjing Wang, Jiaxuan You",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3770855.3818488",
+          "url": "https://doi.org/10.1145/3770855.3818488"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "62caaaf7b856bc0474e7",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficassp55912.2026.11461719",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc"
+        }
+      ],
+      "title": "CodePMP: Scalable Preference Model Pretraining for Large Language Model Reasoning",
+      "canonicalUrl": "https://doi.org/10.1109/icassp55912.2026.11461719",
+      "author": "Huimu Yu, Ziyang Chen, Xing Wu, Haotian Xu, Debing Zhang, Songlin Hu",
+      "publishedAt": "2026-05-03T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1109/icassp55912.2026.11461719",
+          "url": "https://doi.org/10.1109/icassp55912.2026.11461719"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "66b6d258467379e9d111",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3788853.3801580",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu, Hangzhou, China"
+        }
+      ],
+      "title": "C hronos BI: Supercharging LLM-Powered Business Intelligence Pipelines with Semantic Caching and Cost Planning",
+      "canonicalUrl": "https://doi.org/10.1145/3788853.3801580",
+      "author": "Jianfeng Zhang, Lingxi Cui, Yongqin Xu, Tong Wang, Yi Guo, Zhouzhi Yang, Huan Li, Ke Chen, Lidan Shou",
+      "publishedAt": "2026-05-30T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3788853.3801580",
+          "url": "https://doi.org/10.1145/3788853.3801580"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "83f83756963381e8e781",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3818621",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc., Beijing, China"
+        }
+      ],
+      "title": "TeaRAG: A Token-Efficient Agentic Retrieval-Augmented Generation Framework",
+      "canonicalUrl": "https://doi.org/10.1145/3818621",
+      "author": "Chao Zhang, Yuhao Wang, Derong Xu, Haoxin Zhang, Yuanjie Lyu, Yuhao Chen, Shuochen Liu, Tong Xu, Xiangyu Zhao, Yan Gao, Yao Hu, Enhong Chen",
+      "description": "Retrieval-Augmented Generation (RAG) utilizes external knowledge to augment Large Language Models’ (LLMs) reliability. For flexibility, agentic RAG employs autonomous, multi-round retrieval and reasoning to resolve queries. Although recent agentic RAG has improved via reinforcement learning, they often incur substantial token overhead from search and reasoning. This tradeoff prioritizes accuracy over efficiency. To address this issue, this work proposes TeaRAG, a T oken- e fficient a gentic RAG framework capable of compressing both retrieval content and reasoning steps. (1) First, the retrieved content is compressed by augmenting chunk-based semantic retrieval with a graph retrieval using concise triplets. A knowledge association graph is then built from semantic similarity and co-occurren",
+      "language": "en",
+      "publishedAt": "2026-07-20T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3818621",
+          "url": "https://doi.org/10.1145/3818621"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "853df15563c2dce90f15",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3788094",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu, Beijing, China"
+        }
+      ],
+      "title": "Guiding the Recommender: Information-Aware Auto-Bidding for Content Promotion",
+      "canonicalUrl": "https://doi.org/10.1145/3788094",
+      "author": "Yumou Liu, Zhenzhe Zheng, Jiang Rong, Yao Hu, Fan Wu, Guihai Chen",
+      "description": "Modern content platforms offer paid promotion to mitigate cold start by allocating exposure via auctions. Our empirical analysis reveals a counterintuitive flaw in this paradigm: while promotion rescues low-to-medium quality content, it can harm high-quality content by forcing exposure to suboptimal audiences, polluting engagement signals and downgrading future recommendation. We recast content promotion as a dual-objective optimization that balances short-term value acquisition with long-term model improvement. To make this tractable at bid time in content promotion, we introduce a decomposable surrogate objective, gradient coverage, and establish its formal connection to Fisher Information and optimal experimental design. We design a two-stage auto-bidding algorithm based on Lagrange dua",
+      "language": "en",
+      "publishedAt": "2026-03-26T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3788094",
+          "url": "https://doi.org/10.1145/3788094"
+        }
+      ],
+      "duplicateCandidates": [
+        "d34c06bd4c5bfb44024f",
+        "3c293d8cbb6253687b22"
+      ]
+    },
+    {
+      "id": "865cc3ee5b3543247a51",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831874",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc., Shanghai, China"
+        }
+      ],
+      "title": "IDProxy: CTR Prediction with Multimodal LLMs for Cold-Start Recommendation at Xiaohongshu",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831874",
+      "author": "Yubin Zhang, Haiming Xu, Guillaume Salha-Galvan, Ruiyan Han, Feiyang Xiao, Yanhua Huang, Li Lin, Luo Yang, Yao Hu",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3773078.3831874",
+          "url": "https://doi.org/10.1145/3773078.3831874"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8b6adf83fb5e4c1f9d7e",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770854.3783917",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc., Beijing, China"
+        }
+      ],
+      "title": "Optimizing Generative Ranking Relevance via Reinforcement Learning in Xiaohongshu Search",
+      "canonicalUrl": "https://doi.org/10.1145/3770854.3783917",
+      "author": "Ziyang Zeng, Heming Jing, Jindong Chen, Xiangli Li, Hongyu Liu, Yixuan He, Zhengyu Li, Yige Sun, Zheyong Xie, Yuqing Yang, Shaosheng Cao, Jun Fan, Yi Wu, Yao Hu",
+      "publishedAt": "2026-04-20T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3770854.3783917",
+          "url": "https://doi.org/10.1145/3770854.3783917"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8fb6e0f854e22ad6c76d",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1587%2Ftransinf.2024edl8099",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc."
+        }
+      ],
+      "title": "Monaural Speech Enhancement Based on Multi-Resolution Feature Analysis",
+      "canonicalUrl": "https://doi.org/10.1587/transinf.2024edl8099",
+      "author": "Yuewei ZHANG, Huanbin ZOU, Jie ZHU",
+      "language": "en",
+      "publishedAt": "2025-11-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1587/transinf.2024edl8099",
+          "url": "https://doi.org/10.1587/transinf.2024edl8099"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "946d33c7ab054685890f",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831745",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu, Beijing, China"
+        }
+      ],
+      "title": "SAGE: Sequence-level Adaptive Gradient Evolution for Generative Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831745",
+      "author": "Yu Xie, Xingkai Ren, Qi Ying, Di Jia, Yao Hu",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3773078.3831745",
+          "url": "https://doi.org/10.1145/3773078.3831745"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9baec7e88d414512c77a",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818487",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu, BeiJing, China"
+        }
+      ],
+      "title": "Structured Task Alignment for Multi-Objective Learning to Rank",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818487",
+      "author": "Qing Luo, Ge Chen, Huayi Shen, Weiqi Zhao, Ping Yang, Yao Hu",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3770855.3818487",
+          "url": "https://doi.org/10.1145/3770855.3818487"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a28ee2050c0b25bcf993",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3805712.3808496",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc., Shanghai, China"
+        }
+      ],
+      "title": "DIVER: Unlocking Diversity in Ad Headline Generation with Large Language Models",
+      "canonicalUrl": "https://doi.org/10.1145/3805712.3808496",
+      "author": "Chang Wang, Siyu Yan, Depeng Yuan, Yuqi Chen, Yanhua Huang, Yuanhang Zheng, Shuhao Li, Yinqi Zhang, Kedi Chen, Mingrui Zhu, Ruiwen Xu",
+      "publishedAt": "2026-07-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3805712.3808496",
+          "url": "https://doi.org/10.1145/3805712.3808496"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a886c4da4b5cca1451bd",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3805712.3809616",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc., Beijing, China"
+        }
+      ],
+      "title": "TimeMM: Time-as-Operator Spectral Filtering for Dynamic Multimodal Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3805712.3809616",
+      "author": "Wei Yang, Rui Zhong, Zihan Lin, Xiaodan Wang, Cheng Chen, Huan Ren, Yao Hu",
+      "publishedAt": "2026-07-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3805712.3809616",
+          "url": "https://doi.org/10.1145/3805712.3809616"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c0581b9ae78ad14a712c",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3805712.3808417",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Technology Co., Ltd., Shanghai, China"
+        }
+      ],
+      "title": "RedGR: Unified Generative Retrieval for Recommendation in REDnote",
+      "canonicalUrl": "https://doi.org/10.1145/3805712.3808417",
+      "author": "Mengcheng Fang, Hongyu Wang, Xichuan Niu, Dong Xu, Honggang Wang, Tao Zhuang, Ping Yang, Yao Hu",
+      "publishedAt": "2026-07-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3805712.3808417",
+          "url": "https://doi.org/10.1145/3805712.3808417"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c97b321c75252d11c9ac",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3805712.3809736",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc., Shanghai, China"
+        }
+      ],
+      "title": "Countering Interest Over-Smoothing: Distilling Latent Factors via Diffusion for Multi-Interest Retrieval",
+      "canonicalUrl": "https://doi.org/10.1145/3805712.3809736",
+      "author": "Yankun Le, Fu Zhang, Haoran Li, Baoyuan Ou, Yingjie Qin, Zhixuan Yang, Ruilong Su",
+      "publishedAt": "2026-07-19T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3805712.3809736",
+          "url": "https://doi.org/10.1145/3805712.3809736"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c9d8869c4d404ff7d1ee",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.64898%2F2025.12.03.692003",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc., Shanghai, China"
+        }
+      ],
+      "title": "Decoding Prokaryotic Whole Genomes with a Product-Contextualized Large Language Model",
+      "canonicalUrl": "https://doi.org/10.64898/2025.12.03.692003",
+      "author": "Shiwen Ni, Shuaimin Li, Shijian Wang, Wenzhi Xue, Luoxi Zhang, Liyang Fan, Xinping Bi, Yitai Li, Chengguang Gan, Jiarui Jin, Yuan Lu, Ahmadreza Argha, Hamid Alinejad-Rokny, Tong Si, Min Yang, Teng Wang",
+      "description": "Abstract Genomes encode the instructions for life, yet their interpretation requires models capable of capturing long-range genome-wide functional context at scale. Existing genomic foundation models have primarily focused on sequence-level representations, providing powerful tools for biological prediction while leaving complementary opportunities for function-level genome modeling. Here, we present GenSyntax, a function-level genome representation learning framework that models prokaryotic genomes as ordered sequences of gene-product descriptors. By treating gene products as semantic units, GenSyntax transforms annotated replicons into interpretable “genetic paragraphs” that capture genome-wide functional context. We trained GenSyntax on 49,250 annotated prokaryotic genomes and evaluated",
+      "publishedAt": "2025-12-05T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.64898/2025.12.03.692003",
+          "url": "https://doi.org/10.64898/2025.12.03.692003"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "cb766211f032f61fca72",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1109%2Ficassp55912.2026.11461396",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc."
+        }
+      ],
+      "title": "Improving the Reasoning of Multi-Image Grounding in MLLMs via Reinforcement Learning",
+      "canonicalUrl": "https://doi.org/10.1109/icassp55912.2026.11461396",
+      "author": "Bob Zhang, Haoran Li, Tao Zhang, Jianan Li, Cilin Yan, Xikai Liu, Jiayin Cai, Yanbin Hao",
+      "publishedAt": "2026-05-03T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1109/icassp55912.2026.11461396",
+          "url": "https://doi.org/10.1109/icassp55912.2026.11461396"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "d34c06bd4c5bfb44024f",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3820171.3806869",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu, Beijing, China"
+        }
+      ],
+      "title": "Guiding the Recommender: Information-Aware Auto-Bidding for Content Promotion",
+      "canonicalUrl": "https://doi.org/10.1145/3820171.3806869",
+      "author": "Yumou Liu, Zhenzhe Zheng, Jiang Rong, Yao Hu, Fan Wu, Guihai Chen",
+      "description": "Modern content platforms increasingly rely on paid promotion services to mitigate the cold-start problem for new creators and posts. However, our empirical analysis reveals a critical paradox: while promotional campaigns successfully rescue low-to-medium quality content, they frequently degrade the long-term organic performance of high-quality content by forcing distribution to suboptimal audiences, thereby polluting engagement signals and downgrading future recommendation rankings. We reconceptualize content promotion as a dual-objective optimization problem that balances short-term value acquisition with long-term platform model improvement. To make this formulation tractable in millisecond-scale auctions, we introduce a decomposable surrogate objective called gradient coverage, which ma",
+      "language": "en",
+      "publishedAt": "2026-07-20T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3820171.3806869",
+          "url": "https://doi.org/10.1145/3820171.3806869"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f9a83e1c6bf2b090cff0",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770855.3818318",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc., Beijing, China"
+        }
+      ],
+      "title": "Aligning Large Language Models with Searcher Preferences",
+      "canonicalUrl": "https://doi.org/10.1145/3770855.3818318",
+      "author": "Wei Wu, Peilun Zhou, Liyi Chen, Qimeng Wang, Chengqiang Lu, Yan Gao, Yi Wu, Yao Hu, Hui Xiong",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3770855.3818318",
+          "url": "https://doi.org/10.1145/3770855.3818318"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "fe8e859d68101ee46f48",
+      "publisherId": "xiaohongshu-research-papers",
+      "companyId": "xiaohongshu",
+      "contentType": "paper",
+      "companyIds": [
+        "xiaohongshu"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "xiaohongshu",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3770854.3783934",
+          "method": "paper-authors",
+          "excerpt": "Xiaohongshu Inc., Beijing, China"
+        }
+      ],
+      "title": "Towards Trustworthy Multimodal Moderation via Policy-Aligned Reasoning and Hierarchical Labeling",
+      "canonicalUrl": "https://doi.org/10.1145/3770854.3783934",
+      "author": "Anqi Li, Wenwei Jin, Jintao Tong, Pengda Qin, Jiawei Li, Guo Lu",
+      "publishedAt": "2026-04-20T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:24:35.147Z",
+      "updatedAt": "2026-11-02T03:24:35.147Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.700Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "xiaohongshu-papers-crossref",
+          "externalId": "10.1145/3770854.3783934",
+          "url": "https://doi.org/10.1145/3770854.3783934"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

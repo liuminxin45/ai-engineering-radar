@@ -1,0 +1,1657 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "07ead568717a2fc44e41",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831924",
+          "method": "paper-authors",
+          "excerpt": "Platform and Content Group, Tencent, Shenzhen, China"
+        }
+      ],
+      "title": "GRIP: Generation and Reasoning for User Profile Completion",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831924",
+      "author": "Riwei Lai, Yu Xia, Li Chen, Beibei Kong, Lei Cheng, Chengxiang Zhuo, Zang Li, Chenyun Yu",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3773078.3831924",
+          "url": "https://doi.org/10.1145/3773078.3831924"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "0dd54923b87cbc4d2fb1",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1049%2Fcit2.70185",
+          "method": "paper-authors",
+          "excerpt": "Tencent Robotics X Tencent Holdings Shenzhen Guangdong China"
+        }
+      ],
+      "title": "Robotic Hand‐Arm Coordinated Skill Learning for Tool Manipulation Tasks",
+      "canonicalUrl": "https://doi.org/10.1049/cit2.70185",
+      "author": "Jingxiang Chen, Lingzi Xie, Bidan Huang, Shuai Wang, Sicheng Yang, Wang Wei Lee, Chao Zeng, Jialong Yang, Tianliang Liu, Chenguang Yang",
+      "description": "ABSTRACT This paper focuses on the specific scenario of tool manipulation and presents a novel framework enabling robots to acquire tool manipulation skills through learning from human demonstrations. While there have been numerous studies on robotic manipulation skill learning, most of them fail to fully leverage the combined advantages of coordinated hand‐arm movements—such as in dynamic tool repositioning and complementary workspace utilisation. To tackle this issue, the framework presented in this paper captures visual and tactile sensory streams from human demonstrations—including synchronous camera images and tool interaction forces acquired through optical tactile sensing—while recording hand‐arm coordination strategies. A Diffusion Policy model is adopted to learn robust manipulati",
+      "language": "en",
+      "publishedAt": "2026-10-04T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1049/cit2.70185",
+          "url": "https://doi.org/10.1049/cit2.70185"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "127f7199df1505ca716e",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1093%2Fbioinformatics%2Fbtag732",
+          "method": "paper-authors",
+          "excerpt": "Tencent Jarvis Lab , Shenzhen 518057,"
+        }
+      ],
+      "title": "RAGCell: retrieval-augmented generation as supervision for versatile single-cell analysis",
+      "canonicalUrl": "https://doi.org/10.1093/bioinformatics/btag732",
+      "author": "Tianyu Liu, Fan Zhang, Jiayuan Chen, Kun Wang, Haoxuan Li, Shengju Qian, Zhihong Zhu, Donghao Zhou, Hao Wu, Ziheng Zhang, Zhenxi Lin, Xian Wu, Yefeng Zheng",
+      "description": "Abstract Motivation Single-cell foundation models (scFMs) are transforming computational biology by enabling generalizable, task-agnostic representations for versatile single-cell analysis. Despite their progress in facilitating rapid deployment for downstream tasks, off-the-shelf scFMs still have some overlooked concerns: (I) (Pretraining Cost.) Pretrain-based scFMs necessitate pretraining on a vast volume of cells, rendering it draining resources in applications. (II) (Heterogeneous Gap.) Large language model (LLM)-based scFMs ignore the tremendous heterogeneous gap between LLM textual and raw cellular spaces, leading to insufficient capability when facing downstream tasks. Results To this end, we introduce RAGCell, a versatile single-cell analysis framework that achieves a double-win in",
+      "language": "en",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1093/bioinformatics/btag732",
+          "url": "https://doi.org/10.1093/bioinformatics/btag732"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "176d944d846bb81fef9b",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3834537",
+          "method": "paper-authors",
+          "excerpt": "Tencent, Shenzhen, China"
+        }
+      ],
+      "title": "Model-Guided Property-Based Testing of WeChat Pay at Billion-User Scale",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3834537",
+      "author": "Xiangchen Shen, Yiting Wang, Ting Su, Jingjing Liang, Jingling Sun, Xixian Liang, Haiying Sun, Xinjie Xu, Haochuan Lu, Yuetang Deng, Pengcheng Wang, Geguang Pu, Zhendong Su, John Hughes",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3832783.3834537",
+          "url": "https://doi.org/10.1145/3832783.3834537"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "21f3b967b5aabbe1608a",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3847194",
+          "method": "paper-authors",
+          "excerpt": "Tencent"
+        }
+      ],
+      "title": "Personalized Graph Sampling for Diverse Short Video Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3847194",
+      "author": "Nicholas Sukiennik, Chen Gao, Yu Zheng, Qun Luo, Peixuan Chen, Yong Li",
+      "description": "Efforts to improve diversity in recommendations typically come at a cost of accuracy. While several works have proposed methods to overcome this trade-off, they neglect the unique challenges of short-video platforms: extreme long-tail distributions and hierarchical category structures with multiple granularity levels. Meanwhile, graph neural networks have become the state-of-the-art for recommendation because of their ability to achieve collaborative filtering and learn higher-order relationships between users and items. We therefore aim to unlock the capabilities of GNNs for personalization to adapt diversity to individual user preferences and overcome the accuracy-diversity dilemma in short-video recommendation. In this work, we identify two dimensions of diversity preferences—validated ",
+      "language": "en",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3847194",
+          "url": "https://doi.org/10.1145/3847194"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "257680bd1f3aeb333e0b",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3837461",
+          "method": "paper-authors",
+          "excerpt": "Tencent Xuanwu Lab, Beijing, China"
+        }
+      ],
+      "title": "Post-quantum Cryptography in the Wild: Assessing the Readiness of Open-Source Ecosystems",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3837461",
+      "author": "Tongxin Yuan, Zhanpeng Liu, Jiashuo Liang, Zhuosheng Zhang, Gongshen Liu, Yang Yu, Guancheng Li",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3832783.3837461",
+          "url": "https://doi.org/10.1145/3832783.3837461"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "25bf5a06a71198a5caaf",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3834498",
+          "method": "paper-authors",
+          "excerpt": "Tencent Inc., Beijing, China"
+        }
+      ],
+      "title": "Fuzz4DB: A Practice of LLM-Agent-Guided Fuzzing for Database Feature-Level Delta Testing",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3834498",
+      "author": "Chunling Qin, Yong Hu, Xiao Zhang, Jinchuan Chen, Fangtao Gu, Baoxun Wang, Yuxing Chen, Anqun Pan, Lixiong Zheng",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3832783.3834498",
+          "url": "https://doi.org/10.1145/3832783.3834498"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "264ac1be050c6ee21385",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.21105%2Fjoss.10645",
+          "method": "paper-authors",
+          "excerpt": "Tencent, Inc."
+        }
+      ],
+      "title": "Category Encoders: a scikit-learn-contrib package of transformers for encoding categorical data",
+      "canonicalUrl": "https://doi.org/10.21105/joss.10645",
+      "author": "William D McGinnis, Chapman Siu, Andre Silva, Hanyu Huang, Jan Motl, Kaspar Paul Westenthanner, Jonathan Castaldo",
+      "publishedAt": "2026-08-26T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.21105/joss.10645",
+          "url": "https://doi.org/10.21105/joss.10645"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "300766abe8d15af1e04f",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://arxiv.org/html/2610.12458",
+          "method": "paper-authors",
+          "excerpt": "Affiliation: Hunyuan, Tencent"
+        }
+      ],
+      "title": "OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning",
+      "canonicalUrl": "https://arxiv.org/abs/2610.12458",
+      "author": "Zhongyu Yang ♥ , Jiale Tao ♥ , Ruitao Chen ♥ , Zuhao Yang , Yingfang Yuan , Xueliang Zhao , Auden , Kai Wang , Shuai Shao , Biao Wang ✉ , Steve Yves ✉ , Qinglin Lu",
+      "publishedAt": "2026-10-07T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:29:38.985Z",
+      "updatedAt": "2026-11-02T03:29:38.985Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "hunyuan-hf-papers",
+          "externalId": "2610.12458",
+          "url": "https://arxiv.org/abs/2610.12458"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "30895743746054055902",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1515%2Fphon-2025-0072",
+          "method": "paper-authors",
+          "excerpt": "Tencent , Shenzhen , China"
+        }
+      ],
+      "title": "Integrating human linguistic insights into AI: theory-driven representation for multilingual text-to-speech",
+      "canonicalUrl": "https://doi.org/10.1515/phon-2025-0072",
+      "author": "Cong Zhang, Huinan Zeng, Huang Liu, Jiewen Zheng",
+      "description": "Abstract This paper explores the integration of human linguistic insights into multilingual text-to-speech (TTS) systems by evaluating the Featurally Underspecified Lexicon (FUL) as a theory-driven input representation. Unlike data-intensive end-to end models, FUL offers a compact, interpretable feature set grounded in phonological principles, enabling scalable and equitable TTS development for low-resource languages. We provide a mapping from language-specific phones to FUL feature vectors via a SAMPA intermediate and incorporate these features into a modified FastSpeech architecture. Experiments were conducted to evaluate their ability to generate native, non-native, and code-mixed speech in English and Mandarin. We ran an experiment with a small dataset and one with a larger dataset, wh",
+      "language": "en",
+      "publishedAt": "2026-08-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1515/phon-2025-0072",
+          "url": "https://doi.org/10.1515/phon-2025-0072"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "37eac9e20ef3accf88d3",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.26434%2Fchemrxiv.15009321%2Fv1",
+          "method": "paper-authors",
+          "excerpt": "Tencent"
+        }
+      ],
+      "title": "Continuous carbon capture and release using an aqueous oxygen-tolerant redox electrolyte in symmetric flow cells",
+      "canonicalUrl": "https://doi.org/10.26434/chemrxiv.15009321/v1",
+      "author": "Xingqi Wang, Juwen Su, Kaiping Zhu, Xinglei Zhao, Liuchuan Tong, Yan Jing",
+      "description": "Electrochemical CO2 capture provides a promising pathway for carbon management under ambient conditions, yet practical deployment remains limited by system complexity and energy losses associated with oxygen sensitivity, crossover, and overpotentials. Here we report a fluoflavine disulfonate (FFDS)-based symmetric flow reactor for continuous electrochemical CO2 capture. The symmetric configuration generates spatially separated alkaline catholyte and acidic anolyte through a proton-coupled electron transfer process, enabling simultaneous electrochemical regeneration of sorbent, CO2 absorption as (bi)carbonate, and CO2 release. The system demonstrates excellent stability and high oxygen tolerance under simulated flue gas conditions. Furthermore, the CO2 release rate can be regulated by varyi",
+      "publishedAt": "2026-09-22T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.26434/chemrxiv.15009321/v1",
+          "url": "https://doi.org/10.26434/chemrxiv.15009321/v1"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3a75bd8ce137c1d462b1",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.64898%2F2026.09.16.752071",
+          "method": "paper-authors",
+          "excerpt": "AI for life sciences lab, Tencent, Shenzhen, China"
+        }
+      ],
+      "title": "An Artificial Intelligence Model for Longitudinal Assessment of TCR Repertoires in SARS-CoV-2 Vaccine Recipients",
+      "canonicalUrl": "https://doi.org/10.64898/2026.09.16.752071",
+      "author": "Zhonghuang Wang, Yu Zhao, Xiao Xiao, Bing He, Yanling Sun, Shan Xiong, Chenchen Qin, Zhipeng Zhou, Lianpeng Chang, Jing Bai, Wenming Zhao, Wenhua Liang, Jianhua Yao",
+      "description": "Abstract T cells play a crucial role in reducing disease severity during SARS-CoV-2 infection and in shaping long-term immune memory. However, the precise molecular immune responses, particularly involving T-cell receptor (TCR) repertoire changes after full vaccination, and the use of TCR analysis to evaluate vaccine efficacy, remain incompletely understood. In this study, we developed the DeepAir-Cov19 model (AUC=0.94), a large language model tailored to identify SARS-CoV-2-specific TCRs, and observed significant differences in the TCR profiles between antibody-negative and antibody-positive populations before and after vaccination, indicating that the immune status of pre-vaccine recipients can directly assess the efficacy of vaccination. Notably, SARS-CoV-2-specific TCRs expanded to pea",
+      "publishedAt": "2026-09-18T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.64898/2026.09.16.752071",
+          "url": "https://doi.org/10.64898/2026.09.16.752071"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3b859151d009bb5632ce",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1371%2Fjournal.pbio.3003996",
+          "method": "paper-authors",
+          "excerpt": "Tencent, AI for Life Sciences Lab"
+        }
+      ],
+      "title": "R1-32-like public antibodies acquire tolerance to SARS-CoV-2 antigenic drift through somatic hypermutation",
+      "canonicalUrl": "https://doi.org/10.1371/journal.pbio.3003996",
+      "author": "Chuanying Niu, Xiaohan Huang, Qihong Yan, Banghui Liu, Xijie Gao, Yidong Song, Jingjing Wang, Longyu Wang, Zimu Li, Huiran Zheng, Ping He, Xiaodong Huang, Hang Yuan, Binqian Zou, Yuedong Yang, Fandi Wu, Yicheng Yao, Gul Habib, Xinwen Chen, Ling Chen, Jun He, Jianhua Yao, Jincun Zhao, Xiaoli Xiong",
+      "description": "R1-32-like public antibodies, characterized by shared IGHV1-69/IGLV1-40 usage, are elicited in more than 50% of individuals with COVID-19 and have been implicated in driving recurrent mutations at L452 SARS2 and F490 SARS2 within their convergent epitope in the SARS-CoV-2 spike receptor-binding domain. These mutations effectively mediate escape from non-affinity-matured R1-32-like antibodies with germline-like sequences. Here, we characterize four affinity-matured human R1-32-like antibodies, C092, C807, BD56-104, and BD56-597, that tolerate L452 SARS2 and F490 SARS2 mutations. We show that this tolerance arises from residues introduced by somatic hypermutation at convergent positions across multiple CDR loops and surrounding regions, thereby creating additional contacts that reinforce epi",
+      "language": "en",
+      "publishedAt": "2026-09-15T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1371/journal.pbio.3003996",
+          "url": "https://doi.org/10.1371/journal.pbio.3003996"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "414ce0c80cfae26b360e",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.3389%2Ffneur.2026.1938737",
+          "method": "paper-authors",
+          "excerpt": "Tencent Jarvis Lab"
+        }
+      ],
+      "title": "SCMamba-SAM: transferring knowledge from natural images to medical tasks",
+      "canonicalUrl": "https://doi.org/10.3389/fneur.2026.1938737",
+      "author": "Ye Tian, Yufei Yuan, Lu Wang, Xinming Yang, Yifeng Wu, Xu Xu",
+      "description": "Background and objective The Segment Anything Model (SAM) has drawn significant attention because of its powerful performance in generating high-quality objectmasks. Despite its superior performance in handling natural images, SAM exhibits significant performance degradation when applied to medical images due to the substantial domain gap between natural and medical images. In addition, the specific characteristics of medical images, such as strong heterogeneity, low contrast, and wide individual variation, further raise dificulties in segmenting medical images. Methods To bridge the semantic gap between natural and medical images, we propose an adaption framework, named SCMamba-SAM. It employs a foundational image encoder constructed by integrating the pre-trained encoder of SAM and Low-R",
+      "publishedAt": "2026-10-15T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.3389/fneur.2026.1938737",
+          "url": "https://doi.org/10.3389/fneur.2026.1938737"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4f8e51f4592e2ff975c1",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1002%2Fadvs.77466",
+          "method": "paper-authors",
+          "excerpt": "AI for Life Sciences Lab Tencent Shenzhen China"
+        }
+      ],
+      "title": "Multi‐Technique Integration Identifies O‐GlcNAc Transferase in Fibroblast‐Like Synoviocytes as a Therapeutic Target for Rheumatoid Arthritis",
+      "canonicalUrl": "https://doi.org/10.1002/advs.77466",
+      "author": "Duoli Xie, Jie Huang, Chunhao Cao, Zhenchao Tang, Xingchen Li, Jianmin Guo, Xinxin Chen, Fang Wang, Dongyi He, Jie Li, Yu Du, Bing He, Jianhua Yao, Aiping Lu, Chao Liang",
+      "description": "ABSTRACT Rheumatoid arthritis (RA) progression is driven by the pathogenic transformation of stromal fibroblast‐like synoviocytes (FLSs). Using artificial intelligence‐guided analysis of a synovial single‐cell transcriptomic dataset, we identify O‐GlcNAc transferase (OGT) as a key regulator enriched in RA‐FLSs. Gain‐ and loss‐of‐function studies demonstrate that OGT is necessary to drive aggressive FLS phenotypes and exacerbate experimental arthritis. Mechanistically, OGT‐mediated O‐GlcNAcylation stabilizes SAP130, promoting histone deacetylation at the BTG2 promoter. This facilitates the deposition of repressive histone methylation marks, leading to BTG2 epigenetic silencing and ultimately fueling FLS aggression. To translate this mechanistic insight, we develop an FLS‐targeted proteolysi",
+      "language": "en",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1002/advs.77466",
+          "url": "https://doi.org/10.1002/advs.77466"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5475bdfaff9b6a593aea",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1093%2Fbib%2Fbbag456",
+          "method": "paper-authors",
+          "excerpt": "AI for Life Sciences Lab , Tencent, No. 33 Haitian Road, Nanshan District, Shenzhen 518054 ,"
+        }
+      ],
+      "title": "AResKGLM: a graph-grounded language-model framework for interpretable multi-hop antimicrobial resistance reasoning",
+      "canonicalUrl": "https://doi.org/10.1093/bib/bbag456",
+      "author": "Jie Ren, Ziyi Yang, Wei Liu, Man Tat Alexander Ng",
+      "description": "Abstract Antimicrobial resistance (AMR) threatens microbiology and microbiome bioinformatics because resistance phenotypes are shaped by interactions among genes, mobile genetic elements, and functional environments across microbial communities. Prioritizing resistance determinants requires models that reason across knowledge graphs (KGs) linking genes, proteins, pathways, drugs, and microbial phenotypes. Existing graph-based methods compress this evidence into scalar scores, whereas large language models can produce explanations not grounded in structured evidence. We developed AResKGLM (Antimicrobial Resistance Knowledge Graph Language Model), a graph-grounded language-model framework for interpretable microbial AMR bioinformatics that serializes breadth-first-search-retrieved multi-hop ",
+      "language": "en",
+      "publishedAt": "2026-09-01T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1093/bib/bbag456",
+          "url": "https://doi.org/10.1093/bib/bbag456"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5489432786269b00ecb1",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3837452",
+          "method": "paper-authors",
+          "excerpt": "Tencent, Shenzhen, China"
+        }
+      ],
+      "title": "RepoProbe: Benchmarking Architecture-Aware Repository Comprehension with Checklists",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3837452",
+      "author": "Yuexi Yang, Alyssa Wu, Ji Luo, Richeng Xuan, Zhichao Hu, Yuhong Liu, Zhen Qin",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3832783.3837452",
+          "url": "https://doi.org/10.1145/3832783.3837452"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5a85c5ebb980c5d9c1fe",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832810.3832816",
+          "method": "paper-authors",
+          "excerpt": "Tencent, Shenzhen, China"
+        }
+      ],
+      "title": "QMScaler: A QoS-Constrained Resource-Efficient Microservice Autoscaling Framework for Edge Environments",
+      "canonicalUrl": "https://doi.org/10.1145/3832810.3832816",
+      "author": "Tianyang Zheng, Pengfei Yang, Zhe Xu, Wenkai Lv, Hui Zeng, Hui Li, Shenwei Xu, Quan Wang",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3832810.3832816",
+          "url": "https://doi.org/10.1145/3832810.3832816"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6502c1192c8717e7aa99",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.64898%2F2026.10.10.757278",
+          "method": "paper-authors",
+          "excerpt": "Tencent AI for Life Sciences Lab"
+        }
+      ],
+      "title": "Alignment-Aware Genomic Coordinate Encoding for Long-Range DNA Modeling",
+      "canonicalUrl": "https://doi.org/10.64898/2026.10.10.757278",
+      "author": "Xu Yang, Chenchen Qin, Fang Wang, Bing He, Yu Zhao, Jiayang Wu, Yanlin Zhang, Jianhua Yao",
+      "description": "Abstract Current genomic foundation models (GFMs) largely inherit the language-modeling paradigm over contiguous token sequences, treating DNA as ordinary text. The genome, however, is a coordinate-based system of sparse signals: the entities that matter, such as individual variants, regulatory elements, and distal gene interactions, occupy a vanishing fraction of chromosome-scale sequences and are defined by their positions in the reference coordinate system rather than by linear proximity. This mismatch limits pure DNA-sequence modeling on individualized and non-contiguous genomic tasks, where inputs are naturally variant-centric and sparsely sampled. We present USM-AA, a genomic foundation model built on two complementary components: an alignment embedding module (AEM) that represents a",
+      "publishedAt": "2026-10-12T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.64898/2026.10.10.757278",
+          "url": "https://doi.org/10.64898/2026.10.10.757278"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "6fbda59c1a3947629de1",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3857281",
+          "method": "paper-authors",
+          "excerpt": "Tencent, China"
+        }
+      ],
+      "title": "Zero-Shot and Few-Shot Hydrogen Demand Forecasting with Time Series Foundation Models",
+      "canonicalUrl": "https://doi.org/10.1145/3857281",
+      "author": "Yang Liu, Bin Chong, Ziyi Zhang, Xiaotong Wu, Yancheng Chen, Shuai Zhang, Kefu Xu, Tian Wu, Pluto Zhou, Ping He",
+      "description": "Accurate hydrogen demand forecasting is essential for optimizing infrastructure investments in the emerging hydrogen economy, yet the scarcity of historical consumption data poses a fundamental challenge for conventional time series methods. We present a systematic evaluation of time series foundation models for hydrogen demand prediction, and propose DEFA (Data-Efficient Foundation model Adaptation), a two-stage framework designed to maximize few-shot adaptation performance under extreme data scarcity. DEFA first employs uncertainty-guided active sample selection, which leverages the foundation model's own zero-shot predictive variance to identify the most informative training sequences while maintaining diversity in embedding space. It then applies augmentation-enhanced consistency fine-",
+      "language": "en",
+      "publishedAt": "2026-10-14T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3857281",
+          "url": "https://doi.org/10.1145/3857281"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7328bfb8a1f17446f348",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3856818",
+          "method": "paper-authors",
+          "excerpt": "Tencent, China"
+        }
+      ],
+      "title": "Plug-and-Play Dramaturge: A Divide-and-Conquer Approach for Iterative Narrative Script Refinement via Collaborative LLM Agents",
+      "canonicalUrl": "https://doi.org/10.1145/3856818",
+      "author": "Wenda Xie, Chao Guo, Yanqing Jing, Junle Wang, Yisheng Lv, Fei-Yue Wang",
+      "description": "Although LLMs have been widely adopted for creative content generation, a single-pass process often struggles to produce high-quality long narratives. How to effectively revise and improve long narrative scripts like scriptwriters remains a significant challenge, as it demands a comprehensive understanding of the entire context to identify global structural issues and local detailed flaws, as well as coordinating revisions at multiple granularities and locations. Direct modifications by LLMs typically introduce inconsistencies between local edits and the overall narrative requirements. To address these issues, we propose Dramaturge, a task and feature oriented divide-and-conquer approach powered by hierarchical multiple LLM agents. It consists of a Global Review stage to grasp the overall ",
+      "language": "en",
+      "publishedAt": "2026-10-06T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3856818",
+          "url": "https://doi.org/10.1145/3856818"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "83c0b2cb569f9a6d4b5d",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832308",
+          "method": "paper-authors",
+          "excerpt": "Tencent"
+        }
+      ],
+      "title": "A Neural Frame Streaming Framework with a Simultaneous Prior for End-cloud Collaborative Rendering",
+      "canonicalUrl": "https://doi.org/10.1145/3832308",
+      "author": "Hangming Fan, Yazhen Yuan, Yongyu Ding, Yuwen Chen, Hujun Bao, Yuchi Huo, Rui Wang",
+      "description": "Cloud rendering has gained much attention recently since it alleviates the client’s computing cost by distributing most of the rendering tasks on the cloud, and the rendered frames are compressed and streamed to a client device for display. However, the accessibility of cloud rendering is still limited by the network communication cost to stream high-resolution frames. By introducing neural networks into the video compression algorithms, SOTA methods have achieved a better compression ratio than existing video codecs like H.265. However, none of them are designed specifically for rendered content, in which features like motion vectors, albedo, and normal are readily available in nowadays rendering pipelines. We propose a new end-cloud collaborative rendering and streaming framework that ge",
+      "language": "en",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3832308",
+          "url": "https://doi.org/10.1145/3832308"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "8ae880737a59e0aa5dd3",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3833420",
+          "method": "paper-authors",
+          "excerpt": "Tencent, Beijing, China"
+        }
+      ],
+      "title": "RosePO: Customized Preference Alignment in LLM-Based Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3833420",
+      "author": "Jiayi Liao, Xiangnan He, Ruobing Xie, Jiancan Wu, Yancheng Yuan, Xingwu Sun, Zhanhui Kang, Jingru Duan, Wenyu Zang, Xiang Wang",
+      "description": "Recent advancements in Large Language Models (LLMs) have inspired their application in sequential recommendation systems, often through supervised fine-tuning (SFT). However, conventional SFT methods often struggle to capture nuanced comparative relationships between items. While recent approaches utilize Direct Preference Optimization (DPO), they remain constrained by challenges in modeling customized preferences, including capturing fine-grained user preferences and being susceptible to semantic hallucination and popularity bias. To overcome these challenges, we propose RosePO, a framework to refine LLM-based recommendations through pairwise preference optimization with personalized smoothing. We illustrate the concept with three critical preference examples pertinent to LLM-based recomm",
+      "language": "en",
+      "publishedAt": "2026-09-23T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3833420",
+          "url": "https://doi.org/10.1145/3833420"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "9a40ca33ed42f398cbff",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://arxiv.org/html/2610.36729",
+          "method": "paper-authors",
+          "excerpt": "Tencent Hy Visual Generation Team"
+        }
+      ],
+      "title": "Hy-Nomas: Towards Free-form Interactive World Generation",
+      "canonicalUrl": "https://arxiv.org/abs/2610.36729",
+      "author": "Tencent Hy Visual Generation Team",
+      "publishedAt": "2026-10-26T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:29:38.985Z",
+      "updatedAt": "2026-11-02T03:29:38.985Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "hunyuan-hf-papers",
+          "externalId": "2610.36729",
+          "url": "https://arxiv.org/abs/2610.36729"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a2f6ba915a63e684d00f",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3837125",
+          "method": "paper-authors",
+          "excerpt": "Tencent, Beijing, China"
+        }
+      ],
+      "title": "StaleFlow: Staleness-Aware Data Management for Mitigating Data Skewness in Fully Disaggregated RL Post-Training",
+      "canonicalUrl": "https://doi.org/10.1145/3837125",
+      "author": "Haoyang Li, Sheng Lin, Fangcheng Fu, Yuming Zhou, Xiaodong Ji, Yanfeng Zhao, Lefeng Wang, Jie Jiang, Bin Cui",
+      "description": "Reinforcement learning (RL) post-training has become pivotal for enhancing the capabilities of modern large models. A recent trend is to develop RL systems with a fully disaggregated architecture, which decouples the three RL phases (rollout, reward, and training) onto separate resources and executes them asynchronously. However, two critical data-level concerns arise: (1) asynchronous execution leads to data staleness in trajectories (the data generated by rollout) as the model parameters used in rollout may not be up to date, which impairs RL convergence; and (2) the length variation of trajectories introduces severe data skewness, leading to workload imbalance and degraded system performance. Existing systems fail to address these two concerns in a unified manner. Techniques that tightl",
+      "language": "en",
+      "publishedAt": "2026-09-24T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3837125",
+          "url": "https://doi.org/10.1145/3837125"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "aa5b493c1ac9257fcbd7",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3806051",
+          "method": "paper-authors",
+          "excerpt": "Tencent"
+        }
+      ],
+      "title": "SRIndex: Bridging the Last Mile between Learned-Index Scalability and Workload Dynamics for Memory Pooling Systems",
+      "canonicalUrl": "https://doi.org/10.1145/3806051",
+      "author": "Zhiwei Yang, Shuyue Zhou, Zhirong Shen, Yixiu Zhou, Ronglong Wu, Jiwu Shu, Li Cheng, Zheng Chen, Dmitrii Kaplun",
+      "description": "As data volumes continue to escalate, conventional index structures struggle to keep pace with high-performance demands. Learned indexing is a data structure that leverages machine learning models to predict the locations of data, which significantly improves search performance compared to traditional indexing methods. However, existing learned index schemes often focus solely on optimizing read and write operations, neglecting scalability and robustness in their index design. This oversight leads to significant performance variations across workloads with different characteristics. In this article, we present SRIndex , a scalable and robust learned index, to address the abovementioned problems. SRIndex consists of the following design primitives: (i) It implements a model layer , which is",
+      "language": "en",
+      "publishedAt": "2026-08-14T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3806051",
+          "url": "https://doi.org/10.1145/3806051"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "af02bf814ef7a462b343",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3773078.3831825",
+          "method": "paper-authors",
+          "excerpt": "Tencent, Shenzhen, China"
+        }
+      ],
+      "title": "UniTraj: Cross-Domain Long-Sequence Modeling for Commercial Recommendation",
+      "canonicalUrl": "https://doi.org/10.1145/3773078.3831825",
+      "author": "Xian Hu, Ming Yue, Zhixiang Feng, Junwei Pan, Junjie Zhai, Ximei Wang, Xinrui Miao, Qian Li, Xun Liu, Shangyu Zhang, Letian Wang, Hua Lu, Zijian Zeng, Chen Cai, Wei Wang, Fei Xiong, Pengfei Xiong, Jintao Zhang, Zhiyuan Wu, Chunhui Zhang, Anan Liu, Jiulong You, Chao Deng, Yuekui Yang, Shudong Huang, ",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3773078.3831825",
+          "url": "https://doi.org/10.1145/3773078.3831825"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b0dfb39f87abf3d6350f",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.64898%2F2026.09.22.753654",
+          "method": "paper-authors",
+          "excerpt": "AI for Life Sciences Lab, Tencent, Shenzhen, China"
+        }
+      ],
+      "title": "When label-free morphology is sufficient for targeted cellular measurements",
+      "canonicalUrl": "https://doi.org/10.64898/2026.09.22.753654",
+      "author": "Mengran Li, Jianqing Zhu, Bo Li, Chengyang Zhang, Zhenchao Tang, Jiaying Wang, Wenbin Xing, Boyu Zhang, Jinfeng Xu, Lingbei Meng, Bob Zhang, Junzhou Chen, Ronghui Zhang, Lian Zhang, Jinchao Xu",
+      "description": "Abstract How cells respond to genetic perturbations reveals gene function, but each imaging experiment can measure only a limited set of molecular markers. Predicting additional readouts from label-free images could expand what these experiments reveal, but when such predictions can replace direct measurements remains unclear. Here we introduce MorphoSuff, a framework for assessing whether predicted cellular readouts support specific biological tasks. It evaluates reference re-producibility and repeats the intended analyses with predicted rather than measured responses. Rules applied to calibration perturbations select uses for testing on separate, held-out perturbations. Using nearly 10 million same-cell phase–reporter observations spanning 1,000 gene knock-outs, 52 fluorescent reporters ",
+      "publishedAt": "2026-09-28T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.64898/2026.09.22.753654",
+          "url": "https://doi.org/10.64898/2026.09.22.753654"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b8303a74f75e8ac1cf00",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1177%2F10711813261485907",
+          "method": "paper-authors",
+          "excerpt": "Tencent America, Palo Alto, CA, USA"
+        }
+      ],
+      "title": "Bayesian Network Modeling of Cross-Phase Driver Readiness in Automated Vehicle Cyber-Attacks",
+      "canonicalUrl": "https://doi.org/10.1177/10711813261485907",
+      "author": "Gayoung Ban, Jiaxin Li, Ji-Eun Kim, Myounghoon Jeon",
+      "description": "Automated vehicles shift drivers into supervisory roles, where engagement in non-driving-related tasks (NDRTs) may degrade driver readiness. This vulnerability becomes critical in adversarial contexts, where cyber-attacks often manipulate in-vehicle information rather than vehicle dynamics. This study examined whether pre-attack driver readiness conditions affect subsequent cyber-attack response performance. Forty-five participants completed a two-phase automated driving experiment consisting of an NDRT phase followed by six cyber-attack scenarios. Situation awareness (SA), visual attention, physiological arousal, workload, and response time were measured. A static Bayesian Network modeled joint probabilistic dependencies across contextual, driver readiness, and behavioral variables. NDRT ",
+      "language": "en",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1177/10711813261485907",
+          "url": "https://doi.org/10.1177/10711813261485907"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b8d44562aca0e48636bf",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3834459",
+          "method": "paper-authors",
+          "excerpt": "Tencent, Beijing, China"
+        }
+      ],
+      "title": "Maintaining Control States for Initialization-Aware GRPO in Industrial LLM Workflows",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3834459",
+      "author": "Chen Liu, Zhenzhao Yuan, Fengyuan Fan, Limei Che, Qiao Qian, Qingyuan Liang, Zeyu Sun, Lu Zhang",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3832783.3834459",
+          "url": "https://doi.org/10.1145/3832783.3834459"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "c089a77ec0a8ae3b36b3",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1145%2F3832783.3837509",
+          "method": "paper-authors",
+          "excerpt": "Tencent, ShenZhen, China"
+        }
+      ],
+      "title": "HERO: Hypothesis-Centered Root-Cause Analysis for Microservice Incidents",
+      "canonicalUrl": "https://doi.org/10.1145/3832783.3837509",
+      "author": "Jiewei Lyu, Junquan Yi, Shu Liang, Pengfei Chen, Long Pan",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1145/3832783.3837509",
+          "url": "https://doi.org/10.1145/3832783.3837509"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "cbc4b596aa6bef5b41f9",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://api.crossref.org/works/10.1108%2Fjedt-05-2026-0291",
+          "method": "paper-authors",
+          "excerpt": "Tencent Technology (Beijing) Co. Ltd , Beijing,"
+        }
+      ],
+      "title": "Product evolution model (PEM): a functional semantic knowledge-driven framework for product technology landscape construction",
+      "canonicalUrl": "https://doi.org/10.1108/jedt-05-2026-0291",
+      "author": "Nan Wang, Xia Li, Hongfei Wu, Yue Cai, Hongyu Zhao",
+      "description": "Purpose The construction of a product technology landscape remains heavily reliant on patent-based methods despite its recognized value in supporting the systematic product planning and technology opportunity identification. These patented approaches, however, are typically constrained to document-level operations such as retrieval, clustering and keyword analysis, creating a critical gap in their capacity to support the generation of component-level solutions. To address this gap, this study aims to propose a product evolution model (PEM), a functional semantic knowledge-driven framework that integrates patent-derived component knowledge, function–object–property (FOP) representation, TRIZ-based evolution trend label mapping, multi-objective optimization and TOPSIS-based decision ranking.",
+      "language": "en",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:23:51.379Z",
+      "updatedAt": "2026-11-02T03:23:51.379Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-papers-crossref",
+          "externalId": "10.1108/jedt-05-2026-0291",
+          "url": "https://doi.org/10.1108/jedt-05-2026-0291"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "cbc6bf0a63214bab41a1",
+      "publisherId": "tencent-research-papers",
+      "companyId": "tencent",
+      "contentType": "paper",
+      "companyIds": [
+        "tencent"
+      ],
+      "paperAffiliations": [
+        {
+          "companyId": "tencent",
+          "evidenceUrl": "https://arxiv.org/html/2610.18092",
+          "method": "paper-authors",
+          "excerpt": "Affiliation: LLM Department, Tencent"
+        }
+      ],
+      "title": "LifeSearch: Benchmarking Deep Research Agents for Real-World Life and Productivity",
+      "canonicalUrl": "https://arxiv.org/abs/2610.18092",
+      "author": "Yibo Wang , Senjie Jin , Yansong Ning , Xinbing Liang , Haotian Luo",
+      "publishedAt": "2026-10-12T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:29:38.985Z",
+      "updatedAt": "2026-11-02T03:29:38.985Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "论文来源和公司归属已核验，保留作者机构署名或官方研究目录证据。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:22:36.693Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "hunyuan-hf-papers",
+          "externalId": "2610.18092",
+          "url": "https://arxiv.org/abs/2610.18092"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}

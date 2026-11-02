@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "hunyuan-hf-papers",
+    "lastCheckedAt": "2026-11-02T03:29:38.985Z",
+    "lastSuccessAt": "2026-11-02T03:29:38.985Z",
+    "nextRunAt": "2026-11-03T03:29:38.985Z",
+    "consecutiveFailures": 0,
+    "etag": "W/\"415b4-zll/2AXx+vfcdeF5fqoM01ZxLec\"",
+    "status": "success",
+    "error": "部分论文候选缺少可核验机构信息，已跳过。",
+    "discovered": 3,
+    "httpStatus": 200
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "netease-papers-crossref",
+    "lastCheckedAt": "2026-11-02T03:24:38.133Z",
+    "lastSuccessAt": "2026-11-02T03:24:38.133Z",
+    "nextRunAt": "2026-11-03T03:24:38.133Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 30,
+    "httpStatus": 200
+  }
+}
