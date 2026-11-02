@@ -187,6 +187,7 @@ it("exports trial labels, evidence and a review report while retaining the artic
     );
     expect(data.articles).toHaveLength(1);
     expect(data.articles[0].advertorial.status).toBe("suspected");
+    expect(data.articles[0].contentSignals.basis).toBe("title-description");
     expect(report.mode).toBe("label-only");
     expect(report.suspectedCount).toBe(1);
     expect(report.articles[0].reviewUrl).toContain(
