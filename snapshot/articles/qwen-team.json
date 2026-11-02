@@ -19,7 +19,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -29,15 +37,7 @@
           "url": "https://qwen.ai/blog?id=sapo"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "00c8aa51943dc390ca96",
@@ -57,7 +57,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -67,15 +75,7 @@
           "url": "https://qwen.ai/blog?id=qwen-robotsuite"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "035a9461cc5adbb714b7",
@@ -95,7 +95,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -105,15 +113,7 @@
           "url": "https://qwen.ai/blog?id=qwen2.5-math-prm"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "04af7d00659f295381fc",
@@ -133,7 +133,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.964Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -143,15 +151,7 @@
           "url": "https://qwen.ai/blog?id=ofa"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "073b276d7b0d5512aeea",
@@ -171,7 +171,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -181,15 +189,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.6-max-preview"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "0889e5d78ff495abfc3e",
@@ -209,7 +209,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -219,15 +227,7 @@
           "url": "https://qwen.ai/blog?id=qwen2.5-omni"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "09ee59a021a430610b75",
@@ -247,7 +247,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -257,15 +265,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-coder"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "0c4e1f3be9c2a0426dde",
@@ -285,7 +285,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -295,15 +303,7 @@
           "url": "https://qwen.ai/blog?id=qwen2.5-coder"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "1371046f6c1f29229ecc",
@@ -323,7 +323,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -333,15 +341,7 @@
           "url": "https://qwen.ai/blog?id=qwen2.5-max"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "1807dce2f9cc1124e965",
@@ -361,7 +361,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.964Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -371,15 +379,7 @@
           "url": "https://qwen.ai/blog?id=chinese-clip"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "1b26004f3d22edc244a0",
@@ -399,7 +399,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -409,15 +417,7 @@
           "url": "https://qwen.ai/blog?id=e-commerce-bench"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "1c75034a2b5574644fa9",
@@ -437,7 +437,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.964Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -447,15 +455,7 @@
           "url": "https://qwen.ai/blog?id=qwen1.5-32b"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "1dae803c0d0d2ab8056d",
@@ -475,7 +475,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.964Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -488,15 +496,7 @@
       "duplicateCandidates": [
         "506d9bea096ab579370d",
         "4a098ee0df015b4606f2"
-      ],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      ]
     },
     {
       "id": "226e39f6461f90a6dedf",
@@ -516,7 +516,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -526,15 +534,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.5-omni"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "2aee8bec6aaa737b5339",
@@ -554,7 +554,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -564,15 +572,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "2b51dbc1f5c9a2689406",
@@ -592,7 +592,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -602,15 +610,7 @@
           "url": "https://qwen.ai/blog?id=qwen-agent-2405"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "2e81d16490fabe148761",
@@ -630,7 +630,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -640,15 +648,7 @@
           "url": "https://qwen.ai/blog?id=qwen-image-2.0"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "30eac5f6afd581cb96cd",
@@ -668,7 +668,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -678,15 +686,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-max"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "3241b89b81579d5b8372",
@@ -706,7 +706,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -716,15 +724,7 @@
           "url": "https://qwen.ai/blog?id=qwen3tts-0115"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "39f9906d3a301f6f8639",
@@ -744,7 +744,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -754,15 +762,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-tts-vc-voicedesign"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "3d3956636f8bd446e2ba",
@@ -782,7 +782,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -792,15 +800,7 @@
           "url": "https://qwen.ai/blog?id=qwq-max-preview"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "436ae260557e2f384e56",
@@ -820,7 +820,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -830,15 +838,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.8"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "44b93cc743134d23876b",
@@ -858,7 +858,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -868,15 +876,7 @@
           "url": "https://qwen.ai/blog?id=gspo"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "455b8eefd83d7ab34507",
@@ -896,7 +896,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -906,15 +914,7 @@
           "url": "https://qwen.ai/blog?id=qwen2.5-llm"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "4586d51b13dca8a60598",
@@ -934,7 +934,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -944,15 +952,7 @@
           "url": "https://qwen.ai/blog?id=flashqla"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "465a049d621df87cd813",
@@ -972,7 +972,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -982,15 +990,7 @@
           "url": "https://qwen.ai/blog?id=qwen-image-edit-2511"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "46c49ba7eda0c0e1ff79",
@@ -1010,7 +1010,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1020,15 +1028,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-omni-flash-20251201"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "478e9a707edac1dcdc19",
@@ -1048,7 +1048,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1058,15 +1066,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-max-thinking"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "4a098ee0df015b4606f2",
@@ -1086,7 +1086,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.964Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1098,15 +1106,7 @@
       ],
       "duplicateCandidates": [
         "506d9bea096ab579370d"
-      ],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      ]
     },
     {
       "id": "4d7d9e50f086343d2a5e",
@@ -1126,7 +1126,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1136,15 +1144,7 @@
           "url": "https://qwen.ai/blog?id=qwen-scope"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "506d9bea096ab579370d",
@@ -1164,7 +1164,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.964Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1174,15 +1182,7 @@
           "url": "https://qwen.ai/blog?id=qwen1.5"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "50e79bf9adaa4d98a74f",
@@ -1202,7 +1202,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.964Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1212,15 +1220,7 @@
           "url": "https://qwen.ai/blog?id=ofasys"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "5301b8ed3c4a2d48d9d1",
@@ -1240,7 +1240,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1250,15 +1258,7 @@
           "url": "https://qwen.ai/blog?id=qwen-image-layered"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "572096340ca8655909f3",
@@ -1278,7 +1278,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1288,15 +1296,7 @@
           "url": "https://qwen.ai/blog?id=qwenvla"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "5a67d022ca689fca41c0",
@@ -1316,7 +1316,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1326,15 +1334,7 @@
           "url": "https://qwen.ai/blog?id=qwen-robotnav"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "5ad4ad1277f7540db1f7",
@@ -1354,7 +1354,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1366,15 +1374,7 @@
       ],
       "duplicateCandidates": [
         "572096340ca8655909f3"
-      ],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      ]
     },
     {
       "id": "60cd10ec95788b3a77d6",
@@ -1394,7 +1394,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1404,15 +1412,7 @@
           "url": "https://qwen.ai/blog?id=qwen2.5-vl"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "63d9578399eceb183907",
@@ -1432,7 +1432,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1442,15 +1450,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.6-27b"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "66c8cc8982580dec7519",
@@ -1470,7 +1470,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1480,15 +1488,7 @@
           "url": "https://qwen.ai/blog?id=qwen-drive-1.0"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "67128c1ce9fc0fc02d43",
@@ -1508,7 +1508,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1518,15 +1526,7 @@
           "url": "https://qwen.ai/blog?id=qwen-image-3.0"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "69bbdf6bcea9b659f43b",
@@ -1546,7 +1546,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1556,15 +1564,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-next"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "6da45f4bb82dc80f2584",
@@ -1584,7 +1584,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1594,15 +1602,7 @@
           "url": "https://qwen.ai/blog?id=qwen-tts"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "6f24642c0072ae75be2f",
@@ -1622,7 +1622,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1632,15 +1640,7 @@
           "url": "https://qwen.ai/blog?id=agent"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "6f4a8ec78c250af7c620",
@@ -1660,7 +1660,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1670,15 +1678,7 @@
           "url": "https://qwen.ai/blog?id=qwen2.5-1m"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "6f556a42a7aea518a350",
@@ -1698,7 +1698,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1708,15 +1716,7 @@
           "url": "https://qwen.ai/blog?id=qwen-deepresearch"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "74a6851fdd510e9bfd0c",
@@ -1736,7 +1736,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1746,15 +1754,7 @@
           "url": "https://qwen.ai/blog?id=qwen2.5"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "7539e688f5e1fd899ee7",
@@ -1774,7 +1774,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1784,15 +1792,7 @@
           "url": "https://qwen.ai/blog?id=qwen2"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "80adcab7056183aa3844",
@@ -1812,7 +1812,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1822,15 +1830,7 @@
           "url": "https://qwen.ai/blog?id=qwen-image-2.1"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "82a0b95996cc04af1c25",
@@ -1850,7 +1850,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1860,15 +1868,7 @@
           "url": "https://qwen.ai/blog?id=qwen2.5-turbo"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "82a3f1093fa3e40d155a",
@@ -1888,7 +1888,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1898,15 +1906,7 @@
           "url": "https://qwen.ai/blog?id=qwq-32b"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "836c5c78ea5d07e0359a",
@@ -1926,7 +1926,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.964Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1936,15 +1944,7 @@
           "url": "https://qwen.ai/blog?id=codeqwen1.5"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "8b93469a7728a0596086",
@@ -1964,7 +1964,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.964Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1974,15 +1982,7 @@
           "url": "https://qwen.ai/blog?id=qwen-max-0428"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "8f33e80e5739f60f5b2c",
@@ -2002,7 +2002,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2012,15 +2020,7 @@
           "url": "https://qwen.ai/blog?id=qwen3guard"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "91e9b046a8f6e7652ae4",
@@ -2040,7 +2040,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2050,15 +2058,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-vl-embedding"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "9790aace5ae845467961",
@@ -2078,7 +2078,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2088,15 +2096,7 @@
           "url": "https://qwen.ai/blog?id=qwen-image-edit-2509"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "98bee358bf605852a420",
@@ -2116,7 +2116,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2126,15 +2134,7 @@
           "url": "https://qwen.ai/blog?id=global-load-balance"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "99b2b417016bebb7206c",
@@ -2154,7 +2154,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2164,15 +2172,7 @@
           "url": "https://qwen.ai/blog?id=qvq-72b-preview"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "9d878a808571567c5900",
@@ -2192,7 +2192,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2202,15 +2210,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.5-max-preview"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "9f733af1586d8fc311fc",
@@ -2230,7 +2230,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2240,15 +2248,7 @@
           "url": "https://qwen.ai/blog?id=qwen2-vl"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "a514556601ce742e3990",
@@ -2268,7 +2268,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2278,15 +2286,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-embedding"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "a8a364b5030660d43ec2",
@@ -2306,7 +2306,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2316,15 +2324,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.8-livetranslate"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "a8fb73c1a59d3537187a",
@@ -2344,7 +2344,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2354,15 +2362,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-coder-next"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "aa58c43c08c5827a7274",
@@ -2382,7 +2382,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2392,15 +2400,7 @@
           "url": "https://qwen.ai/blog?id=qwen2.5-vl-32b"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "ac987d55a7947bf625bf",
@@ -2420,7 +2420,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2430,15 +2438,7 @@
           "url": "https://qwen.ai/blog?id=qwen2.5-coder-family"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "b26ddf86edf0e3b2e098",
@@ -2458,7 +2458,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2468,15 +2476,7 @@
           "url": "https://qwen.ai/blog?id=qwq-32b-preview"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "b29d7c4dac12fb85f00d",
@@ -2496,7 +2496,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2506,15 +2514,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.7-plus"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "b3bdc7070d5da089800d",
@@ -2534,7 +2534,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2544,15 +2552,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.8-flash-next"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "b44d9cbac00598f03198",
@@ -2572,7 +2572,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2582,15 +2590,7 @@
           "url": "https://qwen.ai/blog?id=qwen-image"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "b9e771b3f0a3c5ff4221",
@@ -2610,7 +2610,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2620,15 +2628,7 @@
           "url": "https://qwen.ai/blog?id=qwen-agentworld"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "be4dbb95b1431cad762e",
@@ -2648,7 +2648,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2658,15 +2666,7 @@
           "url": "https://qwen.ai/blog?id=qwen-robotworld"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "cc0c607982729e4e864b",
@@ -2686,7 +2686,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2696,15 +2704,7 @@
           "url": "https://qwen.ai/blog?id=qwen-image-edit"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "cebbddc4362671d92de0",
@@ -2724,7 +2724,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2734,15 +2742,7 @@
           "url": "https://qwen.ai/blog?id=qwen-image-2512"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "cfebc667ee0212062040",
@@ -2762,7 +2762,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2772,15 +2780,7 @@
           "url": "https://qwen.ai/blog?id=qwen2.5-math"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "d37b63abde6c5778c741",
@@ -2800,7 +2800,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2810,15 +2818,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-tts"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "d975f337fa6098aed14c",
@@ -2838,7 +2838,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.964Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2848,15 +2856,7 @@
           "url": "https://qwen.ai/blog?id=qwen1.5-110b"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "e0c43f29697f9bdc0e0d",
@@ -2876,7 +2876,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2886,15 +2894,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-omni"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "e1205be39edadb082254",
@@ -2914,7 +2914,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2924,15 +2932,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.7"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "e2af5557e72a1b75d859",
@@ -2952,7 +2952,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2962,15 +2970,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-vl"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "e3e01e5eb87ab4c1bd08",
@@ -2990,7 +2990,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3000,15 +3008,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "e526b7d1c860faccab38",
@@ -3028,7 +3028,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3038,15 +3046,7 @@
           "url": "https://qwen.ai/blog?id=qwen2-audio"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "e5d3f9b63c0fc6829543",
@@ -3066,7 +3066,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3076,15 +3084,7 @@
           "url": "https://qwen.ai/blog?id=qvq-max-preview"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "e9ed4505ba0907156391",
@@ -3104,7 +3104,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.964Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3114,15 +3122,7 @@
           "url": "https://qwen.ai/blog?id=qwen-moe"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "eb3de7b2e4998bbae050",
@@ -3142,7 +3142,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3152,15 +3160,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.5-livetranslate"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "eda12f7288c349327d06",
@@ -3180,7 +3180,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3190,15 +3198,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-tts-1128"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "eddefb89f2403bd67106",
@@ -3218,7 +3218,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3228,15 +3236,7 @@
           "url": "https://qwen.ai/blog?id=qwen-mt"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "f001f5d01d6b1cecf8b0",
@@ -3256,7 +3256,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3266,15 +3274,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.5"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "f3d7fc4b88811345a7e8",
@@ -3294,7 +3294,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3304,15 +3312,7 @@
           "url": "https://qwen.ai/blog?id=qwen-robotmanip"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "f6040a4a87529a6ae319",
@@ -3332,7 +3332,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3342,15 +3350,7 @@
           "url": "https://qwen.ai/blog?id=qwen3"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "f8370ebbe79b86d71b1b",
@@ -3370,7 +3370,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3380,15 +3388,7 @@
           "url": "https://qwen.ai/blog?id=qwen3-livetranslate"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "f9f1658edde349a98759",
@@ -3408,7 +3408,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3418,15 +3426,7 @@
           "url": "https://qwen.ai/blog?id=qwen2-math"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "fb61b890a7be0bdbf304",
@@ -3446,7 +3446,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3456,15 +3464,7 @@
           "url": "https://qwen.ai/blog?id=qwen3asr"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "fdbca5ab165a311c4ed3",
@@ -3484,7 +3484,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:41:34.963Z"
+        "classifiedAt": "2026-11-02T03:56:10.947Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3494,15 +3502,7 @@
           "url": "https://qwen.ai/blog?id=qwen3.6"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     }
   ]
 }
