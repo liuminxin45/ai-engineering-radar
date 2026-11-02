@@ -18,11 +18,6 @@ export const sourceReplacements = [
     replacementIds: ["dewu-tencent"],
   },
   {
-    sourceId: "alibaba-csdn",
-    companyId: "alibaba",
-    replacementIds: ["aliyun-cloud-native"],
-  },
-  {
     sourceId: "bytedance-csdn",
     companyId: "bytedance",
     replacementIds: ["bytedance-tech-volcengine"],
@@ -85,12 +80,6 @@ export const sourceReplacements = [
     referenceOnly: true,
   },
   {
-    sourceId: "alibaba",
-    companyId: "alibaba",
-    replacementIds: ["aliyun-cloud-native"],
-    referenceOnly: true,
-  },
-  {
     sourceId: "bytedance",
     companyId: "bytedance",
     replacementIds: ["bytedance-tech-volcengine"],
@@ -127,12 +116,6 @@ export const sourceReplacements = [
     referenceOnly: true,
   },
   {
-    sourceId: "ctrip",
-    companyId: "ctrip",
-    replacementIds: ["ctrip-csdn"],
-    referenceOnly: true,
-  },
-  {
     sourceId: "netease",
     companyId: "netease",
     replacementIds: ["netease-csdn"],
@@ -162,17 +145,6 @@ export const sourceReplacements = [
     replacementIds: ["vivo-csdn"],
   },
   {
-    sourceId: "ctrip-cnblogs",
-    companyId: "ctrip",
-    replacementIds: ["ctrip-csdn"],
-    referenceOnly: true,
-  },
-  {
-    sourceId: "aliyun-dataphin",
-    companyId: "alibaba",
-    replacementIds: ["aliyun-cloud-native"],
-  },
-  {
     sourceId: "ant-oceanbase-csdn",
     companyId: "ant",
     replacementIds: ["ant-data-csdn"],
@@ -193,8 +165,19 @@ export const sourceReplacements = [
 // Explicit removals requested by the maintainer; these have no replacement.
 export const sourceWithdrawals = [
   { sourceId: "xiaohongshu-papers-crossref", companyId: "xiaohongshu" },
-  { sourceId: "xiaohongshu", companyId: "xiaohongshu" },
+  { sourceId: "ctrip-csdn", companyId: "ctrip", sourceOnly: true },
   { sourceId: "xiaohongshu-csdn", companyId: "xiaohongshu" },
+  { sourceId: "aliyun-cloud-native", companyId: "alibaba", sourceOnly: true },
+  { sourceId: "qwen-hf-papers", companyId: "alibaba", sourceOnly: true },
+  { sourceId: "kling-hf-papers", companyId: "kuaishou", sourceOnly: true },
+  { sourceId: "joyai-readme-papers", companyId: "jd", sourceOnly: true },
+  { sourceId: "index-readme-papers", companyId: "bilibili", sourceOnly: true },
+  { sourceId: "alibaba-csdn", companyId: "alibaba", sourceOnly: true },
+  { sourceId: "alibaba", companyId: "alibaba", sourceOnly: true },
+  { sourceId: "ctrip", companyId: "ctrip", sourceOnly: true },
+  { sourceId: "xiaohongshu", companyId: "xiaohongshu" },
+  { sourceId: "ctrip-cnblogs", companyId: "ctrip", sourceOnly: true },
+  { sourceId: "aliyun-dataphin", companyId: "alibaba", sourceOnly: true },
   { sourceId: "oppo", companyId: "oppo" },
   { sourceId: "oppo-segmentfault", companyId: "oppo" },
 ] as const;
@@ -202,7 +185,8 @@ export const sourceWithdrawals = [
 export function validateSourceReplacements(registry: Registry) {
   for (const rule of sourceWithdrawals) {
     if (
-      registry.companies.some((c) => c.id === rule.companyId) ||
+      (!("sourceOnly" in rule && rule.sourceOnly) &&
+        registry.companies.some((c) => c.id === rule.companyId)) ||
       registry.sources.some((s) => s.id === rule.sourceId)
     )
       throw new Error(

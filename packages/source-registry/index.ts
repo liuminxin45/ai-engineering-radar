@@ -139,15 +139,27 @@ export function validateCompanySources(registry: {
   sources: Source[];
 }) {
   const owners = new Map(registry.publishers.map((p) => [p.id, p.companyId]));
-  for (const company of registry.companies) {
-    const sources = registry.sources.filter(
-      (source) =>
-        owners.get(source.publisherId) === company.id &&
-        source.contentType !== "paper",
-    );
-    if (sources.length !== 1)
+  for (const source of registry.sources)
+    if (
+      !source.crawl.enabled ||
+      source.verification.status !== "verified" ||
+      source.adapter === "reference"
+    )
       throw new Error(
-        `Company must have exactly one source: ${company.id} (found ${sources.length})`,
+        `Registry contains a non-collectable source: ${source.id}`,
+      );
+  for (const company of registry.companies) {
+    const companySources = registry.sources.filter(
+      (source) => owners.get(source.publisherId) === company.id,
+    );
+    if (!companySources.length)
+      throw new Error(`Company must have a collectable source: ${company.id}`);
+    const sources = companySources.filter(
+      (source) => source.contentType !== "paper",
+    );
+    if (sources.length > 1)
+      throw new Error(
+        `Company may have at most one blog source: ${company.id} (found ${sources.length})`,
       );
   }
 }

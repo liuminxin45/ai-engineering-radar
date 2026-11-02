@@ -24,7 +24,7 @@ AI Engineering Radar 把这些分散的发布渠道聚集起来，持续追踪�
 
 每列先显示 20 篇，滚动到底部时自动追加 20 篇。内容类型、搜索、当前公司列和已加载批次保存在链接中，支持刷新及浏览器前进后退，方便继续阅读或分享。右上角提供深浅色切换、ATOM/RSS、GitHub 图标和数据更新时间；手机显示更新时间的时分，完整日期可通过时间提示查看。
 
-论文已覆盖当前 15 家公司，接入正式出版元数据、官方研究目录和能够验证作者机构的预印本渠道。归属证据随论文 JSON 保存，详情页提供核验链接。具体渠道、实采数量与未启用项见[论文来源核验](docs/paper-sources.md)，接入方式见[贡献指南](CONTRIBUTING.md#博文与论文)。
+论文已覆盖当前 15 家公司，接入正式出版元数据、官方研究目录和能够验证作者机构的预印本渠道。归属证据随论文 JSON 保存，详情页提供核验链接。具体渠道与实采数量见[论文来源核验](docs/paper-sources.md)，接入方式见[贡献指南](CONTRIBUTING.md#博文与论文)。
 
 ## 阅读界面
 
@@ -44,30 +44,28 @@ PC：公司分列，横向浏览。
 
 来源是否经过身份核验、是否启用、是否采集成功是三个独立状态，记录在[来源验收表](docs/source-acceptance.md)和[公开来源 JSON](https://liuminxin45.github.io/ai-engineering-radar/data/sources.json)中。待核验账号可以继续补充官方证据；缺少文章目录的入口可以继续贡献适配器。
 
-来源还需要核查近期活跃度。HTTP 成功或能解析历史文章，不代表覆盖了近期更新。超过一个月没有新文章的渠道会人工复查。尚无可靠替代的过时来源暂停新增，保留历史；替代渠道已核验并真实采集后，移除指定旧源及仅由旧源支撑的文章，不按文章年龄自动删除。当前博文每家公司只登记一个来源，共 16 个公司或独立品牌栏目、16 个来源，其中 15 个启用，1 个暂停新增。阿里云使用指定账号主页，千问使用官方 Research 目录，蚂蚁使用指定的蚂蚁数据 AntData 账号。百度智能云技术站 CSDN 已依据团队原创内容、多平台连续同步及百度自有社区的对应关系完成人工核验并启用，企业认证徽标不是唯一依据。
+当前只登记已核验、已启用且有成功采集记录的来源，共 16 个公司或独立品牌栏目、39 个来源，其中 14 个博文源、25 个论文源。每家公司最多一个可用博文源；阿里与携程暂时只保留论文源，小红书已整列移除。按维护者要求，未启用、暂停和访问受限的入口退出注册表，显式迁移清理其状态和独占记录，不按文章年龄自动删除。千问继续使用官方 Research 目录，蚂蚁使用指定的 AntData CSDN 账号。
 
 小米博文已按维护者指定改用 [MiMo 官网](https://mimo.xiaomi.com/)，实采 15 篇。小米只保留此源，其余未启用的参考入口已移除。最新明确发布日期为 2026-09-27；继续追踪更新，不视为近月活跃。携程及快手更完整的长文渠道仍待补充，详见[来源核验记录](docs/source-research.md)。
 
 当前采集源如下，按 2026-11-02 的[来源注册表](packages/source-registry/registry.json)整理。表中状态表示是否启用采集；最近采集结果见[来源验收表](docs/source-acceptance.md)。暂停新增的来源保留历史文章。
 
-| 公司              | 来源入口                                                                              | 采集方式             | 状态     |
-| ----------------- | ------------------------------------------------------------------------------------- | -------------------- | -------- |
-| 美团              | [美团技术团队](https://tech.meituan.com/)                                             | RSS                  | 启用     |
-| vivo              | [vivo 互联网技术 · CSDN](https://blog.csdn.net/vivo_tech)                             | RSS                  | 启用     |
-| 得物              | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles)        | 账号文章目录         | 启用     |
-| 腾讯              | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)          | 公开作者列表 API     | 启用     |
-| 阿里巴巴 / 阿里云 | [阿里云云原生 · 账号主页](https://developer.aliyun.com/profile/pawmkwdq37c7s)         | 账号文章目录         | 启用     |
-| 千问              | [千问 · Research](https://qwen.ai/research)                                           | 官方研究目录 JSON    | 启用     |
-| 字节跳动          | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673) | 账号文章目录         | 启用     |
-| 百度              | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283)                        | RSS                  | 启用     |
-| 华为              | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud)                             | RSS                  | 启用     |
-| 快手              | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech)                                 | RSS                  | 启用     |
+| 公司     | 来源入口                                                                              | 采集方式             | 状态 |
+| -------- | ------------------------------------------------------------------------------------- | -------------------- | ---- |
+| 美团     | [美团技术团队](https://tech.meituan.com/)                                             | RSS                  | 启用 |
+| vivo     | [vivo 互联网技术 · CSDN](https://blog.csdn.net/vivo_tech)                             | RSS                  | 启用 |
+| 得物     | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles)        | 账号文章目录         | 启用 |
+| 腾讯     | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)          | 公开作者列表 API     | 启用 |
+| 千问     | [千问 · Research](https://qwen.ai/research)                                           | 官方研究目录 JSON    | 启用 |
+| 字节跳动 | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673) | 账号文章目录         | 启用 |
+| 百度     | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283)                        | RSS                  | 启用 |
+| 华为     | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud)                             | RSS                  | 启用 |
+| 快手     | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech)                                 | RSS                  | 启用 |
 | 蚂蚁集团          | [蚂蚁数据 AntData · CSDN](https://devpress.csdn.net/user/DB_GPT)                      | RSS                  | 启用     |
-| 小米              | [小米 MiMo · 官方博客](https://mimo.xiaomi.com/)                                      | 官网博客列表与文章页 | 启用     |
-| 京东              | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/)                              | 账号 HTML 目录       | 启用     |
-| 携程              | [携程技术 · CSDN](https://blog.csdn.net/ctrip_tech)                                   | RSS                  | 暂停新增 |
-| 网易              | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw)                            | RSS                  | 启用     |
-| B站               | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC)                              | RSS                  | 启用     |
+| 小米     | [小米 MiMo · 官方博客](https://mimo.xiaomi.com/)                                      | 官网博客列表与文章页 | 启用 |
+| 京东     | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/)                              | 账号 HTML 目录       | 启用 |
+| 网易     | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw)                            | RSS                  | 启用 |
+| B站      | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC)                              | RSS                  | 启用 |
 
 不保存或提供文章全文，不提供登录、收藏、推荐榜单和评论。文章保留原始语言。
 
@@ -127,7 +125,7 @@ pnpm test:e2e
 
 - A/B/C 为接入优先级，不等于身份已认证。
 - `verified` 必须附带官方域名、官网反向链接或平台企业认证等证据、核验说明及日期。
-- `pending` 不采集文章；`suspended` 停止新增并保留历史；`rejected` 来源不再作为公开文章的有效身份依据。
+- `pending`、`suspended` 和 `reference` 仅用于历史快照兼容；当前注册表只接受启用且已核验的采集源。待核验线索先保留在提议与调查文档中。
 - 已完成替换的旧源从注册表及公开索引移除。迁移会先检查替代渠道的官方身份和实际采集记录，保留其他发布位置仍有效的文章及稳定 ID。
 - RSS / Atom 优先；公开 API 及站点 HTML 解析必须使用经审核的入口和站点专用适配。
 - 社区来源必须设置 `authorAllowlist`，匹配稳定可核验的发布主体；无法确认时保持禁用。

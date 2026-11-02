@@ -1,3 +1,4 @@
+import { aliyunFixture } from "../fixtures/aliyun-source.js";
 import { beforeEach, expect, it, vi } from "vitest";
 import { readFile } from "node:fs/promises";
 vi.mock("../../packages/crawler/http.js", async (importOriginal) => {
@@ -10,7 +11,7 @@ import { fetchReviewed } from "../../packages/crawler/http.js";
 import { loadRegistry } from "../../packages/source-registry/index.js";
 const registry = await loadRegistry();
 const source = {
-  ...registry.sources.find((s) => s.id === "aliyun-cloud-native")!,
+  ...aliyunFixture,
   adapter: "html" as const,
   platform: "aliyun-group",
   entryUrl: "https://developer.aliyun.com/group/apphub/article/",

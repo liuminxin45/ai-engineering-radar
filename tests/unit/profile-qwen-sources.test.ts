@@ -1,3 +1,4 @@
+import { aliyunFixture } from "../fixtures/aliyun-source.js";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { readFile } from "node:fs/promises";
 import {
@@ -20,7 +21,7 @@ vi.mock("../../packages/crawler/http.js", async (importOriginal) => ({
   fetchReviewed: vi.fn(),
 }));
 const registry = await loadRegistry();
-const aliyun = registry.sources.find((s) => s.id === "aliyun-cloud-native")!;
+const aliyun = aliyunFixture;
 const qwen = registry.sources.find((s) => s.id === "qwen-research")!;
 const profile = await readFile("tests/fixtures/aliyun-profile.html", "utf8");
 const legacy = [

@@ -284,7 +284,6 @@ test("domestic provenance stays public while the interface exposes only whole-pr
     .sources;
   for (const id of [
     "dewu-tencent",
-    "aliyun-cloud-native",
     "qwen-research",
     "bytedance-tech-volcengine",
     "ant-data-csdn",
@@ -300,7 +299,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
       (s: { verification: { status: string } }) =>
         s.verification.status === "suspended",
     ).length,
-  ).toBe(1);
+  ).toBe(0);
   for (const rule of sourceReplacements) {
     const { sourceId, replacementIds } = rule;
     expect(sources.some((s: { id: string }) => s.id === sourceId)).toBe(false);
@@ -314,11 +313,23 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   }
   expect(
     sources.filter((s: { contentType?: string }) => s.contentType !== "paper"),
-  ).toHaveLength(companies.length);
+  ).toHaveLength(14);
   expect(
     sources.find((s: { id: string }) => s.id === "bytedance-tech-volcengine")
       .entryUrl,
   ).toBe("https://developer.volcengine.com/user/2772312065061673");
+  expect(
+    sources.every(
+      (s: {
+        crawl: { enabled: boolean };
+        adapter: string;
+        verification: { status: string };
+      }) =>
+        s.crawl.enabled &&
+        s.adapter !== "reference" &&
+        s.verification.status === "verified",
+    ),
+  ).toBe(true);
   const articles = (await (await request.get("data/articles.json")).json())
     .articles;
   const retiredIds = new Set<string>(
@@ -479,9 +490,8 @@ test("Qwen has an independent company panel and the requested source URLs stay e
   const sources = (await (await request.get("data/sources.json")).json())
     .sources;
   expect(
-    sources.find((s: { id: string }) => s.id === "aliyun-cloud-native")
-      .entryUrl,
-  ).toBe("https://developer.aliyun.com/profile/pawmkwdq37c7s");
+    sources.some((s: { id: string }) => s.id === "aliyun-cloud-native"),
+  ).toBe(false);
   expect(
     sources.find((s: { id: string }) => s.id === "qwen-research").entryUrl,
   ).toBe("https://qwen.ai/research");

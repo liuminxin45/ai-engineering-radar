@@ -397,34 +397,6 @@
       "linkPattern": "^/kuaishoutech/article/details/[0-9]+/?$"
     },
     {
-      "id": "ctrip-csdn",
-      "publisherId": "ctrip-official",
-      "name": "携程技术 · CSDN",
-      "entryUrl": "https://blog.csdn.net/ctrip_tech",
-      "url": "https://rss.csdn.net/ctrip_tech/rss/map",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "csdn-feed",
-      "verification": {
-        "status": "suspended",
-        "evidenceUrls": [
-          "https://blog.csdn.net/ctrip_tech",
-          "https://blog.csdn.net/ctrip_tech/category_6546352.html",
-          "https://juejin.cn/user/149189310818861"
-        ],
-        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-05-13，超过一个月未更新，不能承担当前更新追踪。 原核验说明：账号公开简介明确携程技术官方帐号；与掘金账号的携程公司归属、2016 年以来文章历史相互印证。限定稳定用户名 ctrip_tech；HTML 请求返回 521，公开 RSS 解析成功。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["ctrip_tech"],
-      "linkPattern": "^/ctrip_tech/article/details/[0-9]+/?$"
-    },
-    {
       "id": "netease-csdn",
       "publisherId": "netease-official",
       "name": "网易数帆大数据 · CSDN",
@@ -566,31 +538,6 @@
         "backfillLimit": 50
       },
       "authorAllowlist": ["xiaomi-mimo"]
-    },
-    {
-      "id": "aliyun-cloud-native",
-      "publisherId": "aliyun-cloud-native",
-      "name": "阿里云云原生 · 账号主页",
-      "entryUrl": "https://developer.aliyun.com/profile/pawmkwdq37c7s",
-      "url": "https://developer.aliyun.com/profile/pawmkwdq37c7s",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "aliyun-profile",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": ["https://developer.aliyun.com/profile/pawmkwdq37c7s"],
-        "note": "用户指定的阿里云云原生账号主页，稳定 profile ID pawmkwdq37c7s。仅采集该账号动态中的“发表了文章”记录，排除点赞、评论和第三方文章，按原始发布时间建立索引。沿用原来源与发布主体 ID，保留已有文章 ID。",
-        "reviewedAt": "2026-11-02T03:37:09.013Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      },
-      "authorAllowlist": ["pawmkwdq37c7s"],
-      "linkHosts": ["developer.aliyun.com"],
-      "linkPattern": "^/article/[0-9]+/?$"
     },
     {
       "id": "bytedance-tech-volcengine",
@@ -1178,34 +1125,6 @@
       "linkHosts": ["arxiv.org"]
     },
     {
-      "id": "qwen-hf-papers",
-      "publisherId": "alibaba-research-papers",
-      "contentType": "paper",
-      "name": "阿里巴巴 / 阿里云 · Qwen 论文",
-      "entryUrl": "https://huggingface.co/Qwen/papers",
-      "url": "https://huggingface.co/Qwen/papers",
-      "priority": "A",
-      "adapter": "reference",
-      "platform": "paper-huggingface",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://qwen.ai/",
-          "https://huggingface.co/Qwen/papers"
-        ],
-        "note": "只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。 本轮严格复核未取得可用的作者机构署名，候选已隐藏，暂作参考。千问 Research 独立栏目仍沿用现有官方内容来源。",
-        "reviewedAt": "2026-11-02T00:00:00.000Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 5,
-        "backfillLimit": 5
-      },
-      "authorAllowlist": ["Qwen"],
-      "linkHosts": ["arxiv.org"]
-    },
-    {
       "id": "baidu-hf-papers",
       "publisherId": "baidu-research-papers",
       "contentType": "paper",
@@ -1259,34 +1178,6 @@
         "backfillLimit": 5
       },
       "authorAllowlist": ["meituan-longcat"],
-      "linkHosts": ["arxiv.org"]
-    },
-    {
-      "id": "kling-hf-papers",
-      "publisherId": "kuaishou-research-papers",
-      "contentType": "paper",
-      "name": "快手 · KlingTeam 论文",
-      "entryUrl": "https://huggingface.co/KlingTeam/papers",
-      "url": "https://huggingface.co/KlingTeam/papers",
-      "priority": "A",
-      "adapter": "reference",
-      "platform": "paper-huggingface",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://github.com/KlingAIResearch",
-          "https://huggingface.co/KlingTeam/papers"
-        ],
-        "note": "只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。 实采目录可访问，但本轮候选未取得可核验的作者机构署名，未入库；保留线索并暂不启用。",
-        "reviewedAt": "2026-11-02T00:00:00.000Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 5,
-        "backfillLimit": 5
-      },
-      "authorAllowlist": ["KlingTeam"],
       "linkHosts": ["arxiv.org"]
     },
     {
@@ -1420,62 +1311,6 @@
         "ieeexplore.ieee.org",
         "www.nature.com"
       ]
-    },
-    {
-      "id": "joyai-readme-papers",
-      "publisherId": "jd-research-papers",
-      "contentType": "paper",
-      "name": "京东 · jd-opensource 论文",
-      "entryUrl": "https://github.com/jd-opensource/JoyAI-VL-Interaction",
-      "url": "https://raw.githubusercontent.com/jd-opensource/JoyAI-VL-Interaction/main/README.md",
-      "priority": "A",
-      "adapter": "reference",
-      "platform": "paper-readme",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://research.joyai.com/research",
-          "https://raw.githubusercontent.com/jd-opensource/JoyAI-VL-Interaction/main/README.md"
-        ],
-        "note": "只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。 实采目录可访问，但本轮候选未取得可核验的作者机构署名，未入库；保留线索并暂不启用。",
-        "reviewedAt": "2026-11-02T00:00:00.000Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 5,
-        "backfillLimit": 5
-      },
-      "authorAllowlist": ["jd-opensource"],
-      "linkHosts": ["arxiv.org"]
-    },
-    {
-      "id": "index-readme-papers",
-      "publisherId": "bilibili-research-papers",
-      "contentType": "paper",
-      "name": "B站 · bilibili 论文",
-      "entryUrl": "https://github.com/bilibili/Index-Translate",
-      "url": "https://raw.githubusercontent.com/bilibili/Index-Translate/main/README.md",
-      "priority": "A",
-      "adapter": "reference",
-      "platform": "paper-readme",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://github.com/bilibili/Index-Translate",
-          "https://raw.githubusercontent.com/bilibili/Index-Translate/main/README.md"
-        ],
-        "note": "只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。 实采目录可访问，但本轮候选未取得可核验的作者机构署名，未入库；保留线索并暂不启用。",
-        "reviewedAt": "2026-11-02T00:00:00.000Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 5,
-        "backfillLimit": 5
-      },
-      "authorAllowlist": ["bilibili"],
-      "linkHosts": ["arxiv.org"]
     },
     {
       "id": "tripscore-paper-papers",

@@ -1,6 +1,6 @@
 # 来源验收表
 
-快照时间：2026-11-02T04:43:55.011Z
+快照时间：2026-11-02T04:48:58.212Z
 
 | 入口 | 身份 | 启用 | 实测状态 | 条目数 | 最新文章 | 最近成功 | 说明 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -9,13 +9,11 @@
 | [vivo互联网技术 · CSDN](https://blog.csdn.net/vivo_tech) | verified | 是 | success | 20 | 2026-10-29T03:33:55.000Z | 2026-11-02T02:28:10.877Z | 用户指定账号。公开主页显示企业官方账号认证；稳定用户名 vivo_tech，2019 年以来持续发布 vivo 工程文章。公开账号 RSS 已通过 robots 与真实文章解析验证。 |
 | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud) | verified | 是 | success | 20 | 2026-10-30T08:46:50.000Z | 2026-11-02T02:28:11.212Z | 维护者指定的华为云 CSDN 账号。公开主页标注华为云官方博客，并链接华为云 AI 开发者空间；华为云开发者联盟企业微博列出 CSDN 渠道。去掉 utm_source 追踪参数，限定稳定作者 devcloud 与同账号文章路径，通过公开 RSS 采集元数据。 |
 | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech) | verified | 是 | success | 20 | 2026-10-15T08:29:11.000Z | 2026-11-02T02:28:11.353Z | 人工核验：快手技术思否资料明确快手官方技术号，CSDN 与该号持续发布相同快手团队实践和活动。限定稳定用户名 kuaishoutech；HTML 请求返回 521，公开账号 RSS 允许访问并解析成功。 |
-| [携程技术 · CSDN](https://blog.csdn.net/ctrip_tech) | suspended | 否 | suspended | 20 | 2026-05-13T02:08:50.000Z | 2026-11-01T10:02:44.647Z | 已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-05-13，超过一个月未更新，不能承担当前更新追踪。 原核验说明：账号公开简介明确携程技术官方帐号；与掘金账号的携程公司归属、2016 年以来文章历史相互印证。限定稳定用户名 ctrip_tech；HTML 请求返回 521，公开 RSS 解析成功。 |
 | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw) | verified | 是 | success | 20 | 2026-10-28T10:17:09.000Z | 2026-11-02T02:28:12.591Z | 人工核验：公开账号资料列出目前就职网易、网易数智旗下产品介绍；长期文章自署网易云社区，与数帆官方产品和博客园同名团队历史相互印证。限定用户名 wangyiyungw，公开 RSS 解析成功。 |
 | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC) | verified | 是 | success | 20 | 2026-10-20T04:00:00.000Z | 2026-11-02T02:28:13.495Z | 人工核验：掘金资料列出上海哔哩哔哩科技有限公司，两个账号的年度技术合集与持续原创历史一致。RSS 返回稳定作者 bilibili_TC（注意大小写），公开账号 RSS 解析成功。 |
 | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D) | verified | 是 | success | 20 | 2026-10-30T09:36:48.000Z | 2026-11-02T02:28:14.348Z | 用户指定入口。公开用户资料接口显示腾讯技术工程官方账号认证；稳定 SUID 8QMZ23lf74UYuTs=、mediaid 6093642。公开作者列表 API 无需登录，robots 允许；逐条校验 card.suid，仅保存元数据和短摘要。 |
 | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/) | verified | 是 | success | 11 | 2026-10-28T06:08:00.000Z | 2026-11-02T02:28:16.296Z | 人工核验：账号名称、京东云技术团队长期署名文章，与京东云开发者社区及同名公众号的持续历史一致。稳定账号路径 Jcloud；RSS 目标 robots 禁止，改用允许访问的账号 HTML 目录。 |
 | [小米 MiMo · 官方博客](https://mimo.xiaomi.com/) | verified | 是 | success | 15 | 2026-09-26T16:00:00.000Z | 2026-11-02T02:28:18.457Z | 用户指定小米自有 MiMo 官网。首页署名 Xiaomi MiMo Team，页脚版权归 Xiaomi。读取中文首页博客列表，从官网同域静态资源解析文章链接，逐篇补充原文日期，必要时读取同域文章 iframe；只保存索引元数据。月份不推算为具体日期。2026-11-02 核验：最新明确发布日期为 2026-09-27，不代表近月更新。 |
-| [阿里云云原生 · 账号主页](https://developer.aliyun.com/profile/pawmkwdq37c7s) | verified | 是 | blocked | 0 | 2026-10-28T16:00:00.000Z | — | Aliyun profile requires login or access verification |
 | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673) | verified | 是 | success | 20 | 2026-06-24T17:28:03.000Z | 2026-11-02T03:56:07.442Z | 用户指定字节跳动技术团队账号，稳定用户 ID 2772312065061673。公开账号 SSR 与逐篇 content.user_id、user.user_id 均匹配，仅采集该账号发布的文章元数据。普通公开请求实采 20 篇，最新北京时间 2026-06-25；按用户指定继续追踪，不代表近月活跃。原字节跳动开源账号已移除。 |
 | [蚂蚁数据 AntData · CSDN](https://devpress.csdn.net/user/DB_GPT) | verified | 是 | success | 20 | 2026-06-12T07:03:51.000Z | 2026-11-02T04:10:25.973Z | 维护者指定的蚂蚁数据团队账号。DevPress 显示蚂蚁数据 AntData、稳定用户名 DB_GPT，CSDN 同名账号为蚂蚁数据智能技术，持续发布蚂蚁数据团队实践、DB-GPT、VSAG 与 ASystem 工程文章。依据账号连续性、团队自述和维护者指定核验，不表述为平台企业认证。去掉 utm_source 参数，通过同账号公开 RSS 采集，仅接受作者 DB_GPT 与同账号文章路径。 |
 | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283) | verified | 是 | success | 20 | 2026-10-29T14:25:14.000Z | 2026-11-02T02:28:23.590Z | 经维护者按现有交叉证据人工确认，为百度智能云技术团队发布渠道。账号持续发表团队原创工程文章，与同品牌掘金及百度自有社区长期近同步；RLinf、KVCache 等多篇 CSDN 原始发文先于百度社区数分钟。依据上述团队内容、账号连续性和自有社区对应关系核验，不以企业认证徽标为前提。限定稳定用户名2301_82040283及同账号文章路径，公开RSS实测可采集。 |
@@ -37,15 +35,11 @@
 | [B站 · 出版方论文元数据](https://search.crossref.org/?q=Bilibili) | verified | 是 | success | 30 | 2026-05-03T00:00:00.000Z | 2026-11-02T03:24:42.178Z | 正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。 |
 | [字节跳动 · ByteDance-Seed 论文](https://huggingface.co/ByteDance-Seed/papers) | verified | 是 | success | 1 | 2026-10-07T20:00:00.000Z | 2026-11-02T03:29:38.979Z | 部分论文候选缺少可核验机构信息，已跳过。 |
 | [腾讯 · Tencent-Hunyuan 论文](https://huggingface.co/Tencent-Hunyuan/papers) | verified | 是 | success | 3 | 2026-10-26T20:00:00.000Z | 2026-11-02T03:29:38.985Z | 部分论文候选缺少可核验机构信息，已跳过。 |
-| [阿里巴巴 / 阿里云 · Qwen 论文](https://huggingface.co/Qwen/papers) | verified | 否 | reference | 4 | — | 2026-11-02T03:29:38.985Z | 只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。 本轮严格复核未取得可用的作者机构署名，候选已隐藏，暂作参考。千问 Research 独立栏目仍沿用现有官方内容来源。 |
 | [百度 · baidu 论文](https://huggingface.co/baidu/papers) | verified | 是 | success | 5 | 2026-10-12T20:00:00.000Z | 2026-11-02T03:29:38.985Z | 2 条候选未通过严格作者机构复核，已隐藏；仅发布证据完整条目。 |
 | [美团 · meituan-longcat 论文](https://huggingface.co/meituan-longcat/papers) | verified | 是 | success | 5 | 2026-10-26T20:00:00.000Z | 2026-11-02T03:29:38.985Z | 3 条候选未通过严格作者机构复核，已隐藏；仅发布证据完整条目。 |
-| [快手 · KlingTeam 论文](https://huggingface.co/KlingTeam/papers) | verified | 否 | reference | 0 | — | — | 只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。 实采目录可访问，但本轮候选未取得可核验的作者机构署名，未入库；保留线索并暂不启用。 |
 | [蚂蚁集团 · antgroup 论文](https://huggingface.co/antgroup/papers) | verified | 是 | success | 4 | 2026-09-27T20:00:00.000Z | 2026-11-02T03:35:46.158Z | 1 条候选未通过严格作者机构复核，已隐藏；仅发布证据完整条目。 |
 | [小米 · XiaomiMiMo 论文](https://huggingface.co/XiaomiMiMo/papers) | verified | 是 | success | 3 | 2026-06-28T20:00:00.000Z | 2026-11-02T03:36:26.755Z | 2 条候选未通过严格作者机构复核，已隐藏；仅发布证据完整条目。 |
 | [字节跳动 · ByteDance Seed 论文](https://seed.bytedance.com/en/public_papers) | verified | 是 | success | 17 | 2026-10-24T16:00:00.000Z | 2026-11-02T03:47:25.960Z | 官方研究目录逐篇列出的研究成果；保留目录归属依据。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。 |
 | [华为 · Huawei Noah 论文](https://www.noahlab.com.hk/en/research_paper) | verified | 是 | success | 10 | — | 2026-11-02T03:36:44.597Z | 官方研究目录逐篇列出的研究成果；保留目录归属依据。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。 |
-| [京东 · jd-opensource 论文](https://github.com/jd-opensource/JoyAI-VL-Interaction) | verified | 否 | reference | 0 | — | — | 只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。 实采目录可访问，但本轮候选未取得可核验的作者机构署名，未入库；保留线索并暂不启用。 |
-| [B站 · bilibili 论文](https://github.com/bilibili/Index-Translate) | verified | 否 | reference | 0 | — | — | 只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。 实采目录可访问，但本轮候选未取得可核验的作者机构署名，未入库；保留线索并暂不启用。 |
 | [携程 · Trip.com Group 论文](https://arxiv.org/html/2510.09011v3) | verified | 是 | success | 1 | — | 2026-11-02T03:39:36.955Z | 只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。 |
 | [网易 · NetEase 论文](https://ojs.aaai.org/index.php/AAAI/article/view/26509) | verified | 是 | success | 1 | 2023-06-25T16:00:00.000Z | 2026-11-02T03:40:59.528Z | 只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。 |

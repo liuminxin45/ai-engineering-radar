@@ -40,10 +40,10 @@ const candidate = {
   publishedAt: "2026-10-30T00:00:00.000Z",
 };
 describe("registry and identity", () => {
-  it("keeps domestic sources only and preserves original domestic entries", () =>
+  it("keeps a single working blog source where available, alongside paper-only companies", () =>
     expect(
       registry.sources.filter((s) => s.contentType !== "paper").length,
-    ).toBe(registry.companies.length));
+    ).toBe(14));
   it("rejects verified records without evidence", () =>
     expect(() =>
       sourceSchema.parse({

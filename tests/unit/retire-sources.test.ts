@@ -7,6 +7,7 @@ import {
 import { retireReplacedSources } from "../../packages/database/retire-sources.js";
 import { upsert } from "../../packages/crawler/deduplicate.js";
 import { validateRelations } from "../../packages/database/snapshot.js";
+import { parseCrossref } from "../../packages/crawler/platforms/papers.js";
 import type { Article, SourceState } from "../../packages/shared/types.js";
 
 const registry = await loadRegistry();
@@ -47,6 +48,75 @@ function fixture() {
   return { articles: [...articles, old], states };
 }
 describe("explicit source retirement", () => {
+  it("withdraws disabled and blocked sources without withdrawing their companies or working papers", () => {
+    const source = registry.sources.find(
+      (s) => s.id === "alibaba-papers-crossref",
+    )!;
+    const articles: Article[] = [];
+    upsert(
+      articles,
+      parseCrossref(
+        JSON.stringify({
+          status: "ok",
+          message: {
+            items: [
+              {
+                DOI: "10.1234/retained",
+                type: "proceedings-article",
+                title: ["Retained company paper"],
+                author: [{ affiliation: [{ name: "Alibaba Group" }] }],
+              },
+            ],
+          },
+        }),
+        source,
+        "alibaba",
+      )[0],
+      source,
+      registry,
+    );
+    const retained = articles[0];
+    const old = structuredClone(retained);
+    old.id = "00000000000000000009";
+    old.publisherId = "aliyun-cloud-native";
+    old.locations = [
+      {
+        sourceId: "aliyun-cloud-native",
+        url: "https://developer.aliyun.com/article/123",
+      },
+    ];
+    const states: SourceState[] = [
+      {
+        sourceId: source.id,
+        status: "success",
+        discovered: 1,
+        consecutiveFailures: 0,
+      },
+      {
+        sourceId: "aliyun-cloud-native",
+        status: "blocked",
+        discovered: 0,
+        consecutiveFailures: 1,
+      },
+      {
+        sourceId: "qwen-hf-papers",
+        status: "reference",
+        discovered: 0,
+        consecutiveFailures: 0,
+      },
+    ];
+    const result = retireReplacedSources([retained, old], states, registry);
+    expect(result.articles.map((a) => a.id)).toEqual([retained.id]);
+    expect(result.states.map((s) => s.sourceId)).toEqual([source.id]);
+    expect(result.removedArticles).toBe(1);
+    expect(result.removedStates).toBe(2);
+    expect(registry.companies.some((c) => c.id === "alibaba")).toBe(true);
+    validateRelations(result.articles, result.states, registry);
+    expect(
+      retireReplacedSources(result.articles, result.states, registry)
+        .removedArticles,
+    ).toBe(0);
+  });
   it.each([
     {
       companyId: "oppo",
@@ -105,28 +175,28 @@ describe("explicit source retirement", () => {
       ).toBe(0);
     },
   );
-  it("removes empty reference states while preserving the company's suspended historical source", () => {
-    const source = registry.sources.find((s) => s.id === "ctrip-csdn")!;
+  it("removes empty reference states while preserving a working collector", () => {
+    const source = registry.sources.find((s) => s.id === "jd-cnblogs")!;
     const articles: Article[] = [];
     upsert(
       articles,
       {
         title: "Historical engineering article",
-        url: "https://blog.csdn.net/ctrip_tech/article/details/123",
+        url: "https://www.cnblogs.com/Jcloud/p/123.html",
       },
       source,
       registry,
     );
     const states: SourceState[] = [
       {
-        sourceId: "ctrip",
+        sourceId: "jd",
         status: "reference",
         discovered: 0,
         consecutiveFailures: 0,
       },
       {
         sourceId: source.id,
-        status: "suspended",
+        status: "success",
         discovered: 1,
         consecutiveFailures: 0,
       },
@@ -136,7 +206,7 @@ describe("explicit source retirement", () => {
     expect(result.states.map((s) => s.sourceId)).toEqual([source.id]);
     const unexpected = structuredClone(articles[0]);
     unexpected.locations = [
-      { sourceId: "ctrip", url: "https://www.ctrip.com/article/1" },
+      { sourceId: "jd", url: "https://www.jd.com/article/1" },
     ];
     expect(() => retireReplacedSources([unexpected], states, registry)).toThrow(
       "Reference-only retirement contains article history",
@@ -263,12 +333,12 @@ describe("explicit source retirement", () => {
     const data = fixture();
     const history = structuredClone(data.articles[0]);
     history.id = "00000000000000000002";
-    history.publisherId = "ctrip-official";
-    history.companyId = "ctrip";
+    history.publisherId = "jd-official";
+    history.companyId = "jd";
     history.locations = [
       {
-        sourceId: "ctrip-csdn",
-        url: "https://blog.csdn.net/ctrip_tech/article/details/123",
+        sourceId: "jd-cnblogs",
+        url: "https://www.cnblogs.com/Jcloud/p/123.html",
       },
     ];
     data.articles.push(history);

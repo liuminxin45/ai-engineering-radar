@@ -1,3 +1,4 @@
+import { aliyunFixture } from "../fixtures/aliyun-source.js";
 import { describe, expect, it } from "vitest";
 import { readFile } from "node:fs/promises";
 import { loadRegistry } from "../../packages/source-registry/index.js";
@@ -8,7 +9,7 @@ import {
 import type { Source } from "../../packages/shared/types.js";
 
 const registry = await loadRegistry();
-const base = registry.sources.find((s) => s.id === "aliyun-cloud-native")!;
+const base = aliyunFixture;
 const source = (
   group = "apphub/article/",
   account = "pawmkwdq37c7s",
