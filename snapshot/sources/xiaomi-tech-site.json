@@ -2,12 +2,13 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "xiaomi-tech-site",
-    "lastCheckedAt": "2026-11-02T02:21:17.308Z",
-    "nextRunAt": "2026-11-02T04:21:21.746Z",
-    "consecutiveFailures": 1,
-    "status": "blocked",
-    "error": "robots.txt access denied",
-    "discovered": 0,
-    "httpStatus": 403
+    "lastCheckedAt": "2026-11-02T02:28:18.457Z",
+    "nextRunAt": "2026-11-03T02:28:18.457Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 15,
+    "httpStatus": 200,
+    "lastSuccessAt": "2026-11-02T02:28:18.457Z",
+    "etag": "W/\"09513b22fc366f06c8a612e10519e7a65e144b03\""
   }
 }

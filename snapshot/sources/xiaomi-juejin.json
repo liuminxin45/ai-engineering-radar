@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "xiaomi-juejin",
-    "lastCheckedAt": "2026-11-02T02:21:15.076Z",
-    "nextRunAt": "2026-11-03T02:21:15.076Z",
+    "lastCheckedAt": "2026-11-02T02:28:16.839Z",
+    "nextRunAt": "2026-11-03T02:28:16.839Z",
     "consecutiveFailures": 0,
     "status": "reference",
     "error": "账号资料列出小米公司，公开声明内容已迁移至公众号小米技术，历史文章为小米云团队实践。稳定用户 ID 676954893719742；静态请求未得到可解析文章目录，仅保留身份与迁移参考。",

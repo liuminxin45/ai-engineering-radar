@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "dewu-tencent",
-    "lastCheckedAt": "2026-11-02T02:20:58.032Z",
-    "nextRunAt": "2026-11-03T02:20:58.032Z",
+    "lastCheckedAt": "2026-11-02T02:28:00.022Z",
+    "nextRunAt": "2026-11-03T02:28:00.022Z",
     "consecutiveFailures": 0,
     "status": "pending",
     "error": "专栏结构化数据确认创作者 UID 9927536，company 为得物App；平台显示未做职业认证，仍需官方反向链接或企业认证证据。",
