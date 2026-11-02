@@ -328,11 +328,7 @@ export function ArticleBoard() {
         </div>
         <div className={styles.actions}>
           <div className={styles.utilities}>
-            <SearchLauncher
-              query={query.q}
-              type={query.type}
-              onQueryChange={(q) => changeGlobal({ q }, true)}
-            />
+            <SearchLauncher type={query.type} />
             <BoardActions />
           </div>
           <span className={styles.sync}>

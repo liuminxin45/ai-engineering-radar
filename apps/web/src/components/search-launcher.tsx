@@ -3,19 +3,15 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Search } from "./search-icons";
 import SearchDialog from "./search-dialog";
 
-export default function SearchLauncher({
-  query,
-  type,
-  onQueryChange,
-}: {
-  query: string;
-  type: "blog" | "paper";
-  onQueryChange: (query: string) => void;
-}) {
+export default function SearchLauncher({ type }: { type: "blog" | "paper" }) {
+  const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [session, setSession] = useState(0);
   const trigger = useRef<HTMLButtonElement>(null);
-  const close = useCallback(() => setOpen(false), []);
+  const close = useCallback(() => {
+    setOpen(false);
+    setQuery("");
+  }, []);
   const show = useCallback(() => {
     if (open) return;
     setSession((value) => value + 1);
@@ -62,7 +58,7 @@ export default function SearchLauncher({
         triggerRef={trigger}
         query={query}
         type={type}
-        onQueryChange={onQueryChange}
+        onQueryChange={setQuery}
       />
     </>
   );

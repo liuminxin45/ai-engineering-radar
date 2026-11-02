@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("content tabs retain company and search, reset batches and restore URL history", async ({
+test("content tabs retain company, isolate dialog search, reset batches and restore URL history", async ({
   page,
 }) => {
   const errors: string[] = [];
@@ -41,19 +41,29 @@ test("content tabs retain company and search, reset batches and restore URL hist
   const search = page.getByLabel("搜索所有面板的论文", { exact: true });
   if (!(await search.isVisible()))
     await page.getByRole("button", { name: "搜索论文", exact: true }).click();
+  const panelBefore = (await page.locator("#panel-tencent").textContent())!;
+  const urlBefore = page.url();
   await search.fill("no-such-joint-paper");
+  await expect(page.getByRole("dialog").getByText(/没有找到/)).toBeVisible();
+  await expect(page.locator("#panel-tencent")).toHaveText(panelBefore);
+  await expect(page).toHaveURL(urlBefore);
   await page.getByRole("button", { name: "关闭搜索", exact: true }).click();
-  await expect(
-    page.locator("#panel-tencent").getByText("没有匹配的论文", { exact: true }),
-  ).toBeVisible();
+  await expect(page.locator("#panel-tencent")).toHaveText(panelBefore);
   await expect(
     page.getByRole("dialog", { name: "搜索论文", exact: true }),
   ).toBeHidden();
+  await page.getByRole("button", { name: "搜索论文", exact: true }).click();
+  await expect(search).toHaveValue("");
+  await search.fill("another-query");
+  await search.press("Escape");
+  await page.getByRole("button", { name: "搜索论文", exact: true }).click();
+  await expect(search).toHaveValue("");
+  await page.getByRole("button", { name: "关闭搜索", exact: true }).click();
   await blog.click();
   await page.getByRole("button", { name: "搜索文章", exact: true }).click();
   await expect(
     page.getByLabel("搜索所有面板的文章", { exact: true }),
-  ).toHaveValue("no-such-joint-paper");
+  ).toHaveValue("");
   await page.getByRole("button", { name: "关闭搜索", exact: true }).click();
   expect(
     await page.evaluate(

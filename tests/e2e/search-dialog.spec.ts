@@ -59,7 +59,9 @@ test("search lives beside utility icons, opens immediately, traps focus and rest
   await page.keyboard.press("Escape");
   await expect(dialog).toBeHidden();
   await expect(trigger).toBeFocused();
-  await expect(page).toHaveURL(/q=AI/);
+  await expect(page).not.toHaveURL(/q=/);
+  await trigger.click();
+  await expect(input).toHaveValue("");
 });
 
 test("lazy search keeps the input available while modules are stalled and preserves typed text", async ({
@@ -84,7 +86,8 @@ test("lazy search keeps the input available while modules are stalled and preser
   await Promise.all(held.map((route) => route.continue()));
   await page.unroute("**/_next/static/chunks/**");
   await page.getByRole("button", { name: "搜索文章", exact: true }).click();
-  await expect(input).toHaveValue("AI");
+  await expect(input).toHaveValue("");
+  await input.fill("AI");
   await expect(page.getByRole("listbox", { name: "搜索结果" })).toBeVisible();
   await expect(page.getByRole("option").first()).toBeVisible();
 });
@@ -92,6 +95,7 @@ test("lazy search keeps the input available while modules are stalled and preser
 test("results paginate, highlight and open the local reader with keyboard activation", async ({
   page,
   context,
+  request,
 }, info) => {
   await page.goto("./");
   await page.getByRole("button", { name: "搜索文章", exact: true }).click();
@@ -122,7 +126,7 @@ test("results paginate, highlight and open the local reader with keyboard activa
     page.locator(".reader-actions").getByRole("link", { name: "阅读原文" }),
   ).toBeVisible();
   await page.locator(".reader-back").click();
-  await expect(page).toHaveURL(/q=a/);
+  await expect(page).not.toHaveURL(/q=/);
   await expect(
     page.getByRole("tab", { name: "博文", exact: true }),
   ).toHaveAttribute("aria-selected", "true");
@@ -130,10 +134,19 @@ test("results paginate, highlight and open the local reader with keyboard activa
   await page.getByRole("button", { name: "搜索论文", exact: true }).click();
   await expect(
     page.getByRole("combobox", { name: "搜索所有面板的论文" }),
-  ).toHaveValue("a");
-  await expect(
-    page.getByRole("option").first().locator(".search-result-meta"),
-  ).toContainText("论文");
+  ).toHaveValue("");
+  const { articles } = await (await request.get("data/articles.json")).json();
+  const paper = articles.find(
+    (article: { contentType?: string }) => article.contentType === "paper",
+  );
+  if (paper) {
+    await page
+      .getByRole("combobox", { name: "搜索所有面板的论文" })
+      .fill(paper.title);
+    await expect(
+      page.getByRole("option").first().locator(".search-result-meta"),
+    ).toContainText("论文");
+  }
   await page
     .getByRole("combobox", { name: "搜索所有面板的论文" })
     .fill("no-such-radar-paper");
