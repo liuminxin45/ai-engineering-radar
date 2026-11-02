@@ -19,7 +19,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -29,15 +37,7 @@
           "url": "https://segmentfault.com/a/1190000041242363"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "03d9afc5e075ea2965d2",
@@ -57,7 +57,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -67,15 +75,7 @@
           "url": "https://segmentfault.com/a/1190000040526841"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "0cfdf11572a446816db1",
@@ -95,7 +95,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -105,15 +113,7 @@
           "url": "https://segmentfault.com/a/1190000040256987"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "13f273f12a2be51204fc",
@@ -133,7 +133,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -143,15 +151,7 @@
           "url": "https://segmentfault.com/a/1190000040967869"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "16d195dd33532dbe35c3",
@@ -171,7 +171,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -181,15 +189,7 @@
           "url": "https://segmentfault.com/a/1190000040926384"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "1bc5ab43dfab8cdf0069",
@@ -209,7 +209,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -219,15 +227,7 @@
           "url": "https://segmentfault.com/a/1190000041195360"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "22d8eb21c262f5698bde",
@@ -247,7 +247,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -257,15 +265,7 @@
           "url": "https://segmentfault.com/a/1190000041228713"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "255128babf5ef65e933b",
@@ -285,7 +285,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -295,15 +303,7 @@
           "url": "https://segmentfault.com/a/1190000038827450"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "2da25553a9e2bc2ce3f4",
@@ -323,7 +323,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -333,15 +341,7 @@
           "url": "https://segmentfault.com/a/1190000041261952"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "2e7cd51113c14f8009c2",
@@ -361,7 +361,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -371,15 +379,7 @@
           "url": "https://segmentfault.com/a/1190000037737270"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "31174972866ea93f6564",
@@ -399,7 +399,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -409,15 +417,7 @@
           "url": "https://segmentfault.com/a/1190000038162287"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "32184ff081aff5a0eca8",
@@ -437,7 +437,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -449,15 +457,7 @@
       ],
       "duplicateCandidates": [
         "4e6cbf9f9ac64bb96c92"
-      ],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      ]
     },
     {
       "id": "33d6a93616d82fd1548d",
@@ -477,7 +477,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -487,15 +495,7 @@
           "url": "https://segmentfault.com/a/1190000040985325"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "3d3a620904eb27f1cde4",
@@ -515,7 +515,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -525,15 +533,7 @@
           "url": "https://segmentfault.com/a/1190000040141809"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "45187edc5516a2c678a6",
@@ -553,7 +553,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -563,15 +571,7 @@
           "url": "https://segmentfault.com/a/1190000039995011"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "4e6cbf9f9ac64bb96c92",
@@ -591,7 +591,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -601,15 +609,7 @@
           "url": "https://segmentfault.com/a/1190000041550819"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "5a85d82a6fed606d6618",
@@ -629,7 +629,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -639,15 +647,7 @@
           "url": "https://segmentfault.com/a/1190000041152308"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "5d3219f2eb65beb577b0",
@@ -667,7 +667,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -677,15 +685,7 @@
           "url": "https://segmentfault.com/a/1190000041166580"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "5e4a348e5940fc6a5509",
@@ -705,7 +705,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -715,15 +723,7 @@
           "url": "https://segmentfault.com/a/1190000040567568"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "5e82ded302d18a1b88ec",
@@ -743,7 +743,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -753,15 +761,7 @@
           "url": "https://segmentfault.com/a/1190000041174533"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "6dd94c24ceb714d776a5",
@@ -781,7 +781,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -791,15 +799,7 @@
           "url": "https://segmentfault.com/a/1190000038290468"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "708a74d04e8cfb3a2e21",
@@ -819,7 +819,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -829,15 +837,7 @@
           "url": "https://segmentfault.com/a/1190000041112371"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "8a62a4b91b861a6c4b05",
@@ -857,7 +857,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -867,15 +875,7 @@
           "url": "https://segmentfault.com/a/1190000040979111"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "8c0f436418b7b1bb79cc",
@@ -895,7 +895,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -905,15 +913,7 @@
           "url": "https://segmentfault.com/a/1190000041075271"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "8f78e93511b4aac43ddd",
@@ -933,7 +933,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -943,15 +951,7 @@
           "url": "https://segmentfault.com/a/1190000040338181"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "900bcf2ad759f96dcacc",
@@ -971,7 +971,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -981,15 +989,7 @@
           "url": "https://segmentfault.com/a/1190000040332531"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "9a4003c8964bd63bd0a8",
@@ -1009,7 +1009,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1019,15 +1027,7 @@
           "url": "https://segmentfault.com/a/1190000041201607"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "a1b6a291f290466a11fe",
@@ -1047,7 +1047,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1057,15 +1065,7 @@
           "url": "https://segmentfault.com/a/1190000040408205"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "a5cf8dbf2590ada358d7",
@@ -1085,7 +1085,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1095,15 +1103,7 @@
           "url": "https://segmentfault.com/a/1190000041579589"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "a5e0605e4d86cbc9a1ba",
@@ -1123,7 +1123,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1133,15 +1141,7 @@
           "url": "https://segmentfault.com/a/1190000038422821"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "a8db90f21572a44d2bae",
@@ -1161,7 +1161,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1171,15 +1179,7 @@
           "url": "https://segmentfault.com/a/1190000040299102"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "ac3ecae327cb1c9058fc",
@@ -1199,7 +1199,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1209,15 +1217,7 @@
           "url": "https://segmentfault.com/a/1190000038258147"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "aef6b499af8d016f4b47",
@@ -1237,7 +1237,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1247,15 +1255,7 @@
           "url": "https://segmentfault.com/a/1190000038531206"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "af57925249463200e3af",
@@ -1275,7 +1275,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1285,15 +1293,7 @@
           "url": "https://segmentfault.com/a/1190000040445734"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "b073530c3dbc45b3ad90",
@@ -1313,7 +1313,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1323,15 +1331,7 @@
           "url": "https://segmentfault.com/a/1190000041485197"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "b0bd2bd78470497a35eb",
@@ -1351,7 +1351,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1361,15 +1369,7 @@
           "url": "https://segmentfault.com/a/1190000040375240"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "b3a61c1d9eb5af2f6a0c",
@@ -1389,7 +1389,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1399,15 +1407,7 @@
           "url": "https://segmentfault.com/a/1190000040192624"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "b484549916bdddcb2955",
@@ -1427,7 +1427,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1437,15 +1445,7 @@
           "url": "https://segmentfault.com/a/1190000041127869"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "b6f70cc48700d0f76a00",
@@ -1465,7 +1465,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1475,15 +1483,7 @@
           "url": "https://segmentfault.com/a/1190000040225328"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "ce3fe7f149617d3d76a0",
@@ -1503,7 +1503,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1513,15 +1521,7 @@
           "url": "https://segmentfault.com/a/1190000039989132"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "d6457b8fdb50aad2a7e2",
@@ -1541,7 +1541,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1551,15 +1559,7 @@
           "url": "https://segmentfault.com/a/1190000038396151"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "d9d06dfbeb49afdcf920",
@@ -1579,7 +1579,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1589,15 +1597,7 @@
           "url": "https://segmentfault.com/a/1190000041557115"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "d9dccfe377f9eb829c3d",
@@ -1617,7 +1617,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1627,15 +1635,7 @@
           "url": "https://segmentfault.com/a/1190000040491126"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "e0d82c7af9858530b4dd",
@@ -1655,7 +1655,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1665,15 +1673,7 @@
           "url": "https://segmentfault.com/a/1190000038852325"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "ef0931a989d7242c9816",
@@ -1693,7 +1693,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1703,15 +1711,7 @@
           "url": "https://segmentfault.com/a/1190000041109316"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "ef23c37eb63d40546273",
@@ -1731,7 +1731,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1741,15 +1749,7 @@
           "url": "https://segmentfault.com/a/1190000041660251"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "f70571e47136ff0eeee2",
@@ -1769,7 +1769,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1779,15 +1787,7 @@
           "url": "https://segmentfault.com/a/1190000037774276"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "f7f4b61f1be5e6ed03b2",
@@ -1807,7 +1807,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1817,15 +1825,7 @@
           "url": "https://segmentfault.com/a/1190000041189363"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "fb58e618d64259735479",
@@ -1845,7 +1845,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1855,15 +1863,7 @@
           "url": "https://segmentfault.com/a/1190000041133735"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "fe3ff21d47be8894c9fb",
@@ -1883,7 +1883,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.962Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1893,15 +1901,7 @@
           "url": "https://segmentfault.com/a/1190000040903752"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     }
   ]
 }

@@ -1,0 +1,3508 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "0078dbafecf222fe0099",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "SAPO: A Stable and Performant Reinforcement Learning Method for Training Large Language Models",
+      "canonicalUrl": "https://qwen.ai/blog?id=sapo",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-12-04T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "sapo",
+          "url": "https://qwen.ai/blog?id=sapo"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "00c8aa51943dc390ca96",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-Robot Suite: A Foundation Model Suite for Physical World Intelligence",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-robotsuite",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-06-16T02:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-robotsuite",
+          "url": "https://qwen.ai/blog?id=qwen-robotsuite"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "035a9461cc5adbb714b7",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Towards Effective Process Supervision in Mathematical Reasoning",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2.5-math-prm",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-01-13T16:00:03.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2.5-math-prm",
+          "url": "https://qwen.ai/blog?id=qwen2.5-math-prm"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "04af7d00659f295381fc",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "OFA: Towards Building a One-For-All Model",
+      "canonicalUrl": "https://qwen.ai/blog?id=ofa",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2022-11-14T08:01:41.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.964Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "ofa",
+          "url": "https://qwen.ai/blog?id=ofa"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "073b276d7b0d5512aeea",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.6-Max-Preview: Smarter, Sharper, Still Evolving",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.6-max-preview",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-04-18T02:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.6-max-preview",
+          "url": "https://qwen.ai/blog?id=qwen3.6-max-preview"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "0889e5d78ff495abfc3e",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen2.5 Omni: See, Hear, Talk, Write, Do It All!",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2.5-omni",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-03-26T16:00:45.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2.5-omni",
+          "url": "https://qwen.ai/blog?id=qwen2.5-omni"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "09ee59a021a430610b75",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-Coder: Agentic Coding in the World",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-coder",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-07-22T13:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-coder",
+          "url": "https://qwen.ai/blog?id=qwen3-coder"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "0c4e1f3be9c2a0426dde",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen2.5-Coder: Code More, Learn More!",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2.5-coder",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-09-18T16:00:02.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2.5-coder",
+          "url": "https://qwen.ai/blog?id=qwen2.5-coder"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "1371046f6c1f29229ecc",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen2.5-Max: Exploring the Intelligence of Large-scale MoE Model",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2.5-max",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-01-28T15:00:04.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2.5-max",
+          "url": "https://qwen.ai/blog?id=qwen2.5-max"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "1807dce2f9cc1124e965",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Chinese CLIP: Contrastive Vision-Language Pretraining in Chinese",
+      "canonicalUrl": "https://qwen.ai/blog?id=chinese-clip",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2022-12-24T06:54:19.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.964Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "chinese-clip",
+          "url": "https://qwen.ai/blog?id=chinese-clip"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "1b26004f3d22edc244a0",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "E-Commerce Bench: Long-Horizon Operations, Multi-Dimensional Evaluation",
+      "canonicalUrl": "https://qwen.ai/blog?id=e-commerce-bench",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-09-03T02:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "e-commerce-bench",
+          "url": "https://qwen.ai/blog?id=e-commerce-bench"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "1c75034a2b5574644fa9",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen1.5-32B: Fitting the Capstone of the Qwen1.5 Language Model Series",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen1.5-32b",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-04-02T05:33:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.964Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen1.5-32b",
+          "url": "https://qwen.ai/blog?id=qwen1.5-32b"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "1dae803c0d0d2ab8056d",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Introducing Qwen",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-01-23T14:13:29.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.964Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen",
+          "url": "https://qwen.ai/blog?id=qwen"
+        }
+      ],
+      "duplicateCandidates": [
+        "506d9bea096ab579370d",
+        "4a098ee0df015b4606f2"
+      ],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "226e39f6461f90a6dedf",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.5-Omni: Scaling Up, Toward Native Omni-Modal AGI",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-03-29T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.5-omni",
+          "url": "https://qwen.ai/blog?id=qwen3.5-omni"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "2aee8bec6aaa737b5339",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.6-35B-A3B: Agentic Coding Power, Now Open to All",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-04-15T02:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.6-35b-a3b",
+          "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "2b51dbc1f5c9a2689406",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Generalizing an LLM from 8k to 1M Context using Qwen-Agent",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-agent-2405",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-06-06T03:59:59.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-agent-2405",
+          "url": "https://qwen.ai/blog?id=qwen-agent-2405"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "2e81d16490fabe148761",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-Image-2.0: Professional infographics, exquisite photorealism",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-image-2.0",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-02-10T05:08:30.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-image-2.0",
+          "url": "https://qwen.ai/blog?id=qwen-image-2.0"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "30eac5f6afd581cb96cd",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-Max: Just Scale it",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-max",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-09-24T04:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-max",
+          "url": "https://qwen.ai/blog?id=qwen3-max"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "3241b89b81579d5b8372",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-TTS Family is Now Open Sourced: Voice Design, Clone, and Generation!",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3tts-0115",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-01-21T16:00:04.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3tts-0115",
+          "url": "https://qwen.ai/blog?id=qwen3tts-0115"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "39f9906d3a301f6f8639",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-TTS Steps Up: Voice Cloning and Voice Design!",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-tts-vc-voicedesign",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-12-22T16:00:45.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-tts-vc-voicedesign",
+          "url": "https://qwen.ai/blog?id=qwen3-tts-vc-voicedesign"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "3d3956636f8bd446e2ba",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "<think>...</think> QwQ-Max-Preview",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwq-max-preview",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-02-24T18:00:04.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwq-max-preview",
+          "url": "https://qwen.ai/blog?id=qwq-max-preview"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "436ae260557e2f384e56",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.8",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-08-03T02:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.8",
+          "url": "https://qwen.ai/blog?id=qwen3.8"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "44b93cc743134d23876b",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "GSPO: Towards Scalable Reinforcement Learning for Language Models",
+      "canonicalUrl": "https://qwen.ai/blog?id=gspo",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-07-27T07:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "gspo",
+          "url": "https://qwen.ai/blog?id=gspo"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "455b8eefd83d7ab34507",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen2.5-LLM: Extending the boundary of LLMs",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2.5-llm",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-09-18T16:00:03.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2.5-llm",
+          "url": "https://qwen.ai/blog?id=qwen2.5-llm"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "4586d51b13dca8a60598",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "FlashQLA: CP-/Bwd-Friendly Fused Linear Attention Kernels for GDN",
+      "canonicalUrl": "https://qwen.ai/blog?id=flashqla",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-04-28T02:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "flashqla",
+          "url": "https://qwen.ai/blog?id=flashqla"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "465a049d621df87cd813",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-Image-Edit-2511: Improve Consistency",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-image-edit-2511",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-12-23T05:08:30.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-image-edit-2511",
+          "url": "https://qwen.ai/blog?id=qwen-image-edit-2511"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "46c49ba7eda0c0e1ff79",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-Omni-Flash-2025-12-01：Hear You. See You. Follow Smarter!",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-omni-flash-20251201",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-12-08T21:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-omni-flash-20251201",
+          "url": "https://qwen.ai/blog?id=qwen3-omni-flash-20251201"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "478e9a707edac1dcdc19",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Pushing Qwen3-Max-Thinking Beyond its Limits",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-max-thinking",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-01-25T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-max-thinking",
+          "url": "https://qwen.ai/blog?id=qwen3-max-thinking"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "4a098ee0df015b4606f2",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Introducing Qwen-VL",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-vl",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-01-25T05:33:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.964Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-vl",
+          "url": "https://qwen.ai/blog?id=qwen-vl"
+        }
+      ],
+      "duplicateCandidates": [
+        "506d9bea096ab579370d"
+      ],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "4d7d9e50f086343d2a5e",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-Scope: Decoding Intelligence, Unleashing Potential",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-scope",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-04-30T04:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-scope",
+          "url": "https://qwen.ai/blog?id=qwen-scope"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "506d9bea096ab579370d",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Introducing Qwen1.5",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen1.5",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-02-04T05:33:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.964Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen1.5",
+          "url": "https://qwen.ai/blog?id=qwen1.5"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "50e79bf9adaa4d98a74f",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "OFASys: Enabling Multitask Learning with One Line of Code!",
+      "canonicalUrl": "https://qwen.ai/blog?id=ofasys",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2022-12-28T10:01:21.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.964Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "ofasys",
+          "url": "https://qwen.ai/blog?id=ofasys"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "5301b8ed3c4a2d48d9d1",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-Image-Layered: Layered Decomposition for Inherent Editablity",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-image-layered",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-12-19T05:08:30.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-image-layered",
+          "url": "https://qwen.ai/blog?id=qwen-image-layered"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "572096340ca8655909f3",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-VLA: From Understanding the World to Acting in It",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwenvla",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-05-29T09:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwenvla",
+          "url": "https://qwen.ai/blog?id=qwenvla"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "5a67d022ca689fca41c0",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-RobotNav: A Scalable Navigation Model Designed for an Agentic Navigation System",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-robotnav",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-06-16T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-robotnav",
+          "url": "https://qwen.ai/blog?id=qwen-robotnav"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "5ad4ad1277f7540db1f7",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen VLo: From \"Understanding\" the World to \"Depicting\" It",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-vlo",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-06-26T14:00:04.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-vlo",
+          "url": "https://qwen.ai/blog?id=qwen-vlo"
+        }
+      ],
+      "duplicateCandidates": [
+        "572096340ca8655909f3"
+      ],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "60cd10ec95788b3a77d6",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen2.5 VL! Qwen2.5 VL! Qwen2.5 VL!",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2.5-vl",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-01-26T11:08:30.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2.5-vl",
+          "url": "https://qwen.ai/blog?id=qwen2.5-vl"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "63d9578399eceb183907",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.6-27b",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-04-22T02:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.6-27b",
+          "url": "https://qwen.ai/blog?id=qwen3.6-27b"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "66c8cc8982580dec7519",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-drive-1.0",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-09-03T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-drive-1.0",
+          "url": "https://qwen.ai/blog?id=qwen-drive-1.0"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "67128c1ce9fc0fc02d43",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-Image-3.0: Rich Content, Authentic Details, Deep Knowledge",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-image-3.0",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-07-21T06:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-image-3.0",
+          "url": "https://qwen.ai/blog?id=qwen-image-3.0"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "69bbdf6bcea9b659f43b",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-Next: Towards Ultimate Training & Inference Efficiency",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-next",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-09-10T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-next",
+          "url": "https://qwen.ai/blog?id=qwen3-next"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "6da45f4bb82dc80f2584",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Time to Speak Some Dialects, Qwen-TTS!",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-tts",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-06-27T07:01:30.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-tts",
+          "url": "https://qwen.ai/blog?id=qwen-tts"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "6f24642c0072ae75be2f",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Travel Planner: Your Smart Travel Designer",
+      "canonicalUrl": "https://qwen.ai/blog?id=agent",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-09-22T21:00:59.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "agent",
+          "url": "https://qwen.ai/blog?id=agent"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "6f4a8ec78c250af7c620",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen2.5-1M: Deploy Your Own Qwen with Context Length up to 1M Tokens",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2.5-1m",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-01-26T16:00:03.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2.5-1m",
+          "url": "https://qwen.ai/blog?id=qwen2.5-1m"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "6f556a42a7aea518a350",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen DeepResearch: When Inspiration Becomes Its Own Reason",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-deepresearch",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-11-12T20:59:26.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-deepresearch",
+          "url": "https://qwen.ai/blog?id=qwen-deepresearch"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "74a6851fdd510e9bfd0c",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen2.5: A Party of Foundation Models!",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2.5",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-09-18T16:00:04.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2.5",
+          "url": "https://qwen.ai/blog?id=qwen2.5"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "7539e688f5e1fd899ee7",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Hello Qwen2",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-06-06T16:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2",
+          "url": "https://qwen.ai/blog?id=qwen2"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "80adcab7056183aa3844",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-Image-2.1: Compact, Efficient, and Unified Image Creation",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-image-2.1",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-09-20T12:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-image-2.1",
+          "url": "https://qwen.ai/blog?id=qwen-image-2.1"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "82a0b95996cc04af1c25",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Extending the Context Length to 1M Tokens!",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2.5-turbo",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-11-14T16:00:03.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2.5-turbo",
+          "url": "https://qwen.ai/blog?id=qwen2.5-turbo"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "82a3f1093fa3e40d155a",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "QwQ-32B: Embracing the Power of Reinforcement Learning",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwq-32b",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-03-05T16:00:04.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwq-32b",
+          "url": "https://qwen.ai/blog?id=qwq-32b"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "836c5c78ea5d07e0359a",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Code with CodeQwen1.5",
+      "canonicalUrl": "https://qwen.ai/blog?id=codeqwen1.5",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-04-16T05:33:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.964Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "codeqwen1.5",
+          "url": "https://qwen.ai/blog?id=codeqwen1.5"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "8b93469a7728a0596086",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Notes on Qwen-Max-0428",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-max-0428",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-05-11T10:10:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.964Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-max-0428",
+          "url": "https://qwen.ai/blog?id=qwen-max-0428"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "8f33e80e5739f60f5b2c",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3Guard: Real-time Safety for Your Token Stream",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3guard",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-09-22T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3guard",
+          "url": "https://qwen.ai/blog?id=qwen3guard"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "91e9b046a8f6e7652ae4",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-VL-Embedding and Qwen3-VL-Reranker: For the Next Generation of Multimodal Retrieval",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-vl-embedding",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-01-07T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-vl-embedding",
+          "url": "https://qwen.ai/blog?id=qwen3-vl-embedding"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "9790aace5ae845467961",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-Image-Edit-2509: Multi-Image Support, Improved Consistency",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-image-edit-2509",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-09-22T16:08:30.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-image-edit-2509",
+          "url": "https://qwen.ai/blog?id=qwen-image-edit-2509"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "98bee358bf605852a420",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Global-batch load balance almost free lunch to improve your MoE LLM training",
+      "canonicalUrl": "https://qwen.ai/blog?id=global-load-balance",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-01-20T16:00:03.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "global-load-balance",
+          "url": "https://qwen.ai/blog?id=global-load-balance"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "99b2b417016bebb7206c",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "QVQ: To See the World with Wisdom",
+      "canonicalUrl": "https://qwen.ai/blog?id=qvq-72b-preview",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-12-24T16:00:03.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qvq-72b-preview",
+          "url": "https://qwen.ai/blog?id=qvq-72b-preview"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "9d878a808571567c5900",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.5-Max-Preview Now Available on Arena",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.5-max-preview",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-03-18T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.5-max-preview",
+          "url": "https://qwen.ai/blog?id=qwen3.5-max-preview"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "9f733af1586d8fc311fc",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen2-VL: To See the World More Clearly",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2-vl",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-08-28T16:24:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2-vl",
+          "url": "https://qwen.ai/blog?id=qwen2-vl"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "a514556601ce742e3990",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3 Embedding: Advancing Text Embedding and Reranking Through Foundation Models",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-embedding",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-06-05T13:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-embedding",
+          "url": "https://qwen.ai/blog?id=qwen3-embedding"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "a8a364b5030660d43ec2",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.8-LiveTranslate: Names the speaker. Carries the meaning.",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.8-livetranslate",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-09-18T09:30:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.8-livetranslate",
+          "url": "https://qwen.ai/blog?id=qwen3.8-livetranslate"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "a8fb73c1a59d3537187a",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-Coder-Next: Pushing Small Hybrid Models on Agentic Coding",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-coder-next",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-02-02T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-coder-next",
+          "url": "https://qwen.ai/blog?id=qwen3-coder-next"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "aa58c43c08c5827a7274",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen2.5-VL-32B: Smarter and Lighter",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2.5-vl-32b",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-03-23T16:00:04.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2.5-vl-32b",
+          "url": "https://qwen.ai/blog?id=qwen2.5-vl-32b"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "ac987d55a7947bf625bf",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen2.5-Coder Series: Powerful, Diverse, Practical.",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2.5-coder-family",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-11-11T16:00:02.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2.5-coder-family",
+          "url": "https://qwen.ai/blog?id=qwen2.5-coder-family"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "b26ddf86edf0e3b2e098",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "QwQ: Reflect Deeply on the Boundaries of the Unknown",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwq-32b-preview",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-11-27T16:00:03.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwq-32b-preview",
+          "url": "https://qwen.ai/blog?id=qwq-32b-preview"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "b29d7c4dac12fb85f00d",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.7-Plus: Multimodal Agent Intelligence",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.7-plus",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-06-01T02:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.7-plus",
+          "url": "https://qwen.ai/blog?id=qwen3.7-plus"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "b3bdc7070d5da089800d",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-08-26T12:30:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.8-flash-next",
+          "url": "https://qwen.ai/blog?id=qwen3.8-flash-next"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "b44d9cbac00598f03198",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-Image: Crafting with Native Text Rendering",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-image",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-08-04T14:08:30.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-image",
+          "url": "https://qwen.ai/blog?id=qwen-image"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "b9e771b3f0a3c5ff4221",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-AgentWorld: Language World Models for General Agents",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-agentworld",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-06-23T03:30:30.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-agentworld",
+          "url": "https://qwen.ai/blog?id=qwen-agentworld"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "be4dbb95b1431cad762e",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-RobotWorld: Boundless Worlds for Embodied Agents",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-robotworld",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-06-16T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-robotworld",
+          "url": "https://qwen.ai/blog?id=qwen-robotworld"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "cc0c607982729e4e864b",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-Image-Edit: Image Editing with Higher Quality and Efficiency",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-image-edit",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-08-18T17:30:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-image-edit",
+          "url": "https://qwen.ai/blog?id=qwen-image-edit"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "cebbddc4362671d92de0",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-Image-2512: Finer Details, Greater Realism",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-image-2512",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-12-31T05:08:30.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-image-2512",
+          "url": "https://qwen.ai/blog?id=qwen-image-2512"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "cfebc667ee0212062040",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen2.5-Math: The world's leading open-sourced mathematical LLMs",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2.5-math",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-09-18T16:00:01.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2.5-math",
+          "url": "https://qwen.ai/blog?id=qwen2.5-math"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "d37b63abde6c5778c741",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-TTS-Flash: Multi-timbre & Multi-lingual & Multi-dialect Speech Synthesis.",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-tts",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-09-21T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-tts",
+          "url": "https://qwen.ai/blog?id=qwen3-tts"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "d975f337fa6098aed14c",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen1.5-110B: The First 100B+ Model of the Qwen1.5 Series",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen1.5-110b",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-04-25T05:33:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.964Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen1.5-110b",
+          "url": "https://qwen.ai/blog?id=qwen1.5-110b"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "e0c43f29697f9bdc0e0d",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-Omni: Natively Omni-Modal Foundation Models!",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-omni",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-09-21T21:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-omni",
+          "url": "https://qwen.ai/blog?id=qwen3-omni"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "e1205be39edadb082254",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.7: The Agent Frontier",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.7",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-05-20T02:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.7",
+          "url": "https://qwen.ai/blog?id=qwen3.7"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "e2af5557e72a1b75d859",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-VL: Sharper Vision, Deeper Thought, Broader Action",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-vl",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-09-22T22:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-vl",
+          "url": "https://qwen.ai/blog?id=qwen3-vl"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "e3e01e5eb87ab4c1bd08",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.8-Omni-Flash: Omni Senses. Agentic Delivery.",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-09-18T07:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.8-omni-flash",
+          "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "e526b7d1c860faccab38",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen2-Audio: Chat with Your Voice!",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2-audio",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-08-09T08:18:19.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2-audio",
+          "url": "https://qwen.ai/blog?id=qwen2-audio"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "e5d3f9b63c0fc6829543",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "QVQ-Max: Think with Evidence",
+      "canonicalUrl": "https://qwen.ai/blog?id=qvq-max-preview",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-03-27T16:00:04.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qvq-max-preview",
+          "url": "https://qwen.ai/blog?id=qvq-max-preview"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "e9ed4505ba0907156391",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen1.5-MoE: Matching 7B Model Performance with 1/3 Activated Parameters",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-moe",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-03-28T03:31:44.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.964Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-moe",
+          "url": "https://qwen.ai/blog?id=qwen-moe"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "eb3de7b2e4998bbae050",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.5-LiveTranslate: From Sound to Sight, From Word to Right",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.5-livetranslate",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-05-19T09:40:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.5-livetranslate",
+          "url": "https://qwen.ai/blog?id=qwen3.5-livetranslate"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "eda12f7288c349327d06",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-TTS Update! 49 Timbres + 10 Languages + 9 Dialects",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-tts-1128",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-12-04T16:00:04.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-tts-1128",
+          "url": "https://qwen.ai/blog?id=qwen3-tts-1128"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "eddefb89f2403bd67106",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-MT: Where Speed Meets Smart Translation",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-mt",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-07-24T14:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-mt",
+          "url": "https://qwen.ai/blog?id=qwen-mt"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "f001f5d01d6b1cecf8b0",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.5: Towards Native Multimodal Agents",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.5",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-02-15T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.5",
+          "url": "https://qwen.ai/blog?id=qwen3.5"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "f3d7fc4b88811345a7e8",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen-RobotManip: Alignment Unlocks Scale for Robotic Manipulation Foundation Models",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen-robotmanip",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-06-16T00:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen-robotmanip",
+          "url": "https://qwen.ai/blog?id=qwen-robotmanip"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "f6040a4a87529a6ae319",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3: Think Deeper, Act Faster",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-04-28T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3",
+          "url": "https://qwen.ai/blog?id=qwen3"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "f8370ebbe79b86d71b1b",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3‑LiveTranslate: Real‑Time Multimodal Interpretation — See It, Hear It, Speak It！",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3-livetranslate",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2025-09-22T23:00:26.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3-livetranslate",
+          "url": "https://qwen.ai/blog?id=qwen3-livetranslate"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "f9f1658edde349a98759",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Introducing Qwen2-Math",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen2-math",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2024-08-07T16:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen2-math",
+          "url": "https://qwen.ai/blog?id=qwen2-math"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "fb61b890a7be0bdbf304",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3-ASR & Qwen3-ForcedAligner is Now Open Sourced: Robust, Streaming and Multilingual!",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3asr",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-01-28T16:00:04.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3asr",
+          "url": "https://qwen.ai/blog?id=qwen3asr"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "fdbca5ab165a311c4ed3",
+      "publisherId": "qwen-team",
+      "companyId": "qwen",
+      "title": "Qwen3.6-Plus: Towards Real World Agents",
+      "canonicalUrl": "https://qwen.ai/blog?id=qwen3.6",
+      "author": "QwenTeam",
+      "language": "en",
+      "publishedAt": "2026-04-01T20:00:00.000Z",
+      "discoveredAt": "2026-11-02T03:41:27.647Z",
+      "updatedAt": "2026-11-02T03:41:27.647Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:41:34.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "qwen-research",
+          "externalId": "qwen3.6",
+          "url": "https://qwen.ai/blog?id=qwen3.6"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    }
+  ]
+}

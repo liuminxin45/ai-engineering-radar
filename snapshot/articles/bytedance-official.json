@@ -20,7 +20,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -30,15 +38,7 @@
           "url": "https://developer.volcengine.com/articles/7361240155513946149"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "1da07e2b462ea5c42949",
@@ -59,7 +59,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -69,15 +77,7 @@
           "url": "https://developer.volcengine.com/articles/7389112559451766796"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "232d53b68ebcaa7d69e5",
@@ -98,7 +98,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -108,15 +116,7 @@
           "url": "https://developer.volcengine.com/articles/7680871851639521334"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "381646ae6849bb749ea1",
@@ -137,7 +137,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -147,15 +155,7 @@
           "url": "https://developer.volcengine.com/articles/7698691370294181915"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "3b66012a0aff73160d33",
@@ -176,7 +176,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -186,15 +194,7 @@
           "url": "https://developer.volcengine.com/articles/7389112559384657939"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "3e68157ca8e9e7f5bc15",
@@ -215,17 +215,8 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
       },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-volcengine",
-          "externalId": "7389112559527755830",
-          "url": "https://developer.volcengine.com/articles/7389112559527755830"
-        }
-      ],
-      "duplicateCandidates": [],
       "advertorial": {
         "status": "suspected",
         "method": "rules",
@@ -238,7 +229,16 @@
           }
         ],
         "version": "advertorial-trial-1"
-      }
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112559527755830",
+          "url": "https://developer.volcengine.com/articles/7389112559527755830"
+        }
+      ],
+      "duplicateCandidates": []
     },
     {
       "id": "43c877ad2d0e70f003b3",
@@ -259,7 +259,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -269,15 +277,7 @@
           "url": "https://developer.volcengine.com/articles/7389112572001124364"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "4b959a33f41ca6a002b9",
@@ -298,7 +298,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -308,15 +316,7 @@
           "url": "https://developer.volcengine.com/articles/7357978518103441459"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "62d29422e7c17c101d94",
@@ -337,7 +337,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -347,15 +355,7 @@
           "url": "https://developer.volcengine.com/articles/7389112559485648937"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "66cc55390495d404c13f",
@@ -376,17 +376,8 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
       },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-volcengine",
-          "externalId": "7389112572064399401",
-          "url": "https://developer.volcengine.com/articles/7389112572064399401"
-        }
-      ],
-      "duplicateCandidates": [],
       "advertorial": {
         "status": "suspected",
         "method": "rules",
@@ -399,7 +390,16 @@
           }
         ],
         "version": "advertorial-trial-1"
-      }
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112572064399401",
+          "url": "https://developer.volcengine.com/articles/7389112572064399401"
+        }
+      ],
+      "duplicateCandidates": []
     },
     {
       "id": "74409ce85bc4a4d6c69a",
@@ -420,7 +420,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -430,15 +438,7 @@
           "url": "https://developer.volcengine.com/articles/7389112559388852263"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "84612de58eb3793a8b07",
@@ -459,7 +459,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -469,15 +477,7 @@
           "url": "https://developer.volcengine.com/articles/7389112557635633215"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "a2df73e29c404a11e5bf",
@@ -498,7 +498,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -508,15 +516,7 @@
           "url": "https://developer.volcengine.com/articles/7389112559418212391"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "a73b3ba3a1987716324c",
@@ -537,7 +537,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -547,15 +555,7 @@
           "url": "https://developer.volcengine.com/articles/7389112555626561555"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "aedb8cdf1a684a67d1f4",
@@ -576,7 +576,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -586,15 +594,7 @@
           "url": "https://developer.volcengine.com/articles/7667161751409917994"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "c15105e9d91ddd1f9c3d",
@@ -615,17 +615,8 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
       },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-volcengine",
-          "externalId": "7389112253687005238",
-          "url": "https://developer.volcengine.com/articles/7389112253687005238"
-        }
-      ],
-      "duplicateCandidates": [],
       "advertorial": {
         "status": "suspected",
         "method": "rules",
@@ -638,7 +629,16 @@
           }
         ],
         "version": "advertorial-trial-1"
-      }
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112253687005238",
+          "url": "https://developer.volcengine.com/articles/7389112253687005238"
+        }
+      ],
+      "duplicateCandidates": []
     },
     {
       "id": "c9e8a9849176f86ec824",
@@ -659,7 +659,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -669,15 +677,7 @@
           "url": "https://developer.volcengine.com/articles/7359237650131845147"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "cacec31499c4775c768a",
@@ -698,17 +698,8 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
       },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-volcengine",
-          "externalId": "7389112572051456063",
-          "url": "https://developer.volcengine.com/articles/7389112572051456063"
-        }
-      ],
-      "duplicateCandidates": [],
       "advertorial": {
         "status": "suspected",
         "method": "rules",
@@ -721,7 +712,16 @@
           }
         ],
         "version": "advertorial-trial-1"
-      }
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112572051456063",
+          "url": "https://developer.volcengine.com/articles/7389112572051456063"
+        }
+      ],
+      "duplicateCandidates": []
     },
     {
       "id": "e081a8a75f2313f88b50",
@@ -742,7 +742,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -752,15 +760,7 @@
           "url": "https://developer.volcengine.com/articles/7389112553802039315"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "f97477da6d945f96a91e",
@@ -781,17 +781,8 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:14:36.836Z"
+        "classifiedAt": "2026-11-02T03:41:34.961Z"
       },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-volcengine",
-          "externalId": "7389112558273183798",
-          "url": "https://developer.volcengine.com/articles/7389112558273183798"
-        }
-      ],
-      "duplicateCandidates": [],
       "advertorial": {
         "status": "suspected",
         "method": "rules",
@@ -804,7 +795,16 @@
           }
         ],
         "version": "advertorial-trial-1"
-      }
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-volcengine",
+          "externalId": "7389112558273183798",
+          "url": "https://developer.volcengine.com/articles/7389112558273183798"
+        }
+      ],
+      "duplicateCandidates": []
     }
   ]
 }

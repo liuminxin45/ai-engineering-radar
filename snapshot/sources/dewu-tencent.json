@@ -3,12 +3,12 @@
   "state": {
     "sourceId": "dewu-tencent",
     "lastCheckedAt": "2026-11-02T03:14:35.381Z",
+    "lastSuccessAt": "2026-11-02T03:14:35.381Z",
     "nextRunAt": "2026-11-03T03:14:35.381Z",
     "consecutiveFailures": 0,
+    "etag": "W/\"2270d-OR+C/mIod2y0+pmAphZqg4ai8Q0\"",
     "status": "success",
     "discovered": 20,
-    "httpStatus": 200,
-    "lastSuccessAt": "2026-11-02T03:14:35.381Z",
-    "etag": "W/\"2270d-OR+C/mIod2y0+pmAphZqg4ai8Q0\""
+    "httpStatus": 200
   }
 }
