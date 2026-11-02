@@ -1,0 +1,645 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "03e59a2e3a2fa73f842f",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "DB-GPT 0.7.5 版本更新：基于 Falcon 评测集的Text2SQL评测体系全面升级，支持LLM/Agent两种评测模式和多环境评测",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/158068105",
+      "author": "DB_GPT",
+      "description": "在ES支持向量检索的基础上，新增全文检索能力，提升RAG的检索召回能力。扩展Neo4j 数据库，进一步提升 RAG在复杂知识关系处理上的能力。V0.7.5 版本新增。",
+      "language": "zh-cn",
+      "publishedAt": "2026-02-14T02:59:41.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.966Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/158068105",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/158068105"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "059fdc00d9c983fd2972",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "大模型推理显存优化系列(4)：eLLM-大模型推理中的弹性显存管理和优化",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/149347243",
+      "author": "DB_GPT",
+      "description": "本文将介绍eLLM相关技术挑战、总体设计和初步性能评估",
+      "language": "zh-cn",
+      "publishedAt": "2025-08-26T09:22:53.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.973Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/149347243",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/149347243"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "155377fc2b7bdf1c81d3",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "图索引性能提升 400%：详解 VSAG 向量检索框架",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/156419937",
+      "author": "DB_GPT",
+      "description": "VSAG 提出了一个开源的近似最近邻搜索（ANNS）框架，可广泛应用于大多数基于图的索引结构。VSAG 通过软件预取、确定性访问的贪心搜索以及部分冗余存储（PRS）等技术，显著降低了缓存未命中率，提升了内存访问效率。框架设计了三层参数自动调优机制，根据不同参数的调优复杂度和影响层级，分别进行环境级、查询级和索引级的自适应优化。同时，VSAG 融合量化技术和选择性重排序策略，将低精度与高精度距离计算有机结合，在保证检索精度的同时大幅减少计算开销。",
+      "language": "zh-cn",
+      "publishedAt": "2025-12-30T08:30:02.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.967Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/156419937",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/156419937"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3500f797c6b2b70aa83c",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "用10项技术专利打透一个数据分析创新项目--Ant DataSage星才项目",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/159690256",
+      "author": "DB_GPT",
+      "description": "作者：刘裕，蚂蚁集团-数据分析及智能化。",
+      "language": "zh-cn",
+      "publishedAt": "2026-04-02T06:16:13.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.966Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/159690256",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/159690256"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "37d6bf11580a2eb9b843",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "破解AI“机器味“困境：HeartBench评测实践详解",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/159762663",
+      "author": "DB_GPT",
+      "description": "2025年起，大模型的竞争格局正在发生微妙而深刻的变化。单纯的 Scaling Law已开始遭遇边际效应递减。在AI应用落地场景（如AI陪伴、创意写作、心理咨询等），我们正普遍面临模型虽具备逻辑，却有着明显的“机器味”，缺乏真正“人味儿”的困境。这种“人味儿”的缺失，不仅限制了AI的实用性，更直接影响了用户体验和产品的核心价值。它预示着：技术指标的军备竞赛之后，下一个战场已不再是单纯的智力比拼。",
+      "language": "zh-cn",
+      "publishedAt": "2026-04-02T07:35:00.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.966Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/159762663",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/159762663"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3d3ff7894423c23b6ec5",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "使用Ray进行大规模并行智能体仿真",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/152330243",
+      "author": "DB_GPT",
+      "description": "本文展示了如何借助 Ray 实现大规模智能体仿真，以生成智能体轨迹、评估智能体性能并训练智能体。",
+      "language": "zh-cn",
+      "publishedAt": "2025-09-30T10:21:08.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.970Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/152330243",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/152330243"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "3f2346e337c1a8afe0c8",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "我在蚂蚁数据团队的Spec Coding实践：9步闭环让AI编程从个人好用走向团队可控",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/161927854",
+      "author": "DB_GPT",
+      "description": "规范驱动开发（Spec-Driven Development，以下简称SDD）可以理解为 AI 时代的一种研发方法重构：它将之前Vibe过程中的“需求直接传递到代码”的理念，升级为“需求定义—规范建模—文档沉淀—实现与验证”的闭环。其关键不在于增加文档和规范环节，而在于让结构化、可执行、可验证的规范成为开发过程中的统一依据，作为需求、设计、实现和验收之间的事实基线，减少对零散对话、口头说明和个人经验的依赖。SDD可以理解为一种把决策前置、把上下文持久化的开发方式，它和过去那种文档流程不太是一回事。",
+      "language": "zh-cn",
+      "publishedAt": "2026-06-12T07:00:05.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.964Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/161927854",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/161927854"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "4f29b80b7369507cb372",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "从 VLDB‘25 看向量数据库发展方向：行业观察与技术前瞻",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/154009157",
+      "author": "DB_GPT",
+      "description": "第 51 届国际大型数据库会议（The 51st International Conference on Very Large Data Bases，简称VLDB 2025）是数据管理、数据库系统与大规模数据处理领域最具影响力的国际顶级学术会议之一。本届 VLDB 在于2025 年 9 月 1 日至 9 月 5 日在英国伦敦Queen Elizabeth II Centre (QEII Centre) 举办。近年来，向量检索由于其在检索和大模型相关领域的广泛应用，备受学界和业界的关注。",
+      "language": "zh-cn",
+      "publishedAt": "2025-10-30T03:33:32.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.969Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/154009157",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/154009157"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "52cc85bcacc0476c1ea1",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "大模型训练推理优化(5)： FlexLink —— NVLink 带宽无损提升27%",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/150952195",
+      "author": "DB_GPT",
+      "description": "本期我们将介绍蚂蚁集团ASystem团队在大模型通信优化上的新工作FlexLink，旨在通过动态聚合多路通信（NVLink，PCIe，RDMA），在H800等典型硬件上将典型通信算子如（AllReduce, All Gather）吞吐提升最高达27%，尤其适合大模型长序列推理（Prefill阶段），及训练等通信密集的带宽bound场景。多通道并发传输：聚合NVLink，PCIe，RDMA网卡等多个物理上独立的传输通道，将一次大的通信传输操作，拆分到多个链路并发执行，以提高总带宽。这种模式虽简洁高效，却。",
+      "language": "zh-cn",
+      "publishedAt": "2025-08-28T07:04:25.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.972Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/150952195",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/150952195"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "5f6fe01c083d6dc36d0b",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "OpenSPG/KAG 0.8发布：可配置知识库索引 x 拥抱接入MCP x 系统接口完善，多跳问答效果持续领先",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/151176189",
+      "author": "DB_GPT",
+      "description": "我们正式发布KAG 0.8版本，本次更新旨在持续提升大模型利用知识库推理问答的一致性、严谨性和精准性，并引入了多项重要功能特性。首先，我们升级了KAG 知识库的能力。扩展了私域知识库（含结构化、非结构化数据）、公网知识库 两种模式，支持通过MCP 协议引入LBS、WebSearch 等公网数据源。",
+      "language": "zh-cn",
+      "publishedAt": "2025-09-04T07:03:16.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.970Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/151176189",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/151176189"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "61828ed3e11705e39c8f",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "官宣：Ray 正式加入 PyTorch 基金会",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/154191879",
+      "author": "DB_GPT",
+      "description": "https://www.anyscale.com/blog/ray-by-anyscale-joins-pytorch-foundation 译文",
+      "language": "zh-cn",
+      "publishedAt": "2025-10-31T08:32:48.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.968Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/154191879",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/154191879"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "7288af1c5c6ff5d38f9a",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "从ChatBI到业务记忆：重新定义数据智能的生产力边界",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/161928001",
+      "author": "DB_GPT",
+      "description": "回到最开始那个问题：帮我看看最近 GMV 为什么跌了？AI 当然会越来越擅长回答这类问题。模型会更强，工具调用会更稳，分析链路会更自动化。但越往后走，我越觉得真正的分水岭不在“谁的聊天框更聪明”，而在“谁能把业务上下文组织得更好”。过去，BI 能力强，可能体现为会写 SQL、DAX、Python、R，会搭指标体系，会做报表，会建模型。未来，这些能力仍然重要，但它们会越来越多地被 AI 部分接管或辅助完成。",
+      "language": "zh-cn",
+      "publishedAt": "2026-06-12T07:03:51.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.963Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/161928001",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/161928001"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "74ac319b2196a54f7c72",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "Ray Forward 2025 定档 12 月 20 日北京！议题征集通道已开放",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/154189495",
+      "author": "DB_GPT",
+      "description": "由蚂蚁集团发起的 Ray 中文社区与蚂蚁开源联合主办的 Ray Forward 2025，将于 12 月 20 日在北京蚂蚁 T 空间正式启幕，以 “拥抱 AI，Ray 向未来” 为主题，邀您共探下一代智能计算架构的进化方向。",
+      "language": "zh-cn",
+      "publishedAt": "2025-10-31T08:09:25.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.968Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/154189495",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/154189495"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "831159c0bba76356c18b",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "FlexQuant: 大模型组合量化，助力推理SLO",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/151068588",
+      "author": "DB_GPT",
+      "description": "本文基于不同量化算法在不同阶段、不同负载下的速度和精度表现，设计了一种组合量化机制FlexQuant，可以更全面、更轻松拿下精度、速度以及延迟和吞吐等SLO诉求，方案部署友好，直接有效，值得参考。",
+      "language": "zh-cn",
+      "publishedAt": "2025-09-01T07:18:45.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.972Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/151068588",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/151068588"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "907b7c19f9e17650482e",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "DB-GPT V0.8.0 版本更新｜范式跃迁：AI + Data 驱动的数据分析交互体验升级",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/159798128",
+      "author": "DB_GPT",
+      "description": "一次从“对话问答”到“任务交付”的范式跃迁，从「被动问答」到「自主分析」，探索真正的 Agentic 生产力。🎯 业务目标 → 🧠 任务拆解 → 🧩 技能调用 → 💻 代码生成(SQL/Python) → 🛡️ 沙箱执行 → 📊 图表生成 → 📝 报告交付你不再需要知道数据存在哪张表里，也不必为中间的数据清洗编写 Python 脚本。你只需要给出业务目标，DB-GPT AI数据助理 会为你打理好一切。",
+      "language": "zh-cn",
+      "publishedAt": "2026-04-03T07:17:43.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.965Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/159798128",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/159798128"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "934103068573039a0ea8",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "Deepinsight x ChatBI：个人Agent助手养成计划",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/155600888",
+      "author": "DB_GPT",
+      "description": "这里我为什么取名为“个人Agent助手养成计划”，可以理解为个人Agent助手相当于你新招的一个员工，开始他可能什么也不会，双方也不太了解，而在不断使用的过程中，你慢慢理解怎么使用它，它也更懂你，而最终它会成为你一个很好的助理。它和人一样，需要不断学习，才能解决更多的问题。在这个过程中，我们需要不断对它进行调教。今天这篇文章，我们就看如何把它“打造成你的个人Agent助手要用好它就需要知道它的“习性”，如何一步一步养成能够解决实际问题的专业助理。",
+      "language": "zh-cn",
+      "publishedAt": "2025-12-05T03:19:49.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.967Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/155600888",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/155600888"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "986b70feb0d56a6a0fc9",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "在 Ray Data 和 Ray Serve 中推出原生 LLM API",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/151148490",
+      "author": "DB_GPT",
+      "description": "https://www.anyscale.com/blog/llm-apis-ray-data-serve 译文2025年4月2日，我们激动地宣布在 Ray Data 和 Ray Serve 中为 LLM 推理提供原生 API。随着 LLM 在现代 AI 基础设施部署中变得越来越核心，平台需要能够高效地部署和扩展这些模型。虽然 Ray Data 和 Ray Serve 很适合快速部署和扩展这些模型，但开发人员必须编写大量冗余代码才能利用这些库来扩展 LLM 应用程序。",
+      "language": "zh-cn",
+      "publishedAt": "2025-09-03T07:13:07.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.971Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/151148490",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/151148490"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "a130ea9c629d60409a06",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "DB-GPT 0.7.4 版本更新｜开源蚂蚁集团Text2SQL数据集：Falcon、支持GLM-4.5大模型",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/153962262",
+      "author": "DB_GPT",
+      "description": "DB-GPT 0.7.4 版本更新，快速预览新特性",
+      "language": "zh-cn",
+      "publishedAt": "2025-10-27T02:47:55.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.969Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/153962262",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/153962262"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "b02f12fd97cd472b0145",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "DeepInsight x ChatBI：“智能歧义识别+知识沉淀”，化解模糊查询",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/155948411",
+      "author": "DB_GPT",
+      "description": "业务同学正日益习惯用自然语言直接进行数据分析。然而，随着“听懂”不再是唯一挑战，“问准”成为了新的关键瓶颈。用户一句看似简单的“看下高价值用户的近30天复购率”，背后可能隐藏着多重歧义（如“高价值”定义、“近30天”口径、“复购”统计方式），导致各类数据Agent理解存在偏差我们以常见的歧义表述“看下高价值用户的近30天复购率”为例，来说明当前流程下用户的核心痛点。总结：当前自然语言分析产品在解决语义歧义时，普遍存在以下问题，严重阻碍用户体验和效率：1.歧义识别依赖多轮对话，效率低下：用户初始表达常存在歧义",
+      "language": "zh-cn",
+      "publishedAt": "2025-12-15T10:39:09.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.967Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/155948411",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/155948411"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "f9bdabe8886db237a773",
+      "publisherId": "ant-data",
+      "companyId": "ant",
+      "contentType": "blog",
+      "title": "活动速递｜VeloxCon China 将于12月13日在北京举办，议题征集已开放！",
+      "canonicalUrl": "https://blog.csdn.net/DB_GPT/article/details/154125614",
+      "author": "DB_GPT",
+      "description": "在商业智能与 AI/ML 技术深度融合的今天，数据处理效率已成为企业突破增长瓶颈的核心竞争力。而 Velox 作为一款开源统一执行引擎，正以革命性的技术架构改写数据处理的游戏规则 —— 它凭借先进的向量化技术、编码感知的自适应执行方式，以及对现代硬件性能的极致挖掘，让 Presto、Spark 等主流数据平台与 AI/ML 工作负载的运行效率实现质的飞跃。现在，中国数据领域的从业者们迎来了与 Velox 深度对话的绝佳契机：Velox 首届中国大会（VeloxCon China 2025）将于在北京举办。",
+      "language": "zh-cn",
+      "publishedAt": "2025-10-30T06:38:41.000Z",
+      "discoveredAt": "2026-11-02T04:10:25.973Z",
+      "updatedAt": "2026-11-02T04:10:25.973Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T04:43:53.969Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "ant-data-csdn",
+          "externalId": "https://blog.csdn.net/DB_GPT/article/details/154125614",
+          "url": "https://blog.csdn.net/DB_GPT/article/details/154125614"
+        }
+      ],
+      "duplicateCandidates": []
+    }
+  ]
+}
