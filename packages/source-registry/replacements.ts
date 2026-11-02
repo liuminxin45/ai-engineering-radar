@@ -42,6 +42,11 @@ export const sourceReplacements = [
     companyId: "baidu",
     replacementIds: ["baidu-cloud-csdn-candidate"],
   },
+  {
+    sourceId: "xiaomi-team-blog",
+    companyId: "xiaomi",
+    replacementIds: ["xiaomi-tech-site"],
+  },
 ] as const;
 
 export function validateSourceReplacements(registry: Registry) {

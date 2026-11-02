@@ -284,7 +284,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
       (s: { verification: { status: string } }) =>
         s.verification.status === "suspended",
     ).length,
-  ).toBe(4);
+  ).toBe(3);
   for (const { sourceId, replacementIds } of sourceReplacements) {
     expect(sources.some((s: { id: string }) => s.id === sourceId)).toBe(false);
     for (const id of replacementIds)

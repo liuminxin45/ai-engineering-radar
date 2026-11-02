@@ -21,13 +21,13 @@
 
 ## 小米 MiMo 博客接入
 
-[MiMo 官网](https://mimo.xiaomi.com/)属于小米自有域名，首页署名 Xiaomi MiMo Team，页脚版权归 Xiaomi。按维护者指定，将 `xiaomi-tech-site` 从技术站参考入口改为 MiMo 官方博客，启用每日采集。小米信息部历史博客继续暂停，已有文章保留。
+[MiMo 官网](https://mimo.xiaomi.com/)属于小米自有域名，首页署名 Xiaomi MiMo Team，页脚版权归 Xiaomi。按维护者指定，将 `xiaomi-tech-site` 从技术站参考入口改为 MiMo 官方博客，启用每日采集。小米信息部历史博客 `xiaomi-team-blog` 已按维护者要求从注册表移除，MiMo 作为替代源。迁移清理旧源状态及其独占文章，保留 MiMo 和其他有效发布位置。
 
 普通 HTTP 实采 15 篇，包含首页折叠区中的文章。适配器从当前首页引用的脚本及路由表动态发现中文博客列表，交叉核对首页标题，不执行站点脚本。脚本使用官网同域的 `/static/js/` 入口，所有请求继续校验 robots；不请求 CDN 域名。只跟随同域文章 iframe 补充元数据，不请求视频和演示页面，不保存全文。
 
 13 篇取得完整发布日期。ASR 与 TTS Series 两篇只标月份，保留日期缺失。最新[工具调用复盘](https://mimo.xiaomi.com/zh/blog/mimo-v2-6-tool-call-repetition)为 2026-09-27；[材料研究文章](https://mimo.xiaomi.com/mimo-v2-6-material-research/zh.html)为 2026-09-21。技术官网目录的 10-14 不作为原文日期，MiMo 当前仍无近月更新。
 
-本地快照新增 15 篇，导出后共 579 篇。单元测试、类型检查、数据校验及公开内容检查通过。部署结果以发布工作流和线上数据核验为准。
+MiMo 接入时本地快照新增 15 篇，共 579 篇。随后移除旧博客独占的 20 篇文章，当前保留 559 篇，MiMo 的 15 篇及其 ID 不变。单元测试、类型检查、数据校验及公开内容检查通过。部署结果以发布工作流和线上数据核验为准。
 
 ## 仍未解决的公司
 

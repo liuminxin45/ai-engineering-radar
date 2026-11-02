@@ -116,9 +116,16 @@ describe("community feed and HTML ownership", () => {
   });
   it("ignores full-body feed summaries even when the article body is short", () => {
     const xml =
-      '<feed xmlns="http://www.w3.org/2005/Atom"><author><name>小米信息部技术团队</name></author><entry><title>Metadata only</title><link href="https://xiaomi-info.github.io/2020/05/24/post/"/><summary>FULL ARTICLE MUST NOT BE STORED</summary><content>FULL ARTICLE MUST NOT BE STORED</content><published>2020-05-24T09:15:00Z</published></entry></feed>';
-    const [item] = parseFeed(xml, source("xiaomi-team-blog"));
-    expect(item.author).toBe("小米信息部技术团队");
+      '<feed xmlns="http://www.w3.org/2005/Atom"><author><name>Team</name></author><entry><title>Metadata only</title><link href="https://team.example/2020/05/24/post/"/><summary>FULL ARTICLE MUST NOT BE STORED</summary><content>FULL ARTICLE MUST NOT BE STORED</content><published>2020-05-24T09:15:00Z</published></entry></feed>';
+    const [item] = parseFeed(xml, {
+      ...source("vivo-csdn"),
+      platform: "team-blog-feed",
+      entryUrl: "https://team.example/",
+      url: "https://team.example/atom.xml",
+      authorAllowlist: ["Team"],
+      linkPattern: undefined,
+    });
+    expect(item.author).toBe("Team");
     expect(item.description).toBeUndefined();
     expect(JSON.stringify(item)).not.toContain("FULL ARTICLE");
   });

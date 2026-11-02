@@ -47,6 +47,60 @@ function fixture() {
   return { articles: [...articles, old], states };
 }
 describe("explicit source retirement", () => {
+  it("retires Xiaomi's old blog without removing MiMo articles or their stable IDs", () => {
+    const source = registry.sources.find((s) => s.id === "xiaomi-tech-site")!;
+    const articles: Article[] = [];
+    for (let i = 0; i < 15; i++)
+      upsert(
+        articles,
+        {
+          title: `MiMo official blog ${i}`,
+          url: `https://mimo.xiaomi.com/zh/blog/mimo-test-${i}`,
+          externalId: `mimo-test-${i}`,
+        },
+        source,
+        registry,
+      );
+    const old = structuredClone(articles[0]);
+    old.id = "00000000000000000003";
+    old.locations = [
+      {
+        sourceId: "xiaomi-team-blog",
+        url: "https://xiaomi-info.github.io/2020/05/24/post/",
+      },
+    ];
+    articles[0].locations.push(old.locations[0]);
+    const states: SourceState[] = [
+      {
+        sourceId: "xiaomi-team-blog",
+        status: "suspended",
+        discovered: 20,
+        consecutiveFailures: 0,
+      },
+      {
+        sourceId: source.id,
+        status: "success",
+        discovered: 15,
+        consecutiveFailures: 0,
+        lastSuccessAt: "2026-11-02T02:28:18.457Z",
+      },
+    ];
+    const ids = articles.map((a) => a.id);
+    const result = retireReplacedSources([...articles, old], states, registry);
+    expect(result.articles.map((a) => a.id)).toEqual(ids);
+    expect(result.removedArticles).toBe(1);
+    expect(result.removedStates).toBe(1);
+    expect(
+      result.articles.every((a) =>
+        a.locations.every((l) => l.sourceId === source.id),
+      ),
+    ).toBe(true);
+    expect(result.states.map((s) => s.sourceId)).toEqual([source.id]);
+    validateRelations(result.articles, result.states, registry);
+    expect(() =>
+      retireReplacedSources([...articles, old], states.slice(0, 1), registry),
+    ).toThrow("successful collected article");
+  });
   it("removes only retired-source articles and states, preserving IDs and other history", () => {
     const data = fixture();
     const history = structuredClone(data.articles[0]);

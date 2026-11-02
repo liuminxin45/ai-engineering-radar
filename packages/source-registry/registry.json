@@ -1030,30 +1030,6 @@
       "authorAllowlist": ["xiaomi-mimo"]
     },
     {
-      "id": "xiaomi-team-blog",
-      "publisherId": "xiaomi-official",
-      "name": "小米信息部技术团队 · 历史博客",
-      "entryUrl": "https://xiaomi-info.github.io/",
-      "url": "https://xiaomi-info.github.io/atom.xml",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "team-blog-feed",
-      "verification": {
-        "status": "suspended",
-        "evidenceUrls": ["https://xiaomi-info.github.io/"],
-        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2020-05-24，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：团队博客的投稿须知明确仅接受部门内部投稿，并同步运营信息技术部公众号；文章持续自署小米信息技术部团队成员。稳定站点 xiaomi-info.github.io，公开 Atom 允许访问并解析成功。最新条目停留在 2020 年，作为历史来源；Feed 正文不保存。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["小米信息部技术团队"],
-      "linkPattern": "^/20[0-9]{2}/[0-9]{2}/[0-9]{2}/"
-    },
-    {
       "id": "xiaomi-csdn-candidate",
       "publisherId": "xiaomi-official",
       "name": "小米技术 · CSDN 待核验",
