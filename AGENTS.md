@@ -12,6 +12,7 @@ README 面向产品读者，优先介绍产品目标、核心功能、界面与�
 - [获取层维护](docs/acquisition.md)：文档接口、CSDN 浏览器回退与正式工作流。
 - [运行维护](docs/operations.md)：采集调度、数据分支、来源迁移、恢复与发布。
 - [贡献指南](CONTRIBUTING.md)：来源材料、适配器与测试要求。
+- [内容规则标签](docs/content-signals.md)：可解释提示与可选活动过滤。
 - [软文标记试运行](docs/advertorial-trial.md)：标记范围、人工复核与更正方法。
 - [来源验收](docs/source-acceptance.md)、[来源调查](docs/source-research.md)和[第二轮调查](docs/source-research-round2.md)：接入证据与实测结果。
 - 修改 Web 应用时，遵循 [Web 应用指引](apps/web/AGENTS.md)。

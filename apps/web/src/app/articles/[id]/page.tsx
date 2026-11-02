@@ -6,6 +6,7 @@ import { ArticleReading } from "../../../components/article-reading";
 import { ReaderActions } from "../../../components/reader-actions";
 import { ArticleLink } from "../../../components/article-link";
 import "./reader.css";
+import { ContentSignalReview } from "../../../components/content-signals";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return site.articles.length
@@ -62,6 +63,7 @@ export default async function Detail({
                 {readable && <span>约 {body.readingMinutes} 分钟阅读</span>}
               </p>
             </header>
+            <ContentSignalReview article={a} />
             {a.advertorial?.status === "suspected" && (
               <section className="detail-section" id="advertorial-review">
                 <h2>疑似软文 · 试运行</h2>
