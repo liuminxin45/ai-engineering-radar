@@ -48,6 +48,21 @@ function makeArticles() {
 }
 
 describe("declarative article parser", () => {
+  it("accepts short text and a single image without completeness warnings", () => {
+    for (const html of [
+      "<p>短文。</p>",
+      "<p>一条简讯，只有几句话。</p>",
+      '<img src="/poster.png" alt="公告海报">',
+    ]) {
+      const result = parse(html);
+      expect(result.status).toBe("ready");
+      expect(result.warnings).toEqual([]);
+    }
+    expect(() => parse("<script>advertisement()</script>")).toThrow();
+    const restricted = parse("<p>本文仅展示部分</p>");
+    expect(restricted.status).toBe("partial");
+    expect(restricted.warnings).toEqual(["原站提示正文存在阅读限制。"]);
+  });
   it("matches exact hosts and paths and supports independent rule registration", () => {
     expect(articleParser.match(url)?.id).toBe("cnblogs");
     expect(
@@ -121,7 +136,14 @@ describe("declarative article parser", () => {
     expect(() =>
       articleParser.parse({ url, content: `<main><p>${text}</p></main>` }),
     ).toThrow("No body matched");
-    expect(() => parse("<p>登录</p>")).toThrow();
+    expect(() => parse("<p> </p>")).toThrow();
+    expect(() =>
+      articleParser.parse({
+        url,
+        content:
+          '<title>登录</title><div id="cnblogs_post_body">登录后阅读全文</div>',
+      }),
+    ).toThrow(/access or error page/);
     const result = articleParser.parse({
       url: "https://unknown.example/post",
       content: `<article><h1>标题</h1><p>${text}</p><p>${text}</p></article>`,

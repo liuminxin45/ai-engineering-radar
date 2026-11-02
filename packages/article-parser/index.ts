@@ -16,7 +16,7 @@ import {
 } from "./structured.js";
 import { tokensToMarkdown } from "./tokens.js";
 
-export const ENGINE_VERSION = "radar-reader-1";
+export const ENGINE_VERSION = "radar-reader-2";
 export { parserRuleSchema } from "./types.js";
 export type { ParseInput, ParsedArticle, ParserRule } from "./types.js";
 export type { StructuredExtractor } from "./structured.js";
@@ -338,7 +338,7 @@ export class ArticleParser {
         const selector = rule.include.find(
           (value) =>
             $(value).length &&
-            (normalizedText($(value).first().text()).length > 30 ||
+            (normalizedText($(value).first().text()).length > 0 ||
               $(value).first().find("img").length > 0),
         );
         if (selector) {
@@ -353,7 +353,7 @@ export class ArticleParser {
         const dom = new JSDOM(input.content, { url: input.url });
         try {
           const article = new Readability(dom.window.document, {
-            charThreshold: 200,
+            charThreshold: 0,
           }).parse();
           if (!article?.content)
             throw new Error("No readable article body found");
@@ -369,10 +369,8 @@ export class ArticleParser {
     }
     const result = normalizeArticleHtml(html, input.url, title);
     const imageCount = cheerio.load(result.html)("img").length;
-    if ((result.textLength < 40 && imageCount === 0) || !result.html)
+    if ((result.textLength === 0 && imageCount === 0) || !result.html)
       throw new Error("No readable article body found");
-    if (result.textLength < (rule?.minTextLength ?? 120) && imageCount < 2)
-      warnings.push("取得的正文较短，可能不完整。");
     const plain = cheerio.load(html).text();
     if (plain.includes("嵌入内容请阅读原文。"))
       warnings.push("部分嵌入内容无法转换，请在原文中查看。");

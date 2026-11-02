@@ -9,6 +9,7 @@ import type { Article, Source } from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
 import { createBodyLoader } from "./body-fetchers.js";
 import { compareArticles } from "../shared/types.js";
+import { upgradeBodyPolicy } from "./body-policy.js";
 
 export type BodyLoader = (
   article: Article,
@@ -42,7 +43,7 @@ export async function collectBodies(
       a.classification.status === "accepted",
   );
   const bodies = new Map(
-    previous
+    upgradeBodyPolicy(previous)
       .filter((body) =>
         articles.some(
           (a) =>

@@ -10,7 +10,6 @@ export const parserRuleSchema = z
     title: z.array(z.string()).default([]),
     include: z.array(z.string()).min(1),
     exclude: z.array(z.string()).default([]),
-    minTextLength: z.number().int().positive().default(120),
     reference: z.string().url().optional(),
   })
   .strict();

@@ -12,6 +12,7 @@ import { ingest, applyOverrides } from "../packages/crawler/ingest.js";
 import { exportSite } from "../packages/publisher/export.js";
 import { resolveSiteUrl } from "../packages/shared/site.js";
 import { collectBodies } from "../packages/crawler/bodies.js";
+import { upgradeBodyPolicy } from "../packages/crawler/body-policy.js";
 const root = resolve(import.meta.dirname, "..");
 const dir = resolve(process.env.RADAR_DATA_DIR ?? ".radar/data");
 const registry = await loadRegistry();
@@ -77,6 +78,23 @@ async function run() {
         await appendFile(process.env.GITHUB_STEP_SUMMARY, summary);
       console.log(summary);
       if (result.attempted && result.successes === 0) process.exitCode = 2;
+    } else if (command === "reclassify-bodies") {
+      const previous = snapshot.bodies ?? [];
+      const bodies = upgradeBodyPolicy(previous);
+      await saveSnapshot(
+        dir,
+        snapshot.articles,
+        snapshot.states,
+        registry,
+        bodies,
+      );
+      const promoted = bodies.filter(
+        (body, index) =>
+          body.status === "ready" && previous[index].status === "partial",
+      ).length;
+      console.log(
+        `Body completeness policy updated: ${promoted} short articles now ready; HTML and fetch timestamps preserved`,
+      );
     } else if (command === "bodies") {
       const limitArg = process.argv
         .find((arg) => arg.startsWith("--limit="))
