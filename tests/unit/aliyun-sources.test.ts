@@ -8,7 +8,7 @@ import {
 import type { Source } from "../../packages/shared/types.js";
 
 const registry = await loadRegistry();
-const base = registry.sources.find((s) => s.id === "alibaba")!;
+const base = registry.sources.find((s) => s.id === "aliyun-cloud-native")!;
 const source = (
   group = "apphub/article/",
   account = "pawmkwdq37c7s",

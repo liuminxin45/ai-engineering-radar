@@ -19,6 +19,17 @@ export function retireReplacedSources(
         a.locations.some((l) => l.sourceId === rule.sourceId),
       );
     if (!present) continue;
+    if ("referenceOnly" in rule && rule.referenceOnly) {
+      if (
+        articles.some((a) =>
+          a.locations.some((l) => l.sourceId === rule.sourceId),
+        )
+      )
+        throw new Error(
+          `Reference-only retirement contains article history: ${rule.sourceId}`,
+        );
+      continue;
+    }
     for (const id of rule.replacementIds) {
       const source = registry.sources.find((s) => s.id === id)!;
       if (!source.crawl.enabled || source.verification.status !== "verified")

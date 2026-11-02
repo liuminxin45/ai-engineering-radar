@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
+import {
+  DEFAULT_BASE_PATH,
+  resolveSiteUrl,
+} from "../../../../packages/shared/site";
 import { SiteUiProvider } from "../components/site-ui-provider";
 import "chatgpt-desktop-kit/components.css";
 import "./globals.css";
-const basePath = process.env.BASE_PATH ?? "";
-const origin = (process.env.SITE_URL ?? "http://localhost:3000") + basePath;
+const basePath = process.env.BASE_PATH ?? DEFAULT_BASE_PATH;
+const origin = resolveSiteUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(origin + "/"),
   title: {

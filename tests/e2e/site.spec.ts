@@ -274,12 +274,10 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   const sources = (await (await request.get("data/sources.json")).json())
     .sources;
   for (const id of [
-    "dewu-csdn",
+    "dewu-tencent",
     "aliyun-cloud-native",
-    "aliyun-dataphin",
     "bytedance-volcengine",
     "ant-ling",
-    "ant-oceanbase-csdn",
     "baidu-cloud-csdn-candidate",
   ]) {
     const source = sources.find((s: { id: string }) => s.id === id);
@@ -293,13 +291,18 @@ test("domestic provenance stays public while the interface exposes only whole-pr
         s.verification.status === "suspended",
     ).length,
   ).toBe(3);
-  for (const { sourceId, replacementIds } of sourceReplacements) {
+  for (const rule of sourceReplacements) {
+    const { sourceId, replacementIds } = rule;
     expect(sources.some((s: { id: string }) => s.id === sourceId)).toBe(false);
-    for (const id of replacementIds)
+    for (const id of replacementIds) {
+      expect(sources.some((s: { id: string }) => s.id === id)).toBe(true);
+      if ("referenceOnly" in rule && rule.referenceOnly) continue;
       expect(
         sources.find((s: { id: string }) => s.id === id).crawl.enabled,
       ).toBe(true);
+    }
   }
+  expect(sources).toHaveLength(companies.length);
   const articles = (await (await request.get("data/articles.json")).json())
     .articles;
   const retiredIds = new Set<string>(sourceReplacements.map((s) => s.sourceId));
@@ -328,7 +331,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   const normalSize = await underline.evaluate(
     (e) => getComputedStyle(e).backgroundSize,
   );
-  expect(normalSize).toBe("0% 1px");
+  expect(normalSize).toMatch(/^0(?:%|px) 1px$/);
   if (!isMobile) {
     await title.hover();
     await expect

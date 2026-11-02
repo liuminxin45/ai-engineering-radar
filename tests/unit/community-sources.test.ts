@@ -35,7 +35,7 @@ describe("domestic community registry", () => {
       expect(s.verification.status).toBe("verified");
     }
     expect(source("bilibili-csdn").authorAllowlist).toEqual(["bilibili_TC"]);
-    expect(source("tencent").adapter).toBe("reference");
+    expect(source("tencent")).toBeUndefined();
   });
   it("keeps only the MiMo official site registered for Xiaomi", () => {
     const publishers = new Set(

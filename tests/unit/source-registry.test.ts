@@ -2,16 +2,47 @@ import { describe, expect, it } from "vitest";
 import {
   loadRegistry,
   validateAccountScope,
+  validateCompanySources,
 } from "../../packages/source-registry/index.js";
 
 describe("official community account scope", () => {
-  it("accepts separately reviewed Aliyun publishers and the exact Volcengine account", async () => {
+  it("requires exactly one registered source per company, including disabled references and other publishers", async () => {
+    const registry = await loadRegistry();
+    expect(() => validateCompanySources(registry)).not.toThrow();
+    const source = registry.sources.find(
+      (s) => s.id === "aliyun-cloud-native",
+    )!;
+    const duplicate = structuredClone(registry);
+    duplicate.publishers.push({
+      id: "another-team",
+      companyId: "alibaba",
+      name: "Another team",
+    });
+    duplicate.sources.push({
+      ...source,
+      id: "another-source",
+      publisherId: "another-team",
+      adapter: "reference",
+      crawl: { ...source.crawl, enabled: false },
+    });
+    expect(() => validateCompanySources(duplicate)).toThrow(
+      "exactly one source: alibaba (found 2)",
+    );
+    expect(() =>
+      validateCompanySources({
+        ...registry,
+        sources: registry.sources.filter((s) => s.id !== source.id),
+      }),
+    ).toThrow("found 0");
+    expect(
+      registry.sources.filter((s) => s.verification.status === "suspended"),
+    ).toHaveLength(3);
+  });
+  it("accepts the retained Aliyun and Volcengine accounts", async () => {
     const registry = await loadRegistry();
     const cloud = registry.sources.find((s) => s.id === "aliyun-cloud-native")!;
-    const dataphin = registry.sources.find((s) => s.id === "aliyun-dataphin")!;
     const volc = registry.sources.find((s) => s.id === "bytedance-volcengine")!;
-    expect(cloud.publisherId).not.toBe(dataphin.publisherId);
-    for (const source of [cloud, dataphin, volc])
+    for (const source of [cloud, volc])
       expect(() => validateAccountScope(source)).not.toThrow();
   });
 

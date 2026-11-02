@@ -11,6 +11,27 @@ import {
 
 export function validateAccountScope(source: Source) {
   if (!source.crawl.enabled) return;
+  if (source.platform === "tencent-user") {
+    const u = new URL(source.url);
+    const id = u.pathname.match(/^\/user\/([0-9]+)\/articles$/)?.[1];
+    if (
+      source.adapter !== "html" ||
+      source.entryUrl !== source.url ||
+      u.origin !== "https://developer.cloud.tencent.com" ||
+      u.username ||
+      u.password ||
+      u.search ||
+      u.hash ||
+      !id ||
+      source.authorAllowlist?.length !== 1 ||
+      source.authorAllowlist[0] !== id ||
+      source.linkPattern !== "^/article/[0-9]+/?$"
+    )
+      throw new Error(
+        `Tencent users require matching directory and author IDs: ${source.id}`,
+      );
+    return;
+  }
   if (source.platform === "xiaomi-mimo") {
     validateMiMoSource(source);
     return;
@@ -73,6 +94,23 @@ export function validateAccountScope(source: Source) {
     )
       throw new Error(
         `Volcengine accounts require matching directory and author IDs: ${source.id}`,
+      );
+  }
+}
+
+export function validateCompanySources(registry: {
+  companies: Company[];
+  publishers: Publisher[];
+  sources: Source[];
+}) {
+  const owners = new Map(registry.publishers.map((p) => [p.id, p.companyId]));
+  for (const company of registry.companies) {
+    const sources = registry.sources.filter(
+      (source) => owners.get(source.publisherId) === company.id,
+    );
+    if (sources.length !== 1)
+      throw new Error(
+        `Company must have exactly one source: ${company.id} (found ${sources.length})`,
       );
   }
 }
@@ -154,6 +192,7 @@ export async function loadRegistry() {
       );
   }
   const registry = { sources, companies, publishers };
+  validateCompanySources(registry);
   validateSourceReplacements(registry);
   return registry;
 }

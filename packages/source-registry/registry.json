@@ -222,340 +222,30 @@
       }
     },
     {
-      "id": "vivo-site",
-      "publisherId": "vivo-tech",
-      "name": "vivo · vivo-site",
-      "entryUrl": "https://tech.vivo.com/",
-      "url": "https://tech.vivo.com/",
-      "priority": "B",
-      "adapter": "reference",
-      "platform": "official-site",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": ["https://tech.vivo.com/"],
-        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
-        "reviewedAt": "2026-11-01T00:00:00Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
       "id": "dewu-tencent",
       "publisherId": "dewu-tech",
-      "name": "得物 · dewu-tencent",
-      "entryUrl": "https://developer.cloud.tencent.com/column/96340",
-      "url": "https://cloud.tencent.com/developer/column/96340",
+      "name": "得物技术 · 腾讯云",
+      "entryUrl": "https://developer.cloud.tencent.com/user/9927536/articles",
+      "url": "https://developer.cloud.tencent.com/user/9927536/articles",
       "priority": "A",
       "adapter": "html",
-      "platform": "tencent-column",
-      "verification": {
-        "status": "pending",
-        "evidenceUrls": [],
-        "note": "专栏结构化数据确认创作者 UID 9927536，company 为得物App；平台显示未做职业认证，仍需官方反向链接或企业认证证据。",
-        "reviewedAt": null
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      },
-      "authorAllowlist": ["9927536"]
-    },
-    {
-      "id": "tencent",
-      "publisherId": "tencent-official",
-      "name": "腾讯 · tencent",
-      "entryUrl": "https://cloud.tencent.com/developer",
-      "url": "https://cloud.tencent.com/developer",
-      "priority": "B",
-      "adapter": "reference",
-      "platform": "community",
-      "verification": {
-        "status": "pending",
-        "evidenceUrls": [],
-        "note": "社区含第三方投稿；需核验具体官方作者账号与稳定标识，禁止整站归属公司。",
-        "reviewedAt": null
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
-      "id": "alibaba",
-      "publisherId": "alibaba-official",
-      "name": "阿里巴巴 / 阿里云 · alibaba",
-      "entryUrl": "https://developer.aliyun.com/",
-      "url": "https://developer.aliyun.com/",
-      "priority": "B",
-      "adapter": "reference",
-      "platform": "community",
-      "verification": {
-        "status": "pending",
-        "evidenceUrls": [],
-        "note": "社区含第三方投稿；需核验具体官方作者账号与稳定标识，禁止整站归属公司。",
-        "reviewedAt": null
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
-      "id": "bytedance",
-      "publisherId": "bytedance-official",
-      "name": "字节跳动 · bytedance",
-      "entryUrl": "https://opensource.bytedance.com/blog",
-      "url": "https://opensource.bytedance.com/blog",
-      "priority": "A",
-      "adapter": "reference",
-      "platform": "official-site",
+      "platform": "tencent-user",
       "verification": {
         "status": "verified",
-        "evidenceUrls": ["https://opensource.bytedance.com/blog"],
-        "note": "官方自有开源博客身份已确认；静态 HTML 为客户端渲染壳，未核实可用公开目录 API，保留原入口参考。已另接入 ByteDanceTech 官方团队 CSDN 账号 RSS，避免将空目录作为成功来源。",
-        "reviewedAt": "2026-11-01T00:00:00Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      },
-      "selector": "a[href*=\"/blog/\"]"
-    },
-    {
-      "id": "baidu",
-      "publisherId": "baidu-official",
-      "name": "百度 · baidu",
-      "entryUrl": "https://ai.baidu.com/",
-      "url": "https://ai.baidu.com/",
-      "priority": "B",
-      "adapter": "reference",
-      "platform": "official-site",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": ["https://ai.baidu.com/"],
-        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
-        "reviewedAt": "2026-11-01T00:00:00Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
-      "id": "huawei",
-      "publisherId": "huawei-official",
-      "name": "华为 · huawei",
-      "entryUrl": "https://developer.huawei.com/",
-      "url": "https://developer.huawei.com/",
-      "priority": "B",
-      "adapter": "reference",
-      "platform": "official-site",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": ["https://developer.huawei.com/"],
-        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
-        "reviewedAt": "2026-11-01T00:00:00Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
-      "id": "kuaishou",
-      "publisherId": "kuaishou-official",
-      "name": "快手 · kuaishou",
-      "entryUrl": "https://ai.kuaishou.com/",
-      "url": "https://ai.kuaishou.com/",
-      "priority": "B",
-      "adapter": "reference",
-      "platform": "official-site",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": ["https://ai.kuaishou.com/"],
-        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
-        "reviewedAt": "2026-11-01T00:00:00Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
-      "id": "ant",
-      "publisherId": "ant-official",
-      "name": "蚂蚁集团 · ant",
-      "entryUrl": "https://open.alipay.com/",
-      "url": "https://open.alipay.com/",
-      "priority": "B",
-      "adapter": "reference",
-      "platform": "official-site",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": ["https://open.alipay.com/"],
-        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
-        "reviewedAt": "2026-11-01T00:00:00Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
-      "id": "oppo",
-      "publisherId": "oppo-official",
-      "name": "OPPO · oppo",
-      "entryUrl": "https://open.oppomobile.com/",
-      "url": "https://open.oppomobile.com/",
-      "priority": "B",
-      "adapter": "reference",
-      "platform": "official-site",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": ["https://open.oppomobile.com/"],
-        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
-        "reviewedAt": "2026-11-01T00:00:00Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
-      "id": "jd",
-      "publisherId": "jd-official",
-      "name": "京东 · jd",
-      "entryUrl": "https://developer.jdcloud.com/",
-      "url": "https://developer.jdcloud.com/",
-      "priority": "B",
-      "adapter": "reference",
-      "platform": "community",
-      "verification": {
-        "status": "pending",
-        "evidenceUrls": ["https://developer.jdcloud.com/"],
-        "note": "已检测到开发者社区文章目录，但页面含社区投稿；需进一步确定京东官方作者稳定 ID，不能整站归属京东。",
-        "reviewedAt": "2026-11-01T00:00:00Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
-      "id": "ctrip",
-      "publisherId": "ctrip-official",
-      "name": "携程 · ctrip",
-      "entryUrl": "https://www.ctrip.com/",
-      "url": "https://www.cnblogs.com/ctriptech/",
-      "priority": "C",
-      "adapter": "html",
-      "platform": "thirdparty",
-      "verification": {
-        "status": "pending",
-        "evidenceUrls": [],
-        "note": "已找到 ctriptech 博客园候选账号，公开目录最后更新于 2016 年；尚缺企业反向链接或认证证据，tech.ctrip.com 当前连接失败。",
-        "reviewedAt": null
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      },
-      "selector": ".postTitle a"
-    },
-    {
-      "id": "xiaohongshu",
-      "publisherId": "xiaohongshu-official",
-      "name": "小红书 · xiaohongshu",
-      "entryUrl": "https://www.xiaohongshu.com/",
-      "url": "https://www.xiaohongshu.com/",
-      "priority": "C",
-      "adapter": "reference",
-      "platform": "candidate",
-      "verification": {
-        "status": "pending",
-        "evidenceUrls": [],
-        "note": "已发现小红书技术REDtech公众号线索，但缺少可独立核验的官方文章采集入口；不采集第三方公众号镜像。",
-        "reviewedAt": null
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
-      "id": "netease",
-      "publisherId": "netease-official",
-      "name": "网易 · netease",
-      "entryUrl": "https://www.163.com/",
-      "url": "https://www.cnblogs.com/163yun/",
-      "priority": "C",
-      "adapter": "html",
-      "platform": "thirdparty",
-      "verification": {
-        "status": "pending",
-        "evidenceUrls": [],
-        "note": "已找到名为网易智企·数帆的博客园账号 163yun；尚缺官网反向链接或可核验企业认证，保持待核验。",
-        "reviewedAt": null
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      },
-      "selector": ".postTitle a"
-    },
-    {
-      "id": "bilibili",
-      "publisherId": "bilibili-official",
-      "name": "B站 · bilibili",
-      "entryUrl": "https://www.bilibili.com/",
-      "url": "https://www.bilibili.com/",
-      "priority": "C",
-      "adapter": "reference",
-      "platform": "candidate",
-      "verification": {
-        "status": "pending",
         "evidenceUrls": [
-          "https://ir.bilibili.com/media/ftcjhpj4/bps23090002_bilibili-2023esg_sc_c4856.pdf"
+          "https://developer.cloud.tencent.com/user/9927536/articles"
         ],
-        "note": "B站官方 ESG 报告确认哔哩哔哩技术公众号与B站账号存在；尚未核定稳定账号 ID 及允许采集的文章目录。",
-        "reviewedAt": null
+        "note": "用户指定得物技术账号，稳定 UID 9927536。公开主页列出得物App及公众号得物技术，持续发布得物团队文章；此依据不代表平台职业认证。只读取该用户文章目录，逐篇核对作者 UID，仅保存索引元数据。",
+        "reviewedAt": "2026-11-02T02:52:20Z"
       },
       "crawl": {
-        "enabled": false,
+        "enabled": true,
         "intervalMinutes": 1440,
         "maxItems": 50,
         "backfillLimit": 100
-      }
+      },
+      "authorAllowlist": ["9927536"],
+      "linkPattern": "^/article/[0-9]+/?$"
     },
     {
       "id": "vivo-csdn",
@@ -635,33 +325,6 @@
       },
       "authorAllowlist": ["kuaishoutech"],
       "linkPattern": "^/kuaishoutech/article/details/[0-9]+/?$"
-    },
-    {
-      "id": "ant-csdn",
-      "publisherId": "ant-official",
-      "name": "蚂蚁技术研究院 · CSDN",
-      "entryUrl": "https://blog.csdn.net/AntResearch",
-      "url": "https://rss.csdn.net/AntResearch/rss/map",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "csdn-feed",
-      "verification": {
-        "status": "pending",
-        "evidenceUrls": [
-          "https://blog.csdn.net/AntResearch",
-          "https://www.antresearch.com/"
-        ],
-        "note": "已找到 AntResearch 稳定账号，公开 RSS 允许访问且解析 20 条；文章涉及蚂蚁研究院与团队实践。暂未取得足以确认此具体账号官方归属的资料，保留待核验且关闭采集。",
-        "reviewedAt": null
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["AntResearch"],
-      "linkPattern": "^/AntResearch/article/details/[0-9]+/?$"
     },
     {
       "id": "ctrip-csdn",
@@ -803,32 +466,6 @@
       "linkHosts": ["news.qq.com"]
     },
     {
-      "id": "tencent-cloud-official",
-      "publisherId": "tencent-official",
-      "name": "腾讯技术工程官方号 · 腾讯云",
-      "entryUrl": "https://cloud.tencent.com/developer/user/170434/articles",
-      "url": "https://cloud.tencent.com/developer/user/170434/articles",
-      "priority": "A",
-      "adapter": "reference",
-      "platform": "tencent-user",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://cloud.tencent.com/developer/user/170434/articles",
-          "https://cloud.tencent.com/developer/user/170434/following/users"
-        ],
-        "note": "平台显示腾讯公司身份已认证，自我介绍为腾讯技术工程事业群官方微信公众号，稳定 UID 170434。仅作身份和备用公开入口参考，尚未实现账号目录解析，不计为已接入采集源。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["170434"]
-    },
-    {
       "id": "oppo-segmentfault",
       "publisherId": "oppo-official",
       "name": "OPPO数智技术 · 思否",
@@ -854,39 +491,6 @@
       },
       "authorAllowlist": ["OPPO数智技术"],
       "linkPattern": "^/a/[0-9]+/?$"
-    },
-    {
-      "id": "vivo-cnblogs",
-      "publisherId": "vivo-tech",
-      "name": "vivo互联网技术 · 博客园",
-      "entryUrl": "https://www.cnblogs.com/vivotech/",
-      "url": "https://www.cnblogs.com/vivotech/",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "cnblogs-account",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://www.cnblogs.com/vivotech/",
-          "https://blog.csdn.net/vivo_tech",
-          "https://www.cnblogs.com/vivotech/rss"
-        ],
-        "note": "人工核验：同名账号长期发布与已企业认证的 vivo CSDN 号一致的 vivo 团队文章。稳定博客路径 vivotech；原 RSS 跳转的 Feed 主机 robots 禁止采集，改用允许访问的账号 HTML 目录。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["vivotech"],
-      "linkPattern": "^/vivotech/p/[0-9]+(?:\\.html)?/?$",
-      "selector": ".postTitle a",
-      "metadata": {
-        "dateSelector": "#post-date",
-        "timezone": "+08:00"
-      }
     },
     {
       "id": "jd-cnblogs",
@@ -922,39 +526,6 @@
       }
     },
     {
-      "id": "ctrip-cnblogs",
-      "publisherId": "ctrip-official",
-      "name": "ctriptech · 博客园",
-      "entryUrl": "https://www.cnblogs.com/ctriptech/",
-      "url": "https://www.cnblogs.com/ctriptech/",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "cnblogs-account",
-      "verification": {
-        "status": "pending",
-        "evidenceUrls": [
-          "https://www.cnblogs.com/ctriptech/",
-          "https://blog.csdn.net/ctrip_tech",
-          "https://www.cnblogs.com/ctriptech/rss"
-        ],
-        "note": "已找到历史账号 ctriptech，公开 HTML 目录可访问，原 RSS 目标 robots 禁止。账号最新条目停留在 2016 年，尚缺该历史账号归属的充分证据；已另接入核实的携程 CSDN 官方号。",
-        "reviewedAt": null
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["ctriptech"],
-      "linkPattern": "^/ctriptech/p/[0-9]+(?:\\.html)?/?$",
-      "selector": ".postTitle a",
-      "metadata": {
-        "dateSelector": "#post-date",
-        "timezone": "+08:00"
-      }
-    },
-    {
       "id": "xiaomi-tech-site",
       "publisherId": "xiaomi-official",
       "name": "小米 MiMo · 官方博客",
@@ -982,34 +553,6 @@
       "authorAllowlist": ["xiaomi-mimo"]
     },
     {
-      "id": "dewu-csdn",
-      "publisherId": "dewu-tech",
-      "name": "得物技术 · CSDN",
-      "entryUrl": "https://blog.csdn.net/SmartCodeTech",
-      "url": "https://rss.csdn.net/SmartCodeTech/rss/map",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "csdn-feed",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://blog.csdn.net/SmartCodeTech",
-          "https://rss.csdn.net/SmartCodeTech/rss/map"
-        ],
-        "note": "平台企业认证已核验：账号主页真实HTML展示title为“企业官方账号认证”的平台图标，achievementList标注“得物技术官方账号”，公司为上海得物信息集团有限公司。限定稳定用户名SmartCodeTech及同账号文章路径。公开RSS试采20条，最新发布时间2026-10-29；详情HTML可能返回521，不补抓或绕过。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      },
-      "authorAllowlist": ["SmartCodeTech"],
-      "linkHosts": ["blog.csdn.net"],
-      "linkPattern": "^/SmartCodeTech/article/details/[0-9]+/?$"
-    },
-    {
       "id": "aliyun-cloud-native",
       "publisherId": "aliyun-cloud-native",
       "name": "阿里云云原生 · 官方博客",
@@ -1035,35 +578,6 @@
         "backfillLimit": 100
       },
       "authorAllowlist": ["pawmkwdq37c7s"],
-      "linkHosts": ["developer.aliyun.com"],
-      "linkPattern": "^/article/[0-9]+/?$"
-    },
-    {
-      "id": "aliyun-dataphin",
-      "publisherId": "aliyun-dataphin",
-      "name": "瓴羊 Dataphin · 官方博客",
-      "entryUrl": "https://developer.aliyun.com/group/dataphin/",
-      "url": "https://developer.aliyun.com/group/dataphin/",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "aliyun-group",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://developer.aliyun.com/group/dataphin/",
-          "https://developer.aliyun.com/profile/ylyeppx3vlhce",
-          "https://developer.aliyun.com/article/1777073"
-        ],
-        "note": "阿里云自有官方栏目明确说明为阿里云智能集团瓴羊旗下产品团队。原文1777073及目录显示2026-10-30，发布者瓴羊Dataphin的稳定profile为ylyeppx3vlhce。与云原生团队分别建模，专用适配器逐条校验profile，避免跨发布主体混入或合并。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      },
-      "authorAllowlist": ["ylyeppx3vlhce"],
       "linkHosts": ["developer.aliyun.com"],
       "linkPattern": "^/article/[0-9]+/?$"
     },
@@ -1125,34 +639,6 @@
       }
     },
     {
-      "id": "ant-oceanbase-csdn",
-      "publisherId": "ant-oceanbase",
-      "name": "OceanBase 数据库 · CSDN",
-      "entryUrl": "https://blog.csdn.net/OceanBaseGFBK",
-      "url": "https://rss.csdn.net/OceanBaseGFBK/rss/map",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "csdn-feed",
-      "authorAllowlist": ["OceanBaseGFBK"],
-      "linkPattern": "^/OceanBaseGFBK/article/details/[0-9]+/?$",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://blog.csdn.net/OceanBaseGFBK",
-          "https://www.oceanbase.com/about",
-          "https://www.antgroup.com/en/about/leadership/evan-yang"
-        ],
-        "note": "CSDN正常公开HTML明确展示企业官方账号认证，机构为北京奥星贝斯科技有限公司，账号为OceanBase数据库官方博客。OceanBase官网及蚂蚁集团官网管理团队资料明确集团与数据库团队关联；独立发布主体建模，只收该企业账号。公开RSS实测20条，作者及原文路径大小写均为OceanBaseGFBK，最新2026-10-29。",
-        "reviewedAt": "2026-11-02T00:52:17.187Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
       "id": "baidu-cloud-csdn-candidate",
       "publisherId": "baidu-official",
       "name": "百度智能云技术站 · CSDN",
@@ -1178,28 +664,6 @@
       },
       "crawl": {
         "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
-      "id": "kuaishou-infoq",
-      "publisherId": "kuaishou-official",
-      "name": "快手技术 · InfoQ（访问受限）",
-      "entryUrl": "https://www.infoq.cn/profile/9F668A31E16108?menu=",
-      "url": "https://www.infoq.cn/profile/9F668A31E16108?menu=",
-      "priority": "B",
-      "adapter": "reference",
-      "platform": "infoq-account",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": ["https://www.infoq.cn/profile/9F668A31E16108?menu="],
-        "note": "平台企业号显示快手官方技术号及北京达佳互联信息技术有限公司，113篇中包含更多推理平台和研发实践文章。普通HTTP返回客户端空壳，正常浏览器实际访问HTTP451；没有可持续公开目录，不启用采集，不绕过访问限制。",
-        "reviewedAt": "2026-11-02T00:52:17.187Z"
-      },
-      "crawl": {
-        "enabled": false,
         "intervalMinutes": 1440,
         "maxItems": 50,
         "backfillLimit": 100

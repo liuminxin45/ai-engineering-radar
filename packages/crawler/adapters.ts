@@ -10,6 +10,7 @@ import {
 import {
   parseCnblogsAccount,
   parseTencentNews,
+  parseTencentUser,
 } from "./platforms/community.js";
 import { parseAliyunGroup, nextAliyunPage } from "./platforms/aliyun.js";
 import { parseVolcengineAccount } from "./platforms/volcengine.js";
@@ -116,6 +117,7 @@ export function parseListing(html: string, source: Source): Candidate[] {
   if (source.platform === "volcengine-account")
     return parseVolcengineAccount(html, source);
   if (source.platform === "tencent-news") return parseTencentNews(html, source);
+  if (source.platform === "tencent-user") return parseTencentUser(html, source);
   if (source.platform === "cnblogs-account")
     return parseCnblogsAccount(html, source);
   if (source.platform === "tencent-column")
@@ -314,6 +316,7 @@ export async function collect(
     "aliyun-group",
     "volcengine-account",
     "ant-ling-blog",
+    "tencent-user",
   ].includes(source.platform);
   for (const item of items) {
     // Only retrieve metadata when a listing/feed lacks a useful excerpt or date.

@@ -12,12 +12,12 @@ import type { Article, SourceState } from "../../packages/shared/types.js";
 const registry = await loadRegistry();
 function fixture() {
   const articles: Article[] = [];
-  const replacement = registry.sources.find((s) => s.id === "dewu-csdn")!;
+  const replacement = registry.sources.find((s) => s.id === "dewu-tencent")!;
   upsert(
     articles,
     {
       title: "Current engineering practice",
-      url: "https://blog.csdn.net/SmartCodeTech/article/details/123",
+      url: "https://developer.cloud.tencent.com/article/123",
       externalId: "123",
     },
     replacement,
@@ -47,6 +47,81 @@ function fixture() {
   return { articles: [...articles, old], states };
 }
 describe("explicit source retirement", () => {
+  it("removes empty reference states while preserving the company's suspended historical source", () => {
+    const source = registry.sources.find((s) => s.id === "oppo-segmentfault")!;
+    const articles: Article[] = [];
+    upsert(
+      articles,
+      {
+        title: "Historical engineering article",
+        url: "https://segmentfault.com/a/1190000040000001",
+      },
+      source,
+      registry,
+    );
+    const states: SourceState[] = [
+      {
+        sourceId: "oppo",
+        status: "reference",
+        discovered: 0,
+        consecutiveFailures: 0,
+      },
+      {
+        sourceId: source.id,
+        status: "suspended",
+        discovered: 1,
+        consecutiveFailures: 0,
+      },
+    ];
+    const result = retireReplacedSources(articles, states, registry);
+    expect(result.articles).toEqual(articles);
+    expect(result.states.map((s) => s.sourceId)).toEqual([source.id]);
+    const unexpected = structuredClone(articles[0]);
+    unexpected.locations = [
+      { sourceId: "oppo", url: "https://open.oppomobile.com/article/1" },
+    ];
+    expect(() => retireReplacedSources([unexpected], states, registry)).toThrow(
+      "Reference-only retirement contains article history",
+    );
+  });
+
+  it("requires collected evidence before removing the other active team source", () => {
+    const source = registry.sources.find((s) => s.id === "ant-ling")!;
+    const articles: Article[] = [];
+    upsert(
+      articles,
+      {
+        title: "Ant Ling blog",
+        url: "https://developer.ant-ling.com/zh-CN/blogs/example",
+      },
+      source,
+      registry,
+    );
+    const old = structuredClone(articles[0]);
+    old.id = "00000000000000000004";
+    old.publisherId = "ant-oceanbase";
+    old.locations = [
+      {
+        sourceId: "ant-oceanbase-csdn",
+        url: "https://blog.csdn.net/OceanBaseGFBK/article/details/1",
+      },
+    ];
+    const states: SourceState[] = [
+      {
+        sourceId: source.id,
+        status: "success",
+        discovered: 1,
+        consecutiveFailures: 0,
+        lastSuccessAt: "2026-11-02T00:52:25Z",
+      },
+    ];
+    expect(() =>
+      retireReplacedSources([...articles, old], [], registry),
+    ).toThrow("successful collected article");
+    const result = retireReplacedSources([...articles, old], states, registry);
+    expect(result.articles.map((a) => a.id)).toEqual([articles[0].id]);
+    expect(result.removedArticles).toBe(1);
+  });
   it("retires Xiaomi's old blog and reference states without changing MiMo articles or IDs", () => {
     const source = registry.sources.find((s) => s.id === "xiaomi-tech-site")!;
     const articles: Article[] = [];
@@ -166,7 +241,7 @@ describe("explicit source retirement", () => {
     expect(() =>
       retireReplacedSources(
         data.articles,
-        data.states.filter((s) => s.sourceId !== "dewu-csdn"),
+        data.states.filter((s) => s.sourceId !== "dewu-tencent"),
         registry,
       ),
     ).toThrow("successful collected article");
@@ -174,7 +249,8 @@ describe("explicit source retirement", () => {
       retireReplacedSources(data.articles.slice(1), data.states, registry),
     ).toThrow("successful collected article");
     const disabled = structuredClone(registry);
-    disabled.sources.find((s) => s.id === "dewu-csdn")!.crawl.enabled = false;
+    disabled.sources.find((s) => s.id === "dewu-tencent")!.crawl.enabled =
+      false;
     expect(() =>
       retireReplacedSources(data.articles, data.states, disabled),
     ).toThrow("verified and enabled");
@@ -184,13 +260,13 @@ describe("explicit source retirement", () => {
     for (const rule of sourceReplacements)
       expect(registry.sources.some((s) => s.id === rule.sourceId)).toBe(false);
     const wrong = structuredClone(registry);
-    wrong.sources.find((s) => s.id === "dewu-csdn")!.publisherId =
+    wrong.sources.find((s) => s.id === "dewu-tencent")!.publisherId =
       "tencent-official";
     expect(() => validateSourceReplacements(wrong)).toThrow("same company");
     expect(() =>
       validateSourceReplacements({
         ...registry,
-        sources: registry.sources.filter((s) => s.id !== "dewu-csdn"),
+        sources: registry.sources.filter((s) => s.id !== "dewu-tencent"),
       }),
     ).toThrow("same company");
   });

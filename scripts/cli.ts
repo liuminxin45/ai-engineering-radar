@@ -9,6 +9,7 @@ import {
 } from "../packages/database/snapshot.js";
 import { ingest, applyOverrides } from "../packages/crawler/ingest.js";
 import { exportSite } from "../packages/publisher/export.js";
+import { resolveSiteUrl } from "../packages/shared/site.js";
 const root = resolve(import.meta.dirname, "..");
 const dir = resolve(process.env.RADAR_DATA_DIR ?? ".radar/data");
 const registry = await loadRegistry();
@@ -44,12 +45,7 @@ async function run() {
       if (result.attempted && result.successes === 0) process.exitCode = 2;
     } else if (command === "export") {
       await applyOverrides(snapshot.articles);
-      const base = (process.env.BASE_PATH ?? "").replace(/\/$/, "");
-      const site = (process.env.SITE_URL ?? "http://localhost:3000").replace(
-        /\/$/,
-        "",
-      );
-      await exportSite(snapshot, registry, root, `${site}${base}`);
+      await exportSite(snapshot, registry, root, resolveSiteUrl());
     } else throw new Error(`Unknown command: ${command}`);
   }
 }

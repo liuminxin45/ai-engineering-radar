@@ -86,6 +86,70 @@ export function parseTencentNews(json: string, source: Source): Candidate[] {
   return [...items.values()];
 }
 
+/** Public Tencent Cloud user listing; verify the stable author UID per card. */
+export function parseTencentUser(html: string, source: Source): Candidate[] {
+  const accounts = requireAccounts(source);
+  const endpoint = new URL(source.url);
+  const account = endpoint.pathname.match(
+    /^\/user\/([0-9]+)\/articles\/?$/,
+  )?.[1];
+  if (
+    endpoint.origin !== "https://developer.cloud.tencent.com" ||
+    !account ||
+    !accounts.includes(account)
+  )
+    throw new CrawlError(
+      "Tencent user endpoint does not match reviewed account",
+    );
+  const $ = cheerio.load(html);
+  const items = new Map<string, Candidate>();
+  $(".com-3-article-panel").each((_, el) => {
+    const card = $(el);
+    const author = card.find("a.author").first();
+    let profile: URL, article: URL;
+    try {
+      profile = new URL(author.attr("href") ?? "", source.url);
+      article = new URL(
+        card.find("a:has(.com-3-article-panel-title)").first().attr("href") ??
+          "",
+        source.url,
+      );
+    } catch {
+      return;
+    }
+    const id = article.pathname.match(/^\/article\/([0-9]+)\/?$/)?.[1];
+    if (
+      profile.origin !== endpoint.origin ||
+      profile.pathname.replace(/\/$/, "") !== `/user/${account}` ||
+      article.origin !== endpoint.origin ||
+      !id
+    )
+      return;
+    const title = text(
+      card.find(".com-3-article-panel-title").first().text(),
+      600,
+    );
+    if (!title) return;
+    const time = card.find("time").first().attr("datetime");
+    items.set(id, {
+      title,
+      url: `${endpoint.origin}/article/${id}`,
+      externalId: id,
+      author: text(author.text(), 300) || undefined,
+      description: excerpt(
+        card.find(".com-3-article-panel-desc").first().text(),
+      ),
+      publishedAt: timestamp(
+        time && /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/.test(time)
+          ? time.replace(" ", "T") + "+08:00"
+          : undefined,
+      ),
+      language: "zh-CN",
+    });
+  });
+  return [...items.values()];
+}
+
 /** Account-scoped cnblogs HTML avoids feed.cnblogs.com's disallowed robots paths. */
 export function parseCnblogsAccount(html: string, source: Source): Candidate[] {
   const accounts = requireAccounts(source).map((v) => v.toLowerCase());

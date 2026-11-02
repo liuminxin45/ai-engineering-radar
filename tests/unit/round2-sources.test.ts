@@ -22,9 +22,17 @@ it("routes the reviewed Ant Ling directory through its adapter and rejects a dif
   ).toThrow("official blog directory");
 });
 it("accepts the actual case-sensitive OceanBase RSS identity and excludes unrelated authors", async () => {
-  const s = (await loadRegistry()).sources.find(
-    (s) => s.id === "ant-oceanbase-csdn",
+  const base = (await loadRegistry()).sources.find(
+    (s) => s.id === "huawei-csdn",
   )!;
+  // Keep adapter coverage for retired accounts without registering a second source.
+  const s = {
+    ...base,
+    entryUrl: "https://blog.csdn.net/OceanBaseGFBK",
+    url: "https://rss.csdn.net/OceanBaseGFBK/rss/map",
+    authorAllowlist: ["OceanBaseGFBK"],
+    linkPattern: "^/OceanBaseGFBK/article/details/[0-9]+/?$",
+  };
   const item = (author: string, id: string) =>
     `<item><title>并发查询预测 &amp; 工程实践</title><link>https://blog.csdn.net/OceanBaseGFBK/article/details/${id}</link><author>${author}</author><guid>${id}</guid><pubDate>Thu, 29 Oct 2026 02:39:19 GMT</pubDate></item>`;
   const rss = `<rss version="2.0"><channel>${item("OceanBaseGFBK", "169443532")}${item("unrelated-author", "2")}</channel></rss>`;
@@ -51,6 +59,5 @@ it("keeps the inaccessible Kuaishou account out of collection", async () => {
   const kuaishou = (await loadRegistry()).sources.find(
     (s) => s.id === "kuaishou-infoq",
   )!;
-  expect(kuaishou.crawl.enabled).toBe(false);
-  expect(kuaishou.adapter).toBe("reference");
+  expect(kuaishou).toBeUndefined();
 });
