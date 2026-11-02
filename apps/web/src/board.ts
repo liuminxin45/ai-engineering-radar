@@ -14,6 +14,7 @@ export const initialBoardQuery: BoardQuery = {
 const order = [
   "dewu",
   "alibaba",
+  "qwen",
   "tencent",
   "bytedance",
   "meituan",

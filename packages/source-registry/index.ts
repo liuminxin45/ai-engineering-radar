@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { z } from "zod";
 import { validateSourceReplacements } from "./replacements.js";
 import { validateMiMoSource } from "../crawler/platforms/xiaomi-mimo.js";
+import { validateQwenSource } from "../crawler/platforms/qwen.js";
 import {
   sourceSchema,
   type Source,
@@ -11,6 +12,31 @@ import {
 
 export function validateAccountScope(source: Source) {
   if (!source.crawl.enabled) return;
+  if (source.platform === "qwen-research") {
+    validateQwenSource(source);
+    return;
+  }
+  if (source.platform === "aliyun-profile") {
+    const u = new URL(source.url);
+    const id = u.pathname.match(/^\/profile\/([a-z0-9]{8,64})$/)?.[1];
+    if (
+      u.origin !== "https://developer.aliyun.com" ||
+      u.username ||
+      u.password ||
+      u.search ||
+      u.hash ||
+      source.adapter !== "html" ||
+      source.entryUrl !== source.url ||
+      !id ||
+      source.authorAllowlist?.length !== 1 ||
+      source.authorAllowlist[0] !== id ||
+      source.linkPattern !== "^/article/[0-9]+/?$"
+    )
+      throw new Error(
+        `Aliyun profiles require matching directory and author IDs: ${source.id}`,
+      );
+    return;
+  }
   if (source.platform === "tencent-user") {
     const u = new URL(source.url);
     const id = u.pathname.match(/^\/user\/([0-9]+)\/articles$/)?.[1];

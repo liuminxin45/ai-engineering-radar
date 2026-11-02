@@ -85,6 +85,123 @@ function publishedAt(value: string) {
     : undefined;
 }
 
+function reviewedProfile(source: Source) {
+  const entry = new URL(source.entryUrl);
+  const url = new URL(source.url);
+  const id = entry.pathname.match(/^\/profile\/([a-z0-9]{8,64})$/)?.[1];
+  if (
+    entry.origin !== `https://${HOST}` ||
+    entry.search ||
+    entry.hash ||
+    entry.username ||
+    entry.password ||
+    !id ||
+    source.authorAllowlist?.length !== 1 ||
+    source.authorAllowlist[0] !== id ||
+    url.origin !== entry.origin ||
+    url.username ||
+    url.password ||
+    url.search ||
+    url.hash ||
+    (url.pathname !== entry.pathname &&
+      !new RegExp(`^/profile/expert/${id}/news_[1-9][0-9]*$`).test(
+        url.pathname,
+      ))
+  )
+    throw new CrawlError(
+      "Aliyun profile must match the reviewed account",
+      undefined,
+      true,
+    );
+  return { url, id };
+}
+
+/** The profile activity feed also contains likes and comments: collect publication rows only. */
+export function parseAliyunProfile(html: string, source: Source): Candidate[] {
+  const { url, id } = reviewedProfile(source);
+  const $ = cheerio.load(html);
+  const identities = $("script:not([src])")
+    .toArray()
+    .flatMap((el) =>
+      [
+        ...$(el)
+          .text()
+          .matchAll(/["']uccId["']\s*:\s*["']([a-z0-9]+)["']/g),
+      ].map((m) => m[1]),
+    );
+  if (!identities.length || identities.some((v) => v !== id))
+    throw new CrawlError(
+      !identities.length && /x5referer|login\.m\.taobao\.com/.test(html)
+        ? "Aliyun profile requires login or access verification"
+        : "Aliyun profile identity is missing or mismatched",
+      undefined,
+      !identities.length && /x5referer|login\.m\.taobao\.com/.test(html),
+    );
+  const items = new Map<string, Candidate>();
+  $("ul.news-list > li.news-item").each((_, element) => {
+    const row = $(element);
+    if (row.find(".dynamic-text").text().replace(/\s+/g, "") !== "发表了文章")
+      return;
+    const heading = row.find(".dynamic-title > a");
+    if (heading.length !== 1) return;
+    let article: URL;
+    try {
+      article = new URL(heading.attr("href") ?? "", url);
+    } catch {
+      return;
+    }
+    const articleId = article.pathname.match(/^\/article\/([0-9]+)\/?$/)?.[1];
+    if (
+      !articleId ||
+      article.origin !== url.origin ||
+      article.username ||
+      article.password ||
+      row.attr("data-object-id") !== articleId
+    )
+      return;
+    const title = heading.text().replace(/\s+/g, " ").trim().slice(0, 600);
+    if (!title) return;
+    const summary = row
+      .find(".dynamic-summary")
+      .text()
+      .replace(/\s+/g, " ")
+      .trim();
+    items.set(articleId, {
+      title,
+      url: `${url.origin}/article/${articleId}`,
+      externalId: articleId,
+      author: source.name.split(" · ")[0],
+      description:
+        summary && summary.length <= 1600 ? summary.slice(0, 800) : undefined,
+      publishedAt: publishedAt(row.attr("data-time") ?? ""),
+      language: "zh-CN",
+    });
+  });
+  return [...items.values()];
+}
+
+export function nextAliyunProfilePage(
+  html: string,
+  source: Source,
+): string | undefined {
+  const { url, id } = reviewedProfile(source);
+  const current = Number(url.pathname.match(/\/news_([0-9]+)$/)?.[1] ?? 1);
+  if (current >= 1000) return;
+  const target = `${url.origin}/profile/expert/${id}/news_${current + 1}`;
+  const $ = cheerio.load(html);
+  return $("a[href]")
+    .toArray()
+    .some((e) => {
+      try {
+        return new URL($(e).attr("href")!, url).href === target;
+      } catch {
+        return false;
+      }
+    })
+    ? target
+    : undefined;
+}
+
 /** Only the current group's article rows can establish an article's publisher. */
 export function parseAliyunGroup(html: string, source: Source): Candidate[] {
   const { url, accounts } = reviewedGroup(source);

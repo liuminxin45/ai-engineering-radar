@@ -276,6 +276,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   for (const id of [
     "dewu-tencent",
     "aliyun-cloud-native",
+    "qwen-research",
     "bytedance-volcengine",
     "ant-ling",
     "baidu-cloud-csdn-candidate",
@@ -452,4 +453,23 @@ test("flat toolbar switches appearance and exposes copyable project-wide feeds",
   await expect(github).toHaveAttribute("target", "_blank");
   await expect(github.locator("svg")).toHaveCount(1);
   await expectNoDocumentOverflow(page);
+});
+
+test("Qwen has an independent company panel and the requested source URLs stay exact", async ({
+  page,
+  request,
+}) => {
+  const sources = (await (await request.get("data/sources.json")).json())
+    .sources;
+  expect(
+    sources.find((s: { id: string }) => s.id === "aliyun-cloud-native")
+      .entryUrl,
+  ).toBe("https://developer.aliyun.com/profile/pawmkwdq37c7s");
+  expect(
+    sources.find((s: { id: string }) => s.id === "qwen-research").entryUrl,
+  ).toBe("https://qwen.ai/research");
+  await page.goto("./");
+  await page.getByRole("button", { name: "千问", exact: true }).click();
+  await expect(page).toHaveURL(/company=qwen/);
+  await expect(companyList(page, "千问")).toBeVisible();
 });

@@ -27,6 +27,11 @@
       "region": "cn"
     },
     {
+      "id": "qwen",
+      "name": "千问",
+      "region": "cn"
+    },
+    {
       "id": "bytedance",
       "name": "字节跳动",
       "region": "cn"
@@ -192,6 +197,11 @@
       "id": "ant-oceanbase",
       "companyId": "ant",
       "name": "OceanBase 数据库团队"
+    },
+    {
+      "id": "qwen-team",
+      "companyId": "qwen",
+      "name": "千问 Qwen Team"
     }
   ],
   "sources": [
@@ -555,21 +565,17 @@
     {
       "id": "aliyun-cloud-native",
       "publisherId": "aliyun-cloud-native",
-      "name": "阿里云云原生 · 官方博客",
-      "entryUrl": "https://developer.aliyun.com/group/apphub/article/",
-      "url": "https://developer.aliyun.com/group/apphub/article/",
+      "name": "阿里云云原生 · 账号主页",
+      "entryUrl": "https://developer.aliyun.com/profile/pawmkwdq37c7s",
+      "url": "https://developer.aliyun.com/profile/pawmkwdq37c7s",
       "priority": "A",
       "adapter": "html",
-      "platform": "aliyun-group",
+      "platform": "aliyun-profile",
       "verification": {
         "status": "verified",
-        "evidenceUrls": [
-          "https://developer.aliyun.com/group/apphub/article/",
-          "https://developer.aliyun.com/profile/pawmkwdq37c7s",
-          "https://developer.aliyun.com/article/1776525"
-        ],
-        "note": "阿里云自有域名的云原生应用开发与管理官方博客栏目。条目发布者为阿里云云原生，稳定profile标识pawmkwdq37c7s；原文1776525明确发布时间2026-10-29。专用适配器逐条匹配作者profile，不把社区其他作者或整站文章归属阿里。账号动态页缓存可能滞后，使用官方栏目目录。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
+        "evidenceUrls": ["https://developer.aliyun.com/profile/pawmkwdq37c7s"],
+        "note": "用户指定的阿里云云原生账号主页，稳定 profile ID pawmkwdq37c7s。仅采集该账号动态中的“发表了文章”记录，排除点赞、评论和第三方文章，按原始发布时间建立索引。沿用原来源与发布主体 ID，保留已有文章 ID。",
+        "reviewedAt": "2026-11-02T03:37:09.013Z"
       },
       "crawl": {
         "enabled": true,
@@ -668,6 +674,29 @@
         "maxItems": 50,
         "backfillLimit": 100
       }
+    },
+    {
+      "id": "qwen-research",
+      "publisherId": "qwen-team",
+      "name": "千问 · Research",
+      "entryUrl": "https://qwen.ai/research",
+      "url": "https://qwen.ai/research",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "qwen-research",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://qwen.ai/research"],
+        "note": "用户指定的 Qwen 官方研究目录，官网署名 Qwen 并标明 Powered by Alibaba Cloud。按用户要求作为千问独立栏目。读取研究页面使用的同域公开 JSON 接口；限定 QwenTeam、研究目录历史 ID 与新发布类型 qwen_ai。只保存标题、原始日期、作者与原文链接，不保存正文或接口内部字段。",
+        "reviewedAt": "2026-11-02T03:37:09.016Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 100,
+        "backfillLimit": 100
+      },
+      "authorAllowlist": ["QwenTeam"]
     }
   ]
 }

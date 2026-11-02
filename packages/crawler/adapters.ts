@@ -12,7 +12,13 @@ import {
   parseTencentNews,
   parseTencentUser,
 } from "./platforms/community.js";
-import { parseAliyunGroup, nextAliyunPage } from "./platforms/aliyun.js";
+import {
+  parseAliyunGroup,
+  nextAliyunPage,
+  parseAliyunProfile,
+  nextAliyunProfilePage,
+} from "./platforms/aliyun.js";
+import { collectQwen } from "./platforms/qwen.js";
 import { parseVolcengineAccount } from "./platforms/volcengine.js";
 import { parseAntLingBlog } from "./platforms/ant-ling.js";
 import { collectMiMo } from "./platforms/xiaomi-mimo.js";
@@ -114,6 +120,8 @@ export function parseListing(html: string, source: Source): Candidate[] {
   if (source.platform === "ant-ling-blog")
     return parseAntLingBlog(html, source);
   if (source.platform === "aliyun-group") return parseAliyunGroup(html, source);
+  if (source.platform === "aliyun-profile")
+    return parseAliyunProfile(html, source);
   if (source.platform === "volcengine-account")
     return parseVolcengineAccount(html, source);
   if (source.platform === "tencent-news") return parseTencentNews(html, source);
@@ -269,10 +277,14 @@ export async function collect(
   limit: number,
 ): Promise<{ items: Candidate[]; response: HttpResult; warnings: string[] }> {
   const headers: Record<string, string> = {};
-  if (state.etag) headers["If-None-Match"] = state.etag;
-  if (state.lastModified) headers["If-Modified-Since"] = state.lastModified;
+  if (state.etag && source.platform !== "qwen-research")
+    headers["If-None-Match"] = state.etag;
+  if (state.lastModified && source.platform !== "qwen-research")
+    headers["If-Modified-Since"] = state.lastModified;
   const response = await fetchReviewed(source.url, source, headers);
   if (response.status === 304) return { items: [], response, warnings: [] };
+  if (source.platform === "qwen-research")
+    return collectQwen(source, response, limit);
   if (source.platform === "xiaomi-mimo")
     return collectMiMo(source, response, limit);
   const items = (
@@ -280,17 +292,25 @@ export async function collect(
       ? parseFeed(response.text, source)
       : parseListing(response.text, source)
   ).slice(0, limit);
-  if (source.platform === "aliyun-group") {
+  if (["aliyun-group", "aliyun-profile"].includes(source.platform)) {
+    const parse =
+      source.platform === "aliyun-profile"
+        ? parseAliyunProfile
+        : parseAliyunGroup;
+    const nextPage =
+      source.platform === "aliyun-profile"
+        ? nextAliyunProfilePage
+        : nextAliyunPage;
     const unique = new Map(items.map((item) => [item.url, item]));
     const visited = new Set([source.url]);
     let current = response;
     while (unique.size < limit && visited.size < 10) {
       const pageSource = { ...source, url: current.url };
-      const next = nextAliyunPage(current.text, pageSource);
+      const next = nextPage(current.text, pageSource);
       if (!next || visited.has(next)) break;
       visited.add(next);
       current = await fetchReviewed(next, source);
-      const pageItems = parseAliyunGroup(current.text, {
+      const pageItems = parse(current.text, {
         ...source,
         url: next,
       });
@@ -314,6 +334,7 @@ export async function collect(
     "segmentfault-feed",
     "team-blog-feed",
     "aliyun-group",
+    "aliyun-profile",
     "volcengine-account",
     "ant-ling-blog",
     "tencent-user",

@@ -10,7 +10,7 @@ import { fetchReviewed } from "../../packages/crawler/http.js";
 import { loadRegistry } from "../../packages/source-registry/index.js";
 const registry = await loadRegistry();
 const source = {
-  ...registry.sources.find((s) => s.id === "alibaba")!,
+  ...registry.sources.find((s) => s.id === "aliyun-cloud-native")!,
   adapter: "html" as const,
   platform: "aliyun-group",
   entryUrl: "https://developer.aliyun.com/group/apphub/article/",
