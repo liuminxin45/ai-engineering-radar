@@ -30,6 +30,7 @@ await withSnapshotLock(dir, async () => {
   let changed =
     articles.length !== snapshot.articles.length ||
     retirement.removedLocations > 0 ||
+    retirement.updatedArticles > 0 ||
     retirement.removedStates > 0;
   for (const article of articles) {
     const publisher = registry.publishers.find(

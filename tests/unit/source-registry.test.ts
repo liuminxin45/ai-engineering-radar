@@ -19,7 +19,7 @@ describe("official community account scope", () => {
           s.adapter !== "reference",
       ),
     ).toBe(true);
-    for (const companyId of ["alibaba", "ctrip"]) {
+    for (const companyId of ["alibaba"]) {
       const publishers = new Set(
         registry.publishers
           .filter((p) => p.companyId === companyId)
@@ -29,7 +29,14 @@ describe("official community account scope", () => {
         publishers.has(s.publisherId),
       );
       expect(sources.length).toBeGreaterThan(0);
-      expect(sources.every((s) => s.contentType === "paper")).toBe(true);
+      expect(
+        sources.filter((s) => s.contentType !== "paper").map((s) => s.id),
+      ).toEqual(["aliyun-apphub"]);
+      const paperOnly = {
+        ...registry,
+        sources: registry.sources.filter((s) => s.id !== "aliyun-apphub"),
+      };
+      expect(() => validateCompanySources(paperOnly)).not.toThrow();
     }
     const source = registry.sources.find((s) => s.id === "meituan")!;
     const duplicate = structuredClone(registry);

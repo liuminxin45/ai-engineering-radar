@@ -276,6 +276,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   const companies = (await (await request.get("data/companies.json")).json())
     .companies;
   expect(companies.length).toBeGreaterThan(0);
+  expect(companies.some((c: { id: string }) => c.id === "ctrip")).toBe(false);
   expect(companies.some((c: { id: string }) => c.id === "xiaomi")).toBe(false);
   expect(companies.some((c: { id: string }) => c.id === "oppo")).toBe(false);
   expect(companies.some((c: { id: string }) => c.id === "xiaohongshu")).toBe(
@@ -317,7 +318,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   }
   expect(
     sources.filter((s: { contentType?: string }) => s.contentType !== "paper"),
-  ).toHaveLength(13);
+  ).toHaveLength(14);
   expect(
     sources.find((s: { id: string }) => s.id === "bytedance-tech-volcengine")
       .entryUrl,
@@ -496,6 +497,9 @@ test("Qwen has an independent company panel and the requested source URLs stay e
   expect(
     sources.some((s: { id: string }) => s.id === "aliyun-cloud-native"),
   ).toBe(false);
+  expect(
+    sources.find((s: { id: string }) => s.id === "aliyun-apphub").entryUrl,
+  ).toBe("https://developer.aliyun.com/group/apphub/article/");
   expect(
     sources.find((s: { id: string }) => s.id === "qwen-research").entryUrl,
   ).toBe("https://qwen.ai/research");

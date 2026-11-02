@@ -48,21 +48,22 @@ PC：公司分列，横向浏览。
 
 ### 博文来源
 
-| 公司     | 来源入口                                                                              | 采集方式          |
-| -------- | ------------------------------------------------------------------------------------- | ----------------- |
-| 腾讯     | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)          | 公开作者列表 API  |
-| 得物     | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles)        | 账号文章目录      |
-| 千问     | [千问 · Research](https://qwen.ai/research)                                           | 官方研究目录 JSON |
-| 字节跳动 | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673) | 账号文章目录      |
-| 美团     | [美团技术团队](https://tech.meituan.com/)                                             | RSS               |
-| vivo     | [vivo 互联网技术 · CSDN](https://blog.csdn.net/vivo_tech)                             | RSS               |
-| 华为     | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud)                             | RSS               |
-| 快手     | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech)                                 | RSS               |
-| 网易     | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw)                            | RSS               |
-| B站      | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC)                              | RSS               |
-| 京东     | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/)                              | 账号 HTML 目录    |
-| 百度     | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283)                        | RSS               |
-| 蚂蚁集团 | [蚂蚁数据 AntData · CSDN](https://devpress.csdn.net/user/DB_GPT)                      | RSS               |
+| 公司              | 来源入口                                                                                  | 采集方式          |
+| ----------------- | ----------------------------------------------------------------------------------------- | ----------------- |
+| 腾讯              | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)              | 公开作者列表 API  |
+| 得物              | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles)            | 账号文章目录      |
+| 阿里巴巴 / 阿里云 | [阿里云云原生 · 云原生应用开发与管理](https://developer.aliyun.com/group/apphub/article/) | 账号文章目录      |
+| 千问              | [千问 · Research](https://qwen.ai/research)                                               | 官方研究目录 JSON |
+| 字节跳动          | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673)     | 账号文章目录      |
+| 美团              | [美团技术团队](https://tech.meituan.com/)                                                 | RSS               |
+| vivo              | [vivo 互联网技术 · CSDN](https://blog.csdn.net/vivo_tech)                                 | RSS               |
+| 华为              | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud)                                 | RSS               |
+| 快手              | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech)                                     | RSS               |
+| 网易              | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw)                                | RSS               |
+| B站               | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC)                                  | RSS               |
+| 京东              | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/)                                  | 账号 HTML 目录    |
+| 百度              | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283)                            | RSS               |
+| 蚂蚁集团          | [蚂蚁数据 AntData · CSDN](https://devpress.csdn.net/user/DB_GPT)                          | RSS               |
 
 ### 论文来源
 
@@ -83,7 +84,6 @@ PC：公司分列，横向浏览。
 | 京东              | [Crossref 出版方元数据](https://search.crossref.org/?q=JD.com)                                                                                                                                             |
 | 百度              | [Crossref 出版方元数据](https://search.crossref.org/?q=Baidu)、[baidu 论文](https://huggingface.co/baidu/papers)                                                                                           |
 | 蚂蚁集团          | [Crossref 出版方元数据](https://search.crossref.org/?q=Ant%20Group)、[antgroup 论文](https://huggingface.co/antgroup/papers)                                                                               |
-| 携程              | [Crossref 出版方元数据](https://search.crossref.org/?q=Ctrip)、[TripScore 论文](https://arxiv.org/html/2510.09011v3)                                                                                       |
 
 以上入口与[来源注册表](packages/source-registry/registry.json)对应。最近采集结果见[公开来源 JSON](https://liuminxin45.github.io/ai-engineering-radar/data/sources.json)，逐篇论文归属与实采记录见[论文来源核验](docs/paper-sources.md)。
 

@@ -62,11 +62,6 @@
       "region": "cn"
     },
     {
-      "id": "ctrip",
-      "name": "携程",
-      "region": "cn"
-    },
-    {
       "id": "netease",
       "name": "网易",
       "region": "cn"
@@ -132,11 +127,6 @@
       "id": "jd-official",
       "companyId": "jd",
       "name": "京东 技术团队"
-    },
-    {
-      "id": "ctrip-official",
-      "companyId": "ctrip",
-      "name": "携程 技术团队"
     },
     {
       "id": "netease-official",
@@ -227,11 +217,6 @@
       "id": "jd-research-papers",
       "companyId": "jd",
       "name": "京东 研究论文署名团队"
-    },
-    {
-      "id": "ctrip-research-papers",
-      "companyId": "ctrip",
-      "name": "携程 研究论文署名团队"
     },
     {
       "id": "netease-research-papers",
@@ -584,6 +569,33 @@
       }
     },
     {
+      "id": "aliyun-apphub",
+      "publisherId": "aliyun-cloud-native",
+      "name": "阿里云云原生 · 云原生应用开发与管理",
+      "entryUrl": "https://developer.aliyun.com/group/apphub/article/",
+      "url": "https://developer.aliyun.com/group/apphub/article/",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "aliyun-group",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://developer.aliyun.com/group/apphub/article/",
+          "https://developer.aliyun.com/profile/pawmkwdq37c7s"
+        ],
+        "note": "维护者指定的阿里云官方博客目录。仅收录文章行中稳定作者 profile ID 为 pawmkwdq37c7s 的阿里云云原生文章，使用目录原始发表日期；排除其他作者和页面推荐链接，不请求受限账号主页，不保存正文。",
+        "reviewedAt": "2026-11-02T05:54:36.242Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "authorAllowlist": ["pawmkwdq37c7s"],
+      "linkPattern": "^/article/[0-9]+/?$"
+    },
+    {
       "id": "qwen-research",
       "publisherId": "qwen-team",
       "name": "千问 · Research",
@@ -915,34 +927,6 @@
       "linkHosts": ["doi.org"]
     },
     {
-      "id": "ctrip-papers-crossref",
-      "publisherId": "ctrip-research-papers",
-      "contentType": "paper",
-      "name": "携程 · 出版方论文元数据",
-      "entryUrl": "https://search.crossref.org/?q=Ctrip",
-      "url": "https://api.crossref.org/works?query.affiliation=Ctrip&sort=published&order=desc&rows=100",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "paper-crossref",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
-          "https://api.crossref.org/works?query.affiliation=Ctrip&sort=published&order=desc&rows=100"
-        ],
-        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
-        "reviewedAt": "2026-11-02T00:00:00.000Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 30
-      },
-      "authorAllowlist": ["Ctrip"],
-      "linkHosts": ["doi.org"]
-    },
-    {
       "id": "netease-papers-crossref",
       "publisherId": "netease-research-papers",
       "contentType": "paper",
@@ -1202,44 +1186,6 @@
         "backfillLimit": 20
       },
       "authorAllowlist": ["Huawei Noah"],
-      "linkHosts": [
-        "arxiv.org",
-        "doi.org",
-        "openreview.net",
-        "api.crossref.org",
-        "lf3-static.bytednsdoc.com",
-        "www.ijcai.org",
-        "dl.acm.org",
-        "ieeexplore.ieee.org",
-        "www.nature.com"
-      ]
-    },
-    {
-      "id": "tripscore-paper-papers",
-      "publisherId": "ctrip-research-papers",
-      "contentType": "paper",
-      "name": "携程 · Trip.com Group 论文",
-      "entryUrl": "https://arxiv.org/html/2510.09011v3",
-      "url": "https://arxiv.org/html/2510.09011v3",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "paper-metadata",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://arxiv.org/html/2510.09011v3",
-          "https://arxiv.org/html/2510.09011v3"
-        ],
-        "note": "只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。",
-        "reviewedAt": "2026-11-02T00:00:00.000Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 20
-      },
-      "authorAllowlist": ["Trip.com Group"],
       "linkHosts": [
         "arxiv.org",
         "doi.org",

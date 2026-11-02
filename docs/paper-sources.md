@@ -1,6 +1,6 @@
 # 论文来源与公司归属核验
 
-核验日期：2026-11-02。本轮真实快照收录 412 篇论文，覆盖当前 14 家公司，其中 7 篇涉及多家已注册公司。博文保持每家公司最多一个可用渠道，论文按独立的出版或研究渠道核验。
+核验日期：2026-11-02。本轮真实快照收录 403 篇论文，覆盖当前 13 家公司，其中 6 篇涉及多家已注册公司。博文保持每家公司最多一个可用渠道，论文按独立的出版或研究渠道核验。
 
 ## 收录依据
 
@@ -27,7 +27,6 @@
 | 快手              |         30 | [原文](https://doi.org/10.1145/3773078.3831930)                          | [机构记录](https://api.crossref.org/works/10.1145%2F3773078.3831930)                          |
 | 蚂蚁集团          |         35 | [原文](https://doi.org/10.1145/3799902.3811149)                          | [机构记录](https://api.crossref.org/works/10.1145%2F3799902.3811149)                          |
 | 京东              |         30 | [原文](https://doi.org/10.1109/itherm55368.2023.10177639)                | [机构记录](https://api.crossref.org/works/10.1109%2Fitherm55368.2023.10177639)                |
-| 携程              |         10 | [原文](https://doi.org/10.1145/3239546)                                  | [机构记录](https://api.crossref.org/works/10.1145%2F3239546)                                  |
 | 网易              |         31 | [原文](https://doi.org/10.1109/iccv51701.2025.01639)                     | [机构记录](https://api.crossref.org/works/10.1109%2Ficcv51701.2025.01639)                     |
 | B站               |         30 | [原文](https://doi.org/10.1109/cvprw53098.2021.00030)                    | [机构记录](https://api.crossref.org/works/10.1109%2Fcvprw53098.2021.00030)                    |
 
@@ -35,7 +34,7 @@
 
 ## 采集渠道与结果
 
-14 家公司均有 Crossref 正式出版物渠道。本轮保留 23 个论文入口，均启用并经实采与机构复核。Qwen、Kling、JoyAI 与 Index 的 4 个参考入口已按维护者要求移除，历史候选也退出当前快照。除正式出版渠道外，已成功接入腾讯混元、ByteDance Seed、百度、美团 LongCat、蚂蚁的机构论文页，ByteDance Seed 与华为诺亚的官方论文目录，以及直接核验的 TripScore 和 AAAI 联合论文记录。
+13 家公司均有 Crossref 正式出版物渠道。本轮保留 21 个论文入口，均启用并经实采与机构复核。Qwen、Kling、JoyAI 与 Index 的 4 个参考入口已按维护者要求移除，历史候选也退出当前快照。除正式出版渠道外，已成功接入腾讯混元、ByteDance Seed、百度、美团 LongCat、蚂蚁的机构论文页，ByteDance Seed 与华为诺亚的官方论文目录，以及直接核验的 AAAI 联合论文记录。
 
 | 入口                                                                                                                              | 启用 | 本轮状态 | 说明                                                         |
 | --------------------------------------------------------------------------------------------------------------------------------- | ---- | -------- | ------------------------------------------------------------ |
@@ -50,7 +49,6 @@
 | [kuaishou-papers-crossref](https://api.crossref.org/works?query.affiliation=Kuaishou&sort=published&order=desc&rows=100)          | 是   | success  | 已取得可核验的论文元数据                                     |
 | [ant-papers-crossref](https://api.crossref.org/works?query.affiliation=Ant+Group&sort=score&order=desc&rows=100)                  | 是   | success  | 已取得可核验的论文元数据                                     |
 | [jd-papers-crossref](https://api.crossref.org/works?query.affiliation=JD.com&sort=score&order=desc&rows=100)                      | 是   | success  | 已取得可核验的论文元数据                                     |
-| [ctrip-papers-crossref](https://api.crossref.org/works?query.affiliation=Ctrip&sort=published&order=desc&rows=100)                | 是   | success  | 已取得可核验的论文元数据                                     |
 | [netease-papers-crossref](https://api.crossref.org/works?query.affiliation=NetEase&sort=published&order=desc&rows=100)            | 是   | success  | 已取得可核验的论文元数据                                     |
 | [bilibili-papers-crossref](https://api.crossref.org/works?query.affiliation=Bilibili&sort=published&order=desc&rows=100)          | 是   | success  | 已取得可核验的论文元数据                                     |
 | [seed-hf-papers](https://huggingface.co/ByteDance-Seed/papers)                                                                    | 是   | success  | 部分论文候选缺少可核验机构信息，已跳过。                     |
@@ -60,7 +58,6 @@
 | [ant-hf-papers](https://huggingface.co/antgroup/papers)                                                                           | 是   | success  | 1 条候选未通过严格作者机构复核，已隐藏；仅发布证据完整条目。 |
 | [seed-official-papers](https://seed.bytedance.com/en/public_papers)                                                               | 是   | success  | 已取得可核验的论文元数据                                     |
 | [noah-official-papers](https://www.noahlab.com.hk/en/research_paper)                                                              | 是   | success  | 已取得可核验的论文元数据                                     |
-| [tripscore-paper-papers](https://arxiv.org/html/2510.09011v3)                                                                     | 是   | success  | 已取得可核验的论文元数据                                     |
 | [aaai-joint-paper-papers](https://ojs.aaai.org/index.php/AAAI/article/view/26509)                                                 | 是   | success  | 已取得可核验的论文元数据                                     |
 
 ## 去重、日期与边界

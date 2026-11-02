@@ -24,6 +24,27 @@ const fixture = (name: string) =>
   readFile(`tests/fixtures/aliyun-${name}.html`, "utf8");
 
 describe("Aliyun official group listings", () => {
+  it("registers the requested directory as Alibaba's only blog source and keeps the restricted profile retired", () => {
+    const publisherIds = new Set(
+      registry.publishers
+        .filter((p) => p.companyId === "alibaba")
+        .map((p) => p.id),
+    );
+    const sources = registry.sources.filter(
+      (s) => publisherIds.has(s.publisherId) && s.contentType !== "paper",
+    );
+    expect(sources).toHaveLength(1);
+    expect(sources[0]).toMatchObject({
+      id: "aliyun-apphub",
+      entryUrl: "https://developer.aliyun.com/group/apphub/article/",
+      url: "https://developer.aliyun.com/group/apphub/article/",
+      platform: "aliyun-group",
+      authorAllowlist: ["pawmkwdq37c7s"],
+    });
+    expect(registry.sources.some((s) => s.id === "aliyun-cloud-native")).toBe(
+      false,
+    );
+  });
   it("binds each article to its stable profile instead of an impersonated display name", async () => {
     const items = parseAliyunGroup(await fixture("apphub"), source());
     expect(items).toHaveLength(2);

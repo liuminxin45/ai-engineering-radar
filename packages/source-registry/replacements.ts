@@ -144,6 +144,8 @@ export const sourceReplacements = [
 
 // Explicit removals requested by the maintainer; these have no replacement.
 export const sourceWithdrawals = [
+  { sourceId: "ctrip-papers-crossref", companyId: "ctrip" },
+  { sourceId: "tripscore-paper-papers", companyId: "ctrip" },
   { sourceId: "xiaomi-tech-site", companyId: "xiaomi" },
   { sourceId: "xiaomi-papers-crossref", companyId: "xiaomi" },
   { sourceId: "mimo-hf-papers", companyId: "xiaomi" },
@@ -152,7 +154,7 @@ export const sourceWithdrawals = [
   { sourceId: "xiaomi-juejin", companyId: "xiaomi" },
   { sourceId: "xiaomi-csdn-candidate", companyId: "xiaomi" },
   { sourceId: "xiaohongshu-papers-crossref", companyId: "xiaohongshu" },
-  { sourceId: "ctrip-csdn", companyId: "ctrip", sourceOnly: true },
+  { sourceId: "ctrip-csdn", companyId: "ctrip" },
   { sourceId: "xiaohongshu-csdn", companyId: "xiaohongshu" },
   { sourceId: "aliyun-cloud-native", companyId: "alibaba", sourceOnly: true },
   { sourceId: "qwen-hf-papers", companyId: "alibaba", sourceOnly: true },
@@ -161,9 +163,9 @@ export const sourceWithdrawals = [
   { sourceId: "index-readme-papers", companyId: "bilibili", sourceOnly: true },
   { sourceId: "alibaba-csdn", companyId: "alibaba", sourceOnly: true },
   { sourceId: "alibaba", companyId: "alibaba", sourceOnly: true },
-  { sourceId: "ctrip", companyId: "ctrip", sourceOnly: true },
+  { sourceId: "ctrip", companyId: "ctrip" },
   { sourceId: "xiaohongshu", companyId: "xiaohongshu" },
-  { sourceId: "ctrip-cnblogs", companyId: "ctrip", sourceOnly: true },
+  { sourceId: "ctrip-cnblogs", companyId: "ctrip" },
   { sourceId: "aliyun-dataphin", companyId: "alibaba", sourceOnly: true },
   { sourceId: "oppo", companyId: "oppo" },
   { sourceId: "oppo-segmentfault", companyId: "oppo" },

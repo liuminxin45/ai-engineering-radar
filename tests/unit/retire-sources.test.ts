@@ -48,6 +48,70 @@ function fixture() {
   return { articles: [...articles, old], states };
 }
 describe("explicit source retirement", () => {
+  it("preserves a joint paper ID under a verified remaining publisher when its primary company is withdrawn", () => {
+    const source = registry.sources.find(
+      (s) => s.id === "alibaba-papers-crossref",
+    )!;
+    const articles: Article[] = [];
+    const candidate = parseCrossref(
+      JSON.stringify({
+        status: "ok",
+        message: {
+          items: [
+            {
+              DOI: "10.1234/joint",
+              type: "proceedings-article",
+              title: ["Joint company paper"],
+              author: [{ affiliation: [{ name: "Alibaba Group" }] }],
+            },
+          ],
+        },
+      }),
+      source,
+      "alibaba",
+    )[0];
+    upsert(articles, candidate, source, registry);
+    const paper = articles[0];
+    paper.companyId = "ctrip";
+    paper.publisherId = "ctrip-research-papers";
+    paper.companyIds = ["ctrip", "alibaba"];
+    paper.paperAffiliations!.push({
+      companyId: "ctrip",
+      evidenceUrl: "https://api.crossref.org/works/10.1234%2Fjoint",
+      method: "paper-authors",
+      excerpt: "Ctrip",
+    });
+    paper.locations.unshift({
+      sourceId: "ctrip-papers-crossref",
+      url: paper.canonicalUrl,
+    });
+    const before = structuredClone(paper);
+    const result = retireReplacedSources(articles, [], registry);
+    expect(result.articles[0]).toMatchObject({
+      id: paper.id,
+      companyId: "alibaba",
+      publisherId: source.publisherId,
+      companyIds: ["alibaba"],
+      locations: [{ sourceId: source.id }],
+    });
+    expect(
+      result.articles[0].paperAffiliations!.map((p) => p.companyId),
+    ).toEqual(["alibaba"]);
+    expect(result.removedArticles).toBe(0);
+    expect(result.updatedArticles).toBe(1);
+    expect(paper).toEqual(before);
+    validateRelations(result.articles, [], registry);
+    expect(
+      retireReplacedSources(result.articles, [], registry).updatedArticles,
+    ).toBe(0);
+    const unproven = structuredClone(paper);
+    unproven.paperAffiliations = unproven.paperAffiliations!.filter(
+      (p) => p.companyId === "ctrip",
+    );
+    expect(() => retireReplacedSources([unproven], [], registry)).toThrow(
+      "no verified retained publisher",
+    );
+  });
   it("withdraws disabled and blocked sources without withdrawing their companies or working papers", () => {
     const source = registry.sources.find(
       (s) => s.id === "alibaba-papers-crossref",
@@ -118,6 +182,16 @@ describe("explicit source retirement", () => {
     ).toBe(0);
   });
   it.each([
+    {
+      companyId: "ctrip",
+      sourceId: "ctrip-papers-crossref",
+      publisherId: "ctrip-research-papers",
+    },
+    {
+      companyId: "ctrip",
+      sourceId: "tripscore-paper-papers",
+      publisherId: "ctrip-research-papers",
+    },
     {
       companyId: "xiaomi",
       sourceId: "xiaomi-tech-site",

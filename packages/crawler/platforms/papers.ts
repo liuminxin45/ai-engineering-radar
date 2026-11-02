@@ -30,7 +30,6 @@ const institutions: Record<string, RegExp> = {
   jd: /\bJD\.com\b|\bJD (?:AI|Explore|Research|Cloud|Technology|Logistics|Financial)\b|\bJingdong (?:Technology|Logistics|Group|Inc|Company|Ltd)\b|京东/i,
   baidu: /\bBaidu\b|百度/i,
   ant: /\bAnt (?:Group|Research|Financial)\b|\bAntGroup\b|蚂蚁(?:集团|金服)/i,
-  ctrip: /\bTrip\.com\b|\bCtrip\b|携程/i,
 };
 export function affiliationEvidence(
   values: string[],

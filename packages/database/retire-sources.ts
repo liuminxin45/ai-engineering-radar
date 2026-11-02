@@ -54,9 +54,57 @@ export function retireReplacedSources(
         );
     }
   }
+  const withdrawnCompanies = new Set<string>(
+    sourceWithdrawals
+      .filter((rule) => !("sourceOnly" in rule && rule.sourceOnly))
+      .map((rule) => rule.companyId),
+  );
+  let updatedArticles = 0;
   const retained = articles.flatMap((a) => {
     const locations = a.locations.filter((l) => !retired.has(l.sourceId));
-    return locations.length ? [{ ...a, locations }] : [];
+    if (!locations.length) return [];
+    const article = { ...a, locations };
+    if (a.contentType === "paper") {
+      article.companyIds = a.companyIds?.filter(
+        (id) => !withdrawnCompanies.has(id),
+      );
+      article.paperAffiliations = a.paperAffiliations?.filter(
+        (proof) => !withdrawnCompanies.has(proof.companyId),
+      );
+      if (withdrawnCompanies.has(a.companyId)) {
+        const publisher = locations.flatMap((location) => {
+          const source = registry.sources.find(
+            (s) => s.id === location.sourceId,
+          );
+          const owner = registry.publishers.find(
+            (p) => p.id === source?.publisherId,
+          );
+          return source?.contentType === "paper" &&
+            source.crawl.enabled &&
+            source.verification.status === "verified" &&
+            owner &&
+            article.companyIds?.includes(owner.companyId) &&
+            article.paperAffiliations?.some(
+              (proof) => proof.companyId === owner.companyId,
+            )
+            ? [owner]
+            : [];
+        })[0];
+        if (!publisher)
+          throw new Error(
+            `Withdrawn paper has no verified retained publisher: ${a.id}`,
+          );
+        article.publisherId = publisher.id;
+        article.companyId = publisher.companyId;
+      }
+      if (
+        article.companyId !== a.companyId ||
+        article.companyIds?.length !== a.companyIds?.length ||
+        article.paperAffiliations?.length !== a.paperAffiliations?.length
+      )
+        updatedArticles++;
+    }
+    return [article];
   });
   const ids = new Set(retained.map((a) => a.id));
   const removedIds = new Set(
@@ -77,5 +125,6 @@ export function retireReplacedSources(
     removedLocations,
     removedArticles: articles.length - retained.length,
     removedStates: states.length - retainedStates.length,
+    updatedArticles,
   };
 }

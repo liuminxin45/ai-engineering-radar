@@ -105,6 +105,7 @@ describe("publication affiliation verification", () => {
           { affiliation: [{ name: "Tsinghua University" }] },
           { affiliation: [{ name: "Xiaohongshu / Rednote 小红书" }] },
           { affiliation: [{ name: "Xiaomi / 小米" }] },
+          { affiliation: [{ name: "Ctrip / Trip.com Group 携程" }] },
         ],
       }),
       source,
@@ -143,12 +144,12 @@ describe("publication affiliation verification", () => {
   });
   it("reads affiliations from the paper author block, excluding cited companies in body text", () => {
     const html =
-      '<div class="ltx_authors"><span class="ltx_role_affiliation">Trip.com Group, Chongqing University</span></div><p>We evaluate Tencent and Alibaba models.</p>';
+      '<div class="ltx_authors"><span class="ltx_role_affiliation">Tencent, Chongqing University</span></div><p>We evaluate Tencent and Alibaba models.</p>';
     expect(
       parsePaperAuthors(html, "https://arxiv.org/html/2510.09011v3").map(
         (p) => p.companyId,
       ),
-    ).toEqual(["ctrip"]);
+    ).toEqual(["tencent"]);
     const publisher =
       '<meta name="citation_author_institution" content="Alibaba Group"><meta name="citation_author_institution" content="NetEase Inc."><p>Tencent</p>';
     expect(
