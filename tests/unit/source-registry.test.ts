@@ -6,7 +6,7 @@ import {
 } from "../../packages/source-registry/index.js";
 
 describe("official community account scope", () => {
-  it("requires exactly one registered source per company, including disabled references and other publishers", async () => {
+  it("requires exactly one blog source per company, including disabled blog references and other publishers", async () => {
     const registry = await loadRegistry();
     expect(() => validateCompanySources(registry)).not.toThrow();
     const source = registry.sources.find(

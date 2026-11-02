@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { z } from "zod";
 import { validateSourceReplacements } from "./replacements.js";
+import { validatePaperSource } from "../crawler/platforms/papers.js";
 import { validateMiMoSource } from "../crawler/platforms/xiaomi-mimo.js";
 import { validateQwenSource } from "../crawler/platforms/qwen.js";
 import {
@@ -12,6 +13,14 @@ import {
 
 export function validateAccountScope(source: Source) {
   if (!source.crawl.enabled) return;
+  if (source.contentType === "paper" && !source.platform.startsWith("paper-"))
+    throw new Error(
+      `Paper sources require an affiliation-verifying adapter: ${source.id}`,
+    );
+  if (source.platform.startsWith("paper-")) {
+    validatePaperSource(source);
+    return;
+  }
   if (source.platform === "qwen-research") {
     validateQwenSource(source);
     return;
@@ -132,7 +141,9 @@ export function validateCompanySources(registry: {
   const owners = new Map(registry.publishers.map((p) => [p.id, p.companyId]));
   for (const company of registry.companies) {
     const sources = registry.sources.filter(
-      (source) => owners.get(source.publisherId) === company.id,
+      (source) =>
+        owners.get(source.publisherId) === company.id &&
+        source.contentType !== "paper",
     );
     if (sources.length !== 1)
       throw new Error(

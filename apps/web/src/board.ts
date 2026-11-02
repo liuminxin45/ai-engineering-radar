@@ -1,12 +1,22 @@
-import type { Article, Company } from "../../../packages/shared/types.js";
+import type {
+  Article,
+  Company,
+  ContentType,
+} from "../../../packages/shared/types.js";
+import {
+  articleCompanyIds,
+  articleContentType,
+} from "../../../packages/shared/content.ts";
 
 export const BOARD_BATCH_SIZE = 20;
 export type BoardQuery = {
+  type: ContentType;
   q: string;
   company: string;
   page: number;
 };
 export const initialBoardQuery: BoardQuery = {
+  type: "blog",
   q: "",
   company: "",
   page: 1,
@@ -45,6 +55,7 @@ export function readBoardQuery(
     company = p.get("company") ?? "";
   const page = Number(p.get("page"));
   return {
+    type: p.get("type") === "paper" ? "paper" : "blog",
     q: p.get("q") ?? "",
     company: companies.includes(company) ? company : "",
     page: Number.isSafeInteger(page) && page > 0 ? Math.min(page, 1000) : 1,
@@ -52,6 +63,7 @@ export function readBoardQuery(
 }
 export function boardSearch(query: BoardQuery) {
   const p = new URLSearchParams();
+  if (query.type === "paper") p.set("type", "paper");
   if (query.q) p.set("q", query.q);
   if (query.company) p.set("company", query.company);
   if (query.page > 1) p.set("page", String(query.page));
@@ -62,10 +74,11 @@ export function boardArticles(articles: Article[], query: BoardQuery) {
   return articles
     .filter(
       (a) =>
-        !q ||
-        `${a.title} ${a.description ?? ""} ${a.author ?? ""}`
-          .toLocaleLowerCase()
-          .includes(q),
+        articleContentType(a) === query.type &&
+        (!q ||
+          `${a.title} ${a.description ?? ""} ${a.author ?? ""}`
+            .toLocaleLowerCase()
+            .includes(q)),
     )
     .sort((a, b) => {
       return (
@@ -74,4 +87,9 @@ export function boardArticles(articles: Article[], query: BoardQuery) {
         ) || b.id.localeCompare(a.id)
       );
     });
+}
+export function companyArticles(articles: Article[], company: string) {
+  return company === "latest"
+    ? articles
+    : articles.filter((a) => articleCompanyIds(a).includes(company));
 }

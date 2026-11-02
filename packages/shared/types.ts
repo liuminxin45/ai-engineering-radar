@@ -12,6 +12,22 @@ export const topics = [
 ] as const;
 export const topicIds = topics.map((t) => t.id);
 const timestamp = z.string().datetime({ offset: true });
+export const contentTypeSchema = z.enum(["blog", "paper"]);
+export type ContentType = z.infer<typeof contentTypeSchema>;
+export const companyIdsSchema = z
+  .array(z.string().regex(/^[a-z0-9-]+$/))
+  .min(1)
+  .refine(
+    (ids) => new Set(ids).size === ids.length,
+    "Duplicate company affiliation",
+  );
+export const paperAffiliationSchema = z.object({
+  companyId: z.string().regex(/^[a-z0-9-]+$/),
+  evidenceUrl: z.string().url(),
+  method: z.enum(["paper-authors", "official-directory"]),
+  excerpt: z.string().min(1).max(400),
+});
+export type PaperAffiliation = z.infer<typeof paperAffiliationSchema>;
 export const classificationSchema = z
   .object({
     status: z.enum(["pending", "accepted", "rejected", "review"]),
@@ -75,25 +91,63 @@ export const locationSchema = z.object({
   externalId: z.string().optional(),
   url: z.string().url(),
 });
-export const articleSchema = z.object({
-  id: z.string().regex(/^[a-f0-9]{20}$/),
-  publisherId: z.string(),
-  companyId: z.string(),
-  title: z.string().min(1).max(600),
-  canonicalUrl: z.string().url(),
-  author: z.string().max(300).optional(),
-  description: z.string().max(800).optional(),
-  language: z.string().optional(),
-  publishedAt: timestamp.optional(),
-  discoveredAt: timestamp,
-  updatedAt: timestamp,
-  classification: classificationSchema,
-  advertorial: advertorialSchema.optional(),
-  publicationStatus: z.enum(["draft", "published", "hidden"]),
-  locations: z.array(locationSchema).min(1),
-  duplicateCandidates: z.array(z.string()).default([]),
-});
+export const articleSchema = z
+  .object({
+    id: z.string().regex(/^[a-f0-9]{20}$/),
+    publisherId: z.string(),
+    companyId: z.string(),
+    contentType: contentTypeSchema.optional(),
+    companyIds: companyIdsSchema.optional(),
+    paperAffiliations: z.array(paperAffiliationSchema).min(1).optional(),
+    title: z.string().min(1).max(600),
+    canonicalUrl: z.string().url(),
+    author: z.string().max(300).optional(),
+    description: z.string().max(800).optional(),
+    language: z.string().optional(),
+    publishedAt: timestamp.optional(),
+    discoveredAt: timestamp,
+    updatedAt: timestamp,
+    classification: classificationSchema,
+    advertorial: advertorialSchema.optional(),
+    publicationStatus: z.enum(["draft", "published", "hidden"]),
+    locations: z.array(locationSchema).min(1),
+    duplicateCandidates: z.array(z.string()).default([]),
+  })
+  .superRefine((a, ctx) => {
+    if (a.contentType === "paper" && !a.paperAffiliations)
+      ctx.addIssue({
+        code: "custom",
+        path: ["paperAffiliations"],
+        message: "Papers require verifiable company affiliation evidence",
+      });
+    if (a.contentType === "paper" && !a.companyIds)
+      ctx.addIssue({
+        code: "custom",
+        path: ["companyIds"],
+        message: "Papers require company affiliations",
+      });
+    if (a.contentType !== "paper" && a.companyIds)
+      ctx.addIssue({
+        code: "custom",
+        path: ["companyIds"],
+        message: "Company affiliations are only supported for papers",
+      });
+    if (
+      a.paperAffiliations &&
+      (a.contentType !== "paper" ||
+        a.companyIds?.some(
+          (id) => !a.paperAffiliations!.some((p) => p.companyId === id),
+        ) ||
+        a.paperAffiliations.some((p) => !a.companyIds?.includes(p.companyId)))
+    )
+      ctx.addIssue({
+        code: "custom",
+        path: ["paperAffiliations"],
+        message: "Paper affiliation evidence must match company IDs",
+      });
+  });
 export type Article = z.infer<typeof articleSchema>;
+export { articleContentType, articleCompanyIds } from "./content.js";
 export interface Company {
   id: string;
   name: string;
@@ -108,6 +162,7 @@ export const sourceSchema = z
   .object({
     id: z.string().regex(/^[a-z0-9-]+$/),
     publisherId: z.string(),
+    contentType: contentTypeSchema.optional(),
     name: z.string(),
     entryUrl: z.string().url(),
     url: z.string().url(),
@@ -169,6 +224,9 @@ export const sourceSchema = z
   });
 export type Source = z.infer<typeof sourceSchema>;
 export interface Candidate {
+  contentType?: ContentType;
+  companyIds?: string[];
+  paperAffiliations?: PaperAffiliation[];
   title: string;
   url: string;
   externalId?: string;

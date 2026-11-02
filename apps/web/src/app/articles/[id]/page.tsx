@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { site, companyName, asset } from "../../../lib";
 import { LocalTime } from "../../../components/local-time";
 import { DocumentFrame } from "../../../components/document-frame";
+import { articleCompanyIds } from "../../../../../../packages/shared/content.ts";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return site.articles.length
@@ -33,11 +34,16 @@ export default async function Detail({
   return (
     <DocumentFrame>
       <article className="detail">
-        <Link className="back-link" href="/">
-          ← 返回文章索引
+        <Link
+          className="back-link"
+          href={a.contentType === "paper" ? "/?type=paper" : "/"}
+        >
+          ← 返回{a.contentType === "paper" ? "论文" : "博文"}索引
         </Link>
         <div className="article-meta">
-          <span className="company">{companyName(a.companyId)}</span>
+          <span className="company">
+            {articleCompanyIds(a).map(companyName).join("、")}
+          </span>
           <span aria-hidden="true">/</span>
           <LocalTime value={a.publishedAt ?? a.discoveredAt} dateOnly />
           {!a.publishedAt && <span>发现日期，原文未提供发布时间</span>}
@@ -49,7 +55,8 @@ export default async function Detail({
         </h1>
         {a.description && <p className="detail-description">{a.description}</p>}
         <p className="small muted">
-          本站仅提供文章索引和简短介绍，完整内容请在原站阅读。
+          本站仅提供{a.contentType === "paper" ? "论文" : "文章"}
+          索引和简短介绍，完整内容请在原站阅读。
         </p>
         {a.advertorial?.status === "suspected" && (
           <section className="detail-section" id="advertorial-review">
@@ -68,6 +75,32 @@ export default async function Detail({
               此标记仅供人工复核，文章继续展示并保留在搜索和订阅中。
               如需更正，请在 GitHub Issue 中提供原文地址和说明。
             </p>
+          </section>
+        )}
+        {a.contentType === "paper" && a.paperAffiliations && (
+          <section className="detail-section" aria-label="论文公司归属依据">
+            <h2>公司归属依据</h2>
+            <p className="small muted">
+              依据发表时的作者机构署名或官方研究目录记录，不代表作者目前的任职情况。
+            </p>
+            <ul className="locations">
+              {a.paperAffiliations.map((proof) => (
+                <li key={`${proof.companyId}:${proof.evidenceUrl}`}>
+                  <a
+                    href={proof.evidenceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {companyName(proof.companyId)} ·{" "}
+                    {proof.method === "paper-authors"
+                      ? "作者机构署名"
+                      : "官方研究目录"}{" "}
+                    ↗
+                  </a>
+                  <p className="small muted">{proof.excerpt}</p>
+                </li>
+              ))}
+            </ul>
           </section>
         )}
         <section className="detail-section">

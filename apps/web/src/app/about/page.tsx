@@ -38,10 +38,28 @@ export default function About() {
           </p>
         </section>
 
+        <section className="detail-section" aria-labelledby="about-papers">
+          <h2 id="about-papers">论文按机构署名归属</h2>
+          <p>
+            顶部“博文 /
+            论文”切换共用公司分列看板。博文核验官方发布账号；论文使用出版方登记的作者机构、论文首页署名或公司自有研究目录核验归属。
+            联合论文可归属多家公司，详情页和公开 JSON
+            保留逐公司的证据链接与机构摘录。
+          </p>
+          <p>
+            论文归属反映发表时的机构记录，不表示作者目前的任职情况。第三方目录的查询命中、提交人和正文提及不能单独证明机构归属；未取得有效证据的候选不收录。
+            具体采集范围和未启用入口见
+            <a href="https://github.com/liuminxin45/ai-engineering-radar/blob/main/docs/paper-sources.md">
+              论文来源核验
+            </a>
+            。
+          </p>
+        </section>
+
         <section className="detail-section" aria-labelledby="about-scope">
           <h2 id="about-scope">首批收录政策</h2>
           <p>
-            本批仅收录国内公司官方来源，暂不接入海外来源。
+            本批收录国内公司的团队博文和研究论文，暂不扩展到海外公司。
             已核验且启用的官方来源文章直接建立索引，保留身份核验、去重与数据校验，
             不做内容相关性筛选、模型审核或自动主题分类。
           </p>

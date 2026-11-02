@@ -29,7 +29,10 @@ describe("Dewu's single Tencent Cloud source", () => {
       .map((p) => p.id);
     expect(
       registry.sources
-        .filter((s) => publishers.includes(s.publisherId))
+        .filter(
+          (s) =>
+            publishers.includes(s.publisherId) && s.contentType !== "paper",
+        )
         .map((s) => s.id),
     ).toEqual([source.id]);
     expect(source.url).toBe(

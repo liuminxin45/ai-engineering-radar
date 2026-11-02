@@ -37,14 +37,14 @@ describe("domestic community registry", () => {
     expect(source("bilibili-csdn").authorAllowlist).toEqual(["bilibili_TC"]);
     expect(source("tencent")).toBeUndefined();
   });
-  it("keeps only the MiMo official site registered for Xiaomi", () => {
+  it("keeps only the MiMo official blog registered for Xiaomi while paper sources use separate verification", () => {
     const publishers = new Set(
       registry.publishers
         .filter((p) => p.companyId === "xiaomi")
         .map((p) => p.id),
     );
-    const sources = registry.sources.filter((s) =>
-      publishers.has(s.publisherId),
+    const sources = registry.sources.filter(
+      (s) => publishers.has(s.publisherId) && s.contentType !== "paper",
     );
     expect(sources.map((s) => s.id)).toEqual(["xiaomi-tech-site"]);
     expect(sources[0].entryUrl).toBe("https://mimo.xiaomi.com/");

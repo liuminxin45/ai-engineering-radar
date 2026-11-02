@@ -1,32 +1,32 @@
 # 国内官方账号来源核验
 
-核验日期：2026-11-02。当前注册表覆盖 17 个公司或独立品牌栏目，每个栏目只登记一个来源，共 17 个来源。15 个启用，携程和小红书的 2 个历史源暂停新增。
+核验日期：2026-11-02。当前注册表覆盖 17 个公司或独立品牌栏目，每个栏目只登记一个博文来源，共 17 个博文来源。15 个启用，携程和小红书的 2 个历史源暂停新增。
 
-## 每家公司只保留一个来源
+## 每家公司只保留一个博文来源
 
-按维护者要求，唯一来源约束按维护者登记的公司或独立品牌栏目执行，同一栏目不按发布主体拆分名额。禁用入口和身份参考入口同样占用来源名额；额外证据链接保存在来源的核验说明中，不单独登记为来源。
+按维护者要求，唯一来源约束按维护者登记的公司或独立品牌栏目执行，同一栏目不按发布主体拆分名额。博文禁用入口和身份参考入口同样占用博文来源名额；额外证据链接保存在来源的核验说明中，不单独登记为来源。
 
 来源选择优先尊重维护者指定，其次考虑身份依据、实际采集结果、近期更新和内容覆盖。得物沿用指定的腾讯云用户文章页，小米沿用 MiMo 官网。vivo 保留企业 CSDN，已有快照覆盖 20 篇；阿里改用维护者指定的阿里云云原生账号主页，蚂蚁保留百灵官网博客。这两家只代表当前选定团队的内容，不承诺覆盖集团全部技术文章。
 
-| 公司 | 唯一来源 | 来源 ID | 状态 |
-| --- | --- | --- | --- |
-| 美团 | [美团 · meituan](https://tech.meituan.com/) | meituan | 启用 |
-| vivo | [vivo互联网技术 · CSDN](https://blog.csdn.net/vivo_tech) | vivo-csdn | 启用 |
-| 得物 | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles) | dewu-tencent | 启用 |
-| 腾讯 | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D) | tencent-qqnews | 启用 |
-| 阿里巴巴 / 阿里云 | [阿里云云原生 · 账号主页](https://developer.aliyun.com/profile/pawmkwdq37c7s) | aliyun-cloud-native | 启用 |
-| 千问 | [千问 · Research](https://qwen.ai/research) | qwen-research | 启用 |
-| 字节跳动 | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673) | bytedance-tech-volcengine | 启用 |
-| 百度 | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283) | baidu-cloud-csdn-candidate | 启用 |
-| 华为 | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud) | huawei-csdn | 启用 |
-| 快手 | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech) | kuaishou-csdn | 启用 |
-| 蚂蚁集团 | [蚂蚁百灵 · 官方博客](https://developer.ant-ling.com/zh-CN/blogs) | ant-ling | 启用 |
-| 小米 | [小米 MiMo · 官方博客](https://mimo.xiaomi.com/) | xiaomi-tech-site | 启用 |
-| 京东 | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/) | jd-cnblogs | 启用 |
-| 携程 | [携程技术 · CSDN](https://blog.csdn.net/ctrip_tech) | ctrip-csdn | 暂停新增，保留历史 |
-| 小红书 | [小红书技术REDtech · CSDN](https://blog.csdn.net/REDtech_1024) | xiaohongshu-csdn | 暂停新增，保留历史 |
-| 网易 | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw) | netease-csdn | 启用 |
-| B站 | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC) | bilibili-csdn | 启用 |
+| 公司              | 唯一来源                                                                              | 来源 ID                    | 状态               |
+| ----------------- | ------------------------------------------------------------------------------------- | -------------------------- | ------------------ |
+| 美团              | [美团 · meituan](https://tech.meituan.com/)                                           | meituan                    | 启用               |
+| vivo              | [vivo互联网技术 · CSDN](https://blog.csdn.net/vivo_tech)                              | vivo-csdn                  | 启用               |
+| 得物              | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles)        | dewu-tencent               | 启用               |
+| 腾讯              | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)          | tencent-qqnews             | 启用               |
+| 阿里巴巴 / 阿里云 | [阿里云云原生 · 账号主页](https://developer.aliyun.com/profile/pawmkwdq37c7s)         | aliyun-cloud-native        | 启用               |
+| 千问              | [千问 · Research](https://qwen.ai/research)                                           | qwen-research              | 启用               |
+| 字节跳动          | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673) | bytedance-tech-volcengine  | 启用               |
+| 百度              | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283)                        | baidu-cloud-csdn-candidate | 启用               |
+| 华为              | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud)                             | huawei-csdn                | 启用               |
+| 快手              | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech)                                 | kuaishou-csdn              | 启用               |
+| 蚂蚁集团          | [蚂蚁百灵 · 官方博客](https://developer.ant-ling.com/zh-CN/blogs)                     | ant-ling                   | 启用               |
+| 小米              | [小米 MiMo · 官方博客](https://mimo.xiaomi.com/)                                      | xiaomi-tech-site           | 启用               |
+| 京东              | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/)                              | jd-cnblogs                 | 启用               |
+| 携程              | [携程技术 · CSDN](https://blog.csdn.net/ctrip_tech)                                   | ctrip-csdn                 | 暂停新增，保留历史 |
+| 小红书            | [小红书技术REDtech · CSDN](https://blog.csdn.net/REDtech_1024)                        | xiaohongshu-csdn           | 暂停新增，保留历史 |
+| 网易              | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw)                            | netease-csdn               | 启用               |
+| B站               | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC)                              | bilibili-csdn              | 启用               |
 
 ## 身份与采集边界
 
@@ -42,7 +42,9 @@ CSDN RSS 按作者用户名、已审核主机和文章账号路径匹配。腾�
 
 迁移移除额外来源的状态与文章位置。仅由移除来源支撑的 130 篇文章退出当前快照，仍有保留来源位置的文章保留原 ID。上轮发布快照为 429 篇文章。发布时另从最新远端数据重做迁移，保留线上已有的试运行标记。参考入口必须没有文章历史；存在文章时迁移会失败，防止误删。移除曾采集的来源仍须先验证保留源已启用、身份已核验，并有成功状态和已发布文章。
 
-注册表加载时校验每家公司恰好一个来源。同一公司的另一个发布主体、禁用参考入口和论文来源均不能另占名额；混合内容应由唯一来源的适配器返回类型信息。新增来源必须替换该公司现有入口，或属于新注册的公司。
+注册表加载时校验每家公司恰好一个博文来源，同一公司的其他博文发布主体和禁用博文参考入口不能另占名额。本轮论文接入采用独立来源与作者机构校验，不占博文名额；原有整公司单源校验相应收窄为博文单源。
+
+论文渠道与作者机构核验另见[论文来源与公司归属核验](paper-sources.md)。
 
 ## 历史调查与限制
 

@@ -22,6 +22,7 @@ import { collectQwen } from "./platforms/qwen.js";
 import { parseVolcengineAccount } from "./platforms/volcengine.js";
 import { parseAntLingBlog } from "./platforms/ant-ling.js";
 import { collectMiMo } from "./platforms/xiaomi-mimo.js";
+import { collectPapers, type PaperContext } from "./platforms/papers.js";
 export const plain = (s: unknown, max = 800) =>
   cheerio
     .load(`<body>${String(s ?? "")}</body>`)
@@ -275,7 +276,15 @@ export async function collect(
   source: Source,
   state: SourceState,
   limit: number,
+  paperContext?: PaperContext,
 ): Promise<{ items: Candidate[]; response: HttpResult; warnings: string[] }> {
+  if (source.platform.startsWith("paper-")) {
+    if (!paperContext)
+      throw new CrawlError(
+        "Paper collection requires publisher and prior evidence context",
+      );
+    return collectPapers(source, state, limit, paperContext);
+  }
   const headers: Record<string, string> = {};
   if (state.etag && source.platform !== "qwen-research")
     headers["If-None-Match"] = state.etag;

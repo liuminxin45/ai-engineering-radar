@@ -39,9 +39,20 @@ await withSnapshotLock(dir, async () => {
       throw new Error(
         `Cannot migrate domestic publisher ${article.publisherId}`,
       );
-    const locations = article.locations.filter(
-      (l) => sources.get(l.sourceId)?.publisherId === article.publisherId,
-    );
+    const locations = article.locations.filter((l) => {
+      const source = sources.get(l.sourceId);
+      if (!source) return false;
+      if (source.publisherId === article.publisherId) return true;
+      const owner = registry.publishers.find(
+        (p) => p.id === source.publisherId,
+      )?.companyId;
+      return (
+        article.contentType === "paper" &&
+        !!owner &&
+        !!article.companyIds?.includes(owner) &&
+        !!article.paperAffiliations?.some((p) => p.companyId === owner)
+      );
+    });
     if (!locations.length)
       throw new Error(
         `Domestic article lost all source relationships: ${article.id}`,

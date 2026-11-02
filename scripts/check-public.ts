@@ -50,7 +50,7 @@ async function scan(dir: string) {
       if (
         !process.env.RADAR_ALLOW_FIXTURES &&
         file.split(/[\\/]/).includes("out") &&
-        /fixture-\d+|Synthetic data must never|AI Coding 工程实践 \d+:/.test(
+        /fixture-(?:paper-)?\d+|Synthetic data must never|AI Coding 工程实践 \d+:|Joint AI systems research \d+:/.test(
           text,
         )
       )

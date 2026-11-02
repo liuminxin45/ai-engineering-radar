@@ -12,6 +12,7 @@
     "dev": "pnpm --filter @radar/web dev",
     "registry:check": "tsx scripts/cli.ts registry",
     "ingest": "tsx scripts/cli.ts ingest",
+    "ingest:papers": "tsx scripts/cli.ts ingest --papers",
     "data:init": "tsx scripts/cli.ts init",
     "data:check": "tsx scripts/cli.ts validate",
     "export": "tsx scripts/cli.ts export",

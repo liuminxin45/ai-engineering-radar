@@ -6,6 +6,7 @@ import {
   saveSnapshot,
   snapshotExists,
   withSnapshotLock,
+  validateRelations,
 } from "../packages/database/snapshot.js";
 import { ingest, applyOverrides } from "../packages/crawler/ingest.js";
 import { exportSite } from "../packages/publisher/export.js";
@@ -36,6 +37,7 @@ async function run() {
         daily: process.argv.includes("--daily"),
         probe: true,
         sourceId: process.argv.find((a) => a.startsWith("--source="))?.slice(9),
+        contentType: process.argv.includes("--papers") ? "paper" : undefined,
       });
       await saveSnapshot(dir, result.articles, result.states, registry);
       const summary = `## AI Engineering Radar\n\nSuccessful sources: ${result.successes}/${result.attempted}\n\nArticles stored: ${result.articles.length}\n`;
@@ -45,6 +47,7 @@ async function run() {
       if (result.attempted && result.successes === 0) process.exitCode = 2;
     } else if (command === "export") {
       await applyOverrides(snapshot.articles);
+      validateRelations(snapshot.articles, snapshot.states, registry);
       await exportSite(snapshot, registry, root, resolveSiteUrl());
     } else throw new Error(`Unknown command: ${command}`);
   }

@@ -2,7 +2,7 @@
 
 聚合一线团队的 AI 工程实践，让值得学习的经验更容易被发现和持续追踪。
 
-A radar for AI engineering practice from teams building and operating real systems. Follow official publications in company columns, discover new approaches, and learn from implementation choices and lessons from production. Browse columns side by side on desktop or swipe between them on mobile. This initial release follows teams at Chinese companies. Full articles stay on their original sites.
+A radar for AI engineering practice from teams building and operating real systems. Follow official publications in company columns, discover new approaches, and learn from implementation choices and lessons from production. Browse columns side by side on desktop or swipe between them on mobile. This initial release follows teams at Chinese companies. Papers include per-company affiliation evidence from publisher records, paper author signatures or official research directories. Full articles and papers stay on their original sites.
 
 [网站](https://liuminxin45.github.io/ai-engineering-radar/) · [About / 关于](https://liuminxin45.github.io/ai-engineering-radar/about/) · [全站 RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) · [全站 Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom)
 
@@ -16,12 +16,15 @@ AI Engineering Radar 把这些分散的发布渠道聚集起来，持续追踪�
 
 ## 如何使用
 
+- **切换博文与论文**：顶部轻按钮提供“博文 / 论文”两个入口，默认展示博文。两类内容共用公司分列看板，搜索限定当前类型；切换时保留当前公司和关键词，从首批内容开始阅读。联合论文按已核实的公司归属展示在多列中，“最新”列只展示该条记录一次。
 - **并排追踪公司**：打开[阅读看板](https://liuminxin45.github.io/ai-engineering-radar/)，先看“最新”列，再横向浏览各公司的文章。PC 可以同时看多列，每列独立上下滚动；手机左右滑动切换，也可以点击顶部公司名称定位。
 - **带着问题查找**：搜索标题、摘要或作者，找到相关经验。手机点击搜索图标展开输入框，文章固定按最新优先展示。
 - **回到原文学习**：点击文章标题，直接打开发布网站，阅读完整实现与适用条件。
 - **持续追踪更新**：点击右上角 **ATOM/RSS**，在小窗中打开或复制两种全站订阅地址，统一追踪项目收录的更新。也可以直接使用[全站 RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) / [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom)。
 
-每列先显示 20 篇文章，滚动到底部时自动追加 20 篇。搜索、当前公司列和已加载批次保存在链接中，支持刷新及浏览器前进后退，方便继续阅读或分享。右上角提供深浅色切换、ATOM/RSS、GitHub 图标和数据更新时间；手机显示更新时间的时分，完整日期可通过时间提示查看。
+每列先显示 20 篇，滚动到底部时自动追加 20 篇。内容类型、搜索、当前公司列和已加载批次保存在链接中，支持刷新及浏览器前进后退，方便继续阅读或分享。右上角提供深浅色切换、ATOM/RSS、GitHub 图标和数据更新时间；手机显示更新时间的时分，完整日期可通过时间提示查看。
+
+论文已覆盖当前 16 家公司，接入正式出版元数据、官方研究目录和能够验证作者机构的预印本渠道。归属证据随论文 JSON 保存，详情页提供核验链接。具体渠道、实采数量与未启用项见[论文来源核验](docs/paper-sources.md)，接入方式见[贡献指南](CONTRIBUTING.md#博文与论文)。
 
 ## 阅读界面
 
@@ -35,37 +38,37 @@ PC：公司分列，横向浏览。
 
 ## 收录范围与来源
 
-首批仅收录国内公司官方技术团队。已核验且启用的官方来源文章直接建立索引，保留身份核验、去重和数据校验，不按内容相关性筛选，也不做自动主题分类。本批暂不接入海外来源。
+收录国内公司的官方团队博文与署名研究论文，本批暂不扩展到海外公司。博文核验官方发布账号，论文核验作者机构或官方研究目录。保留来源证据、去重和数据校验，不按关键词筛选内容，也不做自动主题分类。
 
 来源包括国内公司自有技术站，也欢迎博客园、腾讯云开发者社区、阿里云开发者社区等第三方博客社区中的国内公司官方团队账号。公司归属依据具体发布主体核验，不按托管平台的域名推断。
 
 来源是否经过身份核验、是否启用、是否采集成功是三个独立状态，记录在[来源验收表](docs/source-acceptance.md)和[公开来源 JSON](https://liuminxin45.github.io/ai-engineering-radar/data/sources.json)中。待核验账号可以继续补充官方证据；缺少文章目录的入口可以继续贡献适配器。
 
-来源还需要核查近期活跃度。HTTP 成功或能解析历史文章，不代表覆盖了近期更新。超过一个月没有新文章的渠道会人工复查。尚无可靠替代的过时来源暂停新增，保留历史；替代渠道已核验并真实采集后，移除指定旧源及仅由旧源支撑的文章，不按文章年龄自动删除。当前每家公司只登记一个来源，共 17 个公司或独立品牌栏目、17 个来源，其中 15 个启用，2 个暂停新增。阿里云使用指定账号主页，千问使用官方 Research 目录，蚂蚁保留百灵官网博客。百度智能云技术站 CSDN 已依据团队原创内容、多平台连续同步及百度自有社区的对应关系完成人工核验并启用，企业认证徽标不是唯一依据。
+来源还需要核查近期活跃度。HTTP 成功或能解析历史文章，不代表覆盖了近期更新。超过一个月没有新文章的渠道会人工复查。尚无可靠替代的过时来源暂停新增，保留历史；替代渠道已核验并真实采集后，移除指定旧源及仅由旧源支撑的文章，不按文章年龄自动删除。当前博文每家公司只登记一个来源，共 17 个公司或独立品牌栏目、17 个来源，其中 15 个启用，2 个暂停新增。阿里云使用指定账号主页，千问使用官方 Research 目录，蚂蚁保留百灵官网博客。百度智能云技术站 CSDN 已依据团队原创内容、多平台连续同步及百度自有社区的对应关系完成人工核验并启用，企业认证徽标不是唯一依据。
 
 小米博文已按维护者指定改用 [MiMo 官网](https://mimo.xiaomi.com/)，实采 15 篇。小米只保留此源，其余未启用的参考入口已移除。最新明确发布日期为 2026-09-27；继续追踪更新，不视为近月活跃。携程、小红书及快手更完整的长文渠道仍待补充，详见[来源核验记录](docs/source-research.md)。
 
 当前采集源如下，按 2026-11-02 的[来源注册表](packages/source-registry/registry.json)整理。表中状态表示是否启用采集；最近采集结果见[来源验收表](docs/source-acceptance.md)。暂停新增的来源保留历史文章。
 
-| 公司 | 来源入口 | 采集方式 | 状态 |
-| --- | --- | --- | --- |
-| 美团 | [美团技术团队](https://tech.meituan.com/) | RSS | 启用 |
-| vivo | [vivo 互联网技术 · CSDN](https://blog.csdn.net/vivo_tech) | RSS | 启用 |
-| 得物 | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles) | 账号文章目录 | 启用 |
-| 腾讯 | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D) | 公开作者列表 API | 启用 |
-| 阿里巴巴 / 阿里云 | [阿里云云原生 · 账号主页](https://developer.aliyun.com/profile/pawmkwdq37c7s) | 账号文章目录 | 启用 |
-| 千问 | [千问 · Research](https://qwen.ai/research) | 官方研究目录 JSON | 启用 |
-| 字节跳动 | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673) | 账号文章目录 | 启用 |
-| 百度 | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283) | RSS | 启用 |
-| 华为 | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud) | RSS | 启用 |
-| 快手 | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech) | RSS | 启用 |
-| 蚂蚁集团 | [蚂蚁百灵 · 官方博客](https://developer.ant-ling.com/zh-CN/blogs) | 博客 HTML | 启用 |
-| 小米 | [小米 MiMo · 官方博客](https://mimo.xiaomi.com/) | 官网博客列表与文章页 | 启用 |
-| 京东 | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/) | 账号 HTML 目录 | 启用 |
-| 携程 | [携程技术 · CSDN](https://blog.csdn.net/ctrip_tech) | RSS | 暂停新增 |
-| 小红书 | [小红书技术 REDtech · CSDN](https://blog.csdn.net/REDtech_1024) | RSS | 暂停新增 |
-| 网易 | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw) | RSS | 启用 |
-| B站 | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC) | RSS | 启用 |
+| 公司              | 来源入口                                                                              | 采集方式             | 状态     |
+| ----------------- | ------------------------------------------------------------------------------------- | -------------------- | -------- |
+| 美团              | [美团技术团队](https://tech.meituan.com/)                                             | RSS                  | 启用     |
+| vivo              | [vivo 互联网技术 · CSDN](https://blog.csdn.net/vivo_tech)                             | RSS                  | 启用     |
+| 得物              | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles)        | 账号文章目录         | 启用     |
+| 腾讯              | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)          | 公开作者列表 API     | 启用     |
+| 阿里巴巴 / 阿里云 | [阿里云云原生 · 账号主页](https://developer.aliyun.com/profile/pawmkwdq37c7s)         | 账号文章目录         | 启用     |
+| 千问              | [千问 · Research](https://qwen.ai/research)                                           | 官方研究目录 JSON    | 启用     |
+| 字节跳动          | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673) | 账号文章目录         | 启用     |
+| 百度              | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283)                        | RSS                  | 启用     |
+| 华为              | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud)                             | RSS                  | 启用     |
+| 快手              | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech)                                 | RSS                  | 启用     |
+| 蚂蚁集团          | [蚂蚁百灵 · 官方博客](https://developer.ant-ling.com/zh-CN/blogs)                     | 博客 HTML            | 启用     |
+| 小米              | [小米 MiMo · 官方博客](https://mimo.xiaomi.com/)                                      | 官网博客列表与文章页 | 启用     |
+| 京东              | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/)                              | 账号 HTML 目录       | 启用     |
+| 携程              | [携程技术 · CSDN](https://blog.csdn.net/ctrip_tech)                                   | RSS                  | 暂停新增 |
+| 小红书            | [小红书技术 REDtech · CSDN](https://blog.csdn.net/REDtech_1024)                       | RSS                  | 暂停新增 |
+| 网易              | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw)                            | RSS                  | 启用     |
+| B站               | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC)                              | RSS                  | 启用     |
 
 不保存或提供文章全文，不提供登录、收藏、推荐榜单和评论。文章保留原始语言。
 
@@ -130,7 +133,7 @@ pnpm test:e2e
 - RSS / Atom 优先；公开 API 及站点 HTML 解析必须使用经审核的入口和站点专用适配。
 - 社区来源必须设置 `authorAllowlist`，匹配稳定可核验的发布主体；无法确认时保持禁用。
 
-We welcome PRs for official engineering sources at Chinese companies, including team accounts hosted by third-party blogging communities. Overseas sources are outside this batch. Include the company, publisher, stable account ID, public evidence of ownership, permitted collection endpoint, and adapter fixtures with tests. See [CONTRIBUTING.md](CONTRIBUTING.md) for the current adapter requirements.
+We welcome PRs for official engineering sources at Chinese companies, including team accounts hosted by third-party blogging communities. Overseas companies are outside this batch. Include the company, publisher, stable account ID, public evidence of ownership, permitted collection endpoint, and adapter fixtures with tests. See [CONTRIBUTING.md](CONTRIBUTING.md) for the current adapter requirements.
 
 文章无需经过相关性规则或模型审核。发现归属、链接、日期或重复关系有误时，请提供原文地址与证据。`config/overrides.json` 可用于人工更正或隐藏记录；确定的同一发布主体跨平台重复可在 `merges` 添加 `from`、`into` 和 `reason`。相似标题只提示复核，不自动合并。
 

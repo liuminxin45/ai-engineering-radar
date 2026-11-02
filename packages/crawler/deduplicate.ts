@@ -1,7 +1,14 @@
 import { createHash } from "node:crypto";
 import type { Article, Candidate, Source } from "../shared/types.js";
+import {
+  articleContentType,
+  contentTypeSchema,
+  companyIdsSchema,
+  articleSchema,
+} from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
 import { indexOfficialArticle } from "../classifier/index.js";
+import { scholarlyUrl } from "./platforms/papers.js";
 export function normalizeUrl(input: string) {
   const u = new URL(input);
   if (!["https:", "http:"].includes(u.protocol))
@@ -38,14 +45,29 @@ export function upsert(
   registry: Registry,
   now = new Date().toISOString(),
 ) {
-  const canonical = normalizeUrl(item.canonicalUrl ?? item.url);
+  const suppliedType = item.contentType ?? source.contentType;
+  const canonical = normalizeUrl(
+    (suppliedType === "paper" && scholarlyUrl(item.canonicalUrl ?? item.url)) ||
+      item.canonicalUrl ||
+      item.url,
+  );
   const url = normalizeUrl(item.url);
   const publisher = registry.publishers.find(
     (p) => p.id === source.publisherId,
   )!;
+  if (suppliedType !== undefined) contentTypeSchema.parse(suppliedType);
+  const affiliations =
+    item.companyIds && companyIdsSchema.parse(item.companyIds);
+  if (affiliations?.some((id) => !registry.companies.some((c) => c.id === id)))
+    throw new Error("Unknown paper company affiliation");
+  if (affiliations && suppliedType === "blog")
+    throw new Error("Blog posts cannot have multiple company affiliations");
   const existing = articles.find(
     (a) =>
-      a.publisherId === source.publisherId &&
+      (a.publisherId === source.publisherId ||
+        (suppliedType === "paper" &&
+          a.contentType === "paper" &&
+          a.canonicalUrl === canonical)) &&
       (a.canonicalUrl === canonical ||
         a.locations.some(
           (l) =>
@@ -56,6 +78,39 @@ export function upsert(
         )),
   );
   if (existing) {
+    const contentType = suppliedType ?? articleContentType(existing);
+    if (affiliations && contentType !== "paper")
+      throw new Error("Company affiliations require paper content type");
+    const companyIds =
+      contentType === "paper"
+        ? existing.publisherId !== source.publisherId || item.paperAffiliations
+          ? [
+              ...new Set([
+                ...(existing.companyIds ?? [existing.companyId]),
+                ...(affiliations ?? [publisher.companyId]),
+              ]),
+            ]
+          : (affiliations ?? existing.companyIds ?? [publisher.companyId])
+        : undefined;
+    const attributionChanged =
+      articleContentType(existing) !== contentType ||
+      JSON.stringify(existing.companyIds) !== JSON.stringify(companyIds);
+    if (suppliedType) existing.contentType = contentType;
+    existing.companyIds = companyIds;
+    if (item.paperAffiliations) {
+      const proofs = [
+        ...(existing.paperAffiliations ?? []),
+        ...item.paperAffiliations,
+      ];
+      existing.paperAffiliations = [
+        ...new Map(
+          proofs
+            .filter((p) => companyIds?.includes(p.companyId))
+            .map((p) => [`${p.companyId}:${p.evidenceUrl}`, p]),
+        ).values(),
+      ];
+    } else if (contentType !== "paper") existing.paperAffiliations = undefined;
+    if (attributionChanged) existing.updatedAt = now;
     const location = existing.locations.find(
       (l) =>
         l.sourceId === source.id &&
@@ -90,23 +145,37 @@ export function upsert(
           existing.classification.status === "accepted" ? "published" : "draft";
       }
     }
+    if (contentType === "paper") articleSchema.parse(existing);
     return existing;
   }
   const classification = indexOfficialArticle(item);
+  const contentType = suppliedType ?? "blog";
+  if (affiliations && contentType !== "paper")
+    throw new Error("Company affiliations require paper content type");
   const id = createHash("sha256")
-    .update(`${source.publisherId}\n${canonical}`)
+    .update(
+      `${contentType === "paper" ? "paper" : source.publisherId}\n${canonical}`,
+    )
     .digest("hex")
     .slice(0, 20);
   const duplicates = articles
     .filter(
       (a) =>
-        a.publisherId === source.publisherId && similar(a.title, item.title),
+        a.publisherId === source.publisherId &&
+        articleContentType(a) === contentType &&
+        similar(a.title, item.title),
     )
     .map((a) => a.id);
   const article: Article = {
     id,
     publisherId: source.publisherId,
     companyId: publisher.companyId,
+    contentType,
+    companyIds:
+      contentType === "paper"
+        ? (affiliations ?? [publisher.companyId])
+        : undefined,
+    paperAffiliations: item.paperAffiliations,
     title: item.title,
     canonicalUrl: canonical,
     author: item.author,
@@ -121,6 +190,7 @@ export function upsert(
     locations: [{ sourceId: source.id, externalId: item.externalId, url }],
     duplicateCandidates: duplicates,
   };
+  if (contentType === "paper") articleSchema.parse(article);
   articles.push(article);
   return article;
 }

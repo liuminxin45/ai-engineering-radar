@@ -181,7 +181,9 @@ test("scrolling appends one batch per bottom encounter and article titles open t
   const data = (await (await request.get("data/articles.json")).json())
     .articles;
   const counts = new Map<string, number>();
-  for (const article of data as { companyId: string }[])
+  for (const article of data.filter(
+    (a: { contentType?: string }) => a.contentType !== "paper",
+  ) as { companyId: string }[])
     counts.set(article.companyId, (counts.get(article.companyId) ?? 0) + 1);
   const selected = [...counts.entries()].find(([, count]) => count > 20);
   expect(
@@ -307,7 +309,9 @@ test("domestic provenance stays public while the interface exposes only whole-pr
       ).toBe(true);
     }
   }
-  expect(sources).toHaveLength(companies.length);
+  expect(
+    sources.filter((s: { contentType?: string }) => s.contentType !== "paper"),
+  ).toHaveLength(companies.length);
   expect(
     sources.find((s: { id: string }) => s.id === "bytedance-tech-volcengine")
       .entryUrl,

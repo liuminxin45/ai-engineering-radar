@@ -2,7 +2,13 @@ import { readFile } from "node:fs/promises";
 import { z } from "zod";
 import type { Article, Snapshot, SourceState } from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
-import { classificationSchema } from "../shared/types.js";
+import {
+  classificationSchema,
+  articleSchema,
+  contentTypeSchema,
+  companyIdsSchema,
+  paperAffiliationSchema,
+} from "../shared/types.js";
 import { indexOfficialArticle } from "../classifier/index.js";
 import {
   assessAdvertorial,
@@ -36,6 +42,9 @@ export async function applyOverrides(articles: Article[]) {
       .object({
         status: z.enum(["accepted", "rejected", "review"]).optional(),
         hidden: z.boolean().optional(),
+        contentType: contentTypeSchema.optional(),
+        companyIds: companyIdsSchema.optional(),
+        paperAffiliations: z.array(paperAffiliationSchema).min(1).optional(),
         advertorial: z.enum(["suspected", "cleared"]).optional(),
         topics: z
           .array(
@@ -58,6 +67,28 @@ export async function applyOverrides(articles: Article[]) {
       .parse(value);
     const a = articles.find((a) => a.id === id);
     if (!a) throw new Error(`Override references missing article ${id}`);
+    if (
+      o.contentType !== undefined ||
+      o.companyIds !== undefined ||
+      o.paperAffiliations !== undefined
+    ) {
+      const updated = articleSchema.parse({
+        ...a,
+        contentType: o.contentType ?? a.contentType,
+        companyIds:
+          o.contentType === "blog" ? undefined : (o.companyIds ?? a.companyIds),
+        paperAffiliations:
+          o.contentType === "blog"
+            ? undefined
+            : (o.paperAffiliations ??
+              a.paperAffiliations?.filter((p) =>
+                (o.companyIds ?? a.companyIds)?.includes(p.companyId),
+              )),
+      });
+      a.contentType = updated.contentType;
+      a.companyIds = updated.companyIds;
+      a.paperAffiliations = updated.paperAffiliations;
+    }
     if (o.advertorial) {
       a.advertorial = {
         status: o.advertorial,
@@ -107,9 +138,24 @@ export async function applyOverrides(articles: Article[]) {
       !from ||
       !into ||
       from.id === into.id ||
-      from.publisherId !== into.publisherId
+      from.publisherId !== into.publisherId ||
+      (from.contentType ?? "blog") !== (into.contentType ?? "blog")
     )
       throw new Error("Invalid manual merge");
+    if (into.contentType === "paper") {
+      into.companyIds = [
+        ...new Set([...into.companyIds!, ...from.companyIds!]),
+      ];
+      if (into.paperAffiliations || from.paperAffiliations)
+        into.paperAffiliations = [
+          ...new Map(
+            [
+              ...(into.paperAffiliations ?? []),
+              ...(from.paperAffiliations ?? []),
+            ].map((p) => [`${p.companyId}:${p.evidenceUrl}`, p]),
+          ).values(),
+        ];
+    }
     for (const l of from.locations)
       if (
         !into.locations.some(
@@ -139,6 +185,7 @@ export async function ingest(
     daily?: boolean;
     sourceId?: string;
     probe?: boolean;
+    contentType?: "blog" | "paper";
   } = {},
 ) {
   const articles = structuredClone(snapshot.articles);
@@ -146,7 +193,10 @@ export async function ingest(
   let successes = 0,
     attempted = 0;
   const sources = registry.sources.filter(
-    (s) => !options.sourceId || s.id === options.sourceId,
+    (s) =>
+      (!options.sourceId || s.id === options.sourceId) &&
+      (!options.contentType ||
+        (s.contentType ?? "blog") === options.contentType),
   );
   if (options.sourceId && !sources.length) throw new Error("Unknown source id");
   const queue = [...sources];
@@ -216,6 +266,12 @@ export async function ingest(
             state.lastSuccessAt
               ? source.crawl.maxItems
               : source.crawl.backfillLimit,
+            {
+              companyId: registry.publishers.find(
+                (p) => p.id === source.publisherId,
+              )!.companyId,
+              articles,
+            },
           );
           // Each source batch commits atomically; a malformed item cannot partially publish a failed run.
           const staged = structuredClone(articles);
@@ -229,7 +285,9 @@ export async function ingest(
           state.consecutiveFailures = 0;
           state.discovered = result.items.length;
           state.error = result.warnings.length
-            ? `${result.warnings.length} 篇文章的补充元数据不可用；保留目录元数据。`
+            ? source.contentType === "paper"
+              ? `${result.warnings.length} 条论文候选未取得可用归属证据，已跳过。`
+              : `${result.warnings.length} 篇文章的补充元数据不可用；保留目录元数据。`
             : undefined;
           // Only replace validators after successful parsing and normalization.
           state.etag = result.response.etag ?? state.etag;

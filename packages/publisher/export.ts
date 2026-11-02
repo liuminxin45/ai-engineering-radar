@@ -2,7 +2,12 @@ import { mkdir, writeFile, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { Feed } from "feed";
 import type { Article, Snapshot } from "../shared/types.js";
-import { compareArticles, effectiveDate, topics } from "../shared/types.js";
+import {
+  articleCompanyIds,
+  compareArticles,
+  effectiveDate,
+  topics,
+} from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
 import { assessAdvertorial } from "../classifier/advertorial.js";
 export function publishedArticles(articles: Article[], registry: Registry) {
@@ -11,6 +16,9 @@ export function publishedArticles(articles: Article[], registry: Registry) {
       (a) =>
         registry.companies.some(
           (c) => c.id === a.companyId && c.region === "cn",
+        ) &&
+        articleCompanyIds(a).every((id) =>
+          registry.companies.some((c) => c.id === id && c.region === "cn"),
         ) &&
         a.publicationStatus === "published" &&
         a.classification.status === "accepted" &&
@@ -32,7 +40,7 @@ export function makeFeed(
   const url = siteUrl.replace(/\/$/, "");
   const feed = new Feed({
     title,
-    description: "国内公司官方技术账号文章索引",
+    description: "国内公司技术博文与研究论文索引",
     id: `${url}/${path.replace(/\.(xml|atom)$/, "")}`,
     link: url,
     language: "zh-CN",
@@ -45,11 +53,14 @@ export function makeFeed(
   });
   for (const a of articles.slice(0, 50)) {
     const company = registry.companies.find((c) => c.id === a.companyId)!;
+    const affiliations = articleCompanyIds(a)
+      .map((id) => registry.companies.find((c) => c.id === id)?.name ?? id)
+      .join("、");
     feed.addItem({
       id: `urn:ai-engineering-radar:article:${a.id}`,
       title: a.title,
       link: `${url}/articles/${a.id}/`,
-      description: `${a.description ?? a.classification.reason}\n\n来源：${company.name} · 原文：${a.canonicalUrl}`,
+      description: `${a.description ?? a.classification.reason}\n\n${a.contentType === "paper" ? "公司归属" : "来源"}：${affiliations} · 原文：${a.canonicalUrl}`,
       date: new Date(effectiveDate(a)),
       author: [{ name: a.author ?? company.name, link: a.canonicalUrl }],
       category: a.classification.topics.map((id) => ({

@@ -2,7 +2,7 @@
 
 ## 可以贡献什么
 
-欢迎提交 PR，适配国内官方来源、修复解析器、补充官方身份材料，或更正文章归属与元数据。首批仅接入国内公司官方技术团队，暂不接受海外来源接入。
+欢迎提交 PR，适配国内官方来源、修复解析器、补充官方身份材料，或更正文章归属与元数据。首批仅接入国内公司官方技术团队，暂不增加海外公司来源。
 
 国内公司自有技术站和第三方博客社区中的国内公司官方团队账号都在范围内，例如博客园、腾讯云开发者社区和阿里云开发者社区。已核验且启用的官方来源文章直接建立索引，保留身份核验、去重与数据校验，不做内容筛选或自动主题分类。
 
@@ -29,7 +29,7 @@
 
 在 `packages/source-registry/registry.json` 中复用或新增公司与发布主体，再添加来源。字段定义以 `packages/shared/types.ts` 的 `sourceSchema` 为准，关联和 ID 唯一性由 `packages/source-registry/index.ts` 校验。
 
-- ID 使用稳定的小写字母、数字与连字符。每家公司恰好登记一个来源，约束包含该公司的所有发布主体和禁用参考入口。已有公司的新入口应替换原源，身份参考材料只保存在证据链接中。
+- ID 使用稳定的小写字母、数字与连字符。博文保持每家公司恰好一个来源，约束包含该公司的所有博文发布主体和禁用博文参考入口。论文渠道单独登记，使用能够验证机构归属的适配器，不占博文来源名额。
 - 本批新增公司使用 `region: "cn"`。请核验国内公司及发布主体归属，不将海外来源改标为国内来源。
 - `entryUrl` 是读者识别来源的页面，`url` 是实际采集地址。明确列出需要访问的域名；跨域入口需要单独核验。
 - RSS / Atom 优先。HTML 使用站点专用选择器，排除导航、活动和非文章链接。公开 API 若需新适配器，请同时实现并测试，当前 `adapter` 枚举没有通用 API 类型。
@@ -45,6 +45,20 @@
 现有腾讯云专栏解析器按创作者 UID 筛选；通用 Feed 解析器按 Feed 的作者文本精确匹配，不能将昵称匹配当作稳定 ID 核验。通用 HTML 列表解析器也不提供逐条作者身份校验。混合作者目录若无法可靠限定官方账号，需要增加专用解析逻辑，再启用来源。填写白名单字段本身不能代替解析器中的筛选。
 
 阿里云官方栏目使用 `aliyun-group`，按每篇的作者 profile ID 校验；不同官方团队分别关联发布主体。火山引擎账号使用 `volcengine-account`，目录中的稳定账号 ID 必须与每篇作者 ID 一致。两个平台均只解析审核过的目录，不能因托管域名属于公司而接纳其他投稿者。
+
+## 博文与论文
+
+来源可设置 `contentType: "blog"` 或 `"paper"`，省略时按博文处理。混合目录由适配器逐条返回 `Candidate.contentType`，不要根据标题中的“论文”二字判断类型。论文解读仍属于博文。
+
+论文使用 `companyIds` 数组记录已核实的公司归属。数组中的 ID 必须来自公司注册表，至少有一项，不能重复。同一条论文会展示在这些公司的列中，“最新”列只展示一次。`companyId` 与 `publisherId` 继续记录来源所属公司和发布主体，与合作公司的署名归属分别保存。
+
+每篇论文必须提供 `paperAffiliations`，记录公司 ID、证据 URL、核验方式和短机构摘录。证据须覆盖 `companyIds` 的每个公司。正式论文从出版方提交的作者机构字段核验；预印本读取论文首页作者署名；明确发布本团队研究成果的公司自有论文目录可以作为该公司的归属证据。正文提及、参考文献、提交人昵称和邮箱域名均不作为机构依据。高校署名不转换为公司 ID。
+
+已有记录可在 `config/overrides.json` 中使用 `contentType`、`companyIds` 和 `paperAffiliations` 更正类型与归属，并填写核验依据 `reason`。改为论文时须提供归属及证据；改回博文会清除论文归属与证据。后续采集缺少类型或归属字段时保留已有值，人工更正会在采集和导出时重新应用。
+
+论文渠道包括 Crossref 正式出版记录、公司自有研究目录，以及逐篇校验论文署名的机构论文页。Crossref 是出版方登记的元数据渠道，不是公司官方账号；查询命中后仍须通过作者机构的严格匹配。`paper-*` 适配器保持独立，普通博文适配器不能仅凭关键词给文章改成论文。实采和未启用项见[论文来源核验](docs/paper-sources.md)。
+
+`pnpm ingest:papers` 只更新论文来源，日常发布工作流仍更新全部启用来源。arXiv 署名请求遵守其 15 秒 crawl-delay；已有署名证据的论文复用快照，减少重复请求。缺少可用署名的候选会跳过，整个来源都没有可核实条目时报告失败并保留历史。
 
 ## Fixture 与测试
 
@@ -79,7 +93,7 @@ PR 中记录实际运行的命令、结果和未验证事项。实测采集只�
 
 ## English quick start
 
-This initial release covers official engineering teams at Chinese companies. We welcome source adapters, parser fixes, ownership evidence, and metadata corrections for that scope. Official team accounts on third-party blogging communities are welcome alongside company-owned sites. Overseas sources are outside this batch.
+This initial release covers official engineering teams at Chinese companies. We welcome source adapters, parser fixes, ownership evidence, and metadata corrections for that scope. Official team accounts on third-party blogging communities are welcome alongside company-owned sites. Overseas companies are outside this batch.
 
 Articles from verified, enabled official sources enter the index directly, with identity verification, deduplication, and data validation. There is no content relevance screening or automatic topic classification.
 

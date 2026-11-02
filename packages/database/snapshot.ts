@@ -12,6 +12,7 @@ import { dirname, join, resolve } from "node:path";
 import { createHash, randomUUID } from "node:crypto";
 import {
   articleSchema,
+  articleCompanyIds,
   manifestSchema,
   sourceStateSchema,
   type Snapshot,
@@ -60,9 +61,23 @@ export function validateRelations(
     const p = registry.publishers.find((p) => p.id === a.publisherId);
     if (!p || p.companyId !== a.companyId)
       throw new Error(`Invalid publisher relation ${a.id}`);
+    for (const id of articleCompanyIds(a))
+      if (!registry.companies.some((c) => c.id === id))
+        throw new Error(`Unknown company affiliation ${id}: ${a.id}`);
     for (const l of a.locations) {
       const s = sourceMap.get(l.sourceId);
-      if (!s || s.publisherId !== a.publisherId)
+      const owner =
+        s && registry.publishers.find((p) => p.id === s.publisherId)?.companyId;
+      if (
+        !s ||
+        (s.publisherId !== a.publisherId &&
+          !(
+            a.contentType === "paper" &&
+            owner &&
+            a.companyIds?.includes(owner) &&
+            a.paperAffiliations?.some((p) => p.companyId === owner)
+          ))
+      )
         throw new Error(`Invalid source relation ${a.id}`);
       if (l.externalId) {
         const key = `${l.sourceId}:${l.externalId}`;
