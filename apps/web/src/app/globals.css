@@ -117,7 +117,7 @@ a {
 a:hover {
   text-decoration: none;
 }
-a:not(:has(.link-label)):not(.brand):not(.skip-link) {
+a:not(:has(.link-label)):not(.brand):not(.skip-link):not([data-no-underline]) {
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -125,7 +125,9 @@ a:not(:has(.link-label)):not(.brand):not(.skip-link) {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
-a:not(:has(.link-label)):not(.brand):not(.skip-link):is(:hover, :focus-visible),
+a:not(:has(.link-label)):not(.brand):not(.skip-link):not(
+    [data-no-underline]
+  ):is(:hover, :focus-visible),
 a:is(:hover, :focus-visible) .link-label {
   background-size: 100% 1px;
 }
