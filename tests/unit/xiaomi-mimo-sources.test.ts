@@ -23,9 +23,10 @@ const source = (await loadRegistry()).sources.find(
 )!;
 const html = await readFile("tests/fixtures/xiaomi-mimo.html", "utf8");
 const script = await readFile("tests/fixtures/xiaomi-mimo-list.txt", "utf8");
-const assets =
+const references =
   "https://cdn.cnbj1.fds.api.mi-img.com/aife/mimo-blog-fe/doc_build/static/js/";
-const scripts = `<script src="${assets}index.abcdef12.js"></script><script src="${assets}4752.1234abcd.js"></script>`;
+const assets = "https://mimo.xiaomi.com/static/js/";
+const scripts = `<script src="${references}index.abcdef12.js"></script><script src="${references}4752.1234abcd.js"></script>`;
 const runtime = '"static/js/async/"+e+"."+({7779:"abcdef01"})[e]+".js"';
 const routes =
   'path:"/zh/",element:x,filePath:"zh/index.mdx",preload:async()=>(await x.preload(),Promise.all([t.e("9712"),t.e("7779")]).then(t.bind(t,64074))),lang:"zh"';
@@ -71,7 +72,7 @@ describe("Xiaomi MiMo official blog", () => {
       `${assets}async/7779.abcdef01.js`,
     );
     expect(() =>
-      miMoScripts(scripts.replaceAll(assets, "https://other.example/")),
+      miMoScripts(scripts.replaceAll(references, "https://other.example/")),
     ).toThrow();
     expect(() =>
       miMoHomeScript(runtime, routes.replace("zh/index.mdx", "en/index.mdx")),
@@ -119,7 +120,7 @@ describe("Xiaomi MiMo official blog", () => {
       { url: "https://tech.mi.com/blog" },
       { entryUrl: "https://other.example/" },
       { authorAllowlist: [] },
-      { linkHosts: [] },
+      { linkHosts: ["outside.example"] },
     ])
       expect(() => validateAccountScope({ ...source, ...patch })).toThrow();
   });
@@ -153,6 +154,11 @@ describe("Xiaomi MiMo official blog", () => {
       language: "en",
     });
     expect(result.warnings).toEqual([]);
+    expect(
+      fetch.mock.calls.every(
+        ([url]) => new URL(url).origin === "https://mimo.xiaomi.com",
+      ),
+    ).toBe(true);
     expect(JSON.stringify(result.items)).not.toContain("FULL ARTICLE");
     expect(fetch.mock.calls.at(-1)?.[0]).toBe(
       "https://mimo.xiaomi.com/mimo-v2-6/article.html",

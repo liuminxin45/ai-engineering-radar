@@ -3,8 +3,9 @@ import type { Candidate, Source } from "../../shared/types.js";
 import { CrawlError, fetchReviewed, type HttpResult } from "../http.js";
 
 const ORIGIN = "https://mimo.xiaomi.com";
-const ASSETS =
+const CDN_ASSETS =
   "https://cdn.cnbj1.fds.api.mi-img.com/aife/mimo-blog-fe/doc_build/static/js/";
+const ASSETS = `${ORIGIN}/static/js/`;
 const literal = '"(?:[^"\\\\]|\\\\.)*"';
 const clean = (s: string, limit: number) =>
   s.replace(/\s+/g, " ").trim().slice(0, limit);
@@ -17,7 +18,7 @@ export function validateMiMoSource(source: Source) {
     source.url !== `${ORIGIN}/zh/` ||
     source.authorAllowlist?.length !== 1 ||
     source.authorAllowlist[0] !== "xiaomi-mimo" ||
-    !source.linkHosts?.includes("cdn.cnbj1.fds.api.mi-img.com")
+    source.linkHosts?.length
   )
     throw new CrawlError(
       "MiMo requires the reviewed official homepage and assets",
@@ -30,7 +31,12 @@ export function miMoScripts(html: string): { runtime: string; routes: string } {
   const $ = load(html);
   const scripts = $("script[src]")
     .map((_, e) => $(e).attr("src")!)
-    .get();
+    .get()
+    // The official site serves identical assets at its own public static path.
+    // Keep collection on that origin, whose robots policy is checked normally.
+    .map((s) =>
+      s.startsWith(CDN_ASSETS) ? ASSETS + s.slice(CDN_ASSETS.length) : s,
+    );
   const runtime = scripts.find(
     (s) =>
       s.startsWith(ASSETS) &&
