@@ -100,55 +100,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "0f23fbfe6be85b5ed4a6",
-      "publisherId": "alibaba-research-papers",
-      "companyId": "alibaba",
-      "contentType": "paper",
-      "companyIds": [
-        "alibaba"
-      ],
-      "paperAffiliations": [
-        {
-          "companyId": "alibaba",
-          "evidenceUrl": "https://arxiv.org/html/2610.23986",
-          "method": "paper-authors",
-          "excerpt": "Yang2,† Dayiheng Liu2 1Zhejiang University 2Alibaba Token Hub, Alibaba Group 3The Chinese University of Hong Kong 4Fudan University 5National University of Singapore 🖂 , Website: blenderworld.github.io"
-        }
-      ],
-      "title": "BlenderWorld: Benchmarking Visual Agents for 3D Creation from Real-World References",
-      "canonicalUrl": "https://arxiv.org/abs/2610.23986",
-      "author": "Xinyu Fang1,2 Yuchi Wang2,3 Weihao Yu2,3 Rongyao Fang2 Zhaohai Li2 Zhixun Li2,3 Tiancheng Gu2 Xilin Wei2,4 Yuhang Zang5 Hongsheng Li3 Dahua Lin3,† Guofeng Zhang1,† Shuai Bai2 Zhibo Yang2,† Dayiheng Liu2 1Zhejiang University 2Alibaba Token Hub, Alibaba Group 3The Chinese University of Hong Kong 4Fuda",
-      "publishedAt": "2026-10-13T20:00:00.000Z",
-      "discoveredAt": "2026-11-02T03:29:38.985Z",
-      "updatedAt": "2026-11-02T03:29:38.985Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "新版机构校验未取得原所属公司的有效署名，暂不发布。",
-        "evidence": [],
-        "method": "manual",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:51:12.816Z"
-      },
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      },
-      "publicationStatus": "hidden",
-      "locations": [
-        {
-          "sourceId": "qwen-hf-papers",
-          "externalId": "2610.23986",
-          "url": "https://arxiv.org/abs/2610.23986"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "1123cb1540d9b364c9bd",
       "publisherId": "alibaba-research-papers",
       "companyId": "alibaba",
@@ -397,55 +348,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "250f0fe3e292e5c88060",
-      "publisherId": "alibaba-research-papers",
-      "companyId": "alibaba",
-      "contentType": "paper",
-      "companyIds": [
-        "alibaba"
-      ],
-      "paperAffiliations": [
-        {
-          "companyId": "alibaba",
-          "evidenceUrl": "https://arxiv.org/html/2610.35439",
-          "method": "paper-authors",
-          "excerpt": "bin Wu1,† 1The Hong Kong Polytechnic University 2Alibaba Token Hub, Alibaba Group 3Shanghai Jiaotong University 4Tsinghua University 5Fudan University Project page: https://yinsongyan.github.io/Omni-InteractScope/"
-        }
-      ],
-      "title": "Omni-InteractScope: Benchmarking Proactive and Agentic Interaction in Continuous Omnimodal Streams",
-      "canonicalUrl": "https://arxiv.org/abs/2610.35439",
-      "author": "Yinsong Yan1,2, Ling Wang1,2, Yuxuan Wang2, Yifan Yang2,3, Ruiyang Xu2,3 Junming Lin2,4, Qi Chen2,3, Meng Gao2,4, Minghao Han2,5, Yunfei Chu2 Qize Yang2, Xize Cheng2, Jin Xu2, Jibin Wu1,† 1The Hong Kong Polytechnic University 2Alibaba Token Hub, Alibaba Group 3Shanghai Jiaotong University 4Tsinghua ",
-      "publishedAt": "2026-10-25T20:00:00.000Z",
-      "discoveredAt": "2026-11-02T03:29:38.985Z",
-      "updatedAt": "2026-11-02T03:29:38.985Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "新版机构校验未取得原所属公司的有效署名，暂不发布。",
-        "evidence": [],
-        "method": "manual",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:51:12.816Z"
-      },
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      },
-      "publicationStatus": "hidden",
-      "locations": [
-        {
-          "sourceId": "qwen-hf-papers",
-          "externalId": "2610.35439",
-          "url": "https://arxiv.org/abs/2610.35439"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "2f91da2f66a44a7ead0d",
       "publisherId": "alibaba-research-papers",
       "companyId": "alibaba",
@@ -597,55 +499,6 @@
       "duplicateCandidates": []
     },
     {
-      "id": "3d1fa9266aa3befbc2fd",
-      "publisherId": "alibaba-research-papers",
-      "companyId": "alibaba",
-      "contentType": "paper",
-      "companyIds": [
-        "alibaba"
-      ],
-      "paperAffiliations": [
-        {
-          "companyId": "alibaba",
-          "evidenceUrl": "https://arxiv.org/html/2610.35138",
-          "method": "paper-authors",
-          "excerpt": "uai Bai2,† Dayiheng Liu2 1Fudan University 2Alibaba Token Hub, Alibaba Group 3Zhejiang University 4The Chinese University of Hong Kong 5Shanghai Jiao Tong University 6Nanyang Technological University ∗\\astEqual contribution †Corresponding authors https://codesignbench.github.io/"
-        }
-      ],
-      "title": "Co-Design Bench: Multimodal Collaborative Coding Evaluation for Agentic Models",
-      "canonicalUrl": "https://arxiv.org/abs/2610.35138",
-      "author": "Xilin Wei1,2,∗\\ast Shengyuan Ding1,∗\\ast Xinyu Fang2,3,∗\\ast Tiancheng Gu2 Yuchi Wang2,4 Zhixun Li2,4 Ziyu Liu5 Yuhang Zang6 Weixiang Yu2 Cheng Lu2 Chonggao Sun2 Tong Zhou2 Dahua Lin4,† Hang Zhang2,† Shuai Bai2,† Dayiheng Liu2 1Fudan University 2Alibaba Token Hub, Alibaba Group 3Zhejiang University ",
-      "publishedAt": "2026-10-25T20:00:00.000Z",
-      "discoveredAt": "2026-11-02T03:29:38.985Z",
-      "updatedAt": "2026-11-02T03:29:38.985Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "新版机构校验未取得原所属公司的有效署名，暂不发布。",
-        "evidence": [],
-        "method": "manual",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:51:12.816Z"
-      },
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      },
-      "publicationStatus": "hidden",
-      "locations": [
-        {
-          "sourceId": "qwen-hf-papers",
-          "externalId": "2610.35138",
-          "url": "https://arxiv.org/abs/2610.35138"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
       "id": "4fbed9792f24a0f2d690",
       "publisherId": "alibaba-research-papers",
       "companyId": "alibaba",
@@ -788,55 +641,6 @@
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3773078.3831933",
           "url": "https://doi.org/10.1145/3773078.3831933"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "6c0dc73305880ebdf7f8",
-      "publisherId": "alibaba-research-papers",
-      "companyId": "alibaba",
-      "contentType": "paper",
-      "companyIds": [
-        "alibaba"
-      ],
-      "paperAffiliations": [
-        {
-          "companyId": "alibaba",
-          "evidenceUrl": "https://arxiv.org/html/2610.31158",
-          "method": "paper-authors",
-          "excerpt": "ai3, Jin Xu2,*, Yunhai Tong1,* 1Peking University 2Alibaba Token Hub, Alibaba Group 3Independent Researcher *Co-corresponding authors"
-        }
-      ],
-      "title": "Beyond Watching and Searching: Benchmarking Agents for Video-Centered Deep Research Reports",
-      "canonicalUrl": "https://arxiv.org/abs/2610.31158",
-      "author": "Jiahao Meng1,2†, Qize Yang2, Yuxuan Wang2, Yunfei Chu2, Wensi Dai3, Jin Xu2,*, Yunhai Tong1,* 1Peking University 2Alibaba Token Hub, Alibaba Group 3Independent Researcher *Co-corresponding authors",
-      "publishedAt": "2026-10-21T20:00:00.000Z",
-      "discoveredAt": "2026-11-02T03:29:38.985Z",
-      "updatedAt": "2026-11-02T03:29:38.985Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "新版机构校验未取得原所属公司的有效署名，暂不发布。",
-        "evidence": [],
-        "method": "manual",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:51:12.816Z"
-      },
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      },
-      "publicationStatus": "hidden",
-      "locations": [
-        {
-          "sourceId": "qwen-hf-papers",
-          "externalId": "2610.31158",
-          "url": "https://arxiv.org/abs/2610.31158"
         }
       ],
       "duplicateCandidates": []
