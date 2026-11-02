@@ -12,10 +12,10 @@ export const initialBoardQuery: BoardQuery = {
   page: 1,
 };
 const order = [
+  "tencent",
   "dewu",
   "alibaba",
   "qwen",
-  "tencent",
   "bytedance",
   "meituan",
   "vivo",
