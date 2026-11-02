@@ -101,8 +101,10 @@ function safeUrl(value: string | undefined, base: string, image = false) {
 // the reader; only classes/attributes generated here are allowed through.
 export function normalizeArticleHtml(raw: string, url: string, title = "") {
   const $ = cheerio.load(raw, {}, false);
-  if (["blog.csdn.net", "devpress.csdn.net"].includes(new URL(url).hostname))
-    normalizeCsdnCode($);
+  const csdn = ["blog.csdn.net", "devpress.csdn.net"].includes(
+    new URL(url).hostname,
+  );
+  if (csdn) normalizeCsdnCode($);
   $("script[type^='math/tex']").each((_, element) => {
     const replacement = $("<span></span>").text($(element).text());
     $(element).replaceWith(replacement);
@@ -251,6 +253,12 @@ export function normalizeArticleHtml(raw: string, url: string, title = "") {
       );
   });
   const text = normalizedText($.root().text());
+  const expectedCode = csdn
+    ? $("pre code")
+        .toArray()
+        .map((code) => normalizedText($(code).text()))
+        .filter(Boolean)
+    : [];
   const html = purifier.sanitize($.root().html() || "", {
     ALLOWED_TAGS: tags,
     ALLOWED_ATTR: attributes,
@@ -259,6 +267,12 @@ export function normalizeArticleHtml(raw: string, url: string, title = "") {
     ALLOW_UNKNOWN_PROTOCOLS: false,
     FORBID_TAGS: ["svg", "math"],
   });
+  if (expectedCode.length) {
+    const result = cheerio.load(html);
+    const actual = normalizedText(result("pre code").text());
+    if (expectedCode.some((code) => !actual.includes(code)))
+      throw new Error("CSDN code did not survive body sanitization");
+  }
   return {
     html,
     headings,

@@ -94,7 +94,7 @@ async function run() {
           body.status === "ready" && previous[index].status === "partial",
       ).length;
       console.log(
-        `Body completeness policy updated: ${promoted} short articles now ready; HTML and fetch timestamps preserved`,
+        `Stored body policies updated: ${promoted} articles promoted to ready; capture timestamps preserved`,
       );
     } else if (command === "bodies") {
       const limitArg = process.argv

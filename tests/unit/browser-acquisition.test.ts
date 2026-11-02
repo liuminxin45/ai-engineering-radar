@@ -15,6 +15,16 @@ const html =
   '<h1 id="articleContentId">工程实践</h1><div id="content_views"><pre><code>{</code><code>  "repo": true</code><code>}</code><div class="opt-box">AI写代码</div></pre><ul class="pre-numbering"><li>1</li></ul><div class="hide-preCode-box"><img src="https://example.org/button.png"></div><table><tr><td>正文</td></tr></table></div>';
 afterEach(() => vi.unstubAllEnvs());
 describe("document providers and CSDN orchestration", () => {
+  it("preserves Vue code split by SSR hydration comments without weakening sanitization", () => {
+    const parsed = articleParser.parse({
+      url,
+      content:
+        '<h1>工程实践</h1><div id="content_views"><pre><code>&lt;!-- ChatPanel --&gt;\n&lt;span&gt;{<!-- -->{ value }}&lt;/span&gt;</code></pre><script>alert(1)</script></div>',
+    });
+    expect(parsed.html).toContain("&lt;!-- ChatPanel --&gt;");
+    expect(parsed.html).toContain("&lt;span&gt;{{ value }}&lt;/span&gt;");
+    expect(parsed.html).not.toContain("<script>");
+  });
   it("refreshes the legacy CSDN rule once and then skips successful unchanged bodies", async () => {
     const articles: Article[] = [];
     upsert(articles, { title: article.title, url }, source, registry);
@@ -32,7 +42,7 @@ describe("document providers and CSDN orchestration", () => {
       loader,
     });
     expect(refreshed.attempted).toBe(1);
-    expect(refreshed.bodies[0].ruleVersion).toBe("2");
+    expect(refreshed.bodies[0].ruleVersion).toBe("3");
     const unchanged = await collectBodies(
       articles,
       refreshed.bodies,
@@ -60,7 +70,7 @@ describe("document providers and CSDN orchestration", () => {
       ],
     });
     expect(result.ruleId).toBe("csdn");
-    expect(result.ruleVersion).toBe("2");
+    expect(result.ruleVersion).toBe("3");
     expect(result.html).toContain('"repo"');
     expect(result.html).toContain("\n  ");
     expect(result.html).not.toMatch(/AI写代码|pre-numbering|button.png/);

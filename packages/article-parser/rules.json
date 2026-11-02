@@ -17,7 +17,7 @@
     },
     {
       "id": "csdn",
-      "version": "2",
+      "version": "3",
       "hosts": ["blog.csdn.net", "devpress.csdn.net"],
       "pathPattern": "/article/(details/)?|/article$",
       "title": ["#articleContentId", "h1"],
