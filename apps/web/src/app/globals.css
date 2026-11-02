@@ -4,7 +4,8 @@
   --surface: #fff;
   --ink: #27272a;
   --muted: #6b6b65;
-  --line: #cecec7;
+  --line: #e5e5e0;
+  --line-strong: #cecec7;
   --accent: #625a8c;
   --subtle: #f0f0ec;
   --good: #18754c;
@@ -21,7 +22,8 @@
     --surface: #222225;
     --ink: #e4e4e7;
     --muted: #a1a1aa;
-    --line: #505057;
+    --line: #38383d;
+    --line-strong: #505057;
     --accent: #b6acf5;
     --subtle: #27272a;
     --good: #78d2a8;
@@ -61,7 +63,7 @@ body {
   --desktop-color-text-subtle: var(--muted);
   --desktop-color-text-muted: var(--muted);
   --desktop-color-border: var(--line);
-  --desktop-color-border-strong: var(--muted);
+  --desktop-color-border-strong: var(--line-strong);
   --desktop-radius-control: 6px;
 }
 .radar-ui[data-preference="dark"] {
@@ -70,7 +72,8 @@ body {
   --surface: #222225;
   --ink: #e4e4e7;
   --muted: #a1a1aa;
-  --line: #505057;
+  --line: #38383d;
+  --line-strong: #505057;
   --accent: #b6acf5;
   --subtle: #27272a;
   --good: #78d2a8;
@@ -83,7 +86,8 @@ body {
   --surface: #fff;
   --ink: #27272a;
   --muted: #6b6b65;
-  --line: #cecec7;
+  --line: #e5e5e0;
+  --line-strong: #cecec7;
   --accent: #625a8c;
   --subtle: #f0f0ec;
   --good: #18754c;
@@ -99,15 +103,27 @@ a {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
+}
+a:not(:has(.link-label)):not(.brand):not(.skip-link) {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 0% 1px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+a:not(:has(.link-label)):not(.brand):not(.skip-link):is(:hover, :focus-visible),
+a:is(:hover, :focus-visible) .link-label {
+  background-size: 100% 1px;
 }
 button,
 a,
 input {
   -webkit-tap-highlight-color: transparent;
 }
-a:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 4px;
 }
@@ -433,6 +449,9 @@ footer > p {
   margin: 15px 0 20px;
   overflow-wrap: anywhere;
 }
+.detail h1 a {
+  color: var(--ink);
+}
 .detail-description {
   font-size: 17px;
   color: var(--muted);
@@ -690,8 +709,9 @@ dd {
   }
   a {
     transition:
-      background-color 0.12s ease,
-      color 0.12s ease,
-      border-color 0.12s ease;
+      background-size 300ms ease-in-out,
+      background-color 180ms ease,
+      color 180ms ease,
+      border-color 180ms ease;
   }
 }

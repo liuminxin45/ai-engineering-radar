@@ -26,13 +26,15 @@ export default function About() {
           <h2 id="about-sources">每篇文章都有出处</h2>
           <p>
             文章保留公司、发布主体、原文地址和来源关系。
-            <Link href="/sources/">来源目录</Link>
-            展示官方身份的公开证据、核验状态与采集结果，方便你核对原始材料。
+            <a href="https://github.com/liuminxin45/ai-engineering-radar/blob/main/docs/source-acceptance.md">
+              仓库来源验收表
+            </a>
+            记录官方身份的公开证据、核验状态与采集结果，方便你核对原始材料。
           </p>
           <p>
             来源可以是国内公司自有技术站，也可以是第三方博客社区中的国内官方账号。
             公司归属根据具体发布主体核验。登记、身份核验与采集成功分别记录，
-            覆盖情况以来源目录的当前状态为准。
+            覆盖情况以来源验收表和公开来源 JSON 的当前状态为准。
           </p>
         </section>
 
@@ -55,8 +57,9 @@ export default function About() {
         <section className="detail-section" aria-labelledby="about-reading">
           <h2 id="about-reading">按需阅读与订阅</h2>
           <p>
-            你可以按公司分列浏览、搜索文章，也可以使用全站和公司的 RSS / Atom
-            订阅。
+            你可以按公司分列浏览、搜索文章。点击文章标题直接打开发布网站，
+            每列触底时自动追加文章，右上角显示数据更新时间。 全站 RSS / Atom
+            订阅统一追踪整个项目的更新。
             文章保留原始语言，全文在原站阅读。项目不复制、存储或分发文章全文。
           </p>
           <p>
@@ -82,16 +85,20 @@ export default function About() {
             companies, from company blogs to verified accounts on third-party
             blogging communities. Overseas sources are outside this batch. Every
             article keeps its original URL, publisher, and source relationships;
-            the source directory shows ownership evidence and collection status.
+            the repository source acceptance report records ownership evidence
+            and collection status.
           </p>
           <p>
             Articles from verified, enabled official sources enter the index
             directly, with identity verification, deduplication, and data
             validation. There is no content relevance screening, model review,
-            or automatic topic classification. Search by company or follow RSS /
-            Atom feeds. Articles keep their original language. Full text stays
-            on the original site; this project does not copy, store, or
-            redistribute it.
+            or automatic topic classification. Search the index or browse
+            company columns; titles open the publishing site directly. Each
+            column loads another batch at its bottom, and the update time
+            appears at the top right. Follow project-wide updates through the
+            site-wide RSS / Atom feeds. Articles keep their original language.
+            Full text stays on the original site; this project does not copy,
+            store, or redistribute it.
           </p>
           <p>
             We welcome PRs that add or repair sources for Chinese companies,

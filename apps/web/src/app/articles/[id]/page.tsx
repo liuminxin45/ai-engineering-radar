@@ -42,16 +42,12 @@ export default async function Detail({
           <LocalTime value={a.publishedAt ?? a.discoveredAt} dateOnly />
           {!a.publishedAt && <span>发现日期，原文未提供发布时间</span>}
         </div>
-        <h1>{a.title}</h1>
+        <h1>
+          <a href={a.canonicalUrl} target="_blank" rel="noopener noreferrer">
+            <span className="link-label">{a.title}</span>
+          </a>
+        </h1>
         {a.description && <p className="detail-description">{a.description}</p>}
-        <a
-          className="primary-link"
-          href={a.canonicalUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          阅读原文 <span aria-hidden="true">↗</span>
-        </a>
         <p className="small muted">
           本站仅提供文章索引和简短介绍，完整内容请在原站阅读。
         </p>
@@ -95,8 +91,6 @@ export default async function Detail({
           </dl>
           <p className="small">
             <a href={asset(`/data/articles/${a.id}.json`)}>文章 JSON</a>
-            <span aria-hidden="true"> · </span>
-            <a href={asset(`/feed/company/${a.companyId}.xml`)}>订阅这家公司</a>
           </p>
         </section>
       </article>

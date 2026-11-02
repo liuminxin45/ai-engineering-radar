@@ -4,14 +4,12 @@ const base = (
 ).replace(/\/$/, "");
 for (const path of [
   "/",
-  "/sources/",
+  "/about/",
   "/data/articles.json",
   "/data/sources.json",
   "/data/health.json",
   "/feed.xml",
   "/feed.atom",
-  "/feed/company/meituan.xml",
-  "/feed/company/meituan.atom",
 ]) {
   const response = await fetch(base + path);
   if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);

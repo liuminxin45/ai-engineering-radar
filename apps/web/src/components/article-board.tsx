@@ -9,8 +9,6 @@ import {
   InputGroup,
   MenuButton,
   MagnifyingGlass,
-  ArrowLeft,
-  ArrowRight,
   DotsThree,
   CloseIcon,
   CheckIcon,
@@ -75,6 +73,7 @@ export function ArticleBoard() {
   const viewport = useRef<HTMLElement>(null);
   const panels = useRef<Record<string, HTMLElement | null>>({});
   const lists = useRef<Record<string, HTMLDivElement | null>>({});
+  const scrollTops = useRef<Record<string, number>>({});
   const search = useRef<HTMLInputElement>(null);
   const navigation = useRef(false);
   const navTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -127,6 +126,7 @@ export function ArticleBoard() {
     moveTo(id);
   }
   function changeGlobal(patch: Partial<BoardQuery>, replace = false) {
+    scrollTops.current = {};
     writePages({});
     writeQuery({ ...queryRef.current, ...patch, page: 1 }, replace);
     for (const list of Object.values(lists.current))
@@ -135,11 +135,20 @@ export function ArticleBoard() {
   function loadMore(id: string) {
     const next = (pagesRef.current[id] ?? 1) + 1;
     writePages({ ...pagesRef.current, [id]: next });
-    writeQuery({
-      ...queryRef.current,
-      company: id === "latest" ? "" : id,
-      page: next,
-    });
+    if (id === (queryRef.current.company || "latest"))
+      writeQuery({ ...queryRef.current, page: next }, true);
+  }
+  function scrollList(id: string, list: HTMLDivElement, total: number) {
+    const previous = scrollTops.current[id] ?? 0;
+    scrollTops.current[id] = list.scrollTop;
+    // Load once on approaching the bottom; appending keeps the reading position.
+    // Another batch requires scrolling down through the newly appended articles.
+    if (
+      list.scrollTop > previous &&
+      list.scrollHeight - list.scrollTop - list.clientHeight <= 32 &&
+      (pagesRef.current[id] ?? 1) * BOARD_BATCH_SIZE < total
+    )
+      loadMore(id);
   }
   function handleScroll() {
     if (navigation.current || scrollFrame.current !== null) return;
@@ -180,6 +189,7 @@ export function ArticleBoard() {
       queryRef.current = next;
       setQuery(next);
       writePages({ [id]: next.page });
+      scrollTops.current = {};
       for (const list of Object.values(lists.current))
         if (list) list.scrollTop = 0;
       requestAnimationFrame(() => moveTo(id, false));
@@ -205,13 +215,11 @@ export function ArticleBoard() {
       document.getElementById("mobile-search")?.focus(),
     );
   }
-  function feed(id: string, atom = false) {
-    return asset(
-      `/feed${id === "latest" ? "" : `/company/${id}`}.${atom ? "atom" : "xml"}`,
-    );
+  function feed(atom = false) {
+    return asset(`/feed.${atom ? "atom" : "xml"}`);
   }
-  function openFeed(id: string, atom = false) {
-    window.open(feed(id, atom), "_blank", "noopener,noreferrer");
+  function openFeed(atom = false) {
+    window.open(feed(atom), "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -221,7 +229,7 @@ export function ArticleBoard() {
         className={`${styles.toolbar} ${searching ? styles.searching : ""}`}
       >
         <Link
-          className={styles.brand}
+          className={`brand ${styles.brand}`}
           prefetch={false}
           href="/"
           aria-label="AI Engineering Radar 首页"
@@ -260,7 +268,6 @@ export function ArticleBoard() {
                 if (event.key === "Escape" && searching) closeSearch();
               }}
             />
-            <span className={styles.searchScope}>所有公司</span>
           </InputGroup>
         </div>
         <div className={styles.actions}>
@@ -278,15 +285,8 @@ export function ArticleBoard() {
               )}
             </IconButton>
           </div>
-          <Link className={styles.sources} prefetch={false} href="/sources/">
-            来源 <span>{site.sources.length}</span>
-          </Link>
-          <a
-            className={styles.rss}
-            href={feed("latest")}
-            aria-label="全站 RSS 订阅"
-          >
-            RSS
+          <a className={styles.rss} href={feed()} aria-label="全站 RSS 订阅">
+            <span className="link-label">RSS</span>
           </a>
           <div className={styles.globalMenu}>
             <MenuButton
@@ -320,11 +320,6 @@ export function ArticleBoard() {
                   onSelect: () => changeGlobal({ q: "", sort: "newest" }),
                 },
                 {
-                  label: "来源目录",
-                  actionId: "sources",
-                  onSelect: () => router.push("/sources/"),
-                },
-                {
                   label: "关于项目",
                   actionId: "about",
                   onSelect: () => router.push("/about/"),
@@ -332,7 +327,7 @@ export function ArticleBoard() {
                 {
                   label: "全站 Atom 订阅",
                   actionId: "atom",
-                  onSelect: () => openFeed("latest", true),
+                  onSelect: () => openFeed(true),
                 },
                 {
                   label: "GitHub / 贡献来源",
@@ -357,6 +352,19 @@ export function ArticleBoard() {
               ]}
             />
           </div>
+          <span className={styles.sync}>
+            <span>更新于</span>
+            <time dateTime={site.generatedAt}>
+              {new Date(site.generatedAt).toLocaleString("zh-CN", {
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: false,
+                timeZone: "Asia/Shanghai",
+              })}
+            </time>
+          </span>
         </div>
       </header>
       <nav className={styles.companyNav} aria-label="定位公司面板">
@@ -371,12 +379,7 @@ export function ArticleBoard() {
             aria-controls={`panel-${id}`}
             onClick={() => locate(id)}
           >
-            {label(id)}
-            {id === "latest" && (
-              <span className={styles.totalCount} aria-hidden="true">
-                {articles.length}
-              </span>
-            )}
+            <span className="link-label">{label(id)}</span>
           </Button>
         ))}
       </nav>
@@ -437,10 +440,7 @@ export function ArticleBoard() {
             >
               <div className={styles.panelHead}>
                 <div>
-                  <h2>
-                    {id === "latest" ? "最新文章" : name}{" "}
-                    <span>{items.length}</span>
-                  </h2>
+                  <h2>{id === "latest" ? "最新文章" : name}</h2>
                   <p>
                     {id === "latest"
                       ? "所有公司的最新发布"
@@ -449,24 +449,6 @@ export function ArticleBoard() {
                         : "历史收录 · 暂停新增"}
                   </p>
                 </div>
-                <MenuButton
-                  actionId={`feed-${id}`}
-                  label={`${id === "latest" ? "全站" : name}订阅`}
-                  icon={<DotsThree size={21} />}
-                  iconOnly
-                  items={[
-                    {
-                      label: "订阅 RSS",
-                      actionId: `rss-${id}`,
-                      onSelect: () => openFeed(id),
-                    },
-                    {
-                      label: "订阅 Atom",
-                      actionId: `atom-${id}`,
-                      onSelect: () => openFeed(id, true),
-                    },
-                  ]}
-                />
               </div>
               <div
                 ref={(el) => {
@@ -476,13 +458,20 @@ export function ArticleBoard() {
                 role="region"
                 aria-label={`${name}文章列表`}
                 tabIndex={0}
+                onScroll={(event) =>
+                  scrollList(id, event.currentTarget, items.length)
+                }
               >
                 {shown.map((a) => (
                   <article className={`board-story ${styles.story}`} key={a.id}>
                     <h3>
-                      <Link prefetch={false} href={`/articles/${a.id}/`}>
-                        {a.title}
-                      </Link>
+                      <a
+                        href={a.canonicalUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span className="link-label">{a.title}</span>
+                      </a>
                     </h3>
                     <div className={styles.storyMeta}>
                       <div>
@@ -494,15 +483,6 @@ export function ArticleBoard() {
                           {day(time(a))}
                         </time>
                       </div>
-                      <a
-                        className={styles.original}
-                        href={a.canonicalUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`阅读原文：${a.title}（在新标签页打开）`}
-                      >
-                        原文 <span aria-hidden="true">↗</span>
-                      </a>
                     </div>
                   </article>
                 ))}
@@ -519,63 +499,14 @@ export function ArticleBoard() {
                     )}
                   </div>
                 )}
-                {shown.length < items.length && (
-                  <div className={styles.more}>
-                    <Button
-                      variant="ghost"
-                      aria-label={`加载更多${name}文章`}
-                      onClick={() => loadMore(id)}
-                    >
-                      加载更多{" "}
-                      <span className={styles.moreCount}>
-                        {shown.length} / {items.length}
-                      </span>
-                    </Button>
-                  </div>
-                )}
                 {!!items.length && shown.length === items.length && (
-                  <p className={styles.end}>已显示全部 {items.length} 篇</p>
+                  <p className={styles.end}>已显示全部</p>
                 )}
               </div>
             </section>
           );
         })}
       </main>
-      <footer className={styles.footer}>
-        <span className={styles.sync}>
-          <i aria-hidden="true" />
-          更新于{" "}
-          <time dateTime={site.generatedAt}>
-            {new Date(site.generatedAt).toLocaleString("zh-CN", {
-              month: "2-digit",
-              day: "2-digit",
-              hour: "2-digit",
-              minute: "2-digit",
-              hour12: false,
-              timeZone: "Asia/Shanghai",
-            })}
-          </time>
-        </span>
-        <div className={styles.position}>
-          <IconButton
-            aria-label="向左切换面板"
-            disabled={activeIndex === 0}
-            onClick={() => locate(ids[activeIndex - 1])}
-          >
-            <ArrowLeft size={19} />
-          </IconButton>
-          <span aria-live="polite" aria-atomic="true">
-            {activeIndex + 1} <i>/ {ids.length}</i>
-          </span>
-          <IconButton
-            aria-label="向右切换面板"
-            disabled={activeIndex === ids.length - 1}
-            onClick={() => locate(ids[activeIndex + 1])}
-          >
-            <ArrowRight size={19} />
-          </IconButton>
-        </div>
-      </footer>
     </div>
   );
 }

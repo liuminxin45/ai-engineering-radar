@@ -5,15 +5,19 @@ export function DocumentFrame({ children }: { children: ReactNode }) {
   return (
     <div className="shell">
       <header className="header">
-        <Link className="brand" href="/">
+        <Link className="brand" prefetch={false} href="/">
           <span className="radar-mark" aria-hidden="true" />
           <span>
             AI Engineering <strong>Radar</strong>
           </span>
         </Link>
         <nav aria-label="主导航">
-          <Link href="/sources/">来源目录</Link>
-          <Link href="/about/">关于</Link>
+          <Link prefetch={false} href="/">
+            文章
+          </Link>
+          <Link prefetch={false} href="/about/">
+            关于
+          </Link>
           <a
             href="https://github.com/liuminxin45/ai-engineering-radar"
             target="_blank"

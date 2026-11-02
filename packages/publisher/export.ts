@@ -157,12 +157,6 @@ export async function exportSite(
     await writeFile(join(publicDir, `${path}.atom`), feed.atom1());
   }
   await feeds("feed", "AI Engineering Radar", articles);
-  for (const c of registry.companies)
-    await feeds(
-      `feed/company/${c.id}`,
-      `AI Engineering Radar · ${c.name}`,
-      articles.filter((a) => a.companyId === c.id),
-    );
   const lines = [
     "# 来源验收表",
     "",

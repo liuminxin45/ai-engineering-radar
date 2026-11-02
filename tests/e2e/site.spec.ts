@@ -66,7 +66,7 @@ test("search, company focus, sorting and URL history survive refresh", async ({
   await expectNoDocumentOverflow(page);
 });
 
-test("panels scroll independently and support keyboard, buttons and touch", async ({
+test("compact panels retain independent scrolling, keyboard and touch navigation", async ({
   page,
   isMobile,
   browserName,
@@ -74,9 +74,30 @@ test("panels scroll independently and support keyboard, buttons and touch", asyn
   await page.goto("./");
   const viewport = board(page);
   await expect(viewport).toBeVisible();
-  const footer = page.getByRole("contentinfo");
-  await expect(footer).toBeVisible();
-  expect((await footer.boundingBox())!.height).toBeLessThanOrEqual(48);
+  await expect(page.getByRole("contentinfo")).toHaveCount(0);
+  await expect(
+    page.getByRole("button", { name: /切换面板|加载更多|订阅$/ }),
+  ).toHaveCount(0);
+  await expect(page.getByRole("link", { name: /原文|来源/ })).toHaveCount(0);
+  await expect(page.getByText("所有公司", { exact: true })).toHaveCount(0);
+  await expect(
+    page.locator('a[href*="/feed/company/"], a[href*="/feed/topic/"]'),
+  ).toHaveCount(0);
+  const updated = page.locator("header time");
+  await expect(updated).toHaveCount(1);
+  await expect(updated).toBeVisible();
+  const headerBox = (await page.locator("header").boundingBox())!;
+  const updatedBox = (await updated.boundingBox())!;
+  expect(updatedBox.x).toBeGreaterThan(headerBox.width / 2);
+  expect(updatedBox.y + updatedBox.height).toBeLessThanOrEqual(
+    headerBox.y + headerBox.height,
+  );
+  await expect(
+    page.getByRole("button", { name: "最新", exact: true }),
+  ).toHaveText("最新");
+  await expect(page.getByRole("heading", { level: 2 }).first()).toHaveText(
+    "最新文章",
+  );
   expect(await viewport.evaluate((e) => e.scrollWidth > e.clientWidth)).toBe(
     true,
   );
@@ -95,7 +116,7 @@ test("panels scroll independently and support keyboard, buttons and touch", asyn
     .poll(() => viewport.evaluate((e) => e.scrollLeft))
     .toBeGreaterThan(200);
   const previous = await viewport.evaluate((e) => e.scrollLeft);
-  await page.getByRole("button", { name: "向右切换面板", exact: true }).click();
+  await page.keyboard.press("ArrowRight");
   await expect
     .poll(() => viewport.evaluate((e) => e.scrollLeft))
     .toBeGreaterThan(previous + 200);
@@ -127,45 +148,101 @@ test("panels scroll independently and support keyboard, buttons and touch", asyn
   await expectNoDocumentOverflow(page);
 });
 
-test("each panel loads more in batches and detail links keep the project subpath", async ({
+test("scrolling appends one batch per bottom encounter and article titles open the publisher", async ({
   page,
   request,
 }) => {
   await page.goto("./");
   const latest = latestList(page);
   await expect(latest.locator("article")).toHaveCount(20);
-  await latest.getByRole("button", { name: /^加载更多/ }).click();
+  await latest.evaluate((e) => {
+    e.scrollTop = e.scrollHeight;
+  });
   await expect(latest.locator("article")).toHaveCount(40);
   await expect(page).toHaveURL(/page=2/);
+  await page.evaluate(
+    () =>
+      new Promise<void>((resolve) =>
+        requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+      ),
+  );
+  await expect(latest.locator("article")).toHaveCount(40);
+  const data = (await (await request.get("data/articles.json")).json())
+    .articles;
+  const counts = new Map<string, number>();
+  for (const article of data as { companyId: string }[])
+    counts.set(article.companyId, (counts.get(article.companyId) ?? 0) + 1);
+  const selected = [...counts.entries()].find(([, count]) => count > 20);
+  expect(
+    selected,
+    "The snapshot must contain a company with a second batch",
+  ).toBeTruthy();
+  const [companyId, companyCount] = selected!;
+  await page.locator(`#company-${companyId}`).click();
+  const selectedList = page.locator(`#panel-${companyId}`).getByRole("region");
+  await expect(selectedList.locator("article")).toHaveCount(20);
+  await selectedList.evaluate((e) => {
+    e.scrollTop = e.scrollHeight;
+  });
+  await expect(selectedList.locator("article")).toHaveCount(
+    Math.min(40, companyCount),
+  );
+  await expect(latest.locator("article")).toHaveCount(40);
+  await expect(page).toHaveURL(
+    (url) =>
+      url.searchParams.get("company") === companyId &&
+      url.searchParams.get("page") === "2",
+  );
   await page.reload();
-  await expect(latestList(page).locator("article")).toHaveCount(40);
+  await expect(selectedList.locator("article")).toHaveCount(
+    Math.min(40, companyCount),
+  );
   await page.goBack();
-  await expect(latestList(page).locator("article")).toHaveCount(20);
-  await page.goForward();
+  await expect(page).not.toHaveURL(/company=/);
   await expect(latestList(page).locator("article")).toHaveCount(40);
-  const original = latestList(page)
-    .getByRole("link", { name: /^阅读原文：/ })
-    .first();
+  await page.goForward();
+  await expect(selectedList.locator("article")).toHaveCount(
+    Math.min(40, companyCount),
+  );
+  const original = selectedList.locator("article h3 a").first();
+  const canonical = await original.getAttribute("href");
+  expect(canonical).toMatch(/^https?:\/\//);
   await expect(original).toHaveAttribute("target", "_blank");
   await expect(original).toHaveAttribute("rel", /noopener/);
-  await latestList(page).locator("article h3 a").first().click();
+  await expect(original.locator(".link-label")).toHaveCount(1);
+  const intercepted = new URL(canonical!).href;
+  await page.context().route(
+    (url) => url.href === intercepted,
+    (route) =>
+      route.fulfill({
+        contentType: "text/html",
+        body: "<title>Publisher article</title>",
+      }),
+  );
+  const popupPromise = page.waitForEvent("popup");
+  await original.click();
+  const popup = await popupPromise;
+  await popup.waitForURL(intercepted);
+  await popup.close();
+  const article = data.find(
+    (a: { canonicalUrl: string }) => a.canonicalUrl === canonical,
+  );
+  expect(article).toBeTruthy();
+  await page.goto(`./articles/${article.id}/`);
   await expect(page).toHaveURL(/\/ai-engineering-radar\/articles\/[^/?]+\/?$/);
   await expect(
     page.getByRole("heading", { name: "来源与发布信息" }),
   ).toBeVisible();
-  await expect(page.getByRole("link", { name: /阅读原文/ })).toBeVisible();
+  await expect(page.locator("h1 a")).toHaveAttribute("href", canonical!);
+  await expect(
+    page.getByRole("link", { name: /阅读原文|订阅这家公司|来源目录/ }),
+  ).toHaveCount(0);
   await page.reload();
   await expect(
     page.getByRole("heading", { name: "来源与发布信息" }),
   ).toBeVisible();
   await expectNoDocumentOverflow(page);
-  for (const path of [
-    "feed.xml",
-    "feed.atom",
-    "feed/company/meituan.xml",
-    "feed/company/meituan.atom",
-    "data/articles.json",
-  ])
+  for (const path of ["feed.xml", "feed.atom", "data/articles.json"])
     expect((await request.get(path)).ok()).toBe(true);
   await page.goto("./");
   await page.keyboard.press("Tab");
@@ -175,9 +252,10 @@ test("each panel loads more in batches and detail links keep the project subpath
   expect(await page.getByLabel(searchName, { exact: true }).count()).toBe(1);
 });
 
-test("domestic provenance, history labels and contribution destinations remain available", async ({
+test("domestic provenance stays public while the interface exposes only whole-project feeds", async ({
   page,
   request,
+  isMobile,
 }) => {
   const companies = (await (await request.get("data/companies.json")).json())
     .companies;
@@ -229,19 +307,41 @@ test("domestic provenance, history labels and contribution destinations remain a
         a.classification.topics.length === 0,
     ),
   ).toBe(true);
-  await page.goto("./sources/");
-  expect(await page.locator(".source-row").count()).toBeGreaterThanOrEqual(19);
-  expect(await page.getByText("历史渠道", { exact: true }).count()).toBe(4);
-  await expect(
-    page.getByRole("heading", { name: "百度智能云技术站 · CSDN", exact: true }),
-  ).toBeVisible();
-  await expect(page.getByText(/^最新收录文章/).first()).toBeVisible();
-  await expectNoDocumentOverflow(page);
+  expect((await request.get("sources/")).status()).toBe(404);
+  for (const path of ["feed/company/meituan.xml", "feed/company/meituan.atom"])
+    expect((await request.get(path)).status()).toBe(404);
   await page.goto("./");
+  await expect(page.locator('a[href*="/sources/"]')).toHaveCount(0);
+  await expect(
+    page.getByRole("link", { name: "全站 RSS 订阅", exact: true }),
+  ).toHaveAttribute("href", "/ai-engineering-radar/feed.xml");
+  const title = latestList(page).locator("article h3 a").first();
+  const underline = title.locator(".link-label");
+  const normalSize = await underline.evaluate(
+    (e) => getComputedStyle(e).backgroundSize,
+  );
+  expect(normalSize).toBe("0% 1px");
+  if (!isMobile) {
+    await title.hover();
+    await expect
+      .poll(() => underline.evaluate((e) => getComputedStyle(e).backgroundSize))
+      .toBe("100% 1px");
+    expect(
+      await underline.evaluate((e) => getComputedStyle(e).transitionDuration),
+    ).toBe("0.3s");
+  } else {
+    expect(
+      await underline.evaluate((e) => getComputedStyle(e).transitionDuration),
+    ).toBe("0s");
+  }
   await expect(
     page.getByRole("combobox", { name: "主题", exact: true }),
   ).toHaveCount(0);
   await page.getByRole("button", { name: "更多选项", exact: true }).click();
+  await expect(page.getByRole("menuitem", { name: /来源目录/ })).toHaveCount(0);
+  await expect(
+    page.getByRole("menuitem", { name: "全站 Atom 订阅", exact: true }),
+  ).toBeVisible();
   await page.getByRole("menuitem", { name: /关于项目/ }).click();
   await expect(
     page.getByRole("heading", { name: "About this project", exact: true }),
@@ -252,4 +352,10 @@ test("domestic provenance, history labels and contribution destinations remain a
   await expect(
     page.locator('a[href*="CONTRIBUTING.md"]').first(),
   ).toBeVisible();
+  await expect(
+    page.locator(
+      'a[href*="/sources/"], a[href*="/feed/company/"], a[href*="/feed/topic/"]',
+    ),
+  ).toHaveCount(0);
+  await expectNoDocumentOverflow(page);
 });

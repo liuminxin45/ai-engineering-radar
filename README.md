@@ -4,7 +4,7 @@
 
 A radar for AI engineering practice from teams building and operating real systems. Follow official publications in company columns, discover new approaches, and learn from implementation choices and lessons from production. Browse columns side by side on desktop or swipe between them on mobile. This initial release follows teams at Chinese companies. Full articles stay on their original sites.
 
-[网站](https://liuminxin45.github.io/ai-engineering-radar/) · [About / 关于](https://liuminxin45.github.io/ai-engineering-radar/about/) · [RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) · [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom) · [来源目录](https://liuminxin45.github.io/ai-engineering-radar/sources/)
+[网站](https://liuminxin45.github.io/ai-engineering-radar/) · [About / 关于](https://liuminxin45.github.io/ai-engineering-radar/about/) · [全站 RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) · [全站 Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom)
 
 ## 为什么做这个项目
 
@@ -16,12 +16,12 @@ AI Engineering Radar 把这些分散的发布渠道聚集起来，持续追踪�
 
 ## 如何使用
 
-- **并排追踪公司**：打开[阅读看板](https://liuminxin45.github.io/ai-engineering-radar/)，先看“最新”列，再横向浏览各公司的文章。PC 可以同时看多列，每列独立上下滚动；手机左右滑动切换，也可以点击顶部公司名称或底部箭头定位。
+- **并排追踪公司**：打开[阅读看板](https://liuminxin45.github.io/ai-engineering-radar/)，先看“最新”列，再横向浏览各公司的文章。PC 可以同时看多列，每列独立上下滚动；手机左右滑动切换，也可以点击顶部公司名称定位。
 - **带着问题查找**：搜索标题、摘要或作者，找到相关经验。手机点击搜索图标展开输入框；在更多菜单中切换最新或最早优先。
-- **回到原文学习**：点击标题查看文章详情、发布主体和收录信息，点击“原文”阅读完整实现与适用条件。
-- **持续追踪更新**：订阅[全站 RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) / [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom)，或在公司列菜单中订阅该公司的更新。
+- **回到原文学习**：点击文章标题，直接打开发布网站，阅读完整实现与适用条件。
+- **持续追踪更新**：订阅[全站 RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) / [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom)，统一追踪项目收录的更新。
 
-每列先显示 20 篇文章，滚动到底部可继续加载 20 篇。搜索、当前公司列和排序保存在链接中，支持刷新及浏览器前进后退，方便继续阅读或分享。
+每列先显示 20 篇文章，滚动到底部时自动追加 20 篇。搜索、当前公司列、排序和已加载批次保存在链接中，支持刷新及浏览器前进后退，方便继续阅读或分享。右上角显示数据更新时间。
 
 ## 阅读界面
 
@@ -39,7 +39,7 @@ PC：公司分列，横向浏览。
 
 来源包括国内公司自有技术站，也欢迎博客园、腾讯云开发者社区、阿里云开发者社区等第三方博客社区中的国内公司官方团队账号。公司归属依据具体发布主体核验，不按托管平台的域名推断。
 
-来源是否经过身份核验、是否启用、是否采集成功是三个独立状态，均可在来源目录查看。待核验账号可以继续补充官方证据；缺少文章目录的入口可以继续贡献适配器。
+来源是否经过身份核验、是否启用、是否采集成功是三个独立状态，记录在[来源验收表](docs/source-acceptance.md)和[公开来源 JSON](https://liuminxin45.github.io/ai-engineering-radar/data/sources.json)中。待核验账号可以继续补充官方证据；缺少文章目录的入口可以继续贡献适配器。
 
 来源还需要核查近期活跃度。HTTP 成功或能解析历史文章，不代表覆盖了近期更新。超过一个月没有新文章的渠道会人工复查。尚无可靠替代的过时来源暂停新增，保留历史；替代渠道已核验并真实采集后，移除指定旧源及仅由旧源支撑的文章，不按文章年龄自动删除。得物、阿里、字节、腾讯、网易、快手、蚂蚁和百度的 8 个旧渠道已完成替换。百度智能云技术站 CSDN 已依据团队原创内容、多平台连续同步及百度自有社区的对应关系完成人工核验并启用，企业认证徽标不是唯一依据。小米、OPPO、携程、小红书及快手更完整的长文渠道仍待补充，详见[来源核验记录](docs/source-research.md)。
 
@@ -91,7 +91,7 @@ pnpm exec playwright install chromium
 pnpm test:e2e
 ```
 
-浏览器验收服务器默认使用 `/ai-engineering-radar/`，运行对应测试前设置 `BASE_PATH=/ai-engineering-radar`、`SITE_URL=https://example.org` 并重新构建。验收覆盖横向浏览、列内滚动、搜索、加载更多、详情直达和 URL 恢复；包含桌面浅色、375px 手机深色及减少动态效果。
+浏览器验收服务器默认使用 `/ai-engineering-radar/`，运行对应测试前设置 `BASE_PATH=/ai-engineering-radar`、`SITE_URL=https://example.org` 并重新构建。验收覆盖横向浏览、列内滚动、搜索、触底自动加载、标题直达发布网站和 URL 恢复；包含桌面浅色、375px 手机深色及减少动态效果。
 
 ## 来源贡献与人工复核
 
@@ -114,17 +114,16 @@ We welcome PRs for official engineering sources at Chinese companies, including 
 
 所有路径均相对站点基路径。JSON 为公开快照，不接受服务端搜索或游标参数。
 
-| 路径                              | 内容           |
-| --------------------------------- | -------------- |
-| `/data/articles.json`             | 已发布文章索引 |
-| `/data/articles/{id}.json`        | 单篇元数据     |
-| `/data/companies.json`            | 公司目录       |
-| `/data/sources.json`              | 来源及检测状态 |
-| `/data/health.json`               | 最近采集快照   |
-| `/feed.xml`、`/feed.atom`         | 全站最近 50 篇 |
-| `/feed/company/{id}.xml`、`.atom` | 公司订阅       |
+| 路径                       | 内容           |
+| -------------------------- | -------------- |
+| `/data/articles.json`      | 已发布文章索引 |
+| `/data/articles/{id}.json` | 单篇元数据     |
+| `/data/companies.json`     | 公司目录       |
+| `/data/sources.json`       | 来源及检测状态 |
+| `/data/health.json`        | 最近采集快照   |
+| `/feed.xml`、`/feed.atom`  | 全站最近 50 篇 |
 
-订阅 ID 不随标题、URL 修改或站点域名变化。原文没有发布时间时使用发现时间，详情页明确说明。缓存及响应头由 GitHub Pages 管理。
+网站统一提供全站订阅。订阅 ID 不随标题、URL 修改或站点域名变化。原文没有发布时间时使用发现时间，详情页明确说明。缓存及响应头由 GitHub Pages 管理。
 
 ## 部署、故障与恢复
 
