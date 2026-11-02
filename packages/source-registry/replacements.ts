@@ -47,6 +47,21 @@ export const sourceReplacements = [
     companyId: "xiaomi",
     replacementIds: ["xiaomi-tech-site"],
   },
+  {
+    sourceId: "xiaomi",
+    companyId: "xiaomi",
+    replacementIds: ["xiaomi-tech-site"],
+  },
+  {
+    sourceId: "xiaomi-juejin",
+    companyId: "xiaomi",
+    replacementIds: ["xiaomi-tech-site"],
+  },
+  {
+    sourceId: "xiaomi-csdn-candidate",
+    companyId: "xiaomi",
+    replacementIds: ["xiaomi-tech-site"],
+  },
 ] as const;
 
 export function validateSourceReplacements(registry: Registry) {

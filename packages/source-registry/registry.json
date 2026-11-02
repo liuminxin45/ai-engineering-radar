@@ -422,28 +422,6 @@
       }
     },
     {
-      "id": "xiaomi",
-      "publisherId": "xiaomi-official",
-      "name": "小米 · xiaomi",
-      "entryUrl": "https://dev.mi.com/",
-      "url": "https://dev.mi.com/",
-      "priority": "B",
-      "adapter": "reference",
-      "platform": "official-site",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": ["https://dev.mi.com/"],
-        "note": "官方自有域名入口已确认，但尚无可用文章目录；仅作身份参考，不参与文章采集。",
-        "reviewedAt": "2026-11-01T00:00:00Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      }
-    },
-    {
       "id": "oppo",
       "publisherId": "oppo-official",
       "name": "OPPO · oppo",
@@ -977,32 +955,6 @@
       }
     },
     {
-      "id": "xiaomi-juejin",
-      "publisherId": "xiaomi-official",
-      "name": "小米云技术 · 掘金",
-      "entryUrl": "https://juejin.cn/user/676954893719742",
-      "url": "https://juejin.cn/user/676954893719742/posts",
-      "priority": "A",
-      "adapter": "reference",
-      "platform": "juejin-account",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://juejin.cn/user/676954893719742",
-          "https://tech.mi.com/"
-        ],
-        "note": "账号资料列出小米公司，公开声明内容已迁移至公众号小米技术，历史文章为小米云团队实践。稳定用户 ID 676954893719742；静态请求未得到可解析文章目录，仅保留身份与迁移参考。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["676954893719742"]
-    },
-    {
       "id": "xiaomi-tech-site",
       "publisherId": "xiaomi-official",
       "name": "小米 MiMo · 官方博客",
@@ -1028,29 +980,6 @@
         "backfillLimit": 50
       },
       "authorAllowlist": ["xiaomi-mimo"]
-    },
-    {
-      "id": "xiaomi-csdn-candidate",
-      "publisherId": "xiaomi-official",
-      "name": "小米技术 · CSDN 待核验",
-      "entryUrl": "https://blog.csdn.net/pengzhouzhou",
-      "url": "https://blog.csdn.net/pengzhouzhou",
-      "priority": "A",
-      "adapter": "reference",
-      "platform": "csdn-feed",
-      "verification": {
-        "status": "pending",
-        "evidenceUrls": ["https://blog.csdn.net/pengzhouzhou"],
-        "note": "发现显示名小米技术的账号 pengzhouzhou，但未取得企业认证或官方归属的充分证据；大量转载不能单独证明账号身份，禁止仅凭显示名启用。已继续查找掘金历史官方号和小米自有技术站。",
-        "reviewedAt": null
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["pengzhouzhou"]
     },
     {
       "id": "dewu-csdn",

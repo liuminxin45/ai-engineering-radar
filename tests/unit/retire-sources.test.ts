@@ -47,7 +47,7 @@ function fixture() {
   return { articles: [...articles, old], states };
 }
 describe("explicit source retirement", () => {
-  it("retires Xiaomi's old blog without removing MiMo articles or their stable IDs", () => {
+  it("retires Xiaomi's old blog and reference states without changing MiMo articles or IDs", () => {
     const source = registry.sources.find((s) => s.id === "xiaomi-tech-site")!;
     const articles: Article[] = [];
     for (let i = 0; i < 15; i++)
@@ -71,6 +71,14 @@ describe("explicit source retirement", () => {
     ];
     articles[0].locations.push(old.locations[0]);
     const states: SourceState[] = [
+      ...["xiaomi", "xiaomi-juejin", "xiaomi-csdn-candidate"].map(
+        (sourceId) => ({
+          sourceId,
+          status: "reference" as const,
+          discovered: 0,
+          consecutiveFailures: 0,
+        }),
+      ),
       {
         sourceId: "xiaomi-team-blog",
         status: "suspended",
@@ -89,7 +97,7 @@ describe("explicit source retirement", () => {
     const result = retireReplacedSources([...articles, old], states, registry);
     expect(result.articles.map((a) => a.id)).toEqual(ids);
     expect(result.removedArticles).toBe(1);
-    expect(result.removedStates).toBe(1);
+    expect(result.removedStates).toBe(4);
     expect(
       result.articles.every((a) =>
         a.locations.every((l) => l.sourceId === source.id),
@@ -98,7 +106,11 @@ describe("explicit source retirement", () => {
     expect(result.states.map((s) => s.sourceId)).toEqual([source.id]);
     validateRelations(result.articles, result.states, registry);
     expect(() =>
-      retireReplacedSources([...articles, old], states.slice(0, 1), registry),
+      retireReplacedSources(
+        [...articles, old],
+        states.filter((s) => s.sourceId !== source.id),
+        registry,
+      ),
     ).toThrow("successful collected article");
   });
   it("removes only retired-source articles and states, preserving IDs and other history", () => {

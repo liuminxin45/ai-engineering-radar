@@ -35,8 +35,20 @@ describe("domestic community registry", () => {
       expect(s.verification.status).toBe("verified");
     }
     expect(source("bilibili-csdn").authorAllowlist).toEqual(["bilibili_TC"]);
-    expect(source("xiaomi-csdn-candidate").crawl.enabled).toBe(false);
     expect(source("tencent").adapter).toBe("reference");
+  });
+  it("keeps only the MiMo official site registered for Xiaomi", () => {
+    const publishers = new Set(
+      registry.publishers
+        .filter((p) => p.companyId === "xiaomi")
+        .map((p) => p.id),
+    );
+    const sources = registry.sources.filter((s) =>
+      publishers.has(s.publisherId),
+    );
+    expect(sources.map((s) => s.id)).toEqual(["xiaomi-tech-site"]);
+    expect(sources[0].entryUrl).toBe("https://mimo.xiaomi.com/");
+    expect(sources[0].crawl.enabled).toBe(true);
   });
 });
 
