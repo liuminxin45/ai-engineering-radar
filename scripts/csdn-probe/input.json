@@ -1,0 +1,1033 @@
+{
+  "validationOnly": true,
+  "frozenAt": "2026-11-02T10:03:06.406Z",
+  "snapshotSha256": "033c763633018c56b32b8ea1209858771dc7f2745900bd97c6cd34ead0d0e25a",
+  "articles": [
+    {
+      "id": "00a8683d9bb25c27803c",
+      "title": "百度百舸第一时间适配 RLinf v0.4，持续建设具身智能 AI Infra 全链路能力",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/168876569",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "基于强化学习的仿真真机协同训练。对应 RLinf 团队被 CoRL 2026 接收的 RL-Co 方法：在仿真环境中用 PPO 做强化学习，同时在真机轨迹上做 SFT，两种训练信号放进同一个优化循环，既提升仿真任务成功率，又保留真机数据带来的先验。真机工程更模块化：全新模块化真机接口（rlinf.robotics）将机械臂、灵巧手、相机、移动底盘与遥操作外设抽象为即插即用的「乐高积木」，硬件驱动与任务逻辑彻底解耦，换本体、改构型或跨节点部署时，上层任务与策略代码「零改动」。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:32.716Z"
+    },
+    {
+      "id": "03e59a2e3a2fa73f842f",
+      "title": "DB-GPT 0.7.5 版本更新：基于 Falcon 评测集的Text2SQL评测体系全面升级，支持LLM/Agent两种评测模式和多环境评测",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/158068105",
+      "sourceId": "ant-data-csdn",
+      "description": "在ES支持向量检索的基础上，新增全文检索能力，提升RAG的检索召回能力。扩展Neo4j 数据库，进一步提升 RAG在复杂知识关系处理上的能力。V0.7.5 版本新增。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:59.936Z"
+    },
+    {
+      "id": "044f2ee0f532b2079028",
+      "title": "快手可图联合清华大学提出VQRAE, 首个能同时产生连续表征和离散表征的统一tokenizer!",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/155934028",
+      "sourceId": "kuaishou-csdn",
+      "description": "快手可图联合清华提出的VQRAE技术，直接打造了首个能同时产生连续+离散表征的统一tokenizer，彻底打破两者的“语言隔阂”！ 核心亮点速码： ✅ 单编码器架构超高效 ✅ 业内首个高维全利用率码本 ✅ 两阶段训练平衡满分",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:05.396Z"
+    },
+    {
+      "id": "04be32010b750d86f873",
+      "title": "2025年哔哩哔哩技术精选技术干货",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/156462674",
+      "sourceId": "bilibili-csdn",
+      "description": "一键收藏2025年哔哩哔哩技术最受欢迎的20篇文章！",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:03.713Z"
+    },
+    {
+      "id": "059fdc00d9c983fd2972",
+      "title": "大模型推理显存优化系列(4)：eLLM-大模型推理中的弹性显存管理和优化",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/149347243",
+      "sourceId": "ant-data-csdn",
+      "description": "本文将介绍eLLM相关技术挑战、总体设计和初步性能评估",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:17.793Z"
+    },
+    {
+      "id": "061405615501a5e681fa",
+      "title": "PFS L3 技术架构解析：为 AI 生产负载全新设计的并行文件存储",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/164122718",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "前面介绍的五大升级路径，已经在后训练等真实生产场景中完成规模化落地。下面分享一个来自大模型后训练强化学习场景的实践案例，主题是从本地准备加手工同步，走向统一共享存储加自动容错。先看旧模式。在早期使用方式下，用户提交作业、占用 GPU 卡之后，第一件事是从远端把代码、数据、模型手动下载到本地，这一步大约要一个小时；下载完还要人工把数据从一个节点同步到其他所有节点，才能启动训练。这里有三个系统性的问题：一是准备期 GPU 占着卡但完全空转；二是漏同步某台机器这类低级错误很常见，排查起来却要花大量时间；",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:48.529Z"
+    },
+    {
+      "id": "09e591bb1e706473a7f5",
+      "title": "vivo 广告小游戏：从“写代码“到“说需求“",
+      "url": "https://blog.csdn.net/vivo_tech/article/details/164113486",
+      "sourceId": "vivo-csdn",
+      "description": "在广告营销场景中，小游戏的生命周期极短——从策划到上线往往只有数天。传统开发模式下，需求沟通、素材制作、编码联调、测试上线的每个环节都是瓶颈。本文基于 vGame 平台的实践经验，详细阐述如何通过 AI Agent、结构化场景描述和自动化管线，将广告小游戏的开发效率提升一个数量级。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:49.115Z"
+    },
+    {
+      "id": "0f1a036926ac113d2156",
+      "title": "OpenAI、Anthropic 接连暴露 Agent 风险，企业该如何构建 Agent 安全体系？",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/163830727",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "7 月，OpenAI 在一项内部模型能力测试中，主动关闭模型的安全拒绝机制，并将其置于隔离沙箱内自由运行。结果，模型利用环境漏洞突破沙箱限制，进一步打通公共互联网，对外部系统发起了一系列自动化攻击。几乎同一时间，Anthropic 也被曝出 Claude Code 存在被滥用于自动化攻击链路的风险。这些事件并非偶然。回顾 PC 时代、移动互联网时代的发展历程，每一次新技术开始大规模应用，安全问题都会随之浮现。今天，Agent 正走到同样的阶段。只是，Agent 带来的挑战比以往更加复杂。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:50.751Z"
+    },
+    {
+      "id": "14052d6e1604a42e6cef",
+      "title": "【公共云三十问 之三十】拥抱AI，企业如何建设面向智能体的专属云？",
+      "url": "https://blog.csdn.net/devcloud/article/details/164477899",
+      "sourceId": "huawei-csdn",
+      "description": "企业可分阶段建设覆盖开发、运行、运营及安全的一体化智能体平台——从构建一站式、高低码协同的智能体开发平台，到打造高性能、极致弹性的运行时环境，再到搭建AgentOps驱动的持续运营与运维体系，同时构建端到端、多层次的全链路安全防护体系。在数据湖建设方面，遵循“存量复用、平滑演进、AI导向、分步迭代”原则，分三阶段推进——打造AI多模数据湖核心能力、完成存算分离与统一元数据管理、实现闭环赋能全面支撑智能体规模化落地，在保护既有投资的前提下将传统数据平台转型为AI数据专属供给平台。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:43.996Z"
+    },
+    {
+      "id": "155377fc2b7bdf1c81d3",
+      "title": "图索引性能提升 400%：详解 VSAG 向量检索框架",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/156419937",
+      "sourceId": "ant-data-csdn",
+      "description": "VSAG 提出了一个开源的近似最近邻搜索（ANNS）框架，可广泛应用于大多数基于图的索引结构。VSAG 通过软件预取、确定性访问的贪心搜索以及部分冗余存储（PRS）等技术，显著降低了缓存未命中率，提升了内存访问效率。框架设计了三层参数自动调优机制，根据不同参数的调优复杂度和影响层级，分别进行环境级、查询级和索引级的自适应优化。同时，VSAG 融合量化技术和选择性重排序策略，将低精度与高精度距离计算有机结合，在保证检索精度的同时大幅减少计算开销。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:03.905Z"
+    },
+    {
+      "id": "170496a8238a929ced8c",
+      "title": "B站 Index LLM 团队论文开源：170亿次真实用户交互背后的UGC视频评估新范式",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/161900033",
+      "sourceId": "bilibili-csdn",
+      "description": "这项工作已被 ACL 2026 Main Conference 收录，是bilibili Index LLM Team在UGC内容理解方向的最新成果。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:54.434Z"
+    },
+    {
+      "id": "180fcd0930fbbcc70c50",
+      "title": "KAT-Coder-Pro V2：玩转龙虾，吃透美学",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/159547871",
+      "sourceId": "kuaishou-csdn",
+      "description": "在 AI Coding 的真实落地场景中，以 OpenClaw 为代表的 AI Agent 框架持续高频迭代，不断引入新工具与新协议，这对模型的脚手架泛化能力提出了巨大挑战。工具调用失败、多步任务中断、指令理解偏差，是模型在实际使用中频繁暴露的问题，而在高频使用场景下，这些问题会被成倍放大，直接影响用户体验。模型能力的真正边界，不只是代码生成质量是否过关，更在于面对工具不断扩展、任务链路持续拉长的复杂环境时，能否在长程轨迹中始终准确理解用户意图，并在不同 Agent 框架下保持稳定、一致的表现。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:58.801Z"
+    },
+    {
+      "id": "1b29689e928f47056be0",
+      "title": "开发者小技巧|IAM配置，让码道代码智能体连续30天免登录",
+      "url": "https://blog.csdn.net/devcloud/article/details/165619468",
+      "sourceId": "huawei-csdn",
+      "description": "案例介绍。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:42.693Z"
+    },
+    {
+      "id": "1f056f2307f78f818243",
+      "title": "告别重复手工迁仓，码道MCP+Skill实现仓库批量迁移",
+      "url": "https://blog.csdn.net/devcloud/article/details/164370216",
+      "sourceId": "huawei-csdn",
+      "description": "案例介绍。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:44.880Z"
+    },
+    {
+      "id": "2522cee002527caf87ee",
+      "title": "SQL 玩家集结！数据准备全新节点【自定义SQL】上线，复杂 ETL 逻辑一键“连招”",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/152609271",
+      "sourceId": "netease-csdn",
+      "description": "自定义 SQL 节点与排序覆盖更新模式的推出，为有数 BI 数据准备模块注入了关键能力：前者强化了复杂数据处理的灵活性与自主性，后者解决了大数据量下增量同步的性能痛点，二者共同提升了数据处理的效率、精度与易用性，帮助用户更便捷地实现数据模型构建与同步。某制造企业拥有多个独立业务系统（如生产管理系统、库存系统、销售系统），各系统数据格式、业务逻辑差异大（例如生产系统用“产品编码”，销售系统用“商品 ID”），需整合所有数据以形成统一的业务视图，支撑生产计划与销售策略调整。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:15.229Z"
+    },
+    {
+      "id": "256ca8162e31ef750b9c",
+      "title": "企业AI落地为什么卡在数据上？从“三不通“到“112N“架构的破解思路",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/163570574",
+      "sourceId": "netease-csdn",
+      "description": "7月30日，由网易智企主办的“2026企业AI Agent规模化落地峰会”在杭州举行。来自国央企、金融、制造等领域的企业管理者、数字化负责人和行业专家齐聚现场，围绕AI Agent如何走出概念、进入真实业务展开交流。网易智企·数帆解决方案负责人张望带来主题演讲《AI Agent规模化落地：从“能干活”到“真上岗”》。相比讨论模型参数和技术概念，他把重点放在了一个更实际的问题上：企业如何把数据准备好，让AI真正读懂业务、分析问题并辅助决策？",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:51.841Z"
+    },
+    {
+      "id": "2d55a7d1296910a5f9d7",
+      "title": "极致 KVCache 推理服务效能优化与多芯软硬协同实践",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/168028229",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "本文整理自 26 年 9 月 22 日 SGLang Meetup 北京站活动的同名主题演讲。在公众号回复「SGLang-Kunlun 2609」，可以获得此次 Meetup 上午的 3 个演讲主题材料。大家好，我是来自百度智能云的张彦哲。今天我和同事王凯一起，分享我们在前缀缓存方向上的一些经验。今天的分享分为三部分。首先，我会介绍百度百舸在 KVCache 命中率和 KVCache 性能损耗优化两方面开展的一些通用工作；接下来由王凯介绍百度百舸在多芯适配工作。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:37.060Z"
+    },
+    {
+      "id": "2ee9e20973dc490c6018",
+      "title": "让推理服务稳定可控，从负载治理到 KVCache 全域感知",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/168653897",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "回顾整套方案，我们围绕流量、负载和 Cache 建立了三层稳定性能力。在流量侧，通过流量分级管控、冷启动加速和事件驱动弹性，将客户有感的可用性抖动次数降低 80%，并显著缩短扩容准备时间。在负载侧，通过动态分桶与 KV Cache 无感跨桶热迁移，解决静态负载不均与运行期负载漂移，使 Decode 吞吐提升约 40% 至 50%，Prefill 吞吐提升约 20% 至 30%。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:33.807Z"
+    },
+    {
+      "id": "2f9973dfddb6bc6bd649",
+      "title": "视频生成推理加速实践：基于 torch.compile 的整图编译优化",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/157438741",
+      "sourceId": "bilibili-csdn",
+      "description": "视频生成模型的推理优化是一个多层次、系统性的工程挑战。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:01.118Z"
+    },
+    {
+      "id": "31ccf3cefb978b37eae6",
+      "title": "EasyCopilot之数据质量规则智能推荐——数据治理，快马加鞭",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/151766393",
+      "sourceId": "netease-csdn",
+      "description": "数据质量中心作为EasyData中的数据治理模块产品之一，通过事前定义监控规则、事中监控数据的生产过程、事后评估和问题追溯，实现数据质量问题发现的“全面化、自动化、在线化”，从而将业务规范落实到数据开发的每一环节，围绕DAMA理论的完整性、一致性、准确性、有效性、唯一性和及时性六大维度监控数据质量问题，为企业提供数据全生命周期的监控能力。当我们未手动输入补充监控要求时，点击开始生成，大模型将直接根据表的元数据，包括表信息、字段信息、规则模板等，开始解析并生成对应规则，推荐的规则会尽量覆盖每一个字段。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:15.926Z"
+    },
+    {
+      "id": "32038f9aeb0132c5eb80",
+      "title": "SABER: 模式切换的混合思考模型训练范式",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/156061794",
+      "sourceId": "bilibili-csdn",
+      "description": "bilibili Index-llm Team提出 SABER，一种让大模型具备可切换、可控、并受 token 预算约束的推理能力的强化学习框架。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:04.313Z"
+    },
+    {
+      "id": "324c3e48a5cf6fa58760",
+      "title": "快手技术沙龙报名｜Data Agent：数据生产与智能决策新范式",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/164336081",
+      "sourceId": "kuaishou-csdn",
+      "description": "免费报名！快手技术沙龙第5期即将开讲！",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:47.241Z"
+    },
+    {
+      "id": "3407014b2326e5e349fc",
+      "title": "裕同科技携手网易数帆，共创包装产业数字化新未来",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/153473063",
+      "sourceId": "netease-csdn",
+      "description": "此次合作，不仅是裕同科技与网易数帆在数据能力与产业实践上的强强联合，更标志着包装业数字化转型迈入系统化、智能化深度融合的新阶段。本次裕同科技与网易数帆合作项目的目标旨在构建覆盖全集团所有业务都适用的数字化运营平台，以“一纵一横”为运营平台构建蓝图，实现纵向全组织覆盖，横向业务板块圈覆盖。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:14.278Z"
+    },
+    {
+      "id": "3500f797c6b2b70aa83c",
+      "title": "用10项技术专利打透一个数据分析创新项目--Ant DataSage星才项目",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/159690256",
+      "sourceId": "ant-data-csdn",
+      "description": "作者：刘裕，蚂蚁集团-数据分析及智能化。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:57.914Z"
+    },
+    {
+      "id": "35154daffba6f256f7c4",
+      "title": "可灵团队提出OmniSync：无限时长、强id保持、遮挡情况下强鲁棒性，视频口型编辑新突破！",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/155771505",
+      "sourceId": "kuaishou-csdn",
+      "description": "换配音总对口型失败、数字人直播几小时就脸崩、遮挡场景下编辑口型直接崩效果？快手 OmniSync 直接用三大创新把这些痛点全攻克，重新定义了口型编辑的行业标准！ ✅ 无 mask 训练范式，彻底解耦口型与身份 ✅ 流匹配推理，实现无限时长不漂移 ✅ 动态时空 CFG，精准又不毁纹理",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:06.478Z"
+    },
+    {
+      "id": "3686952fb359052f76bd",
+      "title": "EMNLP 2026 Oral｜HOMURA：面向时间受限场景的 LLM 翻译强化学习优化",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/167393564",
+      "sourceId": "bilibili-csdn",
+      "description": "当前HOMURA已经大规模应用于bilibili视频原声翻译场景中，为实现高质量、高合规性的时间受限翻译提供了可行的技术路径。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:38.741Z"
+    },
+    {
+      "id": "36a9538934880dcdeeac",
+      "title": "免费报名｜生成式推荐技术如何实现体系化演进？快手技术沙龙第四期开启！",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/161568438",
+      "sourceId": "kuaishou-csdn",
+      "description": "6月13日，快手技术沙龙第四期将围绕「快手生成式推荐技术的体系演进——统一基座、池化调度与场景实践」展开分享，欢迎关注推荐算法、搜索技术与生成式应用的同学报名交流！从单点优化走向全链路协同，从局部效果提升走向架构能力沉淀，从场景定制走向可复用、可扩展的统一技术底座，生成范式带来的变化，正在重塑推荐系统的设计逻辑。当生成式技术持续深入推荐、搜索与广告系统，推荐架构也在加速走向「统一基座、统一调度、统一生成」的体系化演进。如何在复杂业务场景中完成这一跃迁，正在成为推荐技术演进的核心命题。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:54.638Z"
+    },
+    {
+      "id": "38b261fd5130278650b0",
+      "title": "“对齐”驱动增长：快手Align³GR广告生成式推荐大模型",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/155741743",
+      "sourceId": "kuaishou-csdn",
+      "description": "短视频广告推荐中常存在用户真实需求与广告内容、历史点击行为脱节的 “错位” 问题。快手推出的 Align³GR 广告生成式推荐大模型，以 “对齐” 技术为核心破解该难题，通过从基础对齐工具 DAS 到进阶大模型 Align³GR 的两步关键进化，让推荐系统同时读懂广告内容、把握用户真实偏好并契合平台与商家诉求，最终实现用户看得顺眼、商家获得效果、平台提升收益的三方共赢。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:06.972Z"
+    },
+    {
+      "id": "397dc398c9ecba676363",
+      "title": "AAAI 2026｜基于思维链与强化学习的可解释多模态广告审核护栏",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/157505623",
+      "sourceId": "kuaishou-csdn",
+      "description": "你是否刷到过这样的短视频广告：如何在家躺着日赚几百块”、“通过手相预测未来姻缘”。在快手商业化广告素材审核过程中，快手商业化生态与体验团队每天也会拦截大量的风险素材。为解决这一痛点，快手商业生态与体验算法团队提出了BLM-Guard，这是一个专为高风险短视频广告设计的可解释性多模态审核框架。 ✨核心亮点： 🧠【像审核员一样思考】 📌【动态策略自适应】 📊 【动态策略自适应】",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:00.623Z"
+    },
+    {
+      "id": "3aaad404bdaf7fac66ee",
+      "title": "报告推送支持预警调度，助力业务异常高效响应",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/152668238",
+      "sourceId": "netease-csdn",
+      "description": "无论是大促监控的策略敏捷调整，还是物流链路的问题快速定位，亦或是核心指标的风险即时管控，都能通过“预警 + 报告”的一体化触达，将异常响应效率提升 30% 以上，减少人工盯守的时间消耗，同时为决策提供直观的数据依据。该功能基于现有推送模块构建，将预警机制与报告内容深度融合，实现“预警触发即同步推送完整报告”，让业务人员能够及时获取异常数据的完整可视化报告，避免定时推送可能产生的信息滞后，大幅提升数据异常的响应效率与分析精准度。打开目标报告的“推送设置”界面，开启依赖推送后，即可找到“图表预警触发”选项；",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:14.779Z"
+    },
+    {
+      "id": "3d3ff7894423c23b6ec5",
+      "title": "使用Ray进行大规模并行智能体仿真",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/152330243",
+      "sourceId": "ant-data-csdn",
+      "description": "本文展示了如何借助 Ray 实现大规模智能体仿真，以生成智能体轨迹、评估智能体性能并训练智能体。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:15.777Z"
+    },
+    {
+      "id": "3ea67cb7bd5c1ff0e28a",
+      "title": "GPU隔离技术的分析与改进",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/160596994",
+      "sourceId": "bilibili-csdn",
+      "description": "本文基于NVIDIA场景，通过分析阐述业内隔离技术方案，引出他们的优势与缺陷，进而提出B站在隔离技术上的改进思路。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:56.141Z"
+    },
+    {
+      "id": "3f2346e337c1a8afe0c8",
+      "title": "我在蚂蚁数据团队的Spec Coding实践：9步闭环让AI编程从个人好用走向团队可控",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/161927854",
+      "sourceId": "ant-data-csdn",
+      "description": "规范驱动开发（Spec-Driven Development，以下简称SDD）可以理解为 AI 时代的一种研发方法重构：它将之前Vibe过程中的“需求直接传递到代码”的理念，升级为“需求定义—规范建模—文档沉淀—实现与验证”的闭环。其关键不在于增加文档和规范环节，而在于让结构化、可执行、可验证的规范成为开发过程中的统一依据，作为需求、设计、实现和验收之间的事实基线，减少对零散对话、口头说明和个人经验的依赖。SDD可以理解为一种把决策前置、把上下文持久化的开发方式，它和过去那种文档流程不太是一回事。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:53.540Z"
+    },
+    {
+      "id": "434fdc5542f837dc97fb",
+      "title": "EasyData AI 化改造：Agent 如何安全接管数仓？",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/167491044",
+      "sourceId": "netease-csdn",
+      "description": "这也是数据平台接入 Agent 后，需要解决的一个实际问题：查询状态、修改配置、重跑任务都能通过接口完成，但什么时候可以调用、调用前检查什么、执行后如何验证，需要有明确依据。安装 EasyData CLI、配置访问凭据并加载技能后，团队可以在支持命令行工具调用的 Agent 环境中开展工作，查看命令输出、组织批处理流程或加载自定义技能。对团队来说，验收一条 Agent 流程时，除了检查正常情况下能否完成，也需要检查：信息不全时如何处理、执行失败后如何继续、超出授权范围时能否停止。CLI 是命令行工具。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:38.150Z"
+    },
+    {
+      "id": "43db456d003bf637e04b",
+      "title": "记忆不是存历史，而是治理未来行动｜KDC 系列 04",
+      "url": "https://blog.csdn.net/vivo_tech/article/details/168752131",
+      "sourceId": "vivo-csdn",
+      "description": "记忆的价值不在于保存更多历史，而在于决定哪些历史仍然可以影响未来的判断与行动。本文把记忆放入形成、强化、衰减、冲突、遗忘、迁移和归档的生命周期，并进一步说明反馈验证与错误归因如何帮助系统修正知识、记忆、推理和治理策略。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:37.656Z"
+    },
+    {
+      "id": "4a5534fbf7c17ff1b89a",
+      "title": "LakeAgent实战 | 业务分析篇从一句提问到业务分析",
+      "url": "https://blog.csdn.net/devcloud/article/details/169164752",
+      "sourceId": "huawei-csdn",
+      "description": "本文以“订单金额变化”分析为例，展示LakeAgent如何通过自然语言提问，结合DataArtsStudio的数据资产与专业技能，帮助业务人员快速定位数据、生成SQL、追踪血缘、生成报告。从问题出发，逐步实现数据发现、变化洞察、原因追溯与团队协作，最终形成可复用的分析流程与企业规则，显著提升数据分析效率与一致性。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:30.791Z"
+    },
+    {
+      "id": "4b0489f791cb28ea578c",
+      "title": "多芯插件机制与 SGLang-Kunlun 最佳实践",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/166842692",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "SGLang 社区现在已经上百万行代码。目前支持 CUDA、ROCm、NPU、XPU、MUSA 等多种硬件后端，社区还在不断接新的进来。听上去很繁荣，但后端一多，主仓就被拖得越来越重。每加一种硬件，attention、KV pool、graph runner、量化、通信这些实现就散落主仓各处，改一处通用逻辑得照顾所有硬件，新功能想进来也越来越难。同时，要让一个后端持续可用，需要完整的持续集成覆盖率和维护者持续投入，社区很难为每个后端都提供这样的保障。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:39.430Z"
+    },
+    {
+      "id": "50a787d326e629d22ab6",
+      "title": "【公共云三十问 之二十九】国计民生之制造：制造云如何重塑数智时代的新质生产力？",
+      "url": "https://blog.csdn.net/devcloud/article/details/164477722",
+      "sourceId": "huawei-csdn",
+      "description": "平台打通软件交付的完整路径，覆盖需求管理、代码托管、代码检查、编译构建、制品仓库、部署、测试等关键环节，支持大模型能力融入研发全流程，实现从需求到交付的端到端管理。通过构建“研发一朵云”，方案打破地域与组织壁垒，实现跨团队协同开发，有效缩短软件交付周期，助力工业制造企业从“传统研发”走向“敏捷研发”，加速数智化转型进程。当制造云真正成为数据流通的平台、AI创新的底座，公共云的社会价值将从基础设施层向生产场景层持续延伸，为新型工业化建设和制造强国战略注入源源不断的动力，重塑数智时代的中国制造新质生产力。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:44.388Z"
+    },
+    {
+      "id": "5222290d9f421bcbb5df",
+      "title": "从JS云函数到MCP：打造跨平台AI Agent工具的工程实践",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/155826363",
+      "sourceId": "bilibili-csdn",
+      "description": "构建 AI 工具生态这件事上，过去一年我们做了不少尝试。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:05.889Z"
+    },
+    {
+      "id": "52cc85bcacc0476c1ea1",
+      "title": "大模型训练推理优化(5)： FlexLink —— NVLink 带宽无损提升27%",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/150952195",
+      "sourceId": "ant-data-csdn",
+      "description": "本期我们将介绍蚂蚁集团ASystem团队在大模型通信优化上的新工作FlexLink，旨在通过动态聚合多路通信（NVLink，PCIe，RDMA），在H800等典型硬件上将典型通信算子如（AllReduce, All Gather）吞吐提升最高达27%，尤其适合大模型长序列推理（Prefill阶段），及训练等通信密集的带宽bound场景。多通道并发传输：聚合NVLink，PCIe，RDMA网卡等多个物理上独立的传输通道，将一次大的通信传输操作，拆分到多个链路并发执行，以提高总带宽。这种模式虽简洁高效，却。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:17.441Z"
+    },
+    {
+      "id": "549e334d8da8e5c56bc2",
+      "title": "效果&性能双突破！快手 OneSug 端到端生成式框架入选 AAAI 2026",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/157252993",
+      "sourceId": "kuaishou-csdn",
+      "description": "在电商平台搜索“苹果”，系统会推荐“水果”还是“手机”？短短一个词，背后承载了完全不同的购买意图。而推荐是否精准，直接影响用户的搜索体验，也影响平台的转化效率。基于上述问题，快手在业界首次提出端到端的生成式统一查询推荐框架——OneSug。 📚 方法简介：OneSug 的三大核心模块 「Prefix-Query表征增强模块」 「统一的Enc-Dec生成架构」 「用户行为偏好对齐（RWR）」",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:01.326Z"
+    },
+    {
+      "id": "588a3dae4c0d7a131b84",
+      "title": "从一键检测到 AI 修复：我们如何把无障碍检查做进研发流程",
+      "url": "https://blog.csdn.net/vivo_tech/article/details/163719331",
+      "sourceId": "vivo-csdn",
+      "description": "本文介绍一套覆盖Web端、Vue编码阶段和Android App真机页面的检测工具链：Web端覆盖PC页面与H5页面，Chrome插件发现运行时问题；VS Code插件前置检测并结合大模型辅助修复；桌面端工具基于ADB、截图和 UI XML完成App检查，帮助团队形成质量闭环。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:51.347Z"
+    },
+    {
+      "id": "592bd441d7fe1960a6ff",
+      "title": "RLinf 精度对齐 + 百度百舸全链路优化：OpenPI PyTorch 训练吞吐提升 2.37 倍",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/163946123",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "经过 RLinf 的精度对齐与百度百舸的 AI Infra 全链路工程优化，OpenPI Pi0.5 在国内主流 GPU（无 NVLink、无 HPN）环境上，单机 8 卡训练吞吐从 74.20 sps 提升至 175.57 sps，达到 2.37 倍；单个 epoch 训练时间从 61.4 分钟缩短至 26.0 分钟；训练精度与基线完全一致；32 机 256 卡规模下线性扩展比保持 91% 以上，集群算力得到充分释放。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:49.610Z"
+    },
+    {
+      "id": "5a119bfce979f698acef",
+      "title": "突破数据发布难题！EasyData 实现血缘级精准发布",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/150549568",
+      "sourceId": "netease-csdn",
+      "description": "以Hive表作为源头资源时，上游1层的资源包含：以该Hive表作为输出表的离线开发任务/离线同步任务、该Hive表的直接上游Hive表，下游1层的资源包含：以该Hive表作为输入表的离线开发任务/离线同步任务、该Hive表的直接下游Hive表、使用该Hive表的数据服务API。只加载活跃血缘链路上的资源，不加载静默血缘链路上的资源。举个例子，如表a的上游1层静默血缘是表2，表2的上游1层活跃血缘是表3，由于表2不在表1活跃血缘的添加资源范围内，会连带导致表2的上游活跃血缘表3也不在添加资源范围内；",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:18.262Z"
+    },
+    {
+      "id": "5f6fe01c083d6dc36d0b",
+      "title": "OpenSPG/KAG 0.8发布：可配置知识库索引 x 拥抱接入MCP x 系统接口完善，多跳问答效果持续领先",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/151176189",
+      "sourceId": "ant-data-csdn",
+      "description": "我们正式发布KAG 0.8版本，本次更新旨在持续提升大模型利用知识库推理问答的一致性、严谨性和精准性，并引入了多项重要功能特性。首先，我们升级了KAG 知识库的能力。扩展了私域知识库（含结构化、非结构化数据）、公网知识库 两种模式，支持通过MCP 协议引入LBS、WebSearch 等公网数据源。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:16.275Z"
+    },
+    {
+      "id": "61828ed3e11705e39c8f",
+      "title": "官宣：Ray 正式加入 PyTorch 基金会",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/154191879",
+      "sourceId": "ant-data-csdn",
+      "description": "https://www.anyscale.com/blog/ray-by-anyscale-joins-pytorch-foundation 译文",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:08.844Z"
+    },
+    {
+      "id": "625e46e724c36818a153",
+      "title": "从“截图大法”到真实交互：B站专栏视频卡的技术革命",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/158929047",
+      "sourceId": "bilibili-csdn",
+      "description": "回望 B 站富文本编辑器的演进史，我们经历了一个从“无”到“有”，再从“有”到“优”的过程。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:58.996Z"
+    },
+    {
+      "id": "627ba44491d424c18653",
+      "title": "VINS-120K: 基于大规模4K数据集的超高清图像编辑 | CVPR 2026",
+      "url": "https://blog.csdn.net/vivo_tech/article/details/164114672",
+      "sourceId": "vivo-csdn",
+      "description": "4K+图像编辑新突破！针对数据匮乏与细节建模难题，我们发布首个指令式超高分辨率编辑数据集 VINS-120K（含12万精筛4K三元组）。同时提出高频感知适配策略，将预训练低分辨率模型轻松扩展至UHR领域，并配套评测基准 VINS-4KEval。显著提升编辑细节与纹理真实感！",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:48.723Z"
+    },
+    {
+      "id": "65c1548a030e0d9c48a3",
+      "title": "游戏数据分析Agent的全栈架构演进",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/158703008",
+      "sourceId": "bilibili-csdn",
+      "description": "本文章主要聚焦于最核心的如何落地Agent。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:59.443Z"
+    },
+    {
+      "id": "6a38c5bd79c8759c75bf",
+      "title": "NeurIPS 2025 | 快手联合南开提出情感树推理新方法，显著提升多模态大模型情感理解能力",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/155612185",
+      "sourceId": "kuaishou-csdn",
+      "description": "你是否希望AI不仅能“看见”画面，更能“读懂”人心？传统方法在分析视频情感时，往往只能进行基础分类，难以理解复杂情感的动态变化。针对这一挑战，快手可灵团队与南开大学提出了创新解决方案——VidEmo，让AI首次实现“情智兼备”的情感推理。 🧠 核心创新：像人一样“分步推理” 研究团队提出了一个基于情感线索引导的树状推理框架。VidEmo不再试图一步到位，而是模拟人类的认知过程，分三个阶段层层递进： 🌟感知基础属性 🌟分析表情信号 🌟综合推断高层情感",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:07.167Z"
+    },
+    {
+      "id": "6a8949b10b7dd25890d1",
+      "title": "如何使用RDS Supabase后端BaaS能力：创表即生成API（Database Data API）",
+      "url": "https://blog.csdn.net/devcloud/article/details/168656475",
+      "sourceId": "huawei-csdn",
+      "description": "认证、存储、实时推送、数据库API——4个后端模块，传统开发要数周。本系列逐个拆解，首篇聚焦数据库API（Database Data API）：建表即得 API，无需手写后端。小张，AI创业公司的全栈工程师。老板让他做个产品目录页，展示产品与价格、支持上下架。传统做法要搭后端、写接口、配权限，工期少说1-2周；而在华为云RDS Supabase，建两张表、应用 SDK 直连，几分钟增删改查全跑通。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:33.309Z"
+    },
+    {
+      "id": "6c5bf21446bfd926dbec",
+      "title": "bili-fe-workflow —商业化智能开发工作流实践",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/161119720",
+      "sourceId": "bilibili-csdn",
+      "description": "我们从 prompt 工程演进 Harness Engineering，做了一系列智能开发工作流，让AI能够帮助我们执行跨越整个研发生命周期的长任务。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:55.741Z"
+    },
+    {
+      "id": "6f2d61bd7494071da9c3",
+      "title": "TinySR：面向真实世界图像超分辨率的轻量级扩散模型",
+      "url": "https://blog.csdn.net/vivo_tech/article/details/164330112",
+      "sourceId": "vivo-csdn",
+      "description": "本文提出 TinySR，一种面向真实世界图像超分辨率的轻量级扩散模型，通过深度剪枝、动态块间激活以及扩张‑腐蚀策略实现高效推理。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:47.638Z"
+    },
+    {
+      "id": "6fec96700c2100587676",
+      "title": "Index-Translate：支持 150 种语言的多模态翻译模型是如何炼成的？",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/168453213",
+      "sourceId": "bilibili-csdn",
+      "description": "哔哩哔哩 Index LLM 团队推出 Index-Translate 系列。文本翻译覆盖 150 种语言，提供 2B、9B 和 35B-A3B（preview） 三种规模，同时支持图文翻译；系列还提供语音翻译、音节控制与长文档翻译能力。本文简要介绍这些功能，重点展开它们背后的训练设计。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:38.344Z"
+    },
+    {
+      "id": "713dc8923f99fd592489",
+      "title": "如何把 HPN 多平面的带宽，真正转化为 AI 任务的通信效率？",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/166340799",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "同一个通信流里的包或 Cell，可以按序依次轮询到不同的服务器端口上，再依次轮询到不同的网络链路上，而不是像逐流模式那样，整条流被 HASH 固定在一条路径上。而 AI 任务的通信流数量本就有限，多条流一旦被 HASH 到同一条路径，就极易出现 HASH 极化，即少数路径持续拥塞，多数路径相对空闲。围绕这一问题，百度智能云面向典型的 AI 集群网络基础设施场景，整合通信库、网卡、交换机等软硬件能力，为 HPN 多平面负载均衡提供两类优化方向：一是细化负载粒度，二是优化逐流选路策略并实现端网协同的动态调度。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:40.926Z"
+    },
+    {
+      "id": "7288af1c5c6ff5d38f9a",
+      "title": "从ChatBI到业务记忆：重新定义数据智能的生产力边界",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/161928001",
+      "sourceId": "ant-data-csdn",
+      "description": "回到最开始那个问题：帮我看看最近 GMV 为什么跌了？AI 当然会越来越擅长回答这类问题。模型会更强，工具调用会更稳，分析链路会更自动化。但越往后走，我越觉得真正的分水岭不在“谁的聊天框更聪明”，而在“谁能把业务上下文组织得更好”。过去，BI 能力强，可能体现为会写 SQL、DAX、Python、R，会搭指标体系，会做报表，会建模型。未来，这些能力仍然重要，但它们会越来越多地被 AI 部分接管或辅助完成。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:53.145Z"
+    },
+    {
+      "id": "7339aaf38ac7604cf6e9",
+      "title": "浙江国贸集团走进网易智企：国企数据治理与 AI Agent 落地实践交流（数据底座 / 智能问数 / 系统升级）",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/169349055",
+      "sourceId": "netease-csdn",
+      "description": "10月22日下午，“浙江国贸集团走进网易智企”AI 专题交流活动在网易杭州园区举办。浙江省国际贸易集团有限公司数智部副主任杨勇及集团所属成员企业20余位嘉宾到访。浙江国贸集团是浙江省属国有企业，业务涵盖商贸流通、金融服务、医药健康等领域。本次活动围绕“网易智企在 AI 领域的转型与应用——大模型及多项 AI Agent 产品与实践”，结合企业数据建设、业务应用与安全管理需求展开讨论。浙江国贸集团数智部副主任杨勇、网易智企销售副总裁赵鹏，分别致辞。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:34.889Z"
+    },
+    {
+      "id": "7b0f066f0ad9399059c2",
+      "title": "DataAgent vs Copilot：企业级AI数据平台架构演进与落地实践",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/163374166",
+      "sourceId": "netease-csdn",
+      "description": "企业数据平台正从被动工具进化为主动执行的\"数字员工\"DataAgent。传统数据平台面临初始化效率低、基线优化难等结构性瓶颈，DataAgent通过大模型推理能力封装原子化Skill，实现自然语言取数、智能建模等端到端工作流。其架构包含通用底座（意图理解）和垂直SubAgent（专业执行），通过Tool/Skill体系组合能力，结合企业知识增强RAG解决LLM幻觉问题。核心能力包括SQL片段提取、高质量Text-to-SQL生成和CLI工具调用。网易数帆的EasyData已落地自然语言取数等场景，推动数据平",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:52.458Z"
+    },
+    {
+      "id": "7d681e2bb6ed18085b1c",
+      "title": "Agent 想用但不敢用？百度智能云企业级 Agent 安全落地实践",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/166787432",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "本文整理自百度智能云云安全架构师林道正在 AICon 大会上的主题演讲《Agent 想用但不敢用？百度智能云企业级 Agent 安全落地实践》。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:40.320Z"
+    },
+    {
+      "id": "7e6a749612681a382ac6",
+      "title": "从“帮我查个数”到自动归因：DataAgent 指标图谱实战解析",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/167899161",
+      "sourceId": "netease-csdn",
+      "description": "数字查到了，原因还没找到。**同类问题再次出现时，团队可以参考历史记录，沿用已配置的指标关系，结合最新数据重新分析。为例，介绍网易智企·数帆知数 DataAgent 如何通过指标图谱，把已有的分析经验用于后续排查，帮助运营找到需要优先核查的因素。以充电时段和电池包温度为例，分析可以先查看不同时段的表现，再进一步检查温度等相关因素，逐步缩小范围，并输出影响因素排序和排查建议。围绕充电时长，分析师可以配置车型、充电设备、站点、时段、电池包温度、起始电量等因素及其关联关系，为后续分析提供路径。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:37.255Z"
+    },
+    {
+      "id": "7ed4053636d26f9176af",
+      "title": "《公共云三十问》正式收官，奔赴企业AI百场景新征程",
+      "url": "https://blog.csdn.net/devcloud/article/details/165631727",
+      "sourceId": "huawei-csdn",
+      "description": "今年6月底，公共云产业联盟重点推出《公共云三十问》专栏，以每周三问的节奏，连载十周，解读《先进公共云》白皮书，分享国计民生系列案例，旨在凝聚共识、推动落地实践。同时，专栏分析公共云在产业升级、民生福祉、科技创新、全球发展等方面的作用，梳理中国特色公共云发展路径：以普惠云拓展用云广度，以智算云提升用云深度，以自主云夯实用云厚度，以全球云打开用云跨度。这十问从专属云、行业云切入，深入政务、金融、交通、电力、钢铁、化工、油气、制造等国计民生场景，回答公共云“怎么用”。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:42.107Z"
+    },
+    {
+      "id": "831159c0bba76356c18b",
+      "title": "FlexQuant: 大模型组合量化，助力推理SLO",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/151068588",
+      "sourceId": "ant-data-csdn",
+      "description": "本文基于不同量化算法在不同阶段、不同负载下的速度和精度表现，设计了一种组合量化机制FlexQuant，可以更全面、更轻松拿下精度、速度以及延迟和吞吐等SLO诉求，方案部署友好，直接有效，值得参考。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:17.291Z"
+    },
+    {
+      "id": "88c1b948d93908b7df30",
+      "title": "TB 级模型推理服务的显存极致优化实践",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/168112191",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "后面三个方面主要讲系统实践，包括。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:36.168Z"
+    },
+    {
+      "id": "8fa452215be86e04f18f",
+      "title": "将DSA注意力引入多模态，快手Keye2.0开启强化推理新范式",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/161431079",
+      "sourceId": "kuaishou-csdn",
+      "description": "情感与主题的深度升华：模型并没有停留在“建雪雕”的表层，它提取了画面中巨大的“振兴东北”刻字，关联了片中“老程盼女儿、小李回流家乡”的人物背景，在总结中直指故事内核：“极寒的温度冻不住东北人的热血，冰雪项目不仅是奇观，更是承载着东北人振兴家乡、呼唤游子归乡的炽热情感与现实路径。当接收到“请找出视频中的高光时刻，并给出你的依据，时间戳用[mm:ss]的形式来表示”的指令时，Keye-VL-2.0- 30B-A3B没有陷入传统AI“哪里有击杀提示就截取哪里”或“只看画面元素剧烈变化”的机械逻辑。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:55.032Z"
+    },
+    {
+      "id": "8fa81c43d706d6fba4ef",
+      "title": "Visa持卡人请查收！你的专属Token福利来了！",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/169465827",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:31.619Z"
+    },
+    {
+      "id": "907b7c19f9e17650482e",
+      "title": "DB-GPT V0.8.0 版本更新｜范式跃迁：AI + Data 驱动的数据分析交互体验升级",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/159798128",
+      "sourceId": "ant-data-csdn",
+      "description": "一次从“对话问答”到“任务交付”的范式跃迁，从「被动问答」到「自主分析」，探索真正的 Agentic 生产力。🎯 业务目标 → 🧠 任务拆解 → 🧩 技能调用 → 💻 代码生成(SQL/Python) → 🛡️ 沙箱执行 → 📊 图表生成 → 📝 报告交付你不再需要知道数据存在哪张表里，也不必为中间的数据清洗编写 Python 脚本。你只需要给出业务目标，DB-GPT AI数据助理 会为你打理好一切。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:57.229Z"
+    },
+    {
+      "id": "91a702dff58b56a32cec",
+      "title": "CVPR 2026 Highlight 丨 用“几何感知”把扩散 Transformer 采样做成免训练加速器",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/163141057",
+      "sourceId": "bilibili-csdn",
+      "description": "扩散采样不是在平直空间里走直线，而是在模型学到的弯曲特征流形上前进。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:52.953Z"
+    },
+    {
+      "id": "934103068573039a0ea8",
+      "title": "Deepinsight x ChatBI：个人Agent助手养成计划",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/155600888",
+      "sourceId": "ant-data-csdn",
+      "description": "这里我为什么取名为“个人Agent助手养成计划”，可以理解为个人Agent助手相当于你新招的一个员工，开始他可能什么也不会，双方也不太了解，而在不断使用的过程中，你慢慢理解怎么使用它，它也更懂你，而最终它会成为你一个很好的助理。它和人一样，需要不断学习，才能解决更多的问题。在这个过程中，我们需要不断对它进行调教。今天这篇文章，我们就看如何把它“打造成你的个人Agent助手要用好它就需要知道它的“习性”，如何一步一步养成能够解决实际问题的专业助理。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:07.562Z"
+    },
+    {
+      "id": "94baafee1495b217fa3e",
+      "title": "视频生成推理加速实践：基于全局时间索引的序列并行 3D 位置编码优化",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/158010439",
+      "sourceId": "bilibili-csdn",
+      "description": "本文分享B站在视频生成模型推理优化中的一系列实践，重点围绕分块自回归视频模型在序列并行场景下的计算与通信优化展开。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:00.225Z"
+    },
+    {
+      "id": "9587aea3f6afc259907d",
+      "title": "破局与立新：上海证券的全栈信创数据中台建设之路",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/153208899",
+      "sourceId": "netease-csdn",
+      "description": "数字化浪潮奔涌向前，数据成为了驱动金融行业创新与增长的核心引擎。证券业作为金融行业重要分支和资本市场重要枢纽，业务高度依赖实时的数据处理与高并发的交易能力，其信息系统的高效、稳定与安全，不仅关乎机构自身竞争力，更牵系着国家金融安全大局。在中国，证券业的数字化进程叠加了更为深远的时代背景——信创战略的全面推进。2020 年，“2+8+N”信创战略正式提出，要求信创建设从党、政起步，逐步扩展至金融、电信、电力、交通等 8 大与国计民生息息相关的行业。具有专业特色的财富管理型券商。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:14.428Z"
+    },
+    {
+      "id": "964b12f554ffd3662f44",
+      "title": "《百度天池超节点系统架构设计规范》正式开放下载",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/165852941",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "计算节点和网络节点是超节点中的最小单元，其架构设计直接影响超节点系统的运维与管理效率。《设计规范》给出了从机柜级到节点级的分层带外管理架构，并基于统一的硬件数据模型，覆盖电源、液冷、主板、AI 加速卡、网卡等部件的状态监控、故障定位和固件运维，让整柜复杂硬件具备统一的可观测、可控制、可恢复能力。通过这份《设计规范》，产业伙伴不仅可以了解百度天池超节点的设计细节，更可以直接复用经过验证的规格与接口要求，借鉴它在空间、功耗、散热、互联与运维之间的权衡思路，在设计自己的超节点产品时，省去从零探索的成本。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:41.422Z"
+    },
+    {
+      "id": "986b70feb0d56a6a0fc9",
+      "title": "在 Ray Data 和 Ray Serve 中推出原生 LLM API",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/151148490",
+      "sourceId": "ant-data-csdn",
+      "description": "https://www.anyscale.com/blog/llm-apis-ray-data-serve 译文2025年4月2日，我们激动地宣布在 Ray Data 和 Ray Serve 中为 LLM 推理提供原生 API。随着 LLM 在现代 AI 基础设施部署中变得越来越核心，平台需要能够高效地部署和扩展这些模型。虽然 Ray Data 和 Ray Serve 很适合快速部署和扩展这些模型，但开发人员必须编写大量冗余代码才能利用这些库来扩展 LLM 应用程序。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:16.742Z"
+    },
+    {
+      "id": "987a2a6d43efc66fa201",
+      "title": "B站社群AI智能分析系统的实践",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/155320541",
+      "sourceId": "bilibili-csdn",
+      "description": "早期运营尝试过简单的关键字分析和人工汇总的方式，但这种传统方案存在明显局限：只能捕捉预先设定的词汇，无法理解上下文和隐含含义，对新出现的话题无法及时捕获。在 BI 看板上，这些沉淀的数据以更直观的方式呈现：情绪趋势、话题聚类、反馈规模、风险事件等核心指标一目了然，让业务团队可以随时掌握用户的关注点和变化趋势，做到“数据驱动运营决策”。不再是等用户大量投诉后再处理，而是能够利用 AI 的语义理解能力，及时捕捉到群聊中不断浮现的细微变化，并将分散的用户声音转化为推动产品迭代的动力。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:08.071Z"
+    },
+    {
+      "id": "9ba75c8c27f1f4362ebe",
+      "title": "打破信息茧房！快手搜索多视角正样本增强引擎 CroPS 入选 AAAI 2026 Oral",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/156891830",
+      "sourceId": "kuaishou-csdn",
+      "description": "快手搜索团队提出全新的检索数据引擎 CroPS。该方法通过引入用户换 Query 数据、推荐流数据以及大模型生成的世界知识，多视角丰富了正样本信号，并结合层次化标签分配（HLA）策略和 H-InfoNCE 损失函数，实现了对相关性的精细化建模，该论文已被人工智能顶级会议 AAAI 2026 Oral 接收！ 🧩 方法与思路 ✅多视角正样本增强引擎 CroPS ✅层次化标签分配 (HLA) ✅H-InfoNCE 损失函数",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:02.825Z"
+    },
+    {
+      "id": "9c1e12bcc76f46be5fce",
+      "title": "面向高效推理的 MoE 专家压缩，合并与剪枝的协同设计与工程实践",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/168653681",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "本文整理自 26 年 9 月 22 日 SGLang Meetup 北京站活动的同名主题演讲。在技术站公众号回复「百度百舸 2609」，可以获得此次 Meetup 下午的 3 个演讲主题材料。各位嘉宾、各位社区的开发者，大家好。今天想和大家分享我们在 MoE 专家压缩方向上的一些思考和实践。MoE 模型通过 router 为每个 token 选择少量专家参与计算，在扩大模型参数规模的同时，把单 token 的计算量控制在相对可接受的范围。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:34.002Z"
+    },
+    {
+      "id": "9f7b44577e3e32976c55",
+      "title": "网易知数DataAgent 重磅升级：从“问一个数”到“交一份答卷”，六大能力全解析",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/164809491",
+      "sourceId": "netease-csdn",
+      "description": "无论查结果、看异常，还是做归因，都能把结论、依据和步骤讲清楚，让数据分析从一次性问答变成更自然、可信的连续探索。知数DataAgent支持将分析结果产出为可视化图表、AI分析报告、HTML页面及多种办公文档，让一次问数能够沉淀为可汇报、可讨论、可复用的分析成果，将数据分析链路从问答延伸到交付，帮助业务人员更高效地完成汇报、复盘和决策支持。从“问一个数”到“完成一次分析”，从“生成一个结果”到“交付一份答卷”，从“个人经验”到“组织能力”，知数DataAgent希望推动企业数据工作进入一个新的阶段。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:43.801Z"
+    },
+    {
+      "id": "9fc03cb0c9fdb93b8603",
+      "title": "数据开发治理还能对话完成？ EasyData AI化，一个入口全搞定",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/166571371",
+      "sourceId": "netease-csdn",
+      "description": "搭建一组数仓任务，通常需要依次创建目录和任务、编写 SQL、配置调度依赖与告警，再进行发布前检查。EasyAgent 通过。从一项容易核对的任务开始，逐步将熟悉的操作交给EasyAgent辅助完成，是把它用进日常工作的一种方式。运维排查通常需要回答四个问题：哪些任务失败了，影响哪些下游，是否影响按时产出，以及失败原因是什么。支持项目组和用户级别的规则管理，可维护任务命名、SQL 风格、默认分层等约定，为后续操作提供参考。等任务配置，无论是平台内嵌 Agent，还是第三方 Agent 调 CLI，都能接入。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:40.515Z"
+    },
+    {
+      "id": "a130ea9c629d60409a06",
+      "title": "DB-GPT 0.7.4 版本更新｜开源蚂蚁集团Text2SQL数据集：Falcon、支持GLM-4.5大模型",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/153962262",
+      "sourceId": "ant-data-csdn",
+      "description": "DB-GPT 0.7.4 版本更新，快速预览新特性",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:12.913Z"
+    },
+    {
+      "id": "a288a94c3086cb98818f",
+      "title": "百度开放天池超节点参考架构：从少数厂商专属，到行业普遍可用",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/164339137",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "在基础设施适配上，百度天池超节点采用标准机架尺寸，供电兼容 AC/AC、高压直流、单相、三相等多种方式，管路设计兼容上进水与下进水，并可适配 CDU、风液混合等不同冷却方案，最大限度复用数据中心既有基础设施，减少因超节点形态变化带来的额外改造，让超节点能够更顺畅地进入不同客户的数据中心环境。这一次，百度希望通过开放天池超节点参考架构，降低产业设计、验证和部署超节点的门槛，让更多厂商能够参与，让更多数据中心能够部署，让更多行业客户能够真正使用。15 年后，面对正在快速演进的超节点，百度再次选择开放。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:45.470Z"
+    },
+    {
+      "id": "a62404d35134cba374cd",
+      "title": "码道深度对接CodeArts，让需求自动落地为代码",
+      "url": "https://blog.csdn.net/devcloud/article/details/164858960",
+      "sourceId": "huawei-csdn",
+      "description": "案例介绍。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:42.913Z"
+    },
+    {
+      "id": "a9c55bf491265a1c69a9",
+      "title": "快手可图与华中科技大学提出VGT， 让任意 VLM 摇身一变成为 SOTA 图像生成模型！",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/155808576",
+      "sourceId": "kuaishou-csdn",
+      "description": "谁说看懂世界的AI不会创造世界？快手可图团队联合华中科技大学搞出的VGT技术，直接把这个潜力激活了——不用从头训练大模型，只要简单“专项微调”，Qwen2.5-VL、InternVL3这些“理解派”AI，立马就能变身顶尖生图高手！",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:06.081Z"
+    },
+    {
+      "id": "aa3e7ac3e9ec129af2a5",
+      "title": "百万小时具身数据，先过数据管线这一关：百度百舸 Egocentric 视频相机轨迹恢复加速实践",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/168028257",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "算力预算不变时，数据管线的效率决定了能产出多少训练数据。按本文的端到端结果，在同样的 GPU 时间内，MegaSaM 能处理的视频时长提高到原来的 1.75 倍，Droid-W 提高到 1.45 倍。具身 AI Infra 的效率评估不应止于模型训练。从原始数据到可训练数据，整条数据管线的处理吞吐、单位数据算力成本和端到端交付周期，都需要纳入统一评估。本文对相机位姿恢复环节的优化表明，数据管线本身同样存在显著的系统优化空间。上述优化，均在搭载国内主流 GPU 的实例上完成。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:36.563Z"
+    },
+    {
+      "id": "ae5a71bc47ed45434647",
+      "title": "华为云码道配置自定义大模型，四种方式完整实操",
+      "url": "https://blog.csdn.net/devcloud/article/details/166845954",
+      "sourceId": "huawei-csdn",
+      "description": "案例介绍。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:39.236Z"
+    },
+    {
+      "id": "af6d6ffc2b27517285b4",
+      "title": "【公共云三十问 之二十八】国计民生之油气：智算云如何叩响数智时代的“地心蓝金”？",
+      "url": "https://blog.csdn.net/devcloud/article/details/164336499",
+      "sourceId": "huawei-csdn",
+      "description": "西南油气田以“向地球深部要资源”为战略方向，联合以华为云Stack为代表的公共云服务商共同打造统一算力底座，建设西南区域数据湖与通用技术平台，构建“勘探开发工程技术、天然气生产过程管控、天然气产运储销”等三个一体化协同应用场景，支撑油气勘探、开发生产、管输储运等全业务链的数智化转型。当智算云真正成为数据流通的平台、AI创新的底座，油气田得以将算力效能、数据价值与智能技术深度融入勘探开发全链条，将“看不见的算力”转化为“摸得着的储量”，以智能化手段持续降低勘探风险、缩短发现周期、提高采收效率，确保生产安全。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:45.965Z"
+    },
+    {
+      "id": "b02f12fd97cd472b0145",
+      "title": "DeepInsight x ChatBI：“智能歧义识别+知识沉淀”，化解模糊查询",
+      "url": "https://blog.csdn.net/DB_GPT/article/details/155948411",
+      "sourceId": "ant-data-csdn",
+      "description": "业务同学正日益习惯用自然语言直接进行数据分析。然而，随着“听懂”不再是唯一挑战，“问准”成为了新的关键瓶颈。用户一句看似简单的“看下高价值用户的近30天复购率”，背后可能隐藏着多重歧义（如“高价值”定义、“近30天”口径、“复购”统计方式），导致各类数据Agent理解存在偏差我们以常见的歧义表述“看下高价值用户的近30天复购率”为例，来说明当前流程下用户的核心痛点。总结：当前自然语言分析产品在解决语义歧义时，普遍存在以下问题，严重阻碍用户体验和效率：1.歧义识别依赖多轮对话，效率低下：用户初始表达常存在歧义",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:05.004Z"
+    },
+    {
+      "id": "bb9744aee108d7ded15e",
+      "title": "如何使用RDS Supabase后端BaaS能力：数据库函数（Database Function）",
+      "url": "https://blog.csdn.net/devcloud/article/details/168752882",
+      "sourceId": "huawei-csdn",
+      "description": "上一篇介绍了 Database Data API——建表即自动生成增删改查接口，解决单表读写，但聚合统计、跨表事务、字段自动维护等逻辑已超出其能力边界。本篇推进到数据库函数（Database Function）：把业务逻辑封装进数据库，前端通过 .rpc() 调用，由触发器自动响应数据变更。上一篇中，小张基于 Data API 完成了产品目录的建表与基础读写。但新需求随之而来：按分类统计产品数与价格区间、上架新品同时写产品表与定价表、产品修改后自动刷新更新时间。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:32.908Z"
+    },
+    {
+      "id": "bfef71755142a9a725cc",
+      "title": "从特效 SDK 到 AI 动效平台：Neon Vibe Motion 的技术演进之路",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/159652065",
+      "sourceId": "bilibili-csdn",
+      "description": "多媒体中台在 B 站主要负责剪辑、拍摄、直播等业务场景的动效渲染，开发维护的 SDK 在后文统一称为特效 SDK。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:58.306Z"
+    },
+    {
+      "id": "c154a6a9c0f325a94345",
+      "title": "同一个问题总有几个答案？企业数据口径怎么统一",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/164369017",
+      "sourceId": "netease-csdn",
+      "description": "9月3日，网易智企·数帆正式发布全链路数据智能平台 V10.0。面向 Agent 应用与智能决策场景，通过数据开发治理、指标语义管理、有数BI、知数DataAgent 四项能力联动，实现从数据接入、治理、分析到智能决策的全链路闭环。网易智企副总经理、数帆业务负责人封雷表示：“企业数字化做了这么多年，最大的困境不是缺数据，而是同一个问题有多个答案。AI 再聪明，如果底下的口径不统一、血缘不清楚、治理不闭环，问得越快，决策越乱。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:45.073Z"
+    },
+    {
+      "id": "c3bdb3ea818208a3850e",
+      "title": "如何3分钟搭建可视化报告？试试这个工具",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/153624806",
+      "sourceId": "netease-csdn",
+      "description": "一键点击即可实现快速计算，支持求和、平均值、中位数、计数、百分位、转化率、同环比等的切换，以及快速的总额百分比、总计计算，无需编写复杂公式。【有数BI可视化报告】3分钟搭建可视化报表，帮您统一数据源，一键同步更新，统一美化格式，从此告别反复核对修改，汇报轻松搞定。某促销活动转化率异常下跌时，因数据滞后，团队无法快速定位分析异常原因，错失干预时机，直接造成客户流失及销售额下滑。预设业务监控规则，实现数据找人，系统自动识别异常数据/关键指标，及时通知业务并且在报告中可以高亮（红/黄色）警示。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:13.729Z"
+    },
+    {
+      "id": "c44b3eb7d0bad04b8192",
+      "title": "使用Compose Navigation3进行屏幕适配",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/159769265",
+      "sourceId": "bilibili-csdn",
+      "description": "这篇文章将介绍B站是怎么使用 Compose Navigation3 进行页面的宽屏适配，并解决其中遇到的问题的。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:57.723Z"
+    },
+    {
+      "id": "c62ba99ce3e9bc857e74",
+      "title": "双栈一致、业务驱动，揭秘快手KwaiDesign企业级UI组件库背后的技术实践",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/156980824",
+      "sourceId": "kuaishou-csdn",
+      "description": "不同业务视觉不统一、Vue 和 React 组件不能复用、跨团队沟通成本拉满…多业务线前端 / 设计真的太容易陷入 “重复劳动” 陷阱了😫 我们决定从真实场景出发，构建一套完全贴合快手需求、并能伴随业务共同演进的设计与研发体系——KwaiDesign 由此诞生！",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:02.631Z"
+    },
+    {
+      "id": "c76e85ba4b33888566df",
+      "title": "AAAI 2026｜全面发力！快手3篇论文获Oral，12篇论文入选！",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/156853656",
+      "sourceId": "kuaishou-csdn",
+      "description": "快手有12篇论文入选AAAI 2026，研究成果涵盖搜索与推荐系统、多镜头视频生成、多模态内容理解与评估、生成式模型基础技术、视频大语言模型、实验设计以及LLM隐空间推理等方向。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:03.219Z"
+    },
+    {
+      "id": "ca16bafd8da2e282bc06",
+      "title": "从研发效能走向企业AI生产力：快手技术沙龙报名开启！",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/168025489",
+      "sourceId": "kuaishou-csdn",
+      "description": "免费报名！快手技术沙龙第6期即将开讲！",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:47.048Z"
+    },
+    {
+      "id": "d03463bd04363ab135fa",
+      "title": "【公共云三十问 之二十七】国计民生之化工：数智云如何重塑传统化工新范式？",
+      "url": "https://blog.csdn.net/devcloud/article/details/164336455",
+      "sourceId": "huawei-csdn",
+      "description": "在架构方面，方案构建云边协同的统一体系，涵盖AI协同、数据协同与运营协同三大维度——总部集中训练大模型，边缘节点负责推理执行，云边持续迭代，实现“边用边学”的智能闭环，模型平均精度提升20%以上。此外，方案提供一站式企业级工业物联网平台、数据湖与数据治理平台，覆盖工业数据分析“采、存、算、管、用”全流程，打通生产现场与管理系统间的数据壁垒，有效消除数据孤岛。层面，方案充分发挥软硬协同优势，实现计算、存储、网络与云平台的深度协同，训练线性度超95%，为大模型训练推理提供强劲算力支撑。▲化工“数智”新模式。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:46.160Z"
+    },
+    {
+      "id": "d140242e2be28ef06443",
+      "title": "华为云RDS Supabase AI应用已开放公测 ：30分钟搭建AI应用后端",
+      "url": "https://blog.csdn.net/devcloud/article/details/168877926",
+      "sourceId": "huawei-csdn",
+      "description": "认证、存储、实时推送、数据库API——4个后端模块，传统开发需要数周。今天，你只需要30分钟。AI创业公司的全栈开发工程师。上周老板说\"下周要上线的AI对话应用，后端你来搞\"——认证鉴权、数据库接口、文件存储、实时推送，每一个模块都需要数周搭建，而市场不会等你。小张打开华为云RDS Supabase，30分钟搭好认证、数据库API、对象存储，剩下的时间全用来打磨AI交互体验。基于开源Supabase+华为云RDS PostgreSQL全托管能力，为开发者提供。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:32.207Z"
+    },
+    {
+      "id": "d885fe348d05a30336b5",
+      "title": "别再让指标打架！80%企业都在用的统一解法",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/153780533",
+      "sourceId": "netease-csdn",
+      "description": "指标平台正成为企业数字化转型的核心枢纽。：指标平台的核心功能，主要是创建指标（定义指标口径、可分析维度、归因配置等）、发布指标、指标授权等，授权后的指标可查看详情信息、指标数据、归因结果、指标探查情况、指标全链路血缘等；创建指标时，需要填写指标基本信息、业务口径、指标类型、引用数据模型（对应第一步中的模型）、字段、聚合方式、筛选条件、分析维度、归因配置等等，指标配置完成后可以进行暂存、发布。：展示模型字段、原子指标、计算指标、指标图谱、报告等全链路的血缘，可清晰了解指标加工来源、下游应用去向。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:13.279Z"
+    },
+    {
+      "id": "d95d4960d1cd10cdce8d",
+      "title": "MagicBokeh：单步统一生成式框架实现真实感长焦虚化渲染 | CVPR 2026 Oral",
+      "url": "https://blog.csdn.net/vivo_tech/article/details/163720779",
+      "sourceId": "vivo-csdn",
+      "description": "vivo蓝图实验室提出了长焦虚化渲染框架 MagicBokeh，基于一个统一的生成式架构实现长焦虚化渲染。通过交替训练策略、焦点感知掩码注意力与退化感知深度估计，解决了高倍变焦低质输入下噪声放大、边界模糊与误差累积的问题，在合成与真实数据集上均取得SOTA效果，为移动端高效真实感长焦虚化仿真提供了新方案。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:50.951Z"
+    },
+    {
+      "id": "da1f8e10e6ce3cadb1ff",
+      "title": "协同文档下的 Agent 协作闭环：可回滚、可对比的透明化编辑实现",
+      "url": "https://blog.csdn.net/vivo_tech/article/details/163910496",
+      "sourceId": "vivo-csdn",
+      "description": "本文结合 AI 编辑器二期调研实践，拆解 Agent 在协同文档中的身份取舍、可回放事实链、side-by-side Diff 展示，以及 run 级精准撤回机制，说明如何让 AI 的改动看得见、退得掉、不误伤协作者。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:50.233Z"
+    },
+    {
+      "id": "dc86ea39b63d1710f9e1",
+      "title": "AI问数总翻车？网易智企·数帆指标平台 深度拆解：统一口径，让AI听懂业务",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/165742753",
+      "sourceId": "netease-csdn",
+      "description": "网易智企·数帆指标平台作为企业语义层，将指标定义、计算逻辑和业务规则统一沉淀，使不同应用能够复用同一套业务理解。网易智企·数帆指标平台V10，就是通过指标定义、治理和关联关系管理，将企业业务语言转化为AI可理解、可调用的语义资产。业务人员可以先了解企业已有的指标，再按需申请数据访问权限，便于发现和复用已有指标，同时控制数据访问范围。从指标建设到业务使用，企业既需要提高配置效率，也需要管理指标变更、支持多端应用，并满足查询与分析需求。四项能力既可组合联动，也支持独立部署，灵活适配企业不同阶段的数据需求。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:41.684Z"
+    },
+    {
+      "id": "dd1398a9ea6190c8ebf9",
+      "title": "快手广告系统全面迈入生成式推荐时代！GR4AD：从Token到Revenue的全链路重构",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/159923655",
+      "sourceId": "kuaishou-csdn",
+      "description": "全面揭秘大规模广告场景全链路重构方案！",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:56.838Z"
+    },
+    {
+      "id": "de34210474c60dff8a55",
+      "title": "AI 能查到数据却用不好？量子位智库报告：企业 AI 规模化卡在数据底座，六大断点怎么破？",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/168434623",
+      "sourceId": "netease-csdn",
+      "description": "*数据底座把数据、指标、业务知识、流程规则和访问权限打包成 Agent 能理解的形式，让 Agent 在可信的范围内做判断。**它能结合模型、指标与 BI 看板、指标语义、图谱与知识库，完成复杂查询和探索分析，交付图表、看板、图文报告和办公文档。报告在**“数据底座如何服务 Agent”**部分，画了一条清晰的链路：业务系统与知识文件→接入治理→数据与语义资产→查询、检索及校验服务→ Agent 任务处理。**也就是说，AI 能访问数据，但无法保证数据在语义上的一致性、口径上的统一性、血缘上的可追溯性。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:35.483Z"
+    },
+    {
+      "id": "e02cc544c7bb621f6397",
+      "title": "Octopus：基于无历史数据的梯度正交化的学习框架｜CVPR 2026",
+      "url": "https://blog.csdn.net/vivo_tech/article/details/163912378",
+      "sourceId": "vivo-csdn",
+      "description": "Octopus提出了一种基于无历史数据的梯度正交化（HiFGO）的两阶段持续学习框架，通过梯度层面的正交约束有效缓解了任务间的干扰，同时提出两阶段训练策略实现可塑性与稳定性的良好平衡。Octopus在UCIT基准上实现了当前最优性能（SOTA），Avg和Last指标分别超越现有最优方法 2.14% 和 6.82%。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:49.838Z"
+    },
+    {
+      "id": "e12a86add109ce0a9154",
+      "title": "量子位智库《Agent 驱动的企业智能化》报告发布：拆解企业 AI 落地六大断点，网易智企数据治理与 Agent 应用实践入选",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/168130867",
+      "sourceId": "netease-csdn",
+      "description": "每个单独看都不致命，但串在一起，就解释了为什么很多企业的AI项目停在了“局部能用、整体推不动”的状态。这些没完成的工作，最终还是回到了人的手里，变成漫长的返工、等待和兜底。那么，企业究竟该如何系统性地破除这些盲区？",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:35.977Z"
+    },
+    {
+      "id": "e15d48145bd1860b1b74",
+      "title": "ICLR 2026 ｜用“信息增益-冲突惩罚”把数据选择做成可控的大模型微调加速器",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/160121283",
+      "sourceId": "bilibili-csdn",
+      "description": "指令微调（Instruction Tuning）已经成为大语言模型落地前的“最后一公里”。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:56.643Z"
+    },
+    {
+      "id": "e51ecaec241fdaac8dc2",
+      "title": "AAAI 2026｜快手LGSID助力业务GMV实现两位数增长：从地理可达，到兴趣匹配",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/157214582",
+      "sourceId": "kuaishou-csdn",
+      "description": "你是否有过这样的经历：刷到一家价格合适、评价不错的餐厅，却发现门店远在城市另一端，交通成本过高，只能无奈划走。对于生活服务类内容来说，“感兴趣”只是开始，“方便到达”才是决定下单的关键。正因如此，生活服务推荐与传统内容推荐存在本质差异——用户的消费决策天然受到地理位置的强约束。只有同时满足“离得近”和“感兴趣”，推荐结果才有可能转化为线下到店与交易。然而，这一看似简单的需求却对推荐系统提出了极高挑战：系统不仅需要理解用户兴趣偏好，还要精准感知用户所处位置，并感知用户与内容的空间关系。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:01.734Z"
+    },
+    {
+      "id": "e64acdb57fbebd7d2e31",
+      "title": "百度沧海·存储：新一代技术架构体系设计与实践",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/166787790",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "最后做一个总结。我们的核心思路，是将共性能力沉淀为统一底座，针对不同场景组合适配，并通过跨层协同优化关键路径。第一，统一底座。我们将过去分散在各产品中的基础能力，沉淀为统一的元数据底座 MetaDB 和数据底座 Aries。对象、文件和块存储可以按需复用这些能力，让底层能力的改进能够惠及多个产品。第二，场景适配。不同存储产品有各自的语义和 IO 特征，因此需要在共享底座之上组合不同的组件。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:39.825Z"
+    },
+    {
+      "id": "e7d47c4f86a4bf64d2de",
+      "title": "《金发〔2026〕 8 号》落地：金融机构如何建立大模型与 Agent 全流程安全能力？",
+      "url": "https://blog.csdn.net/2301_82040283/article/details/169146732",
+      "sourceId": "baidu-cloud-csdn-candidate",
+      "description": "金发〔2026〕8 号》把金融 AI 安全责任延伸到数据、模型、内容、运行过程和 Agent 动作。金融机构需要建立贯穿训练、推理、运营、评测和 Agent 调用链路的安全能力，并能用日志、质检结果、评测报告和调用轨迹证明这些能力持续有效。百度智能云 AI 安全护栏金融解决方案将监管要求拆成对应的系统能力和运营动作，帮助金融机构缩短从理解条款到完成建设、从发现风险到调整策略的路径，让大模型和 Agent 在真实业务中保持可控、可追溯、可验证。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:31.813Z"
+    },
+    {
+      "id": "e8490a75f8e8181c36f9",
+      "title": "网易智企 Agent 落地实践：数据底座五层架构、3.7万任务治理，问答准确率半年66%到95%",
+      "url": "https://blog.csdn.net/wangyiyungw/article/details/169364353",
+      "sourceId": "netease-csdn",
+      "description": "未命中既有规则的情况，由模型辅助归因，生成待人工复核的草案，再反哺规则库。因此，数帆在知数 DataAgent 侧投入更多业务本体与语义建设，将业务实体、指标、关系及分析规则，与底层数据对应起来，并沉淀数据集、业务本体语义和业务数据看板三类资产。在网易智企内部的一次治理实践中，帝王蟹 ClawHive（网易智企企业级 AI Agent 平台）与数据开发治理平台 EasyData 协作，从存量任务中筛选分析范围，通过 SQL 解析、状态过滤和依赖判断，形成了177条任务级治理建议，交由负责人确认执行。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:34.397Z"
+    },
+    {
+      "id": "e86d900c2c10782db447",
+      "title": "软件不是从数据开始，而是从现实开始 | KDC 系列 01",
+      "url": "https://blog.csdn.net/vivo_tech/article/details/164814736",
+      "sourceId": "vivo-csdn",
+      "description": "当 AI 应用开始在运行时解释数据、选择工具并影响业务状态时，数据表示中的遗漏和歧义可能直接转化为行动风险。本文从退款案例出发，提出 Reality First 的观察顺序：先明确系统面对的领域现实，再讨论现实模型、数字表示以及验证反馈如何共同支撑软件的判断与行动。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:43.308Z"
+    },
+    {
+      "id": "e8c6d72b88fde2d5a786",
+      "title": "我们如何用 A2UI + Vue，让大模型长出“可交互界面”",
+      "url": "https://blog.csdn.net/bilibili_TC/article/details/161427969",
+      "sourceId": "bilibili-csdn",
+      "description": "本文围绕一个核心问题展开：如何让AI助手从“输出文字”进化到“生成界面”？",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:55.548Z"
+    },
+    {
+      "id": "ea4229ca927303d2824c",
+      "title": "从一句话到一个能出去的链接，AI开发者空间做了什么",
+      "url": "https://blog.csdn.net/devcloud/article/details/168543201",
+      "sourceId": "huawei-csdn",
+      "description": "自行搭建的 Agent、正在使用的开源项目、团队既有的工具，都可以接入，可以通过AI创建或者手动搭建环境；华为云 AI开发者空间——面向开发者的云端一站式开发平台，做的就是把这段路接上：环境免安装，浏览器打开即为完整的 Linux 运行环境，预置的 AI 智能体开箱即用。第一个任务建议选能出结果的：做一个游戏、生成一个页面、创建一台实例，从需求走到可访问的链接，一次就能看清这个环境在做什么。沙箱是一个完整的 Linux 环境，依赖、服务、端口都是真实的，不是模拟。环境释放后，权限随之失效。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:35.084Z"
+    },
+    {
+      "id": "eeaff409f6570d5a6449",
+      "title": "入围AA总榜Top10，Non-Reasoning Model榜单第一！KAT-Coder-Pro V1 新版本踏浪归来！",
+      "url": "https://blog.csdn.net/kuaishoutech/article/details/155968692",
+      "sourceId": "kuaishou-csdn",
+      "description": "快手 Agentic Coding 模型 KAT-Coder-Pro V1 重磅升级！在 Artificial Analysis Intelligence Index 官方评测中，该模型以64分超越 Claude 4.5 Sonnet，综合模型能力入围总榜Top 10；在 Non-Reasoning Model 榜单中以绝对优势斩获第一名。模型目前仍在限时免费中，欢迎试用。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:08:04.808Z"
+    },
+    {
+      "id": "f6d8bb55a9d8224a6caf",
+      "title": "【公共云三十问 之二十六】国计民生之钢铁：数智云如何淬炼中国钢铁新力量？",
+      "url": "https://blog.csdn.net/devcloud/article/details/164336413",
+      "sourceId": "huawei-csdn",
+      "description": "同时，构建云边端协同的统一架构，支撑集团总部与各生产基地两级协同发展——总部集中训练大模型，边缘节点负责推理执行，云边持续迭代，实现训推一体化的资源调度与高效协同，为钢铁行业的数智化转型构建了坚实的算力底座。层面，方案构建覆盖“工业数采→边缘IT/OT融合→统一数据湖→数据治理平台→数据应用”全链路的一站式数据治理与流通平台，打通生产现场与管理系统间的数据壁垒，让数据“采得到、流得动、用得好”，加速数据价值从生产现场向经营决策层流动释放。湘潭钢铁集团的钢铁数智云，是钢铁工业智能云建设的标杆案例。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:46.553Z"
+    },
+    {
+      "id": "fbb9bcd0852f3317286d",
+      "title": "扩散模型自引导新范式 SSG：直接交换Token就能变强！ | CVPR 2026 Oral",
+      "url": "https://blog.csdn.net/vivo_tech/article/details/163531909",
+      "sourceId": "vivo-csdn",
+      "description": "本文提出了一种适用于扩散模型的全新引导范式——自交换引导。针对传统引导方法高度依赖文本条件、需专门训练或直接加噪导致图像失真的局限性，SSG 提出了一种“无需文本、不加噪声、不改模型”的轻量化策略。",
+      "baselineError": "RSSHub HTTP 502",
+      "baselineCheckedAt": "2026-11-02T09:07:52.065Z"
+    }
+  ]
+}

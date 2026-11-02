@@ -1,0 +1,43 @@
+name: CSDN browser validation
+on:
+  push:
+    branches: [codex/csdn-browser-validation]
+    paths:
+      - scripts/csdn-probe/**
+      - .github/workflows/csdn-browser-probe.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned experiment dependencies
+        run: |
+          python -m pip install -r scripts/csdn-probe/requirements.txt
+          python -m camoufox fetch
+          python -m playwright install-deps firefox
+      - name: Check validation semantics
+        run: python -m unittest discover -s scripts/csdn-probe -p 'test_*.py'
+      - name: Probe all assigned articles
+        run: >-
+          python scripts/csdn-probe/probe.py
+          --output work/csdn-actions-${{ matrix.shard }}
+          --environment github-actions-ubuntu
+          --shard ${{ matrix.shard }} --shards 4 --screenshots
+      - name: Preserve per-article evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: csdn-actions-${{ matrix.shard }}
+          path: work/csdn-actions-${{ matrix.shard }}
+          retention-days: 14
