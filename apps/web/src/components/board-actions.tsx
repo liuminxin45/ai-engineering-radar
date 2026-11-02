@@ -7,32 +7,22 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  Moon,
-  Sun,
   CloseIcon,
-  useDesktopTheme,
 } from "chatgpt-desktop-kit";
 import { asset } from "../lib";
+import { ThemeToggle } from "./theme-toggle";
 import styles from "./board-actions.module.css";
 
 const repository = "https://github.com/liuminxin45/ai-engineering-radar";
 
 export function BoardActions() {
-  const { theme, setTheme } = useDesktopTheme();
-  const [systemDark, setSystemDark] = useState(false);
   const [origin, setOrigin] = useState("");
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState("");
   const [error, setError] = useState("");
   const headingId = useId();
-  const dark = theme === "dark" || (theme === "system" && systemDark);
   useEffect(() => {
     setOrigin(location.origin);
-    const media = matchMedia("(prefers-color-scheme: dark)");
-    const update = () => setSystemDark(media.matches);
-    update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
   }, []);
   async function copy(kind: string, path: string) {
     setCopied("");
@@ -46,20 +36,9 @@ export function BoardActions() {
       setError("无法自动复制，请选中链接手动复制。");
     }
   }
-  const themeLabel = dark ? "切换到浅色外观" : "切换到深色外观";
   return (
     <>
-      <IconButton
-        aria-label={themeLabel}
-        title={themeLabel}
-        onClick={() => setTheme(dark ? "light" : "dark")}
-      >
-        {dark ? (
-          <Sun size={18} aria-hidden="true" />
-        ) : (
-          <Moon size={18} aria-hidden="true" />
-        )}
-      </IconButton>
+      <ThemeToggle />
       <Popover
         open={open}
         onOpenChange={(next) => {
