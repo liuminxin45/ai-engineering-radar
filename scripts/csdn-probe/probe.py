@@ -11,7 +11,7 @@ import time
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, urljoin
 
 from bs4 import BeautifulSoup
 from camoufox.async_api import AsyncCamoufox
@@ -26,11 +26,11 @@ def compact(value):
 
 def stats(html):
     soup = BeautifulSoup(html, "html.parser")
-    for tag in soup.select("script,style,.toc,.hljs-button,.hljs-ln-numbers,.code-tool-box"):
+    for tag in soup.select("script,style,.toc,.hljs-button,.hljs-ln-numbers,.code-tool-box,.opt-box,.pre-numbering,.hide-preCode-box"):
         tag.decompose()
     return {"textCharacters": len(compact(soup.get_text())),
             "images": len(soup.select("img[src],img[data-src]")),
-            "codeBlocks": len(soup.select("pre")), "tables": len(soup.select("table")),
+            "codeBlocks": sum(bool(compact(t.get_text())) for t in soup.select("pre")), "tables": len(soup.select("table")),
             "headings": len(soup.select("h1,h2,h3,h4,h5,h6"))}, soup
 
 
@@ -47,6 +47,12 @@ def assess(html, case, page_info=None):
     source, cleaned = stats(str(container))
     extracted, _ = stats(article.content_html)
     markdown = compact(article.content_markdown)
+    # MagicMD stores code outside content_html and restores it into Markdown.
+    extracted["codeBlocks"] = len(re.findall(r"(?m)^\s{0,3}(?:`{3,}|~{3,})[^\n]*$", article.content_markdown)) // 2
+    source_images = {urljoin(case["url"], tag.get("data-src") or tag.get("src")) for tag in cleaned.select("img") if tag.get("data-src") or tag.get("src")}
+    output_images = {urljoin(case["url"], image.source_url) for image in article.images}
+    source["images"] = len(source_images)
+    extracted["images"] = len(output_images)
     # Compare against the actual DOM, not a length threshold or RSS summary.
     blocks = [compact(t.get_text()) for t in cleaned.select("p,pre,li,td,h1,h2,h3,h4,h5,h6")]
     grams = Counter(g for block in blocks for g in [block[i:i+6] for i in range(max(0, len(block)-5))])
@@ -67,9 +73,11 @@ def assess(html, case, page_info=None):
         issues.append("explicit_reading_restriction")
     if coverage < 0.95:
         issues.append("markdown_text_loss")
-    for key in ["images", "codeBlocks", "tables"]:
+    for key in ["codeBlocks", "tables"]:
         if extracted[key] < source[key]:
             issues.append(key + "_changed")
+    if source_images - output_images:
+        issues.append("images_changed")
     if page_info and page_info.get("restrictionVisible"):
         issues.append("visible_reading_restriction")
     extracted_ok = bool(article.content_html.strip() and (extracted["textCharacters"] or extracted["images"]))
@@ -77,6 +85,7 @@ def assess(html, case, page_info=None):
             "quality": "structure_preserved" if extracted_ok and not issues else "review_required",
             "source": source, "extracted": extracted, "markdownCoverage": round(coverage, 5),
             "issues": issues, "parserWarnings": article.extraction.warnings,
+            "missingImages": sorted(source_images - output_images),
             "title": article.title, "author": article.author, "publishedAt": article.published_at,
             "markdownSha256": hashlib.sha256(article.content_markdown.encode()).hexdigest()}, article
 
@@ -136,9 +145,15 @@ async def fetch_one(browser, case, args, output):
             (article_dir / "body.html").write_text(article.content_html, encoding="utf-8")
             (article_dir / "source-body.html").write_text(str(BeautifulSoup(html, "html.parser").select_one("#content_views")), encoding="utf-8")
             if args.screenshots:
-                await page.screenshot(path=str(article_dir / "original.png"), full_page=True, timeout=15000)
+                try:
+                    await page.screenshot(path=str(article_dir / "original.png"), timeout=15000)
+                except Exception as error:
+                    row["screenshotError"] = type(error).__name__
         elif args.screenshots and len(list(output.glob("failure-*.png"))) < 3:
-            await page.screenshot(path=str(output / ("failure-" + case["id"] + ".png")), timeout=15000)
+            try:
+                await page.screenshot(path=str(output / ("failure-" + case["id"] + ".png")), timeout=15000)
+            except Exception as error:
+                row["screenshotError"] = type(error).__name__
     except Exception as error:
         row.update(accessSuccess=False, extractionSuccess=False, quality="unavailable",
                    reason=type(error).__name__, error=str(error).split("Call log:")[0][:350])
@@ -154,6 +169,9 @@ async def main(args):
     data = json.loads(raw)
     validate_cases(data)
     cases = data["articles"][args.shard::args.shards]
+    if args.ids:
+        selected = set(args.ids.split(","))
+        cases = [case for case in cases if case["id"] in selected]
     if args.limit:
         cases = cases[:args.limit]
     output = Path(args.output)
@@ -167,6 +185,12 @@ async def main(args):
         "method": "MagicMD CSDN parser with default headless Camoufox; browser process reused, fresh context per article",
         "waitMs": args.wait_ms, "results": []}
     options = {"headless": True}
+    if args.executable_path:
+        options["executable_path"] = args.executable_path
+        report["browserAssets"] = "Official native Windows binaries, ZIP CRC verified; inactive cross-platform font bundle omitted"
+    if args.native_os:
+        options["os"] = {"Windows": "windows", "Linux": "linux", "Darwin": "macos"}[platform.system()]
+        report["nativeOs"] = True
     if args.proxy_env:
         proxy = urlsplit(os.environ[args.proxy_env])
         options["proxy"] = {"server": f"{proxy.scheme}://{proxy.hostname}:{proxy.port}"}
@@ -176,6 +200,12 @@ async def main(args):
         report["browserVersion"] = browser.version
         for case in cases:
             row = await fetch_one(browser, case, args, output)
+            attempts = [{k: row.get(k) for k in ["accessSuccess", "reason", "error", "navigationStatuses"]}]
+            if not row.get("accessSuccess"):
+                await asyncio.sleep(5)
+                row = await fetch_one(browser, case, args, output)
+                attempts.append({k: row.get(k) for k in ["accessSuccess", "reason", "error", "navigationStatuses"]})
+            row["attempts"] = attempts
             report["results"].append(row)
             save_report(output / "report.json", report)
             print(json.dumps({"completed": len(report["results"]), "total": len(cases), **{k: row.get(k) for k in ["id", "quality", "reason", "navigationStatuses"]}}, ensure_ascii=False), flush=True)
@@ -193,7 +223,10 @@ if __name__ == "__main__":
     p.add_argument("--shard", type=int, default=0)
     p.add_argument("--shards", type=int, default=1)
     p.add_argument("--limit", type=int)
+    p.add_argument("--ids")
     p.add_argument("--wait-ms", type=int, default=15000)
     p.add_argument("--proxy-env")
+    p.add_argument("--executable-path")
+    p.add_argument("--native-os", action="store_true")
     p.add_argument("--screenshots", action="store_true")
     asyncio.run(main(p.parse_args()))

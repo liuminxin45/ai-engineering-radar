@@ -30,6 +30,12 @@ class CompletenessTest(unittest.TestCase):
         row, _ = assess('<h1>别的文章</h1><div id="content_views">正文</div>', CASE)
         self.assertIn("title_mismatch", row["issues"])
 
+    def test_code_fences_and_csdn_controls_are_compared_semantically(self):
+        row, _ = assess('<h1>短文</h1><div id="content_views"><pre><code>print("hello")</code><div class="opt-box">复制</div><ul class="pre-numbering"><li>1</li></ul></pre><div class="hide-preCode-box"><img src="https://csdnimg.cn/button.png"></div></div>', CASE)
+        self.assertEqual(row["quality"], "structure_preserved")
+        self.assertEqual(row["extracted"]["codeBlocks"], 1)
+        self.assertEqual(row["source"]["images"], 0)
+
 
 if __name__ == "__main__":
     unittest.main()
