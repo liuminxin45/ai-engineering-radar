@@ -2,17 +2,54 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "7339aaf38ac7604cf6e9",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n                    \n                    <p>10月22日下午，“浙江国贸集团走进网易智企”AI 专题交流活动在网易杭州园区举办。浙江省国际贸易集团有限公司数智部副主任杨勇及集团所属成员企业20余位嘉宾到访。</p>\n<p>浙江国贸集团是浙江省属国有企业，业务涵盖商贸流通、金融服务、医药健康等领域。本次活动围绕“网易智企在 AI 领域的转型与应用——大模型及多项 AI Agent 产品与实践”，结合企业数据建设、业务应用与安全管理需求展开讨论。</p>\n<p>浙江国贸集团数智部副主任杨勇、网易智企销售副总裁赵鹏，分别致辞。随后，网易智企团队围绕国央企 AI 应用实践、数据产品演进、企业级 Agent 与安全治理、现有系统智能化升级等议题进行分享，并与来访嘉宾交流落地条件与实施思路。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/bf1cd97e5abd4a72a59f964d3cf0861c.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"><br>\n浙江国贸集团数智部副主任杨勇致辞</p>\n<h3 id=\"section-insight-01\"><a id=\"article-anchor-1\"></a><a id=\"article-anchor-2\"></a>Insight 01<a class=\"heading-anchor\" href=\"#section-insight-01\" aria-label=\"链接到本节：Insight 01\">#</a></h3>\n<h4><a id=\"article-anchor-3\"></a><a id=\"article-anchor-4\"></a>企业 AI 落地，先打通数据与业务之间的距离</h4>\n<p>AI 如何与原有系统衔接？哪些场景适合先行尝试？数据能否支撑分析，操作权限又该如何管理？这些问题贯穿本次交流。</p>\n<p>对于业务多元、管理层级较多的企业集团，数据分散、口径差异和跨系统协作，都会影响 AI 应用效果。模型能够生成答案，仍需要可靠的数据和明确的业务定义作为依据。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/b9fedda1fb0340909807cae2d36a8615.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p>让 AI 理解业务，需要先说清数据从哪里来、指标怎么算，以及在什么范围内使用。围绕这一基础，网易智企·数帆分享了数据开发治理与指标管理的 AI 化思路。</p>\n<ul><li>\n<p>在数据开发治理环节，平台通过开放操作接口，支持 Agent 调用开发、运维与取数等能力，减少重复配置和跨页面操作。同时，结合权限校验与必要的人工确认，明确 Agent 可以执行的操作范围。</p>\n</li><li>\n<p>在指标管理环节，通过集中维护指标定义、计算逻辑与业务描述，利用 AI 辅助整理已有报表口径，减少业务人员与数据团队之间的理解偏差，为后续查询、分析和报告提供一致的依据。</p>\n</li></ul>\n<p>这些改造回应的是同一个需求：缩短业务提出问题到获得可用数据之间的距离，让已有数据能力更方便地服务实际工作。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/5bb74b05f10c4f3194f2a712b8f0c9af.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"><br>\n网易智企·数帆央国企行业总监孙国良作主旨分享</p>\n<h3 id=\"section-insight-02\"><a id=\"article-anchor-5\"></a><a id=\"article-anchor-6\"></a>Insight 02<a class=\"heading-anchor\" href=\"#section-insight-02\" aria-label=\"链接到本节：Insight 02\">#</a></h3>\n<h4><a id=\"article-anchor-7\"></a><a id=\"article-anchor-8\"></a>从智能问数到经营快报，让 AI 参与日常分析</h4>\n<p>数据基础如何转化为业务人员能够使用的能力？交流结合智能问数、国资快报等场景，介绍了 AI 参与经营分析的方式。</p>\n<p>在智能问数场景中，业务人员通过自然语言提出问题，系统结合业务语义与指标定义获取相关数据，并支持进一步追问和分析。对于同一指标在不同场景中的口径差异，需要结合业务要求明确含义，减少因理解不一致造成的反复核对。</p>\n<p>在国资快报场景中，AI 可辅助串联取数、数据校验与报告整理，将经营指标、图表解读及分析建议组织到报告中，减少人工汇总和重复加工，为财务及经营管理人员开展研判提供支持。</p>\n<p>现场嘉宾特别关注：一次分析完成后，模板和思路能否留给下一次使用？</p>\n<p>针对这一问题，分享介绍了报告模板与分析思路的保存、复用方式。既有模板可以用于后续数据更新，探索形成的分析路径也可供同类任务参考，减少每次重新准备的工作。查询数据、核对结果、整理报告，再围绕问题继续分析，AI 的价值就体现在这些具体工作中。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/img_convert/e08ccaa668aaf60cca2320357cd3603d.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<h3 id=\"section-insight-03\"><a id=\"article-anchor-9\"></a><a id=\"article-anchor-10\"></a>Insight 03<a class=\"heading-anchor\" href=\"#section-insight-03\" aria-label=\"链接到本节：Insight 03\">#</a></h3>\n<h4><a id=\"article-anchor-11\"></a><a id=\"article-anchor-12\"></a>连接现有系统，同步考虑权限、安全与使用成本</h4>\n<p>当 AI 从单个试点进入更多部门，企业还需要解决模型和 Agent 如何统一接入、权限如何分配、调用成本如何观测等问题。</p>\n<p>围绕企业级 AI Agent 平台、AI 网关及大模型安全围栏，本次交流介绍了身份鉴权、模型调用管理、内容风险检测和 Token 用量观测等能力，并结合客服、内部职能助手等场景，讨论人机协同的工作方式。</p>\n<p>嘉宾进一步就混合模型环境展开提问，包括不同人员和应用的调用范围如何配置、安全能力如何接入已有平台，以及如何验证实际部署条件下的策略与性能。应用范围扩大时，管理规则也需要随之明确，避免能力接入与安全管理脱节。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/602205ee5a264134a5bb34e836d1d98d.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p>对于现有业务系统的智能化升级，现场还展示了智能填录、导航、问数、报告、巡检、知识问答及业务报表等应用方式，介绍从需求梳理、场景匹配到明确验收标准和技术实现的开发思路。</p>\n<p>老旧系统能否接入、跨系统数据如何获取，是现场讨论的重点。具体方案需要结合功能文档、接口和页面访问条件进行评估，先明确业务需求与系统条件，再选择适合引入的智能化能力。</p>\n<h3 id=\"section-insight-04\"><a id=\"article-anchor-13\"></a><a id=\"article-anchor-14\"></a>Insight 04<a class=\"heading-anchor\" href=\"#section-insight-04\" aria-label=\"链接到本节：Insight 04\">#</a></h3>\n<h4><a id=\"article-anchor-15\"></a><a id=\"article-anchor-16\"></a>从交流走向场景评估</h4>\n<p>此次活动将数据建设、智能分析、系统集成与安全管理放在同一条业务链路中讨论，也让后续需要验证的问题更加具体：先做什么场景、准备哪些数据、开放哪些接口，以及哪些环节需要人员确认。</p>\n<p>浙江国贸集团来访嘉宾与网易智企团队围绕相关实践交换意见，为进一步梳理需求、评估方案提供了参考。网易智企将持续结合企业实际业务开展交流与探索，推动数据与 AI 能力融入日常经营和管理工作。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/52478f60e1d149efa3c762b782b3a0b8.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n\n                ",
+    "headings": [
+      {
+        "id": "section-insight-01",
+        "level": 3,
+        "text": "Insight 01"
+      },
+      {
+        "id": "section-insight-02",
+        "level": 3,
+        "text": "Insight 02"
+      },
+      {
+        "id": "section-insight-03",
+        "level": 3,
+        "text": "Insight 03"
+      },
+      {
+        "id": "section-insight-04",
+        "level": 3,
+        "text": "Insight 04"
+      }
+    ],
+    "textLength": 1933,
+    "readingMinutes": 5,
     "sourceId": "netease-csdn",
     "sourceUrl": "https://blog.csdn.net/wangyiyungw/article/details/169349055",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:34.889Z",
-    "nextRetryAt": "2026-11-09T09:07:34.889Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "2aadbedb00a1ff95b097d2aa7c1800d02d5e7e8876f95b7d8d045172c4557f23",
+    "fetchedAt": "2026-11-02T11:40:49.181Z",
+    "checkedAt": "2026-11-02T11:40:49.181Z",
+    "nextRetryAt": "2026-12-02T11:40:49.181Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

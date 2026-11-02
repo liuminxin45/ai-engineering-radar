@@ -2,17 +2,99 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "32038f9aeb0132c5eb80",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <h2 id=\"section-一-概述\"><a id=\"article-anchor-1\"></a><strong>一、概述</strong><a class=\"heading-anchor\" href=\"#section-一-概述\" aria-label=\"链接到本节：一、概述\">#</a></h2> \n<p></p> \n<p>通过链式思考增强的大语言模型在复杂任务上已取得显著的性能提升，但在将这种推理方式无差别地应用于所有问题时，常常面临推理开销过大、响应延迟偏高等现实瓶颈。为解决这一矛盾，bilibili Index-llm Team提出 SABER（Switchable and Balanced Training for Efficient LLM Reasoning），一种让大模型具备可切换、可控、并受 token 预算约束的推理能力的强化学习框架。</p> \n<p>SABER 首先对基座模型在每个训练样本中的推理长度进行统计，将样本划分到不同的预算层级。在随后的微调过程中，模型在系统提示词和混合奖励的引导下，学习如何在给定预算内完成推理。同时，我们额外加入一部分无思考训练数据，确保模型在关闭显式推理时依然能够稳定作答。SABER 支持四种离散推理模式：NoThink、FastThink、CoreThink、DeepThink，能够在推理深度与推理延迟之间灵活调节。我们在数学推理、代码生成和逻辑推理等复杂任务上进行了系统实验。结果显示：SABER 在限制 token 预算下依然保持高精度推理结果，具备平滑退化特性，并在跨模型规模与跨任务场景中展现出良好的泛化能力。特别是在 MATH 任务上，SABER-FastThink 将推理长度减少了 65.4%，并相较基座模型提升了 3.6% 的精度，展现出显著的效率与性能优势。</p> \n<p>该论文已被AAAI 2026收录，链接：<em><a title=\"https://arxiv.org/abs/2508.10026\" href=\"https://arxiv.org/abs/2508.10026\" target=\"_blank\" rel=\"noopener noreferrer\">https://arxiv.org/abs/2508.10026</a></em></p> \n<p></p> \n<h2 id=\"section-二-背景\"><a id=\"article-anchor-2\"></a><strong>二、背景</strong><a class=\"heading-anchor\" href=\"#section-二-背景\" aria-label=\"链接到本节：二、背景\">#</a></h2> \n<p></p> \n<p>近年来，大语言模型在复杂推理任务上的表现取得了显著进步，这主要得益于它们在显式、逐步的思考能力上的增强。诸如思维链提示（Chain-of-Thought）和推理时扩展（Test-Time Compute Scaling）等方法，使模型能够在给出最终答案前，将问题拆解为一系列中间步骤，从而提升推理的可靠性和准确性。这类策略已在多类任务中展现出了卓越的效果。</p> \n<p>然而，这种方法也带来了一些新的挑战。首先，推理轨迹往往过长，导致推理成本和响应延迟显著增加。更重要的是，模型通常会在所有输入上机械地采用相同的深度推理流程，而不考虑任务本身的复杂度或用户的偏好。这种推理深度与任务需求的不匹配，引出了一个越来越受到关注的问题：过度思考（overthinking）。在这一现象中，大语言模型即便面对极其简单的问题，也会生成冗长、复杂且不必要的推理内容。例如，对于“1 + 1 等于几？”这样的简单问题，一些模型可能仍会给出多步推理、列举无关的推导过程，其 token 消耗远超直接回答。这不仅拖慢响应速度，也显著提高推理的计算成本，从而限制了模型在真实场景中的部署效率。</p> \n<p>尽管已有工作尝试通过指令微调、长度约束、奖励重塑等方式来压缩输出，但这些方法多依赖静态规则或任务无关的启发式机制，既无法根据问题难度动态调节推理长度，也无法真正让用户掌控模型的推理深度。</p> \n<p></p> \n<h2 id=\"section-三-方法\"><a id=\"article-anchor-3\"></a><strong>三、方法</strong><a class=\"heading-anchor\" href=\"#section-三-方法\" aria-label=\"链接到本节：三、方法\">#</a></h2> \n<p></p> \n<h3 id=\"section-3-1-思考长度统计与预算划分\"><a id=\"article-anchor-4\"></a><strong>3.1 思考长度统计与预算划分</strong><a class=\"heading-anchor\" href=\"#section-3-1-思考长度统计与预算划分\" aria-label=\"链接到本节：3.1 思考长度统计与预算划分\">#</a></h3> \n<p></p> \n<p>思考预算（thinking budget）的设计是 SABER 的核心。若所有样本采用统一预算，简单任务不会受到长度约束，难题则会持续受罚并导致性能崩塌。为此，SABER 对每个样本单独校准预算：先运行基础模型，统计&lt;think&gt;和&lt;/think&gt;之间的推理 token 数量，再依据分布将样本划分为三个难度档：128（简单）、4096（中等）和 16384（困难）。难度越高，所允许的推理长度越宽松；超过 16384 的样本不设上限。同时在系统提示词中显式告知该样本的推理上限，从而让模型在训练中学习不同推理模式之间的切换。图1展示了不同思考模式的系统提示词。</p> \n<p></p> \n<p></p> \n<p><img alt=\"图片\" height=\"818\" src=\"https://i-blog.csdnimg.cn/img_convert/704509225bc7d25bb12f61e3832e64ec.png\" width=\"1032\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>图1 不同思考模式的系统提示词</p> \n<p></p> \n<p>这种分级缩放策略既保证了大量样本能产生有效的长度惩罚，加速模式切换的学习，又能尊重任务本身的推理需求，使训练过程更稳定。</p> \n<p></p> \n<h3 id=\"section-3-2-样本分组与稳定性控制\"><a id=\"article-anchor-5\"></a><strong>3.2 样本分组与稳定性控制</strong><a class=\"heading-anchor\" href=\"#section-3-2-样本分组与稳定性控制\" aria-label=\"链接到本节：3.2 样本分组与稳定性控制\">#</a></h3> \n<p></p> \n<p>直接对所有样本一开始就施加强长度惩罚会导致训练不稳定，因此 SABER 采用两项稳定化机制：</p> \n<p>（1）基于准确率的样本分组</p> \n<p>我们测量基础模型对训练集的回答情况，对其无法正确回答的约 40% 样本，其中一半保持原预算、另一半不设预算上限，使其推理过程不受惩罚。只有基础模型能答对的 60% 样本才会被降级预算。该策略减少了模型早期因频繁切换推理模式而带来的不稳定性。</p> \n<p>（2）推理长度比例约束</p> \n<p>为了避免模型为了减少惩罚而故意生成过短的推理轨迹，我们要求生成的思考 token 数必须在基础模型长度的区间内：</p> \n<p></p> \n<p></p> \n<p><img alt=\"图片\" height=\"174\" src=\"https://i-blog.csdnimg.cn/img_convert/383379938a641b03272d6c267736bb9e.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>防止出现因过度压缩推理导致的reward hacking现象。</p> \n<p></p> \n<h3 id=\"section-3-3-无思考模式构造\"><a id=\"article-anchor-6\"></a><strong>3.3 无思考模式构造</strong><a class=\"heading-anchor\" href=\"#section-3-3-无思考模式构造\" aria-label=\"链接到本节：3.3 无思考模式构造\">#</a></h3> \n<p></p> \n<p>在应用场景中，用户可能希望直接获得答案而无需推理过程。然而长推理模型若直接关闭思考通常会导致显著性能下降。因此 SABER 显式在训练集中加入部分 no-think 样本，通过构造极短的占位思维块来告诉模型跳过推理直接作答。即使少量数据，也能显著增强模型在无推理模式下的稳定性与表现。</p> \n<p></p> \n<h3 id=\"section-3-4-无需sft预热的直接rl优化\"><a id=\"article-anchor-7\"></a><strong>3.4 无需SFT预热的直接RL优化</strong><a class=\"heading-anchor\" href=\"#section-3-4-无需sft预热的直接rl优化\" aria-label=\"链接到本节：3.4 无需SFT预热的直接RL优化\">#</a></h3> \n<p></p> \n<p>与许多需要先进行 SFT 的方法不同，SABER 的构造天然与模型行为一致，因此可直接用强化学习进行训练，无需额外的 SFT 热身阶段，使训练更简单高效。</p> \n<p>模型采用 GRPO 进行优化，其奖励由四部分组成：</p> \n<ul><li> <p>格式奖励：推理与答案必须使用 &lt;think&gt;...&lt;/think&gt; 标记的结构化格式；</p> </li><li> <p>答案奖励：数学任务检查 boxed{} 内容，代码任务通过运行测试；</p> </li><li> <p>长度惩罚：超过预算则扣分；</p> </li><li> <p>比例惩罚：推理长度若偏离基础模型过多则扣分，防止reward hacking。</p> </li></ul> \n<p>综合优化后，模型能够实现对推理深度的精确控制，在长推理、短推理及无推理场景中均保持稳定的高质量回答。</p> \n<p></p> \n<p></p> \n<p><img alt=\"图片\" height=\"449\" src=\"https://i-blog.csdnimg.cn/img_convert/8a94a8bfb8380ffebc47e80e7daf5be0.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>图2 SABER框架</p> \n<p></p> \n<p>图2总结了SABER的整体框架。上半部分展示了数据预处理流程，我们通过基座模型的推理结果估计每个样本所需的思考预算，并据此将训练数据划分为简单、中等和困难三类。下半部分展示了强化学习阶段的训练机制，模型在不同推理模式对应的提示词引导下生成回答，随后依据格式规范性、答案准确性以及推理长度与预算的匹配程度等多维奖励信号进行综合评估与更新，从而实现更高效、更可控的推理行为。</p> \n<p></p> \n<h2 id=\"section-四-实验\"><a id=\"article-anchor-8\"></a><strong>四、实验</strong><a class=\"heading-anchor\" href=\"#section-四-实验\" aria-label=\"链接到本节：四、实验\">#</a></h2> \n<p></p> \n<p>我们在实验阶段系统评估了 SABER 框架的有效性，围绕四个核心研究问题展开：</p> \n<p>（1）SABER 在数学推理与代码生成任务上相较现有方法是否具备优势？</p> \n<p>（2）SABER 是否能推广到更大规模的模型，以及泛化到未见过的推理领域？</p> \n<p>（3）SABER 的关键设计组件各自的重要性如何？</p> \n<p>（4）SABER 的可切换推理模式之间呈现出怎样的行为差异？</p> \n<p>为回答上述问题，我们首先介绍实验设置，包括使用的数据集、对比基线与训练数据构成。随后展示 SABER 在 1.5B 模型规模上的核心结果，覆盖数学推理（MATH / GSM8K）与代码生成（MBPP）任务；接着进一步在 7B 模型上复现相同训练流程，评估其跨规模、跨领域的泛化能力，并在 LiveBench-Reasoning 逻辑推理任务上验证模式切换机制的迁移能力。我们也通过逐项删减关键组件的消融实验，分析 SABER 各模块的贡献。最后，我们选取具体案例，比较 FastThink、CoreThink 和 DeepThink 三种推理模式的行为差异，展示不同思考深度下的推理风格与答案准确性表现。</p> \n<p></p> \n<h3 id=\"section-4-1-与基线的比较-rq1\"><a id=\"article-anchor-9\"></a><strong>4.1 与基线的比较（RQ1）</strong><a class=\"heading-anchor\" href=\"#section-4-1-与基线的比较-rq1\" aria-label=\"链接到本节：4.1 与基线的比较（RQ1）\">#</a></h3> \n<p></p> \n<p></p> \n<p><img alt=\"图片\" height=\"386\" src=\"https://i-blog.csdnimg.cn/img_convert/893327d5f054988a804d0cce5400c11d.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>在 1.5B 模型规模下，SABER 的各模式均优于基座模型。</p> \n<ul><li> <p>FastThink 在保证准确率提升的同时，使推理长度下降 70%+，实现极高的效率；</p> </li><li> <p>CoreThink 在精简推理的基础上进一步提升了整体准确率；</p> </li><li> <p>DeepThink 在维持较高推理完整性的同时仍显著压缩生成长度，并取得最高准确率。</p> </li></ul> \n<p>对比 L1 和 SelfBudgeter，SABER 在更小训练量（2K vs. 30K）下获得更好的准确率—效率折中，并展现更稳定的推理行为学习能力。</p> \n<p></p> \n<h3 id=\"section-4-2-跨规模与跨领域泛化-rq2\"><a id=\"article-anchor-10\"></a><strong>4.2 跨规模与跨领域泛化（RQ2）</strong><a class=\"heading-anchor\" href=\"#section-4-2-跨规模与跨领域泛化-rq2\" aria-label=\"链接到本节：4.2 跨规模与跨领域泛化（RQ2）\">#</a></h3> \n<p></p> \n<p></p> \n<p><img alt=\"图片\" height=\"318\" src=\"https://i-blog.csdnimg.cn/img_convert/5283bcfcab47c0bd089c6c06cc3de6b9.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>在应用于 7B 模型时，SABER 仍保持良好的推理压缩能力与准确率增益：</p> \n<ul><li> <p>FastThink 在保持较高精度的前提下减少超过 80% 的推理长度；</p> </li><li> <p>DeepThink 同时实现较大幅度的压缩与轻微的准确率提升。</p> </li></ul> \n<p>更重要的是，尽管训练数据仅包含数学和代码样本，但 SABER 的推理模式切换机制成功迁移到了逻辑推理任务（LiveBench-R），显示出跨领域的泛化能力。</p> \n<p></p> \n<h3 id=\"section-4-3-消融实验-rq3\"><a id=\"article-anchor-11\"></a><strong>4.3 消融实验（RQ3）</strong><a class=\"heading-anchor\" href=\"#section-4-3-消融实验-rq3\" aria-label=\"链接到本节：4.3 消融实验（RQ3）\">#</a></h3> \n<p></p> \n<p></p> \n<p><img alt=\"图片\" height=\"669\" src=\"https://i-blog.csdnimg.cn/img_convert/4bae7a3153ea89089949d45633de9814.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>我们对 SABER 的核心设计逐项去除并测试其影响，包括预算降级策略、NoThink 示例比例、样本准确率过滤等。实验表明：</p> \n<ul><li> <p>移除预算降级会显著削弱短推理模式的学习能力，使模型难以适应不同推理深度；</p> </li><li> <p>减少或删除 NoThink 数据会导致无推理模式性能明显下降，且不会带来其他模式的收益；</p> </li><li> <p>移除准确率过滤会引入监督噪声，使训练不稳定。</p> </li></ul> \n<p>这些结果说明，SABER 的各子模块均是稳定学习推理模式的必要组成部分。</p> \n<p></p> \n<h3 id=\"section-4-4-推理模式行为分析-rq4\"><a id=\"article-anchor-12\"></a><strong>4.4 推理模式行为分析（RQ4）</strong><a class=\"heading-anchor\" href=\"#section-4-4-推理模式行为分析-rq4\" aria-label=\"链接到本节：4.4 推理模式行为分析（RQ4）\">#</a></h3> \n<p></p> \n<p></p> \n<p><img alt=\"图片\" height=\"598\" src=\"https://i-blog.csdnimg.cn/img_convert/6862c961fb2a9917e920f7519ca8a5d3.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>通过 MATH500 的示例可见，各模式都会遵循核心解题步骤，但推理深度有所区分：</p> \n<ul><li> <p>FastThink 仅包含关键步骤，最为简洁直接；</p> </li><li> <p>CoreThink 会加入额外的反思与局部解释，推理更完整；</p> </li><li> <p>DeepThink 则在得出答案后进一步展开自校验与总结，展现更深入、更具反思性的推理风格。</p> </li></ul> \n<p></p> \n<h2 id=\"section-五-总结\"><a id=\"article-anchor-13\"></a><strong>五、总结</strong><a class=\"heading-anchor\" href=\"#section-五-总结\" aria-label=\"链接到本节：五、总结\">#</a></h2> \n<p></p> \n<p>在本研究中，我们提出了一种模式切换的混合思考模型训练范式SABER，使大语言模型能够在多种推理模式下实现高效、可控的思考过程。SABER 通过结构化奖励、离散化推理模式设计，以及类似课程学习的预算分配策略，在无需额外监督微调的前提下，依然能够保持稳定的训练过程与灵活的推理行为。实验结果表明，SABER 在数学推理、代码生成与逻辑推理等多类任务中都展现了良好的泛化能力，并能在不同的计算预算下保持稳健性能。同时，我们验证了 SABER 能够在同一模型中自然地支持开关思考两种模式，且关思考模式的性能退化很少。总体来看，这些结果说明 SABER 为构建可控、高效率且高性价比的大模型推理机制提供了一个具有前景的方向。</p> \n<p></p> \n<p>-End-</p> \n<p>作者丨Index LLM Team</p>\n        ",
+    "headings": [
+      {
+        "id": "section-一-概述",
+        "level": 2,
+        "text": "一、概述"
+      },
+      {
+        "id": "section-二-背景",
+        "level": 2,
+        "text": "二、背景"
+      },
+      {
+        "id": "section-三-方法",
+        "level": 2,
+        "text": "三、方法"
+      },
+      {
+        "id": "section-3-1-思考长度统计与预算划分",
+        "level": 3,
+        "text": "3.1 思考长度统计与预算划分"
+      },
+      {
+        "id": "section-3-2-样本分组与稳定性控制",
+        "level": 3,
+        "text": "3.2 样本分组与稳定性控制"
+      },
+      {
+        "id": "section-3-3-无思考模式构造",
+        "level": 3,
+        "text": "3.3 无思考模式构造"
+      },
+      {
+        "id": "section-3-4-无需sft预热的直接rl优化",
+        "level": 3,
+        "text": "3.4 无需SFT预热的直接RL优化"
+      },
+      {
+        "id": "section-四-实验",
+        "level": 2,
+        "text": "四、实验"
+      },
+      {
+        "id": "section-4-1-与基线的比较-rq1",
+        "level": 3,
+        "text": "4.1 与基线的比较（RQ1）"
+      },
+      {
+        "id": "section-4-2-跨规模与跨领域泛化-rq2",
+        "level": 3,
+        "text": "4.2 跨规模与跨领域泛化（RQ2）"
+      },
+      {
+        "id": "section-4-3-消融实验-rq3",
+        "level": 3,
+        "text": "4.3 消融实验（RQ3）"
+      },
+      {
+        "id": "section-4-4-推理模式行为分析-rq4",
+        "level": 3,
+        "text": "4.4 推理模式行为分析（RQ4）"
+      },
+      {
+        "id": "section-五-总结",
+        "level": 2,
+        "text": "五、总结"
+      }
+    ],
+    "textLength": 4238,
+    "readingMinutes": 10,
     "sourceId": "bilibili-csdn",
     "sourceUrl": "https://blog.csdn.net/bilibili_TC/article/details/156061794",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:08:04.313Z",
-    "nextRetryAt": "2026-11-09T09:08:04.313Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "32e9a2a6ed2d353f53f671e6de149c66ab5d070d3f1c21605c4dceee01c6f60e",
+    "fetchedAt": "2026-11-02T11:44:19.947Z",
+    "checkedAt": "2026-11-02T11:44:19.947Z",
+    "nextRetryAt": "2026-12-02T11:44:19.947Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

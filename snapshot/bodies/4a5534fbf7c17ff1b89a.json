@@ -2,17 +2,80 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "4a5534fbf7c17ff1b89a",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "<p><span>“订单金额发生了什么变化，影响主要集中在哪里？”经营会上，这样的问题并不复杂，回答起来却往往要花不少工夫。先找到数据，再确认口径、比较变化、追查来源，最后把发现整理成报告。业务人员心里有问题，却可能因为不熟悉表名、不会写 SQL，或不了解数据链路，迟迟无法展开分析。</span></p>\n\n<p><span>LakeAgent 让这类分析可以从一句自然语言提问开始。结合 DataArts Studio 的数据资产与专业 Skills，它帮助业务人员找到相关数据，在对话中逐步看清变化，再把查询依据和发现整理出来，供团队继续讨论。这篇实战就从一个订单问题说起。</span></p>\n\n<p><span>案例中的数据已接入 DataArts Studio，查询连接与权限也已配置。数据负责人和平台管理员提供资产说明与连接支持，业务人员则围绕自己的问题确认字段含义、继续追问。随着可用数据逐渐明确，这次探索最终转向了历史样例中的订单优先级变化。</span></p>\n\n<h2 id=\"section-01一句提问找到合适的数据\"><span>01一句提问找到合适的数据</span><a class=\"heading-anchor\" href=\"#section-01一句提问找到合适的数据\" aria-label=\"链接到本节：01一句提问找到合适的数据\">#</a></h2>\n\n<p><span>分析的起点，是业务人员熟悉的表达：“看看订单变化。”LakeAgent 根据这句话检索相关资产，获取字段与连接信息，帮助业务人员把问题对应到可以查询的数据上。</span></p>\n\n<p><img alt=\"\" height=\"529\" src=\"https://i-blog.csdnimg.cn/direct/8124a6e3ff504d0ea186325b383ee47f.png\" width=\"1030\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图1 围绕订单变化发起对话</em></span></p>\n\n<p><span>候选表出现后，接下来要弄清楚的是：哪张表里有需要的数据，哪些字段能用来比较变化？资产检索 Skill 帮助发现相关数据，问数分析 Skill 获取字段与连接信息，业务人员据此确认它们与当前问题的关系。</span></p>\n\n<p><img alt=\"\" height=\"685\" src=\"https://i-blog.csdnimg.cn/direct/36565469849b42a088fc281192d7003f.png\" width=\"1217\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图2 与订单问题相关的资产及字段信息</em></span></p>\n\n<p><span>这次探索先找到了零售订单资产，后续因数据条件改用了 tpch.orders，关注点也随之调整。前者的 order_source 表示订单来源，后者的 O_ORDERPRIORITY 表示订单优先级。因此，接下来看的是不同优先级的历史记录如何变化；最初关于“昨天各渠道”的问题，还需要相应的渠道数据才能回答。</span></p>\n\n<p><span>数据的含义清楚了，问题也就更具体了：在当前可用的历史数据里，整体发生了怎样的变化，又主要集中在哪些优先级分组？</span></p>\n\n<h2 id=\"section-02看清变化主要发生在哪里\"><span>02看清变化主要发生在哪里</span><a class=\"heading-anchor\" href=\"#section-02看清变化主要发生在哪里\" aria-label=\"链接到本节：02看清变化主要发生在哪里\">#</a></h2>\n\n<p><span>围绕这个问题，LakeAgent 通过问数分析 Skill 辅助生成 SQL，使用已配置的 DLI 连接执行查询，并整理对比结果。业务人员可以沿着同一轮对话，先看整体，再追问不同分组的变化。</span></p>\n\n<p><img alt=\"\" height=\"685\" src=\"https://i-blog.csdnimg.cn/direct/81ab8eddfd1a4e0b91d6cb58ee3eddca.png\" width=\"1310\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图3 生成按订单优先级比较两日历史样例的 SQL</em></span></p>\n\n<p><span>本次查询比较的是 1998-08-02 与 1998-08-01，分组字段为 O_ORDERPRIORITY。截图中仍有“渠道”“昨日／前日”等显示名称，实际含义以这组字段和日期为准。由于尚未核实订单标识的唯一性，以及是否一行对应一单，下文用记录行数描述结果。</span></p>\n\n<p><span>生成的 SQL 也让数字有了可回看的依据。用了哪张表、筛选了哪些日期、怎样分组，都保留在查询中。业务人员可以据此理解结果，协作的数据人员也能接着复查和分析。</span></p>\n\n<p><span>查询完成后，执行状态与数据范围一起呈现出来。任务完成意味着查询已经执行，而结果能回答什么，仍取决于资产、日期和维度是否与问题相符。这里使用的是历史样例；截图对数据日期范围的描述有差异，后续可通过查询最小、最大日期确认。</span></p>\n\n<p><img alt=\"\" height=\"595\" src=\"https://i-blog.csdnimg.cn/direct/50f86cdcdc1242a09f7225d6751b95f6.png\" width=\"1302\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图4 查询执行反馈与数据范围</em></span></p>\n\n<p><span>两日样例的对比显示，记录行数由 59 增至 66，净增 7 行，约增长 11.86%。再看分组，NOT SPECIFIED 增加了 5 行，是净增的主要贡献组；URGENT 则减少了 2 行。整体增长的同时，各组的变化并不一致。</span></p>\n\n<p><img alt=\"\" height=\"651\" src=\"https://i-blog.csdnimg.cn/direct/0f633b2a20f448619df7ddbae6521346.png\" width=\"1302\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图5 整体增减与各优先级分组的变化</em></span></p>\n\n<p><span>这样的对比，让“订单变了多少”自然带出了更具体的追问：NOT SPECIFIED 组为什么增加？URGENT 组的下降是一次波动，还是已经持续了一段时间？下一步关注哪里，开始有了依据。</span></p>\n\n<h2 id=\"section-03寻找变化的原因\"><span>03寻找变化的原因</span><a class=\"heading-anchor\" href=\"#section-03寻找变化的原因\" aria-label=\"链接到本节：03寻找变化的原因\">#</a></h2>\n\n<p><span>要回答这些问题，就需要继续了解相关字段从哪里来、经过了哪些加工。LakeAgent 的血缘分析 Skill 可以查询表级和字段级的来源与去向，为排查提供线索。沿着这些线索，再结合对应时间的加工逻辑、运行记录、质量检查或业务信息，才有机会找到变化的原因。</span></p>\n\n<p><img alt=\"\" height=\"810\" src=\"https://i-blog.csdnimg.cn/direct/44d66b24dacf4cc8943c786c609c4cca.png\" width=\"1297\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图6 围绕数据来源展开追溯</em></span></p>\n\n<p><span>这次追溯没有查到 tpch.orders 的血缘，随后转查了另一组支付资产。两者之间的关联尚未建立，因此这条支付链路还不能用来解释订单优先级的变化。继续分析，需要先请资产负责人补充 tpch.orders 自身的来源资料。</span></p>\n\n<p><span>到这里，哪些分组发生了变化已经清楚，原因还需要更多证据。保留这些追查记录，接续分析的人就能知道查到了哪里、还缺什么，不必重新走一遍同样的路。</span></p>\n\n<h2 id=\"section-04顺着发现继续探索\"><span>04顺着发现继续探索</span><a class=\"heading-anchor\" href=\"#section-04顺着发现继续探索\" aria-label=\"链接到本节：04顺着发现继续探索\">#</a></h2>\n\n<p><span>业务分析往往是在追问中逐渐深入的。LakeAgent 可以结合当前对话整理重点发现，并提出值得继续探索的方向。业务人员不必重新交代整段背景，就能围绕刚刚看到的变化继续问下去。</span></p>\n\n<p><img alt=\"\" height=\"771\" src=\"https://i-blog.csdnimg.cn/direct/5523ece6b82d45b09dbd4b317149ef83.png\" width=\"1324\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图7 从已有发现延伸出的后续问题</em></span></p>\n\n<p><span>例如，看到 NOT SPECIFIED 组增加了 5 行，可以先了解这一优先级的业务定义和填充情况；看到 URGENT 组减少了 2 行，可以把日期范围拉长，观察下降是否持续。数字提供了追问的方向，这些问题仍需进一步验证，才能形成原因判断。</span></p>\n\n<p><span>于是，“看看订单变化”逐渐变成了一组有针对性的问题。整体记录数在增长，NOT SPECIFIED 组贡献较大，同时有部分优先级分组下降。团队可以围绕字段含义、变化是否持续，以及数据来源展开讨论，让后续核查更有重点。</span></p>\n\n<h2 id=\"section-05自动生成分析报告\"><span>05自动生成分析报告</span><a class=\"heading-anchor\" href=\"#section-05自动生成分析报告\" aria-label=\"链接到本节：05自动生成分析报告\">#</a></h2>\n\n<p><span>当发现逐渐清楚，接下来的需求也很实际：把它们交给需要一起判断的人。LakeAgent 可以将查询结果、重点见解和追溯记录组织成报告，让团队沿着同一份材料回看依据、讨论变化，并接着核查尚未回答的问题。</span></p>\n\n<p><img alt=\"\" height=\"778\" src=\"https://i-blog.csdnimg.cn/direct/a98046f0030e4152913a83e135ce063f.png\" width=\"1272\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图8 将查询发现与追溯记录汇集为报告</em></span></p>\n\n<p><span>前面对话里的查询结果和上下文，为报告提供了内容；已经取得的来源材料，则为后续核查保留了线索。比较日期、分组字段、统计单位和查询依据一并写清，读者才知道这些发现适用于什么范围。报告的生成、预览与导出方式，以实际环境支持情况为准。</span></p>\n\n<h3 id=\"section-关键数字与重点变化集中呈现\"><span>关键数字与重点变化集中呈现</span><a class=\"heading-anchor\" href=\"#section-关键数字与重点变化集中呈现\" aria-label=\"链接到本节：关键数字与重点变化集中呈现\">#</a></h3>\n\n<p><span>报告总览把整体变化与分组结果放在一起，配合可视化，帮助读者迅速找到值得讨论的部分。关键数字与前面的查询结果对应，讨论就有了共同的起点。</span></p>\n\n<p><img alt=\"\" height=\"578\" src=\"https://i-blog.csdnimg.cn/direct/8175ba0373af4bfcb90f5dcfcd4563bf.png\" width=\"1013\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图9 报告中的整体变化与分组结果</em></span></p>\n\n<p><span>在这个案例中，讨论围绕历史样例净增 7 行、NOT SPECIFIED 组增加 5 行、URGENT 组减少 2 行展开。</span></p>\n\n<h3 id=\"section-见解有据可查\"><span>见解有据可查</span><a class=\"heading-anchor\" href=\"#section-见解有据可查\" aria-label=\"链接到本节：见解有据可查\">#</a></h3>\n\n<p><span>一条见解从何而来，也应该能在报告中找到对应依据。分组增减可以回到查询结果中核对，原因解释则要有相关证据支持。前面提到的支付资产链路，只有核实了与 tpch.orders 的关联，才可能用于这次归因。</span></p>\n\n<p><img alt=\"\" height=\"975\" src=\"https://i-blog.csdnimg.cn/direct/126acf35bf0b40a3a5d803e5b4246572.png\" width=\"1086\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图10 报告中的分析见解与来源关系</em></span></p>\n\n<p><span>当前报告已经可以说明哪些变化值得关注，也能把尚未验证的解释和所缺材料留给团队。这样，接手的人既能理解已有发现，也知道哪些问题还不能下结论。</span></p>\n\n<h3 id=\"section-让团队知道下一步做什么\"><span>让团队知道下一步做什么</span><a class=\"heading-anchor\" href=\"#section-让团队知道下一步做什么\" aria-label=\"链接到本节：让团队知道下一步做什么\">#</a></h3>\n\n<p><span>后续讨论可以围绕几个具体问题展开：把日期范围拉长后，变化是否仍然存在？订单优先级如何定义和填充？tpch.orders 的来源资料能否补齐？业务与数据负责人也可以据此商定各自接下来要核查的内容。</span></p>\n\n<p><img alt=\"\" height=\"980\" src=\"https://i-blog.csdnimg.cn/direct/5ff52822066c440593a89f0eae573286.png\" width=\"1117\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图11 后续探索建议与相关资产</em></span></p>\n\n<p><span>有了这份报告，团队可以顺着 SQL、对比结果和追查记录继续工作，在新证据出现时更新判断。完成标签和推断的核对后，它也能成为分享与交接的材料，让一次对话中的分析延续到团队协作中。</span></p>\n\n<h2 id=\"section-06下一次少做重复工作\"><span>06下一次少做重复工作</span><a class=\"heading-anchor\" href=\"#section-06下一次少做重复工作\" aria-label=\"链接到本节：06下一次少做重复工作\">#</a></h2>\n\n<p><span>订单变化只是业务分析中的一个常见问题。围绕 DataArts Studio，LakeAgent 还提供资产检索、问数分析、血缘分析、质量检查和元数据补充等专业 Skills，在已配置的工具、连接和权限范围内，辅助日常的数据发现、分析与治理。</span></p>\n\n<p><img alt=\"\" height=\"964\" src=\"https://i-blog.csdnimg.cn/direct/6c418d0a40d3482688bebba38004c575.png\" width=\"1257\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图12 面向数据分析与治理的专业 Skills</em></span></p>\n\n<p><span>当一类问题的分析方法逐渐成熟，团队还可以把有效流程沉淀为企业自定义 Skills，把确认过的统计口径和输出要求写入企业规则。下次遇到类似问题，就可以沿用已经验证的方法，把注意力放在新的数据和变化上。</span></p>\n\n<h3 id=\"section-日常分析按统一口径定时开展\"><span>日常分析按统一口径定时开展</span><a class=\"heading-anchor\" href=\"#section-日常分析按统一口径定时开展\" aria-label=\"链接到本节：日常分析按统一口径定时开展\">#</a></h3>\n\n<p><span>同一个指标反复分析时，口径的一致性尤其重要。企业规则可以保存团队已经确认的统计口径与输出要求，让后续分析有共同的约定；业务定义或数据资产发生变化时，这些规则也需要相应更新。</span></p>\n\n<p><img alt=\"\" height=\"296\" src=\"https://i-blog.csdnimg.cn/direct/14a705daae81448c8c7d2fa07c372739.png\" width=\"1826\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图13 保存常用统计口径与输出要求的企业规则</em></span></p>\n\n<p><span>对于范围固定、数据和连接持续可用，而且无需临时交互的分析，还可以进一步配置定时任务，周期调用内置或企业自定义 Skills。安排好与数据就绪时间相匹配的运行时间，并保持权限和工具可用，同类分析就有了定期开展的基础。</span></p>\n\n<p><img alt=\"\" height=\"248\" src=\"https://i-blog.csdnimg.cn/direct/eedefa0bb4224b9fa78c6176759dfd70.png\" width=\"1112\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><span><em>图14 适合周期执行的分析任务</em></span></p>\n\n<p><span>从一句订单提问开始，业务人员逐渐找到数据、看清变化，也知道了接下来该问什么。LakeAgent 把这些工作衔接在同一段分析中，让查询依据能够回看，让发现能够交给团队继续讨论。当有效的方法和口径被保留下来，下一次面对类似问题，分析就有了成熟的起点。</span></p>",
+    "headings": [
+      {
+        "id": "section-01一句提问找到合适的数据",
+        "level": 2,
+        "text": "01一句提问找到合适的数据"
+      },
+      {
+        "id": "section-02看清变化主要发生在哪里",
+        "level": 2,
+        "text": "02看清变化主要发生在哪里"
+      },
+      {
+        "id": "section-03寻找变化的原因",
+        "level": 2,
+        "text": "03寻找变化的原因"
+      },
+      {
+        "id": "section-04顺着发现继续探索",
+        "level": 2,
+        "text": "04顺着发现继续探索"
+      },
+      {
+        "id": "section-05自动生成分析报告",
+        "level": 2,
+        "text": "05自动生成分析报告"
+      },
+      {
+        "id": "section-关键数字与重点变化集中呈现",
+        "level": 3,
+        "text": "关键数字与重点变化集中呈现"
+      },
+      {
+        "id": "section-见解有据可查",
+        "level": 3,
+        "text": "见解有据可查"
+      },
+      {
+        "id": "section-让团队知道下一步做什么",
+        "level": 3,
+        "text": "让团队知道下一步做什么"
+      },
+      {
+        "id": "section-06下一次少做重复工作",
+        "level": 2,
+        "text": "06下一次少做重复工作"
+      },
+      {
+        "id": "section-日常分析按统一口径定时开展",
+        "level": 3,
+        "text": "日常分析按统一口径定时开展"
+      }
+    ],
+    "textLength": 3647,
+    "readingMinutes": 9,
     "sourceId": "huawei-csdn",
     "sourceUrl": "https://blog.csdn.net/devcloud/article/details/169164752",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:30.791Z",
-    "nextRetryAt": "2026-11-09T09:07:30.791Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "adaacc53766e5fcded7480316183e6f2c847a41afe32768879281b0a73d1b328",
+    "fetchedAt": "2026-11-02T11:40:00.604Z",
+    "checkedAt": "2026-11-02T11:40:00.604Z",
+    "nextRetryAt": "2026-12-02T11:40:00.604Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

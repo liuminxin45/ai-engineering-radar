@@ -2,17 +2,69 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "da1f8e10e6ce3cadb1ff",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <blockquote>作者：vivo 互联网项目团队- Ding Junjie<br>\n本文结合 AI 编辑器二期调研实践，拆解 Agent 在协同文档中的身份取舍、可回放事实链、side-by-side Diff 展示，以及 run 级精准撤回机制，说明如何让 AI 的改动看得见、退得掉、不误伤协作者。</blockquote>\n\n<p>1分钟看图掌握核心要点👇</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"1027\" src=\"https://i-blog.csdnimg.cn/img_convert/d2c5f974cb63d4b4d37d465bda5dcebd.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-一-前言\"><a id=\"article-anchor-1\"></a>一、前言<a class=\"heading-anchor\" href=\"#section-一-前言\" aria-label=\"链接到本节：一、前言\">#</a></h3>\n\n<p>想象一下，当 AI 不再只是一个冰冷的问答机器，而是真正走进我们的协同文档，成为我们并肩作战的伙伴，那会是怎样一番景象？它不再仅仅是提供答案，而是直接参与到内容的创作与修改中。这听起来很酷，但当 AI 的“大手”伸进我们<strong>共同编辑的文档</strong>时，事情立刻变得复杂起来。</p>\n\n<p>在多人协同的文档世界里，文档不再是某个人的专属领地。这里有你，有我，有其他同事。现在，AI 这个新成员也要加入进来，一起“指点江山”。</p>\n\n<p>真正的难题不止是“AI 能不能写得好”，而是：<strong>当 AI 以惊人的速度和规模进行编辑时，我们如何确保它能与人类的精细化编辑和谐共存，而不是破坏我们对协同工作的信任感？</strong></p>\n\n<p>在开发知识库 AI 编辑器二期时，我们深入调研后发现，这远不止是一个模型问题，更是一个<strong>深层次的协同架构挑战</strong>。关键不在于让 AI 把文字敲进文档，而在于如何明确它在协同系统中的“身份”，并通过一套可回滚、可对比的机制，将 AI 的编辑行为纳入一个真正透明、可控的协作闭环。</p>\n\n<h3 id=\"section-二-身份之问-agent-扮演什么样的角色\"><a id=\"article-anchor-2\"></a>二、身份之问：Agent 扮演什么样的角色<a class=\"heading-anchor\" href=\"#section-二-身份之问-agent-扮演什么样的角色\" aria-label=\"链接到本节：二、身份之问：Agent 扮演什么样的角色\">#</a></h3>\n\n<p>撤销/重做”（Undo/Redo）功能，是上世纪 70 年代留给我们的一个经典 UI 约定。它之所以深入人心，是因为它足够直观：我们相信按下 Ctrl+Z，系统就会乖乖地退回到“我刚才做的那一步”。</p>\n\n<p>然而，当 Agent 踏入协同文档的舞台，这个约定瞬间失灵了。因为文档的改动不再仅仅源于“我”的双手，还可能来自 AI，来自其他协作者。此时，系统必须直面一个根本性的问题：<strong>Agent 应该以怎样的身份参与到这场多人协作中？</strong></p>\n\n<p>在实际探索中，我们仔细对比了三种不同的模式：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"287\" src=\"https://i-blog.csdnimg.cn/img_convert/e274f5d774729e01a11a74868c5de45a.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>经过反复权衡，我们最终的取舍更倾向于第二种模式：<strong>Agent 附属于操作它的用户，但它的每一次改动都必须拥有独立的“身份证明”</strong>。</p>\n\n<p>这句话里，蕴含着两个至关重要的考量。</p>\n\n<p>首先，Agent 不会以一个完全独立的协作者身份出现。它会共享当前用户的上下文、权限和提交通道，不会凭空制造出一个“虚拟同事”来占据协同列表的空间。</p>\n\n<p>其次，Agent 也不能完全伪装成用户本人。它的每一轮编辑都需要带上清晰的归属边界，比如会话 ID、运行轮次、消息批次等信息。这样，系统才能精准地区分：哪些是用户亲手输入的，哪些是这一轮 AI 编辑的成果，以及哪些是 AI 编辑后系统自动补齐的结构。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"393\" src=\"https://i-blog.csdnimg.cn/img_convert/f160dc5460b06a760703129048d8d206.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：在多人协同的场景下，AI 编辑的撤回，其核心并非简单地“时光倒流”，而是要精确地管理好编辑的边界与作用域。</p>\n\n<p>这直接影响到两个最核心的交互逻辑：</p>\n\n<ul><li>Ctrl+Z 永远是人类用户自己的编辑撤销。</li><li>对话框里的“撤回”按钮，则是专门针对 Agent 这一轮编辑的撤回。</li></ul>\n\n<p>如果这两者混为一谈，用户很快就会感到失控。因为他将无法判断，当他按下撤销键时，究竟是撤销了自己刚刚输入的一句话，还是 AI 上一轮生成的一大段内容。</p>\n\n<h3 id=\"section-三-透明化编辑-让-ai-的-手术刀-清晰可见\"><a id=\"article-anchor-3\"></a>三、透明化编辑：让 AI 的“手术刀”清晰可见<a class=\"heading-anchor\" href=\"#section-三-透明化编辑-让-ai-的-手术刀-清晰可见\" aria-label=\"链接到本节：三、透明化编辑：让 AI 的“手术刀”清晰可见\">#</a></h3>\n\n<p>Agent 的修改往往是大刀阔斧、跨结构重写的。对用户而言，这更像是一场“外科手术”。如果系统只是简单粗暴地把结果直接应用到文档上，用户会产生一种“文档突然变了”的强烈失控感。因此，AI 的编辑绝不能只有冰冷的结果，它必须拥有<strong>透明化的过程。</strong></p>\n\n<p>我们的解决方案,可观测对比，可一键撤回，架构图(偏向前端技术，谨慎食用)：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"401\" src=\"https://i-blog.csdnimg.cn/img_convert/20eeec1ad3e71072fd1e6b811f561e8d.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：一条从工具执行、编辑追踪、事实记录到差异展示的完整链路。图中底部的 Undo 边界将在后文单独展开。</p>\n\n<p>在工具的入口层，无论是插入还是替换和删除操作，都会通过 editor.chain().changedByAI({ runId, sessionId, messageId })...run() 这样的方式进行；这确保了后续的记录、展示和撤回都能沿着同一条“身份边界”继续处理。</p>\n\n<p><strong>1. 语义化差异对比：超越字符的智慧</strong></p>\n\n<p>传统的字符级差异对比（比如 diff-match-patch）对于富文本来说，简直是场灾难：它会把一次段落重写拆解成无数细碎的增删，可读性极差，让人摸不着头脑。</p>\n\n<p>为此，我们采用了<strong>两层差异对比策略</strong>：</p>\n\n<ul><li><strong>块级感知（Block-aware）：</strong>首先回答“哪些大的内容块发生了变化”。</li><li><strong>文本级细化：</strong>只有在确定了变化的块之后，再深入其内部进行精细的文本对比。</li></ul>\n\n<p>这样一来，用户看到的是“AI 在哪里动了刀”，而不是一堆晦涩难懂的“底层操作日志”。</p>\n\n<p><strong>2. 建立“事实链”而非“结果快照”</strong></p>\n\n<p>透明化不仅仅是弹出一个对比框那么简单，它更深层的意义在于，将“AI 到底做了什么”沉淀成一条可供回放的“事实链”。这里的记录层并非简单地保存一份修改前的文档和一份修改后的文档，而是将编辑器运行时产生的变更步骤，转化为可存储、可排序、可回放的数据。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"401\" src=\"https://i-blog.csdnimg.cn/img_convert/20eeec1ad3e71072fd1e6b811f561e8d.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：一次编辑会进入 Transaction，并被拆分成多个 Step；记录层关注的是中间这段，将运行时 Step 序列化为 stepsJson，再通过 Transform 回放得到 afterDoc。</p>\n\n<p>在 ProseMirror 中，Step 是最小的变更单元。它本身代表着“这次编辑对文档做了什么”，但运行时对象不能直接作为长期事实使用，因此我们会将其序列化为 stepsJson。这样，一轮 Agent 编辑就不再是一个模糊的“改后结果”，而是变成：</p>\n\n<ul><li><strong>基线：</strong>这一轮编辑开始前的文档状态 baseJson。</li><li><strong>过程：</strong>按顺序记录的 stepsJson，详细记录了每一步的修改。</li><li><strong>边界：</strong>绑定了 session、run 和 message 的归属信息，明确了这次编辑的“身份”。</li></ul>\n\n<p>具体到实现层面，精简后的记录层逻辑如下：同一个 runKey 下只保存一份 baseJson，后续每个 message 只追加自己的 stepsJson。</p>\n\n<pre><code class=\"language-cobol\"><ol><li><div><div><span>record</span> <span>=</span> diffSourceByRunKey.<span>get</span>(runKey) ?? {</div></div></li><li><div><div>  baseJson: oldState.doc.toJSON(),</div></div></li><li><div><div>  messages: []</div></div></li><li><div><div>}</div></div></li><li><div><div> </div></div></li><li><div><div><span>record</span>.messages.push({</div></div></li><li><div><div>  messageId,</div></div></li><li><div><div>  seq,</div></div></li><li><div><div>  stepsJson: tr.steps.map(step <span>=</span><span>&gt;</span> step.toJSON())</div></div></li><li><div><div>})</div></div></li></ol></code></pre>\n\n<p>这种结构设计的巧妙之处在于，它将记录层和展示层清晰地分离。记录层负责保存机器可还原的“事实”，而展示层则将这些事实回放成 beforeDoc / afterDoc，并“翻译”成用户可读的语义差异；决策层则可以基于同一条“事实链”来执行接受、拒绝或回滚等操作。</p>\n\n<h3 id=\"section-四-撤回边界-差异看得见-更要退得准\"><a id=\"article-anchor-4\"></a>四、撤回边界：差异看得见，更要退得准<a class=\"heading-anchor\" href=\"#section-四-撤回边界-差异看得见-更要退得准\" aria-label=\"链接到本节：四、撤回边界：差异看得见，更要退得准\">#</a></h3>\n\n<p>上面我们解决了“看得见”的问题：AI 的结构化动作被编辑器追踪为 baseJson + ordered stepsJson，并能回放成用户可读的差异。但只要 Agent 真的参与了文档编辑，用户接下来一定会问：如果 AI 改错了，我能不能只撤回它的修改？</p>\n\n<p>在普通的单人编辑器里，“撤销”（Undo）基本可以理解为一个时间栈：最近发生的操作，总是最先被撤销。</p>\n\n<p>然而，在多人协同加上 Agent 编辑的复杂场景中，这个简单的模型就行不通了。因为时间上最后发生的操作，不一定是你真正想撤销的操作。</p>\n\n<p><strong>一个典型的场景是：</strong></p>\n\n<p>用户 A 触发 AI 修改了文档的第 2-3 段；与此同时，人类用户(包含用户A自身) 在第 4 段补充了一句话。此时，用户 A 点击了“撤回 AI 修改”。如果系统执行的是全局撤回，那么人类用户 刚刚辛苦补充的内容，就有可能被无辜地“带走”。</p>\n\n<p>这在协同文档中是绝对不能接受的：<strong>对AI 撤回操作，竟然误伤了人类用户的手动编辑。</strong></p>\n\n<p>因此，我们将撤回的语义拆分为两类：</p>\n\n<ul><li>用户按下 Ctrl+Z，撤销的是自己亲手编辑的历史记录。</li><li>用户在 Agent 对话框里点击“撤回”，撤销的则是这一轮 AI 编辑边界内的所有改动。</li></ul>\n\n<p>要实现这一点，撤回的边界必须与差异对比的边界保持一致。AI 直接产生的事务需要被明确标记；而由编辑器插件追加的结构修正，也必须继承同一组 session / run / message 信息。否则，差异对比时看到的是完整的变化，但撤回时却只能退掉一部分，用户会觉得系统“不干净”，不够可靠。</p>\n\n<p>在当前的实现中，AI 编辑的入口会先把事务从普通的编辑历史中“摘出来”，并写入同一组边界信息；当事务进入 Yjs 侧之后，UndoManager 再利用同一组元数据进行过滤：</p>\n\n<pre><code class=\"language-cobol\"><ol><li><div><div>tr.setMeta(<span>'addToHistory'</span>, <span>false</span>)</div></div></li><li><div><div>tr.setMeta(<span>'sessionId'</span>, sessionId)</div></div></li><li><div><div>tr.setMeta(<span>'runId'</span>, runId)</div></div></li><li><div><div> </div></div></li><li><div><div>captureTransaction <span>=</span> tr <span>=</span><span>&gt;</span></div></div></li><li><div><div>  tr.meta.<span>get</span>(<span>'sessionId'</span>) <span>=</span><span>=</span><span>=</span> sessionId <span>&amp;</span><span>&amp;</span></div></div></li><li><div><div>  tr.meta.<span>get</span>(<span>'runId'</span>) <span>=</span><span>=</span><span>=</span> runId</div></div></li></ol></code></pre>\n\n<p>换句话说，差异对比的主线保存的是可供回放的“事实”，而撤回的主线保存的则是可供过滤的“边界”。它们共享同一套身份标记，但解决的是两个不同的问题：一个是为了让用户“看懂”，另一个是为了让系统“退准”。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"401\" src=\"https://i-blog.csdnimg.cn/img_convert/d1a12e7aba1c1498e936f9046e6e7405.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：同一套 session / run / message 身份边界，向上用于沉淀差异对比的可回放事实，向下用于支撑撤销的精准过滤。</p>\n\n<h3 id=\"section-五-展示转换-为何选择并排对比-而非纯文本差异\"><a id=\"article-anchor-5\"></a>五、展示转换：为何选择并排对比，而非纯文本差异？<a class=\"heading-anchor\" href=\"#section-五-展示转换-为何选择并排对比-而非纯文本差异\" aria-label=\"链接到本节：五、展示转换：为何选择并排对比，而非纯文本差异？\">#</a></h3>\n\n<p>有了 baseJson + stepsJson，系统已经能够准确地还原文档的变化。然而，这仍然不是用户真正想看到的东西。</p>\n\n<p>Step 适合机器读取，却不适合人类阅读。用户并不关心底层是第几个 Step，也不关心某个位置被替换了多少个 token。用户真正关心的是：</p>\n\n<ul><li>哪些段落被修改了？</li><li>哪些内容是新增的，哪些内容被删除了？</li><li>这一段到底是轻微的润色，还是整体的重写？</li><li>我能不能快速跳过没有变化的部分，只关注关键的差异？</li></ul>\n\n<p>这就是展示层存在的意义：将系统记录的“事实”转化为用户可理解的“编辑解释”。</p>\n\n<p>当差异对比弹窗打开时，它并不会直接读取一份预先存储的 afterJson。baseJson 本身就是这轮 AI 编辑开始前的文档状态，系统会先把它还原成可参与对比的 ProseMirror 文档；随后再把这一轮所有 stepsJson 逐个回放，得到编辑后的文档状态：</p>\n\n<pre><code class=\"language-cobol\"><ol><li><div><div>const beforeDoc <span>=</span> ProseMirrorNode.fromJSON(schema, <span>source</span>.baseJson)</div></div></li><li><div><div>const afterDoc <span>=</span> applyRunSteps(schema, beforeDoc, <span>source</span>.messages)</div></div></li><li><div><div> </div></div></li><li><div><div>const { rows } <span>=</span> diffDocBlocksSideBySide(schema, beforeDoc, afterDoc)</div></div></li><li><div><div>const viewRows <span>=</span> mergeContinuousDiffRows(rows)</div></div></li></ol></code></pre>\n\n<p></p>\n\n<p><img alt=\"\" height=\"331\" src=\"https://i-blog.csdnimg.cn/img_convert/73e28637e028f1f5c30b8bed87b73ce5.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：真实业务截图。 AI 修改后，通过Diff 看清新增、删除和修改内容</p>\n\n<p>我们没有选择纯文本差异对比，原因非常直接：协同文档并非纯文本。它是一个富文本树，其中包含了段落、标题、列表、表格、节点属性、标记以及嵌套结构。如果直接将其打平为字符串再进行差异对比，虽然算法简单，但会丢失大量的结构语义，最终呈现给用户的是一堆难以理解的字符碎片。</p>\n\n<p>因此，我们采用了&nbsp;<strong>side-by-side（并排）的双层策略</strong>。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"393\" src=\"https://i-blog.csdnimg.cn/img_convert/5092855224b2b823208b8551bdac03c8.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：第一层进行块级对齐，回答“哪些大的内容块发生了变化”；第二层只在修改过的块内部进行文本级细化，回答“这一块里具体修改了什么”。</p>\n\n<p>第一层是<strong>块级对齐</strong>。</p>\n\n<p>系统首先将文档拆分成顶层的内容块（blocks），然后判断每个块是保持不变、被删除、新增、替换，还是类型相同但内容发生了变化。这个层级提供了整体的“可观测性”：用户首先能够了解文档结构上发生了哪些宏观变化。</p>\n\n<p>第二层是<strong>文本级细化</strong>。</p>\n\n<p>对于那些“类型相同但内容被修改”的区域，系统会进一步深入其内部，进行精细的文本差异标记。这样，用户既能看到段落级别的变动范围，也能清晰地看到具体是哪几个词、哪几句话发生了变化。</p>\n\n<p>这种设计背后的取舍是：<strong>首先确保差异对比稳定且易读，然后在局部补充细节</strong>。</p>\n\n<p>它并非追求最细粒度的算法输出，而是追求用户“观测效率”的最大化。对于文档编辑而言，最糟糕的体验不是“差异对比不够炫酷”，而是“差异对比把一次本可理解的修改，拆解成了一堆令人困惑的噪音”。</p>\n\n<p>side-by-side rows 的价值正在于此。左右并排的对照方式，能让用户直接建立“修改前/修改后”的空间关系；行级别的合并减少了碎片化的信息；而文本级的标记则弥补了局部的精度。这比单纯地给用户一串字符增删，更能贴近真实的编辑决策过程。</p>\n\n<h3 id=\"section-六-三层心智模型-记录-展示-决策-缺一不可\"><a id=\"article-anchor-6\"></a>六、三层心智模型：记录、展示、决策，缺一不可<a class=\"heading-anchor\" href=\"#section-六-三层心智模型-记录-展示-决策-缺一不可\" aria-label=\"链接到本节：六、三层心智模型：记录、展示、决策，缺一不可\">#</a></h3>\n\n<p>将上述实现拆解开来，Agent 编辑的闭环其实可以归纳为三个层次。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"401\" src=\"https://i-blog.csdnimg.cn/img_convert/d81198e56064ba6ba9158668102a7ffb.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：底层记录并非直接面向人类；中层负责将“事实”转化为可读的差异；上层才是用户真正进行判断和撤回操作的界面。</p>\n\n<p>第一层是<strong>系统事实层</strong>。</p>\n\n<p>这里保存的是 Step、stepsJson 以及回放能力。它的目标是确保修改的可还原、可审计和可定位。它不需要长得像用户界面，也不应该直接暴露给用户。</p>\n\n<p>第二层是<strong>展示转换层</strong>。</p>\n\n<p>这里负责将 beforeDoc / afterDoc 转化为块级差异、文本差异和最终的行级展示。它的目标是让信息可读、可对齐、可解释。它不是事实本身，而是将事实“翻译”给人类理解的桥梁。</p>\n\n<p>第三层是<strong>用户决策层</strong>。</p>\n\n<p>这里才是差异预览、接受、撤回等交互行为发生的地方。它的目标是提供可见性、决策权和操作的安全性。</p>\n\n<p>这三层中的任何一层缺失，都会让 Agent 的编辑变得不可信赖：</p>\n\n<ul><li>只有事实层，没有展示层，用户会一头雾水，看不懂 AI 到底做了什么。</li><li>只有展示层，没有事实层，系统的还原能力将不稳定，无法保证修改的准确性。</li><li>只有差异对比，没有精准撤回，用户将不敢轻易尝试 AI 的编辑功能。</li></ul>\n\n<p>因此，编辑 Agent 和聊天 Agent 最大的区别，并不在于它们背后的模型有多么先进，而在于这个完整的“闭环”。聊天 Agent 生成一段内容，用户可以选择复制或直接丢弃；而编辑 Agent 则是直接介入用户正在协作的文档，它必须让用户清楚地知道：<strong>你改了哪里，我看得清清楚楚；你改错了，我能准确地退回去；我撤回你的修改，绝不会伤及无辜</strong>。</p>\n\n<h3 id=\"section-七-结语\"><a id=\"article-anchor-7\"></a>七、结语<a class=\"heading-anchor\" href=\"#section-七-结语\" aria-label=\"链接到本节：七、结语\">#</a></h3>\n\n<p>在协同文档中引入 Agent，绝不仅仅是简单地将 AI 生成的结果写入编辑器那么简单。它意味着将一个高频、大规模、异步的“编辑者”纳入到整个协同系统之中。</p>\n\n<p>我们最终选择的路线是：Agent 附属于用户，但其改动拥有独立的归属；底层记录采用 baseJson + ordered stepsJson 的方式，而非仅仅保存前后快照；展示层则运用 side-by-side 的块级行展示加上文本级细化；撤回层则将 Ctrl+Z 的用户手动撤销与 Agent 运行级别的撤回明确区分开来。</p>\n\n<p>这些设计，虽然看起来都偏向工程底层，但它们共同解决的，是一个至关重要的产品层问题：让用户在 AI 完成文档修改之后，依然能够感受到文档的掌控权牢牢掌握在自己手中。</p>\n\n        ",
+    "headings": [
+      {
+        "id": "section-一-前言",
+        "level": 3,
+        "text": "一、前言"
+      },
+      {
+        "id": "section-二-身份之问-agent-扮演什么样的角色",
+        "level": 3,
+        "text": "二、身份之问：Agent 扮演什么样的角色"
+      },
+      {
+        "id": "section-三-透明化编辑-让-ai-的-手术刀-清晰可见",
+        "level": 3,
+        "text": "三、透明化编辑：让 AI 的“手术刀”清晰可见"
+      },
+      {
+        "id": "section-四-撤回边界-差异看得见-更要退得准",
+        "level": 3,
+        "text": "四、撤回边界：差异看得见，更要退得准"
+      },
+      {
+        "id": "section-五-展示转换-为何选择并排对比-而非纯文本差异",
+        "level": 3,
+        "text": "五、展示转换：为何选择并排对比，而非纯文本差异？"
+      },
+      {
+        "id": "section-六-三层心智模型-记录-展示-决策-缺一不可",
+        "level": 3,
+        "text": "六、三层心智模型：记录、展示、决策，缺一不可"
+      },
+      {
+        "id": "section-七-结语",
+        "level": 3,
+        "text": "七、结语"
+      }
+    ],
+    "textLength": 6313,
+    "readingMinutes": 15,
     "sourceId": "vivo-csdn",
     "sourceUrl": "https://blog.csdn.net/vivo_tech/article/details/163910496",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:50.233Z",
-    "nextRetryAt": "2026-11-09T09:07:50.233Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "bee15c90af5d927b06681897308576ceaeb679195186244e6b0444ff446a544f",
+    "fetchedAt": "2026-11-02T11:42:43.239Z",
+    "checkedAt": "2026-11-02T11:42:43.239Z",
+    "nextRetryAt": "2026-12-02T11:42:43.239Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

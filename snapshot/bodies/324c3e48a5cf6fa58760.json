@@ -2,17 +2,33 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "324c3e48a5cf6fa58760",
-    "status": "unavailable",
-    "html": "",
+    "status": "ready",
+    "html": "\n          <p><img alt=\"\" height=\"5514\" src=\"https://i-blog.csdnimg.cn/direct/c9f5dcaa03924b38acddbe616f89df08.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n        ",
     "headings": [],
     "textLength": 0,
-    "readingMinutes": 0,
+    "readingMinutes": 1,
     "sourceId": "kuaishou-csdn",
     "sourceUrl": "https://blog.csdn.net/kuaishoutech/article/details/164336081",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:47.241Z",
-    "nextRetryAt": "2026-11-09T09:07:47.241Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "c5ae0376536b22ef60e6228115ad01d0d8cff7e07d118d84f9c3ea71664842b3",
+    "fetchedAt": "2026-11-02T11:42:31.753Z",
+    "checkedAt": "2026-11-02T11:42:31.753Z",
+    "nextRetryAt": "2026-12-02T11:42:31.753Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

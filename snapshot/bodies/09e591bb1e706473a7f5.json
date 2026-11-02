@@ -2,17 +2,115 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "09e591bb1e706473a7f5",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "<blockquote>作者：vivo 互联网前端团队- Su Ning<br>\n在广告营销场景中，小游戏的生命周期极短——从策划到上线往往只有数天。传统开发模式下，需求沟通、素材制作、编码联调、测试上线的每个环节都是瓶颈。本文基于 vGame 平台的实践经验，详细阐述如何通过 AI Agent、结构化场景描述和自动化管线，将广告小游戏的开发效率提升一个数量级。</blockquote>\n\n<p>1分钟看图掌握核心要点👇</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"1027\" src=\"https://i-blog.csdnimg.cn/img_convert/318d4758da016562c146b5e518c9a2b2.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-一-广告小游戏的特点\">一、广告小游戏的特点<a class=\"heading-anchor\" href=\"#section-一-广告小游戏的特点\" aria-label=\"链接到本节：一、广告小游戏的特点\">#</a></h3>\n\n<p>广告小游戏是品牌营销中越来越常见的载体——用户通过简单的互动玩法获得品牌曝光，企业获得转化与留存。这类游戏有几个显著特点：</p>\n\n<ol><li><strong>需求多变：</strong>营销节奏快，玩法经常调整以适应不同活动主题</li><li><strong>素材密集：</strong>每个活动都需要大批量的视觉素材</li><li><strong>短周期：</strong>从策划到上线通常只有 3-7 天</li><li><strong>重复性高：</strong>核心玩法模式有限，容易形成疲劳，但开发新的玩法成本又很高</li></ol>\n\n<p>传统开发模式应对这类需求时，往往面临\"人力投入大、交付周期长、质量不稳定\"的困境。</p>\n\n<h3 id=\"section-二-vgame-简介\">二、vGame 简介<a class=\"heading-anchor\" href=\"#section-二-vgame-简介\" aria-label=\"链接到本节：二、vGame 简介\">#</a></h3>\n\n<p>vGame 是一个基于 Web 的 AI 驱动游戏开发平台，核心理念是：<strong>用结构化的场景描述 + AI Agent 取代手工编码</strong>。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"436\" src=\"https://i-blog.csdnimg.cn/img_convert/ceaff4d09202d35b4409c55baa564a7a.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"190\" src=\"https://i-blog.csdnimg.cn/img_convert/efa42fe6f1443d8bd1ca800c19f0f01e.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-三-ai-驱动的核心工作流\">三、AI 驱动的核心工作流<a class=\"heading-anchor\" href=\"#section-三-ai-驱动的核心工作流\" aria-label=\"链接到本节：三、AI 驱动的核心工作流\">#</a></h3>\n\n<p>vGame 的完整开发管线遵循 需求 → 素材规划 → 素材生成 → 编码 → 预览 → 修复 的闭环。AI 在每个环节都深度参与。</p>\n\n<h3 id=\"section-3-1-结构化系统提示词-让-ai-读懂游戏架构\">3.1 结构化系统提示词：让 AI 读懂游戏架构<a class=\"heading-anchor\" href=\"#section-3-1-结构化系统提示词-让-ai-读懂游戏架构\" aria-label=\"链接到本节：3.1 结构化系统提示词：让 AI 读懂游戏架构\">#</a></h3>\n\n<p>要让 AI 写出可运行的游戏代码，仅靠通用编程能力是不够的。vGame 为 Agent 注入了完整的游戏开发规范：</p>\n\n<pre><code>// src-server/ai/agent/prompts.ts 中的核心约束\nexportconst OPENCODE_WORKFLOW_APPEND = [\n'进入实质编码前必须遵循以下流程：',\n'1. 先检查相关文件，然后创建或更新 docs/requirements.md',\n'2. 检查素材目录，创建或更新 docs/assets-plan.json',\n'3. 对需要生成的图片，调用 /api/project/&lt;id&gt;/assets/generate 批量生成',\n'4. 素材准备完成后才能进入正式开发',\n'5. 若任务涉及多个子项目联动，按 .agent/agents 职责拆分子问题',\n'6. 每次代码修改后用 npm run build 验证',\n'7. 严禁启动 dev/watch/preview 等常驻服务',\n].join('\\\\n');</code></pre>\n\n<p>同时，系统提示词中强制规定了<strong>游戏生命周期模式</strong>：</p>\n\n<pre><code>每个游戏都必须实现完整的生命周期：\n  1. 开始界面 → gameStore.status 控制状态\n  2. 游戏进行中 → 核心玩法 + notifyScoreUpdate 上报\n  3. 结束界面 → notifyGameOver 通知父页面</code></pre>\n\n<p>这套约束确保了 AI 生成的每个游戏都具备标准化的生命周期管理能力，可以直接嵌入广告投放框架。</p>\n\n<h3 id=\"section-3-2-opencode-易于扩展的agent后端\">3.2 OpenCode：易于扩展的agent后端<a class=\"heading-anchor\" href=\"#section-3-2-opencode-易于扩展的agent后端\" aria-label=\"链接到本节：3.2 OpenCode：易于扩展的agent后端\">#</a></h3>\n\n<p>使用现成的agent工具扩展开发可以帮我们省掉很多基础建设的工作量，对比市面上的一些主流cli，opencode由于提供了@opencode-ai/sdk，更方便进行扩展开发。</p>\n\n<ul><li><strong>凭据安全管理：</strong>API Key 存储于服务端 .env，前端只拿到 masked 版本</li><li><strong>Session 持久化：</strong>支持会话续传，允许 AI 在中断后继续之前的上下文</li><li><strong>运行时错误回传：</strong>游戏运行时的 JS 异常通过 postMessage 回传给服务端，成为 AI 下一次修复的上下文</li></ul>\n\n<h3 id=\"section-3-3-模板基座-降低-ai-理解成本的工程底座\">3.3 模板基座：降低 AI 理解成本的工程底座<a class=\"heading-anchor\" href=\"#section-3-3-模板基座-降低-ai-理解成本的工程底座\" aria-label=\"链接到本节：3.3 模板基座：降低 AI 理解成本的工程底座\">#</a></h3>\n\n<p>让 AI 从零开始构建一个完整游戏项目，会面临巨大的理解成本——它需要同时理解引擎 API、项目结构、构建配置、生命周期管理等方方面面。vGame 的策略是提供一个<strong>预置好的 \"game-template\" 基座</strong>，把所有\"基础设施\"固化下来，AI 只需要在基座上\"填空\"。</p>\n\n<h4>3.3.1 基座预置了什么</h4>\n\n<p>创建新项目时，后端会自动克隆 game-template 仓库，为每个项目生成一份独立的基座副本：</p>\n\n<pre><code>// routes/project.ts —— 项目创建的起点\nconst repoUrl =\n  'xxx/game-template.git'\nawait execa('git', ['clone', repoUrl, projDir])\n// 移除 .git 目录，初始化项目自己的仓库\nawait fs.remove(path.join(projDir, '.git'))</code></pre>\n\n<p>克隆完成的基座已经包含一个<strong>即开即用的完整游戏骨架</strong>：</p>\n\n<pre><code>game-template/src/\n├── config/\n│   ├── assets.ts              # 资源清单（节点 assetRef 的 lookup 表）\n│   └── runtime.ts             # 画布尺寸、物理后端等运行时配置\n├── editor/\n│   ├── scene.json             # 场景真源 —— AI 的核心修改对象\n│   └── generated/scene-outline.ts\n├── libs/loaders/              # Galacean 资源加载封装\n├── scene/                     # 场景构建器、脚本注册、schema 定义\n│   ├── index.ts               # 节点树 → 引擎实体树的转换引擎\n│   ├── schema.ts              # 节点、组件、脚本绑定的类型定义\n│   ├── script-registry.ts     # 按 scriptIds 文件名自动匹配脚本类\n│   └── script-runtime.ts      # 运行时上下文注入、外部数据桥接\n├── scripts/                   # AI 产出的脚本就放在这里\n│   └── player.ts              # ← 示例：一个完整的可配置脚本\n├── store/game.ts              # 游戏状态管理（Pinia）\n├── utils/                     # iframe 通信、运行时错误上报\n├── App.vue                    # 开始页 / HUD / 结束页 的三阶段 UI 框架\n└── game.ts                    # 引擎初始化与场景启动入口</code></pre>\n\n<p>这个基座的价值在于，AI 不需要从空目录开始——它一进来就面对一个有明确约定和边界的工程环境。</p>\n\n<h4>3.3.2 预置的游戏生命周期框架</h4>\n\n<p>基座通过 Pinia store 管理三段式生命周期，AI 无需关心状态机实现细节：</p>\n\n<pre><code>// store/game.ts —— AI 无需修改的\"标准件\"\nexportconst gameStore = defineStore('game', {\n  state: () =&gt; ({\n    status: 0,       // 0: 未开始, 1: 进行中, 2: 已结束\n    score: 0,\n    countdown: 30,\n    gameOver: false,\n    isPaused: true,\n  }),\n  actions: {\n    startGame() { /* 切换到进行中 */ },\n    endGame()   { /* 切换到结束态 */ },\n    pauseGame() { /* 暂停 */ },\n    resumeGame() { /* 恢复 */ },\n  },\n})</code></pre>\n\n<p>App.vue 基于这个 store 自动渲染对应的 UI 层：</p>\n\n<pre><code>status === 0  →  开始界面（游戏标题 + \"开始游戏\"按钮）\nstatus === 1  →  游戏 HUD（分数 + 倒计时悬浮层）\nstatus === 2  →  结束界面（得分展示 + \"再来一局\"按钮）</code></pre>\n\n<p>AI 生成的脚本只需要调用 gameStore</p>\n\n<p>.startGame() / gameStore.endGame() 和 notifyScoreUpdate() / notifyGameOver() 即可，UI 层面完全零改动。</p>\n\n<h4>3.3.3 预置的引擎集成与运行时能力</h4>\n\n<p>基座封装了 Galacean Engine 的完整集成链，AI 拿到的是开箱即用的运行时：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"670\" src=\"https://i-blog.csdnimg.cn/img_convert/d2e29b46726107ebb20e336ac2c576b7.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h4>3.3.4 基座的脚本示例</h4>\n\n<p>基座提供了一个 Player 脚本作为写脚本的标准范式，AI 能直观理解脚本的写法：</p>\n\n<pre><code>// src/scripts/player.ts —— 基座中的示范脚本\nimport { ConfigurableScript } from '@/scene/script-runtime'\n\ntype PlayerScriptConfig = {\n  swingSpeed?: number        // scene.json 中注入的配置参数\n  pulseSpeed?: number\n  rotationAmplitude?: number\n  scaleAmplitude?: number\n}\n\nexport class Player extends ConfigurableScript&lt;PlayerScriptConfig&gt; {\n  private elapsed = 0\n\n  onAwake(): void {\n    // 记录初始缩放，后续动画基于此计算\n    this.baseScaleX = this.entity.transform.scale.x\n  }\n\n  onUpdate(deltaTime: number): void {\n    this.elapsed += deltaTime\n    // 从 scene.json 的 scriptIds[].config 中读取参数\n    const swingSpeed = this.scriptConfig.swingSpeed ?? 2.2\n    // 从外部数据源读取运行时参数\n    const scaleMultiplier = this.externalValue?.scaleMultiplier ?? 1\n\n    // 摆动 + 脉动动画\n    const swing = Math.sin(this.elapsed * swingSpeed)\n    const scale = 1 + Math.sin(this.elapsed * this.scriptConfig.pulseSpeed) * scaleAmplitude\n\n    this.entity.transform.rotation.set(0, 0, swing * rotationAmplitude)\n    this.entity.transform.scale.set(baseX * scale, baseY * scale, 1)\n  }\n}</code></pre>\n\n<p>这个示例演示了三层参数注入机制，AI 照搬即可：</p>\n\n<ul><li><strong>scriptConfig：</strong>从 scene.json 节点的 scriptIds 绑定中注入的静态配置</li><li><strong>externalValue：</strong>从父页面通过 postMessage 注入的外部数据（如广告平台下发的难度系数）</li><li><strong>this.entity：</strong>当前脚本挂载的引擎实体，可直接操作 Transform、组件等</li></ul>\n\n<h4>3.3.5 基座的本质</h4>\n\n<p>对AI而言，开发一个广告小游戏不再是\"从零造房子\"，而是\"在装修好的房子里换家具和墙纸\"，更好的让AI的注意力聚焦在\"差异化\"上。</p>\n\n<h3 id=\"section-3-4-agent-skills-体系-领域知识的模块化封装\">3.4 Agent Skills 体系：领域知识的模块化封装<a class=\"heading-anchor\" href=\"#section-3-4-agent-skills-体系-领域知识的模块化封装\" aria-label=\"链接到本节：3.4 Agent Skills 体系：领域知识的模块化封装\">#</a></h3>\n\n<p>vGame 将游戏开发领域的专业知识封装为&nbsp;<strong>17 个 Agent Skill</strong>，每个 Skill 是一个 Markdown 文件，定义了特定场景下的工作流程：</p>\n\n<pre><code>.agent/skills/\n├── start/                    # 入口分流，判断任务类型\n├── project-stage-detect/     # 识别项目当前所处阶段\n├── dev-story/                # 功能开发的标准流程\n├── schema-sync-check/        # 场景 schema 一致性校验\n├── runtime-fix/              # 运行时错误自动修复\n├── galacean-2d-game/         # 2D 游戏开发指南\n├── galacean-init/            # 引擎初始化规范\n├── galacean-entity/          # 实体创建与管理\n├── galacean-physics/         # 物理引擎配置\n├── galacean-collider/        # 碰撞检测\n├── galacean-interaction/     # 交互事件处理\n├── galacean-animation/       # 动画系统\n├── galacean-camera/          # 相机配置\n├── galacean-resource/        # 资源加载\n├── galacean-color/           # 色彩与材质\n├── galacean-shader-writing/  # Shader 编写\n└── galacean-object-pool/     # 对象池优化</code></pre>\n\n<p>每个 Skill 包含：</p>\n\n<ul><li><strong>触发条件</strong>（when to use）</li><li><strong>允许使用的工具集合</strong>（allowed-tools）</li><li><strong>逐步执行流程</strong>（step-by-step instructions）</li><li><strong>最佳实践与常见陷阱</strong></li></ul>\n\n<p>这使得即使是初级开发者，也能通过 AI 的引导产出符合引擎规范的代码。</p>\n\n<h3 id=\"section-3-5-三层治理架构-agent-rules-hooks\">3.5 三层治理架构：Agent / Rules / Hooks<a class=\"heading-anchor\" href=\"#section-3-5-三层治理架构-agent-rules-hooks\" aria-label=\"链接到本节：3.5 三层治理架构：Agent / Rules / Hooks\">#</a></h3>\n\n<p>vGame 不仅仅依赖 Skill，还引入了一套轻量级的 AI 开发治理层：</p>\n\n<pre><code>.agent/\n├── agents/        # 角色分工：平台统筹、AI 工作流、编辑器契约、运行时 QA\n├── rules/         # 路径约束：AI 工作流、scene schema 联动、发布链路\n├── skills/        # 工作流入口：高频场景的标准化操作手册\n├── hooks/         # 会话钩子：会话开始 / 文件变更后的窄提醒\n└── settings.json  # Claude Code 风格的本地工作流配置</code></pre>\n\n<ul><li><strong>Agents：</strong>将复杂任务拆解为四个角色，不同角色关注不同的质量维度</li><li><strong>Rules：</strong>对关键耦合面（如 schema ↔ 运行时）实施路径约束，防止 AI \"越界修改\"</li><li><strong>Hooks：</strong>在会话开始和关键文件变更后触发检查，提醒同步更新高耦合模块</li></ul>\n\n<h3 id=\"section-四-统一的游戏运行时\">四、统一的游戏运行时<a class=\"heading-anchor\" href=\"#section-四-统一的游戏运行时\" aria-label=\"链接到本节：四、统一的游戏运行时\">#</a></h3>\n\n<p>传统游戏开发中，编辑器数据和运行时数据往往是两套体系，需要手工做数据格式转换。vGame 采用场景节点树作为唯一的真源：</p>\n\n<pre><code>// src/editor/scene.json - 编辑器和运行时共享的场景描述\n{\n  \"designWidth\": 750,\n  \"designHeight\": 1334,\n  \"nodes\": [\n    {\n      \"id\": \"root\",\n      \"kind\": \"group\",\n      \"children\": [\n        {\n          \"id\": \"bg\",\n          \"kind\": \"sprite\",\n          \"assetRef\": \"background\",\n          \"transform\": { \"x\": 0, \"y\": 0, \"z\": 0 },\n          \"components\": {\n            \"render\": { \"sortingOrder\": 0, \"opacity\": 1 }\n          }\n        },\n        {\n          \"id\": \"player\",\n          \"kind\": \"sprite\",\n          \"assetRef\": \"player\",\n          \"scriptIds\": [\"PlayerController\"],\n          \"components\": {\n            \"interaction\": { \"shape\": \"circle\", \"radius\": 40 }\n          }\n        }\n      ]\n    }\n  ]\n}</code></pre>\n\n<p>AI 的代码产出只需要修改 scene.json 和对应的 scripts/ 文件，不需要关心引擎细节。运行时的工作流程如下：</p>\n\n<ul><li>入口加载 src/editor/scene.json，读取设计尺寸和节点树</li><li>按 assetRef 预加载实际引用到的素材（非全量加载）</li><li>src/scene/index.ts 按 kind / parentId / transform 创建实体树</li><li>scriptIds 通过 src/scene/script-registry.ts 自动匹配 src/scripts/ 中的脚本</li><li>运行时错误通过 postMessage 上报给父页面</li></ul>\n\n<p>这样一来，AI 只需要理解\"场景节点 + 脚本\"两个概念，就能产出完整可运行的游戏。</p>\n\n<h3 id=\"section-五-素材生成的自动化管线\">五、素材生成的自动化管线<a class=\"heading-anchor\" href=\"#section-五-素材生成的自动化管线\" aria-label=\"链接到本节：五、素材生成的自动化管线\">#</a></h3>\n\n<p>广告小游戏的素材产出是最耗时的环节。vGame 将素材生成也纳入 AI 管线：</p>\n\n<h3 id=\"section-5-1-ai素材生成\">5.1 AI素材生成<a class=\"heading-anchor\" href=\"#section-5-1-ai素材生成\" aria-label=\"链接到本节：5.1 AI素材生成\">#</a></h3>\n\n<p>平台整合了图片生成、精灵动画生成、3D 模型生成三大核心能力。</p>\n\n<p><strong>1.图片生成</strong></p>\n\n<p>平台内置多套适配不同业务场景的优化提示词模板，同时开放图片编辑接口，支持裁切、缩放、旋转等基础图像处理操作。</p>\n\n<p>针对 AI 生图默认无法产出透明背景的问题，平台增设一键抠图功能。我们将所有能力整合为系统提示词，由智能 Agent 在生成图片前自主判断并调用对应能力。</p>\n\n<p>图片生成完成后，系统会通过钩子函数强制执行尺寸校验，对体积超标的图片自动进行压缩处理。</p>\n\n<p><strong>2.精灵动画生成</strong></p>\n\n<p>本方案未采用直接 AI 生成动画的模式，而是使用<strong>视频生成→抽帧→抠图→精灵表合成</strong>的工作流程。该方式产出的动作效果流畅自然，可控性更强。</p>\n\n<p>目前主流视频生成模型已支持首尾帧引导、参考图生成等高阶能力，进一步提升了动画生成效果的可控度。</p>\n\n<p><strong>3.3D 模型生成</strong></p>\n\n<p>现阶段 3D 生成模型可输出高品质静态模型素材，行业主要痛点集中在模型动画制作环节。</p>\n\n<p>对此平台接入多款预制骨骼动画资源，3D 模型生成完成后，由大模型自动完成骨骼映射，实现骨骼动画的快速复用。</p>\n\n<h3 id=\"section-5-2-素材规划强制流程\">5.2 素材规划强制流程<a class=\"heading-anchor\" href=\"#section-5-2-素材规划强制流程\" aria-label=\"链接到本节：5.2 素材规划强制流程\">#</a></h3>\n\n<p>AI 被强制要求遵循素材优先原则：</p>\n\n<pre><code>只要任务需要可视化素材，docs/assets-plan.json 中就不得用\nprocedural、codegen、占位图等方式绕过生图流程；\n除非用户明确要求程序化纹理，否则必须生成真实图片文件并落盘到 public 目录。</code></pre>\n\n<p>这确保了 AI 产出的游戏是\"可以直接上线\"的，而不是\"还需要设计师补素材\"的半成品。</p>\n\n<h3 id=\"section-六-聊天式开发体验\">六、聊天式开发体验<a class=\"heading-anchor\" href=\"#section-六-聊天式开发体验\" aria-label=\"链接到本节：六、聊天式开发体验\">#</a></h3>\n\n<h3 id=\"section-6-1-chatpanel\">6.1 ChatPanel<a class=\"heading-anchor\" href=\"#section-6-1-chatpanel\" aria-label=\"链接到本节：6.1 ChatPanel\">#</a></h3>\n\n<p>ChatPanel.vue 是整个平台的核心交互入口，它不仅仅是聊天框，而是一个完整的开发协作面板：</p>\n\n<ul><li><strong>流式响应：</strong>SSE 实现打字机效果，用户实时看到 AI 的编码过程</li><li><strong>多模态输入：</strong>支持图片附件，可以直接上传参考图让 AI 仿制</li><li><strong>步骤卡片：</strong>AI 的每个操作（读文件、写文件、执行命令、生成素材）都渲染为可展开的状态卡片</li><li><strong>轮次变更追踪：</strong>每轮对话的文件变更汇总展示，支持\"保留/撤销本轮\"的版本控制操作</li><li><strong>消息编辑回放：</strong>支持修改已发送的消息重新执行，适合需求迭代场景</li></ul>\n\n<pre></pre>\n\n<h3 id=\"section-6-2-集成开发环境\">6.2 集成开发环境<a class=\"heading-anchor\" href=\"#section-6-2-集成开发环境\" aria-label=\"链接到本节：6.2 集成开发环境\">#</a></h3>\n\n<p>除了聊天面板，前端还提供了完整的可视化编辑能力：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"324\" src=\"https://i-blog.csdnimg.cn/img_convert/104ef2b8382375577dcc5987710b8f0f.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-七-运行时错误反馈闭环\">七、运行时错误反馈闭环<a class=\"heading-anchor\" href=\"#section-七-运行时错误反馈闭环\" aria-label=\"链接到本节：七、运行时错误反馈闭环\">#</a></h3>\n\n<p>一个独特的设计是运行时错误自动上报与修复：</p>\n\n<pre><code>  用户预览 → 运行时报错\n      ↓\n  postMessage 上报给父页面 (runtime-bridge)\n      ↓\n  服务端记录到 .runtime-errors.json\n      ↓\n  下次 AI 对话时，自动注入错误上下文\n      ↓\n  AI 分析 stack trace，定位源码，生成修复方案\n      ↓\n  用户确认后自动应用修复</code></pre>\n\n<p>注入到 AI 上下文的错误信息：</p>\n\n<pre><code>// opencode.ts 中的实现\nconst MAX_RUNTIME_ERRORS_IN_PROMPT = 5\n\nfunction buildRuntimeErrorContext(errors: RuntimeErrorLogEntry[]): string {\n  const recent = errors.slice(0, MAX_RUNTIME_ERRORS_IN_PROMPT)\n  return recent.map(e =&gt; `\n    类型: ${e.kind}\n    消息: ${e.message}\n    文件: ${e.filename}:${e.lineno}:${e.colno}\n    ${e.stack ? `堆栈: ${e.stack}` : ''}\n  `).join('\\n---\\n')\n}</code></pre>\n\n<p>这使得调试不再是\"用户描述问题 → 开发者复现 → 修复 → 重新部署\"的漫长链路，而是实时闭环。</p>\n\n<h3 id=\"section-八-结语-未来展望\">八、结语&amp;未来展望<a class=\"heading-anchor\" href=\"#section-八-结语-未来展望\" aria-label=\"链接到本节：八、结语&amp;未来展望\">#</a></h3>\n\n<p>AI 赋能广告小游戏开发，本质上是将\"游戏开发\"从一门手艺活变成了一个可标准化的流程。不仅可以用于创意的快速落地，也可以通过快速换皮实现同一玩法不同场景的投放。</p>\n\n<p>随着agent工具的不断完善，还有很多可以继续优化的场景：</p>\n\n<ul><li><strong>模板化玩法库：</strong>当前模板基座是同一代码源，可以根据不同的玩法加载不同的仓库，同时积累更多的 Skill 模板，让 AI 的\"经验\"越来越丰富</li><li><strong>多模态理解增强：</strong>支持直接上传竞品游戏截图，AI 自动识别玩法并生成同类游戏</li><li><strong>A/B 测试集成：</strong>AI 自动生成多个素材变体，配合广告平台做效果对比</li><li><strong>性能自优化：</strong>AI 在生成代码时自动应用对象池、视锥剔除、纹理压缩等优化策略</li></ul>",
+    "headings": [
+      {
+        "id": "section-一-广告小游戏的特点",
+        "level": 3,
+        "text": "一、广告小游戏的特点"
+      },
+      {
+        "id": "section-二-vgame-简介",
+        "level": 3,
+        "text": "二、vGame 简介"
+      },
+      {
+        "id": "section-三-ai-驱动的核心工作流",
+        "level": 3,
+        "text": "三、AI 驱动的核心工作流"
+      },
+      {
+        "id": "section-3-1-结构化系统提示词-让-ai-读懂游戏架构",
+        "level": 3,
+        "text": "3.1 结构化系统提示词：让 AI 读懂游戏架构"
+      },
+      {
+        "id": "section-3-2-opencode-易于扩展的agent后端",
+        "level": 3,
+        "text": "3.2 OpenCode：易于扩展的agent后端"
+      },
+      {
+        "id": "section-3-3-模板基座-降低-ai-理解成本的工程底座",
+        "level": 3,
+        "text": "3.3 模板基座：降低 AI 理解成本的工程底座"
+      },
+      {
+        "id": "section-3-4-agent-skills-体系-领域知识的模块化封装",
+        "level": 3,
+        "text": "3.4 Agent Skills 体系：领域知识的模块化封装"
+      },
+      {
+        "id": "section-3-5-三层治理架构-agent-rules-hooks",
+        "level": 3,
+        "text": "3.5 三层治理架构：Agent / Rules / Hooks"
+      },
+      {
+        "id": "section-四-统一的游戏运行时",
+        "level": 3,
+        "text": "四、统一的游戏运行时"
+      },
+      {
+        "id": "section-五-素材生成的自动化管线",
+        "level": 3,
+        "text": "五、素材生成的自动化管线"
+      },
+      {
+        "id": "section-5-1-ai素材生成",
+        "level": 3,
+        "text": "5.1 AI素材生成"
+      },
+      {
+        "id": "section-5-2-素材规划强制流程",
+        "level": 3,
+        "text": "5.2 素材规划强制流程"
+      },
+      {
+        "id": "section-六-聊天式开发体验",
+        "level": 3,
+        "text": "六、聊天式开发体验"
+      },
+      {
+        "id": "section-6-1-chatpanel",
+        "level": 3,
+        "text": "6.1 ChatPanel"
+      },
+      {
+        "id": "section-6-2-集成开发环境",
+        "level": 3,
+        "text": "6.2 集成开发环境"
+      },
+      {
+        "id": "section-七-运行时错误反馈闭环",
+        "level": 3,
+        "text": "七、运行时错误反馈闭环"
+      },
+      {
+        "id": "section-八-结语-未来展望",
+        "level": 3,
+        "text": "八、结语&未来展望"
+      }
+    ],
+    "textLength": 9028,
+    "readingMinutes": 21,
     "sourceId": "vivo-csdn",
     "sourceUrl": "https://blog.csdn.net/vivo_tech/article/details/164113486",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:49.115Z",
-    "nextRetryAt": "2026-11-09T09:07:49.115Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "0a06a179f408f33f5d43a03c5a9eb33a056c697d380c9160aac8cfa98ce61662",
+    "fetchedAt": "2026-11-02T11:42:33.738Z",
+    "checkedAt": "2026-11-02T11:42:33.738Z",
+    "nextRetryAt": "2026-12-02T11:42:33.738Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

@@ -2,17 +2,94 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "e15d48145bd1860b1b74",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <h2 id=\"section-前言\"><a id=\"article-anchor-1\"></a><strong>前言</strong><a class=\"heading-anchor\" href=\"#section-前言\" aria-label=\"链接到本节：前言\">#</a></h2>\n\n<p></p>\n\n<p>指令微调（Instruction Tuning）已经成为大语言模型落地前的“最后一公里”。在这一阶段，我们通常使用大量<strong>&nbsp;(指令，回复)</strong>&nbsp;样本对模型进行再训练，让模型更擅长对话、执行任务，并更符合人类偏好。</p>\n\n<p>但一个越来越常见、也让算法团队颇为头疼的现象是：<strong>数据并不是越多越好</strong>。</p>\n\n<p>在真实的指令数据池中，冗余样本、噪声数据、格式不一致以及任务类型混杂都非常普遍。更反直觉的是，越来越多的研究发现：<strong>只使用 10%–20% 的训练数据，模型效果就可以接近甚至超过使用全部数据训练的结果。</strong>这意味着一件非常重要的事情：<strong>更大的微调数据规模，并不一定带来更好的模型效果。</strong>相反，当数据规模不断扩大时，训练成本迅速上升，而样本之间的相互干扰反而可能拖慢模型学习。因此，一个非常自然的问题出现了：<strong>如果我们能从大数据池中挑选出一小部分“最有价值”的样本，是否可以用更少的数据训练出更好的模型？</strong></p>\n\n<p>近年来，学术界提出了一条非常优雅的思路：利用&nbsp;<strong>Fisher 信息矩阵（Fisher Information Matrix, FIM）</strong>&nbsp;来衡量每个样本能够为模型参数提供多少“信息量”。直观来说，如果一个样本的梯度能够为参数更新提供更多独立信息，那么它就更值得被选入训练集。</p>\n\n<p>基于这一思想，可以通过最大化</p>\n\n<p><img alt=\"\\log \\det (I + \\alpha F_S)\" src=\"https://latex.csdn.net/eq?%5Clog%20%5Cdet%20%28I%20&amp;plus;%20%5Calpha%20F_S%29\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：\\log \\det (I + \\alpha F_S)\"></p>\n\n<p>这样的信息体积指标来选择数据子集。这个目标函数具有一个非常漂亮的性质——<strong>次模性（submodularity）</strong>：意味着即使使用简单的贪心算法，也能获得接近最优解的理论保证。</p>\n\n<p>然而，在实际工程中，我们经常会看到另一面。当仅依据 Fisher 信息进行贪心选择时，<strong>边际信息增益往往会非常快地衰减</strong>：随着选择过程继续进行，新加入样本带来的信息越来越少，最终导致数据子集的质量不稳定，下游模型效果也会出现波动。</p>\n\n<p>进一步分析后，我们发现，一个被忽略的重要因素是：<strong>样本之间的梯度冲突（gradient conflict）</strong>。简单来说，不同样本在训练时会产生不同方向的梯度更新，如果这些更新方向彼此不一致，甚至互相对抗，那么即使每个样本单独来看都“信息量很高”，它们组合在一起时，也可能互相抵消，从而加速信息增益的衰减。</p>\n\n<p>从更广义的角度看，<strong>数据选择其实包含两个层面的关系</strong>：</p>\n\n<p>一是<strong>&nbsp;样本与模型之间的关系</strong>——每个样本能为模型参数带来多少有效信息；</p>\n\n<p>二是<strong>&nbsp;样本与样本之间的关系</strong>——不同样本在训练过程中是相互协同，还是彼此冲突。</p>\n\n<p>过去的大多数方法主要关注第一点，而我们的工作则尝试把这两个关键因素联系起来：<strong>在最大化样本信息量的同时，显式建模样本之间的梯度</strong><strong>冲突</strong>。</p>\n\n<p>我们的论文<strong>&nbsp;SPICE（Submodular Penalized Information-Conflict Selection）&nbsp;</strong>正是为了解决这个问题。该论文已被<strong>&nbsp;ICLR 2026&nbsp;</strong>接收（arXiv:2601.23155）。</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"322\" src=\"https://i-blog.csdnimg.cn/img_convert/c39958a0d3e42db3784e3c4be9b1e51c.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p>SPICE 的核心思想是：在保持<strong>&nbsp;Fisher 信息最大化</strong>&nbsp;这一理论框架的同时，把&nbsp;<strong>样本之间的梯度冲突（gradient conflict）</strong>&nbsp;也纳入数据选择目标。</p>\n\n<p>这样一来，算法在选择样本时不仅考虑“信息量有多大”，还会考虑“这些信息是否彼此一致”。</p>\n\n<p>最终的效果是：在不牺牲&nbsp;<strong>次模贪心算法效率</strong>&nbsp;的前提下，我们能够选出&nbsp;<strong>信息量更高、冲突更低</strong>&nbsp;的数据子集，让&nbsp;<strong>10% 的数据真正训练出接近甚至超过全量数据的效果</strong>。</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"467\" src=\"https://i-blog.csdnimg.cn/img_convert/a77223d90edf3fddbc905a706720f19a.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p><em>图1：边际信息增益 Δ 衰减越慢，同等预算下累计信息越大；实证上低冲突子集往往衰减更慢，信息更“耐用”。</em></p>\n\n<p></p>\n\n<h2 id=\"section-动机-为什么-fisher-贪心会越选越没用\"><a id=\"article-anchor-2\"></a><strong>动机：为什么 Fisher 贪心会越选越没用？</strong><a class=\"heading-anchor\" href=\"#section-动机-为什么-fisher-贪心会越选越没用\" aria-label=\"链接到本节：动机：为什么 Fisher 贪心会越选越没用？\">#</a></h2>\n\n<p></p>\n\n<p>在 Fisher 视角下，数据选择可以理解为一个非常直观的问题：<strong>每个样本都会产生一个梯度信号，告诉模型参数应该往哪个方向更新</strong>。</p>\n\n<p>设第 i 个样本产生的梯度为：</p>\n\n<p><img alt=\"g_i=∇_θℓ_ig_i\" src=\"https://latex.csdn.net/eq?g_i%3D%u2207_%u03B8%u2113_ig_i\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：g_i=∇_θℓ_ig_i\"></p>\n\n<p>如果我们选择一个数据子集 S，那么对应的经验 Fisher 信息矩阵可以写成：</p>\n\n<p><img alt=\"F_S=\\sum_{i\\in S} g_i g_i^\\top\" src=\"https://latex.csdn.net/eq?F_S%3D%5Csum_%7Bi%5Cin%20S%7D%20g_i%20g_i%5E%5Ctop\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：F_S=\\sum_{i\\in S} g_i g_i^\\top\"></p>\n\n<p>直观来说，这个矩阵描述的是：<strong>这些样本一共为模型参数提供了多少“可学习的信息方向”</strong>。</p>\n\n<p>常见的数据选择目标是最大化以下信息量：</p>\n\n<p><img alt=\"F(S)= \\log \\det (I + \\alpha F_S)\" src=\"https://latex.csdn.net/eq?F%28S%29%3D%20%5Clog%20%5Cdet%20%28I%20&amp;plus;%20%5Calpha%20F_S%29\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：F(S)= \\log \\det (I + \\alpha F_S)\"></p>\n\n<p>这个目标函数具有一个非常好的性质：<strong>次模性（submodularity）</strong>。简单理解就是——<strong>越往后选择新样本，能够带来的新增信息通常会越来越少</strong>。因此，使用简单的<strong>贪心算法</strong>逐步选择样本，理论上就能得到接近最优的结果。但在真实的指令微调数据上，我们却经常观察到一个现象：</p>\n\n<p><strong>边际信息增益并不是“平滑下降”，而是会出现“断崖式掉速”</strong>。换句话说，在选择到某个阶段之后，新加入的样本几乎不再提供新的有效信息，对模型训练的帮助也变得非常有限。</p>\n\n<p>这显然超出了经典次模理论所描述的“渐进递减”行为。</p>\n\n<p>针对这种实践问题：SPICE 的关键观察是：这种“边际信息断崖式衰减”，往往会与<strong>&nbsp;gradient conflict（梯度冲突）</strong>&nbsp;同步出现。所谓梯度冲突，指的是不同样本在参数空间中产生<strong>方向不一致甚至相反的更新信号</strong>。当这种情况发生时，就会出现一种现象：<strong>单个样本的信息量看起来很大，但它们提供的新方向却很少</strong>。结果就是：Fisher 信息仍在增长，但<strong>真正可累积的有效信息却越来越少</strong>。于是，贪心算法的边际增益会被迅速“消耗”，导致后续选择的样本对训练几乎没有帮助。</p>\n\n<p>基于这一观察，我们重新审视了 Fisher 数据选择的机制，并提出了三个关键问题：</p>\n\n<ul><li>\n\t<p><strong>Fisher 的边际信息增益到底由哪些项决定？</strong></p>\n\t</li><li>\n\t<p><strong>其中哪些项在实际数据中会被梯度冲突放大，从而导致增益快速衰减？</strong></p>\n\t</li><li>\n\t<p><strong>如果冲突确实是关键因素，能否把它做成一个可测量、可控制的惩罚项，并直接加入到贪心选择中？</strong></p>\n\t</li></ul>\n\n<p>回答这些问题，正是&nbsp;<strong>SPICE 方法设计的出发点</strong>。</p>\n\n<p></p>\n\n<h2 id=\"section-方法-spice-信息增益-冲突惩罚\"><a id=\"article-anchor-3\"></a><strong>&nbsp;方法：SPICE = 信息增益 − 冲突惩罚</strong><a class=\"heading-anchor\" href=\"#section-方法-spice-信息增益-冲突惩罚\" aria-label=\"链接到本节：方法：SPICE = 信息增益 − 冲突惩罚\">#</a></h2>\n\n<p></p>\n\n<p>SPICE 的核心思想其实非常简单：<strong>在 Fisher 信息最大化的基础上，引入一个“梯度冲突惩罚项”</strong>。</p>\n\n<p>这样，算法在选择样本时不仅会考虑<strong>&nbsp;信息量有多大</strong>，还会考虑&nbsp;<strong>这些信息是否彼此一致</strong>。</p>\n\n<p>从方法设计的角度看，SPICE 的思路可以概括为三步：</p>\n\n<ol><li>\n\t<p>把 Fisher 的边际信息增益拆解，找出真正导致增益衰减的因素；</p>\n\t</li><li>\n\t<p>用一个工程上可计算的指标度量梯度冲突；</p>\n\t</li><li>\n\t<p>在原有 Fisher 贪心算法上加入一个“软惩罚”，并配合自适应早停和 proxy 选择机制。</p>\n\t</li></ol>\n\n<p>下面我们依次来看。</p>\n\n<p></p>\n\n<h3 id=\"section-1-边际增益的分解-衰减来自交互项\"><a id=\"article-anchor-4\"></a><strong>1.边际增益的分解：衰减来自交互项</strong><a class=\"heading-anchor\" href=\"#section-1-边际增益的分解-衰减来自交互项\" aria-label=\"链接到本节：1.边际增益的分解：衰减来自交互项\">#</a></h3>\n\n<p></p>\n\n<p>在 Fisher 贪心选择中，我们关心的是每个候选样本的<strong>边际信息增益</strong>：</p>\n\n<p><img alt=\"\" src=\"https://i-blog.csdnimg.cn/direct/d71450cbcfa1471aa36aa58c27213eb1.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>SPICE 的第一步，是把这个增益拆解为两部分：</p>\n\n<p><img alt=\"\" src=\"https://i-blog.csdnimg.cn/direct/493002e6ef9842db9648ad2fcc95ec2e.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>直观理解：</p>\n\n<p><strong>第一项（base）</strong>只反映这个样本本身的梯度强度，也就是它单独能提供多少信息。<strong>第二项（interaction）</strong>描述这个样本与当前已选集合 S 的<strong>交互影响</strong>。</p>\n\n<p>关键在于：<strong>真正导致信息增益快速衰减的，其实是这个交互项</strong>。</p>\n\n<p>当当前集合已经覆盖了相似的梯度方向，或者不同样本之间存在方向冲突时，新样本能够提供的“新方向信息”就会迅速减少。</p>\n\n<p></p>\n\n<h3 id=\"section-2-冲突度量-用平均梯度方向做代理\"><a id=\"article-anchor-5\"></a><strong>2.冲突度量：用平均梯度方向做代理</strong><a class=\"heading-anchor\" href=\"#section-2-冲突度量-用平均梯度方向做代理\" aria-label=\"链接到本节：2.冲突度量：用平均梯度方向做代理\">#</a></h3>\n\n<p></p>\n\n<p>既然交互项与梯度方向有关，一个自然的问题是：<strong>如何高效度量样本之间的梯度冲突？</strong></p>\n\n<p>如果直接计算所有样本两两之间的关系，计算成本会非常高。</p>\n\n<p>SPICE 采用了一种更工程友好的近似方法。我们维护当前集合的<strong>平均梯度方向</strong>：</p>\n\n<p><img alt=\"\" src=\"https://i-blog.csdnimg.cn/direct/2bd52e1467394268ae3225744b9e926d.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>然后用<strong>余弦相似度</strong>衡量新样本与当前更新方向的对齐程度：</p>\n\n<p><img alt=\"\" src=\"https://i-blog.csdnimg.cn/direct/100471352ba74fee84ca7853cdce680a.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>冲突则定义为：</p>\n\n<p><img alt=\"\" src=\"https://i-blog.csdnimg.cn/direct/ff2078f0708345c78c7bc8dad93d782a.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>这个度量非常直观：</p>\n\n<ul><li>\n\t<p><strong>同方向（对齐）</strong>：不惩罚</p>\n\t</li><li>\n\t<p><strong>反方向（冲突）</strong>：产生惩罚</p>\n\t</li><li>\n\t<p><strong>计算复杂度低</strong>：只需要对每个候选样本计算一次</p>\n\t</li></ul>\n\n<p>因此在大规模数据池中也可以高效运行。</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"489\" src=\"https://i-blog.csdnimg.cn/img_convert/7deabcda8784a91ddde470e7d9fcfc9c.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p><em>图2：论文展示冲突统计量与边际增益衰减/交互项之间存在系统相关性，为“用冲突解释掉速”提供证据。</em></p>\n\n<p></p>\n\n<h3 id=\"section-3-冲突感知贪心-不丢信息-只降低冲突\"><a id=\"article-anchor-6\"></a><strong>3.冲突感知贪心：不丢信息，只降低冲突</strong><a class=\"heading-anchor\" href=\"#section-3-冲突感知贪心-不丢信息-只降低冲突\" aria-label=\"链接到本节：3.冲突感知贪心：不丢信息，只降低冲突\">#</a></h3>\n\n<p>在得到冲突度量之后，SPICE 对原有 Fisher 贪心做了一个非常克制的修改：</p>\n\n<p><img alt=\"\" src=\"https://i-blog.csdnimg.cn/direct/71ade8b31b68435fb33778d825ae5c03.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>其中：</p>\n\n<p>●<img alt=\"\\Delta_x(S)\" src=\"https://latex.csdn.net/eq?%5CDelta_x%28S%29\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：\\Delta_x(S)\">：信息增益</p>\n\n<p>●<img alt=\"Conflict(x|S)\" src=\"https://latex.csdn.net/eq?Conflict%28x%7CS%29\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：Conflict(x|S)\">：梯度冲突</p>\n\n<p>●<img alt=\"\\lambda\" src=\"https://latex.csdn.net/eq?%5Clambda\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：\\lambda\">：冲突惩罚强度</p>\n\n<p>我们特别强调，这是一种<strong>软惩罚（soft penalty）</strong>。</p>\n\n<p>这意味着：</p>\n\n<ul><li>\n\t<p>如果一个样本<strong>信息量很大</strong>，即使存在冲突，仍然可能被选中</p>\n\t</li><li>\n\t<p>算法只是降低冲突样本的优先级，而不会直接删除</p>\n\t</li></ul>\n\n<p>这是因为在真实数据中，确实存在一些<strong>信息量很高但梯度方向不稳定的困难样本</strong>。如果简单过滤掉它们，反而会损失数据覆盖度。</p>\n\n<p></p>\n\n<h3 id=\"section-4-自适应早停-边际增益不值得时就停止\"><a id=\"article-anchor-7\"></a><strong>4.自适应早停：边际增益不值得时就停止</strong><a class=\"heading-anchor\" href=\"#section-4-自适应早停-边际增益不值得时就停止\" aria-label=\"链接到本节：4.自适应早停：边际增益不值得时就停止\">#</a></h3>\n\n<p></p>\n\n<p>传统数据选择通常会预先设定一个固定预算 k，比如选 10% 数据。</p>\n\n<p>SPICE 则采用一种更灵活的策略：<strong>根据边际增益的衰减情况自动停止选择</strong>。</p>\n\n<p>具体来说，当第 t 步的最优边际增益满足：</p>\n\n<p><img alt=\"\\Delta_{x_t}(S_{t-1}) \\le \\omega \\cdot \\Delta_{x_1}(S_0)\" src=\"https://latex.csdn.net/eq?%5CDelta_%7Bx_t%7D%28S_%7Bt-1%7D%29%20%5Cle%20%5Comega%20%5Ccdot%20%5CDelta_%7Bx_1%7D%28S_0%29\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：\\Delta_{x_t}(S_{t-1}) \\le \\omega \\cdot \\Delta_{x_1}(S_0)\"></p>\n\n<p>算法就会停止。</p>\n\n<p>直觉上，这相当于在：<strong>“新增样本的性价比已经明显下降”时及时刹车</strong>。</p>\n\n<p>这样可以避免把预算浪费在信息增益很低的尾部样本上。</p>\n\n<p></p>\n\n<h3 id=\"section-5-proxy-选择-让选择成本可控\"><a id=\"article-anchor-8\"></a><strong>5.Proxy 选择：让选择成本可控</strong><a class=\"heading-anchor\" href=\"#section-5-proxy-选择-让选择成本可控\" aria-label=\"链接到本节：5.Proxy 选择：让选择成本可控\">#</a></h3>\n\n<p></p>\n\n<p>最后一个工程问题是：<strong>在大模型上计算所有样本的梯度本身就很昂贵</strong>。</p>\n\n<p>SPICE 的解决办法是：</p>\n\n<ul><li>\n\t<p>使用<strong>同架构的小模型</strong>作为 proxy 来计算梯度</p>\n\t</li><li>\n\t<p>用合理的更新间隔来减少重复计算</p>\n\t</li></ul>\n\n<p>这种方法利用了一个经验观察：<strong>数据选择模式在不同规模模型之间往往具有可迁移性</strong>。</p>\n\n<p>因此，我们可以在小模型上完成数据选择，再把选出的子集用于大模型训练，从而实现：</p>\n\n<p><strong>选择成本可控，同时保持效果</strong>。</p>\n\n<p></p>\n\n<h2 id=\"section-实验结果-只用约-10-数据-也能匹配甚至超过全量微调\"><a id=\"article-anchor-9\"></a><strong>实验结果：只用约 10% 数据，也能匹配甚至超过全量微调</strong><a class=\"heading-anchor\" href=\"#section-实验结果-只用约-10-数据-也能匹配甚至超过全量微调\" aria-label=\"链接到本节：实验结果：只用约 10% 数据，也能匹配甚至超过全量微调\">#</a></h2>\n\n<p></p>\n\n<p>为了验证 SPICE 的效果，我们在约&nbsp;<strong>97.5K 条指令数据</strong>上进行了系统实验。数据覆盖多个典型场景，包括：</p>\n\n<ul><li>\n\t<p>数学推理任务</p>\n\t</li><li>\n\t<p>代码生成任务</p>\n\t</li><li>\n\t<p>通用指令跟随任务</p>\n\t</li></ul>\n\n<p>在模型设置上，我们使用<strong>&nbsp;LLaMA2-7B&nbsp;</strong>和&nbsp;<strong>Qwen2-7B</strong>&nbsp;作为基座模型，并与多种主流数据选择方法进行了对比实验。</p>\n\n<p>实验结果可以总结为两个核心发现。</p>\n\n<p></p>\n\n<h3 id=\"section-1-梯度冲突确实解释了信息增益-掉速\"><a id=\"article-anchor-10\"></a><strong>1. 梯度冲突确实解释了信息增益“掉速”</strong><a class=\"heading-anchor\" href=\"#section-1-梯度冲突确实解释了信息增益-掉速\" aria-label=\"链接到本节：1. 梯度冲突确实解释了信息增益“掉速”\">#</a></h3>\n\n<p></p>\n\n<p>实验分析发现，当数据选择序列中的&nbsp;<strong>梯度冲突更低</strong>&nbsp;时，会出现两个明显变化：</p>\n\n<ul><li>\n\t<p><strong>边际信息增益衰减更慢</strong></p>\n\t</li><li>\n\t<p><strong>累计 Fisher 信息更大</strong></p>\n\t</li></ul>\n\n<p>换句话说，如果样本之间的梯度方向更加一致，新的样本就更容易提供“真正的新信息”。</p>\n\n<p>而当冲突较高时，不同样本会在参数空间中产生相互抵消的更新，导致信息增益被快速消耗，从而出现我们在实践中常见的<strong>&nbsp;“越选越没用”</strong>&nbsp;的现象。这一观察与 SPICE 的理论分析高度一致。</p>\n\n<p></p>\n\n<h3 id=\"section-2-spice-让-小数据-真正变强\"><a id=\"article-anchor-11\"></a><strong>2. SPICE 让“小数据”真正变强</strong><a class=\"heading-anchor\" href=\"#section-2-spice-让-小数据-真正变强\" aria-label=\"链接到本节：2. SPICE 让“小数据”真正变强\">#</a></h3>\n\n<p></p>\n\n<p>在仅使用<strong>&nbsp;约 10% 的训练数据</strong>&nbsp;时，SPICE 选出的数据子集在多个 benchmark 上：</p>\n\n<ul><li>\n\t<p><strong>能够匹配甚至超过全量数据微调的效果</strong></p>\n\t</li><li>\n\t<p>同时<strong>&nbsp;显著降低训练成本</strong></p>\n\t</li></ul>\n\n<p>这意味着，通过合理的数据选择，小规模高质量数据集可以替代大规模原始数据，从而实现&nbsp;<strong>更高的数据效率和更低的训练成本</strong>。</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"490\" src=\"https://i-blog.csdnimg.cn/img_convert/7ac7b78e43a907e570d39f051841573e.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"509\" src=\"https://i-blog.csdnimg.cn/img_convert/8e5de2ddd889b2e67f4811922849eb72.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p><em>表1（Qwen2-7B/LLaMA2-7B）：在仅用 10% 指令数据时，SPICE 在 GSM8K/MMLU/IFEval/HumanEval 等多类基准上整体优于多数选择基线，平均分也超过 Full/Random 等对照</em></p>\n\n<p></p>\n\n<p>一个有意思的现象出现在训练动态中：</p>\n\n<p><strong>SPICE 选出的数据子集往往“起点更难”（初始 loss 更高），但训练下降得更快、也更稳定。</strong></p>\n\n<p>这与 SPICE 的选择机制非常一致——它更倾向于选择&nbsp;<strong>信息量更高、同时彼此不发生梯度冲突的样本序列</strong>。这些样本虽然更具挑战性，但能够为模型提供更加一致和有效的学习信号。</p>\n\n<p></p>\n\n<h2 id=\"section-总结\"><a id=\"article-anchor-12\"></a><strong>总结</strong><a class=\"heading-anchor\" href=\"#section-总结\" aria-label=\"链接到本节：总结\">#</a></h2>\n\n<p></p>\n\n<p>SPICE 的核心贡献，并不是再提出一个复杂的数据选择算法，而是把一个长期存在却常被忽视的问题讲清楚，并给出一个<strong>简单而可落地的解决方案</strong>。</p>\n\n<p>具体来说，这项工作做了三件事情：</p>\n\n<ul><li>\n\t<p><strong>从理论上</strong>，我们指出 Fisher 次模目标中常见的“边际信息增益快速衰减”，实际上来自样本之间的交互项，而不仅仅是经典次模理论中的“递减收益”。</p>\n\t</li><li>\n\t<p><strong>从经验上</strong>，我们进一步发现，这个交互项与&nbsp;<strong>梯度冲突（gradient conflict）</strong>&nbsp;之间存在稳定的统计关联——当样本之间的梯度方向冲突更少时，信息增益的衰减也会明显变慢。</p>\n\t</li><li>\n\t<p><strong>从算法上</strong>，SPICE 用一个非常克制的方式改造了传统的 Fisher 贪心选择：通过在目标函数中加入&nbsp;<strong>“信息增益 − 冲突惩罚”&nbsp;</strong>的简单结构，并配合&nbsp;<strong>自适应早停&nbsp;</strong>和<strong>&nbsp;proxy 选择机制</strong>，使这一方法能够在真实的大规模指令微调场景中高效运行。</p>\n\t</li></ul>\n\n<p>对于正在进行<strong>&nbsp;指令微调加速&nbsp;</strong>或&nbsp;<strong>数据治理</strong>&nbsp;的团队，这项工作带来的启发是：<strong>数据选择不仅要挑“信息量大的样本”，还要避免选择那些彼此“互相拆台”的样本</strong>。当我们把样本之间的冲突关系也纳入选择目标时，小规模的数据子集也能够更加稳定地把信息转化为真正的训练收益。</p>\n\n<p></p>\n\n<p>-End-</p>\n\n<p>作者丨争气尾流、zbw</p>\n\n        ",
+    "headings": [
+      {
+        "id": "section-前言",
+        "level": 2,
+        "text": "前言"
+      },
+      {
+        "id": "section-动机-为什么-fisher-贪心会越选越没用",
+        "level": 2,
+        "text": "动机：为什么 Fisher 贪心会越选越没用？"
+      },
+      {
+        "id": "section-方法-spice-信息增益-冲突惩罚",
+        "level": 2,
+        "text": "方法：SPICE = 信息增益 − 冲突惩罚"
+      },
+      {
+        "id": "section-1-边际增益的分解-衰减来自交互项",
+        "level": 3,
+        "text": "1.边际增益的分解：衰减来自交互项"
+      },
+      {
+        "id": "section-2-冲突度量-用平均梯度方向做代理",
+        "level": 3,
+        "text": "2.冲突度量：用平均梯度方向做代理"
+      },
+      {
+        "id": "section-3-冲突感知贪心-不丢信息-只降低冲突",
+        "level": 3,
+        "text": "3.冲突感知贪心：不丢信息，只降低冲突"
+      },
+      {
+        "id": "section-4-自适应早停-边际增益不值得时就停止",
+        "level": 3,
+        "text": "4.自适应早停：边际增益不值得时就停止"
+      },
+      {
+        "id": "section-5-proxy-选择-让选择成本可控",
+        "level": 3,
+        "text": "5.Proxy 选择：让选择成本可控"
+      },
+      {
+        "id": "section-实验结果-只用约-10-数据-也能匹配甚至超过全量微调",
+        "level": 2,
+        "text": "实验结果：只用约 10% 数据，也能匹配甚至超过全量微调"
+      },
+      {
+        "id": "section-1-梯度冲突确实解释了信息增益-掉速",
+        "level": 3,
+        "text": "1. 梯度冲突确实解释了信息增益“掉速”"
+      },
+      {
+        "id": "section-2-spice-让-小数据-真正变强",
+        "level": 3,
+        "text": "2. SPICE 让“小数据”真正变强"
+      },
+      {
+        "id": "section-总结",
+        "level": 2,
+        "text": "总结"
+      }
+    ],
+    "textLength": 5018,
+    "readingMinutes": 12,
     "sourceId": "bilibili-csdn",
     "sourceUrl": "https://blog.csdn.net/bilibili_TC/article/details/160121283",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:56.643Z",
-    "nextRetryAt": "2026-11-09T09:07:56.643Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "b045c7b64dd604655b6046ae3cbcb6bce1074deff878b95e35d82dad3def68f5",
+    "fetchedAt": "2026-11-02T11:43:26.622Z",
+    "checkedAt": "2026-11-02T11:43:26.622Z",
+    "nextRetryAt": "2026-12-02T11:43:26.622Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

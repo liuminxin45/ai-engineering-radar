@@ -2,17 +2,33 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "ea4229ca927303d2824c",
-    "status": "unavailable",
-    "html": "",
+    "status": "ready",
+    "html": "\n                    <p>AI 辅助编程已经不新鲜了。生成代码这件事，各家工具都在快速变强。</p> \n<p>但有一个环节一直在：代码生成之后，从「一段代码」到「一个能运行、能被别人访问的结果」之间，还有不少事。装环境、配依赖、起服务、做穿透、部署上线——单看每件都不难，加起来费时间。多数 AI 编程工具到这里就停了，剩下的路开发者自己走。</p> \n<p>华为云 AI开发者空间——面向开发者的云端一站式开发平台，做的就是把这段路接上：环境免安装，浏览器打开即为完整的 Linux 运行环境，预置的 AI 智能体开箱即用。从预览、分享到部署上云，连同云资源的操作，都在同一环境内完成。</p> \n<p><strong>一、入口：AI Shell </strong></p> \n<p>AI Shell 是这个环境的核心入口，只需要在对话框里用自然语言描述任务，它负责帮你写代码、执行命令、读取结果。&nbsp;</p> \n<p>输入：做一个贪吃蛇，支持计分和难度调节，完成后启动并验证。</p> \n<p><strong>二、运行与交付</strong></p> \n<p>AI Shell 写完代码，直接在沙箱里运行。沙箱是一个完整的 Linux 环境，依赖、服务、端口都是真实的，不是模拟。</p> \n<p>中间没有交接：不用在本地装环境、配依赖、开端口，沙箱内已经就绪。</p> \n<p>报错时，AI Shell 拿到的是原始输出——堆栈、退出码、文件状态，而不是转述过的信息。它可以直接修正，不必把错误搬到别处。</p> \n<p><img alt=\"\" height=\"664\" src=\"https://i-blog.csdnimg.cn/direct/87ce6c532cf64ee59be835619763d019.png\" width=\"1268\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"> <img alt=\"\" height=\"663\" src=\"https://i-blog.csdnimg.cn/direct/abf1ad60ed8f4dbbbdfdf03e13854fdb.png\" width=\"1270\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>游戏跑起来后，DevBridge 生成了一个公网链接。它是环境内置的公网隧道，把沙箱里运行的服务暴露到公网，生成一个 URL，默认有效期 72小时</p> \n<p><img alt=\"\" height=\"664\" src=\"https://i-blog.csdnimg.cn/direct/1a236d462d8d44fe91be784701cf5a30.png\" width=\"1268\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>链接发出去，对方在浏览器中打开即可使用，不需要与你处于同一网络，也不需要安装其他软件。在本地开发时，这一步最麻烦：服务只在自己机器上，外部访问不到，通常要另外配置端口映射或内网穿透工具。DevBridge 把这条通路做进了环境里。&nbsp;</p> \n<p>边界需要说明：它是开发隧道，随环境释放，适合分享与验收，不作为生产入口。</p> \n<p><img alt=\"\" height=\"598\" src=\"https://i-blog.csdnimg.cn/direct/2c689bf234f94d4aa4d5b94594f0487d.png\" width=\"1003\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>走完这几步，拿到的不是一份代码，而是一个正在运行、有地址、别人可以打开的服务。&nbsp;</p> \n<p>如果 72时不够用，就再往前一步：把代码放进仓库，把产物部署到云上。这两件事同样在对话里完成：GitCode、GitHub 等仓库通过连接器接入，OBS、ECS 等云资源由预置的华为云操作技能（Skills）调用接口完成，不需要自己写脚本。&nbsp;</p> \n<p>环境里的凭据是临时的，随环境创建，也随环境释放。能操作哪些资源，取决于账号授予的权限；环境释放后，权限随之失效。</p> \n<p><strong>三、预置之外，可以新增&nbsp; </strong></p> \n<p>上面用的是 AI Shell。任务更复杂、需要多步骤协作时，还有其他预置智能体，从左侧菜单进入即可使用，不需要安装和配置。右侧预置agent只需一键部署即可使用；</p> \n<p><img alt=\"\" height=\"669\" src=\"https://i-blog.csdnimg.cn/direct/83f2f78e79b44d8bad97d2f0664102f8.png\" width=\"1268\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"><br> 预置的覆盖不到所有场景。自行搭建的 Agent、正在使用的开源项目、团队既有的工具，都可以接入，可以通过AI创建或者手动搭建环境；新装的 Agent 类工具会自动对接网关，不需要填写服务地址与密钥；平台提供免费 token，安装后即可调用，具体额度以控制台公示为准。&nbsp;</p> \n<p>环境本身也能扩展：预置环境覆盖智能体、开发工具、数据库、基础设施等类别，支持一键部署；也可以自行创建，用于接入特定开源项目或配置专属工具链。此外可通过 Channels 接入飞书、微信、企业微信，在 IM 内接收消息、下达任务。</p> \n<p><img alt=\"\" height=\"663\" src=\"https://i-blog.csdnimg.cn/direct/adf696daf64a475a8bd078e0c80bf634.png\" width=\"1268\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p><img alt=\"\" height=\"667\" src=\"https://i-blog.csdnimg.cn/direct/0f19cd7026794e2dafd59e77e3503185.png\" width=\"1269\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p><strong>开始之前&nbsp; </strong></p> \n<p>入口：<a title=\"developer.huaweicloud.com\" href=\"https://developer.huaweicloud.com/\" target=\"_blank\" rel=\"noopener noreferrer\">developer.huaweicloud.com</a>，华为云账号完成个人实名认证后进入首页，找到顶部AI开发者空间，点击体验中心进入</p> \n<p><img alt=\"\" height=\"670\" src=\"https://i-blog.csdnimg.cn/direct/19b60845f9d84a0eab099613638c75b2.png\" width=\"1268\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p><strong>时长：单次体验最长&nbsp;6&nbsp;小时（体验结束前及时保存成果）；也可以选择持久版，额度为8000&nbsp;核时（额度以控制台公示为准）</strong></p> \n<p>第一个任务建议选能出结果的：做一个游戏、生成一个页面、创建一台实例，从需求走到可访问的链接，一次就能看清这个环境在做什么。</p> \n<p></p>\n                ",
     "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "textLength": 1517,
+    "readingMinutes": 4,
     "sourceId": "huawei-csdn",
     "sourceUrl": "https://blog.csdn.net/devcloud/article/details/168543201",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:35.084Z",
-    "nextRetryAt": "2026-11-09T09:07:35.084Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "5ce76b295ee61cd416442c29693056f01b6a6c190235e750d47af9183d48709e",
+    "fetchedAt": "2026-11-02T11:40:56.589Z",
+    "checkedAt": "2026-11-02T11:40:56.589Z",
+    "nextRetryAt": "2026-12-02T11:40:56.589Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

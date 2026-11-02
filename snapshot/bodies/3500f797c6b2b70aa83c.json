@@ -2,17 +2,119 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "3500f797c6b2b70aa83c",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <p>作者：刘裕，蚂蚁集团-数据分析及智能化</p> \n<p></p> \n<h2 id=\"section-一-前言\"><a id=\"article-anchor-1\"></a><strong>一、 前言</strong><a class=\"heading-anchor\" href=\"#section-一-前言\" aria-label=\"链接到本节：一、 前言\">#</a></h2> \n<h3 id=\"section-1-1-ant-datasage简介\"><a id=\"article-anchor-2\"></a><strong>1.1 Ant DataSage简介</strong><a class=\"heading-anchor\" href=\"#section-1-1-ant-datasage简介\" aria-label=\"链接到本节：1.1 Ant DataSage简介\">#</a></h3> \n<p>Ant DataSage是蚂蚁集团DeepInsight团队推出的新一代数据分析Agent。其代表的数据分析新范式，全流程由AI主导，基于输入的数据分析问题，由模型规划、拆解任务步骤并自主执行，最终直接交付分析结果（如数据报表、归因结论、分析报告等），帮助用户解决各类数据分析难题。</p> \n<p></p> \n<p><img alt=\"图片\" src=\"https://i-blog.csdnimg.cn/img_convert/466a32c82d78b0789a1caae5fb8683b6.gif\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>DataSage产品部分功能示意</p> \n<h3 id=\"section-1-2-项目背景\"><a id=\"article-anchor-3\"></a><strong>&nbsp;1.2 项目背景</strong><a class=\"heading-anchor\" href=\"#section-1-2-项目背景\" aria-label=\"链接到本节：1.2 项目背景\">#</a></h3> \n<p>随着大模型、Agent等技术的快速发展，数据分析的智能化从Copilot到Agent（DataSage）演变也呈现出一种必然的趋势，存在非常多的技术研究和探索工作。在新的浪潮下，亟需培养一批懂Agent原理、有AI应用实战经验、能独立创新思考、敢先于业界探索的新型AI应用工程师，将产品能带向新的高度。</p> \n<p>在此背景下，蚂蚁数据智能引擎部面向入职1-2年校招同学设置人才培养星才计划，为他们提供部门级项目的舞台和机会，加速成长，助力校招生同学发挥更多技术影响力和价值。</p> \n<p></p> \n<p><img alt=\"图片\" height=\"600\" src=\"https://i-blog.csdnimg.cn/img_convert/f80fa67b0f455eb77e386609f7dccfa5.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<h2 id=\"section-二-ant-datasage星才项目设计\"><a id=\"article-anchor-4\"></a><strong>二、Ant DataSage星才项目设计</strong><a class=\"heading-anchor\" href=\"#section-二-ant-datasage星才项目设计\" aria-label=\"链接到本节：二、Ant DataSage星才项目设计\">#</a></h2> \n<h3 id=\"section-2-1-总体概要设计\"><a id=\"article-anchor-5\"></a><strong>2.1 总体概要设计</strong><a class=\"heading-anchor\" href=\"#section-2-1-总体概要设计\" aria-label=\"链接到本节：2.1 总体概要设计\">#</a></h3> \n<p>选取DataSage系统架构中重要模块、且业务依赖程度不紧急的部分展开（下方架构图红色方框标明），提前开始布局进行深入研究和落地，2个方向，包括：</p> \n<p><strong>方向一：For能力水位提升 —— 基于上下文工程的Agent效果调优研究和设计</strong></p> \n<ul><li><span>Agent通用能力建设，如知识的全生命周期管理，记忆和反思等</span></li><li><span>众多真实业务案例分析，抽象出模型调优范式，助力提升技术水位</span></li></ul> \n<p><strong>方向二：For创新探索 —— 基于DataSage+数字人的数字分析师探索和应用</strong></p> \n<ul><li><span>不同类型不同角色的数字分析师探索和研究，打造数据分析领域“数字员工”</span></li><li><span>探索全新的数据分析人机交互体验，并在真实场景落地实践</span></li></ul> \n<h3 id=\"section-2-2-研究课题设计-2个课题3个方向\"><a id=\"article-anchor-6\"></a><strong>&nbsp;2.2 研究课题设计：2个课题3个方向</strong><a class=\"heading-anchor\" href=\"#section-2-2-研究课题设计-2个课题3个方向\" aria-label=\"链接到本节：2.2 研究课题设计：2个课题3个方向\">#</a></h3> \n<blockquote> \n <p>所有课题设计背景基于2025年6月的现状，6个月的星才项目实施当前各方向局面已经发生巨大改变。</p> \n</blockquote> \n<h3 id=\"section-2-3-星才团队\"><a id=\"article-anchor-7\"></a><strong>&nbsp;2.3 星才团队</strong><a class=\"heading-anchor\" href=\"#section-2-3-星才团队\" aria-label=\"链接到本节：2.3 星才团队\">#</a></h3> \n<p>来自蚂蚁数据智能引擎部4位校招同学组成了DataSage研究项目组，他们原来有做maya底层推理服务的C++研发工程师、有做数据研发工作的ETL工程师、有做数据库SQL诊断的C++工程师、也有做数字人应用的Java开发工程师。不同岗位促成了这支团队具备无限可能，今天他们都会围绕项目成功，做出算法工程师岗位的转型，同时我们也配备了充足的师兄和辅导员，具备1V1传帮带的辅导。</p> \n<p>在2.2的3个研究方向下，最终产出10项关键技术创新，显著提升数据分析Agent的准确性与鲁棒性，为业务规模化推广提供了扎实的基础技术支撑。</p> \n<p></p> \n<h2 id=\"section-三-10项关键技术创新\"><a id=\"article-anchor-8\"></a><strong>三、10项关键技术创新</strong><a class=\"heading-anchor\" href=\"#section-三-10项关键技术创新\" aria-label=\"链接到本节：三、10项关键技术创新\">#</a></h2> \n<h3 id=\"section-3-1-知识板块专利\"><a id=\"article-anchor-9\"></a><strong>&nbsp;3.1 知识板块专利</strong><a class=\"heading-anchor\" href=\"#section-3-1-知识板块专利\" aria-label=\"链接到本节：3.1 知识板块专利\">#</a></h3> \n<h4><a id=\"article-anchor-10\"></a>3.1.1 一种数据分析领域知识全生命周期的管理和应用协议方案主要创新</h4> \n<p>业界知识管理系统多以RAG技术为底盘，缺乏知识分层治理、细粒度的管理、标准化流程、跨模块跨系统共享复用等问题。</p> \n<p>针对DeepInsight下多款智能化产品（如DataSage、自助分析Copilot、DeepReSearch产品等）过去知识分散、生产、消费混乱的情形，我们从实战中抽象设计了一种大DI通用的知识应用协议（Knowledge Application Protocol, KAP），一套标准化、分层解耦的知识工程化框架，通过定义知识生命周期的标准服务接口，配合知识标准格式统一封装多模态知识、分层模型管理知识流通，实现知识技术链路统一、内容可共享复用。进一步可以拓展到其他领域，实现跨系统级的通用知识协议。</p> \n<p><strong>关键方案概要</strong></p> \n<p>知识应用协议（KAP）的架构设计思路可从分层解耦、全生命周期覆盖、标准化通信四个核心。</p> \n<p>架构说明：</p> \n<ul><li> <p><span>主机与客户端：聚焦“发起请求”的终端角色。</span></p> </li></ul> \n<ul><li><span>主机（Host）承载KAP客户端应用程序，是业务逻辑的执行载体；</span> \n  <ul><li> <p><span>KAP客户端（Client）负责发起请求、接收响应，抽象出“谁在用知识和服务”的核心角色。</span></p> </li></ul> </li></ul> \n<ul><li> <p><span>通信层：知识服务和资源通过MCP\\HTTP\\JOSN-RPC2.0/SofaRpc等成熟的通信协议暴露出去。</span></p> </li><li> <p><span>服务器与资源：聚焦“提供知识资源和服务”的服务端角色。</span></p> </li></ul> \n<ul><li><span>KAP服务器（Server）作为轻量级连接器，对外暴露知识功能；</span> \n  <ul><li> <p><span>支持本地/远程资源、本地/远程服务的灵活扩展（如本地知识库、远程API服务），让服务端可快速对接内外部知识生态。</span></p> </li></ul> </li></ul> \n<p></p> \n<p><img alt=\"图片\" height=\"540\" src=\"https://i-blog.csdnimg.cn/img_convert/2bc7c1ee73c33aac9278bd48193c7a77.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<h4><a id=\"article-anchor-11\"></a>3.1.2 一种数据分析领域基于差分运筹的知识检索参数动态优化方案</h4> \n<p><strong>主要创新</strong></p> \n<p>大模型缺乏领域知识，Agent中加入知识召回辅助模型理解已经是业界共识，但是一般的产品也就限于提供知识检索的参数配置功能，让用户去调检索参数，特别是短文本匹配，普通的人工调参非常困难。我们提出了一种基于运筹学的业务域自适应参数优化机制，通过将检索参数配置建模为以NDCG为目标函数的黑盒优化问题，并采用差分进化算法在域标注数据集上自动搜索最优权重组合，用传统的运筹算法建模+大模型检索的组合，创新性的解决了自动调参的难点。</p> \n<p><strong>关键方案概要</strong></p> \n<p>专利提出一种面向数据分析场景的自适应知识检索参数优化方案，解决传统检索算法短文本语义匹配难、业务适配性差导致的检索偏差问题。通过融合分词级文本相似度与向量相似度的混合模型，增强短术语语义表征；基于差分进化算法实现各业务域最优检索参数的自动优化，提升算法多场景适应性；同时进一步结合PE2优化的Meta-prompt构建可进化的问题分类器，利用大模型分析提问特征并动态匹配最佳参数，支持“因问施策”的个性化检索。</p> \n<p></p> \n<p><img alt=\"图片\" height=\"632\" src=\"https://i-blog.csdnimg.cn/img_convert/335d736c9a34e19f8844f82385860b80.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>问题适配的检索策略方案 ：</p> \n<p></p> \n<p><img alt=\"图片\" height=\"806\" src=\"https://i-blog.csdnimg.cn/img_convert/674711d8521eb06ee4fe6321ae5c234e.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<h4><a id=\"article-anchor-12\"></a>3.1.3 一种数据分析领域智能知识调试方案</h4> \n<p><strong>主要创新</strong></p> \n<p>本方案针对当前取数过程的实际场景出发，针对当前人工黑盒调试面临的排查效率低、异常根因复杂等核心问题，从提出一套以场景和用户为中心的智能知识调试体系。构建“双链路协同调试”机制，实现离线批量诊断与在线精准调优的闭环迭代；通过智能辅助的个性化推荐及人机协同交互机制，辅助实现知识检索方案及知识内容的精细化调优，大幅提升知识调试效率。</p> \n<p><strong>关键方案概要</strong></p> \n<p>方案包含离线与在线双链路协同调试机制，离线侧作用于知识库与参数进行批量问题排查，在线侧则作用于针对单点问题精准定位及优化，形成闭环迭代。智能推荐板块集成智能参数推荐引擎、与知识内容推荐板块，结合知识特征与充分上下文实现AI辅助调试提效。同时，提供可视化诊断界面与人机协同交互机制，支持专家经验注入与参数人工干预。配合参数版本管理、灰度发布与一键回滚能力，确保变更安全可控，全面提升知识系统的准确性、可维护性与持续进化能力。</p> \n<p></p> \n<p><img alt=\"图片\" height=\"1089\" src=\"https://i-blog.csdnimg.cn/img_convert/6aa0c81645e01b253448203beb085272.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<h4><a id=\"article-anchor-13\"></a>3.1.4 一种数据分析领域知识生产的实时评估和优化方案</h4> \n<p><strong>主要创新</strong></p> \n<p>本方案的核心创新在于构建了实时质量评估与智能优化的协同机制。通过基于大语言模型的并行化评估引擎，建立了准确性、完整性、一致性、可用性四维加权评分体系，实现知识质量的实时量化评估。</p> \n<p>针对未达标知识，设计了支持简洁描述、Markdown格式、伪代码三种版本的知识优化引擎，采用\"重写-补全-修正-统一\"策略，结合反问机制向用户获取补充信息，通过信息缺失度与语义清晰度双重评估实现迭代优化。这种\"发现问题-立即优化-持续改进\"的闭环反馈系统，有效解决了传统知识生产中质量管控缺失和反馈优化困难的问题。</p> \n<p><strong>关键方案概要</strong></p> \n<p>本方案提出了一套完整的数据分析领域知识生产实时评估和优化体系，旨在解决企业内部知识管理面临的五大痛点：质量管控缺失、生产流程割裂、缺乏统一标准、消费场景割裂、缺乏反馈优化。</p> \n<p></p> \n<p><img alt=\"图片\" height=\"511\" src=\"https://i-blog.csdnimg.cn/img_convert/bb1cac2904efd2ab9b24ac3710049ad3.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>技术架构：方案采用标准化流程设计，包含六个核心阶段：数据输入→内容解析→知识提取→事前质量评估→标准规范化→知识输出。通过多模态解析能力支持文档、图片、音频、视频等多种数据源的统一处理。</p> \n<p>质量评估机制：构建了基于大语言模型的并行化评估引擎，从准确性、完整性、一致性、可用性四个维度对提取的知识进行实时评分。综合得分≥80分的知识标记为\"高质量知识\"进入存储层，否则触发优化流程。</p> \n<p>智能优化系统：针对未达标知识，通过知识优化引擎生成多种版本内容，结合反问机制向用户获取补充信息，形成\"评估-反问-优化\"闭环。优化策略包括重写模糊表达、补全缺失字段、修正错误数据、统一术语标准。</p> \n<p>技术效果：通过模块化可插拔架构设计，支持组件的热插拔替换和第三方算法的快速接入。方案能够实现知识准确率达到95%以上，显著降低AI系统输出风险，同时支持系统的自适应学习和持续改进。</p> \n<h4><a id=\"article-anchor-14\"></a>3.1.5 一种RAG系统中基于多轮推理的检索方案</h4> \n<p><strong>主要创新</strong></p> \n<p>传统RAG系统主要关注检索知识的准确性、完整性，本方案提出提出一种提升RAG检索准确性与完整性同时考虑个性化的检索技术方案。该方案整合用户输入问题、对话上下文、用户画像及消费画像等多源异构信息，进行输入改写与问题拆解。这种融合方式不仅理解用户当前查询需求，还结合用户背景和历史行为，提供精准语义解析，克服传统检索仅依赖文本匹配的局限，显著提升检索语义理解能力与结果相关性；采用独特的多路融合评分算法，对不同召回路径的结果进行智能加权整合。</p> \n<p>算法先对各路召回分数归一化，再投影到sigmoid空间，最后按权重融合。它能根据各召回路径特点动态分配权重，解决简单融合策略的排序不合理问题，有效处理冲突与冗余信息，提高结果相关性和可靠性；最后引入多轮迭代机制，每轮迭代基于前一轮结果和新输入信息动态调整检索方向与结果。动态迭代优化机制使检索结果随着对话深入逐步完善，适应多轮对话场景，保持信息连贯性和逻辑性。同时，轮次加权系数随着迭代增加而递增，突出后轮检索结果的重要性，强化知识动态更新与逐步完备的优势，提升检索精准度。</p> \n<p><strong>关键方案概要</strong></p> \n<p>在基于RAG（Retrieval-Augmented Generation）框架的多轮知识检索过程中，通过迭代的方式逐步完善知识集合，确保最终检索结果的准确性、完整性、个性化。以下是大概的迭代过程描述：</p> \n<p>1.初始化：初始时，检索知识集合为空。</p> \n<p>2.输入改写：在每一轮迭代开始时，我们将原始输入结合当前对话上下文 、用户画像、消费画像以及上一轮检索到的知识进行改写，得到改写后的输入 。这一步骤的目的是综合多维度信息，使改写后的输入更贴合用户的实际需求，同时提高后续检索的语义一致性和相关性。</p> \n<p>3.问题拆解：改写后的输入 被进一步拆解为多个子任务 。拆解过程结合对话上下文、用户画像、消费画像和已有知识，确保每个子任务更具体、更聚焦，从而提高检索的精确度和效率。</p> \n<p>4.多路知识召回：对于每个子任务 ，我们通过多路召回机制获取相关的知识项集合。多路召回的目的是从不同维度全面覆盖与子任务相关的知识，确保召回结果的多样性和全面性。</p> \n<p>5.多路融合评分：在基于RAG框架的多轮知识检索过程中，多路融合评分是一个关键步骤，它综合了多路召回得到的知识项的相关性得分，以生成一个更全面、更准确的知识评分。</p> \n<p>6.计算加权得分：我们为每个知识评分分配一个轮次加权系数 。该系数随着迭代轮次的增加而递增，反映随着迭代进行知识的完备性和精确性不断提高。这一步骤确保了知识的相关性和迭代轮次的影响都被综合考虑。</p> \n<p>7.知识合并与更新：将当前轮次检索到的知识及其加权得分合并到知识集合中。这一步骤确保了每一轮次的新知识都被纳入到总的知识集合中，从而逐步丰富和完善知识库。</p> \n<p>8.新增知识计算：计算当前轮次检索到的知识集合 与前一轮次知识集合的差集，以确定当前轮次是否检索到了新的知识。</p> \n<p>9.迭代终止条件：如果在某一轮次中没有检索到新的知识，或者迭代轮次超过了预设的最大轮次，则停止迭代过程。这一步骤确保了迭代过程不会无限进行，同时保证了知识检索的效率和效果。</p> \n<p>10.最终结果输出：最终的检索结果为经过所有迭代轮次后得到的知识集合 ，其中是实际完成的迭代轮次。这个结果包含了所有与用户问题相关的知识项及其加权得分，可以作为生成模型的输入，用于生成高质量的回答<strong>。</strong></p> \n<p>通过以上步骤，我们可以系统地进行多轮知识检索，逐步完善和更新知识集合，最终为生成模型提供价值丰富的知识支持。迭代过程确保了知识的动态更新和逐步完备，使得检索结果更加准确和全面。</p> \n<p></p> \n<p><img alt=\"image.png\" height=\"598\" src=\"https://i-blog.csdnimg.cn/img_convert/67dc746f7e4eaad54e07cfe2f98eeb5b.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<h4><a id=\"article-anchor-15\"></a>3.1.6 一种实现知识共享和服务共享的分布式知识中心软件架构方案主要创新</h4> \n<p>在DeepInsight消费知识的过程中发现，知识资源（Knowledge Assets）与知识服务（Knowledge Services）通常以高度异构的形态散布于多个自治的信息系统之中，知识与服务散布模式在可扩展性、互操作性、成本效率及用户体验方面均存在显著不足，亟需一种能够实现“知识共享”与“服务共享”的统一架构，以解决上述痛点。</p> \n<p>本方案提出一种实现技术共享与服务共享的分布式的可供BI领域知识中心实施的软件架构方案。该方案为主从架构，父节点主要负责对子节知识服务进行统一的服务注册、发现、编排、调用、访问等管理作用；同时负责将子节点知识资源转换为符合统一知识标准的知识资源。</p> \n<p>子节点提供真正的知识资源、知识服务，通过父节点的服务发现与注册接口将服务与资源暴漏给父节点，由父节点统一对外提供知识资源与知识服务。最终达到知识资源与知识服务整合的可扩展知识网络。</p> \n<p><strong>关键方案概要</strong></p> \n<p>在统一知识资源标准和知识服务标准的前提下，通过主从架构将子节点的知识资源与服务集成在父节点上，从而实现对知识资源和服务的统一管理和复用，父节点作为代理统一对外提供知识资源和知识服务。父节点实现标准的管理服务进一步整合了知识服务和资源，实现知识资源的跨节点共享、知识原子服务跨节点编排。</p> \n<p>同时基于标准的服务发现与注册接口，只要遵从统一知识资源和统一知识服务标准的子节点均可向父节点进行服务与资源的注册，从而实现了扩展的知识与服务网络。该架构可有以下特点：</p> \n<ul><li><span>统一标准：统一知识标准 + 统一知识服务双层抽象，同步治理异构数据与知识服务，实现知识-服务一体化共享。</span></li><li><span>弹性伸缩：为向量检索、知识提取等知识原子服务设计轻量级 Service Descriptor，接入网络后可自动发现、编排、弹性伸缩。</span></li><li><span>统一管理：数据血缘、服务目录、权限策略等管理元数据以代码形式集中声明，秒级下发到所有节点，版本漂移一键回滚。</span></li><li><span>灵活转换：知识转换层自动完成格式、协议、权限适配，新增节点即插即用，集成成本由 O(N) 降至 O(1)。</span></li><li><span>集群联邦扩展 :支持对等互联的集群联邦协议，跨集群共享 Schema、服务目录与策略，按需弹性组成更大规模的全域知识网格。</span> <p></p> <p><img alt=\"图片\" height=\"797\" src=\"https://i-blog.csdnimg.cn/img_convert/18458d4649e0cfe01a17f52896a19b88.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> </li></ul> \n<p></p> \n<h3 id=\"section-3-2-记忆板块专利\"><a id=\"article-anchor-16\"></a><strong><strong>3.2 记忆板块专利</strong></strong><a class=\"heading-anchor\" href=\"#section-3-2-记忆板块专利\" aria-label=\"链接到本节：3.2 记忆板块专利\">#</a></h3> \n<h4><a id=\"article-anchor-17\"></a>3.2.1 一种数据分析领域的多Agent协同上下文记忆管理方案主要创新</h4> \n<p>真实业务场景中往往是复杂多步的，比如连续多步（10步、甚至20+步等）分析任务，特别是结果包含数据、结论、可视化等信息一定会超出上下文Token窗口，以及多Agent协作之间信息共享等都是业界难题，我们设计了一套适用于数据分析领域的记忆方案解决数据分析长程任务的问题，该方案已经在DataSage产品落地。</p> \n<p><strong>关键方案概要</strong></p> \n<p>数据分析的多 Agent 系统中任务复杂，需要执行多次规划才能完成。每当一个规划步骤执行完后，规划模块都需回顾之前操作执行结果，才能确定下一步操作，但不断累积的记录会导致超出规划模块的处理容量。为此，本方案引入基于质量评估的压缩机制。在回顾执行结果时，若检测到上下文容量占用超过 70%，即触发异步压缩与质量校验。该机制在缩减数据规模的同时，确保压缩内容完整保留支持后续规划的关键信息，从而避免错误规划。</p> \n<p></p> \n<p><img alt=\"image.png\" height=\"293\" src=\"https://i-blog.csdnimg.cn/img_convert/3ee30a527b4b38173cc1a217d1cd62d1.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>短期记忆中针对数据分析领域的产物压缩与读取方案：</p> \n<p></p> \n<p><img alt=\"image.png\" height=\"464\" src=\"https://i-blog.csdnimg.cn/img_convert/db2c9ef9f5c94e7c380007a6a325aada.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<h4><a id=\"article-anchor-18\"></a>3.2.2 一种数据分析Agent充分上下文评估和生成方案主要创新</h4> \n<p>真实业务场景中，用户需求往往隐含模糊且逻辑复杂。模型在处理此类非标准化诉求时，常因无法跨越“业务语义”与“技术语义”之间的鸿沟，而陷入规划困境：从步骤粒度的偏离，到任务执行的阻断，甚至产生完全背离意图的“规划幻觉”。</p> \n<p>这些问题的本质，在于模型难以将抽象的业务意图精准映射为可执行的技术逻辑。为此，我们设计了一套上下文充分评估方案，利用充分的上下文信息，确立了业务目标指向技术实现的精准映射机制，从而有效填补了两者间的语义鸿沟。</p> \n<p>大模型应用中，评估上下文充分性面临两难：靠模型评，成本高且黑盒；靠人评，太主观又不准。因此，建立一套标准规范作为依据势在必行。然而，目前行业内尚无现成标准可供参考，导致规范制定缺乏外部依据。</p> \n<p><strong>关键方案概要</strong></p> \n<p>为此，本方案结合内外部实践经验，定义了一套“充分上下文规范”。该规范依据信息来源，将上下文内容拆解为预设 Prompt、外部知识和多轮对话三个维度，并分别进行了详细定义。</p> \n<p>建立规范后，我们据此用于评估上下文的充分性，我们设计了分阶段（任务执行前、任务运行中、任务完成时）运用规范场景。若检测到不充分，即触发补充机制，通过人工或者自动从记忆中补充，从而有效提升模型运行的稳定性。</p> \n<p></p> \n<p><img alt=\"图片\" height=\"580\" src=\"https://i-blog.csdnimg.cn/img_convert/baab7e93882e469ff927ddfc356a0a74.png\" width=\"988\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<h3 id=\"section-3-3-数字分析师板块专利\"><a id=\"article-anchor-19\"></a><strong><strong>&nbsp;3.3 数字分析师板块专利</strong></strong><a class=\"heading-anchor\" href=\"#section-3-3-数字分析师板块专利\" aria-label=\"链接到本节：3.3 数字分析师板块专利\">#</a></h3> \n<h4><a id=\"article-anchor-20\"></a>3.3.1 一种结合数字人技术的数据分析播报视频生成方案主要创新</h4> \n<p>当前数据分析技术虽然可以高效提取数据价值，但其输出形式多为图表、文本报告等，缺乏视觉化、情感化和互动化的呈现手段。当前数字人视频内容制作依赖人工编辑和脚本编写，效率低、成本高，难以满足实时性、个性化和自动化的需求。</p> \n<p>因此，我们提供一种基于数据分析驱动的数字人智能短视频生成系统及方法，解决现有技术中存在的上述问题。实现从结构化/非结构化数据中提取关键信息，自动生成符合语境的播报脚本。提取分析报告的重要指标，在数字人视频播报中进行交互。替代传统人工剪辑和编辑流程，显著降低内容生产成本。</p> \n<p><strong>关键方案概要</strong></p> \n<p>利用大语言模型对内容进行生动流畅的改写，显著提升了文本的表现力与可读性。同时，系统引入多维度评分机制，对主体内容进行质量评估并提供修改建议。最终由大模型整合各部分生成结构完整、逻辑清晰的播报文案，并结合图表信息自动排版生成数字人播报视频。</p> \n<p>整个流程高度自动化，有效克服了传统视频制作中依赖人工脚本编写、流程繁琐的问题，实现了从数据输入到高质量视频输出的一站式智能处理，大幅提升了内容生产效率与可视化表达效果。</p> \n<p></p> \n<p><img alt=\"image.png\" height=\"480\" src=\"https://i-blog.csdnimg.cn/img_convert/c2c5f68e3354037adb44788d0c21a035.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>通过引入多模态大模型，实现了图表与文案的语义匹配，深入理解数据背后的含义，从而精准识别出关键指标。结合OCR提取的图表内容与坐标信息，系统能够准确定位关键数据在图表中的位置，并通过TTS获取文案中每个字符的时间戳，实现动态标注的精确时序控制。这种基于语义理解和视觉定位的动效标注方式，有效引导用户注意力聚焦于核心信息，提升口播视频的信息传达效率和用户体验。</p> \n<p></p> \n<p><img alt=\"image.png\" height=\"531\" src=\"https://i-blog.csdnimg.cn/img_convert/83947cfa61570c15a025e9234086de43.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<h4><a id=\"article-anchor-21\"></a>3.3.2 一种数据分析领域多模态融合实时交互数字人方案主要创新</h4> \n<p>传统的数据分析系统多依赖于单向输出或静态可视化展示，难以满足复杂业务场景下自然、动态、多模态的交互需求。尤其在知识问答与产物分析等高频交互任务中，用户期望系统不仅能够理解并响应文本指令，还能通过语音、图像、表格、视频、数字人动作以及前端界面联动等多种模态进行实时、连贯、拟人化的双向对话。</p> \n<p>因此我们构建了面向数据分析场景的多模态对话数字人系统，首次将文本、语音、图像、表格、视频、数字人动作及前端交互等异构模态信息纳入统一的语义理解与生成框架。创新性地将领域知识图谱嵌入多模态对话流程，构建“问题理解—知识检索—多模态生成”的闭环推理链路。首次实现数字人对前端界面的主动操控能力——数字人可根据分析结论自动生成操作指令，驱动前端页面完成图表切换、数据筛选或视图联动等动作，并配合语音引导与肢体示意形成“讲解+操作”一体化体验。</p> \n<p><strong>关键方案概要</strong></p> \n<p></p> \n<p><img alt=\"image.png\" height=\"379\" src=\"https://i-blog.csdnimg.cn/img_convert/775820ea05afd199beefa807072a3d06.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p></p> \n<p><img alt=\"image.png\" height=\"1066\" src=\"https://i-blog.csdnimg.cn/img_convert/cbfa29217eea7aca2ae9abb616094986.jpeg\" width=\"690\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>提出面向数据分析场景的多模态对话数字人Agent，首次实现语音播报与前端界面联动的端到端反向控制闭环，彻底解决数字人“只说不指、讲解与视图脱节”的核心痛点。</p> \n<p>通过在内容生成阶段于句末动态插入结构化记忆标签，构建“语义分句+知识锚点”的复合输出单元，并设计双通道异步处理架构，利用TTS合成过程中的天然时延，使标签解析通道能够超前完成后续语句的记忆检索与定位计算，形成“未来信息前置可用”的预判优势。进一步结合分句级向量化语义匹配技术，精准拆解自然语言与记忆内容的细粒度对应关系，并基于消息序号实现上下文感知的反控指令动态组装：在语音播放当前语句时，系统已准备好下一环节的页面跳转目标，实现“说到哪，页面自动跳到哪”的精准联动。</p> \n<p>该机制不仅支持自动聚焦图表、高亮数据卡片，还具备指令自清理能力，保障系统长期运行稳定性。本方案开创了数字人从“被动播报”向“主动引导”演进的新范式，显著提升复杂数据分析场景下的信息获取效率与人机协同体验。</p> \n<p></p> \n<h2 id=\"section-四-实现效果展示\"><a id=\"article-anchor-22\"></a><strong>四、实现效果展示</strong><a class=\"heading-anchor\" href=\"#section-四-实现效果展示\" aria-label=\"链接到本节：四、实现效果展示\">#</a></h2> \n<h3 id=\"section-4-1-知识产品功能演示\"><a id=\"article-anchor-23\"></a><strong>&nbsp;4.1 知识产品功能演示</strong><a class=\"heading-anchor\" href=\"#section-4-1-知识产品功能演示\" aria-label=\"链接到本节：4.1 知识产品功能演示\">#</a></h3> \n<blockquote> \n <p>数据安全因素，以下展示部分产品实现效果</p> \n</blockquote> \n<h4><a id=\"article-anchor-24\"></a>4.1.1 知识生产</h4> \n<p><img alt=\"image.png\" height=\"542\" src=\"https://i-blog.csdnimg.cn/img_convert/7635e3b33ecfebd70fc73bea7b646e3f.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<h4><a id=\"article-anchor-25\"></a>4.1.2 知识智改</h4> \n<p><img alt=\"image.png\" height=\"535\" src=\"https://i-blog.csdnimg.cn/img_convert/798199c54c2b0345616ef15291afcdee.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<h4><a id=\"article-anchor-26\"></a><br> 4.1.3 知识调试</h4> \n<p><img alt=\"image.png\" height=\"518\" src=\"https://i-blog.csdnimg.cn/img_convert/3324b2a198902f12b84b5d1cce570adf.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p></p> \n<h3 id=\"section-4-2-记忆产品功能演示\"><a id=\"article-anchor-27\"></a><strong>&nbsp;4.2 记忆产品功能演示</strong><a class=\"heading-anchor\" href=\"#section-4-2-记忆产品功能演示\" aria-label=\"链接到本节：4.2 记忆产品功能演示\">#</a></h3> \n<p>上下文超限改造前上下文超出限制导致任务执行失败</p> \n<div>\n \n <p> </p>\n</div> \n<p></p> \n<p>应用记忆系统之后超长任务可以顺利完成</p> \n<div>\n \n <p> </p>\n</div> \n<h3 id=\"section-4-3-数字分析师产品功能演示\"><a id=\"article-anchor-28\"></a><strong>&nbsp;4.3 数字分析师产品功能演示</strong><a class=\"heading-anchor\" href=\"#section-4-3-数字分析师产品功能演示\" aria-label=\"链接到本节：4.3 数字分析师产品功能演示\">#</a></h3> \n<h4><a id=\"article-anchor-29\"></a>4.3.1 离线数字分析师数据报告讲解</h4> \n<div>\n \n <p> </p>\n</div> \n<h4><a id=\"article-anchor-30\"></a>4.3.2 在线数字分析师实时多模态交互分析</h4> \n<div>\n \n <p> </p>\n</div> \n<p></p> \n<h2 id=\"section-五-项目成果总结\"><a id=\"article-anchor-31\"></a><strong>五、项目成果总结</strong><a class=\"heading-anchor\" href=\"#section-五-项目成果总结\" aria-label=\"链接到本节：五、项目成果总结\">#</a></h2> \n<p>DataSage星才项目聚焦知识管理、记忆增强与数字分析师三大方向，构建了覆盖数据分析全生命周期的知识系统、多智能体记忆框架及离线-在线融合的数字人系统。通过统一智能化知识管理，突破长程任务上下文限制，显著提升数据分析Agent的准确性与鲁棒性，创造了数字人交互新范式，也为业务规模化推广提供了基础技术支撑。</p> \n<p><strong>1.在知识全生命周期管理方面：</strong>基于真实业务场景，构建了一套数据分析领域的知识生产、存储、消费、反馈的全生命周期的产品和技术能力，形成了智能化通用知识子系统。支持多模态的知识自动化提取、质量评估和多种介质的存储、建设了离在线向量化服务能力支持多样化的知识检索、落地人工与智能知识调试服务，并在多个智能产品上应用。</p> \n<p><strong>2.在记忆增强方面：</strong>设计和实现了DataSage的多智能体系统的记忆框架，支持结构化上下文压缩，产物多级压缩、向量召回，以及记忆管理等能力。实现关键语义完整性的前提下，显著降低了Agent上下文长度。同时通过多Agent的记忆共享，有效减少了因上下文缺失导致的重复推理和任务失败，提升了任务成功率和整体执行效率。</p> \n<p><strong>3.在数字分析师方面：</strong>基于蚂蚁数字人基建，结合数据分析领域特性，构建了离线、在线的数字人系统，支持虚拟数字分析师数据报告讲解、数字分析师报告实时问答以及知识问答，创新的实现了新数据分析人机交互体验。其中离线数字人实现了一个大模型自动化报告改写与优化系统，能够生成流畅口播文案并联动图表合成数字人播报视频，在线数字人构建了实时对话数字分析师Agent，实现融合语音、文本、图片、表格等7个模态的混合对话。</p> \n<h2 id=\"section-六-写在最后\"><a id=\"article-anchor-32\"></a><strong>六、写在最后</strong><a class=\"heading-anchor\" href=\"#section-六-写在最后\" aria-label=\"链接到本节：六、写在最后\">#</a></h2> \n<p>借事修人，事做成，也谈谈人。先看两个团队的差异，因为定位不一样，从定目标、追过程、拿结果三方面势必都是不一样的，我称之为：结果导向型团队和创新成长型团队。之前的团队是结果导向型团队，星才项目团队是创新成长型团队。两种团队的差异也很明显，如下：</p> \n<p></p> \n<p><img alt=\"image.png\" height=\"682\" src=\"https://i-blog.csdnimg.cn/img_convert/44bd2bf192695a03bdc02b4c3d0dc4a4.jpeg\" width=\"738\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>这里引发我的思考：两<strong>种团队该用什么样的管理方式带领大家，才能最大化对事对人的效能？</strong></p> \n<p>直接给出结论：经过实践，一定是不一样的管理方式。</p> \n<p>借用现在LLM大模型打个比喻，参考张一鸣的管理哲学，团队传统管理方式更多偏向传统稠密大模型式管理模式：Control，星才项目团队管理方式更多偏向MOE混合专家大模型式管理模式：Context。二者在掌控和决策方面有着根本差异，两种模式总结如下：</p> \n<p></p> \n<p><img alt=\"image.png\" height=\"508\" src=\"https://i-blog.csdnimg.cn/img_convert/2ae51c4c032a0020c61b81558cfe3a4d.jpeg\" width=\"998\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>给所有正在经历AI转型团队Leader建议，要适应AGI特点，改变传统管理方式：</p> \n<ul><li><span><strong>AGI时代的特点：业务高度不确定性、追求创新和效率、吸引和激发人才…</strong></span></li><li><span><strong>团队管理新实践：Context，not Control</strong></span></li></ul> \n<p>最后，针对团队管理也是一种预训练，不同的预训练方式成就不同的团队，希望各位Leader都能找到适合自己团队的管理方式，发挥最大的组织效能。</p>\n        ",
+    "headings": [
+      {
+        "id": "section-一-前言",
+        "level": 2,
+        "text": "一、 前言"
+      },
+      {
+        "id": "section-1-1-ant-datasage简介",
+        "level": 3,
+        "text": "1.1 Ant DataSage简介"
+      },
+      {
+        "id": "section-1-2-项目背景",
+        "level": 3,
+        "text": "1.2 项目背景"
+      },
+      {
+        "id": "section-二-ant-datasage星才项目设计",
+        "level": 2,
+        "text": "二、Ant DataSage星才项目设计"
+      },
+      {
+        "id": "section-2-1-总体概要设计",
+        "level": 3,
+        "text": "2.1 总体概要设计"
+      },
+      {
+        "id": "section-2-2-研究课题设计-2个课题3个方向",
+        "level": 3,
+        "text": "2.2 研究课题设计：2个课题3个方向"
+      },
+      {
+        "id": "section-2-3-星才团队",
+        "level": 3,
+        "text": "2.3 星才团队"
+      },
+      {
+        "id": "section-三-10项关键技术创新",
+        "level": 2,
+        "text": "三、10项关键技术创新"
+      },
+      {
+        "id": "section-3-1-知识板块专利",
+        "level": 3,
+        "text": "3.1 知识板块专利"
+      },
+      {
+        "id": "section-3-2-记忆板块专利",
+        "level": 3,
+        "text": "3.2 记忆板块专利"
+      },
+      {
+        "id": "section-3-3-数字分析师板块专利",
+        "level": 3,
+        "text": "3.3 数字分析师板块专利"
+      },
+      {
+        "id": "section-四-实现效果展示",
+        "level": 2,
+        "text": "四、实现效果展示"
+      },
+      {
+        "id": "section-4-1-知识产品功能演示",
+        "level": 3,
+        "text": "4.1 知识产品功能演示"
+      },
+      {
+        "id": "section-4-2-记忆产品功能演示",
+        "level": 3,
+        "text": "4.2 记忆产品功能演示"
+      },
+      {
+        "id": "section-4-3-数字分析师产品功能演示",
+        "level": 3,
+        "text": "4.3 数字分析师产品功能演示"
+      },
+      {
+        "id": "section-五-项目成果总结",
+        "level": 2,
+        "text": "五、项目成果总结"
+      },
+      {
+        "id": "section-六-写在最后",
+        "level": 2,
+        "text": "六、写在最后"
+      }
+    ],
+    "textLength": 9735,
+    "readingMinutes": 22,
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/159690256",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:57.914Z",
-    "nextRetryAt": "2026-11-09T09:07:57.914Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "184fa92ff4f3fb0cb0f51c903f2db6b82fdb0e8e885a49943185688b8e15ab6f",
+    "fetchedAt": "2026-11-02T11:43:38.676Z",
+    "checkedAt": "2026-11-02T11:43:38.676Z",
+    "nextRetryAt": "2026-12-02T11:43:38.676Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

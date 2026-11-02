@@ -2,17 +2,69 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "627ba44491d424c18653",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <blockquote>\n 作者： vivo BlueImage Lab\n <br> \n <strong>摘要：</strong>4K+图像编辑新突破！针对数据匮乏与细节建模难题，我们发布首个指令式超高分辨率编辑数据集 VINS-120K（含12万精筛4K三元组）。同时提出高频感知适配策略，将预训练低分辨率模型轻松扩展至UHR领域，并配套评测基准 VINS-4KEval。显著提升编辑细节与纹理真实感！\n</blockquote> \n<p>本文入选 CVPR 2026</p> \n<p><strong>CVPR</strong>（IEEE Conference on Computer Vision and Pattern Recognition）IEEE国际计算机视觉与模式识别会议，主要内容是计算机视觉与模式识别技术。</p> \n<p>CVPR 2026约16092篇投稿，接收率约25.42%。</p> \n<p>论文主页：<a title=\"https://arxiv.org/abs/2605.23518\" href=\"https://arxiv.org/abs/2605.23518\" target=\"_blank\" rel=\"noopener noreferrer\">https://arxiv.org/abs/2605.23518</a></p> \n<p>代码仓库：<a title=\"https://huggingface.co/datasets/openvivo/VINS-120K\" href=\"https://huggingface.co/datasets/openvivo/VINS-120K\" target=\"_blank\" rel=\"noopener noreferrer\">https://huggingface.co/datasets/openvivo/VINS-120K</a></p> \n<p></p> \n<p><img alt=\"\" height=\"339\" src=\"https://i-blog.csdnimg.cn/img_convert/46332c14f4e659f7abe4b166d270067b.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图1：论文的方法与Kontext编辑下采样后的4K图像超分的视觉对比</p> \n<h3 id=\"section-一-研究背景-图像编辑模型的分辨率瓶颈\"><a id=\"article-anchor-1\"></a>一、研究背景：图像编辑模型的分辨率瓶颈<a class=\"heading-anchor\" href=\"#section-一-研究背景-图像编辑模型的分辨率瓶颈\" aria-label=\"链接到本节：一、研究背景：图像编辑模型的分辨率瓶颈\">#</a></h3> \n<p>当前主流指令编辑模型大多工作在 &lt;=<strong>1024</strong>&nbsp;分辨率。在手机拍摄图像已迈入 4K 时代的背景下，直接处理&nbsp;<strong>4096px</strong>&nbsp;输入时，常见退化包括结构不稳定、语义偏移，难以满足电影工业修帧、商业广告设计、社交媒体分发等真实场景对编辑精准、细节真实的双重要求。</p> \n<p>直观的替代流程是&nbsp;<strong>下采样 -&gt; 编辑 -&gt; 上采样</strong>。这个流程虽可实现4K编辑，但存在明确上限：降采样阶段丢失的高频信息很难在后续超分中被真实恢复，最终影响细节真实性与局部编辑准确性。</p> \n<p>论文将 UHR 编辑瓶颈归纳为两点：</p> \n<ul><li>缺少大规模、高质量 UHR 指令编辑数据。</li><li>NHR 预训练模型在长序列与高频细节建模上不稳定。</li></ul> \n<h3 id=\"section-二-数据支撑-vins-120k-与-vins-4keval\"><a id=\"article-anchor-2\"></a>二、数据支撑：VINS-120K 与 VINS-4KEval<a class=\"heading-anchor\" href=\"#section-二-数据支撑-vins-120k-与-vins-4keval\" aria-label=\"链接到本节：二、数据支撑：VINS-120K 与 VINS-4KEval\">#</a></h3> \n<p>为了填平底层架构与 4K 需求之间的鸿沟，论文正式提出了 VINS-120K ，它包含 12 万组 精心筛选的“指令-输入图-编辑图”三元组，横跨 4 大类共 13 种编辑指令，平均分辨率高达 4656×4138。</p> \n<p></p> \n<p><img alt=\"\" height=\"311\" src=\"https://i-blog.csdnimg.cn/img_convert/5a08315aac5a4c0cfe85458bbe091719.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图2：VINS-120K的编辑类型分布与可视化</p> \n<p>在数据源上采用了互补来源：<strong>25K</strong>&nbsp;原生超高清视频帧对 +<strong>&nbsp;95K</strong>&nbsp;外部编辑数据补齐。前者用于从真实世界保留精细纹理与自然变化，后者用于补齐难以真实获取的长尾编辑类型，避免模型只擅长少数任务。</p> \n<p>在标注上引入了视觉语言模型Gemini-2.5-Pro，进行“先全局再局部”的结构化推理生成指令，并加入自反思机制，把“图像变化”转成可执行、可评估的编辑指令。</p> \n<p>在质量控制上，采用严格的四阶段过滤：文件有效性、图像质量、指令一致性、美学质量。最终保留前 20% 样本，确保训练信号尽量稳定且高质量。</p> \n<p></p> \n<p><img alt=\"\" height=\"435\" src=\"https://i-blog.csdnimg.cn/img_convert/8d826e61a7efdd8df0c2d332fe305ab0.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图3：VINS-120K数据筛选流程示意图</p> \n<p>评测基准&nbsp;<strong>VINS-4KEval</strong>&nbsp;含&nbsp;<strong>509</strong>&nbsp;个 4K 测试样本，覆盖同分布的 13 类编辑任务，用于统一评估 UHR 条件下的编辑能力和细节保真。</p> \n<h3 id=\"section-三-核心方法-高频感知后适应策略\"><a id=\"article-anchor-3\"></a>三、核心方法：高频感知后适应策略<a class=\"heading-anchor\" href=\"#section-三-核心方法-高频感知后适应策略\" aria-label=\"链接到本节：三、核心方法：高频感知后适应策略\">#</a></h3> \n<p>相比于耗费大量算力训练全新的 4K 编辑基座模型，论文基于&nbsp;<strong>VINS-120K</strong>&nbsp;提出了一种高频感知后适应策略，将现有 NHR 编辑器稳定迁移到 UHR场景。方法主要针对两大挑战：</p> \n<ul><li>4K 场景下 token 序列长度远超预训练设置，注意力和位置编码容易失稳。</li><li>常规训练目标对高频细节关注不够，4K 场景下的精细纹理保留与生成仍有较大提升空间。</li></ul> \n<h3 id=\"section-3-1-长序列泛化\"><a id=\"article-anchor-4\"></a>3.1 长序列泛化<a class=\"heading-anchor\" href=\"#section-3-1-长序列泛化\" aria-label=\"链接到本节：3.1 长序列泛化\">#</a></h3> \n<p><strong>（Long-Token-Sequence Generalization）</strong></p> \n<p>分辨率从 1K 升到 4K 后，token 序列显著变长，常见现象是注意力分布出现“熵漂移”（过度平滑、目标区域不聚焦）以及 RoPE 外推失稳带来的语义漂移。论文用两步修正：</p> \n<p><strong>1.注意力分数重缩放：</strong>引入与分辨率挂钩的温度参数 τ 重新缩放注意力分数（Rescaling Attention Score），让长序列场景下的注意力重新变得有区分度，提升目标区域定位能力。</p> \n<p><strong>2.RoPE 重缩放：</strong>将更长序列的位置编码压缩回预训练相对熟悉的范围（缩放频率基数b），降低长上下文外推失效风险。</p> \n<h3 id=\"section-3-2-频域聚焦监督\"><a id=\"article-anchor-5\"></a>3.2 频域聚焦监督<a class=\"heading-anchor\" href=\"#section-3-2-频域聚焦监督\" aria-label=\"链接到本节：3.2 频域聚焦监督\">#</a></h3> \n<p><strong>（Frequency-Focused Supervision, FFS）</strong></p> \n<p>仅有长序列修正尚不足以保证 UHR 编辑的细节保真度。论文在标准流匹配损失之外引入<strong>频域监督：</strong></p> \n<p>其<strong>核心</strong>在于<strong>动态加权</strong>：早期去噪阶段抑制高频噪声放大，后期逐步增强高频约束，以恢复毛发、纹理、边缘等细节。 代表离散傅里叶变换后的频谱差异。</p> \n<h3 id=\"section-四-评测与结果\"><a id=\"article-anchor-6\"></a>四、评测与结果<a class=\"heading-anchor\" href=\"#section-四-评测与结果\" aria-label=\"链接到本节：四、评测与结果\">#</a></h3> \n<p>论文基于&nbsp;<strong>Flux.1-Kontext</strong>&nbsp;在&nbsp;<strong>VINS-120K&nbsp;</strong>上进行后适应训练。与现有的主流开源模型（Step1X-Edit, Bagel, Flux.1-Kontext等）以及支持 4K 的闭源商业模型 Seedream 4.0 在&nbsp;<strong>VINS-4KEval</strong>&nbsp;进行系统比较。主评测采用&nbsp;<strong>ImageJudge</strong>、<strong>VIEScore</strong>&nbsp;和&nbsp;<strong>pFID</strong>&nbsp;三类指标，主要评估编辑能力和细节保真。 核心结果可以概括为三点：</p> \n<ul><li>Kontext-dev 适配后 pFID: 12.66 -&gt; 9.15，细节保真度显著增强，明显优于现有主流方法。</li><li>ImageJudge/VIEScore 基本保持同量级，说明细节提升不是靠明显牺牲编辑能力换来的。</li><li>与 Seedream 4.0 对比时，本文方法在 pFID 上更优（9.15 vs 12.82），但编辑能力分数上 Seedream 仍更高。</li></ul> \n<p></p> \n<p><img alt=\"\" height=\"249\" src=\"https://i-blog.csdnimg.cn/img_convert/6925206641dc32bdb45f895f79615b10.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>表1：论文的方法与主流基线在VINS-120K上的定量比较</p> \n<p>在视觉对比上，论文的模型在全局和局部编辑任务中，都展现了更好的边缘清晰度和细节保留：</p> \n<p></p> \n<p><img alt=\"\" height=\"503\" src=\"https://i-blog.csdnimg.cn/img_convert/278fe27c2962daf42e9d58003f8c2f2d.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图4：论文的方法与主流基线的定性比较</p> \n<p>与闭源模型 Seedream 4.0 的可视化对比：</p> \n<p></p> \n<p><img alt=\"\" height=\"484\" src=\"https://i-blog.csdnimg.cn/img_convert/b2f0dab189ef10f89049b184a614db2f.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图5：论文的方法与Seedream 4.0的定性比较</p> \n<p>消融结果说明最终收益来自“数据构建 + 方法设计”的协同：</p> \n<ul><li>去掉后适应会出现明显退化，说明 UHR 迁移不能靠简单放大分辨率。</li><li>去掉数据筛选与分布设计后，指标也会下降，说明数据质量和任务覆盖同样关键。</li><li>只用真实视频帧对会得到更低 **pFID**，但编辑能力减弱，反映出真实性与编辑任务覆盖度之间的权衡需求。</li></ul> \n<p></p> \n<p><img alt=\"\" height=\"225\" src=\"https://i-blog.csdnimg.cn/img_convert/76794c9449a24224c8de5d1d37f054fa.webp?x-oss-process=image/format,png\" width=\"556\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>表2：更多消融实验和评估</p> \n<p></p> \n<p><img alt=\"\" height=\"573\" src=\"https://i-blog.csdnimg.cn/img_convert/c871c46fa2d91d8b435f47988f73ee54.webp?x-oss-process=image/format,png\" width=\"599\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图6：注意力重缩放的消融可视化</p> \n<p></p> \n<p><img alt=\"\" height=\"354\" src=\"https://i-blog.csdnimg.cn/img_convert/0d4ae79ec8a9cd124a14d810e0d35102.webp?x-oss-process=image/format,png\" width=\"664\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图7：RoPE重缩放的消融可视化</p> \n<p>泛化方面也给出了积极信号在&nbsp;<strong>QwenImage-Edit-2511</strong>&nbsp;上无需重调即可把&nbsp;<strong>pFID</strong>&nbsp;从&nbsp;<strong>18.33</strong>&nbsp;降到&nbsp;<strong>11.38</strong>，定性结果如下：</p> \n<p></p> \n<p><img alt=\"\" height=\"503\" src=\"https://i-blog.csdnimg.cn/img_convert/278fe27c2962daf42e9d58003f8c2f2d.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图8：QwenImage-Edit-2511在VINS-120K上进行后适应训练的定性结果</p> \n<h3 id=\"section-五-总结\"><a id=\"article-anchor-7\"></a>五、总结<a class=\"heading-anchor\" href=\"#section-五-总结\" aria-label=\"链接到本节：五、总结\">#</a></h3> \n<p>VINS-120K 与高频感知后适配策略的提出，有效填补了 AI 图像编辑模型与现代高清显示/采集设备之间的鸿沟，为现有 NHR 编辑模型提供了一条更具落地价值的 UHR 迁移路径。从此，对高清图像进行编辑，再也无需忍受画质的降级。</p> \n<blockquote>\n <strong>vivo BlueImage Lab</strong>\n <br> 蓝图实验室，主要负责移动影像算法创新，包括图像/视频处理、图像/视频交互、图像/视频增强、多模态理解大模型等方面的技术前沿探索。\n <br> 致力于不断提升vivo移动影像的算法能力，使用户能够拍摄出更加清晰、美观的照片和视频。同时积极探索增强现实、具身智能等新兴技术领域的应用，努力为用户提供更加丰富和便捷的影像体验。\n <br> 欢迎持续关注 vivo 影像技术，获取前沿技术创新经验分享与热招岗位信息。\n</blockquote>\n        ",
+    "headings": [
+      {
+        "id": "section-一-研究背景-图像编辑模型的分辨率瓶颈",
+        "level": 3,
+        "text": "一、研究背景：图像编辑模型的分辨率瓶颈"
+      },
+      {
+        "id": "section-二-数据支撑-vins-120k-与-vins-4keval",
+        "level": 3,
+        "text": "二、数据支撑：VINS-120K 与 VINS-4KEval"
+      },
+      {
+        "id": "section-三-核心方法-高频感知后适应策略",
+        "level": 3,
+        "text": "三、核心方法：高频感知后适应策略"
+      },
+      {
+        "id": "section-3-1-长序列泛化",
+        "level": 3,
+        "text": "3.1 长序列泛化"
+      },
+      {
+        "id": "section-3-2-频域聚焦监督",
+        "level": 3,
+        "text": "3.2 频域聚焦监督"
+      },
+      {
+        "id": "section-四-评测与结果",
+        "level": 3,
+        "text": "四、评测与结果"
+      },
+      {
+        "id": "section-五-总结",
+        "level": 3,
+        "text": "五、总结"
+      }
+    ],
+    "textLength": 3087,
+    "readingMinutes": 7,
     "sourceId": "vivo-csdn",
     "sourceUrl": "https://blog.csdn.net/vivo_tech/article/details/164114672",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:48.723Z",
-    "nextRetryAt": "2026-11-09T09:07:48.723Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "72a29d3a247c84c57ef003a5ab222c1e8f11ac31a50df684e4ff4c0f5f05f9cc",
+    "fetchedAt": "2026-11-02T11:42:37.283Z",
+    "checkedAt": "2026-11-02T11:42:37.283Z",
+    "nextRetryAt": "2026-12-02T11:42:37.283Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

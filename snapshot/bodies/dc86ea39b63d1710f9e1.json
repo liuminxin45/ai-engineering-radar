@@ -2,17 +2,33 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "dc86ea39b63d1710f9e1",
-    "status": "unavailable",
-    "html": "",
+    "status": "ready",
+    "html": "\n          <p></p>\n\n<p>网易智企·数帆V10全链路数据智能平台，整合<strong>EasyData、指标平台、有数BI、知数DataAgent</strong>四项能力，贯穿数据建设、治理与分析应用全环节。四项能力既可组合联动，也支持独立部署，灵活适配企业不同阶段的数据需求。</p>\n\n<p>本期，我们聚焦<strong>网易智企·数帆指标平台V10</strong>，看看AI问数背后的业务口径如何定义和管理，以及它是如何让AI真正听懂业务的。</p>\n\n<p>当业务人员询问“本月销售额是多少”时，AI需要理解的不只是一个字段名称，而是背后的业务规则：销售额是否扣除退款？按下单时间还是支付时间统计？不同区域、不同业务线是否采用相同口径？这些信息如果没有统一定义，即使模型具备较强的数据分析能力，也可能因为不了解企业业务规则而产生不同结果。</p>\n\n<p></p>\n\n<p>因此，AI应用落地的关键不仅在于模型能力，更在于企业是否具备统一的业务语义体系。网易智企·数帆指标平台V10，就是通过指标定义、治理和关联关系管理，将企业业务语言转化为AI可理解、可调用的语义资产。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"826\" src=\"https://i-blog.csdnimg.cn/img_convert/d17ed39397b54fcca39d21dc0639ec86.png\" width=\"1904\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"849\" src=\"https://i-blog.csdnimg.cn/img_convert/c7e1c6e9c33363dce4d54d3632628aa7.png\" width=\"1852\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>网易智企·数帆指标平台V10 能力架构</strong></p>\n\n<p>从指标建设到业务使用，企业既需要提高配置效率，也需要管理指标变更、支持多端应用，并满足查询与分析需求。本次升级围绕这些环节展开，同时帮助企业<strong>持续完善AI应用所需的业务语义基础</strong>。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"865\" src=\"https://i-blog.csdnimg.cn/img_convert/b97d46baa3c509c6537a071cede13e96.png\" width=\"1819\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>建得快：AI + 专家双驱动</strong></p>\n\n<p>建设一个指标，需要明确<strong>业务口径、计算逻辑和关联维度。</strong></p>\n\n<p>例如，“销售额”不仅是一个数据字段，还需要明确统计范围、计算方式和业务含义。只有这些信息被完整定义，AI才能准确理解用户问题。当指标数量增加，逐项整理和填写元信息会占用维护人员较多时间。</p>\n\n<p>网易智企·数帆指标平台V10支持AI辅助构建指标。用户输入指标名称并选择对应的数据模型后，AI可辅助补齐指标口径、描述、关联维度和英文名等元信息，帮助企业快速建立结构化业务语义。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"1180\" src=\"https://i-blog.csdnimg.cn/img_convert/e43b62e63acdb1e374feccf5c81d9098.png\" width=\"1333\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"498\" src=\"https://i-blog.csdnimg.cn/img_convert/1220f27011883cb3ef3b8f8bcc19b71c.png\" width=\"956\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"244\" src=\"https://i-blog.csdnimg.cn/img_convert/35daa7454d800481acba1c7ac49b07bc.png\" width=\"1025\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>除了AI辅助，网易智企·数帆还结合<strong>金融、制造、国央企客户</strong>服务经验，由<strong>行业实施专家</strong>提供支持，帮助企业开展指标建设，并将已建指标应用于问数、报表等场景。</p>\n\n<p><strong>组织级治理，让AI引用可信业务知识</strong></p>\n\n<p>随着指标数量增加，同一指标可能被多个部门和应用使用。如果指标定义<strong>缺少统一管理</strong>，不同应用可能基于不同口径理解同一个业务概念，影响AI问数和分析结果的一致性。</p>\n\n<p>网易智企·数帆指标平台V10支持指标、公共维度的上下线及删除审批，以及角色权限审批。企业可根据管理要求，<strong>自定义审批流和审批节点。</strong></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"896\" src=\"https://i-blog.csdnimg.cn/img_convert/01c29d072560c69b5380e3f626f1c022.png\" width=\"1754\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>对于关联维度失效、配置不完整等问题，平台可自动检测，并在列表中标红提示，便于维护人员及时处理。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"1170\" src=\"https://i-blog.csdnimg.cn/img_convert/57606916eb5e3a7b71122618938626ab.jpeg\" width=\"2198\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>权限设计上，平台支持将指标信息浏览与数据访问权限分开配置。业务人员可以先了解企业已有的指标，再按需申请数据访问权限，便于发现和复用已有指标，同时控制数据访问范围。</p>\n\n<p><strong>用得好：统一语义，共享业务理解</strong></p>\n\n<p>指标建设完成后，如何让业务真正使用起来？</p>\n\n<p>过去，不同应用往往需要分别维护指标逻辑：BI需要配置分析口径；数据人员需要维护查询逻辑；AI问数需要重新理解业务含义。这容易导致同<strong>一个问题在不同场景下出现不同答案。</strong></p>\n\n<p>网易智企·数帆指标平台作为企业语义层，将指标定义、计算逻辑和业务规则统一沉淀，使不同应用能够复用同一套业务理解。平台支持直接配置归因分析、指标预警检测，也可以应用于DataAgent、BI系统以及下游业务系统。</p>\n\n<p>下图展示了指标平台的完整消费链路——<strong>从统一定义到多端消费：</strong></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"814\" src=\"https://i-blog.csdnimg.cn/img_convert/12f4df145a90c5996aa7e779075eb13a.png\" width=\"1932\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>知数DataAgent可对接平台中的指标，在智能问数时使用已有业务口径。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"1099\" src=\"https://i-blog.csdnimg.cn/img_convert/10cd139c37efbe9a3e8eaa7f84710950.png\" width=\"1431\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"899\" src=\"https://i-blog.csdnimg.cn/img_convert/f5f4ac717e8ba7f67db9921ad32244a8.png\" width=\"932\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>此外，业务人员可以在有数BI中基于统一指标搭建看板和报表；下游业务系统则可通过OpenAPI对接。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"939\" src=\"https://i-blog.csdnimg.cn/img_convert/c23c553ea9f63de1dfbef6581c6ed751.png\" width=\"1652\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>指标物化加速，提升AI查询效率</strong></p>\n\n<p>当多个应用频繁查询指标时，重复计算会影响响应速度。网易智企·数帆指标平台V10支持物化加速，即提前计算并保存部分结果，在满足查询条件时复用，减少重复计算。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"1070\" src=\"https://i-blog.csdnimg.cn/img_convert/c9d71fb36641bb674023716e5d699228.png\" width=\"1470\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>在技术架构上，平台适配<strong>StarRocks</strong>统一分析引擎，同时兼容<strong>ClickHouse与Greenplum</strong>等主流MPP数据库。在物化策略上，采用<strong>“模型＋指标”</strong>二级物化体系，通过智能路由复用符合查询条件的物化结果，提升查询效率。</p>\n\n<p><strong>知识连得起来：让指标不只是一个数字</strong></p>\n\n<p>看到“GMV下降5%”后，业务人员往往还需要了解：这个数按什么口径计算？哪些地区贡献了主要降幅？它与其他指标有什么关系？网易智企·数帆指标平台V10为指标配置<strong>业务口径、计算逻辑和筛选条件</strong>，为查询与解释提供业务上下文。</p>\n\n<p>指标图谱可视化展示指标间的派生关系和上下游关系，<strong>帮助使用者理解指标之间的关联</strong>。归因分析支持按层级维度逐层下钻，例如从省到市到区，帮助定位波动来源，为进一步分析提供线索。这些业务定义和关联信息，也为知数DataAgent等应用理解和解释指标提供支撑。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"889\" src=\"https://i-blog.csdnimg.cn/img_convert/88eeba40662da20487f078ba1e31f88a.png\" width=\"1904\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>让业务口径成为AI应用可复用的基础</strong></p>\n\n<p>模型能力不断提升，但企业仍需明确：一个指标如何计算，适用于哪些场景，不同应用使用的口径是否一致。</p>\n\n<p>网易智企·数帆指标平台V10将这些业务定义统一管理，让新应用能够复用已有指标，<strong>减少重复梳理规则和开发查询逻辑的工作</strong>。随着业务变化，企业也可以持续维护这些定义，为数据使用和结果核验提供依据。</p>\n\n<p>网易智企·数帆将持续完善指标平台，让业务人员查数有统一口径，让AI分析有明确依据，为企业决策真正兜底。</p>\n\n<p></p>\n\n<p></p>\n\n<p></p>\n\n        ",
     "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "textLength": 2128,
+    "readingMinutes": 5,
     "sourceId": "netease-csdn",
     "sourceUrl": "https://blog.csdn.net/wangyiyungw/article/details/165742753",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:41.684Z",
-    "nextRetryAt": "2026-11-09T09:07:41.684Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "0ee07bc477fb17e7744d0758fe99b3d5968a11b666a40a1d28f5ba36eaeee4d8",
+    "fetchedAt": "2026-11-02T11:41:51.056Z",
+    "checkedAt": "2026-11-02T11:41:51.056Z",
+    "nextRetryAt": "2026-12-02T11:41:51.056Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

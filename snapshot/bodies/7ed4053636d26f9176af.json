@@ -2,17 +2,33 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "7ed4053636d26f9176af",
-    "status": "unavailable",
-    "html": "",
+    "status": "ready",
+    "html": "\n          <p>今年6月底，公共云产业联盟重点推出《公共云三十问》专栏，以每周三问的节奏，连载十周，解读《先进公共云》白皮书，分享国计民生系列案例，旨在凝聚共识、推动落地实践。截至今日，30个问答已全部发布，专栏正式收官。</p>\n\n<p></p>\n\n<p>从“什么是公共云”的底层定义，到“公共云何以成为智能时代基础设施”的价值追问；从战略研判到产业实践，从行业议题延伸至国计民生，《公共云三十问》沿着“先立论、再拆解、后落地”的主线层层展开。</p>\n\n<p><img alt=\"\" height=\"820\" src=\"https://i-blog.csdnimg.cn/direct/852f21faee4a4d4d9cbbfae4f2ce091c.png\" width=\"1010\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>01</strong><strong>—</strong><strong>20</strong><strong>问：理论筑基</strong></p>\n\n<p>这二十问拆解《先进公共云》白皮书，系统梳理公共云逻辑，回答公共云“从哪来、是什么、为什么、往哪去”。内容从概念边界、战略定位延伸到技术架构、评估体系，涵盖全球模式与中国路径。</p>\n\n<p>其中，专栏阐述公共云定义与形态：公共云是以公共利益最大化和资源共享最优化为核心目标，涵盖公有云、专属云、行业云和边缘云的云计算服务体系；梳理先进公共云发展蓝图，包括“一个定义、三大智能要素、四大核心价值、六大先进性特征、六大指标维度”；拆解由分布式云架构与AI全链路安全技术架构融合构筑的技术底座。</p>\n\n<p>同时，专栏分析公共云在产业升级、民生福祉、科技创新、全球发展等方面的作用，梳理中国特色公共云发展路径：以普惠云拓展用云广度，以智算云提升用云深度，以自主云夯实用云厚度，以全球云打开用云跨度。</p>\n\n<p><strong>21</strong><strong>—</strong><strong>30</strong><strong>问：实践作答</strong></p>\n\n<p>这十问从专属云、行业云切入，深入政务、金融、交通、电力、钢铁、化工、油气、制造等国计民生场景，回答公共云“怎么用”。</p>\n\n<p>如政务云成为数字政府“数智底座”，金融云推动数智金融发展，交通云支撑数智通衢建设，电力云服务数智电力转型；钢铁云、化工云、油气云、制造云则分别赋能行业智能化升级，形成一批可参考、可复用、可落地的实践样本。</p>\n\n<p>当前，中国公共云市场正迎来万亿级高成长机遇，AI从平台能力走向全域生产力，公共云已从数智化转型的“可选项”，加速演变为支撑业务创新与稳健运营的智能基础设施。</p>\n\n<p><strong>重磅预告</strong></p>\n\n<p>从理论科普、案例沉淀到生态共建、落地赋能，公共云产业联盟将持续构建公共云从认知到实践的完整闭环。</p>\n\n<p>为进一步推动“公共云+AI”落地千行万业，联盟即将推出全新专栏《公共云·企业AI百场景》，立足真实产业实践，沉淀标杆案例，助力企业AI高质量发展。</p>\n\n<p>聚力向前</p>\n\n<p>我们共赴新程</p>\n\n        ",
     "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "textLength": 937,
+    "readingMinutes": 3,
     "sourceId": "huawei-csdn",
     "sourceUrl": "https://blog.csdn.net/devcloud/article/details/165631727",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:42.107Z",
-    "nextRetryAt": "2026-11-09T09:07:42.107Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "c9aa01291c48c7a78c35a9e151efc960b049ea3cd0e993fa9f8e327c5742252c",
+    "fetchedAt": "2026-11-02T11:41:53.085Z",
+    "checkedAt": "2026-11-02T11:41:53.085Z",
+    "nextRetryAt": "2026-12-02T11:41:53.085Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

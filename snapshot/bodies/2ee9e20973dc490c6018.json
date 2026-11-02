@@ -2,17 +2,59 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "2ee9e20973dc490c6018",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n                    <p>本文整理自 26 年 9 月 22 日 SGLang Meetup 北京站活动的同名主题演讲。</p>\n\n<p>在技术站公众号回复「百度百舸 2609」，可以获得此次 Meetup 下午的 3 个演讲主题材料。</p>\n\n<hr>\n<p>今天我分享的主题是：如何让大模型推理服务更加稳定、可控。</p>\n\n<p>随着 Agentic AI 快速发展，推理服务正在经历两个显著变化：上下文越来越长，会话轮次越来越多。2024 年，典型输入长度还只有几千个 Token，平均会话约为 1.5 轮；到了 2025 年和 2026 年，平均上下文长度从 20K、30K 持续增长到 60K，部分场景甚至接近 90K。与此同时，Agent 任务的会话轮次也从过去的少量交互，增长到几十轮乃至上百轮。</p>\n\n<p>这两个变化共同推高了 KVCache 命中率。高命中率既是性能杠杆，也是风险杠杆：命中率越高，系统获得的性能收益越大；一旦流量 Pattern 突变导致命中率下降，波动的代价也越大。</p>\n\n<p>以一个典型场景为例：如果 Cache 命中率从常态的 90% 降至 40%，Prefill 算力占比会从 10% 上升到 60%；在同等 QPS 下，GPU 算力需求可能被放大 3 至 5 倍。叠加负载失衡后，Decode 吞吐还可能下降 30% 以上，容量水位随之告急，排队超时与上游重试又会进一步放大压力。</p>\n\n<p>因此，推理服务的容量安全不能只依靠资源冗余，而要让流量、负载和 KVCache 三者都做到可控、可调度、可观测。今天的分享也围绕这三个层次展开。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/4acdc37749a8fcb05c3632548f61df02.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>百度百舸和百度千帆联合打造的推理服务自上而下可以分为五层：网关接入层、流量调度层、负载调度层、Prefill/Decode 资源池，以及 KV 存储底座。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/12740197f9546fa9dfd068fad86c8c4a.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>围绕这套架构，我们重点推进了三类工作。</p>\n\n<p>第一，在流量调度层引入流量分级管控和分钟级 HPA 能力，治理入口流量突增。</p>\n\n<p>第二，在负载调度层实现动态分桶与调度，解决引擎内部负载不均的问题。</p>\n\n<p>第三，在 KV 存储底座构建多级 KV 存储、全链路命中率漏斗和全域 Cache 感知，解决 KV 容量不足与命中率流失难定位的问题。</p>\n\n<p>这三层能力是逐层收敛的：先让流量平稳，再让负载均衡，最后守住 Cache 命中率与容量安全。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/d70aec1bb0050b944202a6a968491157.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h2 id=\"section-1-流量调度与弹性能力\"><a id=\"article-anchor-1\"></a>1. &nbsp; &nbsp;流量调度与弹性能力<a class=\"heading-anchor\" href=\"#section-1-流量调度与弹性能力\" aria-label=\"链接到本节：1. 流量调度与弹性能力\">#</a></h2>\n\n<p>面对洪峰，常见做法有两种：按照峰值提前准备冗余资源，或者在压力到来时统一限流。但这两种方式都存在明显问题。</p>\n\n<p>按照峰值备量，成本很高，而且流量 Pattern 突变的放大倍数很难提前准确估计；统一限流虽然简单，却会无差别拒绝高价值长会话与低轮次请求，客户可用性可能出现断崖式下降。另一条路是临时扩容，但大模型权重体积大，Pin Memory 注册与镜像准备都需要时间，扩容速度往往跟不上洪峰速度。等新增实例真正可用时，系统可能已经进入过载甚至雪崩状态。</p>\n\n<p>我们的解决思路是：流量侧先「削峰」，容量侧再「快速跟随」，两者配合，把洪峰对容量水位的冲击压缩到可接受范围。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/29b958b752b811a80135d0766fca13ba.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h2 id=\"section-2-面向-slo-的多级流量管控和调度\"><a id=\"article-anchor-2\"></a>2. &nbsp; &nbsp;面向 SLO 的多级流量管控和调度<a class=\"heading-anchor\" href=\"#section-2-面向-slo-的多级流量管控和调度\" aria-label=\"链接到本节：2. 面向 SLO 的多级流量管控和调度\">#</a></h2>\n\n<p>首先，我们按照输入长度、Cache 命中率等维度，将流量统一划分为高优、中优和低优三级，为后续各层调度建立一致的判断标准。</p>\n\n<p>当集群容量紧张时，系统不会简单地一刀切，而是按照档位逐级收紧配额，通过阶梯限流削峰，减缓洪峰对系统的冲击，也避免客户体验瞬间恶化。</p>\n\n<p>在流量调度入口，系统依据流量等级分配排队权重和准入配额，高优先级流量优先进入引擎，中低优先级流量可以适度排队。</p>\n\n<p>进入引擎后，调度器会进一步做动态 SLO 决策。对于长请求或命中率较低的请求，系统结合上游剩余 SLO，动态调整等待预算，减少不必要的超时中断和重复计算；对于预计排队时间加运行时间必然突破 SLO 的请求，则提前拒绝，由上游重试，避免积压演变成雪崩。对于 SLO 预算即将到期的请求，系统会优先调度，尽可能提高整体 SLO 达成率。</p>\n\n<p>通过流量分级、阶梯限流、差异化排队、动态 SLO 超时和预判拒绝，我们把入口洪峰削平，为后续扩容争取时间。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/5a56e7afc96446e0f63fb08cc9873df3.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>仅靠削峰还不够，容量必须尽快跟上。引擎冷启动有两个主要瓶颈。</p>\n\n<p>第一个瓶颈是 Pin Memory 注册时间长。机器级 L2 Cache 需要以内存与 L1 HBM 交换数据，过去每张卡对应一个 CUDA Context，需要逐页 Pin 并注册主机内存；随着容量和 Context 数量增大，这一过程会被线性放大，耗时超过 5 分钟。</p>\n\n<p>针对这个问题，我们将交换缓存改为共享显存，并通过 CUDA IPC 完成进程间映射。除首个进程外，其余进程只需要打开句柄进行映射，不再重复执行串行注册，使 Pin Memory 注册环节的耗时从数分钟降到接近 0。</p>\n\n<p>第二个瓶颈是混部资源池中的镜像准备。多模型穿插部署容易导致镜像缓存频繁失效，启动耗时不可控。为此，我们通过镜像预铺减少冷下载，使镜像加载时间大幅下降。两项优化结合后，引擎整体部署时间缩短约 60%。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/dc08305d713fa42a77b0a69024a25aa8.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>在冷启动提速的基础上，我们构建了事件驱动的弹性扩缩容闭环。</p>\n\n<p>Event Plane 以秒级采集引擎 TPS、扩量 TPS，以及 Batch 利用率、Block 利用率等推理资源指标；系统结合流量趋势预测提前预留容量，并根据扩容耗时反推需要保留的冗余。HPA 依据任一关键指标是否突破阈值执行扩容，全部关键指标低于目标后再进行缩容。</p>\n\n<p>为了避免频繁抖动，我们还设置了单次缩容步长、冷却周期，以及最大和最小实例数约束。整个决策闭环以分钟级运行，扩缩结果会回流到 Event Plane，进入下一轮容量评估。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/1ac2066c53ac5c5f06d804ebb4302d46.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>最终，我们形成了「流量削峰 + 容量快速跟随」的组合能力：客户有感的可用性抖动次数下降 80%，Pin Memory 注册耗时接近 0，镜像加载耗时下降约 70%，容量水位可以在分钟级完成感知和扩缩决策。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/82008b5411a3b7b6bd0d7368af644c9a.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h2 id=\"section-3-不可控负载的调度与控制\"><a id=\"article-anchor-3\"></a>3. &nbsp; &nbsp;不可控负载的调度与控制<a class=\"heading-anchor\" href=\"#section-3-不可控负载的调度与控制\" aria-label=\"链接到本节：3. 不可控负载的调度与控制\">#</a></h2>\n\n<p>流量被抑制后，另一个问题仍然存在：请求的输入和输出长度分布并不可控。负载不均主要表现为三类失衡。</p>\n\n<p>第一类是批内不均。长短请求混在同一 Batch 中，短请求需要等待长请求完成，整个 Batch 的吞吐被拖慢。</p>\n\n<p>第二类是实例空转。在 EP/DP 并行模式下，同组 DP 需要逐步同步；慢 DP 拖累快 DP，已经完成计算的实例只能空转等待。</p>\n\n<p>第三类是动态失衡。请求进入 Decode 阶段后，上下文会持续增长。一旦长度跨越原有分桶边界，静态分桶就会失效，原本承载短请求的桶可能因超长输出而出现性能退化。</p>\n\n<p>为此，我们实现了一套变长行为感知的调度策略：用动态分桶解决静态时刻的负载不均，用跨桶热迁移解决运行过程中的负载漂移。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/8e5784b5688e0c00dd07056f9200e210.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>动态分桶的第一步，是定义不同长度请求对引擎容量的实际消耗。我们针对固定机型和不同请求长度进行 Benchmark，得到相应的容量上限，并将其换算为单 Token 对机器容量的消耗占比。</p>\n\n<p>有了统一的负载刻度，系统便可以在线统计集群中的请求分布。具体来说，我们以 500 Token 为最小扫描粒度，对请求长度轴进行划分，计算每个原子桶中的聚合负载。</p>\n\n<p>第二步是确定基准线。所有原子桶的负载求和后，得到集群总负载；再用集群总负载除以实例数，得到单实例的目标负载：</p>\n\n<p><code>L_target = L_total / N_instance</code></p>\n\n<p>第三步是扫描切桶。系统从长度轴起点开始扫描原子桶，当累计负载达到单实例目标负载时完成一次切分，并根据当前负载计算应分配的实例数。如此循环，直到覆盖整个长度轴，输出新的「桶区间到实例数」的映射，并将实例与桶重新绑定。</p>\n\n<p>这套机制以约 30 秒为周期，根据全量请求的真实负载分布重算分桶，使不同长度区间获得与负载相匹配的实例资源。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/8c51e232cb4b349611be6dfed3dc4678.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p><em><em>动态分桶解决的是某一时刻的负载不均，但 Decode 是持续自回归生成的过程，请求长度仍可能在运行中跨越分桶边界。为了解决这种运行期漂移，我们设计了 KV Cache 无感跨桶热迁移机制。</em></em></p>\n\n<p>核心思路是：后台异步传输存量 KV，前台只同步增量，将迁移延迟藏在正常的 Token 输出过程中。整个迁移由三阶段状态机完成。</p>\n\n<p>第一阶段是 Prepare。重调度器 Rescheduler 判断请求是否越界，并为其选择目标 Decode 实例。源实例为当前 KV Cache 创建检查点，在继续输出 Token 的同时，将存量 KV 异步传输到目标实例；目标实例则预分配显存，并校验容量和拓扑。</p>\n\n<p>第二阶段是 Freeze/Sync。存量 KV 传输完成后，重调度器向两端下发切换指令。源实例短暂挂起推理，只同步增量 KV 和最新 Token；目标实例校验数据完整性后，接管后续 Batch。由于切换窗口只涉及增量同步，停顿可以被压缩到很短。</p>\n\n<p>第三阶段是 Commit。重调度器确认切换成功后，Token 流来源转向目标实例。源实例释放 KV Cache 和相关元数据；如果任一阶段失败，则回滚到源实例继续推理，保证用户输出流不中断。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/ad5110de6ad24af79fdaed20f2dd52fb.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>动态分桶与跨桶热迁移结合后，在 Softmax 注意力模型上，Decode 吞吐提升约 40% 至 50%，Prefill 吞吐提升约 20% 至 30%，分桶重算周期约为 30 秒。对于 Linear/Hybrid Attention 模型，动态分桶收益相对不明显，需要按模型族选择是否启用，而不是采用全局默认策略。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/c6cb4e8f5506fb2a4e33a80211186150.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h2 id=\"section-4-集群-cahce-绝对稳定\"><a id=\"article-anchor-4\"></a>4. &nbsp; &nbsp;集群 Cahce 绝对稳定<a class=\"heading-anchor\" href=\"#section-4-集群-cahce-绝对稳定\" aria-label=\"链接到本节：4. 集群 Cahce 绝对稳定\">#</a></h2>\n\n<p>流量治理和负载治理完成后，还需要守住 KVCache 底座。对于长上下文、多轮会话场景，Cache 命中率一旦大幅波动，前述稳定性防线仍可能被快速击穿。</p>\n\n<p>命中率不稳定主要来自两个源头。</p>\n\n<p>一类是流量突增和更大尺寸模型。KV 产生速度变快，单 Token 的 KV 空间需求也更大。如果存储容量不足，淘汰会立刻加剧，高命中率的历史 KV 也可能被提前淘汰。</p>\n\n<p>另一类是新的流量 Pattern。新用户大量涌入，低命中率、低轮次请求集中进入集群，会结构性拉低整体命中率，而且这种问题很难单纯依靠扩容直接补偿。</p>\n\n<p>对应地，我们推进三项核心工作：构建更大规模的多级 KV 存储，建立全域 Cache 感知与地域级纠偏，并通过全链路命中率漏斗增强可观测性。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/89bc35a1560732d390a63f343756d7ce.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p><em><em>2024 年，我们上线了单机 L2 内存 Cache，单机容量为数百 GB，读写带宽约 20 GB/s。在当时会话轮次较少、上下文较短的情况下，这套能力可以满足生产需求。</em></em></p>\n\n<p>2025 年，随着会话轮次和上下文长度快速增长，我们引入 L2.5 SSD Cache。单机容量提升到 4.5 TB，L2.5 读写带宽约为 10 至 20 GB/s。容量跨越一个数量级后，SSD 有效缓解了容量短板，而带宽并未成为主要瓶颈。</p>\n\n<p>2026 年第一季度，我们进一步完成 L2 与 L2.5 的 P2P 池化，引入 UVA 等能力，使读写带宽提升到 30 至 40 GB/s，并突破了单机容量边界，Cache 命中率得到显著提升。</p>\n\n<p>下一阶段，我们正在引入 L3 分布式存储，目标是消除单机存储硬件与 P2P 传输限制，实现容量与带宽解耦、独立扩展，使实际命中率进一步接近理论上限。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/55c69170abd017a3402aad2f0c08dbe4.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>在跨地域调度中，如果系统只关注各地域的计算负载，而不了解会话 Cache 的分布，长会话很容易被调度到没有历史 KV 的地域，导致重复 Prefill，并对目标地域造成二次冲击。</p>\n\n<p>为此，我们在入口侧汇聚各地域的 Cache 分布与实例负载，形成全域 Cache 视图，为调度提供「命中概率 + 负载水位」双重输入。</p>\n\n<p>对于未命中请求，过去采用多地域随机调度；现在会优先调度到负载较低的地域，以拉平全域负载。对于已经命中的请求，则尽量将命中轮数较高、已建立长会话前缀的请求保留在当前地域，避免重复 Prefill。</p>\n\n<p>通过全域 Cache 感知，地域级请求分配更加均衡、平稳，也降低了因单地域过载引发的连锁冲击。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/b812d67f45265f2ee40ba6a2f88cdbe6.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>命中率出现下降时，只看最终指标只能知道「掉了」，却不知道「掉在哪一层、掉了多少」。因此，我们把命中率拆解为一条全链路漏斗。</p>\n\n<p>第一层是理论上限，即在无限 KV 空间、不发生淘汰时的理论命中率。</p>\n\n<p>第二层是入口预期命中率。理论上限经过有限 KV 空间、LRU 淘汰、L2/L2.5/L3 分层存储策略等因素后，会形成可实现的入口预期值。</p>\n\n<p>第三层是集群调度后的预期命中率。跨地域调度、跨实例迁移以及全域 Cache 视图的感知效果，会在这一层产生进一步损失。</p>\n\n<p>第四层是引擎实际命中率。引擎侧淘汰、负载热点以及分层存储读速与全局 Cache 的收敛情况，决定最终线上指标。</p>\n\n<p>通过逐层量化层间 Gap，我们把「命中率下降」转化为「第几层掉了、损失了多少」，从而支持线上预防、快速定位和及时止损。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/298fcc21ac99401b5104de8c50381b9f.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h2 id=\"section-5-总结\"><a id=\"article-anchor-5\"></a>5. &nbsp; &nbsp;总结<a class=\"heading-anchor\" href=\"#section-5-总结\" aria-label=\"链接到本节：5. 总结\">#</a></h2>\n\n<p>回顾整套方案，我们围绕流量、负载和 Cache 建立了三层稳定性能力。</p>\n\n<p>在流量侧，通过流量分级管控、冷启动加速和事件驱动弹性，将客户有感的可用性抖动次数降低 80%，并显著缩短扩容准备时间。</p>\n\n<p>在负载侧，通过动态分桶与 KV Cache 无感跨桶热迁移，解决静态负载不均与运行期负载漂移，使 Decode 吞吐提升约 40% 至 50%，Prefill 吞吐提升约 20% 至 30%。</p>\n\n<p>在 Cache 侧，通过全域 Cache 调度、多级存储和全链路命中率漏斗，使命中率稳定在理论上限的 90% 以上，同时显著拉平地域间负载。</p>\n\n<p>这些工作构建在 SGLang 之上，也期待与社区继续交流。最后，我想用一句话概括今天的分享：推理服务的稳定，不是简单地堆资源，而是依靠对负载、流量和 Cache 的精准感知与控制。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/5b0888ecd666e4bc5986a01b9788e43e.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>今天我的分享就到这里，谢谢大家。</p>\n\n                ",
+    "headings": [
+      {
+        "id": "section-1-流量调度与弹性能力",
+        "level": 2,
+        "text": "1. 流量调度与弹性能力"
+      },
+      {
+        "id": "section-2-面向-slo-的多级流量管控和调度",
+        "level": 2,
+        "text": "2. 面向 SLO 的多级流量管控和调度"
+      },
+      {
+        "id": "section-3-不可控负载的调度与控制",
+        "level": 2,
+        "text": "3. 不可控负载的调度与控制"
+      },
+      {
+        "id": "section-4-集群-cahce-绝对稳定",
+        "level": 2,
+        "text": "4. 集群 Cahce 绝对稳定"
+      },
+      {
+        "id": "section-5-总结",
+        "level": 2,
+        "text": "5. 总结"
+      }
+    ],
+    "textLength": 5542,
+    "readingMinutes": 13,
     "sourceId": "baidu-cloud-csdn-candidate",
     "sourceUrl": "https://blog.csdn.net/2301_82040283/article/details/168653897",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:33.807Z",
-    "nextRetryAt": "2026-11-09T09:07:33.807Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "6039fe48576e0641fcf97cf55658c997ca4fb2d57d057605a7b04bf459c22a5f",
+    "fetchedAt": "2026-11-02T11:40:42.033Z",
+    "checkedAt": "2026-11-02T11:40:42.033Z",
+    "nextRetryAt": "2026-12-02T11:40:42.033Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

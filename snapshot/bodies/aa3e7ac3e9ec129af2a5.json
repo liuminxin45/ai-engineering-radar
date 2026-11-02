@@ -2,17 +2,99 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "aa3e7ac3e9ec129af2a5",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <p>具身数据采集完成后，往往还要经过数据管线的加工，才能用于训练。</p>\n\n<p>以第一视角（Egocentric）人类视频为例，训练需要恢复手部在世界坐标系下的运动轨迹，这个过程离不开每一帧的相机位姿。然而，互联网上大量由手机、GoPro 等设备拍摄的视频，采集时没有配备专业的 SLAM 传感器，只记录了第一视角画面，缺少相机在三维空间中的位置和朝向。这类视频需要通过位姿处理系统估计并补全各帧的相机位姿，为后续将手部关键点转换到统一参考坐标系、生成可用于训练的空间轨迹提供基础。</p>\n\n<p>Dyna-2 使用约 100 万小时第一视角人类视频进行预训练，其研究结果显示，模型表现会随数据规模持续提升。<strong>当模型能力仍能从更多数据中获益时，训练数据能否高效生产，就成为进一步扩大数据规模的关键：单位视频的加工成本越高，所需算力和交付时间就增长得越快。</strong></p>\n\n<p>在 EgoLife 数据集 10 段视频上的端到端实测中，未经本文优化的 Droid-W 和 MegaSaM 完成相机位姿恢复时，处理 1 小时视频分别需要约 3.72 和 11.36 GPU·小时。</p>\n\n<p>为降低位姿恢复的数据加工成本，百度百舸在保持位姿算法不变、无需重新训练模型的前提下，对整条处理流程进行性能剖析，定位关键路径上的瓶颈，并从计算编排、关键计算加速和整机资源治理三个层面进行优化。在同一组测试中，Droid-W 和 MegaSaM 分别实现 1.45 倍和 1.75 倍的端到端提速，处理每小时视频所需的 GPU 时间分别下降 31% 和 43%。单机 8 卡并发部署时，Droid-W 和 MegaSaM 的整机吞吐分别从单实例的 1.13 倍和 3.93 倍提升至 7.70 倍和 7.53 倍。</p>\n\n<h2 id=\"section-1-从第一视角视频到相机运动轨迹-位姿处理流程与加工成本\"><a id=\"article-anchor-1\"></a>1. &nbsp; &nbsp;从第一视角视频到相机运动轨迹：位姿处理流程与加工成本<a class=\"heading-anchor\" href=\"#section-1-从第一视角视频到相机运动轨迹-位姿处理流程与加工成本\" aria-label=\"链接到本节：1. 从第一视角视频到相机运动轨迹：位姿处理流程与加工成本\">#</a></h2>\n\n<p>在第一视角视频中，手部姿态估计模型可以逐帧给出手部 21 个关键点相对当前相机的位置，MegaSaM 和 Droid-W 则通过估计并补全各帧的相机位姿，恢复完整的相机运动轨迹。前者回答「手相对相机在哪里」，后者回答「相机相对统一参考坐标系在哪里、朝向哪里」。将同一帧的两类结果对齐并完成坐标变换，才能得到统一参考坐标系下的手部运动轨迹。</p>\n\n<p>MegaSaM 和 Droid-W 采用的具体算法不同，但从数据处理流程看，都可以抽象为一条相似的主链路，分为四个阶段：</p>\n\n<div><div class=\"markdown-table-wrap\"><table><tbody><tr><td>\n\t\t\t<p><strong><strong>阶段</strong></strong></p>\n\t\t\t</td><td>\n\t\t\t<p><strong><strong>做什么</strong></strong></p>\n\t\t\t</td></tr><tr><td>\n\t\t\t<p>关键帧与视觉先验</p>\n\t\t\t</td><td>\n\t\t\t<p>选出有代表性的关键帧（keyframe），计算深度、视觉特征等先验信息</p>\n\t\t\t</td></tr><tr><td>\n\t\t\t<p>帧间跟踪（Tracking）</p>\n\t\t\t</td><td>\n\t\t\t<p>在不同帧之间建立对应关系，逐步估计相机的局部运动</p>\n\t\t\t</td></tr><tr><td>\n\t\t\t<p>全局优化（Bundle Adjustment，BA）</p>\n\t\t\t</td><td>\n\t\t\t<p>联合校正多个相机位姿和场景结构，使整段轨迹在全局上一致</p>\n\t\t\t</td></tr><tr><td>\n\t\t\t<p>轨迹补全</p>\n\t\t\t</td><td>\n\t\t\t<p>为没有参与全局优化的普通帧补齐位姿，输出完整轨迹</p>\n\t\t\t</td></tr></tbody></table></div></div>\n\n<p><strong>其中，位姿处理系统通过帧间跟踪和全局优化估计关键帧的相机位姿，再为其余帧补齐位姿，最终恢复整段视频的相机运动轨迹。Droid-W 和 MegaSaM 的执行重心不同，加工成本也相差约三倍：</strong></p>\n\n<div><div class=\"markdown-table-wrap\"><table><tbody><tr><td>\n\t\t\t<p></p>\n\t\t\t</td><td>\n\t\t\t<p>Droid-W</p>\n\t\t\t</td><td>\n\t\t\t<p>MegaSaM</p>\n\t\t\t</td></tr><tr><td>\n\t\t\t<p>执行重心</p>\n\t\t\t</td><td>\n\t\t\t<p>关键帧与前端数据流</p>\n\t\t\t</td><td>\n\t\t\t<p>长序列上的全局优化</p>\n\t\t\t</td></tr><tr><td>\n\t\t\t<p>未加速时每小时视频所需 GPU 时间</p>\n\t\t\t</td><td>\n\t\t\t<p>3.72 GPU·小时</p>\n\t\t\t</td><td>\n\t\t\t<p>11.36 GPU·小时</p>\n\t\t\t</td></tr></tbody></table></div></div>\n\n<p>以上为未加速版本在 EgoLife 数据集上的实测。按这个口径折算，每新增一万小时视频，仅相机位姿恢复一项就需要约 3.7 万到 11.36 万 GPU·小时。</p>\n\n<h2 id=\"section-2-性能剖析与关键路径优化\"><a id=\"article-anchor-2\"></a><strong><strong>2. &nbsp; &nbsp;性能剖析与关键路径优化</strong></strong><a class=\"heading-anchor\" href=\"#section-2-性能剖析与关键路径优化\" aria-label=\"链接到本节：2. 性能剖析与关键路径优化\">#</a></h2>\n\n<p>百度百舸的优化目标，是在不重新设计位姿估计算法、无需重新训练模型的前提下，缩短数据管线处理每小时视频的时间，降低单位视频的计算成本。</p>\n\n<p>优化先选取一段测试视频进行性能剖析（profiling），分析各阶段的耗时分布，定位决定端到端耗时的关键路径（critical path）。结果显示，现有流程的提速空间主要来自三类问题：关键路径上的串行等待、中间数据与计算结构的重复处理，以及部分热点计算的实现方式与硬件特性不匹配。</p>\n\n<p>针对这些问题，优化从三个层面展开：</p>\n\n<ul><li>\n\t<p>计算编排层调整计算时序和数据复用方式，包括视觉先验的预取与计算重叠、中间结果的缓存复用，以及 BA 迭代间矩阵结构的复用。</p>\n\t</li><li>\n\t<p>计算加速层改写关键计算在硬件上的实现方式，包括将稀疏求解迁移至 GPU，以及将标量点积改写为矩阵乘。</p>\n\t</li><li>\n\t<p>整机资源治理层调整多实例并发时的 CPU 线程配置，减少资源竞争，使单实例性能能够转化为整机吞吐。</p>\n\t</li></ul>\n\n<p>以下实践均在百度百舸平台 hpas.lgn7ib 实例上完成，该实例搭载国内主流 GPU 型号。本节数据来自这段测试视频，均为对应环节的耗时对比。</p>\n\n<h3 id=\"section-2-1-视觉先验与帧间跟踪-先验预取与计算重叠\"><a id=\"article-anchor-3\"></a><strong><strong>2.1. &nbsp; &nbsp;视觉先验与帧间跟踪：先验预取与计算重叠</strong></strong><a class=\"heading-anchor\" href=\"#section-2-1-视觉先验与帧间跟踪-先验预取与计算重叠\" aria-label=\"链接到本节：2.1. 视觉先验与帧间跟踪：先验预取与计算重叠\">#</a></h3>\n\n<p>帧间跟踪依赖关键帧的深度和视觉特征。Droid-W 原有流程中，关键帧产生后要先同步算完这些先验，跟踪才能继续推进。先验本身不能省，但其启动时机偏晚，计算时间完整暴露在跟踪的关键路径上。</p>\n\n<p>百度百舸采用预取与计算重叠（prefetch 与 overlap），把先验计算从串行等待改为后台提前执行。某一帧的深度和特征一旦具备计算条件，就在后台开始计算，与前端工作并行，跟踪需要时部分结果已经就绪。</p>\n\n<p>帧间跟踪阶段耗时从 27.02 秒降到 22.86 秒，输出结果与原实现逐字节对齐。</p>\n\n<h3 id=\"section-2-2-全局优化中的稀疏求解-gpu-迁移与矩阵结构复用\"><a id=\"article-anchor-4\"></a><strong><strong>2.2. &nbsp; &nbsp;全局优化中的稀疏求解：GPU 迁移与矩阵结构复用</strong></strong><a class=\"heading-anchor\" href=\"#section-2-2-全局优化中的稀疏求解-gpu-迁移与矩阵结构复用\" aria-label=\"链接到本节：2.2. 全局优化中的稀疏求解：GPU 迁移与矩阵结构复用\">#</a></h3>\n\n<p>在 MegaSaM 中，全局优化（BA）是计算最重的阶段之一，内部有两个性质不同的热点：稀疏线性系统求解和帧间相关性计算。</p>\n\n<p>参与 BA 的帧数越多，要求解的稀疏线性系统规模越大。原实现把这部分放在 CPU 上单线程执行，GPU 上的后续计算须等待 CPU 求解完成，整条管线在此停顿。在这段测试视频上，这一项累计造成约 29 秒的等待。</p>\n\n<p>改动有两处。稀疏线性系统的求解迁移到 GPU 上并行执行。同时，BA 各轮迭代要解的线性系统结构相近，部分矩阵结构不随迭代变化，首次建立后直接复用，减少每轮迭代重复的准备工作。</p>\n\n<p>求解造成的等待从 29.0 秒降到 9.4 秒，求解结果与参考结果的相对误差不超过&nbsp;4.60×10⁻⁸。</p>\n\n<h3 id=\"section-2-3-全局优化中的帧间相关性计算-标量点积的矩阵化改写\"><a id=\"article-anchor-5\"></a><strong><strong>2.3. &nbsp; &nbsp;全局优化中的帧间相关性计算：标量点积的矩阵化改写</strong></strong><a class=\"heading-anchor\" href=\"#section-2-3-全局优化中的帧间相关性计算-标量点积的矩阵化改写\" aria-label=\"链接到本节：2.3. 全局优化中的帧间相关性计算：标量点积的矩阵化改写\">#</a></h3>\n\n<p>MegaSaM 原实现用标量算子循环计算大量点积，运行在 GPU 的通用计算核心（CUDA Core）上。这部分占到全部 GPU 算子（kernel）时间的 56.5%。</p>\n\n<p>通用计算核心面向灵活的标量和向量计算，适合形态各异的通用任务。专门做矩阵乘的计算单元（Tensor Core）为规整的矩阵乘加提供专用硬件路径，一次操作可以完成一小块矩阵的乘加。在适合的矩阵形状和数据类型下，它在同样时间内完成的运算量通常显著高于通用计算核心，半精度下优势更明显。</p>\n\n<p>原实现逐个循环计算点积，只用到了通用计算核心，Tensor Core 的算力未被利用。这些点积在数学上可以重新组织为矩阵乘。百度百舸将原来的标量计算改写为半精度矩阵运算，由 Tensor Core 执行。</p>\n\n<p>该部分算子耗时从 40.7 秒降到 5.3 秒，下降约 87%。改用半精度带来的数值差异很小，与参考结果的绝对误差不超过 8.6×10⁻⁴。</p>\n\n<h3 id=\"section-2-4-轨迹补全-中间结果缓存复用\"><a id=\"article-anchor-6\"></a><strong><strong>2.4. &nbsp; &nbsp;轨迹补全：中间结果缓存复用</strong></strong><a class=\"heading-anchor\" href=\"#section-2-4-轨迹补全-中间结果缓存复用\" aria-label=\"链接到本节：2.4. 轨迹补全：中间结果缓存复用\">#</a></h3>\n\n<p>Droid-W 在最后为普通帧补齐位姿时，会再次读取前面已经处理过的图像，同一份数据的读取和预处理成本被重复支付了一次。</p>\n\n<p>前序阶段的中间结果改为缓存下来，供轨迹补全直接复用（cache 与 reuse），省去再次读取和预处理图像的开销。</p>\n\n<p>轨迹补全阶段耗时从 14.14 秒降到 3.63 秒，轨迹补全的计算逻辑没有改变，输出结果与原实现一致。</p>\n\n<h2 id=\"section-3-从单段测试视频到多场景数据与整机部署\"><a id=\"article-anchor-7\"></a><strong><strong>3. &nbsp; &nbsp;从单段测试视频到多场景数据与整机部署</strong></strong><a class=\"heading-anchor\" href=\"#section-3-从单段测试视频到多场景数据与整机部署\" aria-label=\"链接到本节：3. 从单段测试视频到多场景数据与整机部署\">#</a></h2>\n\n<h3 id=\"section-3-1-多场景数据-端到端收益\"><a id=\"article-anchor-8\"></a><strong><strong>3.1. &nbsp; &nbsp;多场景数据：端到端收益</strong></strong><a class=\"heading-anchor\" href=\"#section-3-1-多场景数据-端到端收益\" aria-label=\"链接到本节：3.1. 多场景数据：端到端收益\">#</a></h3>\n\n<p>单段测试视频适合定位问题，实际数据生产面对的是内容和运动模式更多样的视频。在 EgoLife 数据集中选取 10 段第一视角视频，每段约 540 至 900 帧，对比未加速版本与优化后的版本：</p>\n\n<div><div class=\"markdown-table-wrap\"><table><tbody><tr><td>\n\t\t\t<p><strong><strong>系统</strong></strong></p>\n\t\t\t</td><td>\n\t\t\t<p><strong><strong>未加速版本总用时</strong></strong></p>\n\t\t\t</td><td>\n\t\t\t<p><strong><strong>优化后总用时</strong></strong></p>\n\t\t\t</td><td>\n\t\t\t<p><strong><strong>端到端提速</strong></strong></p>\n\t\t\t</td><td>\n\t\t\t<p><strong><strong>每小时视频所需 GPU 时间</strong></strong></p>\n\t\t\t</td></tr><tr><td>\n\t\t\t<p>Droid-W</p>\n\t\t\t</td><td>\n\t\t\t<p>862.6 秒</p>\n\t\t\t</td><td>\n\t\t\t<p>595.4 秒</p>\n\t\t\t</td><td>\n\t\t\t<p>1.45 倍</p>\n\t\t\t</td><td>\n\t\t\t<p>3.72 → 2.57 GPU·小时（-31%）</p>\n\t\t\t</td></tr><tr><td>\n\t\t\t<p>MegaSaM</p>\n\t\t\t</td><td>\n\t\t\t<p>2635.1 秒</p>\n\t\t\t</td><td>\n\t\t\t<p>1504.1 秒</p>\n\t\t\t</td><td>\n\t\t\t<p>1.75 倍</p>\n\t\t\t</td><td>\n\t\t\t<p>11.36 → 6.48 GPU·小时（-43%）</p>\n\t\t\t</td></tr></tbody></table></div></div>\n\n<p>备注：由于 EgoLife 没有公开的位姿真值，本文不评估绝对轨迹精度，验证的是优化前后轨迹的一致性。涉及计算改写的环节，同时通过数值误差检查确认结果一致性。</p>\n\n<h3 id=\"section-3-2-整机部署-多实例并发下的-cpu-线程治理\"><a id=\"article-anchor-9\"></a><strong><strong>3.2. &nbsp; &nbsp;整机部署：多实例并发下的 CPU 线程治理</strong></strong><a class=\"heading-anchor\" href=\"#section-3-2-整机部署-多实例并发下的-cpu-线程治理\" aria-label=\"链接到本节：3.2. 整机部署：多实例并发下的 CPU 线程治理\">#</a></h3>\n\n<p>单实例的处理效率提升后，还需要解决多实例并发时的资源竞争，才能将单卡性能转化为整机产能。实际部署中，通常采用每张 GPU 运行一个实例、多个实例并行处理视频的方式。但 GPU 计算仍然依赖 CPU 完成部分数据处理和计算任务，如果 CPU 资源配置不合理，即使增加 GPU，也未必能获得相应的吞吐提升。</p>\n\n<p>在 hpas.lgn7ib 实例（8 卡、180 个逻辑 CPU）上的并发测试中，Droid-W 的整机吞吐一度只有单卡的 1.13 倍。性能分析发现，瓶颈并非 GPU 算力不足，而是&nbsp;<strong><strong>CPU 线程超订与主动等待造成的资源竞争</strong></strong>。该环境下，PyTorch 默认每个实例使用 90 个 CPU 计算线程，8 个实例的潜在并行线程数达到 720，远超可用 CPU 数量。更关键的是，<strong>在线程数大幅超过可用 CPU 数量后，线程竞争、同步等待和频繁调度进一步增加了 CPU 侧开销，使真正需要计算的线程难以及时执行，最终拖慢 CPU 处理并让 GPU 等待。</strong></p>\n\n<p>针对这一问题，百度百舸通过合理限制每个实例的 CPU 线程数，减少无效等待和资源竞争。<strong><strong>无需修改位姿算法或增加硬件，Droid-W 的整机等效吞吐从单卡的 1.13 倍提升至 7.70 倍，MegaSaM 从 3.93 倍提升至 7.53 倍。</strong></strong>该优化已纳入交付镜像的默认配置，使多卡算力能够更充分地转化为实际数据处理能力。</p>\n\n<h2 id=\"section-4-优化经验\"><a id=\"article-anchor-10\"></a><strong><strong>4. &nbsp; &nbsp;优化经验</strong></strong><a class=\"heading-anchor\" href=\"#section-4-优化经验\" aria-label=\"链接到本节：4. 优化经验\">#</a></h2>\n\n<h3 id=\"section-4-1-局部加速不一定带来端到端收益\"><a id=\"article-anchor-11\"></a><strong><strong>4.1. &nbsp; &nbsp;局部加速不一定带来端到端收益</strong></strong><a class=\"heading-anchor\" href=\"#section-4-1-局部加速不一定带来端到端收益\" aria-label=\"链接到本节：4.1. 局部加速不一定带来端到端收益\">#</a></h3>\n\n<p>单个算子或求解器在独立测试中提速数倍，并不意味着端到端耗时会同比下降。是否值得投入，取决于它在端到端时间里的占比，以及是否处在关键路径上。</p>\n\n<p>全局优化中的稀疏求解就是一个典型例子。在同一段测试视频上，该环节在 Droid-W 中累计耗时仅约 3.1 秒，对端到端耗时影响有限，因此默认路径不启用 GPU 求解。但在 MegaSaM 中，它累计造成约 29 秒的等待，处于端到端关键路径上，迁移至 GPU 后才能带来明显的整体收益。</p>\n\n<h3 id=\"section-4-2-热点因系统而异-优化位置由性能剖析决定\"><a id=\"article-anchor-12\"></a><strong><strong>4.2. &nbsp; &nbsp;热点因系统而异，优化位置由性能剖析决定</strong></strong><a class=\"heading-anchor\" href=\"#section-4-2-热点因系统而异-优化位置由性能剖析决定\" aria-label=\"链接到本节：4.2. 热点因系统而异，优化位置由性能剖析决定\">#</a></h3>\n\n<p>Droid-W 和 MegaSaM 处理的是同一类数据，性能热点却不相同。Droid-W 的收益主要来自视觉先验的提前计算和轨迹补全的结果复用，MegaSaM 的收益主要来自全局优化中的 GPU 稀疏求解和矩阵乘改写。进入多实例部署后，两者都还要处理整机资源配置：</p>\n\n<div><div class=\"markdown-table-wrap\"><table><tbody><tr><td>\n\t\t\t<p><strong><strong>场景／系统</strong></strong></p>\n\t\t\t</td><td>\n\t\t\t<p><strong><strong>主要性能问题</strong></strong></p>\n\t\t\t</td><td>\n\t\t\t<p><strong><strong>优化方式</strong></strong></p>\n\t\t\t</td><td>\n\t\t\t<p><strong><strong>当前状态</strong></strong></p>\n\t\t\t</td></tr><tr><td>\n\t\t\t<p>Droid-W</p>\n\t\t\t</td><td>\n\t\t\t<p>等待视觉先验、重复处理图像</p>\n\t\t\t</td><td>\n\t\t\t<p>预取、计算重叠、缓存复用</p>\n\t\t\t</td><td>\n\t\t\t<p>已以预设配置（preset）方式接入</p>\n\t\t\t</td></tr><tr><td>\n\t\t\t<p>MegaSaM</p>\n\t\t\t</td><td>\n\t\t\t<p>CPU 稀疏求解、帧间相关性计算</p>\n\t\t\t</td><td>\n\t\t\t<p>GPU 稀疏求解、矩阵计算改写</p>\n\t\t\t</td><td>\n\t\t\t<p>核心模块可以接入</p>\n\t\t\t</td></tr><tr><td>\n\t\t\t<p>单机多实例部署</p>\n\t\t\t</td><td>\n\t\t\t<p>CPU 线程超订、同步等待和调度开销限制整机吞吐</p>\n\t\t\t</td><td>\n\t\t\t<p>限制每个实例的 CPU 线程数</p>\n\t\t\t</td><td>\n\t\t\t<p>已进入交付镜像默认设置</p>\n\t\t\t</td></tr><tr><td>\n\t\t\t<p>其他位姿处理系统</p>\n\t\t\t</td><td>\n\t\t\t<p>取决于各自的算法与执行结构</p>\n\t\t\t</td><td>\n\t\t\t<p>先做性能分析，再选择优化位置</p>\n\t\t\t</td><td>\n\t\t\t<p>需要按执行结构适配</p>\n\t\t\t</td></tr></tbody></table></div></div>\n\n<p>因此，百度百舸不为位姿处理系统预设通用的优化开关。面对一套新系统，先分析它的加工流程与关键路径，再决定优化哪个环节、采用哪种方法。</p>\n\n<h2 id=\"section-5-结语-让数据管线跟上数据规模\"><a id=\"article-anchor-13\"></a><strong><strong>5. &nbsp; &nbsp;结语：让数据管线跟上数据规模</strong></strong><a class=\"heading-anchor\" href=\"#section-5-结语-让数据管线跟上数据规模\" aria-label=\"链接到本节：5. 结语：让数据管线跟上数据规模\">#</a></h2>\n\n<p>算力预算不变时，数据管线的效率决定了能产出多少训练数据。按本文的端到端结果，在同样的 GPU 时间内，MegaSaM 能处理的视频时长提高到原来的 1.75 倍，Droid-W 提高到 1.45 倍。</p>\n\n<p>具身 AI Infra 的效率评估不应止于模型训练。从原始数据到可训练数据，整条数据管线的处理吞吐、单位数据算力成本和端到端交付周期，都需要纳入统一评估。本文对相机位姿恢复环节的优化表明，数据管线本身同样存在显著的系统优化空间。</p>\n\n<p>上述优化，均在搭载国内主流 GPU 的实例上完成。百度百舸立足国内现有的算力供给，通过系统性的 AI Infra 优化与高扩展性集群架构设计，为具身智能场景提供高性价比的算力解决方案。</p>\n\n<p><img alt=\"\" height=\"4040\" src=\"https://i-blog.csdnimg.cn/direct/8010baa0cd6a41a9b02d72ccf5b422f6.png\" width=\"2400\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n        ",
+    "headings": [
+      {
+        "id": "section-1-从第一视角视频到相机运动轨迹-位姿处理流程与加工成本",
+        "level": 2,
+        "text": "1. 从第一视角视频到相机运动轨迹：位姿处理流程与加工成本"
+      },
+      {
+        "id": "section-2-性能剖析与关键路径优化",
+        "level": 2,
+        "text": "2. 性能剖析与关键路径优化"
+      },
+      {
+        "id": "section-2-1-视觉先验与帧间跟踪-先验预取与计算重叠",
+        "level": 3,
+        "text": "2.1. 视觉先验与帧间跟踪：先验预取与计算重叠"
+      },
+      {
+        "id": "section-2-2-全局优化中的稀疏求解-gpu-迁移与矩阵结构复用",
+        "level": 3,
+        "text": "2.2. 全局优化中的稀疏求解：GPU 迁移与矩阵结构复用"
+      },
+      {
+        "id": "section-2-3-全局优化中的帧间相关性计算-标量点积的矩阵化改写",
+        "level": 3,
+        "text": "2.3. 全局优化中的帧间相关性计算：标量点积的矩阵化改写"
+      },
+      {
+        "id": "section-2-4-轨迹补全-中间结果缓存复用",
+        "level": 3,
+        "text": "2.4. 轨迹补全：中间结果缓存复用"
+      },
+      {
+        "id": "section-3-从单段测试视频到多场景数据与整机部署",
+        "level": 2,
+        "text": "3. 从单段测试视频到多场景数据与整机部署"
+      },
+      {
+        "id": "section-3-1-多场景数据-端到端收益",
+        "level": 3,
+        "text": "3.1. 多场景数据：端到端收益"
+      },
+      {
+        "id": "section-3-2-整机部署-多实例并发下的-cpu-线程治理",
+        "level": 3,
+        "text": "3.2. 整机部署：多实例并发下的 CPU 线程治理"
+      },
+      {
+        "id": "section-4-优化经验",
+        "level": 2,
+        "text": "4. 优化经验"
+      },
+      {
+        "id": "section-4-1-局部加速不一定带来端到端收益",
+        "level": 3,
+        "text": "4.1. 局部加速不一定带来端到端收益"
+      },
+      {
+        "id": "section-4-2-热点因系统而异-优化位置由性能剖析决定",
+        "level": 3,
+        "text": "4.2. 热点因系统而异，优化位置由性能剖析决定"
+      },
+      {
+        "id": "section-5-结语-让数据管线跟上数据规模",
+        "level": 2,
+        "text": "5. 结语：让数据管线跟上数据规模"
+      }
+    ],
+    "textLength": 5154,
+    "readingMinutes": 12,
     "sourceId": "baidu-cloud-csdn-candidate",
     "sourceUrl": "https://blog.csdn.net/2301_82040283/article/details/168028257",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:36.563Z",
-    "nextRetryAt": "2026-11-09T09:07:36.563Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "1912de6a24b91f76d4a59a5f514631cea4971622da618390bfa205267db21837",
+    "fetchedAt": "2026-11-02T11:41:07.651Z",
+    "checkedAt": "2026-11-02T11:41:07.651Z",
+    "nextRetryAt": "2026-12-02T11:41:07.651Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

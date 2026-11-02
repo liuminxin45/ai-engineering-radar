@@ -2,17 +2,54 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "61828ed3e11705e39c8f",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <p>2025年10月22日，Ray 正式加入隶属于 Linux 基金会的 PyTorch 基金会。Linux 基金会是众多基础架构项目的摇篮，其中包括 Kubernetes、PyTorch 以及 vLLM。</p>\n\n<p>过去一年间，Ray 的日下载量增长了近10倍。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"560\" src=\"https://i-blog.csdnimg.cn/img_convert/014241c5caef0dbb9268277e288597ac.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>Ray日下载</p>\n\n<p>如今，Ray 支撑着全球数十亿美元的年度计算消耗，并为各类人工智能工作负载提供动力。2025年的Ray Summit将邀请到以下众多企业分享他们的应用案例：</p>\n\n<p>- 人工智能初创企业：xAI、Thinking Machines、Perplexity</p>\n\n<p>- 成熟科技公司：Netflix、ByteDance、Apple、Tencent、Alibaba</p>\n\n<p>- 大型企业：JPMorgan、BMW、Bridgewater、Workday</p>\n\n<p></p>\n\n<h3 id=\"section-早期发展\"><a id=\"article-anchor-1\"></a><strong>早期发展</strong><a class=\"heading-anchor\" href=\"#section-早期发展\" aria-label=\"链接到本节：早期发展\">#</a></h3>\n\n<p>我们在加州大学伯克利分校启动了 Ray 项目。当时作为从事人工智能研究的研究生，我们需要将算法扩展到 CPU 和 GPU 集群上运行，却发现自己大部分时间都在搭建基础设施，以解决分布式系统在扩展过程中面临的难题（如可靠性、成本、性能问题）。</p>\n\n<p>从项目伊始，我们就致力于开发实用的开源软件。实验室前辈们开发 Apache Spark的经历，也给了我们极大的启发。</p>\n\n<p>2019年，我们成立了 Anyscale 公司，旨在对 Ray 进行开发并推动其商业化。但在当时，仅有早期先行者存在大规模使用需求。蚂蚁集团（Ant Group）是 Ray 首个重要的生产环境用户，Uber 和 Pinterest 随后也加入了这一行列。然而事实上，那时绝大多数企业尚未有对人工智能计算进行扩展的需求。</p>\n\n<p>随着生成式人工智能（generative AI）、大型语言模型（LLMs）以及如今推理模型（reasoning models）的出现，一切都发生了改变。到2025年的今天，对计算扩展的需求已十分明确，而且当前人工智能工作负载扩展所面临的软件工程挑战，远比我们启动 Ray 项目时更为艰巨。</p>\n\n<p></p>\n\n<h3 id=\"section-回归初心\"><a id=\"article-anchor-2\"></a><strong>回归初心</strong><a class=\"heading-anchor\" href=\"#section-回归初心\" aria-label=\"链接到本节：回归初心\">#</a></h3>\n\n<p>从某种程度而言，我们的发展仿佛画了一个圈。最初，我们将 Ray 定位为通用框架（其核心是一个 actor 框架），但我们首个探索的应用场景却是强化学习。在 Ray 的原始论文中，我们就以强化学习为例，展示了 Ray 的优势。当时我们之所以聚焦强化学习，是因为团队成员本身就在从事该领域研究（如 TRPO 、RLlib），而且人工智能领域的很大一部分研究者都在专注于让人工智能玩 Atari 游戏，以及在 Mujoco 等物理模拟器中实现运动控制学习。不过，那一轮围绕强化学习的热潮相对孤立，并未转化为广泛的实际应用。</p>\n\n<p>如今，借助在构建推理模型和塑造智能体行为方面的成功，强化学习迎来了强势回归。目前，几乎所有用于大型语言模型训练后优化的开源强化学习框架，都是基于Ray 构建的。</p>\n\n<p></p>\n\n<h3 id=\"section-pytorch-基金会\"><a id=\"article-anchor-3\"></a><strong>PyTorch 基金会</strong><a class=\"heading-anchor\" href=\"#section-pytorch-基金会\" aria-label=\"链接到本节：PyTorch 基金会\">#</a></h3>\n\n<p>在基础设施软件领域，开源模式始终占据优势。随着人工智能计算软件栈的逐步形成，该软件栈的每一层都将拥有一套开源标准。其中，PyTorch 是主流的深度学习框架，Kubernetes 是主流的容器编排工具，而我们正致力于将 Ray 打造为开源的分布式计算引擎。</p>\n\n<p>过去一年，Ray 的采用率呈爆发式增长。如今 Ray 选择加入 PyTorch 基金会，核心原因在于我们正在构建一个全球性的贡献者社区。当前，对计算扩展的需求仍在不断增长，我们计划加大投入，围绕 Ray 打造开源社区，以满足人工智能领域快速演变的需求。</p>\n\n<h3 id=\"section-加入-ray-社区\"><a id=\"article-anchor-4\"></a><strong><strong><strong>加入 Ray 社区</strong></strong></strong><a class=\"heading-anchor\" href=\"#section-加入-ray-社区\" aria-label=\"链接到本节：加入 Ray 社区\">#</a></h3>\n\n<ul></ul>\n\n<p><strong><strong>这只是一个开始。</strong></strong></p>\n\n<p>- 2025年11月3日至5日，来旧金山参加 Ray 峰会，与社区成员面对面交流</p>\n\n<p>- 报名参加全新的“Ray 入门”课程</p>\n\n<p>- 前往 GitHub 为 Ray 项目贡献代码</p>\n\n<p>- 加入 Ray Slack 社区</p>\n\n<p>未来，我们将携手共进，继续打造开放化、社区驱动的人工智能基础设施未来。</p>\n\n        ",
+    "headings": [
+      {
+        "id": "section-早期发展",
+        "level": 3,
+        "text": "早期发展"
+      },
+      {
+        "id": "section-回归初心",
+        "level": 3,
+        "text": "回归初心"
+      },
+      {
+        "id": "section-pytorch-基金会",
+        "level": 3,
+        "text": "PyTorch 基金会"
+      },
+      {
+        "id": "section-加入-ray-社区",
+        "level": 3,
+        "text": "加入 Ray 社区"
+      }
+    ],
+    "textLength": 1610,
+    "readingMinutes": 4,
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/154191879",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:08:08.844Z",
-    "nextRetryAt": "2026-11-09T09:08:08.844Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "5032de8f4853e57e30b96a540907708b41a9752d0e285367c493d9ca7590f1a1",
+    "fetchedAt": "2026-11-02T11:44:58.247Z",
+    "checkedAt": "2026-11-02T11:44:58.247Z",
+    "nextRetryAt": "2026-12-02T11:44:58.247Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

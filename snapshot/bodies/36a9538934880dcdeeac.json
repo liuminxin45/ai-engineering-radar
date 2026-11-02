@@ -2,17 +2,33 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "36a9538934880dcdeeac",
-    "status": "unavailable",
-    "html": "",
+    "status": "ready",
+    "html": "\n          <p>当生成式技术持续深入推荐、搜索与广告系统，推荐架构也在加速走向「统一基座、统一调度、统一生成」的体系化演进。</p>\n\n<p></p>\n\n<p>从单点优化走向全链路协同，从局部效果提升走向架构能力沉淀，从场景定制走向可复用、可扩展的统一技术底座，生成范式带来的变化，正在重塑推荐系统的设计逻辑。</p>\n\n<p></p>\n\n<p>如何在复杂业务场景中完成这一跃迁，正在成为推荐技术演进的核心命题。围绕统一基</p>\n\n<p>座Reco Foundation、池化推荐Pool-Rec、生成式搜索OneSearch V2与生成式广告推荐GR4AD，快手技术团队也在这条路径上进行了一系列探索。</p>\n\n<p></p>\n\n<p>6月13日，快手技术沙龙第四期将围绕「快手生成式推荐技术的体系演进——统一基座、池化调度与场景实践」展开分享，欢迎关注推荐算法、搜索技术与生成式应用的同学报名交流！</p>\n\n<p></p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"6929\" src=\"https://i-blog.csdnimg.cn/img_convert/9293ecfceeb20a97505981e907093077.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n        ",
     "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "textLength": 336,
+    "readingMinutes": 1,
     "sourceId": "kuaishou-csdn",
     "sourceUrl": "https://blog.csdn.net/kuaishoutech/article/details/161568438",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:54.638Z",
-    "nextRetryAt": "2026-11-09T09:07:54.638Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "86d5d96bdf54355135027039dc657a488afac2db19c1442e84176c82159c2bae",
+    "fetchedAt": "2026-11-02T11:43:20.889Z",
+    "checkedAt": "2026-11-02T11:43:20.889Z",
+    "nextRetryAt": "2026-12-02T11:43:20.889Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

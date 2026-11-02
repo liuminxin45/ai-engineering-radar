@@ -2,17 +2,33 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "9fc03cb0c9fdb93b8603",
-    "status": "unavailable",
-    "html": "",
+    "status": "ready",
+    "html": "\n          \n          <p>搭建一组数仓任务，要建目录、写SQL、配调度和告警；任务失败后，又要查实例、看依赖、翻日志。工作围绕同一组任务展开，操作却分散在多个页面。开发与运维人员需要反复查找对象、核对信息，再继续下一步。</p>\n<p>如果能把需求说清楚，让AI结合项目上下文，辅助完成配置、串联排查过程，这些工作能否更顺畅一些？</p>\n<p>对此，网易智企·数帆推进 EasyData 的 AI 化改造，<strong>让平台从“人操作工具”走向“人与AI协作”。<strong>EasyAgent 正是这一理念的落地——AI 不再只是外挂问答窗口，而是读得懂项目上下文、调得了平台原生能力的协作者。用户通过自然语言即可完成</strong>数据开发、治理、运维</strong>等任务配置，无论是平台内嵌 Agent，还是第三方 Agent 调 CLI，都能接入。</p>\n<p>本期聚焦 <strong>EasyAgent</strong>，看 AI 如何参与数据开发与运维的日常。</p>\n<p><strong>打开 EasyData，从一个对话开始</strong></p>\n<p>在已启用 EasyAgent 的 EasyData 环境中，用户无需额外安装命令行工具，也无需在对话中重复填写访问密钥。EasyAgent 可利用当前会话中的身份、项目权限和集群等上下文信息，减少重复配置。当前版本聚焦<strong>离线开发、任务运维、自助分析</strong>三个场景。</p>\n<p>下面以<strong>任务搭建和异常排查</strong>为例，介绍 EasyAgent 如何参与实际工作。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/b09efa472cac4888a957c73218b4c00f.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>离线开发：从描述需求到完成任务配置</strong></p>\n<p><strong>1</strong></p>\n<p><strong>需求写清楚了，一次跑完</strong></p>\n<p>搭建一组数仓任务，通常需要依次创建目录和任务、编写 SQL、配置调度依赖与告警，再进行发布前检查。多个步骤分散在不同页面中，操作人员需要反复切换和核对。</p>\n<p>以<strong>电商订单数仓</strong>为例，一次需求可以包含以下内容：</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/b4d80858691d4210a4b841b091feeb8c.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>2</strong></p>\n<p><strong>需求尚不完整时，先整理方案</strong></p>\n<p>有时，用户只有一个<strong>初步目标</strong>，例如“帮我搭一套订单数仓任务”，尚未明确目录、任务名称或分层要求。这时，可以先让 <strong>EasyAgent</strong> 整理方案，补充必要信息，再确认执行。</p>\n<p>下面的示例分为三步：</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/25c194565a474e8bb30ace3365c2486d.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>任务运维：沿着问题逐步排查</strong></p>\n<p>运维排查通常需要回答四个问题：哪些任务失败了，影响哪些下游，是否影响按时产出，以及失败原因是什么。</p>\n<p>EasyAgent 支持围绕同一问题连续追问，将任<strong>务状态、依赖、基线和日志信息</strong>放到同一个对话中查看。</p>\n<p><strong>第一步：今天有哪些任务失败了？</strong></p>\n<p>EasyAgent 汇总当日实例运行情况，列出失败任务，帮助用户确定排查对象。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/img_convert/fdbbfe73036cb151adefe92b034369cf.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>第二步：失败最多的任务会影响哪些下游？</strong></p>\n<p>结合平台中的任务依赖与血缘信息，查看可能受影响的下游任务，辅助判断影响范围。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/img_convert/4eff3ac5f0e0dedaafd9e23a4a648491.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p>**第三步：任务属于哪条基线？**<strong>失败的影响？</strong></p>\n<p>EasyAgent 关联基线信息，辅助分析任务失败对基线达成的影响，为确定处理优先级提供参考。基线用于关注相关任务是否按预期时间完成。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/f08f5e49c01244239d5d9f3a5d289514.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>第四步：任务为什么执行失败？</strong></p>\n<p>EasyAgent 获取相关运行日志，辅助分析可能原因，并提供对应的日志依据和排查建议。连续追问时，用户可以沿用前文的任务信息，<strong>减少重复查找和复制任务名称的操作</strong>，更集中地判断问题该从哪里处理。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/d9e94a9857cb4cc29183c3b6401af74c.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>让对话贴近团队的工作方式</strong></p>\n<p>开发运维有不少重复要求：任务怎么命名、SQL 采用什么风格、使用哪张表、沿用哪段对话。EasyAgent 通过<strong>规则、上下文引用和会话管理</strong>等能力，减少重复交代这些信息的工作。</p>\n<p><strong>1</strong></p>\n<p><strong>Rule管理：记录团队约定</strong></p>\n<p>支持项目组和用户级别的规则管理，可维护任务命名、SQL 风格、默认分层等约定，为后续操作提供参考。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/77f19322f2f94450b4ce2021ea8d0edc.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>2</strong></p>\n<p><strong>上下文引用：明确表和任务</strong></p>\n<p>支持引用数据表、规则和离线开发任务，并按名称定位。修改任务前先引用具体对象，再描述调整内容，有助于减少同名或描述不清带来的歧义。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/96e6c9765eca4ddb9063a779699bb67b.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>3</strong></p>\n<p><strong>历史会话：接着已有工作继续</strong></p>\n<p>历史对话支持回溯与续接，便于查看此前的需求、处理过程和结果。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/7f5cc7f233b54c56a8eca89ce592cc66.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>4</strong></p>\n<p><strong>模型管理：按项目配置与选择</strong></p>\n<p>平台支持项目组级别的模型管理。完成模型注册后，用户可在对话入口中切换已配置的模型。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/cf950c6dae7144fb8ee5a393393de706.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>5</strong></p>\n<p><strong>技能库：调用常见场景能力</strong></p>\n<p>在对话框中输入 /，可唤起技能库，用户可选择<strong>离线开发、任务运维、自助分析</strong>等场景技能，也可使用 /new、/compact等系统指令。技能为常见工作提供可复用的操作方式，具体执行仍需结合当前对象、权限及用户要求。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/img_convert/35740b61948e4751bc3fc7cb64692df9.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>从一项容易核对的任务开始</strong></p>\n<p>可以先问：</p>\n<p>查看今天失败的任务，并列出任务名称和当前状态。</p>\n<p>熟悉返回结果后，再尝试任务创建和配置。</p>\n<p>为减少反复沟通，建议把握三点：</p>\n<p>**对象明确：**优先引用具体表或任务，文件夹可通过ID指定。</p>\n<p>**约束清楚：**写明命名、业务口径、调度和告警要求；重复使用的规范可维护为Rule。</p>\n<p>**结果可核对：**结合页面配置检查执行结果，发布前完成必要确认，并按平台实际配置履行相应流程。续接历史会话时，也应确认对象的当前状态。</p>\n<p><strong>少一些页面切换，多一些对业务逻辑的关注</strong></p>\n<p>从一项容易核对的任务开始，逐步将熟悉的操作交给EasyAgent辅助完成，是把它用进日常工作的一种方式。通过<strong>对话衔接任务配置与异常排查</strong>，工程师可以减少重复输入和跨页面查找，将更多精力用于SQL逻辑、调度关系及异常判断。开发与运维更顺畅，也为后续的数据分析与应用提供了支撑。 这与此前介绍的指标管理、可视化分析和智能问数，共同构成网易智企·数帆全链路数据智能平台，打通从数据建设到业务使用的完整闭环。</p>\n<p><strong>EasyData、指标平台、有数BI与知数DataAgent</strong>既可按需独立部署，也可组合应用；EasyAgent则从开发与运维的日常任务入手，让已有平台能力更便于使用。</p>\n\n\n        ",
     "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "textLength": 2225,
+    "readingMinutes": 5,
     "sourceId": "netease-csdn",
     "sourceUrl": "https://blog.csdn.net/wangyiyungw/article/details/166571371",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:40.515Z",
-    "nextRetryAt": "2026-11-09T09:07:40.515Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "61bb27ee45f472c7a8c05ff424aa4b51547c403bfa06cc4635d26509485a3ae2",
+    "fetchedAt": "2026-11-02T11:41:41.239Z",
+    "checkedAt": "2026-11-02T11:41:41.239Z",
+    "nextRetryAt": "2026-12-02T11:41:41.239Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

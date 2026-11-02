@@ -9,13 +9,22 @@
     "readingMinutes": 3,
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/154189495",
-    "ruleId": "rsshub-csdn",
-    "ruleVersion": "1",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
     "contentHash": "4ed58e8d2837b7f1f460da8e845bafd396fe6502bba16d48f92e373227aa2eb5",
-    "fetchedAt": "2026-11-02T09:08:10.597Z",
-    "checkedAt": "2026-11-02T09:08:10.597Z",
-    "nextRetryAt": "2026-12-02T09:08:10.597Z",
-    "warnings": []
+    "fetchedAt": "2026-11-02T11:44:45.981Z",
+    "checkedAt": "2026-11-02T11:44:45.981Z",
+    "nextRetryAt": "2026-12-02T11:44:45.981Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

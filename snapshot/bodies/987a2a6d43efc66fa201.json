@@ -10,9 +10,9 @@
     "sourceId": "bilibili-csdn",
     "sourceUrl": "https://blog.csdn.net/bilibili_TC/article/details/155320541",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:08:08.071Z",
-    "nextRetryAt": "2026-11-09T09:08:08.071Z",
-    "error": "RSSHub HTTP 502",
+    "checkedAt": "2026-11-02T11:44:47.263Z",
+    "nextRetryAt": "2026-11-09T11:44:47.263Z",
+    "error": "正文获取失败：rsshub-http、camoufox 均未取得可用正文。",
     "warnings": []
   }
 }

@@ -2,17 +2,69 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "d95d4960d1cd10cdce8d",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <blockquote>\n 作者： vivo BlueImage Lab\n <br> \n <strong>摘要：</strong>\n <br> vivo 蓝图实验室提出了长焦虚化渲染框架 MagicBokeh，基于一个统一的生成式架构实现长焦虚化渲染。通过交替训练策略、焦点感知掩码注意力与退化感知深度估计，解决了高倍变焦低质输入下噪声放大、边界模糊与误差累积的问题，在合成与真实数据集上均取得 SOTA 效果，为移动端高效真实感长焦虚化仿真提供了新方案。\n <br> \n <br> 本文入选 CVPR 2026 Oral\n <br> \n <strong>CVPR</strong>（IEEE Conference on Computer Vision and Pattern Recognition）IEEE 国际计算机视觉与模式识别会议，主要内容是计算机视觉与模式识别技术。\n <br> \n <br> 论文主页：\n <a title=\"arXiv:2605.07429\" href=\"https://arxiv.org/abs/2605.07429\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv:2605.07429</a>\n <br> \n <br> 代码仓库：\n <a title=\"github.com/vivoCameraResearch/MagicBokeh\" href=\"https://github.com/vivoCameraResearch/MagicBokeh\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/vivoCameraResearch/MagicBokeh</a>\n <br> \n <br> 该工作由 vivo BlueImage Lab，中国科学院深圳先进技术研究院共同完成。\n</blockquote> \n<p><strong>入围 CVPR 2026 Best Paper Finalist，MagicBokeh 重新思考手机长焦虚化。</strong></p> \n<p>近日，vivo 蓝图实验室与中国科学院深圳先进技术研究院合作完成的论文 Towards Photorealistic and Efficient Bokeh Rendering via Diffusion Framework 被 CVPR 2026 接收，并入围&nbsp;<strong>Best Paper Finalist</strong>。</p> \n<p>这项工作名为&nbsp;<strong>MagicBokeh</strong>，它关注的不是一个遥远的实验室问题，而是很多手机用户都可能遇到的拍摄场景：当我们使用 5x、10x 甚至更高倍手机变焦拍摄人物、宠物或远处主体时，既希望画面足够清晰，又希望背景拥有接近专业相机的自然虚化。但对手机来说，这两件事往往很难同时做到。在传统高倍变焦虚化的处理方案中，行业普遍采用“画质增强+虚化渲染”的两阶段处理管线，但该方式存在明显缺陷，不仅处理速度缓慢，且前一阶段产生的边缘伪影会被后续虚化渲染步骤进一步放大，严重影响成片质量。</p> \n<p>针对上述问题，该论文提出了一体化生成式架构的解决方案，针对于长焦虚化场景的低质输入情况将真实图像超分重建与虚化渲染融合至统一的扩散模型框架中。论文通过多项关键技术优化两大任务的协同效果：采用交替训练机制，规避超分与虚化任务相互干扰、效果冲突的问题；引入对焦区域感知掩码注意力机制，精准区分并可控调节画面焦内、焦外区域；依托退化感知深度技术，保障低质量变焦输入图像也能输出精准、可靠的深度与视差信息。不同于普通的背景模糊处理，该方法专为手机高倍变焦照片优化，实现了细节恢复、景深控制、真实虚化效果三位一体的高质量后处理。</p> \n<p>如果说过去的生成模型更多用于“生成一张好看的图”，那么 MagicBokeh 更接近一个面向真实拍摄链路的空间感知渲染器：它需要理解照片背后的深度关系、焦点位置、成像退化和光学虚化规律，再恢复出用户最终想要看到的画面。</p> \n<p></p> \n<p><img alt=\"\" height=\"598\" src=\"https://i-blog.csdnimg.cn/img_convert/51b3a29409d0ee786c9f0f33d153d576.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图 1：MagicBokeh 入围 Best Paper Finalist</p> \n<h3 id=\"section-一-手机长焦虚化-为什么这么难\"><a id=\"article-anchor-1\"></a>一、手机长焦虚化，为什么这么难？<a class=\"heading-anchor\" href=\"#section-一-手机长焦虚化-为什么这么难\" aria-label=\"链接到本节：一、手机长焦虚化，为什么这么难？\">#</a></h3> \n<p>如果你用手机长焦镜头拍过人像，大概率会遇到这样的情况：主体虽然被拉近了，但背景虚化并不自然，甚至几乎没有明显虚化。相比单反或专业相机大光圈长焦镜头拍出的柔和散景，手机长焦的空间层次感常常显得不够充分。这背后首先是物理限制。手机的影像系统必须被放进轻薄机身中，镜头模组长度、传感器尺寸、光圈大小都受到严格约束。即使是潜望式长焦镜头，也很难在真实光学条件上接近专业相机。光圈不够大，传感器不够大，天然景深效果就很难做出来。于是，手机影像需要依靠计算摄影来弥补物理限制。</p> \n<p>过去几年，从多帧融合、AI 降噪、超分辨率，到人像分割和虚化渲染，算法不断拓展手机相机的能力边界。用户在人像模式下已经可以获得不错的背景虚化效果。但如果把场景切换到&nbsp;<strong>高倍数字变焦</strong>，问题会变得更加复杂。高倍变焦往往依赖数字裁切和多帧融合。画面被放大后，噪声、纹理模糊、边缘发虚等问题也会被放大。此时输入图像本身已经不是一张高质量照片，再直接进行虚化渲染，就很容易出现主体边缘不干净、背景层次不自然、整体画面既不清晰也不高级的问题。</p> \n<p></p> \n<p><img alt=\"\" height=\"1434\" src=\"https://i-blog.csdnimg.cn/img_convert/b089cf9173571472a276fd707bcc1332.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p></p> \n<p><img alt=\"\" height=\"1434\" src=\"https://i-blog.csdnimg.cn/img_convert/03bb1b48b755a38081966b8b9cbd605a.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p></p> \n<p><img alt=\"\" height=\"1434\" src=\"https://i-blog.csdnimg.cn/img_convert/cc70d7ad1fc44178d82d9261cdfabb44.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p></p> \n<p><img alt=\"\" height=\"1147\" src=\"https://i-blog.csdnimg.cn/img_convert/a11a43faaf698b2a4f68b8dbf84c5af1.jpeg\" width=\"864\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图 2：vivo 手机拍摄的长焦打鸟示例图片</p> \n<h3 id=\"section-二-magicbokeh-的出发点\"><a id=\"article-anchor-2\"></a>二、MagicBokeh 的出发点<a class=\"heading-anchor\" href=\"#section-二-magicbokeh-的出发点\" aria-label=\"链接到本节：二、MagicBokeh 的出发点\">#</a></h3> \n<p>面对这个问题，一个很自然的思路是把任务拆成两步：先做真实世界图像超分辨率， 再做虚化渲染，这个方案听起来很合理，也符合传统影像链路中“模块串联”的设计方式。每个模块负责一个明确目标：超分模块负责清晰，虚化模块负责虚化效果渲染。但在高倍变焦虚化这个问题上，这种两阶段链路会遇到天然瓶颈。</p> \n<p>首先是<strong>误差传递</strong>。</p> \n<p>超分模型的输出并不总是完美的，它可能引入伪影、错误纹理或局部模糊。这些问题一旦进入虚化阶段，就可能被进一步放大，最终影响主体边缘、背景过渡和整体真实感。</p> \n<p>其次是<strong>端侧效率</strong>。</p> \n<p>手机影像链路对延迟、功耗和内存都极其敏感。如果先运行一个基于生成大模型的超分算法，再运行一个基于生成大模型的虚化算法，意味着两次完整的生成大模型推理和额外的数据搬移。对于真实拍摄体验来说，这并不是理想答案。</p> \n<p>因此，MagicBokeh 重新思考了这个问题：<strong>如果用户最终想要的是一张“高倍变焦下既清晰、又自然虚化”的照片，为什么不让模型从一开始就围绕这个最终目标来生成？</strong></p> \n<h3 id=\"section-三-magicbokeh-从模块串联到统一生成\"><a id=\"article-anchor-3\"></a>三、MagicBokeh：从模块串联到统一生成<a class=\"heading-anchor\" href=\"#section-三-magicbokeh-从模块串联到统一生成\" aria-label=\"链接到本节：三、MagicBokeh：从模块串联到统一生成\">#</a></h3> \n<p>MagicBokeh 的核心思路，是用一个统一的扩散框架，实现面向长焦场景的虚化渲染。不同于传统的串联链路，在一次推理中同时完成真实世界图像超分辨率和可控虚化渲染，而且两个任务可以同时利用生成模型的先验。它并不是简单地把“超分模型”和“虚化模型”合并到一起，而是把两个原本割裂的中间步骤，重新组织为面向最终成像体验的一次生成过程。</p> \n<p>在这个过程中，模型需要同时理解三件事：</p> \n<ul><li>哪些区域应该尽可能保持清晰；</li><li>哪些区域应该根据空间关系自然虚化；</li><li>如何在退化输入、有限算力和可控效果之间取得平衡。</li></ul> \n<h3 id=\"section-四-让模型知道-哪里该清晰-哪里该虚化\"><a id=\"article-anchor-4\"></a>四、让模型知道：哪里该清晰，哪里该虚化<a class=\"heading-anchor\" href=\"#section-四-让模型知道-哪里该清晰-哪里该虚化\" aria-label=\"链接到本节：四、让模型知道：哪里该清晰，哪里该虚化\">#</a></h3> \n<p>要在同一个生成过程中同时完成“清晰恢复”和“背景虚化”，并不容易。超分辨率希望尽可能恢复全图细节；虚化渲染则希望保持对焦区域清晰，同时让背景区域呈现自然、平滑、有空间层次的散景效果。二者在空间目标上天然不同。为了解决这个矛盾，MagicBokeh 设计了多项关键机制。</p> \n<p><strong>交替训练策略</strong></p> \n<p>MagicBokeh 没有强行让模型在同一时刻同时学习所有目标，而是采用交替训练策略：在不同训练阶段分别强化画质恢复能力和虚化渲染能力，让模型逐步学会在两种目标之间取得平衡。这种设计让模型既能恢复高倍变焦图像中的对焦区域细节，又能在非对焦区域生成符合空间关系的自然虚化。</p> \n<p><strong>对焦区域感知的注意力机制</strong></p> \n<p>为了让模型明确理解“哪里该清晰，哪里该模糊”，MagicBokeh 引入了对焦区域感知的掩码注意力机制。它利用由深度信息生成的 defocus map，对图像中的对焦区域和非对焦区域进行区分，并在注意力计算中加入空间约束。这样，模型在处理主体和背景时，可以采用不同的生成逻辑，减少超分和虚化之间的互相干扰。</p> \n<p><strong>退化感知的深度估计</strong></p> \n<p>自然虚化离不开准确的空间理解。但高倍变焦图像通常存在噪声、模糊和细节缺失，普通深度估计模型在这种输入下容易失准。MagicBokeh 针对这一问题设计了退化感知的深度估计模块，让模型在低质量变焦图像上依然能够获得更稳定的深度先验，为后续虚化提供可靠的空间结构基础。</p> \n<p></p> \n<p><img alt=\"\" height=\"443\" src=\"https://i-blog.csdnimg.cn/img_convert/e7697a74024cb17c2fb2120941c4df4b.jpeg\" width=\"864\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图 3：MagicBokeh 长焦虚化效果图</p> \n<h3 id=\"section-五-让生成模型真正进入手机影像链路\"><a id=\"article-anchor-5\"></a>五、让生成模型真正进入手机影像链路<a class=\"heading-anchor\" href=\"#section-五-让生成模型真正进入手机影像链路\" aria-label=\"链接到本节：五、让生成模型真正进入手机影像链路\">#</a></h3> \n<p>近年来，生成式模型在图像生成、修复、编辑和增强任务中展现出强大能力。但要让这些模型真正进入手机拍摄链路，并不是简单地把大模型搬到端侧。真实手机影像场景有非常明确的约束：</p> \n<ul><li>输入图像可能是低质量的；</li><li>用户需要可控、自然、符合真实先验的输出；</li><li>推理必须足够快；</li><li>算法必须适应端侧算力和功耗预算；</li><li>最终结果必须服务真实拍摄体验。</li></ul> \n<p>MagicBokeh 的探索意义正在于此。它不是把生成模型当作后期修图工具，而是让生成能力进入真实成像流程，参与解决手机光学系统受限带来的体验问题。通过统一框架、轻量化设计和可控虚化条件，MagicBokeh 让高倍变焦场景下的清晰恢复与自然虚化具备了更现实的落地可能。</p> \n<h3 id=\"section-六-效果与效率\"><a id=\"article-anchor-6\"></a>六、效果与效率<a class=\"heading-anchor\" href=\"#section-六-效果与效率\" aria-label=\"链接到本节：六、效果与效率\">#</a></h3> \n<p>在 EBB400-LQ 基准测试中，MagicBokeh 相比此前传统影像链路中“模块串联”的设计方案，在虚化质量、画质和推理效率上都展现出优势。MagicBokeh 能够在一次推理中完成高倍长焦虚化，避免两阶段流水线中的误差传递和重复计算。同时，MagicBokeh 支持焦点位置调节和虚化强度控制，使用户可以获得更加灵活的再对焦和景深效果。</p> \n<p>更重要的是，MagicBokeh 采用了面向端侧部署的轻量化设计。通过对扩散模型结构进行裁剪和微调，它在保持感知质量的同时显著降低了计算开销，为真实移动设备上的部署提供了可能。</p> \n<h3 id=\"section-七-写在最后\"><a id=\"article-anchor-7\"></a>七、写在最后<a class=\"heading-anchor\" href=\"#section-七-写在最后\" aria-label=\"链接到本节：七、写在最后\">#</a></h3> \n<p>手机影像的发展，本质上一直是在物理限制与用户期待之间寻找新的平衡。每一次技术演进都在让手机更接近专业影像设备的拍摄体验。但越接近真实使用场景，问题也越复杂：它不再只是单点算法能力的竞争，而是整条影像链路如何围绕最终用户体验重新组织。MagicBokeh 入围 CVPR 2026 Best Paper Finalist，是对这项工作技术结果的认可，更是对其问题意识的认可。它从手机高倍变焦这一真实拍摄痛点出发，重新思考了画质恢复、空间理解和自然虚化之间的关系。它想回答的，不只是“如何做出更好的虚化”，而是：</p> \n<p><strong>当手机光学硬件受到物理限制、端侧算力受到现实约束时，生成式计算摄影应该如何真正服务于用户按下快门后的最终体验？</strong>&nbsp;这也是 MagicBokeh 带来的启发：生成模型的价值，不只是创造新的图像，更是帮助移动设备突破物理边界，让清晰、自然、可控的成像体验真正进入日常拍摄。</p> \n<blockquote>\n <strong>vivo BlueImage Lab</strong>\n <br> 蓝图实验室，主要负责移动影像算法创新，包括图像/视频处理、图像/视频交互、图像/视频增强、多模态理解大模型等方面的技术前沿探索。\n <br> 致力于不断提升 vivo 移动影像的算法能力，使用户能够拍摄出更加清晰、美观的照片和视频。同时积极探索增强现实、具身智能等新兴技术领域的应用，努力为用户提供更加丰富和便捷的影像体验。\n <br> 欢迎持续关注 vivo 影像技术，获取前沿技术创新经验分享与热招岗位信息。\n</blockquote>\n        ",
+    "headings": [
+      {
+        "id": "section-一-手机长焦虚化-为什么这么难",
+        "level": 3,
+        "text": "一、手机长焦虚化，为什么这么难？"
+      },
+      {
+        "id": "section-二-magicbokeh-的出发点",
+        "level": 3,
+        "text": "二、MagicBokeh 的出发点"
+      },
+      {
+        "id": "section-三-magicbokeh-从模块串联到统一生成",
+        "level": 3,
+        "text": "三、MagicBokeh：从模块串联到统一生成"
+      },
+      {
+        "id": "section-四-让模型知道-哪里该清晰-哪里该虚化",
+        "level": 3,
+        "text": "四、让模型知道：哪里该清晰，哪里该虚化"
+      },
+      {
+        "id": "section-五-让生成模型真正进入手机影像链路",
+        "level": 3,
+        "text": "五、让生成模型真正进入手机影像链路"
+      },
+      {
+        "id": "section-六-效果与效率",
+        "level": 3,
+        "text": "六、效果与效率"
+      },
+      {
+        "id": "section-七-写在最后",
+        "level": 3,
+        "text": "七、写在最后"
+      }
+    ],
+    "textLength": 4300,
+    "readingMinutes": 10,
     "sourceId": "vivo-csdn",
     "sourceUrl": "https://blog.csdn.net/vivo_tech/article/details/163720779",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:50.951Z",
-    "nextRetryAt": "2026-11-09T09:07:50.951Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "f38af031953ce740f333ab666a7a51f132a06babf8a85cbfdc8ae46419bd4104",
+    "fetchedAt": "2026-11-02T11:42:50.943Z",
+    "checkedAt": "2026-11-02T11:42:50.943Z",
+    "nextRetryAt": "2026-12-02T11:42:50.943Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

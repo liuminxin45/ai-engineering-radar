@@ -2,17 +2,74 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "934103068573039a0ea8",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <h2 id=\"section-1-前言\"><a id=\"article-anchor-2\"></a>1. 前言<a class=\"heading-anchor\" href=\"#section-1-前言\" aria-label=\"链接到本节：1. 前言\">#</a></h2> \n<p id=\"article-anchor-3\">“个人Agent助手养成计划”&nbsp;可以理解为将个人Agent助手当作新招的一名员工，开始他可能什么也不会，双方也不太了解，而在不断使用的过程中，你慢慢理解怎么使用它，它也更懂你，而最终它会成为你一个很好的助理。它和人一样，需要不断学习，才能解决更多的问题。在这个过程中，我们需要不断对它进行调教。</p> \n<p id=\"article-anchor-4\"></p> \n<p><img alt=\"\" height=\"460\" id=\"article-anchor-5\" src=\"https://i-blog.csdnimg.cn/img_convert/6c7a8a861073388a79c9eb39fa4c832f.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-6\">今天这篇文章，我们就看如何把它“<strong>打造成你的个人Agent助手</strong>”。要用好它就需要知道它的“<strong>习性</strong>”，如何一步一步养成能够解决实际问题的专业助理。从产品和技术的视角去分析每一个节点所碰到的困难，以及解决方案。</p> \n<h2 id=\"section-2-从用户视角一步一步拆解\"><a id=\"article-anchor-8\"></a>2. 从用户视角一步一步拆解<a class=\"heading-anchor\" href=\"#section-2-从用户视角一步一步拆解\" aria-label=\"链接到本节：2. 从用户视角一步一步拆解\">#</a></h2> \n<p id=\"article-anchor-9\">接下来我们从用户的视角开始对整个使用流程进行一步一步拆解，在使用过程中会遇到哪些阻碍，以及我们的解决方案是什么？</p> \n<p id=\"article-anchor-10\">用户在产品上核心会有这几步：</p> \n<p id=\"article-anchor-11\"></p> \n<p><img alt=\"\" height=\"671\" id=\"article-anchor-12\" src=\"https://i-blog.csdnimg.cn/img_convert/18b33efd07ecaa999e0fb7ae8d9173b9.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<ul><li id=\"article-anchor-13\"><strong>自然语言提问</strong>，用户输入自己想问的问题，这里对用户有一个门槛就是什么算一个好的问题。</li><li id=\"article-anchor-14\"><strong>反问澄清</strong>，如果提问模糊，会触发反问，用户补充信息。</li><li id=\"article-anchor-15\"><strong>结果验证</strong>，对于用户来说有一个最大的问题就是这个结果是不是正确，产品层主要提供了三种校验方式：① AI校验；② 产品配置校验；③ 代码校验。</li><li id=\"article-anchor-16\"><strong>产品操作</strong>，如果AI生成的结果错误， 通过产品操作的方式继续任务。</li></ul> \n<h3 id=\"section-2-1-如何提出一个好问题\"><a id=\"article-anchor-18\"></a>2.1. 如何提出一个好问题<a class=\"heading-anchor\" href=\"#section-2-1-如何提出一个好问题\" aria-label=\"链接到本节：2.1. 如何提出一个好问题\">#</a></h3> \n<p id=\"article-anchor-19\">很多人第一个反应一定是：<strong>用自然语言提问，这有什么不会的，我不会写代码，我还不会说人话吗？</strong></p> \n<p id=\"article-anchor-20\"></p> \n<p id=\"article-anchor-21\">然而实际情况下，确实提问是用户使用ChatBI碰到的第一个障碍，一般对于模型来说会有几大困惑：</p> \n<ul><li id=\"article-anchor-22\"><strong>提问模糊</strong>，比如：“昨天的数据情况怎么样”，这里对于模型来说“数据”不知道用哪些指标进行表达。“怎么样”不知道是什么意思，什么算好，什么算差没有相对统一的标准。这样的问题模型给出来的答案就不一定尽如人意。一个比较好的问题：“昨天的取数Agent UV数是多少，相比上周同期增长多少”。这个指令就够明确。</li><li id=\"article-anchor-23\"><strong>提问有歧义</strong>，比较常见的是时间选择，一个表里面很有可能有分区日期、创建日期等。那我在这里问“昨天的取数Agent UV数是多少，相比上周同期增长多少”，那模型也不知道这里的“昨天”是指创建日期还是分区日期。解决这个问题的办法一般是用知识进行约束，给这张表维护一个知识：“时间过滤请使用创建时间”，这样大模型就知道如何进行选择了。除了日期还有一些相似的度量都会导致模型出现“选择困难症”。这些问题我们人类解决都是“钉钉”对话进行询问。</li><li id=\"article-anchor-24\"><strong>不知道怎么问</strong>，比如说有些度量用专业术语表达就会有困难，比如说“<strong>定义一个留存率的度量</strong>”，这里就会涉及到对哪个主体进行分析，以及留存率是周留存还是月留存。</li><li id=\"article-anchor-25\"><strong>自然语言更麻烦</strong>，比较常见的就是计算列，用自然语言描述一个计算列一定杀人的人都有了，这种用产品解决会更简单。</li></ul> \n<p id=\"article-anchor-26\">导致当前的现状主要两个原因：① 模型并没有想象的那么强；② 领域知识模型不具备。</p> \n<p id=\"article-anchor-27\">解决这个问题，我们首先会在产品中生成一批问题，用户可以在里面进行选择。也可以基于这里的问题，进行相应修改，改成自己想问的一些问题。</p> \n<p id=\"article-anchor-28\"></p> \n<p><img alt=\"\" height=\"849\" id=\"article-anchor-29\" src=\"https://i-blog.csdnimg.cn/img_convert/4a07bd516dfaca56ac9f59441cb347be.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<h3 id=\"section-2-2-增加反问澄清-让信息对齐变得更容易\"><a id=\"article-anchor-31\"></a>2.2. 增加反问澄清，让信息对齐变得更容易<a class=\"heading-anchor\" href=\"#section-2-2-增加反问澄清-让信息对齐变得更容易\" aria-label=\"链接到本节：2.2. 增加反问澄清，让信息对齐变得更容易\">#</a></h3> \n<p id=\"article-anchor-32\">前面提到了，人类的指令往往是模糊的，精准的指令需要额外的思考。比较典型的场景就是我们给老板写总结文字的时候都是“逐字斟酌”，反复看里面有没有歧义和表达不清楚的，原因就是要高效，不然就要反复对话来对齐信息。但是从人类大脑的构造来说，启动慢思考是一见非常耗能的事情，人类更倾向于用短句，不断补充。但是这在AI场景可能就非常灾难。大模型倾向于给出一个答案，而不是质疑你的问题。</p> \n<p id=\"article-anchor-33\">为了使模型具备这个能力，我们专门设计了反问指令让模型具备反问的能力，下面就是一个实际案例：</p> \n<p id=\"article-anchor-34\"></p> \n<p><img alt=\"\" height=\"813\" id=\"article-anchor-35\" src=\"https://i-blog.csdnimg.cn/img_convert/49ebad3ff0cc21e9739d242391de06a2.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-36\">上面这个案例中就会有两个信息大模型不理解：一个是“新版”，一个是“取数Agent”。而这里我们就会模拟人类对话，在对话过程中，如果发现对方说的话有不太理解的地方，进行反问澄清。这个在人类对话中是一个非常常见的对齐信息的方式。</p> \n<p id=\"article-anchor-37\">另外，这里对齐信息不是每次都要重复，系统会把这些信息存储在知识库中，下次用户提问的时候，如果在知识库中已经有这条知识，就不会触发反问澄清。这个机制也跟我们人类信息对齐是类似的，我们不需要每次都回到原点对齐信息。也就意味着，当我们不断使用的过程就是不断补齐知识，后续使用就会越来越方便。</p> \n<p id=\"article-anchor-38\">Tips：现在的知识只是在这个数据集下生效，如果要维护全局的知识需要去知识中心维护，我们会在11月份的版本解决这个问题。</p> \n<p id=\"article-anchor-39\">下面是我们反问澄清的技术方案，核心是识别用户中的一些实体和数据集中的字段、维值和已有的知识进行比对，如果找不到相似的，则触发反问。</p> \n<p id=\"article-anchor-40\"></p> \n<p><img alt=\"\" height=\"756\" id=\"article-anchor-41\" src=\"https://i-blog.csdnimg.cn/img_convert/7771d43a0e89a6b914a71d2cdd874354.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<h3 id=\"section-2-3-ai生成结果如何验证\"><a id=\"article-anchor-43\"></a>2.3. AI生成结果如何验证<a class=\"heading-anchor\" href=\"#section-2-3-ai生成结果如何验证\" aria-label=\"链接到本节：2.3. AI生成结果如何验证\">#</a></h3> \n<p id=\"article-anchor-44\">前面讲用什么语言的时候讲到大模型一个天然特性就是“幻觉”，人类也有这个问题，人类解决这个问题的方法是通过多路径验证来解决，而这个方式我们用在了对大模型的结论中。</p> \n<p id=\"article-anchor-45\"></p> \n<p><img alt=\"\" height=\"834\" id=\"article-anchor-46\" src=\"https://i-blog.csdnimg.cn/img_convert/417b669c6189fa3c319bc9209119e069.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-47\">上面这张图就是一个例子，用户可以根据这个结论采取是否使用这个结果。</p> \n<p id=\"article-anchor-48\">除了上面有AI的校验之外，用户还可以根据产品配置的方式进行验证。我们会把用户的查询转化成一个图表配置，用户可以根据这个配置判断是否和用户提问的意图保持一致，如果不一致还能基于产品配置继续修改。</p> \n<p id=\"article-anchor-49\"></p> \n<p><img alt=\"\" height=\"875\" id=\"article-anchor-50\" src=\"https://i-blog.csdnimg.cn/img_convert/7412e7576bec448f5c40f1110f196fd7.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-51\">第三种方式就是直接看代码，最专业的方式肯定是直接看SQL或者DAL，当然也是门槛最高的方式。</p> \n<p id=\"article-anchor-52\"></p> \n<p><img alt=\"\" height=\"904\" id=\"article-anchor-53\" src=\"https://i-blog.csdnimg.cn/img_convert/7078f97c72f00f233b0d826726a6508e.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<h3 id=\"section-2-4-模型生成错误后-用户如何操作\"><a id=\"article-anchor-55\"></a>2.4. 模型生成错误后，用户如何操作<a class=\"heading-anchor\" href=\"#section-2-4-模型生成错误后-用户如何操作\" aria-label=\"链接到本节：2.4. 模型生成错误后，用户如何操作\">#</a></h3> \n<p id=\"article-anchor-56\">模型生成错误，是一个不可避免的事情，但是用户的任务还要继续，那么如何让用户无缝衔接成为我们优化的方向。解决方案类似于自动驾驶中的L2，在部分场景中，模型可以自运行，但是当碰到无法处理的路况时，智驾会让人类接管车机。而在我们这个场景也是如此。</p> \n<p id=\"article-anchor-57\">如果用户发现生成的结果是错误时，那么用户可以通过配置化完成接下来的任务，而不需要再次修改问题提问。</p> \n<p id=\"article-anchor-58\"></p> \n<p><img alt=\"\" height=\"851\" id=\"article-anchor-59\" src=\"https://i-blog.csdnimg.cn/img_convert/c95c7b7854b2c75952bb2f3e3c0b2038.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<h4 id=\"article-anchor-60\"><a id=\"article-anchor-61\"></a><strong>2.4.1. 自然语言结合产品交互的案例</strong></h4> \n<p id=\"article-anchor-62\"></p> \n<p><img alt=\"\" height=\"803\" id=\"article-anchor-63\" src=\"https://i-blog.csdnimg.cn/img_convert/c0d70a66407d7e53d42021b3b6ca819b.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-64\"></p> \n<p><img alt=\"\" height=\"867\" id=\"article-anchor-65\" src=\"https://i-blog.csdnimg.cn/img_convert/cf7dad947796ce3ffd2110653ebd4efa.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-66\"></p> \n<p id=\"article-anchor-67\">上面这个案例里面，度量生成的有点小问题，用户输入来源是“default”，实际上是“DEFAULT”，那么这里最快的方式就是修改这个度量。</p> \n<p id=\"article-anchor-68\"><strong>第一步：找到度量编辑按钮</strong></p> \n<p><img alt=\"\" height=\"775\" src=\"https://i-blog.csdnimg.cn/direct/9e80add95dc648fd99ff5abc95b019eb.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p><strong>第二步：修改度量</strong></p> \n<p id=\"article-anchor-69\"></p> \n<p><img alt=\"\" height=\"1010\" id=\"article-anchor-70\" src=\"https://i-blog.csdnimg.cn/img_convert/4c151a2316b8110aea2ad72132935b9a.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-71\"><strong>第三步：重新查询</strong></p> \n<p><img alt=\"\" height=\"698\" src=\"https://i-blog.csdnimg.cn/direct/cfe8621ba8a84b2196e295f521caac52.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-72\"></p> \n<p id=\"article-anchor-73\">这样就可以在自然语言的基础之上，结合产品交互完成用户的需求。</p> \n<p id=\"article-anchor-74\">录了一个完整视频，放在下面：</p> \n<div>\n \n <p>自然语言生成错误如何通过产品修正</p>\n</div> \n<p></p> \n<h3 id=\"section-2-5-当然-你也可以直接发起手动查询\"><a id=\"article-anchor-76\"></a><strong>2.5. 当然，你也可以直接发起手动查询</strong><a class=\"heading-anchor\" href=\"#section-2-5-当然-你也可以直接发起手动查询\" aria-label=\"链接到本节：2.5. 当然，你也可以直接发起手动查询\">#</a></h3> \n<p id=\"article-anchor-77\"></p> \n<p><img alt=\"\" height=\"814\" id=\"article-anchor-78\" src=\"https://i-blog.csdnimg.cn/img_convert/d7b21db7dd82b844b15729f303c1eecc.png\" width=\"1600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-79\">这里的设计逻辑在于，保证用户在这里沉浸式完成用户的任务，如果某些任务通过产品交互效率更高，可以直接通过产品交互完成。</p> \n<h2 id=\"section-3-总结\"><a id=\"article-anchor-81\"></a>3. 总结<a class=\"heading-anchor\" href=\"#section-3-总结\" aria-label=\"链接到本节：3. 总结\">#</a></h2> \n<p id=\"article-anchor-82\">显然，大模型要真正解决用户问题，不是那么容易的事情。不在于产品有多绚丽，需要的是大模型和传统的工具进行紧密配合，需要扎实的解决每一个用户节点上的问题，我们相信一步一个脚印前行，一定会让ChatBI解决越来越多的问题。</p> \n<p id=\"article-anchor-83\"></p>\n        ",
+    "headings": [
+      {
+        "id": "section-1-前言",
+        "level": 2,
+        "text": "1. 前言"
+      },
+      {
+        "id": "section-2-从用户视角一步一步拆解",
+        "level": 2,
+        "text": "2. 从用户视角一步一步拆解"
+      },
+      {
+        "id": "section-2-1-如何提出一个好问题",
+        "level": 3,
+        "text": "2.1. 如何提出一个好问题"
+      },
+      {
+        "id": "section-2-2-增加反问澄清-让信息对齐变得更容易",
+        "level": 3,
+        "text": "2.2. 增加反问澄清，让信息对齐变得更容易"
+      },
+      {
+        "id": "section-2-3-ai生成结果如何验证",
+        "level": 3,
+        "text": "2.3. AI生成结果如何验证"
+      },
+      {
+        "id": "section-2-4-模型生成错误后-用户如何操作",
+        "level": 3,
+        "text": "2.4. 模型生成错误后，用户如何操作"
+      },
+      {
+        "id": "section-2-5-当然-你也可以直接发起手动查询",
+        "level": 3,
+        "text": "2.5. 当然，你也可以直接发起手动查询"
+      },
+      {
+        "id": "section-3-总结",
+        "level": 2,
+        "text": "3. 总结"
+      }
+    ],
+    "textLength": 2711,
+    "readingMinutes": 7,
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/155600888",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:08:07.562Z",
-    "nextRetryAt": "2026-11-09T09:08:07.562Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "6b09ec8f4381a0d8522ba9aaa181604c3762af64636237a1df410b538d352948",
+    "fetchedAt": "2026-11-02T11:44:47.552Z",
+    "checkedAt": "2026-11-02T11:44:47.552Z",
+    "nextRetryAt": "2026-12-02T11:44:47.552Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

@@ -2,17 +2,33 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "f6d8bb55a9d8224a6caf",
-    "status": "unavailable",
-    "html": "",
+    "status": "ready",
+    "html": "\n          <p>公共云是面向社会公共利益最大化和资源共享最优化的云计算服务体系，涵盖公有云、行业云、专属云和边缘云等多元形态。钢铁云作为公共云在钢铁行业的专属承载形态，既是钢铁企业数字化转型的核心基础设施，也是释放数据要素价值、加速AI赋能生产制造的关键平台。随着“人工智能+钢铁”战略纵深推进，钢铁云正从“数字化转型的辅助工具”走向“钢铁制造的核心引擎”。</p>\n\n<p><img alt=\"\" height=\"820\" src=\"https://i-blog.csdnimg.cn/direct/272ef82c4a5048eba7525d18d47cb18f.png\" width=\"1010\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>面临挑战</strong></p>\n\n<p>钢铁工业是国民经济的重要基础产业，然而在数字化转型与智能化升级的进程中仍面临多重深层挑战。<strong>一是集团和边端建设标准不一，管理难统一</strong>——各基地及业务板块基础条件差异大，缺乏集团级统一技术与管理标准，难以实现一体化运营。<strong>二是数据孤岛严重、数采效率低</strong>——系统间“多对多”取数模式导致重复采集，不仅加重系统负担，还降低整体数据流转效率。<strong>三是AI应用门槛高、业务人员难参与</strong>——从数据准备到模型训练与部署，涉及多个复杂环节，高度依赖算法工程师，缺乏低代码平台，业务人员难以深度参与。</p>\n\n<p>面对上述挑战，新一代钢铁数智云方案聚焦<strong>智算底座、数据平台、AI平台与大模型</strong>方向，推动AI技术与钢铁生产工艺深度融合，为钢铁工业智能化转型注入新动能。</p>\n\n<p><img alt=\"\" height=\"713\" src=\"https://i-blog.csdnimg.cn/direct/7a0bfa739b844aefb2ff7781cc6f2518.png\" width=\"913\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>▲钢铁数智云方案架构</p>\n\n<p></p>\n\n<p><strong>新一代钢铁数智云：为钢铁工业智能化转型注入新动能</strong></p>\n\n<p>在<strong>智算底座</strong>层面，方案基于全栈自主可控技术，依托软硬协同优势，实现通用算力与AI算力的深度融合与统一调度，为大模型训练推理提供澎湃算力支撑。同时，构建云边端协同的统一架构，支撑集团总部与各生产基地两级协同发展——总部集中训练大模型，边缘节点负责推理执行，云边持续迭代，实现训推一体化的资源调度与高效协同，为钢铁行业的数智化转型构建了坚实的算力底座。</p>\n\n<p>在<strong>数据平台</strong>层面，方案构建覆盖“工业数采→边缘IT/OT融合→统一数据湖→数据治理平台→数据应用”全链路的一站式数据治理与流通平台，打通生产现场与管理系统间的数据壁垒，让数据“采得到、流得动、用得好”，加速数据价值从生产现场向经营决策层流动释放。</p>\n\n<p><img alt=\"\" height=\"779\" src=\"https://i-blog.csdnimg.cn/direct/cf1184de2050445d9d48342097c08215.png\" width=\"1239\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>▲数据治理平台技术架构</p>\n\n<p>在<strong>AI平台与大模型</strong>层面，方案提供覆盖<strong>数据工程、模型开发、Agent开发、垂域应用开发</strong>的全链路工具链，帮助客户将焦化、烧结、炼铁等环节的生产数据转化为高质量行业数据集，支持主流大模型的增量训练、微调与评测，并提供多智能体协同框架与低代码开发环境，将行业知识与业务流程深度融合。方案提供大模型能力套件，深度融合“CV+预测+求解寻优”三大核心模块，嵌入企业业务系统。一线技术人员无需深入掌握AI底层技术，即可快速构建面向配煤、检测、精炼等场景的智能应用，让AI从“作坊式”走向“流水线”，真正赋能钢铁行业规模化落地。</p>\n\n<p><img alt=\"\" height=\"827\" src=\"https://i-blog.csdnimg.cn/direct/137f4efea5b148baa87548e776aef9d3.png\" width=\"1206\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>▲人工智能大模型平台</p>\n\n<p><strong>实践案例</strong></p>\n\n<p>湘潭钢铁集团的钢铁数智云，是钢铁工业智能云建设的标杆案例。基于华为云Stack钢铁数智云方案，湘钢建设了人工智能训练中心，已完成涵盖焦化、烧结、炼铁、炼钢、连铸、轧制等<strong>6大专业、32个场景化应用</strong>的首批模型开发上线，<strong>超100个创新应用场景</strong>正在调研孵化中。</p>\n\n<p>在智慧配煤场景，预测大模型1-2分钟即可得出高性价比配煤方案，焦炭质量预测准确率达<strong>90%以上</strong>；在皮带智能监测场景，AI视觉大模型7×24小时实时检测，每年可节约因皮带异常停机导致的损失约<strong>600多万元</strong>；在精炼优化场景，大模型深入炼钢核心环节，解放重复性人力投入、降低安全风险。整体上，场景模型开发成本<strong>下降20%</strong>，钢铁生产效率<strong>提升10%</strong>。</p>\n\n<p>从智算底座到数据平台，从AI使能到钢铁大模型，新一代钢铁数智云方案正推动钢铁行业从“经验炼钢”走向“科技炼钢”，让智能炼钢从“单场景试点”走向“规模化落地”。当钢铁数智云真正成为数据流通的平台、AI创新的底座，公共云的社会价值将从基础设施层持续扩散，为钢铁工业高质量发展注入源源不断的动力，淬炼数智时代的中国钢铁新力量。</p>\n\n<p></p>\n\n        ",
     "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "textLength": 1560,
+    "readingMinutes": 4,
     "sourceId": "huawei-csdn",
     "sourceUrl": "https://blog.csdn.net/devcloud/article/details/164336413",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:46.553Z",
-    "nextRetryAt": "2026-11-09T09:07:46.553Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "0badd40f474b8bedf7e27e1fcfdb41595bb5338b85dfdc126223d0167aa3b8d8",
+    "fetchedAt": "2026-11-02T11:42:23.281Z",
+    "checkedAt": "2026-11-02T11:42:23.281Z",
+    "nextRetryAt": "2026-12-02T11:42:23.281Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

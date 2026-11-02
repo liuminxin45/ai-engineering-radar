@@ -2,17 +2,59 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "059fdc00d9c983fd2972",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <p>文章作者：徐家乐 张锐 赵军平。</p> \n<p>系列文章回顾⬇️</p> \n<p><a title=\"大模型推理显存优化系列(1)：vTensor\" href=\"https://mp.weixin.qq.com/s?__biz=MzkyNzQyMjkxNQ==&amp;mid=2247488974&amp;idx=1&amp;sn=635c4fa8d5cea4e3fb3d4c2764b19395&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">大模型推理显存优化系列(1)：vTensor</a></p> \n<p><a title=\"大模型推理显存优化系列(2)：LayerKV\" href=\"https://mp.weixin.qq.com/s?__biz=MzkyNzQyMjkxNQ==&amp;mid=2247488991&amp;idx=1&amp;sn=9c420dda49db38837b6dfe6be6caef5a&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">大模型推理显存优化系列(2)：LayerKV</a></p> \n<p><a title=\"大模型推理显存优化系列(3)：FlowMLA——面向高吞吐的DP MLA零冗余显存优化\" href=\"https://mp.weixin.qq.com/s?__biz=MzkyNzQyMjkxNQ==&amp;mid=2247489109&amp;idx=1&amp;sn=d161c5124e4331faf9f999964ac034cc&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">大模型推理显存优化系列(3)：FlowMLA——面向高吞吐的DP MLA零冗余显存优化</a></p> \n<ul></ul> \n<h3 id=\"section-简介\"><a id=\"article-anchor-1\"></a><strong>简介</strong><a class=\"heading-anchor\" href=\"#section-简介\" aria-label=\"链接到本节：简介\">#</a></h3> \n<p>显存管理是大模型推理高效、规模化部署的关键技术之一。蚂蚁集团ASystem团队联合上海交通大学研发的<strong>eLLM</strong>，挖掘激活与KV cache的动态管理机会，通过<strong>弹性显存管理技术</strong>实现可用显存的显著提升，在典型模型和显存受限场景下，相比基线方案（基于vLLM）实现<strong>3x batch增加和2.3x decode吞吐提升</strong>。方案精度无损，无需微调等额外操作。</p> \n<p>以下简要介绍eLLM相关技术挑战、总体设计和初步性能评估，完整的技术报告见以下论文链接。</p> \n<ul><li> <p>eLLM: Elastic Memory Management Framework for Efficient LLM Serving&nbsp;</p> <p><a title=\"https://arxiv.org/abs/2506.15155\" href=\"https://arxiv.org/abs/2506.15155\" target=\"_blank\" rel=\"noopener noreferrer\">https://arxiv.org/abs/2506.15155</a>&nbsp;2025.6</p> </li></ul> \n<h3 id=\"section-显存管理挑战\"><a id=\"article-anchor-2\"></a><strong>显存管理挑战</strong><a class=\"heading-anchor\" href=\"#section-显存管理挑战\" aria-label=\"链接到本节：显存管理挑战\">#</a></h3> \n<h4><a id=\"article-anchor-3\"></a>显存需求</h4> \n<p>随着模型架构发展、长上下文包括思维链等新场景推广，显存需求构成悄然发生一些变化：</p> \n<ul><li> <p><strong>模型架构创新</strong>：DeepSeek MLA、GLA(Group Latent Attn，Tri Dao等，参考文献[2])、混合线性等通过更高效KV cache设计显著降低了KV用量。例如Jamba-52B仅需2块GPU支持200K上下文，其中激活与KV cache用量接近1:1。</p> </li><li> <p><strong>上下文扩展</strong>：上下文长度从2K扩展至200K时，prefill阶段激活内存占比从0.3%跃升至30.8%；而如果是短输入、长思维链，prefill阶段的激活显存在decode阶段无法被使用。</p> </li><li> <p><strong>KV轻量化</strong>：针对KV的各种量化、压缩、稀疏探索层出不穷，而激活由于outlier的存在普遍难以轻量化。</p> <p></p> <p><img alt=\"图片\" height=\"618\" src=\"https://i-blog.csdnimg.cn/img_convert/a9c05d21fd01ad8275e3c54548250458.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> </li></ul> \n<p>图1：典型推理显存构成（A100部署，vLLM）</p> \n<p>以上因素叠加促使我们重新关注显存的总体优化，特别是考虑当前主流的推理框架由于一些设计或实现的限制，导致了显存资源事实上的浪费（抛个观点<strong>“闲置即浪费”</strong>，浪费的单位是 GB * msec，即容量x时间，时间以毫秒计），轻易放弃了优化压榨的机会。</p> \n<h4><a id=\"article-anchor-4\"></a>显存管理不足</h4> \n<p>当前vLLM、SGLang等主流框架经过了充分改进，取得了广泛普及。不过显存管理方面仍存在一些不足：</p> \n<ul><li> <p><strong>碎片化管理：</strong>模型权重、KV cache和激活三分天下，在框架启动时静态圈了3个小池子，互不通用。尤其是KV和激活，随不同模型、负载或SLO等存在更多动态性和潜在流通性。可惜，他们被碎片化的隔离了。</p> </li><li> <p><strong>激活显存闲置：</strong>框架按prefill阶段所需的最大激活显存所预留的显存小池子，到了decode阶段由于激活需求降低了10^3~10^4倍基本在闲置（decode每次1个token，相比Prefill输入1K ~ 32K ctx，降低了1K ~ 32K倍），即使随生成变长，KV cache压力变大，进而触发了recompute/offload等兜底手段在拼命换气，一旁的激活显存仍在躺平。系统缺乏显存的全局、动态调度机制。</p> </li><li> <p><strong>chunk prefill的限制：</strong>chunk prefill可显著降低激活显存的占用（特别是prefill阶段），不过也存在一些限制：1）对一些模型不支持，例如至评测时不支持混合线性模型Jamba；2）影响TTFT指标。</p> </li></ul> \n<p></p> \n<p><img alt=\"图片\" height=\"700\" src=\"https://i-blog.csdnimg.cn/img_convert/62a390d4e423d0d35493b46cdd5a3406.jpeg\" width=\"902\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>图2：当前框架显存管理的局限和浪费优化机会</p> \n<p>进一步，以vLLM为例，简单说明下主流框架的静态显存划分和管理策略：</p> \n<ul><li> <p><strong>总体逻辑：</strong>框架启动后先分配模型权重显存，再按启动参数估算激活内存（为prefill留够激活，prefill进行中不能OOM），剩余空间分配给KV cache。激活值由PyTorch的CUDACachingAllocator管理，KV cache则预分配为torch.Tensor。</p> </li><li> <p><strong>隔离性弊端：</strong>静态划分的3类对象池不利于基于负载、SLO的动态显存，容易引起部分显存闲置。</p> <p></p> <p><img alt=\"图片\" height=\"304\" src=\"https://i-blog.csdnimg.cn/img_convert/397be5a131101db6fdb102c5ce7d4f20.jpeg\" width=\"1000\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> </li></ul> \n<p>图3：显存管理对比示意</p> \n<p></p> \n<h3 id=\"section-ellm设计\"><a id=\"article-anchor-5\"></a><strong>eLLM设计</strong><a class=\"heading-anchor\" href=\"#section-ellm设计\" aria-label=\"链接到本节：eLLM设计\">#</a></h3> \n<h4><a id=\"article-anchor-6\"></a>总体架构</h4> \n<p>eLLM采用三层架构设计：</p> \n<p>1.<strong>虚拟张量抽象层</strong>：解耦逻辑地址与物理资源，为弹性管理奠定技术基础。</p> \n<p>2.<strong>弹性内存机制</strong>：通过映射重分配实现激活/KV cache的动态空间调整，结合CPU内存作为弹性缓冲。</p> \n<p>3.<strong>轻量级调度策略</strong>：基于服务等级目标（SLO）实现资源分配与性能的动态权衡。</p> \n<p></p> \n<p><img alt=\"图片\" height=\"544\" src=\"https://i-blog.csdnimg.cn/img_convert/9974f06cd46dd8f348033521a179cbbc.jpeg\" width=\"826\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>图4：eLLM总体架构</p> \n<p></p> \n<p><img alt=\"图片\" height=\"631\" src=\"https://i-blog.csdnimg.cn/img_convert/c3fcb762b642554927c8147b4a9876b7.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>图5：vLLM和优化后eLLM的显存构成对比</p> \n<h4><a id=\"article-anchor-7\"></a>eTensor对象</h4> \n<p>eTensor对象是扩展的PyTorch Tensor对象，保留现有接口，内部封装GPU虚拟内存管理（基于CUDA VMM API）弥合激活值与KV cache的抽象层差距：</p> \n<ul><li> <p><strong>双张量类型设计</strong></p> \n  <ul><li><span><strong>KV eTensor：</strong>预分配与上下文等长的连续的虚拟地址空间，物理内存按需分配。</span></li><li><span><strong>激活eTensor：</strong>支持非均匀虚拟地址段，适配小粒度、高频访问特性。</span></li></ul> </li><li> <p><strong>地址对齐策略：</strong>虚拟地址段（张量槽）与物理内存块粒度严格对齐，平衡访问效率与碎片控制。</p> <p></p> <p><img alt=\"图片\" height=\"526\" src=\"https://i-blog.csdnimg.cn/img_convert/d8f080f23667f3e1e01d23d2f87363ca.jpeg\" width=\"882\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> </li></ul> \n<p>图6：eTensor对象和显存池</p> \n<p></p> \n<h4><a id=\"article-anchor-8\"></a>弹性显存分配</h4> \n<p><span>设计了tensor对象的动态扩、缩操作，打通KV cache和激活显存各自领地：</span></p> \n<ul><li><span><strong>扩张（Inflation，KV cache扩容）：</strong></span></li></ul> \n<ol><li><span>检测KV内存不足时向激活池发出借用请求；</span></li><li><span>激活池通过轻量级GC回收非活跃内存块；</span></li><li><span>逻辑转移内存所有权至KV池；</span></li><li><span>VMM动态映射至目标KV eTensor地址空间。</span></li></ol> \n<ul><li><span><strong>收缩（deflation）：逆向执行膨胀流程，采用惰性避免开销</strong></span></li></ul> \n<p></p> \n<p><img alt=\"图片\" height=\"330\" src=\"https://i-blog.csdnimg.cn/img_convert/074e80b484c759fd852b8bea995024d4.jpeg\" width=\"896\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>图7：弹性显存扩缩示意</p> \n<p></p> \n<h4><a id=\"article-anchor-9\"></a>PD感知调度</h4> \n<p>针对推理Prefill、decode阶段特性优化资源分配：</p> \n<ul><li> <p>prefill阶段：KV cache卸载至CPU缓冲区，释放GPU空间处理激活数据和放入更多新请求（降低排队耗时）；</p> </li><li> <p>decode阶段：激活内存需求骤降，将KV cache重新加载至GPU，利用膨胀机制扩大批量处理能力；</p> </li><li> <p>工程优化：采用层级KV cache传输机制，降低CPU-GPU数据迁移开销。</p> </li></ul> \n<p></p> \n<p><img alt=\"图片\" height=\"1062\" src=\"https://i-blog.csdnimg.cn/img_convert/9ce6c395952b139394b2138b690d7bea.jpeg\" width=\"592\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<h4><a id=\"article-anchor-10\"></a>SLO感知弹性缓冲</h4> \n<p><strong>通过逻辑缓冲区动态平衡TTFT与TPOT指标诉求：</strong></p> \n<ul><li> <p><strong>动态缓冲区抽象</strong>：在固定物理容量内动态调整逻辑可用空间，避免数据逐出；</p> </li><li> <p><span>违规响应算法：</span></p> \n  <ul><li><span>TPOT超标时缩小缓冲区，限制prefill请求；</span></li><li><span>TTFT超标时扩大缓冲区，优化首响应延迟；</span></li></ul> </li><li> <p>自适应调节：通过5次迭代窗口内的违规次数触发调整，因子α=2控制调整速率。</p> </li></ul> \n<h3 id=\"section-ellm结果对比\"><a id=\"article-anchor-11\"></a><strong>eLLM结果对比</strong><a class=\"heading-anchor\" href=\"#section-ellm结果对比\" aria-label=\"链接到本节：eLLM结果对比\">#</a></h3> \n<h4><a id=\"article-anchor-12\"></a>测试环境</h4> \n<ul><li> <p><strong>基线方案</strong>：基于vLLM-0.5.5构建三组对比：</p> \n  <ul><li><span>vLLM：标准实现；</span></li><li><span>vLLM-CP：开启chunked-prefill后的vLLM框架；</span></li><li><span>eLLM：本项目的实现方法。</span></li></ul> </li><li> <p>评测模型：</p> \n  <ul><li><span>在线服务：Llama3-8B-262K（最大上下文262K）；</span></li><li><span>离线推理：Llama3-8B-262K与Jamba-Mini。</span></li></ul> </li><li> <p>数据集：</p> \n  <ul><li><span>在线：32K-2K、2K-2K合成负载，ShareGPT真实对话；</span></li><li><span>离线：8K-2K、16K-2K、32K-4K、128K-4K合成负载。</span></li></ul> </li></ul> \n<h4><a id=\"article-anchor-13\"></a><strong>在线推理性能</strong></h4> \n<p>Llama3-8B在单A100（80GB）GPU的测试表明：</p> \n<ul><li> <p>TTFT优化：2K-2K负载下，eLLM相比vLLM和vLLM-CP分别实现295倍和140倍的首字加速。收益主要来自PD感知显存调度、基线由于显存不足，排队时间过长（更详细分析参考另一篇工作LayerKV[3]）。</p> </li><li> <p>弹性机制优势：vLLM-CP仅通过预留激活内存缓解KV压力，eLLM则结合GPU内弹性与GPU-CPU协同，在高并发场景下保持性能稳定；</p> </li><li> <p>批量处理增益：eLLM支持更大decode批次，输出性能提升显著。</p> <p></p> <p><img alt=\"图片\" height=\"610\" src=\"https://i-blog.csdnimg.cn/img_convert/179c08a8e788438ed08ca3908c378746.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> </li></ul> \n<p><strong><strong>图8：在线推理评测对比</strong></strong></p> \n<p></p> \n<h4><a id=\"article-anchor-14\"></a><strong><strong><strong>离线推理优化</strong></strong></strong></h4> \n<p>Jamba-Mini在不同负载下的吞吐表现：eLLM实现最大batch提高至3x，带来总吞吐与decode吞吐分别提升1.8x和2.3x。</p> \n<ul><li> <p>vLLM对混合线性模型不支持chunk prefill，导致Jamba模型因激活/KV占比更高，eLLM的弹性策略效果更显著。</p> </li><li> <p>输入序列增长时，eLLM通过内存借调维持大批次处理，避免vLLM的性能陡降。</p> </li></ul> \n<p></p> \n<p><img alt=\"图片\" height=\"280\" src=\"https://i-blog.csdnimg.cn/img_convert/7947842e248574ed3323d2d37108010a.jpeg\" width=\"554\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p><strong><strong>图9：离线推理性能评测</strong></strong></p> \n<p></p> \n<h3 id=\"section-参考\"><a id=\"article-anchor-15\"></a><strong>参考</strong><a class=\"heading-anchor\" href=\"#section-参考\" aria-label=\"链接到本节：参考\">#</a></h3> \n<p>[1] eLLM:<a title=\"https://arxiv.org/abs/2506.15155\">&nbsp;https://arxiv.org/abs/2506.15155</a></p> \n<p>[2] GLA:<a title=\"https://arxiv.org/abs/2505.21487\">&nbsp;https://arxiv.org/abs/2505.21487</a></p> \n<p>[3] LayerKV:&nbsp;<a title=\"https://arxiv.org/abs/2410.00428\" href=\"https://arxiv.org/abs/2410.00428\" target=\"_blank\" rel=\"noopener noreferrer\">https://arxiv.org/abs/2410.00428</a></p>\n        ",
+    "headings": [
+      {
+        "id": "section-简介",
+        "level": 3,
+        "text": "简介"
+      },
+      {
+        "id": "section-显存管理挑战",
+        "level": 3,
+        "text": "显存管理挑战"
+      },
+      {
+        "id": "section-ellm设计",
+        "level": 3,
+        "text": "eLLM设计"
+      },
+      {
+        "id": "section-ellm结果对比",
+        "level": 3,
+        "text": "eLLM结果对比"
+      },
+      {
+        "id": "section-参考",
+        "level": 3,
+        "text": "参考"
+      }
+    ],
+    "textLength": 3474,
+    "readingMinutes": 8,
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/149347243",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:08:17.793Z",
-    "nextRetryAt": "2026-11-09T09:08:17.793Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "7fe4e091614b32eccadcc933f949adbd065f256ebd196000cb8c5308a70bb855",
+    "fetchedAt": "2026-11-02T11:45:46.997Z",
+    "checkedAt": "2026-11-02T11:45:46.997Z",
+    "nextRetryAt": "2026-12-02T11:45:46.997Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

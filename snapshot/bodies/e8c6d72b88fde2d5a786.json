@@ -2,17 +2,145 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "e8c6d72b88fde2d5a786",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "<h2 id=\"section-导读\"><strong>导读</strong><a class=\"heading-anchor\" href=\"#section-导读\" aria-label=\"链接到本节：导读\">#</a></h2>\n\n<p>本文围绕一个核心问题展开：如何让AI助手从“输出文字”进化到“生成界面”？我们基于Google A2UI协议，自研了Vue渲染器和 Agent 完整工具链，形成了一套完整的生成式UI体系。文章将详细阐述Runtime Schema装配、双重校验机制、SSE双通道输出、Wrapper组件扩展等关键设计，为构建标准化、可复用的AI交互界面提供参考。</p>\n\n<h2 id=\"section-引言\"><strong>引言</strong><a class=\"heading-anchor\" href=\"#section-引言\" aria-label=\"链接到本节：引言\">#</a></h2>\n\n<p>在 B 站商业广告业务中，我们开发了统一的 AI 助手框架，创建不同业务的知识库，以 markdown 渲染的形式输出内容，实现了不同业务中 AI 助手的快速应用。</p>\n\n<p>但是，随着时间的推移和 AI 在业务中的快速应用，当大模型的能力从“聊天”走向“办事”时，如何让 AI 稳定、可靠地生成真正的“可交互界面”，提高信息传达和交互的效率，成为越来越多公司和业务关注的方向，从而带来了大模型生成 UI 的发展趋势。</p>\n\n<p>关于这一点，我们内部的 AI 助手框架已经支持在 Markdown 中通过自定义语法嵌入组件，例如<strong>&nbsp;::: ProductCard :::</strong>，具有直观、轻量的特点，能在对话流中快速引入可交互元素。但在多业务、复杂任务的规模化落地中，它的局限性逐渐显现，例如前端、后端、Agent 耦合严重，需要 Agent 严格配合前端的特定格式来填充内容。这种方案的本质是 Agent 按前端预定义的模板填充数据，而非让 Agent 自主描述 UI 结构，不符合生成式 UI 的核心思想。</p>\n\n<p>如何快速和我们的 AI 助手框架结合，形成完整的生成式 UI 体系？</p>\n\n<p>在探索这个问题的过程中，我们发现这不是一个单纯的前端渲染问题，而是一个涉及大模型生成、协议标准、后端校验、前端渲染、多业务治理的系统工程。基于此，本文将完整拆解我们的实践路径。</p>\n\n<h2 id=\"section-一-b站商业广告的-ai-助手框架\"><strong>一、B站商业广告的 AI 助手框架</strong><a class=\"heading-anchor\" href=\"#section-一-b站商业广告的-ai-助手框架\" aria-label=\"链接到本节：一、B站商业广告的 AI 助手框架\">#</a></h2>\n\n<p>在展开生成式UI的方案之前，有必要先回顾一下我们的起点。</p>\n\n<h3 id=\"section-1-1-统一-ai-助手框架\"><strong>1.1 统一 AI 助手框架</strong><a class=\"heading-anchor\" href=\"#section-1-1-统一-ai-助手框架\" aria-label=\"链接到本节：1.1 统一 AI 助手框架\">#</a></h3>\n\n<p>在B站商业广告业务中，我们面对的是多个差异化的业务场景：</p>\n\n<ul><li>\n\t<p>广告投放助手：帮助广告主理解投放数据、优化投放策略</p>\n\t</li><li>\n\t<p>产品帮助助手：介绍广告产品功能、引导操作流程</p>\n\t</li><li>\n\t<p>数据分析助手：生成广告数据报表、提供洞察分析</p>\n\t</li></ul>\n\n<p>为了快速响应各业务场景的AI需求，我们构建了统一的 AI 助手框架：</p>\n\n<ul><li>\n\t<p>统一前端框架：标准化的对话接口、视觉样式，业务方只需实现对应的接口，并按需实现自定义功能</p>\n\t</li><li>\n\t<p>Markdown 渲染：前端统一支持Markdown格式输出，快速实现内容呈现</p>\n\t</li></ul>\n\n<h3 id=\"section-1-2-从-可读-到-可交互-的需求演进\"><strong>1.2 从“可读”到“可交互”的需求演进</strong><a class=\"heading-anchor\" href=\"#section-1-2-从-可读-到-可交互-的需求演进\" aria-label=\"链接到本节：1.2 从“可读”到“可交互”的需求演进\">#</a></h3>\n\n<p>随着业务深入，纯文本/Markdown的局限性开始显现：</p>\n\n<p><strong>场景一：广告投放诊断</strong></p>\n\n<ul><li>\n\t<p>用户问：“帮我看看最近三天某计划的投放效果？”</p>\n\t</li><li>\n\t<p>AI返回一段文字描述：“曝光量xx，点击率xx%，消耗xx元，建议优化素材...”</p>\n\t</li><li>\n\t<p>用户需要：一个包含关键指标卡片、趋势图表</p>\n\t</li></ul>\n\n<p><strong>场景二：意图识别</strong></p>\n\n<ul><li>\n\t<p>用户问：“我要下单，目标是xxx...”</p>\n\t</li><li>\n\t<p>AI返回：“您提供的缺少xxx参数...请您补充参数重新告知我下单。”</p>\n\t</li><li>\n\t<p>用户需要：一个结构化表单，可以直接在对话中修改并重新提交</p>\n\t</li></ul>\n\n<p>这些场景的共同需求是：从“告诉用户怎么做”升级为“让用户在对话中直接完成操作”，这就引出了生成式UI的核心命题。</p>\n\n<p>我们固然可以使用模板填充的方式：</p>\n\n<pre><code>::: ProductCard {\"name\":\"手机\",\"id\":1}\n:::</code></pre>\n\n<ul></ul>\n\n<p>这种方案可以快速实现大部分简单场景——前端预定义好各类卡片组件，Agent按约定格式输出，前端匹配渲染。</p>\n\n<p>它的优势很明显：</p>\n\n<ul><li>\n\t<p>实现简单，短期内快速上线</p>\n\t</li><li>\n\t<p>卡片样式可控，符合设计规范</p>\n\t</li><li>\n\t<p>适合场景固定、UI形态稳定的业务</p>\n\t</li></ul>\n\n<p>但随着场景复杂化，其局限性也逐渐暴露：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"330\" src=\"https://i-blog.csdnimg.cn/img_convert/4192d70947cb5280fff14828d21c20ff.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>本质问题：模板填充方案让Agent扮演的是“填表员”角色，而非“设计师”角色，Agent无法根据上下文动态决定UI形态。</p>\n\n<p></p>\n\n<h2 id=\"section-二-生成式-ui-的思路\"><strong>二、生成式 UI 的思路</strong><a class=\"heading-anchor\" href=\"#section-二-生成式-ui-的思路\" aria-label=\"链接到本节：二、生成式 UI 的思路\">#</a></h2>\n\n<h3 id=\"section-2-1-为什么选择-a2ui\"><strong>2.1 为什么选择 A2UI</strong><a class=\"heading-anchor\" href=\"#section-2-1-为什么选择-a2ui\" aria-label=\"链接到本节：2.1 为什么选择 A2UI\">#</a></h3>\n\n<p>在协议选型上，我们调研了多种方案，最终选择 Google 的 A2UI 协议，原因如下：</p>\n\n<ul><li>\n\t<p>标准化：大厂提出，业界规范，有社区支持，避免自研协议的技术债务</p>\n\t</li><li>\n\t<p>声明式：JSON Schema 描述UI，天然适合大模型生成</p>\n\t</li><li>\n\t<p>可增量：支持 dataModelUpdate / surfaceUpdate，实现细粒度更新</p>\n\t</li><li>\n\t<p>框架无关：同一份 UI 描述可在 Vue / React / 小程序等多端渲染</p>\n\t</li><li>\n\t<p>安全可控：组件基于组件库白名单，Agent 自由选择，客户端负责渲染</p>\n\t</li></ul>\n\n<h3 id=\"section-2-2-整体架构\"><strong>2.2 整体架构</strong><a class=\"heading-anchor\" href=\"#section-2-2-整体架构\" aria-label=\"链接到本节：2.2 整体架构\">#</a></h3>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"1536\" src=\"https://i-blog.csdnimg.cn/img_convert/016e4296cd3b72982585d7ed83f32d8e.png\" width=\"1024\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h2 id=\"section-三-后端-agent-设计\"><strong>三、后端 + Agent 设计</strong><a class=\"heading-anchor\" href=\"#section-三-后端-agent-设计\" aria-label=\"链接到本节：三、后端 + Agent 设计\">#</a></h2>\n\n<h3 id=\"section-3-1-请求入参设置\"><strong>3.1 请求入参设置</strong><a class=\"heading-anchor\" href=\"#section-3-1-请求入参设置\" aria-label=\"链接到本节：3.1 请求入参设置\">#</a></h3>\n\n<p>每个业务请求需要携带能力边界声明：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"371\" src=\"https://i-blog.csdnimg.cn/img_convert/1c14f50e57d7dcd0cc246352152ea153.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h3 id=\"section-3-2-runtime-schema-装配\"><strong>3.2 Runtime Schema 装配</strong><a class=\"heading-anchor\" href=\"#section-3-2-runtime-schema-装配\" aria-label=\"链接到本节：3.2 Runtime Schema 装配\">#</a></h3>\n\n<p>根据业务标识和白名单，动态装配该业务可用的组件和动作集合。</p>\n\n<p>装配流程举例：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"1536\" src=\"https://i-blog.csdnimg.cn/img_convert/66f3746a466f148af6d2055d6c1284e3.png\" width=\"1024\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>这样设计的价值在于，一是能力隔离，不同业务在统一协议下安全、独立地演进；二是动态扩展，新增业务只需要补充组件包，不改核心逻辑；三是输出可控，白名单机制限制了模型输出的边界。</p>\n\n<h3 id=\"section-3-3-双重校验机制\"><strong>3.3 双重校验机制</strong><a class=\"heading-anchor\" href=\"#section-3-3-双重校验机制\" aria-label=\"链接到本节：3.3 双重校验机制\">#</a></h3>\n\n<p>尽管我们通过能力隔离，已经生成了安全的 Prompt，但是由于模型输出可能不稳定，因此针对大模型产出的 A2UI JSON，必须经过严格校验才可放行。我们设计了双层校验机制：</p>\n\n<p><strong>第一层：结构校验</strong></p>\n\n<ul><li>\n\t<p>消息类型是否合法，符合 A2UI 协议结构（beginRendering / surfaceUpdate / dataModelUpdate）</p>\n\t</li><li>\n\t<p>组件类型是否在白名单</p>\n\t</li><li>\n\t<p>组件属性是否完整</p>\n\t</li><li>\n\t<p>动作名称是否在白名单</p>\n\t</li></ul>\n\n<p><strong>第二层：过渡校验</strong></p>\n\n<p>Surface 是 A2UI 中一个独立的 UI 实例载体，每个 Surface 有唯一的 surfaceId，代表一个独立的界面区域，具备从“未创建”→“已创建”→“可交互”的状态转换。我们需要确保这个过程合法有序，避免出现更新不存在的界面、重复初始化等异常。为此，我们维护了每个 Surface 的状态机：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"720\" src=\"https://i-blog.csdnimg.cn/img_convert/8ef0ebd25495f7c35a2d57f6a70a4262.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>校验规则：</p>\n\n<ul><li>\n\t<p>不能更新未创建的 Surface</p>\n\t</li><li>\n\t<p>对于同一个 Surface，不能重复产出 beginRendering</p>\n\t</li><li>\n\t<p>更新时 SurfaceId 必须匹配当前会话</p>\n\t</li></ul>\n\n<h3 id=\"section-3-4-sse-双通道输出\"><strong>3.4 SSE 双通道输出</strong><a class=\"heading-anchor\" href=\"#section-3-4-sse-双通道输出\" aria-label=\"链接到本节：3.4 SSE 双通道输出\">#</a></h3>\n\n<p>传统方案中，前端需要从文本流中正则匹配和解析JSON，链路脆弱。我们将文本流和结构化数据分离，两条通道独立传输，互不影响。若 a2ui_message 通道出现数据丢失，前端可依据 message_stream 中的文本内容降级展示，或通过 finish 事件中的完整消息进行重试补发，确保 UI 渲染的可靠性。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"295\" src=\"https://i-blog.csdnimg.cn/img_convert/3b04c9d01d9c9a021bb4499b634a8ca0.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h2 id=\"section-四-前端通用渲染器-sdk\"><strong>四、</strong><strong>前端通用渲染器 SDK</strong><a class=\"heading-anchor\" href=\"#section-四-前端通用渲染器-sdk\" aria-label=\"链接到本节：四、前端通用渲染器 SDK\">#</a></h2>\n\n<h3 id=\"section-4-1-整体结构\"><strong>4.1 整体结构</strong><a class=\"heading-anchor\" href=\"#section-4-1-整体结构\" aria-label=\"链接到本节：4.1 整体结构\">#</a></h3>\n\n<p>我们基于 Google 官方开源的 A2UI 协议、React 渲染器等，自研实现了 Vue 渲染器，以 npm 包的形式交付，业务方安装即可使用：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"523\" src=\"https://i-blog.csdnimg.cn/img_convert/ebce746b5339db2bdc0525059ca57788.png\" width=\"503\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h3 id=\"section-4-2-消息处理器\"><strong>4.2 消息处理器</strong><a class=\"heading-anchor\" href=\"#section-4-2-消息处理器\" aria-label=\"链接到本节：4.2 消息处理器\">#</a></h3>\n\n<p>我们实现了消息处理器，为同一个 Surface 的每条 A2UI JSON 消息生成唯一签名。已处理过的消息会被识别并跳过，不再重复执行，保证逻辑的幂等性。另外，由于网络传输延迟、历史会话回放等场景，消息可能出现乱序或倒序到达，我们也设计了相应的处理机制。极端情况下，有极小概率会出现个别消息丢失，但仅会导致 Surface 的 UI 状态短暂不一致（比如，没有回显已经填写过的字段），不会引发严重渲染问题。</p>\n\n<p>消息处理器链路如下：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"1536\" src=\"https://i-blog.csdnimg.cn/img_convert/66959d331e95677bff0a08eea083bada.png\" width=\"1024\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h3 id=\"section-4-3-datamodel-设计\"><strong>4.3 DataModel 设计</strong><a class=\"heading-anchor\" href=\"#section-4-3-datamodel-设计\" aria-label=\"链接到本节：4.3 DataModel 设计\">#</a></h3>\n\n<p>统一状态存储，支持 path 级别读写和数据绑定：</p>\n\n<pre><code>DataModel结构示例：\n{\n  \"/form/name\": \"张三\",\n  \"/form/email\": \"zhang@example.com\",\n  \"/cart/items\": [{\"id\": 1, \"name\": \"商品A\"}],\n  \"/ui/loading\": false\n}</code></pre>\n\n<ul></ul>\n\n<p>组件通过path引用数据，任一数据变化，所有绑定组件自动更新。</p>\n\n<h3 id=\"section-4-4-wrapper-组件体系\"><strong>4.4 Wrapper 组件体系</strong><a class=\"heading-anchor\" href=\"#section-4-4-wrapper-组件体系\" aria-label=\"链接到本节：4.4 Wrapper 组件体系\">#</a></h3>\n\n<p>业务方新增自定义组件时，只需遵循统一规范，无需理解渲染器内部逻辑。</p>\n\n<p>接入流程：</p>\n\n<ul><li>\n\t<p>编写业务组件（普通Vue组件）</p>\n\t</li><li>\n\t<p>使用 SDK 提供的 Wrapper 组合函数包装</p>\n\t</li><li>\n\t<p>注册到组件映射表（组件类型名 → 业务组件）</p>\n\t</li><li>\n\t<p>Agent 即可使用</p>\n\t</li></ul>\n\n<p>Wrapper提供的能力：</p>\n\n<ul><li>\n\t<p>自动解析 node 中的属性</p>\n\t</li><li>\n\t<p>自动绑定 DataModel 数据（通过 path 引用）</p>\n\t</li><li>\n\t<p>自动构建动作回调函数</p>\n\t</li><li>\n\t<p>统一处理 loading、error 等通用状态</p>\n\t</li></ul>\n\n<h3 id=\"section-4-5-动作闭环\"><strong>4.5 动作闭环</strong><a class=\"heading-anchor\" href=\"#section-4-5-动作闭环\" aria-label=\"链接到本节：4.5 动作闭环\">#</a></h3>\n\n<p>组件提交的 action，分为前端处理和后端处理，业务方可自定义 action 处理方法，SDK 提供的默认有以下2类：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"181\" src=\"https://i-blog.csdnimg.cn/img_convert/f9463a10bca463ac3c7a2764aebc0f13.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>前端处理的事件比较简单。对于后端处理的事件，会经历以下流程：</p>\n\n<ul><li>\n\t<p>用户交互触发动作</p>\n\t</li><li>\n\t<p>动作冒泡到业务层</p>\n\t</li><li>\n\t<p>业务层通过HTTP接口回传后端</p>\n\t</li><li>\n\t<p>后端返回dataModelUpdate或surfaceUpdate</p>\n\t</li><li>\n\t<p>前端执行增量刷新（原位更新）</p>\n\t</li></ul>\n\n<p>这样，我们便实现了从 Agent 到前端 SDK 的、可复用的完整链路。</p>\n\n<h2 id=\"section-五-与现有框架的集成\"><strong>五、与现有框架的集成</strong><a class=\"heading-anchor\" href=\"#section-五-与现有框架的集成\" aria-label=\"链接到本节：五、与现有框架的集成\">#</a></h2>\n\n<p>我们并非将现有业务中已经实现的 AI 助手推倒重来，而是进行了扩展。Agent 返回的 finish 事件中，包含了 SDK 提供的标准组件 A2UIMessage.vue，业务方可直接将其作为模板组件使用：</p>\n\n<pre><code>::: a2ui-message {\"message\": [...]}\n:::</code></pre>\n\n<ul></ul>\n\n<p>业务方的接入成本也非常小，只需要三步：</p>\n\n<ul><li>\n\t<p>前端实现业务组件，并接入 SDK</p>\n\t</li><li>\n\t<p>前端注册组件包</p>\n\t</li><li>\n\t<p>业务方后端或者业务方 Agent 调用接口，生成 A2UI 消息</p>\n\t</li></ul>\n\n<p>至此，我们完整阐述说明了 A2UI 实践的完整框架和流程。可以看到，它具备以下价值：</p>\n\n<p>对业务方：</p>\n\n<ul><li>\n\t<p>无需关心UI实现，聚焦业务逻辑</p>\n\t</li><li>\n\t<p>新场景接入周期从天级缩短到小时级</p>\n\t</li></ul>\n\n<p>对 Agent：</p>\n\n<ul><li>\n\t<p>从“记忆数据格式”转向“理解UI描述语言”</p>\n\t</li><li>\n\t<p>具备真正的“界面生成”能力</p>\n\t</li></ul>\n\n<p>对整体架构：</p>\n\n<ul><li>\n\t<p>前后端解耦，协议标准化</p>\n\t</li><li>\n\t<p>多业务可复用同一套基础设施</p>\n\t</li></ul>\n\n<h2 id=\"section-六-demo-示例\"><strong>六、DEMO 示例</strong><a class=\"heading-anchor\" href=\"#section-六-demo-示例\" aria-label=\"链接到本节：六、DEMO 示例\">#</a></h2>\n\n<p>我们已经实现了完整的可复用工具链，以下是一些 demo，展示了从用户输入 Prompt 到产出组件的过程。实际使用中，由业务方的后端或者 Agent 调用 A2UI 的 Agent 服务获取真实的 A2UI JSON，再交给业务方的前端渲染。</p>\n\n<p>注意：以下为简化示例，实际 JSON 结构以 A2UI 协议为准。</p>\n\n<p></p>\n\n<h3 id=\"section-6-1-图表示例\"><strong>6.1 图表示例</strong><a class=\"heading-anchor\" href=\"#section-6-1-图表示例\" aria-label=\"链接到本节：6.1 图表示例\">#</a></h3>\n\n<ul><li>\n\t<p>用户在对话框中输入：“我想查看最近12个月某5个车企（化名）的销量变化趋势图”</p>\n\t</li><li>\n\t<p>Agent 生成 A2UI JSON：</p>\n\t</li></ul>\n\n<pre><code>{\n  \"sessionId\": \"session-xxx\",\n  \"messages\": [\n    { \"createSurface\": { \"surfaceId\": \"surface-xxx\" } },\n    {\n      \"updateComponents\": {\n        \"surfaceId\": \"surface-xxx\",\n        \"components\": [\n          { \"id\": \"root\", \"component\": \"Card\", \"child\": \"chart-container\" },\n          {\n            \"id\": \"sales-chart\",\n            \"component\": \"Charts\",\n            \"type\": \"line\",\n            \"title\": \"近12个月车企销量趋势\",\n            \"options\": {\n              \"xAxis\": { \"data\": [\"1月\", \"2月\", ...] },\n              \"series\": [\n                { \"name\": \"车企A\", \"data\": [12500, 13200, ...] },\n                { \"name\": \"车企B\", \"data\": [10200, 10800, ...] },\n                ...\n              ]\n            }\n          }\n        ]\n      }\n    }\n  ]\n}</code></pre>\n\n<ul><li>\n\t<p>渲染结果：</p>\n\t</li></ul>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"898\" src=\"https://i-blog.csdnimg.cn/img_convert/6955c693d93810e8a8a358d83d5576f2.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<h3 id=\"section-6-2-表单示例\"><strong>6.2 表单示例</strong><a class=\"heading-anchor\" href=\"#section-6-2-表单示例\" aria-label=\"链接到本节：6.2 表单示例\">#</a></h3>\n\n<ul><li>\n\t<p>用户在对话框中输入：“生成一个用户报名信息的填写表单”</p>\n\t</li><li>\n\t<p>Agent 生成 A2UI JSON：</p>\n\t</li></ul>\n\n<pre><code>{\n  \"sessionId\": \"session-xxx\",\n  \"messages\": [\n    { \"createSurface\": { \"surfaceId\": \"surface-xxx\", \"root\": \"root\" } },\n    { \"updateDataModel\": { \"surfaceId\": \"surface-xxx\", \"value\": { \"userName\": \"\", \"userEmail\": \"\", \"userPhone\": \"\" } } },\n    {\n      \"updateComponents\": {\n        \"surfaceId\": \"surface-xxx\",\n        \"components\": [\n          { \"id\": \"root\", \"component\": \"Card\", \"child\": \"form-column\" },\n          { \"id\": \"form-column\", \"component\": \"Column\", \"children\": [\"title-text\", \"name-field\", \"email-field\", \"phone-field\", \"submit-btn\"] },\n          { \"id\": \"title-text\", \"component\": \"Text\", \"text\": \"用户报名信息填写\" },\n          { \"id\": \"name-field\", \"component\": \"TextField\", \"label\": \"姓名\", \"placeholder\": \"请输入姓名\" },\n          { \"id\": \"email-field\", \"component\": \"TextField\", \"label\": \"邮箱\", \"placeholder\": \"请输入邮箱\" },\n          { \"id\": \"phone-field\", \"component\": \"TextField\", \"label\": \"手机号\", \"placeholder\": \"请输入手机号\" },\n          { \"id\": \"submit-btn\", \"component\": \"Button\", \"text\": \"提交报名\", \"action\": { \"name\": \"marketing.submitLead\" } }\n        ]\n      }\n    }\n  ]\n}</code></pre>\n\n<ul><li>\n\t<p>渲染结果：</p>\n\t</li></ul>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"564\" src=\"https://i-blog.csdnimg.cn/img_convert/504ce28e7bbee930f50c7cdef6dcad01.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<ul><li>\n\t<p>用户填写并点击提交后，前端将表单数据回传至后端：</p>\n\t</li></ul>\n\n<pre><code>// 发送消息示例：后端读取注释中的数据作为结果\n用户提交了数据&lt;!-- {\"action\":\"marketing.submitLead\",\"data\":{\"userName\":\"小明\",\"userEmail\":\"aaa@bbb.com\",\"userPhone\":\"12345612345\"}} --&gt;</code></pre>\n\n<ul><li>\n\t<p>后端处理完成后，再次调用 A2UI 服务，返回更新界面的指令：</p>\n\t</li></ul>\n\n<pre><code>{\n  \"sessionId\": \"session-xxx\",\n  \"messages\": [\n    { \"updateDataModel\": { \"surfaceId\": \"surface-xxx\", \"value\": {} } },\n    {\n      \"updateComponents\": {\n        \"surfaceId\": \"surface-xxx\",\n        \"components\": [\n          { \"id\": \"success-icon\", \"component\": \"Text\", \"text\": \"✓\" },\n          { \"id\": \"title-text\", \"component\": \"Text\", \"text\": \"报名成功\" },\n          { \"id\": \"message-text\", \"component\": \"Text\", \"text\": \"感谢您的报名，我们会尽快与您联系。\" },\n          { \"id\": \"form-column\", \"component\": \"Column\", \"children\": [\"success-icon\", \"title-text\", \"message-text\"] }\n        ]\n      }\n    }\n  ]\n}</code></pre>\n\n<ul><li>\n\t<p>前端接收消息，并处理 UI 更新：</p>\n\t</li></ul>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"694\" src=\"https://i-blog.csdnimg.cn/img_convert/f2e82e925b155dae706075b975d1d326.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p><strong>七、总结</strong></p>\n\n<p></p>\n\n<p>目前，我们的 A2UI 方案已在部分业务中接入，正在快速迭代中。由于 A2UI 协议仍处于早期阶段，大模型能力也在持续演进，尚无法支持全部复杂组件的自主生成。因此，我们目前采用 A2UI 实现通用交互、业务自行实现复杂组件的混合模式。</p>\n\n<p>但可以预见，随着协议和大模型能力的成熟，生成式 UI 必将释放更强大的能力和更丰富的应用场景。接下来，我们将继续探索 A2UI 在移动端、小程序等架构上的应用，期待在不远的未来做出更优质的成果。</p>\n\n<p></p>\n\n<p>-End-</p>\n\n<p>作者丨Nie</p>",
+    "headings": [
+      {
+        "id": "section-导读",
+        "level": 2,
+        "text": "导读"
+      },
+      {
+        "id": "section-引言",
+        "level": 2,
+        "text": "引言"
+      },
+      {
+        "id": "section-一-b站商业广告的-ai-助手框架",
+        "level": 2,
+        "text": "一、B站商业广告的 AI 助手框架"
+      },
+      {
+        "id": "section-1-1-统一-ai-助手框架",
+        "level": 3,
+        "text": "1.1 统一 AI 助手框架"
+      },
+      {
+        "id": "section-1-2-从-可读-到-可交互-的需求演进",
+        "level": 3,
+        "text": "1.2 从“可读”到“可交互”的需求演进"
+      },
+      {
+        "id": "section-二-生成式-ui-的思路",
+        "level": 2,
+        "text": "二、生成式 UI 的思路"
+      },
+      {
+        "id": "section-2-1-为什么选择-a2ui",
+        "level": 3,
+        "text": "2.1 为什么选择 A2UI"
+      },
+      {
+        "id": "section-2-2-整体架构",
+        "level": 3,
+        "text": "2.2 整体架构"
+      },
+      {
+        "id": "section-三-后端-agent-设计",
+        "level": 2,
+        "text": "三、后端 + Agent 设计"
+      },
+      {
+        "id": "section-3-1-请求入参设置",
+        "level": 3,
+        "text": "3.1 请求入参设置"
+      },
+      {
+        "id": "section-3-2-runtime-schema-装配",
+        "level": 3,
+        "text": "3.2 Runtime Schema 装配"
+      },
+      {
+        "id": "section-3-3-双重校验机制",
+        "level": 3,
+        "text": "3.3 双重校验机制"
+      },
+      {
+        "id": "section-3-4-sse-双通道输出",
+        "level": 3,
+        "text": "3.4 SSE 双通道输出"
+      },
+      {
+        "id": "section-四-前端通用渲染器-sdk",
+        "level": 2,
+        "text": "四、前端通用渲染器 SDK"
+      },
+      {
+        "id": "section-4-1-整体结构",
+        "level": 3,
+        "text": "4.1 整体结构"
+      },
+      {
+        "id": "section-4-2-消息处理器",
+        "level": 3,
+        "text": "4.2 消息处理器"
+      },
+      {
+        "id": "section-4-3-datamodel-设计",
+        "level": 3,
+        "text": "4.3 DataModel 设计"
+      },
+      {
+        "id": "section-4-4-wrapper-组件体系",
+        "level": 3,
+        "text": "4.4 Wrapper 组件体系"
+      },
+      {
+        "id": "section-4-5-动作闭环",
+        "level": 3,
+        "text": "4.5 动作闭环"
+      },
+      {
+        "id": "section-五-与现有框架的集成",
+        "level": 2,
+        "text": "五、与现有框架的集成"
+      },
+      {
+        "id": "section-六-demo-示例",
+        "level": 2,
+        "text": "六、DEMO 示例"
+      },
+      {
+        "id": "section-6-1-图表示例",
+        "level": 3,
+        "text": "6.1 图表示例"
+      },
+      {
+        "id": "section-6-2-表单示例",
+        "level": 3,
+        "text": "6.2 表单示例"
+      }
+    ],
+    "textLength": 6773,
+    "readingMinutes": 16,
     "sourceId": "bilibili-csdn",
     "sourceUrl": "https://blog.csdn.net/bilibili_TC/article/details/161427969",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:55.548Z",
-    "nextRetryAt": "2026-11-09T09:07:55.548Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "2a96329ea5bfa5f34487341631241a26d44d2ef20cd8d3cd2fce6e546c0a4ced",
+    "fetchedAt": "2026-11-02T11:43:14.161Z",
+    "checkedAt": "2026-11-02T11:43:14.161Z",
+    "nextRetryAt": "2026-12-02T11:43:14.161Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

@@ -2,17 +2,69 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "03e59a2e3a2fa73f842f",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <h3 id=\"section-v0-7-5-版本主要新增-增强了以下核心特性\"><a id=\"article-anchor-2\"></a>V0.7.5 版本主要新增、增强了以下核心特性<a class=\"heading-anchor\" href=\"#section-v0-7-5-版本主要新增-增强了以下核心特性\" aria-label=\"链接到本节：V0.7.5 版本主要新增、增强了以下核心特性\">#</a></h3> \n<p id=\"article-anchor-3\">🍀<strong> 基于 Falcon 评测集的</strong><strong>Text2SQL评测体系全面升级，支持LLM/Agent两种评测模式和多环境评测</strong></p> \n<p id=\"article-anchor-4\">🍀<strong> 优化 Falcon 评测集的加载和支持动态多环境的问题集</strong></p> \n<p id=\"article-anchor-5\">🍀<strong> </strong> <strong>新增 Neo4j 图数据库支持</strong></p> \n<p id=\"article-anchor-6\">🍀<strong> </strong> <strong>支持Elasticsearch的全文检索</strong></p> \n<p id=\"article-anchor-7\">🍀<strong> 新增</strong><code>指标检索Agent</code><strong>、</strong><code>波动分析Agent</code><strong>增强数据分析能力</strong></p> \n<p id=\"article-anchor-8\">🍀<strong> 新增</strong><code>WebSerachAgent</code><strong>处理联网搜索场景</strong></p> \n<h2 id=\"section-新特性\"><a id=\"article-anchor-10\"></a>✨新特性<a class=\"heading-anchor\" href=\"#section-新特性\" aria-label=\"链接到本节：✨新特性\">#</a></h2> \n<h4><a id=\"article-anchor-11\"></a><strong>1.基于 Falcon 评测集的Text2SQL评测体系全面升级，支持LLM/Agent两种评测模式和多环境评测</strong></h4> \n<p><strong><code>a.支持</code></strong><strong><code><code>端到端评测LLM在Falcon评测集基准</code></code></strong></p> \n<p><strong><code><code>b.支持评测自定义Agent在Falcon评测集准确率、可执行率</code></code></strong></p> \n<p id=\"article-anchor-12\"></p> \n<p><img alt=\"\" height=\"1520\" id=\"article-anchor-13\" src=\"https://i-blog.csdnimg.cn/img_convert/e2bd7b8a29a588206e7dfa4d95c44d48.png\" width=\"3016\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-14\"></p> \n<p><img alt=\"\" height=\"966\" id=\"article-anchor-15\" src=\"https://i-blog.csdnimg.cn/img_convert/123fadf915510c82d77e4a9a8ec073f0.png\" width=\"1733\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-16\"><strong>详细的使用文档见：</strong></p> \n<ul><li>中文：<a title=\"蚂蚁取数评测集使用说明文档(Datasets Benchmark)\" href=\"https://www.yuque.com/eosphoros/dbgpt-docs/hpowc4o7134xnixn\" target=\"_blank\" rel=\"noopener noreferrer\">蚂蚁取数评测集使用说明文档(Datasets Benchmark)</a></li><li>英文：<a title=\"Ant Group Data Retrieval Benchmark Dataset Guide\" href=\"http://docs.dbgpt.cn/docs/modules/benchmark\" target=\"_blank\" rel=\"noopener noreferrer\">Ant Group Data Retrieval Benchmark Dataset Guide</a></li></ul> \n<h4><a id=\"article-anchor-17\"></a><strong>2.优化 Falcon 评测集的加载和支持动态多环境的问题集</strong></h4> \n<ul><li>Falcon评测集加载优化为运行时动态加载，且从Falcon仓库动态拉取最新问题集</li><li>拆分为DEV/TEST多环境问题集，按需评测</li></ul> \n<h4><a id=\"article-anchor-18\"></a><strong>3.新增 Neo4j 图数据库支持</strong></h4> \n<p id=\"article-anchor-19\">扩展Neo4j 数据库，进一步提升 RAG在复杂知识关系处理上的能力</p> \n<p id=\"article-anchor-20\"></p> \n<p><img alt=\"\" height=\"1358\" id=\"article-anchor-21\" src=\"https://i-blog.csdnimg.cn/img_convert/de2af2072cbabe870f8bd33b315165c9.png\" width=\"1762\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<h4><a id=\"article-anchor-22\"></a><strong>4.支持Elasticsearch的全文检索</strong></h4> \n<p id=\"article-anchor-23\">在ES支持向量检索的基础上，新增全文检索能力，提升RAG的检索召回能力</p> \n<h4><a id=\"article-anchor-24\"></a><strong>5.DB-GPT新增</strong><code><strong>指标检索Agent</strong></code><strong>、</strong><code><strong>波动分析Agent</strong></code><strong>、</strong><code><strong>WebSearchAgent</strong></code><strong>等Agent</strong></h4> \n<p id=\"article-anchor-25\"></p> \n<p><img alt=\"\" height=\"1316\" id=\"article-anchor-26\" src=\"https://i-blog.csdnimg.cn/img_convert/c3cf543eb8da8ed95e17161587a35973.jpeg\" width=\"1952\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<h2 id=\"section-bug-修复\"><a id=\"article-anchor-28\"></a>🐞 Bug 修复<a class=\"heading-anchor\" href=\"#section-bug-修复\" aria-label=\"链接到本节：🐞 Bug 修复\">#</a></h2> \n<ul><li id=\"article-anchor-29\">修复benchmark结果对比中布尔值和空值结果比较问题 (#2967)</li><li id=\"article-anchor-30\">修复Graph知识图谱文档加载错误问题 (#2966)</li><li id=\"article-anchor-31\">修复知识图谱的参数丢失问题 (#2926)</li></ul> \n<ul><li id=\"article-anchor-32\">修复通过环境变量配置数据源时的错误 (#2924)</li><li id=\"article-anchor-33\">修复Milvus向量数据库在工作流中使用错误 (#2933)</li></ul> \n<ul><li id=\"article-anchor-34\">解决 AWEL 工作流多窗口问题和应用信息丢失 (#2944)</li></ul> \n<h2 id=\"section-其他\"><a id=\"article-anchor-36\"></a>🛠️其他<a class=\"heading-anchor\" href=\"#section-其他\" aria-label=\"链接到本节：🛠️其他\">#</a></h2> \n<ul><li id=\"article-anchor-37\">更新文档中的一些书写错误 (#2964)</li><li id=\"article-anchor-38\">调整benchmark问题集文件 (#2940)</li></ul> \n<p id=\"article-anchor-39\"></p> \n<h2 id=\"section-官方文档地址\"><a id=\"article-anchor-41\"></a>✨官方文档地址<a class=\"heading-anchor\" href=\"#section-官方文档地址\" aria-label=\"链接到本节：✨官方文档地址\">#</a></h2> \n<p id=\"article-anchor-42\"><strong>英文：</strong></p> \n<p><a title=\"http://docs.dbgpt.site/docs/overview\" href=\"http://docs.dbgpt.site/docs/overview\" target=\"_blank\" rel=\"noopener noreferrer\">http://docs.dbgpt.site/docs/overview</a></p> \n<p id=\"article-anchor-43\"><strong>中文：</strong></p> \n<p><a title=\"https://www.yuque.com/eosphoros/dbgpt-docs/bex30nsv60ru0fmx\" href=\"https://www.yuque.com/eosphoros/dbgpt-docs/bex30nsv60ru0fmx\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.yuque.com/eosphoros/dbgpt-docs/bex30nsv60ru0fmx</a></p> \n<p id=\"article-anchor-44\"></p> \n<h2 id=\"section-致谢\"><a id=\"article-anchor-46\"></a>✨致谢<a class=\"heading-anchor\" href=\"#section-致谢\" aria-label=\"链接到本节：✨致谢\">#</a></h2> \n<h4 id=\"article-anchor-47\"><a id=\"article-anchor-48\"></a>🎉新贡献者</h4> \n<p id=\"article-anchor-49\">V0.7.5 版本新增 <strong>5 位</strong> 新的贡献者：</p> \n<ul><li id=\"article-anchor-50\"><strong>@Hikomorebi</strong></li><li id=\"article-anchor-51\"><strong>@ZhikunZheng</strong></li><li id=\"article-anchor-52\"><strong>@lusains</strong></li><li id=\"article-anchor-53\"><strong>@zhangyj21-lh</strong></li><li id=\"article-anchor-54\"><strong>@ymx10086</strong></li></ul> \n<p id=\"article-anchor-55\"></p> \n<p id=\"article-anchor-56\">🔥🔥感谢所有贡献者使这次发布成为可能！</p> \n<p id=\"article-anchor-57\"></p> \n<p id=\"article-anchor-58\"><strong>@Aries-ckt</strong>, <strong>@Hikomorebi</strong>, <strong>@ZhikunZheng</strong>, <strong>@chenliang15405</strong>, <strong>@dusx1981</strong>, <strong>@huhao0926</strong>, <strong>@liuhill</strong>, <strong>@lusains</strong>, <strong>@yaoyifan-yyf</strong>, <strong>@ymx10086</strong>, <strong>@zhangyj21-lh</strong> and <strong>alan.cl</strong></p> \n<p id=\"article-anchor-59\"></p> \n<p><img alt=\"\" height=\"200\" id=\"article-anchor-60\" src=\"https://i-blog.csdnimg.cn/img_convert/fc09f2fee5f47a9f5b0208519a27952d.png\" width=\"1218\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-61\"></p> \n<h2 id=\"section-附录\"><a id=\"article-anchor-63\"></a>✨附录<a class=\"heading-anchor\" href=\"#section-附录\" aria-label=\"链接到本节：✨附录\">#</a></h2> \n<ul><li id=\"article-anchor-64\"><a title=\"快速开始\" href=\"http://docs.dbgpt.cn/docs/next/quickstart\" target=\"_blank\" rel=\"noopener noreferrer\">快速开始</a></li><li id=\"article-anchor-65\"><a title=\"Docker 快速部署\" href=\"http://docs.dbgpt.cn/docs/next/installation/docker\" target=\"_blank\" rel=\"noopener noreferrer\">Docker 快速部署</a></li></ul>\n        ",
+    "headings": [
+      {
+        "id": "section-v0-7-5-版本主要新增-增强了以下核心特性",
+        "level": 3,
+        "text": "V0.7.5 版本主要新增、增强了以下核心特性"
+      },
+      {
+        "id": "section-新特性",
+        "level": 2,
+        "text": "✨新特性"
+      },
+      {
+        "id": "section-bug-修复",
+        "level": 2,
+        "text": "🐞 Bug 修复"
+      },
+      {
+        "id": "section-其他",
+        "level": 2,
+        "text": "🛠️其他"
+      },
+      {
+        "id": "section-官方文档地址",
+        "level": 2,
+        "text": "✨官方文档地址"
+      },
+      {
+        "id": "section-致谢",
+        "level": 2,
+        "text": "✨致谢"
+      },
+      {
+        "id": "section-附录",
+        "level": 2,
+        "text": "✨附录"
+      }
+    ],
+    "textLength": 1328,
+    "readingMinutes": 3,
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/158068105",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:59.936Z",
-    "nextRetryAt": "2026-11-09T09:07:59.936Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "540e32e0142df5dd15452a848a57b152c5a7cf0ae1e97d410fdbadd45bd8616b",
+    "fetchedAt": "2026-11-02T11:43:55.210Z",
+    "checkedAt": "2026-11-02T11:43:55.210Z",
+    "nextRetryAt": "2026-12-02T11:43:55.210Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

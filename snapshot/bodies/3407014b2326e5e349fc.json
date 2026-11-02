@@ -2,17 +2,33 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "3407014b2326e5e349fc",
-    "status": "unavailable",
-    "html": "",
+    "status": "ready",
+    "html": "\n          <p>9 月 17 日，深圳市裕同包装科技股份有限公司（以下简称：裕同科技）与网易数帆数据中台项目启动会成功举行。双方将围绕数据中台在包装印刷领域的建设及应用落地展开合作，提升包装印刷创新能力，携手为包装产业数字化转型树立新的标杆。</p> \n<p><strong>裕同科技是行业领先的品质包装方案商，为世界 500 强企业、知名品牌提供一站式包装解决方案和可持续智造服务，</strong>目前全球拥有 20,000 名员工和 50+ 生产基地。</p> \n<p><img alt=\"\" height=\"1920\" src=\"https://i-blog.csdnimg.cn/devpress/blog/963ea729cb2644a49890532be16e97fc.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>随着裕同科技业务规模不断扩大，客户数量持续增加，裕同科技每天需要处理的数据量也明显增长。除了自身生产制造的产品信息，还需要处理来自客户工厂和终端用户的海量数据信息，<strong>如何构建统一的数据标准和规范、进一步挖掘数据价值、驱动业务增长，</strong>成了当下裕同科技业务发展所面临的巨大挑战。</p> \n<p>本次裕同科技与网易数帆合作项目的目标旨在构建覆盖全集团所有业务都适用的数字化运营平台，以“一纵一横”为运营平台构建蓝图，实现纵向全组织覆盖，横向业务板块圈覆盖。</p> \n<p>&nbsp;</p> \n<p>了解更多可复用的包装行业数字化转型经验&gt;&gt;</p> \n<p><a href=\"https://sf.163.com/?&amp;channel=yszu_SELF_INFO_m_csdn_shufan\" target=\"_blank\" rel=\"noopener noreferrer\">https://sf.163.com/?&amp;channel=yszu_SELF_INFO_m_csdn_shufan</a></p> \n<p>&nbsp;</p> \n<p>&nbsp;</p> \n<p><img alt=\"\" height=\"810\" src=\"https://i-blog.csdnimg.cn/devpress/blog/beb9bd38affa4339bc3323d9d0cf2ebb.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>启动会现场，双方还进一步明确三大项目价值：</p> \n<ul><li><strong>数据治理规范数据标准：</strong>通过建立数据资产目录，解决数据不清晰、数据不可信、数据不可用等问题，实现资源可检索，及时准确；</li><li><strong>深化数据资产驱动业务经营：</strong>基于数据中台进一步挖掘数据价值，真正通过数据运营驱动改善业务，打造裕同科技与网易数帆的最佳合作实践；</li><li><strong>数据智能赋能业务场景：</strong>结合网易数帆数据智能能力，应用在生产经营、供应链协同、预警等场景，提升运营效率与成本控制能力。</li></ul> \n<p>裕同科技 COO、CSO、CFO、CIO 和各部门负责人出席了本次项目启动会，<strong>他们首先充分肯定了本项目的重大意义，并表示本项目将是裕同科技数字化战略的关键一步，</strong>通过数据驱动全链条协同，推动裕同科技由“制造”向“智造”跃迁，持续为客户提供优质的产品和服务。</p> \n<p>作为项目合作方，网易数帆副总经理等一行对裕同科技给予的信任深表感谢，并表示将全力以赴，把成熟的数据建设能力、可靠的数据产品、充分验证的数据理念和实践经验与裕同科技共享，为裕同科技的数字化战略夯实基础。</p> \n<p>此次合作，不仅是裕同科技与网易数帆在数据能力与产业实践上的强强联合，更标志着包装业数字化转型迈入系统化、智能化深度融合的新阶段。双方将携手共创行业数据应用新标杆，为传统包装业注入新活力，打开高质量发展的新格局。</p> \n<p><img alt=\"\" height=\"136\" src=\"https://i-blog.csdnimg.cn/devpress/blog/2563e0da10da40769d1860523a1a2f06.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p><img alt=\"\" height=\"901\" src=\"https://i-blog.csdnimg.cn/devpress/blog/80d8e14fda5a4505a73444acf8c20261.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n        ",
     "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "textLength": 1030,
+    "readingMinutes": 3,
     "sourceId": "netease-csdn",
     "sourceUrl": "https://blog.csdn.net/wangyiyungw/article/details/153473063",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:08:14.278Z",
-    "nextRetryAt": "2026-11-09T09:08:14.278Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "8ee3a8d01dbbfefec4655d1beb86a3ebab358c46de29d7a518d3b2ada1825f64",
+    "fetchedAt": "2026-11-02T11:45:10.503Z",
+    "checkedAt": "2026-11-02T11:45:10.503Z",
+    "nextRetryAt": "2026-12-02T11:45:10.503Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

@@ -25,13 +25,22 @@
     "readingMinutes": 4,
     "sourceId": "huawei-csdn",
     "sourceUrl": "https://blog.csdn.net/devcloud/article/details/169360329",
-    "ruleId": "rsshub-csdn",
-    "ruleVersion": "1",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
     "contentHash": "8dbf3eb96c92921d236c8509340c17d143bb21734f10d0f0f8f2f9642342c374",
-    "fetchedAt": "2026-11-02T09:07:30.586Z",
-    "checkedAt": "2026-11-02T09:07:30.586Z",
-    "nextRetryAt": "2026-12-02T09:07:30.586Z",
-    "warnings": []
+    "fetchedAt": "2026-11-02T11:39:59.892Z",
+    "checkedAt": "2026-11-02T11:39:59.892Z",
+    "nextRetryAt": "2026-12-02T11:39:59.893Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

@@ -2,17 +2,89 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "a130ea9c629d60409a06",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <h3 id=\"section-v0-7-4-版本主要新增-增强了以下核心特性\"><a id=\"article-anchor-1\"></a>V0.7.4 版本主要新增、增强了以下核心特性<a class=\"heading-anchor\" href=\"#section-v0-7-4-版本主要新增-增强了以下核心特性\" aria-label=\"链接到本节：V0.7.4 版本主要新增、增强了以下核心特性\">#</a></h3> \n<p>🍀 <strong><code>DB-GPT</code>开源蚂蚁集团Text2SQL数据集：<a title=\"Falcon\" href=\"https://github.com/eosphoros-ai/Falcon\" target=\"_blank\" rel=\"noopener noreferrer\">Falcon</a>（<a title=\"https://github.com/eosphoros-ai/Falcon\" href=\"https://github.com/eosphoros-ai/Falcon\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/eosphoros-ai/Falcon</a>）</strong></p> \n<p>🍀 <strong><code>DB-GPT</code>支持基于Falcon Text2SQL评测集的LLM评测功能</strong></p> \n<p>🍀<strong> 支持<code>GLM-4.5</code>大模型</strong></p> \n<p>🍀 支持<strong><code>BurnCloud API</code>大模型平台集成</strong></p> \n<h3 id=\"section-数据集评测新特性\"><a id=\"article-anchor-2\"></a>✨<strong>数据集评测新特性</strong><a class=\"heading-anchor\" href=\"#section-数据集评测新特性\" aria-label=\"链接到本节：✨数据集评测新特性\">#</a></h3> \n<p>面向Text2SQL任务，我们提供了数据集评测能力，用于评测不同大模型、Agent在Text2SQL任务上的表现，评测语法正确性、语义准确性、执行有效性等维度内容，输出可<strong>执行率、正确率</strong>等指标，并提供了评测报告。</p> \n<h3 id=\"section-介绍\"><a id=\"article-anchor-3\"></a>介绍<a class=\"heading-anchor\" href=\"#section-介绍\" aria-label=\"链接到本节：介绍\">#</a></h3> \n<p><strong><a title=\"https://github.com/eosphoros-ai/Falcon\" href=\"https://github.com/eosphoros-ai/Falcon\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/eosphoros-ai/Falcon</a></strong></p> \n<p><img alt=\"\" height=\"689\" src=\"https://i-blog.csdnimg.cn/direct/fdbafd64cb154af18f63cd30c04fe909.png\" width=\"1191\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>为了客观、公正地评估不同模型在Text2SQL任务的表现，我们推出了评测模块和评测数据集，该模块支持对DB-GPT框架下的所有模型进行全面评测，并为用户提供评测报告。</p> \n<p>评测模块使用的Benchmark数据集：<a title=\"Falcon\" href=\"https://github.com/eosphoros-ai/Falcon\" target=\"_blank\" rel=\"noopener noreferrer\">Falcon</a> 是<strong>蚂蚁集团</strong>开源的一个不断发展的高质量Text2SQL数据集。<br> 该数据集旨在对复杂、跨域分析场景下的模型进行压力测试，特别关注以下方面：</p> \n<ul><li>SQL 计算难题——多表连接、嵌套 CTE、窗口函数、排名、类型转换、正则表达式过滤器……</li><li>语言困难——中文模糊时间表达、口语化商业术语、省略号、多意图疑问句……</li></ul> \n<blockquote>\n 评测集包含了28个数据集、90张表，截止当前发已正式发布500道不同难度的中文题目\n <br> 其中，easy难度题目：151道，medium难度题目：130道，hard难度题目：219道\n</blockquote> \n<h3 id=\"section-核心特性\"><a id=\"article-anchor-4\"></a>核心特性<a class=\"heading-anchor\" href=\"#section-核心特性\" aria-label=\"链接到本节：核心特性\">#</a></h3> \n<ul><li>✅ 多维度评测：包含语法正确性、语义准确性、执行有效性三重验证体系</li><li>🧠 动态难度分级：来自 Kaggle 数据集的 500 道中文问题（不同难度），包含大量需要多步推理、复杂嵌套查询和高级 SQL 特性</li><li>✍️ 细致的 Schema 标注: 提供了丰富的 Schema 信息，包括数据类型和自然语言别名、表间关系、采样数据，为模型理解数据库结构提供了有力支持</li><li>🌐 真实场景建模：更多有关模糊/含糊语言表达、更多从蚂蚁集团真实生产场景中收集的问题（准备中）</li></ul> \n<h3 id=\"section-评测指标\"><a id=\"article-anchor-5\"></a>评测指标<a class=\"heading-anchor\" href=\"#section-评测指标\" aria-label=\"链接到本节：评测指标\">#</a></h3> \n<div><div class=\"markdown-table-wrap\"><table><tbody><tr><td>指标名称</td><td>计算公式</td><td>说明</td></tr><tr><td>可执行率</td><td>语法正确样本数 / 总样本数</td><td>模型生成的SQL语句语法正确、且可以在数据库中正确执行的比例</td></tr><tr><td>正确率</td><td>语义正确样本数 / 总样本数</td><td>大模型生成的SQL语句语法正确、语义正确的比例</td></tr></tbody></table></div></div> \n<p><strong>评测模块核心能力如下：</strong></p> \n<ul><li>Text2SQL 评测API：提供API创建评测任务</li><li>评测集执行框架：根据评测集的问题执行Text2SQL任务</li><li>评测集结果对比框架：基于标准评测集和LLM SQL结果执行结果对比并汇总评测结果</li><li>评测数据集安装及数据库映射：安装评测数据集并将数据映射到数据库中提供LLM SQL查询服务</li></ul> \n<p><img alt=\"\" height=\"733\" src=\"https://i-blog.csdnimg.cn/direct/1704d4ea556c41e1ba1278a60aa99401.png\" width=\"764\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<h3 id=\"section-使用方式\"><a id=\"article-anchor-6\"></a>使用方式<a class=\"heading-anchor\" href=\"#section-使用方式\" aria-label=\"链接到本节：使用方式\">#</a></h3> \n<h4><a id=\"article-anchor-7\"></a>环境准备</h4> \n<ul><li><strong>第一步：升级到V0.7.4版本，并升级元数据库</strong></li></ul> \n<p><strong><u>对于 SQLite 的升级，默认会自动升级表结构</u></strong>。<strong><u>对于 MySQL 的升级，需要手动执行 DDL</u></strong> ，其中 <code>assets/schema/dbgpt.sql</code>文件是当前版本完整的 DDL 文件，具体版本变更的 DDL 可以查看 <code>assets/schema/upgrade</code>下面的变更 DDL，例如您是从 <code>v0.7.1</code>升级到<code>v0.7.4</code>，可以执行下列的 DDL：</p> \n<pre><code class=\"language-bash\">mysql -h127.0.0.1 -uroot -p{your_password} &lt; assets/schema/upgrade/v0_7_4/upgrade_to_v0.7.4.sql</code></pre> \n<ul><li><strong>第二步：启动DB-GPT服务，等待评测集自动加载完成，看到这行日志表示评测集加载完成（大约 <u>1~3</u> 分钟左右）</strong></li></ul> \n<p><img alt=\"\" height=\"438\" src=\"https://i-blog.csdnimg.cn/direct/f7bc2ee56a4441c696523b5602788662.png\" width=\"2364\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<ul><li><strong>第三步：在DB-GPT平台录入大模型</strong></li></ul> \n<h4><a id=\"article-anchor-8\"></a>创建评测任务</h4> \n<ul><li><strong>Step1: 点击\"创建评测\"按钮，创建评测任务</strong></li><li><strong>Step2: 输入任务名称、选择评测模型列表等信息</strong></li><li><strong>Step3: 提交评测任务</strong></li></ul> \n<p><img alt=\"\" height=\"1528\" src=\"https://i-blog.csdnimg.cn/direct/e0a0a92692184e03adfa51dc9678dff6.png\" width=\"3010\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<ul><li><strong>Step4: 等待评测任务执行完成(评测任务耗时较长)</strong></li></ul> \n<p><img alt=\"\" height=\"1526\" src=\"https://i-blog.csdnimg.cn/direct/b594254cfecb4237b0cc40d45f3819e7.png\" width=\"3022\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<h4><a id=\"article-anchor-9\"></a>查看评测报告</h4> \n<ul><li><strong>等待评测状态为\"已完成\"，点击\"查看详情\"按钮，查看评测报告</strong></li><li><strong>评测报告展示信息：</strong> \n  <ul><li>总的模型数量、题目数量、正确题目数量、错误题目数量、失败题目数量</li><li>每轮、每个模型的执行结果：执行题目数、正确题目数、错误题目数、失败题目数、可执行率、正确率</li><li>可执行率、正确率的可视化柱状图</li></ul> </li></ul> \n<blockquote>\n 正确题目：表示该问题模型回答正确；\n <br> 错误题目：模型生成的SQL语法正确，但是语义不正确；\n <br> 失败题目：一般是模型生成的SQL语法、语义都不正确\n</blockquote> \n<p><img alt=\"\" height=\"966\" src=\"https://i-blog.csdnimg.cn/direct/556a511c8fca48f1860df7945d30e9e7.png\" width=\"1735\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<h4><a id=\"article-anchor-10\"></a>下载评测结果</h4> \n<ul><li><strong>点击\"下载评测结果\"按钮，下载评测的Excel详细报告</strong></li></ul> \n<p><img alt=\"\" height=\"1280\" src=\"https://i-blog.csdnimg.cn/direct/d6f8379e68d544278fded7db52da38a4.png\" width=\"2594\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<ul><li><strong>下载的Excel报告包含了评测任务LLM执行详情、评测对比结果等信息（通过不同Sheet展示）</strong></li></ul> \n<p><img alt=\"\" height=\"1440\" src=\"https://i-blog.csdnimg.cn/direct/5f1f1220f3c2427db57b0f4394633176.png\" width=\"3022\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<h4><a id=\"article-anchor-11\"></a>数据集详情</h4> \n<ul><li><strong>点击\"查看数据集详情\"按钮，查看评测集详情</strong> \n  <ul><li>展示Falcon数据集的数据表、字段、样例数据等</li></ul> </li></ul> \n<p><img alt=\"\" height=\"1514\" src=\"https://i-blog.csdnimg.cn/direct/0a8a603f9908490bb55f11c2e771162b.png\" width=\"2576\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p><strong>详细的使用文档见：</strong></p> \n<ul><li>中文：<a title=\"蚂蚁取数评测集使用说明文档(Datasets Benchmark)\" href=\"https://www.yuque.com/eosphoros/dbgpt-docs/hpowc4o7134xnixn\" target=\"_blank\" rel=\"noopener noreferrer\">&nbsp;蚂蚁取数评测集使用说明文档(Datasets Benchmark)</a></li><li>英文：<a title=\"Ant Group Data Retrieval Benchmark Dataset Guide\" href=\"http://docs.dbgpt.cn/docs/modules/benchmark\" target=\"_blank\" rel=\"noopener noreferrer\">Ant Group Data Retrieval Benchmark Dataset Guide</a></li></ul> \n<h3 id=\"section-bug-修复\"><a id=\"article-anchor-12\"></a>🐞 Bug 修复<a class=\"heading-anchor\" href=\"#section-bug-修复\" aria-label=\"链接到本节：🐞 Bug 修复\">#</a></h3> \n<ul><li>修复AWEL <code>datasource</code>、<code>rag</code>算子参数不生效问题（#2862）</li><li>处理知识库文档自定义chunk分隔符<code>\\n</code>不生效（#2870）</li><li>修复知识库上传URL模式文档（#2874）</li><li>修复 DorisDB 使用 MySQL 协议连接的问题 (#2875)</li><li>修复使用TuGraph时Milvus的数据清理问题（#2858）</li><li>优化图数据库的配置错误信息 (#2906)</li><li>修复Excel文档中合并单元格解析问题 (<a title=\"#2907\" href=\"https://github.com/eosphoros-ai/DB-GPT/pull/2907\" target=\"_blank\" rel=\"noopener noreferrer\">#2907</a>)</li><li>优化PGVectorStore从环境变量读取链接配置 (#2887)</li><li>修复ChatExcel应用Excel文件中包含<code>time</code>类型的解析（#2915）</li></ul> \n<h3 id=\"section-其他\"><a id=\"article-anchor-13\"></a>🛠️其他<a class=\"heading-anchor\" href=\"#section-其他\" aria-label=\"链接到本节：🛠️其他\">#</a></h3> \n<ul><li>新增泰米尔语版本<code>README</code>文件 (#2914)</li><li>新增印地语版本<code>README</code>文件 (#2909)</li><li>修复通义千问配置文件 (#2884)</li><li>新增<code>DB-GPT</code> <code>DeepWiki</code>文档 (#2892)</li></ul> \n<p><strong>升级指南：</strong></p> \n<ol><li><strong>元数据库升级</strong></li></ol> \n<p>对于 SQLite 的升级，默认会自动升级表结构。对于 MySQL 的升级，需要手动执行 DDL ，其中 <code>assets/schema/dbgpt.sql</code>文件是当前版本完整的 DDL 文件，具体版本变更的 DDL 可以查看 <code>assets/schema/upgrade</code>下面的变更 DDL，例如您是从 <code>v0.7.1</code>升级到<code>v0.7.4</code>，可以执行下列的 DDL：</p> \n<pre><code class=\"language-bash\">mysql -h127.0.0.1 -uroot -p{your_password} &lt; assets/schema/upgrade/v0_7_4/upgrade_to_v0.7.4.sql</code></pre> \n<ol><li><strong>依赖升级</strong></li></ol> \n<p>对于源码安装，建议通过 <code>uv sync</code> 更新依赖。</p> \n<h3 id=\"section-官方文档地址\"><a id=\"article-anchor-14\"></a>✨官方文档地址<a class=\"heading-anchor\" href=\"#section-官方文档地址\" aria-label=\"链接到本节：✨官方文档地址\">#</a></h3> \n<p><strong>英文</strong></p> \n<p><a title=\"http://docs.dbgpt.site/docs/overview\" href=\"http://docs.dbgpt.site/docs/overview\" target=\"_blank\" rel=\"noopener noreferrer\">http://docs.dbgpt.site/docs/overview</a></p> \n<p><strong>中文</strong></p> \n<p><a title=\"https://www.yuque.com/eosphoros/dbgpt-docs/bex30nsv60ru0fmx\" href=\"https://www.yuque.com/eosphoros/dbgpt-docs/bex30nsv60ru0fmx\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.yuque.com/eosphoros/dbgpt-docs/bex30nsv60ru0fmx</a></p> \n<h3 id=\"section-致谢\"><a id=\"article-anchor-15\"></a>✨致谢<a class=\"heading-anchor\" href=\"#section-致谢\" aria-label=\"链接到本节：✨致谢\">#</a></h3> \n<h4><a id=\"article-anchor-16\"></a>🎉新贡献者</h4> \n<ul><li>@yaoyifan-yyf</li><li>@iterminatorheart</li><li>@liuhill</li><li>@zuiyue-com</li><li>@wxiao1002</li></ul> \n<p>🔥🔥感谢所有贡献者使这次发布成为可能！</p> \n<p><strong>@Aries-ckt, @Mishu03, @chenliang15405, @fangyinc, @kobzevvv, @stevenlx96, @wxiao1002, @liuhill, @yaoyifan-yyf, @iterminatorheart and @zuiyue-com</strong></p> \n<p><img alt=\"\" height=\"246\" src=\"https://i-blog.csdnimg.cn/direct/2a978c9420e94b79bd4c0334aae6a249.png\" width=\"1394\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<h3 id=\"section-附录\"><a id=\"article-anchor-17\"></a>✨附录<a class=\"heading-anchor\" href=\"#section-附录\" aria-label=\"链接到本节：✨附录\">#</a></h3> \n<ul><li><a title=\"快速开始\" href=\"http://docs.dbgpt.cn/docs/next/quickstart\" target=\"_blank\" rel=\"noopener noreferrer\">快速开始</a></li><li><a title=\"Docker 快速部署\" href=\"http://docs.dbgpt.cn/docs/next/installation/docker\" target=\"_blank\" rel=\"noopener noreferrer\">Docker 快速部署</a></li></ul>\n        ",
+    "headings": [
+      {
+        "id": "section-v0-7-4-版本主要新增-增强了以下核心特性",
+        "level": 3,
+        "text": "V0.7.4 版本主要新增、增强了以下核心特性"
+      },
+      {
+        "id": "section-数据集评测新特性",
+        "level": 3,
+        "text": "✨数据集评测新特性"
+      },
+      {
+        "id": "section-介绍",
+        "level": 3,
+        "text": "介绍"
+      },
+      {
+        "id": "section-核心特性",
+        "level": 3,
+        "text": "核心特性"
+      },
+      {
+        "id": "section-评测指标",
+        "level": 3,
+        "text": "评测指标"
+      },
+      {
+        "id": "section-使用方式",
+        "level": 3,
+        "text": "使用方式"
+      },
+      {
+        "id": "section-bug-修复",
+        "level": 3,
+        "text": "🐞 Bug 修复"
+      },
+      {
+        "id": "section-其他",
+        "level": 3,
+        "text": "🛠️其他"
+      },
+      {
+        "id": "section-官方文档地址",
+        "level": 3,
+        "text": "✨官方文档地址"
+      },
+      {
+        "id": "section-致谢",
+        "level": 3,
+        "text": "✨致谢"
+      },
+      {
+        "id": "section-附录",
+        "level": 3,
+        "text": "✨附录"
+      }
+    ],
+    "textLength": 3182,
+    "readingMinutes": 8,
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/153962262",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:08:12.913Z",
-    "nextRetryAt": "2026-11-09T09:08:12.913Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "3cbee9462bc4e040e53e6e65967c7b1170ba5771045d395acfcb14dd62e3eaee",
+    "fetchedAt": "2026-11-02T11:44:56.297Z",
+    "checkedAt": "2026-11-02T11:44:56.297Z",
+    "nextRetryAt": "2026-12-02T11:44:56.297Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

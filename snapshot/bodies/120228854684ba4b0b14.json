@@ -10,12 +10,25 @@
     "sourceId": "kuaishou-csdn",
     "sourceUrl": "https://blog.csdn.net/kuaishoutech/article/details/162030209",
     "ruleId": "csdn",
-    "ruleVersion": "1",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
     "contentHash": "bbd61e70f961a277d5e7de6c6991ebc34135a34f18681a3ba824f9abd0de5bbe",
-    "fetchedAt": "2026-11-02T06:36:29.527Z",
-    "checkedAt": "2026-11-02T06:36:29.527Z",
-    "nextRetryAt": "2026-12-02T06:36:29.527Z",
-    "warnings": []
+    "fetchedAt": "2026-11-02T11:39:37.068Z",
+    "checkedAt": "2026-11-02T11:39:37.068Z",
+    "nextRetryAt": "2026-12-02T11:39:37.068Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

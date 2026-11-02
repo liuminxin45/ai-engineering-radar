@@ -2,17 +2,59 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "52cc85bcacc0476c1ea1",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <p id=\"article-anchor-1\"><span><strong>文章作者：申奥 张锐 赵军平。</strong></span></p> \n<p id=\"article-anchor-2\"><span>系列回顾：</span></p> \n<p id=\"article-anchor-3\"><span><a title=\"大模型训练推理优化系列：vTensor\" href=\"https://mp.weixin.qq.com/s/Ny8uAHkPmK_KksTYzo8-Rg\" target=\"_blank\" rel=\"noopener noreferrer\">大模型训练推理优化系列：vTensor</a></span></p> \n<p id=\"article-anchor-4\"><span><a title=\"大模型训练推理优化系列：FlowMLA\" href=\"https://mp.weixin.qq.com/s/7Qamt0x1nINb1afwzoDadg\" target=\"_blank\" rel=\"noopener noreferrer\">大模型训练推理优化系列：FlowMLA</a></span></p> \n<p><span><a title=\"大模型推理显存优化系列(3)：FlowMLA——面向高吞吐的DP MLA零冗余显存优化\" href=\"https://mp.weixin.qq.com/s?__biz=MzkyNzQyMjkxNQ==&amp;mid=2247489109&amp;idx=1&amp;sn=d161c5124e4331faf9f999964ac034cc&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">大模型推理显存优化系列(3)：FlowMLA——面向高吞吐的DP MLA零冗余显存优化</a></span></p> \n<p><span><a title=\"大模型推理显存优化系列(4)：eLLM-大模型推理中的弹性显存管理和优化\" href=\"https://mp.weixin.qq.com/s?__biz=MzkyNzQyMjkxNQ==&amp;mid=2247489148&amp;idx=1&amp;sn=60b4a3e3a24bb80930bbafa8a944c93a&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">大模型推理显存优化系列(4)：eLLM-大模型推理中的弹性显存管理和优化</a></span></p> \n<p id=\"article-anchor-5\"><span>本期我们将介绍蚂蚁集团ASystem团队在大模型通信优化上的新工作FlexLink，旨在通过动态聚合多路通信（NVLink，PCIe，RDMA），在H800等典型硬件上将典型通信算子如（AllReduce, All Gather）吞吐提升最高达27%，尤其适合大模型长序列推理（Prefill阶段），及训练等通信密集的带宽bound场景。方案对精度无影响。</span></p> \n<h3 id=\"section-背景与挑战-被-闲置-的通信带宽\"><a id=\"article-anchor-7\"></a><span>背景与挑战：被“闲置”的通信带宽</span><a class=\"heading-anchor\" href=\"#section-背景与挑战-被-闲置-的通信带宽\" aria-label=\"链接到本节：背景与挑战：被“闲置”的通信带宽\">#</a></h3> \n<p id=\"article-anchor-8\"><span>在当前的大模型并行策略中，无论是训练中的数据交换（例如EP=8），还是推理中的prefill阶段，都可能涉及机内大量的跨GPU的数据交换。</span></p> \n<ol><li id=\"article-anchor-9\"><span><strong>通信瓶颈凸显</strong>：实测表明，在单机H800运行开源模型处理64K长序列推理时，Prefill阶段通信耗时占比高达<strong>36%</strong>。字节跳动的MegaScale-MoE一文也指出，MoE模型训练中前向传播时的通信占比可达<strong>43.6%</strong>。</span></li><li id=\"article-anchor-10\"><span><strong>链路利用单一化：</strong>行业普遍采用固化的通信模式：节点内<strong>几乎仅依赖高速NVLink</strong>，节点间则主要走通用以太网卡及RDMA网络。这种模式虽简洁高效，却<strong>忽视了同样连接GPU的的PCIe总线及基于PCIe的RDMA网卡</strong>的潜力，导致其带宽资源被<strong>长时间闲置</strong></span></li><li> <p><span><strong>硬件限制：</strong>中国市场上广泛部署的H800核心的NVLink互联带宽遭到了大幅削减。例如，H800的NVLink带宽仅为400 GB/s，远低于标准版H100的900 GB/s。&nbsp;</span></p> </li></ol> \n<h3 id=\"section-flexlink思路-从单独最优到动态多路聚合-榨干硬件潜力\"><a id=\"article-anchor-12\"></a><span>FlexLink思路：从单独最优到动态多路聚合，榨干硬件潜力</span><a class=\"heading-anchor\" href=\"#section-flexlink思路-从单独最优到动态多路聚合-榨干硬件潜力\" aria-label=\"链接到本节：FlexLink思路：从单独最优到动态多路聚合，榨干硬件潜力\">#</a></h3> \n<p id=\"article-anchor-13\"><span>FlexLink的核心思想是打破固化模式，化“单选题”为“多选题”。我们在NVLINK的基础上，将所有可用的通信链路视为一个统一的、可聚合的带宽资源池。通过协同使用这些链路，实现总通信吞吐的最大化。 因此，FlexLink的核心设计包括：</span></p> \n<ul><li id=\"article-anchor-14\"><span>多通道并发传输：聚合NVLink，PCIe，RDMA网卡等多个物理上独立的传输通道，将一次大的通信传输操作，拆分到多个链路并发执行，以提高总带宽。</span></li><li id=\"article-anchor-15\"><span>动态负载划分： FlexLink采用了两阶段的负载均衡和划分：通过感知硬件拓扑，简单，轻量地在初始化的时候，tuning各个链路的负载比例以及适合各个链路的chunk大小。并且在运行时通过实时的负载特征，对于各个链路的负载进行实时调整。</span></li><li id=\"article-anchor-16\"><span>CPU内存中转优化：针对利用PCIe进行卡间通信（需通过Host Memory中转）的场景，FlexLink通过流水线化通信过程，通信组GPU的NUMA节点感知，以及优化Host Memory的访问路径和CPU执行开销，有效提升PCIe卡间通信效率。</span></li></ul> \n<p id=\"article-anchor-17\"></p> \n<p><img alt=\"\" height=\"802\" id=\"article-anchor-18\" src=\"https://i-blog.csdnimg.cn/img_convert/2107b617e78c46cc2d92e0e33eccf437.png\" width=\"1350\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-19\"><span>图1: FlexLink设计图</span></p> \n<h3 id=\"section-flexlink关键设计-两阶段自适应负载均衡简介\"><a id=\"article-anchor-21\"></a><span>FlexLink关键设计：<strong>两阶段自适应负载均衡简介</strong></span><a class=\"heading-anchor\" href=\"#section-flexlink关键设计-两阶段自适应负载均衡简介\" aria-label=\"链接到本节：FlexLink关键设计：两阶段自适应负载均衡简介\">#</a></h3> \n<p id=\"article-anchor-22\"><span>如何让带宽相对较慢的PCIe和RDMA网卡在分担负载的同时，<strong>避免拖累高速NVLink</strong>-----这是实现增益的关键。</span></p> \n<p id=\"article-anchor-23\"><span>我们尝试通过两阶段负载均衡机制来解决这一问题。</span></p> \n<ul><li id=\"article-anchor-24\"><span><strong>初始化阶段：</strong> 基于硬件信息建模，设定初始负载比例。随后在短时间内进行微调（按步长转移负载），监测链路性能偏序关系变化。若关系反转（如慢链路变快），则<strong>减半步长并迭代优化</strong>，数秒内收敛到较优状态。</span></li></ul> \n<ul><li id=\"article-anchor-25\"><span><strong>运行时阶段：</strong> 在固定时间窗口内Evaluator采集各链路传输速率数据, 并反馈给Load Balancer：</span> \n  <ul><li><span>识别当前窗口内<strong>最有可能</strong>的最慢与最快链路。</span></li><li><span>计算平均速率差，若超过阈值，则从慢链路向快链路转移负载份额。</span></li><li id=\"article-anchor-26\"><span>特别地，若NVLink<strong>并非最慢链路</strong>，则采用<strong>差异化阈值</strong>进行更积极的份额转移，确保其高效利用。</span></li></ul> </li></ul> \n<p id=\"article-anchor-27\"></p> \n<p><img alt=\"\" height=\"981\" id=\"article-anchor-28\" src=\"https://i-blog.csdnimg.cn/img_convert/909104a5384e33a0d9fd10163c652120.png\" width=\"2217\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p id=\"article-anchor-29\"><span>图2: 基于Load Balancer和Evaluator进行运行时负载均衡</span></p> \n<h3 id=\"section-flexlink初步结果对比\"><a id=\"article-anchor-31\"></a><span>FlexLink初步结果对比</span><a class=\"heading-anchor\" href=\"#section-flexlink初步结果对比\" aria-label=\"链接到本节：FlexLink初步结果对比\">#</a></h3> \n<p id=\"article-anchor-32\"><span>硬件环境：H800 SXM *8（单机，NVLink 400GB/s，PCIe 5.0， 8块ConnectX-6网卡 (800Gbps双向)。</span></p> \n<p id=\"article-anchor-33\"><span>软件版本：CUDA 12.4，GPU Driver 535，NCCL 2.27.3，NVSHMEM 3.2.5。</span></p> \n<p id=\"article-anchor-34\"><span>负载情况：AllReduce： input=output=256MB；AllGather： input=256MB, output = worldsize * input，我们选择256MB以充分体现带宽瓶颈的场景。</span></p> \n<p id=\"article-anchor-35\"><span><strong>关注指标：</strong><strong>Input / Duration (GB/s)。</strong></span></p> \n<div><div class=\"markdown-table-wrap\"><table id=\"article-anchor-36\"><tbody><tr><td> <p id=\"article-anchor-37\"><span>通信方式</span></p> </td><td> <p id=\"article-anchor-38\"><span>卡数</span></p> </td><td> <p id=\"article-anchor-39\"><span>NCCL基线</span></p> </td><td> <p id=\"article-anchor-40\"><span>FlexLink</span></p> <p id=\"article-anchor-41\"></p> <p id=\"article-anchor-42\"></p> </td><td> <p id=\"article-anchor-43\"><span>PCIe+RDMA 贡献</span></p> </td><td> <p id=\"article-anchor-44\"><span><strong>带宽提升比例</strong></span></p> </td><td> \n    <ol><li id=\"article-anchor-45\"><span>PCIe + RDMA 负载%</span></li><li id=\"article-anchor-46\"><span>PCIe 负载%</span></li><li id=\"article-anchor-47\"><span>RDMA 负载%</span></li></ol> </td></tr><tr><td> <p id=\"article-anchor-48\"><span>AllReduce</span></p> </td><td> <p id=\"article-anchor-49\"><span>2卡</span></p> </td><td> <p id=\"article-anchor-50\"><span>139 GB/s</span></p> </td><td> <p id=\"article-anchor-51\"><span>175 GB/s</span></p> </td><td> <p id=\"article-anchor-52\"><span>36 GB/s</span></p> </td><td> <p id=\"article-anchor-53\"><span><strong>26%</strong></span></p> </td><td> \n    <ol><li id=\"article-anchor-54\"><span>21%</span></li><li id=\"article-anchor-55\"><span>12%</span></li><li id=\"article-anchor-56\"><span>9%</span></li></ol> </td></tr><tr><td> <p id=\"article-anchor-57\"><span>AllReduce</span></p> </td><td> <p id=\"article-anchor-58\"><span>4卡</span></p> </td><td> <p id=\"article-anchor-59\"><span>98 GB/s</span></p> </td><td> <p id=\"article-anchor-60\"><span>118 GB/s</span></p> </td><td> <p id=\"article-anchor-61\"><span>20 GB/s</span></p> </td><td> <p id=\"article-anchor-62\"><span><strong>20 % </strong></span></p> </td><td> \n    <ol><li id=\"article-anchor-63\"><span>18%</span></li><li id=\"article-anchor-64\"><span>13%</span></li><li id=\"article-anchor-65\"><span>5%</span></li></ol> </td></tr><tr><td> <p id=\"article-anchor-66\"><span>AllReduce</span></p> </td><td> <p id=\"article-anchor-67\"><span>8卡</span></p> </td><td> <p id=\"article-anchor-68\"><span>107 GB/s</span></p> </td><td> <p id=\"article-anchor-69\"><span>109 GB/s</span></p> </td><td> <p id=\"article-anchor-70\"><span>2 GB/s</span></p> </td><td> <p id=\"article-anchor-71\"><span><strong>2 % </strong></span></p> </td><td> \n    <ol><li id=\"article-anchor-72\"><span>2%</span></li><li id=\"article-anchor-73\"><span>1%</span></li><li id=\"article-anchor-74\"><span>1%</span></li></ol> </td></tr><tr><td> <p id=\"article-anchor-75\"><span>AllGather</span></p> </td><td> <p id=\"article-anchor-76\"><span>2卡</span></p> </td><td> <p id=\"article-anchor-77\"><span>132 GB/s</span></p> </td><td> <p id=\"article-anchor-78\"><span>161 GB/s</span></p> </td><td> <p id=\"article-anchor-79\"><span>29 GB/s</span></p> </td><td> <p id=\"article-anchor-80\"><span><strong>22 %</strong></span></p> </td><td> \n    <ol><li id=\"article-anchor-81\"><span>19%</span></li><li id=\"article-anchor-82\"><span>14%</span></li><li id=\"article-anchor-83\"><span>5%</span></li></ol> </td></tr><tr><td> <p id=\"article-anchor-84\"><span>AllGather</span></p> </td><td> <p id=\"article-anchor-85\"><span>4卡</span></p> </td><td> <p id=\"article-anchor-86\"><span>49 GB/s</span></p> </td><td> <p id=\"article-anchor-87\"><span>62 GB/s</span></p> </td><td> <p id=\"article-anchor-88\"><span>13 GB/s</span></p> </td><td> <p id=\"article-anchor-89\"><span><strong>27%</strong></span></p> </td><td> \n    <ol><li id=\"article-anchor-90\"><span>22%</span></li><li id=\"article-anchor-91\"><span>12%</span></li><li id=\"article-anchor-92\"><span>10%</span></li></ol> </td></tr><tr><td> <p id=\"article-anchor-93\"><span>AllGather</span></p> </td><td> <p id=\"article-anchor-94\"><span>8卡</span></p> </td><td> <p id=\"article-anchor-95\"><span>21 GB/s</span></p> </td><td> <p id=\"article-anchor-96\"><span>26 GB/s</span></p> </td><td> <p id=\"article-anchor-97\"><span>5 GB/s</span></p> </td><td> <p id=\"article-anchor-98\"><span><strong>24%</strong></span></p> </td><td> \n    <ol><li id=\"article-anchor-99\"><span>19%</span></li><li id=\"article-anchor-100\"><span>12%</span></li><li id=\"article-anchor-101\"><span>7%</span></li></ol> </td></tr></tbody></table></div></div> \n<p id=\"article-anchor-102\"><span>实验结果表明：</span></p> \n<ul><li id=\"article-anchor-103\"><span>在 2卡，4卡H800环境下，对于<strong>AllReduce算子</strong>（256MB输入），FlexLink带来了<strong>20%和26%的提升</strong>，在<strong>8卡</strong>场景下，由于AllReduce的通信链路相比AllGather较长，延迟增加更明显，导致性能提升（2%）相对有限。</span></li><li id=\"article-anchor-104\"><span>对于<strong>AllGather算子</strong>（256MB输入），在<strong>2卡、4卡</strong>场景下提升达<strong>22%以及27%</strong>；在<strong>8卡</strong>场景下，虽然通信延迟增加带来一定挑战，FlexLink仍实现了<strong>24%</strong> 的有效提升。</span></li><li id=\"article-anchor-105\"><span>PCIe与RDMA链路成功分担了<strong>18%-22%</strong> 的总通信负载，有效利用了闲置带宽。</span></li></ul> \n<h3 id=\"section-小结\"><a id=\"article-anchor-107\"></a><span>小结</span><a class=\"heading-anchor\" href=\"#section-小结\" aria-label=\"链接到本节：小结\">#</a></h3> \n<p id=\"article-anchor-108\"><span>FlexLink通过<strong>动态启用多链路聚合</strong>、结合<strong>初始化粗粒度负载均衡</strong>与<strong>运行时细粒度自适应调整</strong>，有效的提升了系统可用带宽。<strong>其价值不仅限于H800</strong>。对于同样面临卡间通信带宽限制的其它硬件平台，理论上均可基于该方法进一步提升。</span></p> \n<p id=\"article-anchor-109\"><span>进一步工作：</span></p> \n<ul><li id=\"article-anchor-110\"><span>我们将适时进行开源推理框架的集成，敬请期待！</span></li></ul>\n        ",
+    "headings": [
+      {
+        "id": "section-背景与挑战-被-闲置-的通信带宽",
+        "level": 3,
+        "text": "背景与挑战：被“闲置”的通信带宽"
+      },
+      {
+        "id": "section-flexlink思路-从单独最优到动态多路聚合-榨干硬件潜力",
+        "level": 3,
+        "text": "FlexLink思路：从单独最优到动态多路聚合，榨干硬件潜力"
+      },
+      {
+        "id": "section-flexlink关键设计-两阶段自适应负载均衡简介",
+        "level": 3,
+        "text": "FlexLink关键设计：两阶段自适应负载均衡简介"
+      },
+      {
+        "id": "section-flexlink初步结果对比",
+        "level": 3,
+        "text": "FlexLink初步结果对比"
+      },
+      {
+        "id": "section-小结",
+        "level": 3,
+        "text": "小结"
+      }
+    ],
+    "textLength": 2675,
+    "readingMinutes": 6,
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/150952195",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:08:17.441Z",
-    "nextRetryAt": "2026-11-09T09:08:17.441Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "c86ae58a2643f9de454790c7f7337c0d6cdc0e2ae1f54e09d88160a05bf85afd",
+    "fetchedAt": "2026-11-02T11:45:48.491Z",
+    "checkedAt": "2026-11-02T11:45:48.491Z",
+    "nextRetryAt": "2026-12-02T11:45:48.491Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

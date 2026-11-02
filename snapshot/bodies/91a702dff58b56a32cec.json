@@ -2,17 +2,99 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "91a702dff58b56a32cec",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <h2 id=\"section-前言\"><a id=\"article-anchor-1\"></a><strong>前言</strong><a class=\"heading-anchor\" href=\"#section-前言\" aria-label=\"链接到本节：前言\">#</a></h2>\n\n<p></p>\n\n<p>扩散模型已经成为图像生成和视频生成中最重要的一类基础模型。从 DiT 到 FLUX，再到 HunyuanVideo，越来越多的高质量生成系统都依赖扩散 Transformer 来逐步完成从噪声到图像、从噪声到视频的生成过程。</p>\n\n<p>但一个非常现实的问题是：<strong>扩散模型很慢</strong>。</p>\n\n<p>这种慢并不是因为单次前向传播特别复杂，而是因为生成过程通常需要很多轮连续去噪。每一步都要调用一次大模型，几十步甚至上百步串行执行下来，推理延迟和计算成本都会变得很高。对于交互式图像生成、视频生成、移动端部署或大规模内容生产来说，这种成本很难忽视。</p>\n\n<p>一个很自然的问题于是出现了：</p>\n\n<p><strong>既然扩散模型慢在采样步数多，那能不能直接少采几步？</strong></p>\n\n<p>直觉上，这似乎是最直接的加速方式。但在实际系统中，粗暴减少采样步数往往会带来明显的质量下降：图像结构变形、语义不稳、细节丢失，视频中还可能出现闪烁和运动不连续。</p>\n\n<p>也就是说，扩散模型加速并不是简单地“少算几步”。真正困难的是：</p>\n\n<p><strong>如何在大步采样时，仍然让生成轨迹沿着模型学到的正确方向演化？</strong></p>\n\n<p>我们的论文&nbsp;<strong>GeoRK2: Geometry-Guided Runge-Kutta Integration for Diffusion Transformer Acceleration&nbsp;</strong>正是围绕这个问题展开。<strong>目前文章已被CVPR2026收录为HIGHLIGHT</strong>。GeoRK2 是一个免训练、可插拔的扩散 Transformer 加速框架。它把数值积分中的二阶 Runge-Kutta 方法和深度特征空间中的几何结构结合起来，使扩散采样在更少计算下仍然保持稳定的生成质量。</p>\n\n<p>简单来说，GeoRK2 的核心思想是：</p>\n\n<p><strong>扩散采样不是在平直空间里走直线，而是在模型学到的弯曲特征流形上前进。加速采样时，必须尊重这个几何结构。</strong></p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"512\" src=\"https://i-blog.csdnimg.cn/img_convert/8a584040094d7830beb0bc1a66ee9b77.png\" width=\"996\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>图片 1 - 多种方法在多个提示词下生成图像的可视化结果。在高加速比下，FORA 和 TaylorSeer 等方法会出现不同程度的图像质量下降，而 GeoRK2 仍能保持更优的性能。</p>\n\n<p></p>\n\n<h2 id=\"section-动机-为什么扩散模型一加速就容易-跑偏\"><a id=\"article-anchor-2\"></a><strong>动机：为什么扩散模型一加速就容易“跑偏”？</strong><a class=\"heading-anchor\" href=\"#section-动机-为什么扩散模型一加速就容易-跑偏\" aria-label=\"链接到本节：动机：为什么扩散模型一加速就容易“跑偏”？\">#</a></h2>\n\n<p></p>\n\n<p>传统扩散采样器通常把去噪过程看成一个普通的数值积分问题。给定当前噪声状态，模型预测下一步应该往哪里走，然后采样器沿着这个方向推进。</p>\n\n<p>在 DDIM、DPM-Solver 以及很多后续加速方法中，一个隐含假设是：</p>\n\n<p><strong>扩散状态的演化发生在一个近似平直的欧氏空间中。</strong></p>\n\n<p>如果这个假设成立，那么大步采样就可以被理解为在平直空间中做更大的跳跃。只要数值积分公式足够高阶，采样轨迹就应该能够保持稳定。</p>\n\n<p>但扩散 Transformer 的内部特征并不是这样工作的。</p>\n\n<p>我们在 DiT-XL/2 和 FLUX.1-dev 的中间激活上观察到一个非常明显的现象：模型的特征变化高度集中在少数主方向上。换句话说，虽然特征向量位于一个高维空间中，但真正承载主要变化的方向其实很少。</p>\n\n<p>论文中的激活谱分析显示，<strong>前 64 个主方向已经能够解释超过 99% 的特征方差</strong>。这说明扩散 Transformer 的去噪过程更像是在一个低维、弯曲的特征流形上运动，而不是在整个高维欧氏空间中自由移动。</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"183\" src=\"https://i-blog.csdnimg.cn/img_convert/81ee5fcde910dbbbe9fbfbdacb075654.png\" width=\"388\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>图片 2 - 主导方向解释的方差。针对 (a) DiT-XL/2 和 (b) FLUX.1-dev 的热力图显示，前 64 个主成分方向解释了超过 99% 的方差。</p>\n\n<p></p>\n\n<p>这带来一个关键问题：</p>\n\n<p>当采样步长变大时，如果仍然使用普通欧氏空间中的直线外推，轨迹就可能逐渐偏离模型真正学到的特征流形。我们把这种现象称为：</p>\n\n<p><strong>manifold drift，流形漂移。</strong></p>\n\n<p>直观来说，模型知道一张图像应该如何从噪声中逐步成形，但这个过程发生在它内部学到的特征几何结构上。普通加速方法只看到“往前走”，却没有看到“应该沿着哪条弯曲的路走”。当步子迈得很大时，轨迹就容易切过流形曲率，而不是贴着流形前进。</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"510\" src=\"https://i-blog.csdnimg.cn/img_convert/cc3a65e0d74609fb00785a24ab1289c7.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>图片 3 - (a) GeoRK2 遵循内在流形几何结构，相比忽略曲率的欧氏空间预测方法，能够生成更平滑且更忠实的特征轨迹。 (b) 在大步长条件下，GeoRK2 仍保持稳定，而与几何无关的预测器会因误差快速累积而性能受损。</p>\n\n<p></p>\n\n<p>最终表现出来的就是：</p>\n\n<ul><li>\n\t<p>图像结构开始扭曲；</p>\n\t</li><li>\n\t<p>语义条件逐渐变弱；</p>\n\t</li><li>\n\t<p>局部纹理和全局布局不一致；</p>\n\t</li><li>\n\t<p>视频生成中出现帧间闪烁和运动不连续。</p>\n\t</li></ul>\n\n<p>因此，扩散 Transformer 加速的核心矛盾可以概括为：</p>\n\n<p><strong>我们想减少采样步数，但不能让采样轨迹偏离模型学到的特征流形。</strong></p>\n\n<p>GeoRK2 的出发点，就是把这个被忽略的几何问题显式建模出来。</p>\n\n<p></p>\n\n<h2 id=\"section-方法-geork2-几何感知预测-流形校正-自适应稳定\"><a id=\"article-anchor-3\"></a><strong>方法：GeoRK2 = 几何感知预测 + 流形校正 + 自适应稳定</strong><a class=\"heading-anchor\" href=\"#section-方法-geork2-几何感知预测-流形校正-自适应稳定\" aria-label=\"链接到本节：方法：GeoRK2 = 几何感知预测 + 流形校正 + 自适应稳定\">#</a></h2>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"362\" src=\"https://i-blog.csdnimg.cn/img_convert/f18d4bddf3cb285360e1d6afe62e3702.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>图片 4 - GeoRK2 通过将黎曼积分嵌入 Transformer 推理流程，实现具有几何感知能力的扩散采样。（左）预测阶段利用缓存的激活值，在较大时间间隔上外推潜在动态；校正阶段则在局部构建的几何流形上细化轨迹。（右）在每个 Transformer 块内，GeoRK2 引入轻量级的预测-校正模块，用曲率感知的二阶积分替代现有采样器（如 DDIM、DPM-Solver）的默认数值更新，从而在无需重新训练的情况下实现稳定且加速的生成。</p>\n\n<p></p>\n\n<p>GeoRK2 的方法设计可以用一句话概括：</p>\n\n<p><strong>在 RK2 二阶积分的基础上，用模型内部激活估计局部特征几何，并用这个几何结构约束大步采样。</strong></p>\n\n<p>从整体上看，GeoRK2 包含三个核心模块：</p>\n\n<p>1. &nbsp;几何感知的 RK2 预测；</p>\n\n<p>2. &nbsp;低秩度量预条件校正；</p>\n\n<p>3. &nbsp;自适应稳定机制。</p>\n\n<p>下面分别来看。</p>\n\n<p></p>\n\n<h3 id=\"section-1-几何感知-rk2-不是直接外推-而是沿主特征方向外推\"><a id=\"article-anchor-4\"></a><strong>1. 几何感知 RK2：不是直接外推，而是沿主特征方向外推</strong><a class=\"heading-anchor\" href=\"#section-1-几何感知-rk2-不是直接外推-而是沿主特征方向外推\" aria-label=\"链接到本节：1. 几何感知 RK2：不是直接外推，而是沿主特征方向外推\">#</a></h3>\n\n<p></p>\n\n<p>Runge-Kutta 方法是经典数值积分中的一类高阶方法。普通的一阶方法只看当前位置的速度，而 RK2 会额外估计一个中点，从而更准确地预测下一步状态。</p>\n\n<p>在扩散采样中，这意味着：</p>\n\n<p><strong>不要只根据当前一步的方向前进，而是先估计中间位置，再用中间位置的方向来决定大步更新。</strong></p>\n\n<p>但 GeoRK2 并不是直接把标准 RK2 套到扩散 Transformer 上。原因在于，高维特征空间中并不是所有方向都同样可靠。很多方向可能只是噪声，或者并不位于模型真正使用的特征流形上。</p>\n\n<p>因此，GeoRK2 在做中点预测时，会先把更新投影到主导特征子空间中：</p>\n\n<pre><code class=\"language-cobol\">h_mid <span>=</span>&nbsp;Projection(h_t&nbsp;<span>+</span> step <span>/</span>&nbsp;<span>2</span>&nbsp;<span>*</span>&nbsp;v_t)</code></pre>\n\n<p>这里的 Projection 不是任意设计的，而是来自模型中间激活的低秩主方向。也就是说，GeoRK2 会先问模型：</p>\n\n<p><strong>当前这个阶段，哪些特征方向才是真正重要的？</strong></p>\n\n<p>然后只在这些方向上进行大步预测。</p>\n\n<p>这样做的直观效果是：</p>\n\n<ul><li>\n\t<p>保留模型最有信心的主要变化方向；</p>\n\t</li><li>\n\t<p>抑制偏离流形的噪声方向；</p>\n\t</li><li>\n\t<p>避免大步采样时轨迹漂到不可靠区域。</p>\n\t</li></ul>\n\n<p>可以把它理解成：普通 RK2 是“往前走得更准”，而 GeoRK2 是“沿着模型认为可靠的路往前走”。</p>\n\n<p></p>\n\n<h3 id=\"section-2-低秩几何校正-用激活协方差估计模型内部的局部度量\"><a id=\"article-anchor-5\"></a><strong>2. 低秩几何校正：用激活协方差估计模型内部的局部度量</strong><a class=\"heading-anchor\" href=\"#section-2-低秩几何校正-用激活协方差估计模型内部的局部度量\" aria-label=\"链接到本节：2. 低秩几何校正：用激活协方差估计模型内部的局部度量\">#</a></h3>\n\n<p></p>\n\n<p>只做投影还不够。因为扩散模型的去噪过程并不是一条直线，而是在不同噪声阶段经历不同曲率的轨迹。特别是在高噪声向低噪声过渡时，特征空间的几何结构会发生明显变化。</p>\n\n<p>为了解决这个问题，GeoRK2 会从模型的中间激活中构造局部协方差矩阵：</p>\n\n<pre><code class=\"language-cobol\">G_t&nbsp;<span>=</span> covariance(H_t) <span>+</span> epsilon <span>*</span> I</code></pre>\n\n<p>这个矩阵可以理解为当前特征空间的一个局部“几何度量”。大特征值方向表示模型在这些方向上变化强、结构敏感，更新时需要更加谨慎；小特征值方向则表示变化较平坦，可以更放心地加速。</p>\n\n<p>但直接使用完整协方差矩阵代价很高。对于扩散 Transformer 的中间层来说，完整矩阵求逆会带来明显计算开销。</p>\n\n<p>GeoRK2 的关键工程设计是：<strong>只保留低秩主方向</strong>。</p>\n\n<p>由于论文中观察到 top-64 主方向已经解释超过 99% 的方差，GeoRK2 使用截断 SVD 来近似这个几何度量。这样既保留了最重要的特征几何，又把复杂度控制在可接受范围内。</p>\n\n<p>在得到低秩几何度量之后，GeoRK2 会对预测结果做一次<strong>&nbsp;metric-preconditioned correction</strong>：</p>\n\n<pre><code class=\"language-cobol\">geometry&nbsp;correction&nbsp;<span>=</span>&nbsp;- lambda <span>*</span> G_inverse <span>*</span> prediction_<span>error</span></code></pre>\n\n<p>直观来说，这一步是在问：</p>\n\n<p><strong>当前预测结果和模型真正希望的去噪方向之间还有多少偏差？这个偏差应该按照特征流形的几何结构如何修正？</strong></p>\n\n<p>这就是 GeoRK2 中的“几何校正”。</p>\n\n<p>它不是重新训练模型，也不是额外学习一个校正网络，而是直接利用预训练模型内部已有的激活统计来完成校正。</p>\n\n<p>为了进一步降低开销，GeoRK2 还使用 Woodbury identity 来高效计算低秩矩阵逆，并且每隔若干步更新一次 metric，而不是每一步都完整重算。</p>\n\n<p></p>\n\n<h3 id=\"section-3-自适应稳定-遇到剧烈阶段切换时及时刹车\"><a id=\"article-anchor-6\"></a><strong>3. 自适应稳定：遇到剧烈阶段切换时及时刹车</strong><a class=\"heading-anchor\" href=\"#section-3-自适应稳定-遇到剧烈阶段切换时及时刹车\" aria-label=\"链接到本节：3. 自适应稳定：遇到剧烈阶段切换时及时刹车\">#</a></h3>\n\n<p></p>\n\n<p>扩散采样过程并不是平稳的。</p>\n\n<p>在早期高噪声阶段，模型主要决定全局布局和大致语义；在后期低噪声阶段，模型开始细化纹理、边缘和局部细节。不同阶段之间的过渡往往会带来速度和加速度的突变。</p>\n\n<p>如果加速方法在这些位置仍然激进外推，就可能出现不稳定。</p>\n\n<p>因此，GeoRK2 加入了一个非常简洁的自适应稳定机制。它会监测当前采样轨迹的加速度方差：</p>\n\n<pre><code class=\"language-cobol\"><ol><li><div><div>ifVar(a_t) suddenly increases:</div></div></li><li><div><div>    <span>use</span> conservative fallback</div></div></li><li><div><div><span>else</span>:</div></div></li><li><div><div>    <span>use</span> geometry-aware RK<span>2</span> prediction</div></div></li></ol></code></pre>\n\n<ul></ul>\n\n<p>当检测到状态变化过于剧烈时，GeoRK2 会暂时退回到更保守的两点外推，避免错误被快速放大。最后还会使用 momentum mixing 对输出进行平滑：</p>\n\n<pre><code class=\"language-cobol\">h_out&nbsp;<span>=</span> rho <span>*</span> corrected_prediction <span>+</span> (<span>1</span>&nbsp;- rho) <span>*</span> h_t</code></pre>\n\n<p>这一步的作用不是让方法变复杂，而是让几何积分在真实模型中更加稳健。</p>\n\n<p>论文中也观察到，这个 rollback 机制主要在高加速设置下的关键时间段触发，例如 FLUX 中从概念布局转向细节 refinement 的阶段。它带来的额外开销很小，但可以显著降低发散风险。</p>\n\n<p></p>\n\n<h2 id=\"section-工程上是否可落地\"><a id=\"article-anchor-7\"></a><strong>工程上是否可落地？</strong><a class=\"heading-anchor\" href=\"#section-工程上是否可落地\" aria-label=\"链接到本节：工程上是否可落地？\">#</a></h2>\n\n<p></p>\n\n<p>GeoRK2 的一个重要特点是：它不需要重新训练模型，也不需要修改模型结构。</p>\n\n<p>它更像是一个轻量级 PyTorch wrapper，在推理时拦截中间激活，估计局部几何结构，然后替换或增强原本的采样更新。</p>\n\n<p>从复杂度上看，GeoRK2 的额外开销主要来自三部分：</p>\n\n<ul><li>\n\t<p>主特征方向投影；</p>\n\t</li><li>\n\t<p>低秩 metric correction；</p>\n\t</li><li>\n\t<p>周期性截断 SVD。</p>\n\t</li></ul>\n\n<p>论文中的 profiling 显示，在 DiT-XL/2 上，当截断秩取 64 时：</p>\n\n<ul><li>\n\t<p>projection step 约 0.014 TFLOPs；</p>\n\t</li><li>\n\t<p>metric-preconditioned inversion 约 0.022 TFLOPs；</p>\n\t</li><li>\n\t<p>amortized truncated SVD 每步约 0.011 TFLOPs；</p>\n\t</li><li>\n\t<p>总额外 FLOPs 约 5.1%；</p>\n\t</li><li>\n\t<p>实测每步 wall-clock overhead 约 3.8%。</p>\n\t</li></ul>\n\n<p>考虑到 GeoRK2 能够带来 4-5 倍级别的整体采样加速，这个额外开销是很小的。</p>\n\n<p>更重要的是，它的超参数并不敏感。论文中使用同一组配置：</p>\n\n<pre><code class=\"language-cobol\"><ol><li><div><div>lambda <span>=</span> <span>0.1</span></div></div></li><li><div><div>rho <span>=</span> <span>0.85</span></div></div></li><li><div><div>beta <span>=</span> <span>0.9</span></div></div></li><li><div><div>rank <span>=</span> <span>64</span></div></div></li></ol></code></pre>\n\n<ul></ul>\n\n<p>就可以在 DiT-S/2、DiT-B/2、DiT-XL/2 等模型上稳定工作。这说明 GeoRK2 不是依赖精细调参的特定技巧，而是利用了扩散 Transformer 特征几何中的普遍结构。</p>\n\n<p></p>\n\n<h2 id=\"section-实验结果-4-5-倍加速下保持高质量生成\"><a id=\"article-anchor-8\"></a><strong>实验结果：4-5 倍加速下保持高质量生成</strong><a class=\"heading-anchor\" href=\"#section-实验结果-4-5-倍加速下保持高质量生成\" aria-label=\"链接到本节：实验结果：4-5 倍加速下保持高质量生成\">#</a></h2>\n\n<p></p>\n\n<p>为了验证 GeoRK2 的效果，论文在三个代表性场景上进行了实验：</p>\n\n<ul><li>\n\t<p>ImageNet-256 上的 class-conditional image generation，使用 DiT-XL/2；</p>\n\t</li><li>\n\t<p>DrawBench 上的 text-to-image generation，使用 FLUX.1-dev；</p>\n\t</li><li>\n\t<p>VBench 上的 text-to-video generation，使用 HunyuanVideo。</p>\n\t</li></ul>\n\n<p>对比方法包括传统采样器 DDIM、DPM++，以及多种扩散 Transformer 加速方法，例如 FORA、TaylorSeer、ToCa、SmoothCache、TeaCache、DBCache 等。</p>\n\n<p></p>\n\n<h3 id=\"section-1-imagenet-256-高加速下仍保持较低-fid\"><a id=\"article-anchor-9\"></a><strong>1. ImageNet-256：高加速下仍保持较低 FID</strong><a class=\"heading-anchor\" href=\"#section-1-imagenet-256-高加速下仍保持较低-fid\" aria-label=\"链接到本节：1. ImageNet-256：高加速下仍保持较低 FID\">#</a></h3>\n\n<p></p>\n\n<p>在 ImageNet-256 + DiT-XL/2 上，GeoRK2 在多个加速档位下都取得了较好的速度-质量权衡。</p>\n\n<p>例如：</p>\n\n<ul><li>\n\t<p>GeoRK2(N=2) 将延迟从 8.38s 降到 4.42s，达到 1.95x 加速，同时 FID 为 2.41；</p>\n\t</li><li>\n\t<p>GeoRK2(N=3) 在 2.70x 加速下取得 FID 2.67；</p>\n\t</li><li>\n\t<p>GeoRK2(N=8) 在 4.92x 加速下仍保持 FID 3.32。</p>\n\t</li></ul>\n\n<p>相比之下，很多方法在类似高加速设置下 FID 会明显上升。这说明在 aggressive acceleration 下，几何感知积分能够更好地保持采样轨迹稳定。</p>\n\n<p></p>\n\n<p>表格 1 - 使用 DiT-XL/2 在 ImageNet-256 上的定量比较。结果为 5 次运行的平均值。Speed表示相对于 DDIM-50 的加速倍数。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"675\" src=\"https://i-blog.csdnimg.cn/img_convert/6f05700b90fc5a02cfa71eae4d0b5ed1.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<h3 id=\"section-2-flux-1-dev-复杂文本条件下保持语义一致性\"><a id=\"article-anchor-10\"></a><strong>2. FLUX.1-dev：复杂文本条件下保持语义一致性</strong><a class=\"heading-anchor\" href=\"#section-2-flux-1-dev-复杂文本条件下保持语义一致性\" aria-label=\"链接到本节：2. FLUX.1-dev：复杂文本条件下保持语义一致性\">#</a></h3>\n\n<p></p>\n\n<p>在 FLUX.1-dev + DrawBench 上，GeoRK2 的优势尤其体现在语义一致性上。</p>\n\n<p>在 NFE=50 设置下：</p>\n\n<ul><li>\n\t<p>GeoRK2(N=5) 达到 3.52x latency speedup，ImageReward 为 0.9889，CLIP Score 为 34.963；</p>\n\t</li><li>\n\t<p>GeoRK2(N=7) 达到 4.06x latency speedup，仍保持 ImageReward 0.9792；</p>\n\t</li><li>\n\t<p>GeoRK2(N=8) 达到 4.39x latency speedup，CLIP Score 仍保持在 33.476。</p>\n\t</li></ul>\n\n<p>这一点很重要。因为文本到图像生成不仅要求图像清晰，还要求模型正确理解 prompt。部分缓存类方法虽然也能加速，但在复杂文本条件下更容易损失语义一致性。</p>\n\n<p>GeoRK2 通过几何约束保持中间特征轨迹稳定，因此在大步采样时更不容易偏离文本条件所对应的生成方向。</p>\n\n<p></p>\n\n<p>表格 2 - 在 FLUX.1-dev 上的比较。结果为 5 次运行的平均值。Speed 表示相对于 50 步参考方法的加速倍数。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"675\" src=\"https://i-blog.csdnimg.cn/img_convert/6f05700b90fc5a02cfa71eae4d0b5ed1.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<h3 id=\"section-3-hunyuanvideo-视频生成中的时序稳定性\"><a id=\"article-anchor-11\"></a><strong>3. HunyuanVideo：视频生成中的时序稳定性</strong><a class=\"heading-anchor\" href=\"#section-3-hunyuanvideo-视频生成中的时序稳定性\" aria-label=\"链接到本节：3. HunyuanVideo：视频生成中的时序稳定性\">#</a></h3>\n\n<p></p>\n\n<p>视频生成比图像生成更难加速。因为模型不仅要保证单帧质量，还要保证帧与帧之间的运动连续性。</p>\n\n<p>在 HunyuanVideo + VBench 上，GeoRK2(N=8) 达到：</p>\n\n<ul><li>\n\t<p>latency 从 323.89s 降到 69.44s；</p>\n\t</li><li>\n\t<p>latency speedup 为 4.66x；</p>\n\t</li><li>\n\t<p>FLOPs speedup 为 6.77x；</p>\n\t</li><li>\n\t<p>VBench Score 为 80.73。</p>\n\t</li></ul>\n\n<p>相比其他加速方法，GeoRK2 在高加速下更好地保持了时间一致性。论文中也指出，一些方法虽然单帧质量尚可，但会出现可见 flickering，而 GeoRK2 的几何度量估计能够更自然地适配时空注意力特征。</p>\n\n<p></p>\n\n<p>表格 3 - 在 HunyuanVideo 上基于 VBench 的比较。结果为 5 次运行的平均值。Speed 表示相对于 50 步基线方法的加速倍数。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"332\" src=\"https://i-blog.csdnimg.cn/img_convert/4ec4787061c36c1e977b44c672583399.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<h2 id=\"section-消融实验-每个组件都在发挥作用\"><a id=\"article-anchor-12\"></a><strong>消融实验：每个组件都在发挥作用</strong><a class=\"heading-anchor\" href=\"#section-消融实验-每个组件都在发挥作用\" aria-label=\"链接到本节：消融实验：每个组件都在发挥作用\">#</a></h2>\n\n<p></p>\n\n<p>为了验证 GeoRK2 的设计是否必要，论文还做了系统消融。</p>\n\n<p>在 DiT-XL/2 上：</p>\n\n<ul><li>\n\t<p>完整 GeoRK2 的 FID 为 2.31；</p>\n\t</li><li>\n\t<p>去掉 geometry correction 后，FID 上升到 3.02；</p>\n\t</li><li>\n\t<p>去掉 RK2、改用 Euler 后，FID 上升到 2.87；</p>\n\t</li><li>\n\t<p>去掉欧氏预测相关设计后，FID 上升到 3.41。</p>\n\t</li></ul>\n\n<p>这说明 GeoRK2 的优势不是来自某一个单独 trick，而是来自三个部分的协同：</p>\n\n<p><strong>二阶预测负责更准确地大步前进，几何校正负责把轨迹拉回流形，自适应稳定负责避免阶段切换时发散。</strong></p>\n\n<p>DiT-XL/2 上的受控消融实验（N=3）。FID degradation 表示相对于完整 GeoRK2 的 FID 相对增加幅度。</p>\n\n<p></p>\n\n<p>表格 4 - DiT-XL/2 上的受控消融实验（N=3）。FID degradation 表示相对于完整 GeoRK2 的 FID 相对增加幅度。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"304\" src=\"https://i-blog.csdnimg.cn/img_convert/0663f62c55a63d995fb9d3a1d8c4151b.png\" width=\"960\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>论文还分析了截断秩的影响。结果显示，从较低 rank 增加到 64 时质量明显提升，但继续增加到 128 后收益变小。这与前面的谱分析一致：主导特征方向已经覆盖了大部分有效几何信息。</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"1079\" src=\"https://i-blog.csdnimg.cn/img_convert/87afce4715b5cb41a3557dbb29edd1ae.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>图片 5 - 截断秩对特征重建的影响。散点图比较了在 1/64、1/32、1/16、1/8 比例下的原始特征与低秩特征，结果显示较高秩时与恒等线的对齐更紧密，并在 1/64–1/32 处趋于饱和，这与 FID 饱和以及捕获 99\\% 谱能量的现象一致。</p>\n\n<p></p>\n\n<h2 id=\"section-总结\"><a id=\"article-anchor-13\"></a><strong>总结</strong><a class=\"heading-anchor\" href=\"#section-总结\" aria-label=\"链接到本节：总结\">#</a></h2>\n\n<p></p>\n\n<p>GeoRK2 的核心贡献，并不是简单提出一个新的采样器，而是把扩散 Transformer 加速中的一个关键问题讲清楚：</p>\n\n<p><strong>高倍采样加速失败的原因，往往不是数值阶数不够，而是采样轨迹偏离了模型内部学到的弯曲特征流形。</strong></p>\n\n<p>从这个视角出发，GeoRK2 做了三件事情。</p>\n\n<p>第一，从现象上，它指出了 aggressive acceleration 下的<strong>&nbsp;manifold drift&nbsp;</strong>问题：普通欧氏空间外推会让去噪轨迹逐渐偏离模型真实的特征几何。</p>\n\n<p>第二，从方法上，它把二阶 Runge-Kutta 积分和 Riemannian feature geometry 结合起来，用激活协方差估计局部度量，并通过低秩投影和 metric correction 保持采样轨迹稳定。</p>\n\n<p>第三，从工程上，它保持了非常克制的设计：不重新训练、不修改模型结构，只作为 plug-and-play 推理模块接入现有扩散 Transformer，并在 DiT、FLUX、HunyuanVideo 上实现 4-5x 级别加速。</p>\n\n<p>对于正在做图像生成、视频生成或扩散模型推理优化的团队来说，这项工作的启发是：</p>\n\n<p><strong>扩散模型加速不只是减少采样步数，而是要让每一次大步更新都沿着模型学到的几何结构前进。</strong></p>\n\n<p>当我们把特征流形的几何信息纳入采样器设计时，大模型生成就可以在更低成本下保持更稳定的质量。</p>\n\n<p></p>\n\n<p>-End-</p>\n\n<p>作者丨五角场打工王、争气尾流</p>\n\n        ",
+    "headings": [
+      {
+        "id": "section-前言",
+        "level": 2,
+        "text": "前言"
+      },
+      {
+        "id": "section-动机-为什么扩散模型一加速就容易-跑偏",
+        "level": 2,
+        "text": "动机：为什么扩散模型一加速就容易“跑偏”？"
+      },
+      {
+        "id": "section-方法-geork2-几何感知预测-流形校正-自适应稳定",
+        "level": 2,
+        "text": "方法：GeoRK2 = 几何感知预测 + 流形校正 + 自适应稳定"
+      },
+      {
+        "id": "section-1-几何感知-rk2-不是直接外推-而是沿主特征方向外推",
+        "level": 3,
+        "text": "1. 几何感知 RK2：不是直接外推，而是沿主特征方向外推"
+      },
+      {
+        "id": "section-2-低秩几何校正-用激活协方差估计模型内部的局部度量",
+        "level": 3,
+        "text": "2. 低秩几何校正：用激活协方差估计模型内部的局部度量"
+      },
+      {
+        "id": "section-3-自适应稳定-遇到剧烈阶段切换时及时刹车",
+        "level": 3,
+        "text": "3. 自适应稳定：遇到剧烈阶段切换时及时刹车"
+      },
+      {
+        "id": "section-工程上是否可落地",
+        "level": 2,
+        "text": "工程上是否可落地？"
+      },
+      {
+        "id": "section-实验结果-4-5-倍加速下保持高质量生成",
+        "level": 2,
+        "text": "实验结果：4-5 倍加速下保持高质量生成"
+      },
+      {
+        "id": "section-1-imagenet-256-高加速下仍保持较低-fid",
+        "level": 3,
+        "text": "1. ImageNet-256：高加速下仍保持较低 FID"
+      },
+      {
+        "id": "section-2-flux-1-dev-复杂文本条件下保持语义一致性",
+        "level": 3,
+        "text": "2. FLUX.1-dev：复杂文本条件下保持语义一致性"
+      },
+      {
+        "id": "section-3-hunyuanvideo-视频生成中的时序稳定性",
+        "level": 3,
+        "text": "3. HunyuanVideo：视频生成中的时序稳定性"
+      },
+      {
+        "id": "section-消融实验-每个组件都在发挥作用",
+        "level": 2,
+        "text": "消融实验：每个组件都在发挥作用"
+      },
+      {
+        "id": "section-总结",
+        "level": 2,
+        "text": "总结"
+      }
+    ],
+    "textLength": 7580,
+    "readingMinutes": 17,
     "sourceId": "bilibili-csdn",
     "sourceUrl": "https://blog.csdn.net/bilibili_TC/article/details/163141057",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:52.953Z",
-    "nextRetryAt": "2026-11-09T09:07:52.953Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "04f4d5c9ac7de88242835feea0e8ba1c4b00654cb730f4eefb3c18c9fd0c0cfb",
+    "fetchedAt": "2026-11-02T11:43:06.162Z",
+    "checkedAt": "2026-11-02T11:43:06.162Z",
+    "nextRetryAt": "2026-12-02T11:43:06.162Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

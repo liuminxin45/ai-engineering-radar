@@ -2,17 +2,33 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "8fa81c43d706d6fba4ef",
-    "status": "unavailable",
-    "html": "",
+    "status": "ready",
+    "html": "\n                    <p><img alt=\"\" height=\"9480\" src=\"https://i-blog.csdnimg.cn/direct/7e89a4ba32ca438eb611c46ea6573117.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n                ",
     "headings": [],
     "textLength": 0,
-    "readingMinutes": 0,
+    "readingMinutes": 1,
     "sourceId": "baidu-cloud-csdn-candidate",
     "sourceUrl": "https://blog.csdn.net/2301_82040283/article/details/169465827",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:31.619Z",
-    "nextRetryAt": "2026-11-09T09:07:31.619Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "ee7672c38118d820e84c1e38b73d15267c79d290be21b1b8cd5a90daa8ffe253",
+    "fetchedAt": "2026-11-02T11:40:20.081Z",
+    "checkedAt": "2026-11-02T11:40:20.081Z",
+    "nextRetryAt": "2026-12-02T11:40:20.081Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

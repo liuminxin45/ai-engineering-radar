@@ -2,17 +2,74 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "6f2d61bd7494071da9c3",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <blockquote>\n 作者： vivo BlueImage Lab\n <br> 本文提出 TinySR，一种面向真实世界图像超分辨率的轻量级扩散模型，通过深度剪枝、动态块间激活以及扩张‑腐蚀策略实现高效推理。该模型在保持感知质量的前提下，实现了比教师模型 TSD‑SR 快 5.68 倍、参数量降低 83% 的显著加速。为进一步压缩 VAE，我们采用通道剪枝、去除注意力模块并使用轻量化 SepConv，同时移除时间和提示相关模块并进行预缓存。实验表明，TinySR 在多项指标上与基线相当，且在推理速度和计算成本上具备明显优势。\n</blockquote> \n<p>论文链接：<a title=\"https://arxiv.org/pdf/2508.17434\" href=\"https://arxiv.org/pdf/2508.17434\" target=\"_blank\" rel=\"noopener noreferrer\">https://arxiv.org/pdf/2508.17434</a></p> \n<p>代码链接：<a title=\"https://github.com/Microtreei/TinySR\" href=\"https://github.com/Microtreei/TinySR\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/Microtreei/TinySR</a></p> \n<p>作者团队来自浙江大学 CAD&amp;CG 全国重点实验室 AiXM 课题组、vivo BlueImage Lab（蓝图实验室）、之江实验室。其中，AiXM 课题组长期聚焦人工智能与视觉计算交叉研究，围绕轻量化多模态智能、具身视觉数据生成及其在真实应用场景中的落地开展持续探索；vivo BlueImage Lab 长期关注移动影像算法创新，工作覆盖图像/视频处理、计算摄影、多模态理解与端侧影像体验等方向，致力于让用户在手机上获得更清晰、更自然、更易用的影像能力。</p> \n<p>在真实世界图像增强场景里，超分从来不是一个只看“放大倍率”的问题。真实拍摄图像往往同时混杂着噪声、模糊、压缩损伤、镜头缺陷以及 ISP 链路引入的复杂退化，这使得&nbsp;<strong>Real-<br> ISR</strong>&nbsp;比合成退化条件下的超分难得多，也更依赖强先验模型去恢复自然细节。</p> \n<p>过去两年，Diffusion 模型在图像生成、修复和增强任务中不断刷新大家对“画质上限”的认知。在 Real-ISR 上，它相比传统回归式方法更擅长补全纹理、恢复结构、提升整体感知质量，因此逐渐成为高质量图像增强的重要方向。</p> \n<p>然而，当这类能力真正走向手机、端侧与实时交互场景时，问题就会立刻暴露出来：<strong>Diffusion 很强，却也很重</strong>。 迭代去噪本身带来显著的推理开销；而即便已经通过蒸馏把多步采样压缩到一步，很多方法的底层网络依然过大、过深、过复杂，仍然难以满足移动端对时延、功耗、内存占用和模型体积的现实约束。</p> \n<p>换句话说，“<strong>少步数”并不等于“可部署”</strong>。 如果主干网络、VAE、条件分支和整条运行链路依然笨重，那么模型即使理论上可以跑起来，也未必真的适合手机相册增强、拍后即时清晰化或视频帧超分这类真实场景。</p> \n<p>针对 Diffusion 超分在真实部署中普遍存在的模型笨重、推理开销高、端侧落地难等问题，浙江大学 CAD&amp;CG 全国重点实验室 AiXM 课题组、vivo BlueImage Lab和之江实验室提出了<strong>TinySR&nbsp;</strong>：不是继续堆更大的生成模型，而是围绕部署目标重新设计网络结构，在尽量保住画质的同时，把模型做得更小、更快、更轻。</p> \n<p></p> \n<p><img alt=\"\" height=\"570\" src=\"https://i-blog.csdnimg.cn/img_convert/2e17de56ed8271fe0ad16752afa72de2.jpeg\" width=\"1002\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图1：TinySR 同现有方法视觉效果和计算效率的对比</p> \n<p></p> \n<p><img alt=\"\" height=\"578\" src=\"https://i-blog.csdnimg.cn/img_convert/dbcc2212870548bbecbdad1c966901d0.jpeg\" width=\"1016\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图2: TinySR 性能和效率对比气泡图</p> \n<h3 id=\"section-一-为什么这件事值得关注\"><a id=\"article-anchor-1\"></a>一、为什么这件事值得关注？<a class=\"heading-anchor\" href=\"#section-一-为什么这件事值得关注\" aria-label=\"链接到本节：一、为什么这件事值得关注？\">#</a></h3> \n<p>今天越来越多影像能力都希望“拍完马上出结果”。无论是相册修复、拍照后即时增强、AIGC 图像二次清晰化，还是连续视频帧增强，用户都不会接受一个超分操作转圈十几秒，更不会接受明显发热、掉帧或持续高耗电的体验。</p> \n<p>因此，端侧超分真正需要的，并不是“实验室里最强的大模型”，而是能在硬件预算内给出稳定结果的模型。这个目标要求研究者不只关注最终指标，还要同时考虑参数量、MACs、算子类型、访存模式、模块耦合度，以及整条推理链路的运行效率。</p> \n<p>从这个角度看，TinySR 的价值不只是提出了一个更小的模型，而是把&nbsp;<strong>Diffusion 超分从“证明效果”进一步推进到“证明可部署”</strong>。</p> \n<h3 id=\"section-二-tinysr-到底做了什么\"><a id=\"article-anchor-2\"></a>二、TinySR 到底做了什么？<a class=\"heading-anchor\" href=\"#section-二-tinysr-到底做了什么\" aria-label=\"链接到本节：二、TinySR 到底做了什么？\">#</a></h3> \n<p>TinySR 的整体思路可以概括为一句话：它并不是只压缩某一个模块，而是围绕部署目标，对整个 Diffusion 超分管线进行一次更系统的轻量化重构。</p> \n<p>它的出发点很明确：现有一步式 Real-ISR 方法虽然已经把采样步数压到了 1 步，但很多模型仍然继承了大体量、过参数化的结构，尤其是在主干网络深度、VAE 开销以及条件模块设计上，依然保留了大量不适合端侧部署的历史包袱。</p> \n<p>因此，TinySR 并没有停留在“统一减层”“统一缩通道”这类传统压缩思路上，而是同时从&nbsp;<strong>深度剪枝、VAE 轻量化、冗余条件结构移除</strong>&nbsp;以及&nbsp;<strong>运行过程优化</strong>&nbsp;四个方向入手，重新设计了更适合 Real-ISR 部署的模型形态。</p> \n<h3 id=\"section-三-技术核心一-让剪枝从-人工经验-变成-可学习决策\"><a id=\"article-anchor-3\"></a>三、技术核心一：让剪枝从“人工经验”变成“可学习决策”<a class=\"heading-anchor\" href=\"#section-三-技术核心一-让剪枝从-人工经验-变成-可学习决策\" aria-label=\"链接到本节：三、技术核心一：让剪枝从“人工经验”变成“可学习决策”\">#</a></h3> \n<p>很多轻量化方法都有一个共同问题：剪枝策略往往带有很强的人工经验色彩。比如统一减层数、按照静态重要性指标删模块，或者根据某种经验规则保留前几层、裁掉后几层。这类方法实现简单，但对 Diffusion 这类复杂生成模型来说，往往不够精细。</p> \n<p>原因在于，不同层在 Real-ISR 任务中承担的功能并不对称。有些层更偏向结构恢复，有些层更擅长纹理补全，还有些层的冗余明显更高。如果简单硬剪，很容易出现模型确实变小了，但画质也被一起削掉的问题。</p> \n<p>TinySR 的做法，是把剪枝决策本身变成一个可以学习的问题。具体来说，它不是直接硬删除某些 block，而是为不同结构单元引入一组可学习的概率 mask，让模型在训练中自己判断：<strong>哪些层更值得留下，哪些层即使删掉，性能也更容易恢复</strong>。</p> \n<p>这种思路背后的重点，不是去找“当下最重要”的层，而是去找那些在剪枝之后依然具有较强恢复能力的结构单元。换句话说，TinySR 更关注的是：在压缩约束下，怎样保住效果，而不是单纯追求一个漂亮的剪枝比例。</p> \n<p></p> \n<p><img alt=\"\" height=\"454\" src=\"https://i-blog.csdnimg.cn/img_convert/93c17b499e48fd6147dd94a8ec46e05f.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图3: TinySR动态剪枝方案，通过可学习的概率 mask，让模型在训练中寻找强恢复能力的结构单元</p> \n<p><strong>Dynamic Inter-block Activation：</strong></p> \n<p><strong>不把 block 重要性写死，而是交给训练过程决定</strong></p> \n<p>在论文中，作者提出了&nbsp;<strong>Dynamic Inter-block Activation</strong>。它的核心作用，是在分块剪枝的基础上引入更灵活的跨 block 动态探索，让不同 block 之间的保留关系不再被静态写死。</p> \n<p>直观理解，它不是预设“这一段一定重要、那一段一定可以删”，而是让模型在训练过程中动态调整不同 block 的激活状态，逐步学出一套更贴合任务目标的层保留方案。这样做的意义在于，可以在不显著扩大搜索难度的前提下，提升深度剪枝的有效性与适应性。</p> \n<p><strong>Expansion-Corrosion&nbsp;<br> Strategy</strong><strong>：</strong></p> \n<p><strong>不是剪得更狠，而是剪得更稳</strong></p> \n<p>如果说动态激活主要解决的是“剪哪里”的问题，那么&nbsp;<strong>Expansion-Corrosion Strategy</strong>&nbsp;更像是在解决“怎么让剪枝过程更平滑、更稳定”的问题。</p> \n<p>传统剪枝过程里，一个常见风险是：结构突然被删掉太多，模型还没来得及适应，性能就先掉下去了。TinySR 通过 expansion 与 corrosion&nbsp;<br> &nbsp;的配合，让 mask 学习过程更像是一种渐进式结构调整，而不是一次性剧烈收缩。这样既能保留探索空间，也更有利于训练过程中的稳定收敛。</p> \n<p>最终得到的结果不是“盲目压小”的网络，而是一套在任务目标约束下筛出来的更优结构路径。</p> \n<h3 id=\"section-四-技术核心二-vae-不是配角-而是部署瓶颈\"><a id=\"article-anchor-4\"></a>四、技术核心二：VAE 不是配角，而是部署瓶颈<a class=\"heading-anchor\" href=\"#section-四-技术核心二-vae-不是配角-而是部署瓶颈\" aria-label=\"链接到本节：四、技术核心二：VAE 不是配角，而是部署瓶颈\">#</a></h3> \n<p>很多人在看 Diffusion 压缩时，容易把注意力全部放在主干 Transformer 上，但在真实部署里，<strong>VAE 往往同样是影响时延与算力开销的重要部分</strong>。如果 VAE 依然笨重，那么主干即使压得再好，整条链路也未必足够轻。</p> \n<p>TinySR 在这部分做得很彻底。论文指出，原有 VAE 的主要瓶颈包括：过大的通道规模、计算代价较高的 attention 模块，以及占据主要计算量的标准卷积。</p> \n<p>围绕这些问题，作者做了三件事：</p> \n<ul><li>对 VAE 做通道剪枝，把最大通道宽度压到更适合部署的规模；</li><li>移除高开销的 attention 模块，降低非必要计算负担；</li><li>在编码器中引入更轻量的 depthwise separable convolution（SepConv），进一步压缩卷积开销。</li></ul> \n<p>这组改动的价值，不只是“少了多少参数”，而是它更贴近真实端侧优化逻辑。因为移动端部署从来不只是 FLOPs 游戏，很多时候真正决定速度的是算子是否友好、访存是否高效、是否容易映射到 NPU / GPU 的执行栈中。从这个角度看，VAE 轻量化是 TinySR 能走向真实部署的重要一步。</p> \n<p>论文中的消融实验也说明了这一点：最终得到的轻量化 VAE 在重建质量接近 teacher 的同时，实现了约&nbsp;<strong>10× 推理加速</strong>&nbsp;与约&nbsp;<strong>22× MACs 降低</strong>，说明这并不是“边角优化”，而是整条链路中的关键收益来源。</p> \n<p></p> \n<p><img alt=\"\" height=\"354\" src=\"https://i-blog.csdnimg.cn/img_convert/e0b46b3199521c3e70508b86fa408b6d.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图4: VAE中解构算力瓶颈组件</p> \n<p></p> \n<p><img alt=\"\" height=\"398\" src=\"https://i-blog.csdnimg.cn/img_convert/296f6c56099372d25c36ed7c5125b5ae.jpeg\" width=\"1018\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图5: Text Token剪枝的可视化对比</p> \n<h3 id=\"section-五-技术核心三-删掉任务无关模块-让模型更-专用\"><a id=\"article-anchor-5\"></a>五、技术核心三：删掉任务无关模块，让模型更“专用”<a class=\"heading-anchor\" href=\"#section-五-技术核心三-删掉任务无关模块-让模型更-专用\" aria-label=\"链接到本节：五、技术核心三：删掉任务无关模块，让模型更“专用”\">#</a></h3> \n<p>除了主干和 VAE，TinySR 还做了一个非常重要、但常常容易被忽略的动作：<strong>去掉与 time / prompt 相关的模块</strong>。</p> \n<p>这背后其实反映出一个很清晰的设计取向：它不想保留一个“功能很全但很重”的通用生成模型，而是想做一个更适合 Real-ISR 的专用型模型。</p> \n<p>在通用扩散模型里，时间步嵌入、文本提示或其他条件模块往往是合理存在的，因为模型需要处理更广泛的生成控制任务。但对于一个强调一步式真实世界超分、且目标是实时部署的模型来说，这些条件结构未必始终带来足够收益，反而可能引入额外参数、额外分支和更复杂的推理路径。</p> \n<p>TinySR 的取舍很直接：如果这些模块对当前任务贡献有限，那就删掉。论文中的消融结果显示，移除文本嵌入、时间嵌入及其相关模块后，模型在质量指标上只有很小幅度变化，但能继续显著减少参数量、MACs 与时延。</p> \n<p>这件事也再次说明了端侧模型设计的一个普遍规律：<strong>专用模型往往比通用模型更容易落地</strong>。 不是因为它理论上更强，而是因为它更聚焦，能把每一份预算都用在目标任务真正需要的地方。</p> \n<p><strong>pre-caching：不只压模型结构，也优化真实运行过程</strong></p> \n<p>除了结构层面的精简，TinySR 还引入了&nbsp;<strong>pre-caching</strong>。论文中提到，模型中的 modulation 参数在训练后趋于稳定，并且不再显著依赖输入，因此可以被预先计算并缓存，在推理时直接加载使用。</p> \n<p>这一步很有工程意味。因为真实部署瓶颈并不完全来自乘加运算本身，也来自重复计算、数据搬运、中间状态构造和模块切换。通过 pre-caching，把能够提前准备的内容缓存下来，就可以进一步压缩真实运行时延，让“纸面加速”更接近“用户感知加速”。</p> \n<p></p> \n<p><img alt=\"\" height=\"323\" src=\"https://i-blog.csdnimg.cn/img_convert/87ac67a01310c927dcd3a9e389cfbd0e.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图6: 各轻量化技术对于模型的效率提升和性能保持的贡献示意图</p> \n<h3 id=\"section-六-实验结果-更小-更快-而且质量还站得住\"><a id=\"article-anchor-6\"></a>六、实验结果：更小、更快，而且质量还站得住<a class=\"heading-anchor\" href=\"#section-六-实验结果-更小-更快-而且质量还站得住\" aria-label=\"链接到本节：六、实验结果：更小、更快，而且质量还站得住\">#</a></h3> \n<p>从结果上看，TinySR 最直观的标签当然是“更小、更快”。但更值得关注的是，它并没有因为轻量化而明显失去竞争力，反而在效率与主观质量之间找到了一个相当不错的平衡点。</p> \n<p>相比教师模型&nbsp;<strong>TSD-SR</strong>，TinySR 实现了：</p> \n<ul><li>最高 5.68× 推理加速</li><li>参数量减少 83%</li><li>MACs 降低 84%</li></ul> \n<p>在 DIV2K-Val 等基准上，TinySR 在 LPIPS、DISTS、FID、NIQE、MUSIQ、CLIPIQA 等多项指标上都展现出有竞争力的表现。论文中还特别提到，相比一些多步扩散方法容易出现的过生成伪纹理，以及部分一步式方法容易出现的模糊结果，TinySR 在自然纹理、结构完整性和感知质量之间取得了更均衡的效果。</p> \n<p>更重要的是，这篇工作不仅和 teacher 比，还与其他压缩或一步式 Real-ISR 方法做了直接比较。论文显示，相比 OSEDiff、SinSR 和 AdcSR 等方法，TinySR 在速度、计算量和模型规模上都表现出很强的效率优势，同时仍然保有较好的画质表现。这意味着它并不是“牺牲效果换轻量”，而是在努力逼近一种更适合真实产品落地的平衡解。</p> \n<p></p> \n<p><img alt=\"\" height=\"333\" src=\"https://i-blog.csdnimg.cn/img_convert/1e3c8e9e9c1fc84867a4add7cadf8c74.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<h3 id=\"section-七-为什么它对移动端部署尤其重要\"><a id=\"article-anchor-7\"></a>七、为什么它对移动端部署尤其重要？<a class=\"heading-anchor\" href=\"#section-七-为什么它对移动端部署尤其重要\" aria-label=\"链接到本节：七、为什么它对移动端部署尤其重要？\">#</a></h3> \n<p>如果只把 TinySR 看成一篇“模型剪枝论文”，它的意义会被低估。更值得重视的是，它体现出一种越来越明确的趋势：<strong>Diffusion 类视觉模型正在从“证明效果”走向“证明可部署”。</strong></p> \n<p>对移动影像来说，这件事至少有三层意义。</p> \n<p><strong>第一，面向手机影像增强的即时响应。</strong></p> \n<p>用户在意的不是模型有多复杂，而是点击增强之后多久能出结果、手机会不会发热、连续处理时是否稳定。TinySR 这种全链路轻量化思路，更接近真实端侧体验优化的方向。</p> \n<p><strong>第二，面向视频场景的连续帧处理。</strong></p> \n<p>单张图能跑，不代表视频场景能用。视频超分面对的是持续吞吐压力，只要单帧成本过高，总时延、功耗和温控就会迅速失控。更轻的单帧模型，才有机会支撑更真实的视频增强链路。</p> \n<p><strong>第三，面向端云协同的模型分层。</strong></p> \n<p>很多业务会采用端侧先做一级增强、云端再做高质量重建的分层策略。TinySR 这类模型很适合作为端侧前置模型，用更小代价换取不错的首屏质量，从而改善整体交互体验。</p> \n<p>从更工程化的角度看，TinySR 也提醒我们：移动端部署从来不只是看参数量或 FLOPs。算子支持、缓存复用、量化适配、模块耦合度以及硬件映射效率，都会决定一个模型最终能否真正进入产品链路。而 TinySR 的很多设计，已经明显带有这种“面向落地”的思考。</p> \n<h3 id=\"section-八-总结与展望\"><a id=\"article-anchor-8\"></a>八、总结与展望<a class=\"heading-anchor\" href=\"#section-八-总结与展望\" aria-label=\"链接到本节：八、总结与展望\">#</a></h3> \n<p>TinySR 不是在证明 Diffusion 能不能做超分，而是在回答另一个更现实的问题：<strong>Diffusion 超分什么时候能真正走出实验室，进入轻量化、实时化、移动化的产品链路。</strong></p> \n<p>它的意义不在于单点做了某个压缩技巧，而在于提供了一种更完整的思路：从深度剪枝，到 VAE 轻量化，再到条件模块精简与运行链路优化，整个系统都围绕“真实部署”这个目标重新设计。</p> \n<p>对于真实世界图像增强来说，这一步可能尤其关键。因为只有当模型既能保住细节，又能适应移动端预算，它才真正有机会成为下一代影像基础能力的一部分。TinySR 给出的，不只是一个更小的模型，也是一条更接近真实产品化路径的 Diffusion 超分新思路。</p>\n        ",
+    "headings": [
+      {
+        "id": "section-一-为什么这件事值得关注",
+        "level": 3,
+        "text": "一、为什么这件事值得关注？"
+      },
+      {
+        "id": "section-二-tinysr-到底做了什么",
+        "level": 3,
+        "text": "二、TinySR 到底做了什么？"
+      },
+      {
+        "id": "section-三-技术核心一-让剪枝从-人工经验-变成-可学习决策",
+        "level": 3,
+        "text": "三、技术核心一：让剪枝从“人工经验”变成“可学习决策”"
+      },
+      {
+        "id": "section-四-技术核心二-vae-不是配角-而是部署瓶颈",
+        "level": 3,
+        "text": "四、技术核心二：VAE 不是配角，而是部署瓶颈"
+      },
+      {
+        "id": "section-五-技术核心三-删掉任务无关模块-让模型更-专用",
+        "level": 3,
+        "text": "五、技术核心三：删掉任务无关模块，让模型更“专用”"
+      },
+      {
+        "id": "section-六-实验结果-更小-更快-而且质量还站得住",
+        "level": 3,
+        "text": "六、实验结果：更小、更快，而且质量还站得住"
+      },
+      {
+        "id": "section-七-为什么它对移动端部署尤其重要",
+        "level": 3,
+        "text": "七、为什么它对移动端部署尤其重要？"
+      },
+      {
+        "id": "section-八-总结与展望",
+        "level": 3,
+        "text": "八、总结与展望"
+      }
+    ],
+    "textLength": 5772,
+    "readingMinutes": 13,
     "sourceId": "vivo-csdn",
     "sourceUrl": "https://blog.csdn.net/vivo_tech/article/details/164330112",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:47.638Z",
-    "nextRetryAt": "2026-11-09T09:07:47.638Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "62577aa4cd065ead01ae67c82df4e8948bfc75bd9fe0e3d4e465fe8335bff40b",
+    "fetchedAt": "2026-11-02T11:42:32.680Z",
+    "checkedAt": "2026-11-02T11:42:32.680Z",
+    "nextRetryAt": "2026-12-02T11:42:32.680Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

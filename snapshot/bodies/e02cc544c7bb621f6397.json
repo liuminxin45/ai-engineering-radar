@@ -2,17 +2,50 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "e02cc544c7bb621f6397",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "<blockquote>\n 作者： vivo BlueImage Lab\n <br> 本文入选 CVPR 2026\n <br> \n <strong>CVPR</strong>（IEEE Conference on Computer Vision and Pattern Recognition）IEEE国际计算机视觉与模式识别会议，主要内容是计算机视觉与模式识别技术。CVPR 2026约160920篇投稿，接收率约25.42%。\n</blockquote> \n<p>论文主页：<a title=\"https://arxiv.org/abs/2605.14938\" href=\"https://arxiv.org/abs/2605.14938\" target=\"_blank\" rel=\"noopener noreferrer\">https://arxiv.org/abs/2605.14938</a></p> \n<p>代码仓库：<a title=\"https://github.com/Fxmangd/Octopus\" href=\"https://github.com/Fxmangd/Octopus\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/Fxmangd/Octopus</a></p> \n<blockquote>\n <strong>摘要：</strong>\n <br> 多模态大语言模型的持续学习旨在序贯式获取知识并缓解灾难性遗忘问题，现有方法通常在推理开销、泛化性以及隐私保护方面存在固有局限。Octopus提出了一种基于无历史数据的梯度正交化（HiFGO）的两阶段持续学习框架，通过梯度层面的正交约束有效缓解了任务间的干扰，同时提出两阶段训练策略实现可塑性与稳定性的良好平衡。Octopus在UCIT基准上实现了当前最优性能（SOTA），Avg和Last指标分别超越现有最优方法 2.14% 和 6.82%。\n</blockquote> \n<p></p> \n<p><img alt=\"\" height=\"862\" src=\"https://i-blog.csdnimg.cn/img_convert/84258175b5af13bc35df7cc08b542791.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图表1 Octopus与现有方法在 UCIT 数据集上的性能对比</p> \n<p>在通往通用人工智能（AGI）的道路上，如何让多模态大语言模型（MLLM）具备<strong>持续学习（Continual Learning）</strong>&nbsp;的能力，且不发生<strong>灾难性遗忘（Catastrophic Forgetting）</strong>，是当前最具挑战的课题之一。</p> \n<p>传统持续学习方法往往陷入两难困境：基于数据重放的方法高度依赖历史任务数据，不仅会带来存储开销，更引发了严重的数据隐私与安全隐患；基于架构的方法则会随着任务增加不断引入额外的模型参数，导致泛化能力受限与推理成本激增。基于正则化的方法虽无需存储历史数据且不增加推理成本，但现有技术在“学习新知识（可塑性）”和“保留旧知识（稳定性）”之间往往难以达到理想的平衡。</p> \n<p>为破解这一难题，近日，上海交通大学与vivo团队联合提出了一种全新的持续学习框架——<strong>Octopus</strong>。该方法首创&nbsp;<strong>无需历史数据的梯度正交化（History-Free Gradient Orthogonalization, HiFGO） 技术</strong>。模型无需获取任何历史任务数据，即可精准捕捉不干扰旧知识的“安全更新方向”， 精准刻画并规避任务间的参数干扰。</p> \n<p>实验表明，在权威的多模态增量学习基准UCIT上，Octopus的平均性能（Avg）和最终性能（Last）分别超越此前SOTA方法&nbsp;<strong>2.14%</strong>&nbsp;和&nbsp;<strong>6.82%</strong>，并且在不依赖旧数据的情况下罕见地实现了“正向后向迁移（Positive Backward Transfer）”。</p> \n<h3 id=\"section-一-背景-大模型的-灾难性遗忘-困境\">一、背景：大模型的“灾难性遗忘”困境<a class=\"heading-anchor\" href=\"#section-一-背景-大模型的-灾难性遗忘-困境\" aria-label=\"链接到本节：一、背景：大模型的“灾难性遗忘”困境\">#</a></h3> \n<p>近年来，多模态大模型（MLLM）在各项任务中展现出卓越的性能。但在实际业务部署中，模型需要像人类一样进行“终身学习”——不断掌握新技能并适应新数据分布。然而，当大模型在新数据上进行微调时，参数的更新往往会不可逆地抹除模型先前学到的旧知识，引发“灾难性遗忘”。</p> \n<p>目前主流的 MLLM 持续学习方法存在难以逾越的瓶颈：</p> \n<p><strong>基于架构的方法（Architecture-based）</strong>：为每个任务分配特定的 LoRA 模块以存储任务专属信息。虽然能缓解遗忘，但会割裂任务间的知识共享，削弱模型对未知任务的泛化能力，并降低推理阶段的计算效率。</p> \n<p><strong>基于重放的方法（Rehearsal-based）</strong>：通过维护记忆模块存储历史任务信息。但在实际应用（尤其在端侧设备）中，历史数据往往涉及隐私或不可获取；同时，维护经验回放缓冲区也会带来额外的存储开销。</p> \n<p><strong>基于正则化的方法（Regularization-based）</strong>：通过添加约束项限制参数更新的范围。然而前沿研究表明，现有方法所依赖的 “参数空间正交”并不足以完全防止知识干扰，且难以在“学习新知识（可塑性）”和“保留旧知识（稳定性）”间找到最佳平衡。</p> \n<p>这引出了一个核心问题：<strong>是否存在一种方法，既不需要访问历史数据，也不增加推理阶段的参数负担，同时还能高效保留模型的旧知识？</strong></p> \n<p>Octopus 的核心洞悉正源于此：仅在参数层面进行正交约束是局限的，梯度层面的正交才是避免参数冲突的关键。更重要的是，研究团队证明了在缺乏旧数据的情况下，依然可以推导出这一“安全更新方向”。</p> \n<h3 id=\"section-二-核心机制-octopus-框架的关键创新\">二、核心机制：Octopus 框架的关键创新<a class=\"heading-anchor\" href=\"#section-二-核心机制-octopus-框架的关键创新\" aria-label=\"链接到本节：二、核心机制：Octopus 框架的关键创新\">#</a></h3> \n<p>为实现上述目标，Octopus 框架引入了两项核心创新设计：HiFGO约束与两阶段微调策略，在可塑性与稳定性之间构建了精妙的平衡。</p> \n<p></p> \n<p><img alt=\"\" height=\"375\" src=\"https://i-blog.csdnimg.cn/img_convert/8afe45e65d0cbdcb4537b7e3739a8038.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图表2 多模态大模型持续学习的整体流程（左）与本文所提 Octopus 框架的结构（右）</p> \n<p><strong>1. 无需历史数据的梯度正交化（HiFGO）</strong></p> \n<p>研究团队在理论层面指出，遗忘的本质新旧任务在优化流形<strong>（Optimization Manifold）上的梯度方向冲突</strong>。为保护旧知识，新任务的更新方向应与旧任务的“关键梯度空间”严格保持正交。</p> \n<p>最大的挑战在于：如何在不使用旧数据的情况下，计算出旧任务的敏感梯度？为此，研究团队提出使用<strong>GPWC（Gradients of Previous parameters Within Current data distribution）&nbsp;</strong>作为旧任务敏感梯度方向的合理代理（Proxy）。该机制创造性地利用“历史任务的模型参数”在“当前新任务数据”上进行梯度计算，从而高效近似旧任务的关键梯度方向。</p> \n<p>GPWC 的有效性建立在坚实的理论基础之上：研究证明，GPWC等价于旧任务Hessian矩阵在新任务数据流形切向空间上的投影。 换言之，Octopus 成功提取了“新任务数据分布下旧任务的敏感方向”，从而在训练中实现了参数更新的高效解耦。</p> \n<p>研究团队通过两任务序列微调测试验证了 GPWC 的有效性。结果显示，传统无约束微调会导致前一个任务的性能遭遇断崖式下跌；而在引入基于 GPWC 的 HiFGO 约束后，前一个任务的性能得到了有效提升，几乎恢复到了单一任务独立训练的理想水平。</p> \n<p></p> \n<p><img alt=\"\" height=\"538\" src=\"https://i-blog.csdnimg.cn/img_convert/b88cfca84432d5d7ddbf774cc0c43fc6.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图表3 基于GPWC的HiFGO约束的有效性验证。我们展示了单任务微调、双任务顺序微调，以及在顺序微调后加入 HiFGO 约束进行微调的性能（数值越高越好）</p> \n<p>Hessian 矩阵二次型分析进一步证实：相比标准序列微调，GPWC 约束下的参数增量在旧任务 Hessian 上的二次型显著更小。这意味着 Octopus 能够成功引导模型避开旧知识的“高曲率区域”，从最底层的几何优化机制上锁定了旧记忆。</p> \n<p></p> \n<p><img alt=\"\" height=\"514\" src=\"https://i-blog.csdnimg.cn/img_convert/64a471a8c753293f0ad2d0984f582d59.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图表4 Seq. FT 与本文方法在两个任务上的Hessian二次型对比</p> \n<p><strong>2. 两阶段微调策略（Two-Stage Finetuning）</strong></p> \n<p>在序列学习中直接引入正交约束，往往会限制模型吸收新知识的能力（即“可塑性”下降）。受优化理论启发，Octopus 提出了一种两阶段解耦微调策略：</p> \n<p><strong>第一阶段（充分学习）：</strong>模型在无约束状态下，于新任务数据上自由微调，充分学习新知识，迅速逼近局部最优；</p> \n<p><strong>第二阶段（约束巩固）：</strong>引入 HiFGO 约束进行第二轮微调。此阶段旨在利用正交约束，将参数“拉回”到一个既能维持新任务高性能、又与旧知识不冲突的安全流形区域。</p> \n<p>这种“先适应、后巩固”的策略显著提升了正则化方法的性能上限。</p> \n<p></p> \n<p><img alt=\"\" height=\"727\" src=\"https://i-blog.csdnimg.cn/img_convert/d2f95b2bb218a540c74ee89e574f0169.jpeg\" width=\"904\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图表5 Octopus算法流程</p> \n<h3 id=\"section-三-实验验证-全面刷新多模态持续学习-sota\">三、实验验证：全面刷新多模态持续学习 SOTA<a class=\"heading-anchor\" href=\"#section-三-实验验证-全面刷新多模态持续学习-sota\" aria-label=\"链接到本节：三、实验验证：全面刷新多模态持续学习 SOTA\">#</a></h3> \n<p>研究团队在多模态持续学习权威基准 UCIT 上进行了严格的评估。该基准包含图像描述、视觉问答、数学推理等 6 个分布迥异的连续任务。</p> \n<p><strong>1.全面超越基线，突破正则化方法瓶颈</strong></p> \n<p>Octopus 在实验中展现出显著的性能优势：</p> \n<p><strong>综合性能领先：</strong>相比此前的最优方法（如 O-LoRA, HiDe-LLaVA），Octopus 在平均性能（Avg）和最终性能（Last）上分别达到 71.08% 和 71.01%，显著领跑基线模型。</p> \n<p><strong>逼近理论上限：</strong>在 ArXivQA、CLEVR-Math 等任务中，Octopus 的表现比肩甚至超越了通常被视为理论上限的“全数据联合训练（Multi-task）”。</p> \n<p><strong>超越数据回放方法：</strong>作为一个无回放（Rehearsal-free）的正则化方法，Octopus 的表现甚至优于依赖真实历史数据的重放方法（Vanilla Rehearsal），证明了其参数空间解耦的高效性。</p> \n<p></p> \n<p><img alt=\"\" height=\"688\" src=\"https://i-blog.csdnimg.cn/img_convert/650cbfb5e8bfd804d6b2adfde7150067.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图表6 在 UCIT 数据集上，本文方法与多种对比方法在 Avg 和 Last 指标上的对比</p> \n<p><strong>2.罕见的正向后向迁移（Positive Backward Transfer）</strong></p> \n<p>对抗遗忘通常是“止损”，而 Octopus 不仅有效抑制了负向迁移，还成功实现了正向后向迁移（BWT = +0.41）。作为对比，传统的参数正交约束会导致 BWT 下跌至 -2.51。这表明得益于高质量的梯度解耦，Octopus 能够从新任务中提取并反哺旧任务的通用表示，真正实现了“温故而知新”。</p> \n<p></p> \n<p><img alt=\"\" height=\"334\" src=\"https://i-blog.csdnimg.cn/img_convert/c420461df6b52b42c02d01867676171c.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图表7 不同正交方法的性能对比</p> \n<p></p> \n<p><img alt=\"\" height=\"494\" src=\"https://i-blog.csdnimg.cn/img_convert/e7ef52d58a6031bc965645bb0158f220.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图表8 采用不同正交化方法对模型在每个任务上微调后的反向迁移性能（BTW）</p> \n<p><strong>3.卓越的鲁棒性与泛化能力</strong></p> \n<p><strong>① 超参数稳定性：</strong></p> \n<p>敏感性分析表明，在较宽泛的超参数区间内（如），模型核心指标未出现显著衰减。这极大降低了实际业务部署中的调参成本。</p> \n<p></p> \n<p><img alt=\"\" height=\"412\" src=\"https://i-blog.csdnimg.cn/img_convert/0ff229beade399c02b8034795124ec8f.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图表 9 超参数敏感性实验结果</p> \n<p><strong>② 任务顺序鲁棒性：</strong></p> \n<p>在面对非平稳数据流时（即使多次随机重排任务序列），Octopus 的最终性能均表现出高度一致性。这种优异的“顺序免疫”特性，从经验层面证实了 HiFGO 能够从容应对未知数据流的冲击。</p> \n<p></p> \n<p><img alt=\"\" height=\"209\" src=\"https://i-blog.csdnimg.cn/img_convert/afda6366c67c3bb4f01dc183913cf0bf.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图表10 UCIT 基准测试中不同任务顺序下的实验结果</p> \n<p></p> \n<p><img alt=\"\" height=\"674\" src=\"https://i-blog.csdnimg.cn/img_convert/47d0606227c90e5a9829b4089b815336.jpeg\" width=\"688\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图表11 不同任务顺序下，在每个任务微调后的平均性能</p> \n<p><strong>4.高效的推理与部署</strong></p> \n<p>在推理阶段，相较于基于专家路由（MoE）的方法需要随任务增加加载冗余参数，Octopus 始终维持单一的 LoRA 模块，实现了零额外推理开销，极其适合端侧或资源受限场景下的大模型部署。</p> \n<p></p> \n<p><img alt=\"\" height=\"509\" src=\"https://i-blog.csdnimg.cn/img_convert/71be4f9c0b3367a4f133efedeb5c0ee0.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>图表12 推理阶段所需额外参数量的对比</p> \n<h3 id=\"section-四-总结-迈向实用化-安全可靠的终身学习\">四、总结：迈向实用化、安全可靠的终身学习<a class=\"heading-anchor\" href=\"#section-四-总结-迈向实用化-安全可靠的终身学习\" aria-label=\"链接到本节：四、总结：迈向实用化、安全可靠的终身学习\">#</a></h3> \n<p>Octopus框架通过其创新的<strong>无需历史数据的梯度正交化（HiFGO）约束和两阶段微调策略</strong>，为多模态大模型的持续学习问题提供了一个高效、安全且性能卓越的解决方案。它证明了，在保护隐私（无需历史数据）和控制模型规模（无需动态扩容）的前提下，我们依然能够构建出“过目不忘”的智能系统。</p> \n<p>这项工作不仅在学术上刷新了持续学习的SOTA，更重要的是，它为大模型在真实世界中的部署和持续迭代提供了重要的技术基石——在数据隐私日益重要的今天，一个无需访问历史数据的终身学习系统，无疑拥有更广阔的应用前景。让大模型安全、高效地终身学习，Octopus迈出了坚实的一步。</p> \n<blockquote>\n <strong>vivo BlueImage Lab</strong>\n <br> 蓝图实验室，主要负责移动影像算法创新，包括图像/视频处理、图像/视频交互、图像/视频增强、多模态理解大模型等方面的技术前沿探索。\n <br> 致力于不断提升vivo移动影像的算法能力，使用户能够拍摄出更加清晰、美观的照片和视频。同时积极探索增强现实、具身智能等新兴技术领域的应用，努力为用户提供更加丰富和便捷的影像体验。\n <br> 欢迎持续关注 vivo 影像技术，获取前沿技术创新经验分享与热招岗位信息。\n</blockquote>",
+    "headings": [
+      {
+        "id": "section-一-背景-大模型的-灾难性遗忘-困境",
+        "level": 3,
+        "text": "一、背景：大模型的“灾难性遗忘”困境"
+      },
+      {
+        "id": "section-二-核心机制-octopus-框架的关键创新",
+        "level": 3,
+        "text": "二、核心机制：Octopus 框架的关键创新"
+      },
+      {
+        "id": "section-三-实验验证-全面刷新多模态持续学习-sota",
+        "level": 3,
+        "text": "三、实验验证：全面刷新多模态持续学习 SOTA"
+      },
+      {
+        "id": "section-四-总结-迈向实用化-安全可靠的终身学习",
+        "level": 3,
+        "text": "四、总结：迈向实用化、安全可靠的终身学习"
+      }
+    ],
+    "textLength": 4596,
+    "readingMinutes": 11,
     "sourceId": "vivo-csdn",
     "sourceUrl": "https://blog.csdn.net/vivo_tech/article/details/163912378",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:49.838Z",
-    "nextRetryAt": "2026-11-09T09:07:49.838Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "501316cef6891fb5ce2786d95f2fc53eb7fa88eeb8eef71b72240a401111a13f",
+    "fetchedAt": "2026-11-02T11:42:35.328Z",
+    "checkedAt": "2026-11-02T11:42:35.328Z",
+    "nextRetryAt": "2026-12-02T11:42:35.328Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

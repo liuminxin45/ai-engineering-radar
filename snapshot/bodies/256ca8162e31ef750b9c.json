@@ -2,17 +2,54 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "256ca8162e31ef750b9c",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          \n          <p>7月30日，由网易智企主办的“2026企业AI Agent规模化落地峰会”在杭州举行。来自国央企、金融、制造等领域的企业管理者、数字化负责人和行业专家齐聚现场，围绕AI Agent如何走出概念、进入真实业务展开交流。</p>\n<p>网易智企·数帆解决方案负责人张望带来主题演讲《AI Agent规模化落地：从“能干活”到“真上岗”》。相比讨论模型参数和技术概念，他把重点放在了一个更实际的问题上：企业如何把数据准备好，让AI真正读懂业务、分析问题并辅助决策？</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/65c2fd6f2af94e6c876e11fdeb6b885f.jpg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h3 id=\"section-企业ai落地-先把数据基础打牢\"><a id=\"article-anchor-1\"></a><a id=\"article-anchor-2\"></a>企业AI落地，先把数据基础打牢<a class=\"heading-anchor\" href=\"#section-企业ai落地-先把数据基础打牢\" aria-label=\"链接到本节：企业AI落地，先把数据基础打牢\">#</a></h3>\n<p>过去一年，企业采购的大模型、Copilot和各类Agent工具越来越多，但“买了AI”并不等于“AI已经进入业务”。</p>\n<p>张望在现场提出了三个更值得追问的问题：这些工具有多少真正跑进了日常流程？有多少不只是短期试点，而是能够稳定使用？又有多少最终形成了可量化的业务价值？<strong>AI能干活，不等于能上岗；能上岗，也不等于能创造价值。</strong></p>\n<p>很多AI项目迟迟没有达到预期，问题未必出在模型本身，而可能出在数据上。企业内部并不缺数据，但数据往往散落在不同系统中，同一个指标可能存在多套口径，数据更新也不够及时。这样的数据一旦交给AI，答案即使表达流畅，也未必准确。</p>\n<p>尤其在经营分析、财务管理等场景里，管理者不仅关心“答案是什么”，还会继续追问：数据从哪里来？指标怎么算？结论能否复核？因此，企业AI想从演示走向真正应用，第一步不是继续叠加更多模型，而是先把数据理顺。<strong>数据越准确、口径越统一、链路越清晰，AI才越有可能真正读懂业务。</strong></p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/f01dad23bfd0462088df60c53a00f577.jpg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h3 id=\"section-可信数据底座-决定ai能走多远\"><a id=\"article-anchor-3\"></a><a id=\"article-anchor-4\"></a>可信数据底座，决定AI能走多远<a class=\"heading-anchor\" href=\"#section-可信数据底座-决定ai能走多远\" aria-label=\"链接到本节：可信数据底座，决定AI能走多远\">#</a></h3>\n<p>那么，什么样的数据才能放心交给AI？张望在分享中重点介绍了网易智企·数帆的数据开发治理实践。通过数据资产评估，企业可以对现有数据做一次“全面体检”：哪些数据质量不高，哪些资产重复建设，哪些长期闲置，都能更清楚地识别出来。</p>\n<p>在此基础上，数据质量管理和血缘追溯进一步把数据链路“照亮”。一项指标从哪个系统产生、经过了哪些加工、最终被谁使用，都可以沿着链路追踪。出现异常时，不必在多个系统之间反复排查，而是能够更快找到问题源头。</p>\n<p>这套能力看起来是在治理数据，真正解决的却是AI能不能被信任。只有数据准确、指标口径统一、加工过程可追溯，AI给出的经营分析和行动建议才有依据、可核验，也更容易被业务人员采用。对企业来说，数据治理并不是AI上线前做完就结束的一次性工作，而是一套持续为AI提供高质量“业务养分”的基础设施。<strong>先把数据底座打牢，AI才能少一些似是而非，多一些真正可用。</strong></p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/97e9aa6cad784f7592a75f65ff90b055.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h3 id=\"section-从-三不通-到-三层通\"><a id=\"article-anchor-5\"></a><a id=\"article-anchor-6\"></a>从“三不通”到“三层通”<a class=\"heading-anchor\" href=\"#section-从-三不通-到-三层通\" aria-label=\"链接到本节：从“三不通”到“三层通”\">#</a></h3>\n<p>数据底座打得好不好，最终还是要看业务有没有真正发生变化。</p>\n<p>网易智企·数帆服务的某省属国企集团，业务横跨商贸流通、金融服务和生命健康三大板块，过去长期面临“三不通”：系统不通，集团与子公司平台相互割裂，约60%的数据需求依赖IT手工取数，响应往往需要3-5天；语义不通，财务口径与业务口径长期不一致，一项指标要经过2-3轮跨部门沟通；质量不通，风险管控依赖日报、周报、月报，问题被发现时，往往已经滞后2-4周。</p>\n<p>针对这些问题，网易智企·数帆为其构建了“112N”数据架构：以一套统一数据标准明确集团级管理口径，推动1800余项经营管理指标全域统一；以一套统一技术架构接管不同技术底座；建设集团与二级成员公司两级数据中台，并围绕管理和运营场景梳理N级数据资产。</p>\n<p>方案落地后，数据响应从3-5天缩短至秒级，风险发现从滞后数周变为实时预警，IT人员也逐渐从反复取数的“取数工”，转向负责体系建设的“数据架构师”。管理层在晨会前，只需3分钟，就能自助查看全集团经营概况。</p>\n<p>这个案例也说明：数据底座打牢之后，AI要进入业务，不只是技术问题，更是组织、流程和信任问题。通过“资产目录-统一语义-可信AI助理”三层贯通，AI能够知道数据在哪里、指标口径是什么、分析结果如何追溯，推动企业真正从“有数据”走向“用数据、信数据”。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/20138746e7694716a71261bd5d90fa93.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h3 id=\"section-不只谈技术-更关注ai怎么真正落地\"><a id=\"article-anchor-7\"></a><a id=\"article-anchor-8\"></a>不只谈技术，更关注AI怎么真正落地<a class=\"heading-anchor\" href=\"#section-不只谈技术-更关注ai怎么真正落地\" aria-label=\"链接到本节：不只谈技术，更关注AI怎么真正落地\">#</a></h3>\n<p>峰会现场，致远互联、英特集团、合合信息、e签宝等企业嘉宾，也分别围绕协同管理、流程革新、智能化场景、文档智能与AI基础设施分享了实践经验。</p>\n<p>尽管切入点不同，大家的判断却十分接近：企业AI已经走过“展示能力”的阶段，接下来更重要的，是找到真实场景、打通业务流程，并持续验证实际价值。</p>\n<p>活动现场还举行了“浙江数智·AI共生产业联盟”签约仪式，各方将围绕AI技术、产品与场景落地继续展开合作。</p>\n<p><img src=\"https://i-blog.csdnimg.cn/direct/6b0fa065f2174580a6736bd3fe1a4ff5.jpg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p>今天的企业并不缺数据，也不缺AI工具，真正缺的，是把数据、技术与业务连接起来的能力。</p>\n<p>数据没治好，AI给不出可信答案；AI进不了决策流程，再强的技术也变不成业务价值。</p>\n<p>网易智企的经验是：AI落地，先从数据开始。从“能干活”到“真上岗”，企业真正需要的不是更大的模型，而是一条可信的数据链路，和一个能听懂业务、查得准数据、给得出建议的AI员工。</p>\n\n\n        ",
+    "headings": [
+      {
+        "id": "section-企业ai落地-先把数据基础打牢",
+        "level": 3,
+        "text": "企业AI落地，先把数据基础打牢"
+      },
+      {
+        "id": "section-可信数据底座-决定ai能走多远",
+        "level": 3,
+        "text": "可信数据底座，决定AI能走多远"
+      },
+      {
+        "id": "section-从-三不通-到-三层通",
+        "level": 3,
+        "text": "从“三不通”到“三层通”"
+      },
+      {
+        "id": "section-不只谈技术-更关注ai怎么真正落地",
+        "level": 3,
+        "text": "不只谈技术，更关注AI怎么真正落地"
+      }
+    ],
+    "textLength": 2001,
+    "readingMinutes": 5,
     "sourceId": "netease-csdn",
     "sourceUrl": "https://blog.csdn.net/wangyiyungw/article/details/163570574",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:51.841Z",
-    "nextRetryAt": "2026-11-09T09:07:51.841Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "1e07b42fc83c2d80a19a215d207ab8db21d8721a97797b03b359ec1905627ac8",
+    "fetchedAt": "2026-11-02T11:42:58.269Z",
+    "checkedAt": "2026-11-02T11:42:58.269Z",
+    "nextRetryAt": "2026-12-02T11:42:58.269Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

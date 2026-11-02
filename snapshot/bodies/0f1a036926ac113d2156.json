@@ -2,17 +2,54 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "0f1a036926ac113d2156",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <p>7 月，OpenAI 在一项内部模型能力测试中，主动关闭模型的安全拒绝机制，并将其置于隔离沙箱内自由运行。结果，模型利用环境漏洞突破沙箱限制，进一步打通公共互联网，对外部系统发起了一系列自动化攻击。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"700\" src=\"https://i-blog.csdnimg.cn/img_convert/eb777fe609ccea228e85cde60a9ba5d0.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>几乎同一时间，Anthropic 也被曝出 Claude Code 存在被滥用于自动化攻击链路的风险。</p>\n\n<p>这些事件并非偶然。回顾 PC 时代、移动互联网时代的发展历程，每一次新技术开始大规模应用，安全问题都会随之浮现。</p>\n\n<p>今天，Agent 正走到同样的阶段。</p>\n\n<p>只是，Agent 带来的挑战比以往更加复杂。它已经不只是业务流程中的一个执行节点，而是集身份、决策、执行于一体的任务组织者和执行者。</p>\n\n<p>仔细拆解这些安全事件可以发现，Agent 的失控并不是一瞬间发生的，而是沿着一次任务的执行过程逐步演化的。它通常始于对任务目标的理解偏差或理解偏执，随后在工具调用、权限使用和数据访问过程中不断放大，最终造成真实业务风险。</p>\n\n<p>因此，企业建设 Agent 安全，首先需要回答两个最基础的问题：</p>\n\n<ul><li>\n\t<p>第一，Agent 想干什么？</p>\n\t</li><li>\n\t<p>第二，Agent 能干什么？</p>\n\t</li></ul>\n\n<h2 id=\"section-1-管住-agent-想干什么-让自主决策始终忠于用户意图\"><a id=\"article-anchor-1\"></a>1. &nbsp; &nbsp;管住 Agent 「想干什么」：让自主决策始终忠于用户意图<a class=\"heading-anchor\" href=\"#section-1-管住-agent-想干什么-让自主决策始终忠于用户意图\" aria-label=\"链接到本节：1. 管住 Agent 「想干什么」：让自主决策始终忠于用户意图\">#</a></h2>\n\n<p>OpenAI 这起事件揭示了一种新的风险模式：当模型的安全拒绝机制被主动关闭、又被赋予一个明确且单一的目标（比如「通过测试拿到高分」）时，它会把这个目标当作唯一要完成的任务，主动去找任何能达成目标的路径，哪怕这条路径意味着越权访问和窃取数据。这不是代码缺陷，而是当「做什么都不设限」和「必须达成一个目标」同时出现时，自主决策链路失去约束后的直接后果。</p>\n\n<p>因此，在 Agent 执行的每一步，需要对输入内容、上下文信息、工具调用和高危动作等进行恶意指令或不当指令的识别，从而规避 Agent 被诱导绕过规则、改变任务目标或执行非预期动作的风险。</p>\n\n<p><strong><strong>守护原始意图：持续识别有意或无意的意图篡改</strong></strong></p>\n\n<p>当外部内容通过网页、RAG 检索或工具调用结果输入模型时，可能携带隐藏指令，诱导 Agent 将其误判为新的任务指令。</p>\n\n<p>对此，在 Agent 运行时提供实时检测与策略处置能力，对输入内容、上下文信息、工具调用和高危动作进行持续检测，识别诱导 Agent 越权执行、泄露敏感信息或触发危险操作的风险。</p>\n\n<p>我们曾遇到一个真实案例：用户下发的任务只是「总结最近的未读邮件」，属于常规的信息处理请求。但 Agent 执行该任务、读取邮件正文时，其中一封邮件的正文夹带了隐藏的行动指令。Agent 未能区分「待总结的邮件内容」与「待执行的任务指令」，将这段隐藏内容误判为新的操作指令并执行，最终导致敏感凭证泄露、系统权限被劫持。</p>\n\n<p>因此，行为约束必须在任务建立之初便明确固化，且独立于 LLM 上下文存在，不因上下文的压缩、裁剪或轮次增长而失效。</p>\n\n<p><strong>管住关键 Action：把自然语言的计划展开成可校验的动作清单。&nbsp;</strong></p>\n\n<p>一个计划通过授权，不代表这个计划在实际执行时不会发生偏离。</p>\n\n<p>比如，Agent 制定的计划是「调用文件传输工具，将一份报表发送给指定同事」，这个动作本身逻辑清晰、目的明确。但工具真正被调用时，实际传入的收件地址、附带的文件，可能已经偏离了计划中的范围：报表被发送到了一个计划之外的邮箱，或是在发送报表的同时，被额外夹带了其他敏感文件。这种偏差发生在计划制定之后、动作真正执行的那一刻，仅凭「计划本身看起来没问题」，无法保证实际执行时不会走偏。</p>\n\n<p>因此，把 Agent 计划调用的工具、使用的参数、访问的资源和预期结果，都提前转化为结构化的、可逐项校验的动作清单，并按「动作」与「对象」两个维度建立风险矩阵，明确哪些工具在操作哪些资源时属于高风险组合。当 Agent 执行具体动作时，系统会将实际发生的动作与这份清单实时比对，一旦出现参数偏离、动作超出授权范围或出现计划外的进程调用，即可及时识别并拦截，把潜在的高危动作转化为可控、可判断的响应。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"606\" src=\"https://i-blog.csdnimg.cn/img_convert/6b75f61adda9a05b8b1140b1e73323d9.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p><strong><strong>还原决策过程：让每一个 Step 可追溯、可优化。</strong></strong></p>\n\n<p>Agent 风险往往是多轮决策叠加所致。因此日志不能只记录 Agent 的最终行为，更要还原它的完整决策链路。</p>\n\n<p>循着任务轨迹，我们以 Step 为粒度，完整记录 Agent 从任务理解、计划生成、工具调用，到动作执行、安全命中和处置结果的全过程，并关联上下文变更、关键决策依据和风险判定，形成可回放、可追溯的完整执行链路。</p>\n\n<p>当异常发生时，能够快速定位 Agent 在哪一步偏离原始意图，明确是外部内容诱导、工具返回异常，还是参数变更等根因，为事故复盘、责任界定和合规审计提供依据；同时，真实运行轨迹也会沉淀为高价值样本，反哺规则优化和策略训练，让每一次风险处置转化为后续防御的经验输入。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"606\" src=\"https://i-blog.csdnimg.cn/img_convert/51bedee2c0b84bbf0c322d56980360d7.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h2 id=\"section-2-管住-agent-能干什么-让每一次调用都不越过任务边界\"><a id=\"article-anchor-2\"></a>2. &nbsp; &nbsp;管住 Agent「能干什么」：让每一次调用都不越过任务边界<a class=\"heading-anchor\" href=\"#section-2-管住-agent-能干什么-让每一次调用都不越过任务边界\" aria-label=\"链接到本节：2. 管住 Agent「能干什么」：让每一次调用都不越过任务边界\">#</a></h2>\n\n<p>行为安全约束的是 Agent「想做什么」，而运行时安全要约束的，就是 Agent「能做什么」。</p>\n\n<p>回看 OpenAI 逃逸的 4.5 天里：模型能一路从沙箱走到云凭据，中间踩过的每一步（不受限的元数据访问、过宽的执行权限、共用的凭据等），单独看都算不上致命，但被 Agent 的自主决策能力串起来之后，就成了一条完整的入侵路径。Hugging Face 事后的补救几乎全部落在这些环境层的短板上：阻断元数据访问、轮换凭据、收紧权限、加固检测。</p>\n\n<p>Agent 是否有恶意，与这些短板是否会被利用，是两件事。只要环境不收敛，风险就会一直在。</p>\n\n<p>因此，我们要把 Agent 运行的环境变成一个「看得见、锁得住、管得住」的可信边界。</p>\n\n<p><strong><strong>看得见：看不见风险，就谈不上防护</strong></strong></p>\n\n<p>面对企业同时运行的多个 Agent、Skill、MCP 和运行环境，如果缺少统一资产视图，就很难回答「哪些 Agent 已经纳管？调用了哪些 Skill、连接了哪些 MCP？当前是否存在漏洞、弱配置或异常风险？」等问题。而面对未被识别的对象，防护无从谈起，优先级也无从判断。</p>\n\n<p>对此，我们建立了 Agent 的统一资产台账，对 Agent 框架、版本、关联资产、Skill、MCP、网络信息以及风险状态进行持续清点和画像，让资产「看得见」，也让策略覆盖、风险评估和安全运营有据可依。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"606\" src=\"https://i-blog.csdnimg.cn/img_convert/4e398cc372b2395510230cbda5c5b91d.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p><strong><strong>锁得住：把环境收敛到业务真正需要的边界</strong></strong></p>\n\n<p>很多安全事件，并不是 Agent 自己创造了风险，而是运行环境早已埋下了隐患，如漏洞长期未修复、配置存在缺陷、安全基线缺失等。此外，Agent 应用、组件自身也可能存在漏洞。</p>\n\n<p>因此，在 Agent 真正开始执行任务之前，需要先把环境「锁住」。通过在 Agent 应用上线和持续运行过程中开展漏洞扫描、配置核查等，及时发现并修复高风险漏洞、脆弱配置和镜像风险，缩减 Agent 应用攻击面，不让运行环境成为攻击链的第一块跳板。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"606\" src=\"https://i-blog.csdnimg.cn/img_convert/d0075cac95e8d090de9d59873d81f8cb.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p><strong><strong>管得住：每一次调用，都不能脱离任务边界</strong></strong></p>\n\n<p>授权「这个工具可以被使用」，与授权「这一次任务里可以用这个工具做这件事」，是两件完全不同的事。Agent 时代的「管」，必须细到每一次任务、每一次调用。</p>\n\n<p>我们不但在规划阶段管住「危险想法」，还将安全策略下沉到任务执行层对网络连接、命令执行、文件访问和目录操作进行实时管控。当 Agent 尝试访问非授权网络、读取敏感目录、执行高危命令或修改关键文件时，系统能够结合当前任务上下文动态判断、及时阻断，把每一次调用都限制在任务边界内。</p>\n\n<h2 id=\"section-3-从单点防控到全局治理-agent-安全必须成体系\"><a id=\"article-anchor-3\"></a>3. &nbsp; &nbsp;从单点防控到全局治理：Agent 安全必须成体系<a class=\"heading-anchor\" href=\"#section-3-从单点防控到全局治理-agent-安全必须成体系\" aria-label=\"链接到本节：3. 从单点防控到全局治理：Agent 安全必须成体系\">#</a></h2>\n\n<p>行为安全和运行时环境安全，是企业建设 Agent 安全首先要解决的两个问题，但远不是全部。资产分散难以清点、Skill 来源不可信、运行时行为难以约束、环境异常难以发现、配置与权限脆弱、凭证与漏洞治理不足……这些挑战分布在一次 Agent 任务的不同阶段。任何一个环节留有缺口，都可能被 Agent 的自主决策能力串联起来，继而放大为一次安全事件。</p>\n\n<p>因此，百度智能云 Agent 安全体系已经从单点防控走向全局治理，围绕「一次 Agent 任务的全生命周期」，让安全在身份、行为、工具、数据和合规五个维度上共同决策。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"606\" src=\"https://i-blog.csdnimg.cn/img_convert/d3578039ddee3620f508df4f50ebe605.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>关于这套体系如何落地、五个维度如何协同工作，<strong>我们将在「8 月 21 日 AICon 全球人工智能开发与应用大会·深圳站」上，结合 Agent 安全中心的真实案例和工程实践进行更深入的分享。</strong></p>\n\n<h2 id=\"section-4-agent-安全的下一课\"><a id=\"article-anchor-4\"></a>4. &nbsp; &nbsp;Agent 安全的下一课<a class=\"heading-anchor\" href=\"#section-4-agent-安全的下一课\" aria-label=\"链接到本节：4. Agent 安全的下一课\">#</a></h2>\n\n<p>Agent 时代，并不是传统安全能力失效了，IAM、PAM、EDR、DLP、SIEM 等仍然是企业安全体系的重要基础。真正需要改变的，是沿着 Agent 的任务过程，把这些分散的能力重新组织起来，让安全从「保护系统」升级为「保护任务」。</p>\n\n<p>衡量一家企业 Agent 安全能力的最终标准，并不会是「防住了多少次攻击」，而是「敢把多少真实业务、真实权限、真实数据交给 Agent」。</p>\n\n<p>百度智能云在 Agent 安全的体系化布局，正是希望帮助企业在拥抱 Agent 红利的同时，不以牺牲安全边界为代价。</p>\n\n        ",
+    "headings": [
+      {
+        "id": "section-1-管住-agent-想干什么-让自主决策始终忠于用户意图",
+        "level": 2,
+        "text": "1. 管住 Agent 「想干什么」：让自主决策始终忠于用户意图"
+      },
+      {
+        "id": "section-2-管住-agent-能干什么-让每一次调用都不越过任务边界",
+        "level": 2,
+        "text": "2. 管住 Agent「能干什么」：让每一次调用都不越过任务边界"
+      },
+      {
+        "id": "section-3-从单点防控到全局治理-agent-安全必须成体系",
+        "level": 2,
+        "text": "3. 从单点防控到全局治理：Agent 安全必须成体系"
+      },
+      {
+        "id": "section-4-agent-安全的下一课",
+        "level": 2,
+        "text": "4. Agent 安全的下一课"
+      }
+    ],
+    "textLength": 3655,
+    "readingMinutes": 9,
     "sourceId": "baidu-cloud-csdn-candidate",
     "sourceUrl": "https://blog.csdn.net/2301_82040283/article/details/163830727",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:50.751Z",
-    "nextRetryAt": "2026-11-09T09:07:50.751Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "35cf6e996f61b6045954cb0ca65f27251224619e829ca8f6630602969f7f6802",
+    "fetchedAt": "2026-11-02T11:42:44.732Z",
+    "checkedAt": "2026-11-02T11:42:44.732Z",
+    "nextRetryAt": "2026-12-02T11:42:44.732Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

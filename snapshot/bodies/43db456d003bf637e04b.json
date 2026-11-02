@@ -2,17 +2,94 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "43db456d003bf637e04b",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n                    <blockquote>\n 作者：\n <a title=\"vivo\" href=\"https://www.zhihu.com/search?q=vivo&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22article%22%2C%22sourceId%22%3A%222096549756851992249%22%7D\" target=\"_blank\" rel=\"noopener noreferrer\">vivo</a>&nbsp;互联网存储团队 - Xiao Bo\n <br> AI 合作者：ChatGPT（GPT-5.5）\n <br> 创作模式：Human-led, AI-collaborated\n <br> 责任声明：文章观点、理论体系及最终内容由作者负责；AI 参与讨论、推演、表达优化及部分内容生成。\n <br> 记忆的价值不在于保存更多历史，而在于决定哪些历史仍然可以影响未来的判断与行动。本文把记忆放入形成、强化、衰减、冲突、遗忘、迁移和归档的生命周期，并进一步说明反馈验证与错误归因如何帮助系统修正知识、记忆、推理和治理策略。\n</blockquote> \n<p>研究说明：知识驱动计算（Knowledge-driven Computing，KDC）是我们提出和正在打磨的一套 AI 应用软件工程理论，目前仍处于开放研究阶段。前三篇分别讨论了领域现实、知识边界以及从推理到受治理行动的链路。这一篇讨论长期运行问题：一次正确行动结束后，什么历史应该影响未来，又如何避免系统把偶然经验和错误反馈不断放大？</p> \n<p>KDC系列文章</p> \n<ol><li><a title=\"软件不是从数据开始，而是从现实开始\" href=\"https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMzI4NjY4MTU5Nw%3D%3D%26mid%3D2247506853%26idx%3D1%26sn%3D81fbcd7e935f075295cb270d145806a6%26scene%3D21%23wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">软件不是从数据开始，而是从现实开始</a></li><li><a title=\"知识不是文件，也不是向量\" href=\"https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMzI4NjY4MTU5Nw%3D%3D%26mid%3D2247506986%26idx%3D1%26sn%3D0d3ad6b27eed5fafe913fd9f1bb38670%26scene%3D21%23wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">知识不是文件，也不是向量</a></li><li><a title=\"Agent 不能只记录调用了什么，还要记录为什么调用\" href=\"https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s%3F__biz%3DMzI4NjY4MTU5Nw%3D%3D%26mid%3D2247507016%26idx%3D1%26sn%3Da41886374622356bc4c5cf43c6b88e72%26scene%3D21%23wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">Agent 不能只记录调用了什么，还要记录为什么调用</a></li></ol> \n<p>1分钟看图掌握核心要点👇</p> \n<p></p> \n<p><img alt=\"\" height=\"1080\" src=\"https://i-blog.csdnimg.cn/img_convert/91e6e2ce3ef0a22e5a52ff616f6cebfe.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>继续从一个案例开始。</p> \n<p>第一次处理退款时，Agent 做对了所有关键步骤。</p> \n<p>它确认用户只是咨询，说明了退款条件，等待用户明确同意后才发起退款。能力控制策略检查了订单状态、用户身份和风险等级，退款最终到账，用户也表示满意。</p> \n<p>系统把这次对话和执行结果写入长期记忆，并生成一条摘要：</p> \n<p>用户在符合条件时偏好直接退款，不需要过多解释。</p> \n<p>几周后，用户对另一笔订单说：</p> \n<p>这笔现在还能退吗？我只是先了解一下。</p> \n<p>记忆检索找到了上次的退款记录。Agent 将\"上次选择退款\"当作稳定偏好，减少解释步骤，并把这次咨询继续推进到退款确认流程。</p> \n<p>历史没有被记错。上一次，用户确实选择了退款。</p> \n<p>错误发生在另一处：系统把一次特定情景下的行动，泛化成了跨时间、跨订单的稳定偏好，并让它影响了新的行动。</p> \n<p>系统记住得更多，却不一定变得更可靠。</p> \n<h3 id=\"section-一-单次正确-不等于长期可靠\"><a id=\"article-anchor-1\"></a>一、单次正确，不等于长期可靠<a class=\"heading-anchor\" href=\"#section-一-单次正确-不等于长期可靠\" aria-label=\"链接到本节：一、单次正确，不等于长期可靠\">#</a></h3> \n<p>我们很容易用单次任务评价 AI 系统：答案是否正确，Tool 是否调用成功，用户是否满意，流程是否完成。</p> \n<p>这些指标都重要，但生产系统面对的不是静止世界。订单状态会变化，制度会更新，用户偏好会改变，项目风险会演化，能力版本会替换，过去有效的经验也可能在新场景中失效。</p> \n<p>如果系统只处理当前输入，它会不断重复探索。如果系统无条件复用全部历史，它又会把旧经验强加给新现实。</p> \n<p>长期可靠性需要在两种失败之间找到边界：</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div>完全不记得过去</div></div></li><li><div><div>  <span>&lt;</span>-<span>&gt;</span></div></div></li><li><div><div>让所有过去永久影响未来</div></div></li></ol></code></pre> \n<p>常见的\"给 Agent 加记忆\"通常从存储和检索出发：把历史对话写进向量库，在新任务开始时召回相似片段，再放进模型上下文。</p> \n<p>这解决了\"怎样重新看到历史\"，却没有完整解决\"历史是否应该影响当前行动\"。</p> \n<p>KDC 研究记忆时，更关注后一个问题。</p> \n<h3 id=\"section-二-常规-ai-记忆问检索什么-kdc-追问历史如何生效\"><a id=\"article-anchor-2\"></a>二、常规 AI 记忆问检索什么，KDC 追问历史如何生效<a class=\"heading-anchor\" href=\"#section-二-常规-ai-记忆问检索什么-kdc-追问历史如何生效\" aria-label=\"链接到本节：二、常规 AI 记忆问检索什么，KDC 追问历史如何生效\">#</a></h3> \n<p>可以用两个问题区分不同关注点。</p> \n<p>常规上下文记忆经常问：</p> \n<pre><code class=\"language-undefined\">检索什么历史放进当前上下文？</code></pre> \n<p>KDC 记忆运行时追问：</p> \n<pre><code class=\"language-undefined\">哪段历史可以在什么条件下影响未来判断和行动？</code></pre> \n<p>这个区别意味着，记忆不是\"长期保存的文本\"这么简单。</p> \n<p>一段历史要进入未来行动链路，至少需要回答：</p> \n<ul><li>它是什么时候、在什么情景下形成的？</li><li>它来自事实、用户表达、模型总结还是行动结果？</li><li>它只适用于某次任务，还是可能跨场景复用？</li><li>它被后续反馈支持过，还是只有一次偶然观察？</li><li>它是否与新现实、新知识或新用户表达冲突？</li><li>当前主体是否有权访问和使用它？</li><li>它应该继续生效、降低影响，还是只用于历史解释？</li><li>向量相似度可以帮助找到相关历史，却不能替系统回答这些治理问题。</li></ul> \n<p>因此，KDC 把记忆对象（Memory Object）理解为带有时间、经验、上下文、反馈和演化状态的长期上下文对象。把记忆运行时（Memory Runtime）理解为负责记忆形成、检索、强化、冲突、衰减、遗忘、迁移和归档的一组运行时职责。</p> \n<p>这仍是当前阶段的理论提案。记忆分类、遗忘策略和组织级迁移尚未形成统一规范，但一个方向已经比较明确：记忆的核心不是保存更多历史，而是治理历史对未来的影响。</p> \n<h3 id=\"section-三-不是所有历史都应该成为记忆对象\"><a id=\"article-anchor-3\"></a>三、不是所有历史都应该成为记忆对象<a class=\"heading-anchor\" href=\"#section-三-不是所有历史都应该成为记忆对象\" aria-label=\"链接到本节：三、不是所有历史都应该成为记忆对象\">#</a></h3> \n<p>日志、聊天记录、执行结果和用户反馈都可以成为记忆来源，但不能因为被长期保存，就自动获得影响未来的资格。</p> \n<p>日志回答\"发生了什么\"。记忆对象还要回答\"这段历史对未来理解和行动有什么意义\"。</p> \n<p>举个例子：</p> \n<ul><li>refund_order 返回成功，是执行记录</li><li>退款三天后到账，是行动结果</li><li>\"该支付渠道在节假日退款通常需要更长时间\"，是在多次结果支持后可能形成的经验</li><li>\"这个用户永远偏好退款\"，则可能是从单次行为中过度泛化出来的错误记忆</li></ul> \n<p>记忆形成应该有门槛。一次偶然事件可以先形成候选记忆，保留来源和适用上下文，等待后续反馈。它不应因为被模型总结得很流畅，就直接成为稳定画像或组织经验。</p> \n<p>同样，模型输出也不能直接写成长期记忆。模型可以建议\"这次交互可能反映用户更重视处理速度\"，但系统还需要区分这是一次情景判断、候选偏好，还是已经被多次行为验证的稳定倾向。</p> \n<h3 id=\"section-四-四类更接近行动治理的记忆\"><a id=\"article-anchor-4\"></a>四、四类更接近行动治理的记忆<a class=\"heading-anchor\" href=\"#section-四-四类更接近行动治理的记忆\" aria-label=\"链接到本节：四、四类更接近行动治理的记忆\">#</a></h3> \n<p>为了让记忆讨论落到工程使用上，KDC 当前提出四类面向能力治理的候选记忆类型。</p> \n<p><strong>4.1 行动-结果记忆</strong></p> \n<p>记录某次能力调用、现实结果和错误归因。</p> \n<p>比如：退款能力被策略拒绝，因为订单已进入履约。退款接口返回成功，但对账显示到账延迟。某次外部通知因为权限配置错误发送失败。</p> \n<p>这类记忆直接影响未来能力选择和风险判断，通常时效较强。外部系统、政策和能力版本变化后，它可能快速失效。</p> \n<p><strong>4.2 偏好或画像记忆</strong></p> \n<p>记录用户、组织或 Agent 在一定范围内表现出的偏好和倾向。</p> \n<p>比如：用户在购买手机时更重视影像能力，某团队更偏好先小范围灰度，某审批人通常要求补充成本说明。</p> \n<p>偏好不是永久标签。它需要时间、场景和证据边界，也必须允许用户纠正、撤回和查看。一次行为通常只能形成候选偏好，不应直接覆盖明确表达。</p> \n<p><strong>4.3 决策先例记忆</strong></p> \n<p>记录相似目标下的历史决策、当时依据和后续结果。</p> \n<p>比如：某类高风险退款过去都进入人工复核。某种项目风险采用分阶段交付后得到缓解。某类故障通过降级而不是重试恢复。</p> \n<p>先例可以支持未来判断，但不能替代当前证据。多次跨场景验证的先例可能迁移为候选知识，迁移时仍要重新验证适用范围。</p> \n<p><strong>4.4 情景记忆</strong></p> \n<p>记录一次具体交互或任务的上下文，比如用户在上次对话中关注某款商品的续航，或某个项目会议中暂时搁置了一个方案。</p> \n<p>情景记忆最接近常见的对话记忆和向量检索。它有助于恢复上下文，却不应该被误认为已经形成稳定偏好或通用经验。</p> \n<p>这四类不是当前已经成熟的统一记忆分类，它们更像当前研究中用于区分治理方式的可建切片。前三类直接影响能力调用、风险和人工确认，情景记忆则更多服务上下文连续性。</p> \n<h3 id=\"section-五-记忆必须有生命周期-也必须允许遗忘\"><a id=\"article-anchor-5\"></a>五、记忆必须有生命周期，也必须允许遗忘<a class=\"heading-anchor\" href=\"#section-五-记忆必须有生命周期-也必须允许遗忘\" aria-label=\"链接到本节：五、记忆必须有生命周期，也必须允许遗忘\">#</a></h3> \n<p>如果记忆系统只支持写入和检索，它最终会被旧现实填满。</p> \n<p>KDC 记忆运行时至少需要考虑下面这些状态变化。</p> \n<p><strong>5.1 形成</strong></p> \n<p>从知识对象、推理对象、能力反馈、人工决策和业务事件中识别值得长期保留的上下文。形成不等于稳定生效，可以先作为候选记忆。</p> \n<p><strong>5.2 强化</strong></p> \n<p>多个独立反馈持续支持同一经验时，提高其可信度或扩大适用范围。强化不是简单增加命中次数，因为重复使用同一个错误来源，也可能只是重复放大错误。</p> \n<p><strong>5.3 衰减</strong></p> \n<p>随着时间过去、现实变化或长期缺少支持，降低记忆对未来推理的影响。支付渠道处理时间、促销偏好和项目状态往往需要较快衰减。稳定决策原则可能衰减较慢。</p> \n<p><strong>5.4 冲突</strong></p> \n<p>新行为、新知识或用户明确表达与旧记忆不一致时，显式标记冲突，而不是静默选择其中一条。开头的案例中，\"我只是先了解一下\"就是对\"用户偏好直接退款\"的当前约束，应该阻止旧记忆自动主导行动。</p> \n<p><strong>5.5 遗忘</strong></p> \n<p>让某段记忆停止参与当前判断和行动治理。遗忘不等于物理删除，它可以表现为降权、过期、限制上下文、要求重新验证或迁移到历史区。</p> \n<p><strong>5.6 迁移</strong></p> \n<p>把局部经验迁移到团队或组织范围，或者把多次稳定行动结果转化为候选知识。迁移不是复制，必须重新检查证据和适用边界。</p> \n<p><strong>5.7 归档</strong></p> \n<p>保留审计与历史解释价值，但不再让记忆影响当前行动。旧退款政策相关的历史经验可以帮助解释过去，却不应指导新订单。</p> \n<p>在长期 AI 系统中，遗忘不是缺陷，而是治理能力。真正危险的不是系统忘记一段无关历史，而是它无法停止让过期、越权或错误经验影响未来。</p> \n<p></p> \n<p><img alt=\"\" height=\"142\" src=\"https://i-blog.csdnimg.cn/img_convert/1507c86f0050cdeddc67cc8ed9fefcb8.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>历史如何成为记忆，以及何时停止影响未来</p> \n<h3 id=\"section-六-反馈不只是奖励信号-也不是自动真值\"><a id=\"article-anchor-6\"></a>六、反馈不只是奖励信号，也不是自动真值<a class=\"heading-anchor\" href=\"#section-六-反馈不只是奖励信号-也不是自动真值\" aria-label=\"链接到本节：六、反馈不只是奖励信号，也不是自动真值\">#</a></h3> \n<p>行动完成后，系统可能收到多种反馈：</p> \n<ul><li>Tool 或 API 的执行结果</li><li>外部系统状态变化</li><li>用户确认、纠正、拒绝或投诉</li><li>人工审批结果</li><li>回滚、补偿和异常处理</li><li>后续业务结果</li><li>审计或复盘结论</li></ul> \n<p>这些反馈的重要性不同，也可能相互矛盾。</p> \n<p>接口返回 success 说明执行请求被成功处理，但不一定证明用户收到退款。用户说\"已经到账\"是更接近现实结果的反馈，却仍可能存在误解或关联错误。对账系统确认资金完成，则提供另一类证据。</p> \n<p>因此，反馈进入系统时需要来源、时间、对象关联、可信度和适用范围。反馈不能绕过验证，直接把知识升级或把记忆强化。</p> \n<p>一个最小反馈处理链可以写成：</p> \n<pre><code class=\"language-haskell\"><ol><li><div><div>执行结果或现实观察</div></div></li><li><div><div>  -&gt; 关联到原目标、推理和能力</div></div></li><li><div><div>  -&gt; 判断反馈来源与可信度</div></div></li><li><div><div>  -&gt; 错误归因或结果验证</div></div></li><li><div><div>  -&gt; 更新推理对象</div></div></li><li><div><div>  -&gt; 形成候选记忆或候选知识</div></div></li><li><div><div>  -&gt; 由对应运行时决定强化、降级或归档</div></div></li></ol></code></pre> \n<p>反馈可能改变系统的不同部分。</p> \n<p>如果退款没有到账是支付渠道故障，应该更新行动-结果记忆和能力质量摘要。如果系统引用了旧政策，应该让相关知识降级或过期。如果 Agent 把咨询误解为授权，应该修正目标解释和推理策略。如果治理策略本应拦截却没有拦截，则需要调整能力策略。</p> \n<p>没有错误归因，所有反馈都会被粗暴地归给\"模型好不好\"。系统也就无法知道究竟该改知识、记忆、推理、能力实现还是治理策略。</p> \n<h3 id=\"section-七-持续一致性-让系统具备发现和修正偏差的条件\"><a id=\"article-anchor-7\"></a>七、持续一致性：让系统具备发现和修正偏差的条件<a class=\"heading-anchor\" href=\"#section-七-持续一致性-让系统具备发现和修正偏差的条件\" aria-label=\"链接到本节：七、持续一致性：让系统具备发现和修正偏差的条件\">#</a></h3> \n<p>KDC 的长期目标不是让 AI 自动越用越聪明，而是让应用软件能够持续观察领域现实与数字系统之间的偏差，并保留修正偏差的工程路径。</p> \n<p>我们把这个方向称为持续一致性（Continuous Consistency）。它不是指任何时刻都达到绝对同步，而是指系统能够：</p> \n<ul><li>知道自己覆盖了哪些现实、遗漏了哪些现实</li><li>发现数字表示与现实观察不一致</li><li>识别知识已经过期或发生漂移</li><li>把行动结果与原判断重新关联</li><li>在偏差出现后更新知识、记忆、推理或治理</li></ul> \n<p>当前 KDC 研究提出五个候选度量方向：</p> \n<p></p> \n<p><img alt=\"\" height=\"273\" src=\"https://i-blog.csdnimg.cn/img_convert/8672aee5317dfbbcb72e885d51c5c6f3.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>这些方向目前属于 Derived + Open Research。候选操作性定义和最小信号已经提出，但现实域如何枚举，真值如何判定、时效阈值如何设置、漂移如何计算、审计链完整性如何强制，仍需实践验证。</p> \n<p>尤其不能把它们过早组合成一个看似精确的\"系统一致性分数\"。一个总分可能掩盖局部高风险缺口。早期实践更适合从可采集信号开始，例如：活跃知识多久未验证、多少高风险行动缺少现实反馈、多少失败可归因于过期知识、多少记忆在冲突后仍被使用。</p> \n<h3 id=\"section-八-这不只是合规留痕-而是生产能力\"><a id=\"article-anchor-8\"></a>八、这不只是合规留痕，而是生产能力<a class=\"heading-anchor\" href=\"#section-八-这不只是合规留痕-而是生产能力\" aria-label=\"链接到本节：八、这不只是合规留痕，而是生产能力\">#</a></h3> \n<p>审计和合规是反馈闭环的底线，但不是全部价值。</p> \n<p>当系统能够把目标、知识、记忆、推理、能力、策略和现实反馈关联起来，团队可以更具体地回答：</p> \n<ul><li>哪类知识最容易导致错误行动</li><li>哪些用户偏好已经过期</li><li>哪项能力经常在错误上下文中被选择</li><li>哪条治理策略过严、过松或频繁触发人工介入</li><li>哪种历史经验值得迁移，哪种只应归档</li><li>系统是否在重复同一种失败</li></ul> \n<p>这些能力会直接影响生产价值。团队可以更有把握地自动化高价值流程，也可以在风险上升时及时降级或转人工。组织经验不再只存在于事故复盘和专家记忆中，而可以在保留边界的前提下被复用。</p> \n<p>但这里仍要保持克制。反馈闭环提供的是可校正条件，不保证系统一定改对。错误反馈、错误归因和错误强化同样可能让系统越用越偏。系统必须允许质疑自己的记忆，也必须保留人工纠正和停止自动演化的边界。</p> \n<h3 id=\"section-九-与日志-trace-和传统可观测的关系\"><a id=\"article-anchor-9\"></a>九、与日志、Trace 和传统可观测的关系<a class=\"heading-anchor\" href=\"#section-九-与日志-trace-和传统可观测的关系\" aria-label=\"链接到本节：九、与日志、Trace 和传统可观测的关系\">#</a></h3> \n<p>Logging、APM、Distributed Tracing、Audit Log 和 LLMOps 指标为长期运行提供了必要信号。它们能够记录事件、性能、调用路径、错误和模型使用情况。</p> \n<p>KDC 并不替代这些体系。运行时可观测需要复用它们提供的数据。</p> \n<p>区别在于，传统可观测通常更擅长回答：</p> \n<ul><li>哪个服务失败了？</li><li>请求耗时多少？</li><li>哪个 Tool 被调用？</li><li>模型消耗了多少 Token？</li></ul> \n<p>KDC 还需要回答：</p> \n<ul><li>这次行动引用了哪个版本的知识？</li><li>哪段记忆影响了判断？</li><li>推理对象形成了什么结论和风险？</li><li>策略为什么允许或拒绝？</li><li>现实反馈是否验证了原判断？</li><li>错误应回到哪个对象、运行时或 Owner？</li></ul> \n<p>因此，KDC 运行时可观测不是新的日志产品，而是要求现有信号通过稳定对象身份和因果关系形成审计链。可观测系统提供证据，不应越权直接修改知识或记忆。对象状态变化仍由相应运行时和治理流程负责。</p> \n<h3 id=\"section-十-实践-为一次重要行动建立-feedback-contract\"><a id=\"article-anchor-10\"></a>十、实践：为一次重要行动建立 Feedback Contract<a class=\"heading-anchor\" href=\"#section-十-实践-为一次重要行动建立-feedback-contract\" aria-label=\"链接到本节：十、实践：为一次重要行动建立 Feedback Contract\">#</a></h3> \n<p>选择一个已经进入或准备进入生产的重要 AI 行动。不要先设计统一指标平台，先定义这次行动如何被现实验证。</p> \n<p>可以从下面六个问题开始：</p> \n<p>1. 哪个现实结果可以验证行动是否成功？</p> \n<p>2. 反馈由谁产生，在多长时间内返回？</p> \n<p>3. 反馈如何关联到原目标、推理对象和能力调用？</p> \n<p>4. 多个反馈冲突时，谁有权确认或修正？</p> \n<p>5. 哪些结果应该形成记忆，何时衰减、遗忘或归档？</p> \n<p>6. 哪些稳定经验可以升级为候选知识，哪些只能保留为个案？</p> \n<p>然后形成一份最小 Feedback Contract：</p> \n<p></p> \n<p><img alt=\"\" height=\"583\" src=\"https://i-blog.csdnimg.cn/img_convert/84e03f2dea16348c6faadd2c583a4663.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p> \n<p>Feedback Contract 的核心，是明确\"执行完成\"和\"现实目标实现\"的区别，并规定反馈如何改变未来。</p> \n<p>第一版不需要综合评分。只要系统能稳定关联一次行动的目标、依据、执行和结果，并且知道反馈该进入知识、记忆、推理还是治理，就已经建立了最小闭环。</p> \n<h3 id=\"section-十一-可靠系统不是记住一切-而是知道什么仍应影响现在\"><a id=\"article-anchor-11\"></a>十一、可靠系统不是记住一切，而是知道什么仍应影响现在<a class=\"heading-anchor\" href=\"#section-十一-可靠系统不是记住一切-而是知道什么仍应影响现在\" aria-label=\"链接到本节：十一、可靠系统不是记住一切，而是知道什么仍应影响现在\">#</a></h3> \n<p>AI 系统的长期价值，不取决于它积累了多少历史文本，而取决于它能否正确治理历史的影响。</p> \n<p>记忆需要形成门槛，需要上下文和权限，需要强化与衰减，也需要冲突、遗忘和归档。反馈需要来源和可信度，需要与原行动关联，也需要错误归因。持续一致性需要可观察和可验证，但不能被包装成尚未得到实践支持的统一公式。</p> \n<p>因此：</p> \n<pre><code class=\"language-undefined\"><ol><li><div><div>保存历史 ≠ 形成记忆</div></div></li><li><div><div>检索到过去 ≠ 过去仍然适用</div></div></li><li><div><div>收到反馈 ≠ 获得真值</div></div></li><li><div><div>积累更多 ≠ 持续变好</div></div></li></ol></code></pre> \n<p>KDC 不研究 AI 系统如何自动越用越好。它试图提供的是另一种能力：当现实变化、知识过期、记忆失效或行动失败时，系统能够发现偏差、解释偏差，并知道应该修正哪里。</p> \n<p>到这里，Reality、Representation、Knowledge、Reasoning、Skill、Capability、Memory 和 Feedback 已经分别出现。最后还需要回答一个整体问题：这些对象如何通过运行时和治理机制组成一套完整、可渐进采用的 KDC 软件工程模型？</p> \n<p>这将是第五篇的主题。</p> \n<h3 id=\"section-十二-理论边界与开放问题\"><a id=\"article-anchor-12\"></a>十二、理论边界与开放问题<a class=\"heading-anchor\" href=\"#section-十二-理论边界与开放问题\" aria-label=\"链接到本节：十二、理论边界与开放问题\">#</a></h3> \n<p>本文的记忆对象与记忆运行时来自 KDC 当前阶段的理论推导，整体成熟度为 Hypothesis + Derived。记忆形成、上下文绑定、强化和归档具有较明确的推导基础。统一遗忘策略、Memory Taxonomy、组织级迁移和记忆可信度计算仍是开放问题。持续一致性五个度量方向目前为 Derived + Open Research，还不是成熟标准。</p> \n<p>版权声明： 本文采用&nbsp;<a title=\"CC BY-NC-ND 4.0（署名-非商业性使用-禁止演绎）\" href=\"https://link.zhihu.com/?target=https%3A//creativecommons.org/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY-NC-ND 4.0（署名-非商业性使用-禁止演绎）</a>&nbsp;许可协议。转载请注明出处。</p>\n                ",
+    "headings": [
+      {
+        "id": "section-一-单次正确-不等于长期可靠",
+        "level": 3,
+        "text": "一、单次正确，不等于长期可靠"
+      },
+      {
+        "id": "section-二-常规-ai-记忆问检索什么-kdc-追问历史如何生效",
+        "level": 3,
+        "text": "二、常规 AI 记忆问检索什么，KDC 追问历史如何生效"
+      },
+      {
+        "id": "section-三-不是所有历史都应该成为记忆对象",
+        "level": 3,
+        "text": "三、不是所有历史都应该成为记忆对象"
+      },
+      {
+        "id": "section-四-四类更接近行动治理的记忆",
+        "level": 3,
+        "text": "四、四类更接近行动治理的记忆"
+      },
+      {
+        "id": "section-五-记忆必须有生命周期-也必须允许遗忘",
+        "level": 3,
+        "text": "五、记忆必须有生命周期，也必须允许遗忘"
+      },
+      {
+        "id": "section-六-反馈不只是奖励信号-也不是自动真值",
+        "level": 3,
+        "text": "六、反馈不只是奖励信号，也不是自动真值"
+      },
+      {
+        "id": "section-七-持续一致性-让系统具备发现和修正偏差的条件",
+        "level": 3,
+        "text": "七、持续一致性：让系统具备发现和修正偏差的条件"
+      },
+      {
+        "id": "section-八-这不只是合规留痕-而是生产能力",
+        "level": 3,
+        "text": "八、这不只是合规留痕，而是生产能力"
+      },
+      {
+        "id": "section-九-与日志-trace-和传统可观测的关系",
+        "level": 3,
+        "text": "九、与日志、Trace 和传统可观测的关系"
+      },
+      {
+        "id": "section-十-实践-为一次重要行动建立-feedback-contract",
+        "level": 3,
+        "text": "十、实践：为一次重要行动建立 Feedback Contract"
+      },
+      {
+        "id": "section-十一-可靠系统不是记住一切-而是知道什么仍应影响现在",
+        "level": 3,
+        "text": "十一、可靠系统不是记住一切，而是知道什么仍应影响现在"
+      },
+      {
+        "id": "section-十二-理论边界与开放问题",
+        "level": 3,
+        "text": "十二、理论边界与开放问题"
+      }
+    ],
+    "textLength": 6423,
+    "readingMinutes": 15,
     "sourceId": "vivo-csdn",
     "sourceUrl": "https://blog.csdn.net/vivo_tech/article/details/168752131",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:37.656Z",
-    "nextRetryAt": "2026-11-09T09:07:37.656Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "424a0f47a68b5da49e8d6c1f24bf5e37f157ece46e0c6ac9577c3212dd1dfced",
+    "fetchedAt": "2026-11-02T11:41:30.234Z",
+    "checkedAt": "2026-11-02T11:41:30.234Z",
+    "nextRetryAt": "2026-12-02T11:41:30.234Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

@@ -2,17 +2,69 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "588a3dae4c0d7a131b84",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <blockquote>作者：vivo 互联网前端团队 - Han Xuejian<br>\n随着海外业务拓展和欧盟等市场对无障碍要求持续明确，无障碍成为研发质量体系中的基础能力。本文介绍一套覆盖 Web 端、Vue 编码阶段和 Android App 真机页面的检测工具链：Web 端覆盖 PC 页面与 H5 页面，Chrome 插件发现运行时问题；VS Code 插件前置检测并结合大模型辅助修复；桌面端工具基于 ADB、截图和 UI XML 完成 App 检查，帮助团队形成质量闭环。</blockquote>\n\n<p>1 分钟看图掌握核心要点👇</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"1027\" src=\"https://i-blog.csdnimg.cn/img_convert/19acc8f1c966adc679047e311011accf.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-一-背景\"><a id=\"article-anchor-1\"></a>一、背景<a class=\"heading-anchor\" href=\"#section-一-背景\" aria-label=\"链接到本节：一、背景\">#</a></h3>\n\n<p>随着海外业务持续发展，产品需要面对更多市场、更多用户场景和更明确的合规要求，无障碍能力也从体验优化逐步变成研发质量体系中的基础能力。尤其在欧盟等市场，数字产品无障碍相关要求正在持续细化，业务侧、研发侧和测试侧对自动化检查、问题定位和修复闭环的需求明显增加。</p>\n\n<p>在真实研发流程里，无障碍问题往往散落在不同阶段：代码里少了 alt，页面运行后才发现按钮没有可访问名称，App 真机测试时又暴露出 TalkBack 朗读和触控区域问题。如果这些问题都等到上线前集中排查，定位、沟通和返工成本都会被放大。</p>\n\n<p>因此，我们希望解决的不是某一条规则，而是让无障碍问题在合适的阶段被发现、被定位、被修复，并最终形成可复查、可沉淀、可持续演进的质量闭环。</p>\n\n<p>围绕这个目标，我们建设了一套覆盖 Web 端页面、代码编辑器和 Android App 的无障碍检测工具链：</p>\n\n<ul><li><strong>Chrome 插件：</strong>面向 Web 端页面运行时检测，覆盖 PC 页面与 H5 页面，可一键扫描页面中的无障碍问题，并展示问题原因、影响范围和修复建议。</li><li><strong>VS Code 插件：</strong>面向开发阶段，在编写 Vue 代码时实时检测无障碍问题，并支持调用大模型一键生成修复方案。</li><li><strong>桌面端 App 检测工具：</strong>面向 Android 真机页面，通过 ADB 直连手机，结合页面截图与 UI XML 结构分析 App 无障碍问题。</li></ul>\n\n<p>整体架构可以分为五层：最上层是面向不同使用场景的检测入口，中间是数据采集与分析能力，最终沉淀到统一的规则、报告和标准体系。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"473\" src=\"https://i-blog.csdnimg.cn/img_convert/a3835b743fe6991577d5b1fe1c7ca535.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：无障碍检测工具链整体架构</p>\n\n<h3 id=\"section-二-web-端页面-基于浏览器插件的一键检测\"><a id=\"article-anchor-2\"></a>二、Web 端页面：基于浏览器插件的一键检测<a class=\"heading-anchor\" href=\"#section-二-web-端页面-基于浏览器插件的一键检测\" aria-label=\"链接到本节：二、Web 端页面：基于浏览器插件的一键检测\">#</a></h3>\n\n<p>Web 端页面检测工具同时适用于 PC 页面和 H5 页面。工具在遵循开源许可的基础上，基于开源项目 Accessibility Insights for Web 进行二次开发。底层扫描能力主要依赖 axe-core，同时结合浏览器插件的多上下文架构，实现页面注入、状态同步、结果展示和报告导出。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"350\" src=\"https://i-blog.csdnimg.cn/img_convert/52e98641f08672cbbe86163a764e1567.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：Chrome 插件对 Web 页面进行无障碍检测</p>\n\n<p>从架构上看，Chrome 插件运行在多个上下文中：</p>\n\n<ul><li><strong>Popup：</strong>用户点击插件图标后看到的入口，提供快速检测、快速评估、评估、临时工具等入口。</li><li><strong>Background Service Worker：</strong>全局调度中心，负责维护状态、分发消息、协调目标页面和结果页。</li><li><strong>Target Page：</strong>被检测的真实页面，插件会向页面和 iframe 注入 Content Script。</li><li><strong>Details View：</strong>结果展示页，用于展示扫描进度、问题列表、节点详情、修复建议和报告导出。</li></ul>\n\n<p>扫描链路可以概括为：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"293\" src=\"https://i-blog.csdnimg.cn/img_convert/f73cd41affdbe17de9f54819a48119ae.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>插件侧的扫描并不是简单地把 axe-core 结果原样展示出来。扫描结果会经过规则筛选、消息装饰和结果转换：一方面根据工具内置规则决定本次要跑哪些检测项；另一方面会把失败节点、失败原因、修复建议、帮助链接等信息整理为统一的卡片模型，最终在结果页中展示。</p>\n\n<p>例如页面中常见的图片缺少替代文本、表单控件缺少可访问名称、颜色对比度不足、ARIA 属性使用不正确、标题结构不合理等问题，都可以在检测后直接看到对应的失败节点、问题原因和修复建议。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"433\" src=\"https://i-blog.csdnimg.cn/img_convert/dfba19a18911fdb355dc6d76118ee886.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：问题详情中展示失败原因、影响节点与修复建议</p>\n\n<p>这类运行时检测的价值在于，它能看到 Web 端页面真实渲染后的 DOM 状态，并覆盖 PC 页面与 H5 页面。对于很多由组件组合、条件渲染、接口数据或运行时状态造成的问题，仅靠源码扫描很难完整覆盖，而浏览器插件可以在最终页面上进行验证。</p>\n\n<h3 id=\"section-三-编码阶段-vs-code-插件实时检测与-ai-修复\"><a id=\"article-anchor-3\"></a>三、编码阶段：VS Code 插件实时检测与 AI 修复<a class=\"heading-anchor\" href=\"#section-三-编码阶段-vs-code-插件实时检测与-ai-修复\" aria-label=\"链接到本节：三、编码阶段：VS Code 插件实时检测与 AI 修复\">#</a></h3>\n\n<p>如果无障碍问题只在联调或测试阶段才被发现，修复成本会明显上升。为此，我们实现了 VS Code 插件，把检测前移到开发编码阶段。</p>\n\n<p>插件激活后会监听 .vue 文件的打开、保存和编辑器切换事件。当发现当前文件是 Vue 文件时，插件会抽取 &lt;template&gt; 内容，经过 Vue 语法预处理后构造为可被 axe-core 分析的 DOM，再把扫描结果映射回源码位置，显示在 VS Code 的 Problems 面板和编辑器标红区域中。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"352\" src=\"https://i-blog.csdnimg.cn/img_convert/ce3670ea970baa4e0eadf53f9a1f4f67.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：VS Code 插件在编码阶段实时标红无障碍问题</p>\n\n<p>核心流程如下：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"2715\" src=\"https://i-blog.csdnimg.cn/img_convert/70147f0cca0f3c66812d8f4a4700f757.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>这里有两个关键点：</p>\n\n<p><strong>第一是 Vue 语法适配。</strong></p>\n\n<p>真实项目中经常会出现 router-link、nuxt-link、动态绑定 :alt、:aria-label、<strong>v-bind:href</strong>&nbsp;等写法。插件会先把这类 Vue/Nuxt 语法转换成 axe-core 更容易理解的标准 HTML 结构，同时尽量保持源码位置关系稳定，方便后续把问题准确映射回原始文件。</p>\n\n<p></p>\n\n<p><strong>第二是源码定位。</strong></p>\n\n<p>插件会根据 DOM 节点位置信息找到失败元素，再换算成 VS Code 中的行列范围。这样开发者看到的不是一条抽象规则，而是具体到某个标签、某个属性范围的提示。</p>\n\n<p>在检测之外，插件还提供 Quick Fix 能力。开发者点击灯泡或使用快捷键触发修复时，插件会截取当前问题对应的代码片段，调用无障碍智能修复 Agent 生成修复方案。为了避免模型结果直接覆盖源码，插件会先打开差异对比视图，让开发者确认后再应用修改。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"242\" src=\"https://i-blog.csdnimg.cn/img_convert/64cb2e3f10d006a32e54f99b8d212dce.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：基于大模型生成修复方案，并通过 Diff 预览确认</p>\n\n<p>AI 修复链路如下：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"2095\" src=\"https://i-blog.csdnimg.cn/img_convert/5f73d920c5f6472262bf14ada89a509c.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>这使得插件不仅能“指出问题”，还能帮助开发者快速完成修复。对于常见问题，例如图片缺少 alt、按钮没有可识别文本、交互元素缺少键盘支持、ARIA 属性不完整等，开发者可以在编码阶段完成发现、理解和修复。</p>\n\n<h3 id=\"section-四-android-app-截图-xml-的真机无障碍检测\"><a id=\"article-anchor-4\"></a>四、Android App：截图 + XML 的真机无障碍检测<a class=\"heading-anchor\" href=\"#section-四-android-app-截图-xml-的真机无障碍检测\" aria-label=\"链接到本节：四、Android App：截图 + XML 的真机无障碍检测\">#</a></h3>\n\n<p>Web 端页面可以通过 DOM 运行时扫描解决大量问题，但 Android App 的无障碍检查需要面对另一个技术环境：页面真实运行在手机上，控件信息来自 Android View 层级，视觉问题又需要结合截图分析。</p>\n\n<p>因此，我们实现了一个桌面端检测工具，基于 Tauri + Vue 构建界面，由 Rust 后端封装 ADB 能力。用户只需要连接 Android 手机、打开目标 App 页面、点击开始检测，工具即可采集当前页面截图和 UI XML 结构，并输出可交互报告。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"438\" src=\"https://i-blog.csdnimg.cn/img_convert/7bcaebc7ed36c49a3424f4e8a92966f2.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：桌面端 App 检测工具主界面</p>\n\n<p>App 检测的核心流程如下：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"1015\" src=\"https://i-blog.csdnimg.cn/img_convert/f8202cb5faf812022e26a25fc4c80f74.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>工具支持当前屏检测，也支持全页面滚动检测。全页面模式下，Rust 后端会按照“截图和 XML 采集 -&gt; 滑动到下一屏 -&gt; 再次采集”的方式循环执行；当连续两屏 XML 或截图一致时，认为已经到达页面底部并停止，避免无效滚动。每一屏都会独立分析，最终聚合成多屏报告。</p>\n\n<p><strong>在问题分析上，App 检测同时使用两类信号：</strong></p>\n\n<p><strong>第一类是 XML 语义规则。</strong></p>\n\n<p>工具解析 uiautomator dump 生成的节点属性，检查控件的 text、content-desc、clickable、focusable、bounds、resource-id 等信息，识别常见 TalkBack 和交互问题，例如：</p>\n\n<ul><li>可交互元素缺少无障碍标签。</li><li>ImageView 或 ImageButton 缺少描述。</li><li>触摸目标小于推荐的 48dp。</li><li>多个元素使用重复的 content-desc。</li><li>多个可点击元素共享同一个点击区域。</li><li>无障碍描述包含“按钮”“图片”“点击”等冗余词。</li><li>EditText 使用 content-desc 覆盖输入内容朗读。</li><li>“更多”“点击这里”等链接文案含义不清。</li><li>accessibilityTraversalBefore/After 形成遍历顺序循环。</li></ul>\n\n<p><strong>第二类是截图视觉分析。</strong></p>\n\n<p>工具会结合 XML 节点坐标和截图像素，在节点区域中采样前景色和背景色，计算 WCAG 对比度。文本默认按 4.5:1 判断，图标等非文本内容按 3:1 判断。检测结果中会保留前景色、背景色、对比度数值和对应节点位置，方便研发同学复现和修复。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"465\" src=\"https://i-blog.csdnimg.cn/img_convert/5f39b3fb96327d089753758d791d5af0.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>图：App 真机扫描结果与问题区域高亮</p>\n\n<p>结果页会把问题分为对比度、TalkBack、其他三类展示。用户点击问题卡片时，左侧截图会自动高亮对应区域；点击截图区域时，也可以反向定位到问题列表。对于长页面，多屏缩略图可以快速切换不同屏幕的扫描结果。</p>\n\n<p>此外，工具还会生成辅助视图，例如触控热力图和色盲模拟图，用于帮助团队从不同用户视角理解页面风险。最终报告支持 HTML 和 JSON 导出，也支持生成可分享的报告链接，便于研发、测试和产品同学协作。</p>\n\n<h3 id=\"section-五-工具链协同-把无障碍变成研发质量闭环\"><a id=\"article-anchor-5\"></a>五、工具链协同：把无障碍变成研发质量闭环<a class=\"heading-anchor\" href=\"#section-五-工具链协同-把无障碍变成研发质量闭环\" aria-label=\"链接到本节：五、工具链协同：把无障碍变成研发质量闭环\">#</a></h3>\n\n<p>这套工具链的核心价值，不是单点检测能力的叠加，而是让三类工具分别进入研发流程的不同环节：编码阶段、Web 端运行时阶段和 Android 真机验证阶段。</p>\n\n<ul><li>VS Code 插件负责把问题前移，尽量让开发者在提交代码前解决明显问题；</li><li>Chrome 插件负责验证 Web 端页面最终渲染结果；</li><li>App 桌面端工具负责解决 Android 真机页面的结构、视觉和触控问题。</li></ul>\n\n<p></p>\n\n<p><img alt=\"\" height=\"1428\" src=\"https://i-blog.csdnimg.cn/img_convert/471c5d07d9a915e63960c1ce2f86b01e.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>三类工具配合后，无障碍质量不再依赖一次性的人工巡检，而是进入“检测、定位、修复、验证、沉淀”的持续循环。</p>\n\n<p>从工程实现上看，这套方案有几个关键取舍：</p>\n\n<ul><li><strong>规则引擎复用成熟标准。</strong>Web 与 VS Code 插件都基于 axe-core 和 WCAG A/AA 规则，降低自研规则不稳定带来的风险。</li><li><strong>运行时检测与源码检测互补。</strong>源码扫描能前移问题发现，运行时扫描能覆盖 Web 端真实页面状态。</li><li><strong>App 检测采用结构 + 视觉双通道。</strong>XML 能定位控件语义问题，截图像素能发现对比度等视觉问题。</li><li><strong>修复链路保留人工确认。</strong>大模型负责生成建议，开发者通过 Diff 审核后再应用，兼顾效率和可控性。</li><li><strong>报告可导出、可分享、可回归。</strong>问题不只停留在本地提示，而是可以进入团队协作流程。</li></ul>\n\n<h3 id=\"section-六-落地收益-从专项检查到持续质量能力\"><a id=\"article-anchor-6\"></a>六、落地收益：从专项检查到持续质量能力<a class=\"heading-anchor\" href=\"#section-六-落地收益-从专项检查到持续质量能力\" aria-label=\"链接到本节：六、落地收益：从专项检查到持续质量能力\">#</a></h3>\n\n<p>工具链落地后，带来的变化不仅是“多了几个检测入口”，更重要的是无障碍质量开始进入日常研发节奏。</p>\n\n<ul><li><strong>问题发现更早：</strong>开发者在编码阶段即可看到明显问题，减少后期集中返工。</li><li><strong>定位成本更低：</strong>Web 端问题能定位到 DOM 节点，源码问题能定位到 Vue 文件行列，App 问题能定位到真机截图区域和控件属性。</li><li><strong>修复链路更短：</strong>插件提供问题原因和修复建议，常见代码问题还可以由大模型生成修复方案。</li><li><strong>协作效率更高：</strong>检测结果可以导出或生成报告链接，方便研发、测试、产品在同一份结果上沟通。</li><li><strong>规则持续沉淀：</strong>每一次扫描和修复都能反向帮助团队完善规则库、问题分类和最佳实践。</li></ul>\n\n<h3 id=\"section-七-结语\"><a id=\"article-anchor-7\"></a>七、结语<a class=\"heading-anchor\" href=\"#section-七-结语\" aria-label=\"链接到本节：七、结语\">#</a></h3>\n\n<p>无障碍建设的难点，往往不在于“知道标准是什么”，而在于如何让标准稳定进入日常研发。通过 Chrome 插件、VS Code 插件和 App 桌面端工具这三类工具，我们把无障碍检查从一次性评审变成了贯穿编码、联调、测试和回归的工程能力。</p>\n\n<p>当问题可以被自动发现、被准确定位、被清晰解释，并且能够通过大模型辅助修复时，无障碍就不再只是少数人的专项工作，而会逐步成为每个研发同学都能参与、也愿意持续执行的质量实践。</p>\n\n        ",
+    "headings": [
+      {
+        "id": "section-一-背景",
+        "level": 3,
+        "text": "一、背景"
+      },
+      {
+        "id": "section-二-web-端页面-基于浏览器插件的一键检测",
+        "level": 3,
+        "text": "二、Web 端页面：基于浏览器插件的一键检测"
+      },
+      {
+        "id": "section-三-编码阶段-vs-code-插件实时检测与-ai-修复",
+        "level": 3,
+        "text": "三、编码阶段：VS Code 插件实时检测与 AI 修复"
+      },
+      {
+        "id": "section-四-android-app-截图-xml-的真机无障碍检测",
+        "level": 3,
+        "text": "四、Android App：截图 + XML 的真机无障碍检测"
+      },
+      {
+        "id": "section-五-工具链协同-把无障碍变成研发质量闭环",
+        "level": 3,
+        "text": "五、工具链协同：把无障碍变成研发质量闭环"
+      },
+      {
+        "id": "section-六-落地收益-从专项检查到持续质量能力",
+        "level": 3,
+        "text": "六、落地收益：从专项检查到持续质量能力"
+      },
+      {
+        "id": "section-七-结语",
+        "level": 3,
+        "text": "七、结语"
+      }
+    ],
+    "textLength": 4727,
+    "readingMinutes": 11,
     "sourceId": "vivo-csdn",
     "sourceUrl": "https://blog.csdn.net/vivo_tech/article/details/163719331",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:51.347Z",
-    "nextRetryAt": "2026-11-09T09:07:51.347Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "b41fda5857de28b6a20640764a0ac57ae9a13ed8bdd373a2f6bf4de5290aa1f5",
+    "fetchedAt": "2026-11-02T11:42:52.509Z",
+    "checkedAt": "2026-11-02T11:42:52.509Z",
+    "nextRetryAt": "2026-12-02T11:42:52.509Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

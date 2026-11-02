@@ -2,17 +2,33 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "180fcd0930fbbcc70c50",
-    "status": "unavailable",
-    "html": "",
+    "status": "ready",
+    "html": "\n          <p><span><span>自 KAT-Coder-Pro V1 发布以来，我们持续收到来自一线开发者的宝贵反馈与建议。这些真实的使用洞察，驱动我们在实际应用场景中不断打磨拓展 KAT 系列模型的能力边界。</span></span></p> \n<p><span><span>KAT-Coder-Pro V2 是 KwaiKAT 最新打造的旗舰级 Agentic Coding 模型。</span><span>在 Agentic 场景下，KAT-Coder-Pro V2&nbsp;<span><strong>具备强大的脚手架泛化能力</strong></span>，兼容 10 多种主流的 AI 编码工具，例如 Claude Code、Cline、Kilo、OpenCode，提供更大的灵活性。并<span><strong>针对 OpenClaw 进行了专项训练与深度优化</strong></span>，能够从容应对真实世界中的复杂应用流程。</span></span></p> \n<p><span>与此同时，KAT-Coder-Pro V2&nbsp;<span><strong>在前端美学生成方向取得突破性进展</strong></span>——在 Landing Page 和 PPT 场景中，用户仅需口语化描述，即可获得接近结构化设计 spec 输入水平的高品质输出。这意味着模型的服务边界从过去仅 1% 量级的专业用户，真正扩展到亿级普通用户。</span></p> \n<p></p> \n<p><span><span><strong><span>原生适配 OpenClaw，多 Agent 框架深度优化</span></strong></span></span></p> \n<p><span><span>在 AI Coding 的真实落地场景中，以 OpenClaw 为代表的 AI Agent 框架持续高频迭代，不断引入新工具与新协议，这对模型的脚手架泛化能力提出了巨大挑战。工具调用失败、多步任务中断、指令理解偏差，是模型在实际使用中频繁暴露的问题，而在高频使用场景下，这些问题会被成倍放大，直接影响用户体验。</span></span></p> \n<p><span><span>模型能力的真正边界，不只是代码生成质量是否过关，更在于面对工具不断扩展、任务链路持续拉长的复杂环境时，能否在长程轨迹中始终准确理解用户意图，并在不同 Agent 框架下保持稳定、一致的表现。无论是 Claude Code 还是 OpenClaw，用户都应当能够无缝切换、放心使用，而不是在框架切换时重新踩坑。</span></span></p> \n<p><span>为此，KAT-Coder 从数据构建到训练流程，围绕多脚手架泛化能力进行系统性设计，并针对 OpenClaw 使用场景从原生任务数据出发进行全链路专项优化——不仅覆盖脚手架协议理解与工具链调用，更在训练阶段对长链路执行稳定性进行深度强化。</span></p> \n<p><span><span>最终评测结果显示，KAT-Coder 在复杂 Skills 遵循率与多步任务完成率上取得显著提升，在定时触发、高吞吐、长链路等高压场景下的执行效率与响应稳定性同步达到业界一流水平。</span></span></p> \n<p></p> \n<p><img alt=\"图片\" height=\"847\" src=\"https://i-blog.csdnimg.cn/img_convert/67f5d2a21e6c4350df3b374012a782e8.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p><span>值得一提的是，KAT-Coder-Pro V2 的脚手架泛化能力并不局限于 OpenClaw 单一框架。我们同步在 Claude Code、OpenCode 等主流脚手架上进行了评测，结果表明模型在跨框架场景下同样具备出色的适配能力。</span></p> \n<p></p> \n<p><img alt=\"图片\" height=\"720\" src=\"https://i-blog.csdnimg.cn/img_convert/5acc5a8f10d84a2a9922f345093bd1d7.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<h4><a id=\"article-anchor-1\"></a><span><span><span><span><strong><span>Web Coding - 当模型开始懂\"美\"</span></strong></span></span></span></span></h4> \n<p></p> \n<p><img alt=\"图片\" height=\"678\" src=\"https://i-blog.csdnimg.cn/img_convert/56ec16db863262e75f5e18a62c2f06b1.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p><span><span><span><strong>「打破旧共识：现有评测的系统性盲区」</strong></span></span></span></p> \n<p><span><span>当前主流的代码生成评测（如 WebArena 等），本质上都在玩“找不同”——给一张参考图，看 AI 照猫画虎还原得像不像。但这在“一句话生成网页”的场景里，存在严重的错位。</span></span></p> \n<p><span><span>在商业化应用里：</span><span><span><strong>“代码跑得通”与“设计好看”是两码事</strong></span>。</span><span>&nbsp;代码还原度测的是“代码对不对”</span><span>（有没有报错错位），靠算法就能算； 美学还原度测的是</span><span>“页面好不好看”，是高级的审美判断，代码跑通只是起跑线。</span></span></p> \n<p><span><span>现有评测标准严重偏科，留下了六大盲区：</span></span></p> \n<p><span>1. 用户只给一句话，根本没有“标准答案”让 AI 去对比。</span></p> \n<p><span>2. 图像算法会给具有突破性的原创设计打低分。</span></p> \n<p><span>3. 静态截图根本抓不到交互动画的好坏。</span></p> \n<p><span>4. 算法无法量化“高端商务感”这类抽象词。</span></p> \n<p><span>5. 只看单个按钮好不好，不管整体排版搭不搭。</span></p> \n<p><span>6. 现有的算法打分反而会逼迫 AI 走向最平庸、最安全的设计。</span></p> \n<p></p> \n<p><span><span><span><strong>「KAT Benchmark：立足专业设计的行业新标杆」</strong></span></span></span></p> \n<p><span><span>基于快手研发设计团队深厚的人文视觉与前端积淀，我们填补了空白，推出由专业设计师与合作团队校准完成的「KAT 美学 Benchmark」。</span></span></p> \n<p><span><span>作为业界唯一针对“无参考图创作”的纯美学标准，它有四大优势：</span></span></p> \n<p><span>1. 坚持设计师人工盲测，拒绝唯算法论——真正的审美不可被机器替代。</span></p> \n<p><span>2. 首创 10 大独立评估维度，颗粒度远超学术界现有标准。</span></p> \n<p><span>3. “出彩无瑕疵”才是满分，而不是“最像参考图”，鼓励原创，惩罚平庸。</span></p> \n<p><span>4. 严苛的设计与评审机制，专业设计师团队在统一的标准屏幕下执行深度交互盲测</span></p> \n<p></p> \n<p><span><span><span><strong>「拿数据说话」</strong></span></span></span></p> \n<p><span><span>在最严苛的尺子下，KAT 展现出统治力：</span></span></p> \n<ul><li><span>PPT 场景碾压：总分&nbsp;57.6，领先竞品 14～22 分，配色项高达 78 分；图片得分更是竞品的 5～8 倍。</span></li><li><span>Landing Page 霸榜：总分&nbsp;59.8&nbsp;拿下第一，在配色、元素、布局建立起坚不可摧的优势。</span></li><li><span>震撼跃升：对比上代基线，PPT 均分翻倍（+103%），LP 提升&nbsp;+42%，元素单项暴增&nbsp;+300%。</span></li></ul> \n<p></p> \n<p><img alt=\"图片\" height=\"493\" src=\"https://i-blog.csdnimg.cn/img_convert/b9317393c713c36b1ea999fff9ea8bf5.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p><span><span>在 Benchmark 上的每一次跨越，都在让“一句话生成专业级商业页面”一步步走向现实。</span></span></p> \n<p><span><span><span><strong>「PPT 案例」</strong></span></span></span></p> \n<div id=\"article-anchor-2\"> \n <div id=\"article-anchor-3\"> \n  <div> \n   <div>\n    \n    <p> </p>\n   </div> \n  </div> \n  <div> \n   <div> \n    <div> \n     <div> \n      <div> \n       <div id=\"article-anchor-4\"> \n        <div> \n         <div> \n          <div></div> \n         </div> \n        </div> \n       </div> \n      </div> \n     </div> \n    </div> \n   </div> \n  </div> \n </div> \n</div> \n<p><span><span><span><strong>「Landing Page 案例」</strong></span></span></span></p> \n<div id=\"article-anchor-5\"> \n <div id=\"article-anchor-6\"> \n  <div> \n   <div>\n    \n    <p> </p>\n   </div> \n  </div> \n </div> \n</div> \n<h4><a id=\"article-anchor-7\"></a></h4> \n<h4><a id=\"article-anchor-8\"></a><span><span><span><span><strong><span>更强大的基座能力</span></strong></span></span></span></span></h4> \n<p><span><span>Agentic 场景下的复杂推理，离不开扎实的通用基座能力作为支撑。KAT-Coder-Pro V2 的基础模型在 Terminal-Bench Hard（46.8）、𝜏²-Bench Telecom（93.9）等主流基准上全面进入全球第一梯队，为上层 Coding 能力提供了坚实的底层保障。</span></span></p> \n<p></p> \n<p><img alt=\"图片\" height=\"888\" src=\"https://i-blog.csdnimg.cn/img_convert/eb44590c237f4d33d692e959c149eda9.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<h4><a id=\"article-anchor-9\"></a><span><span><span><span><strong><span>现在开始</span></strong></span></span></span></span></h4> \n<p><span><span>KAT-Coder-Pro V2&nbsp;</span><span>现已全量上线</span><span>，用户可以通过以下方式立即体验：</span></span></p> \n<p><span><span><span><strong>方式一：API 调用</strong></span></span></span></p> \n<p><span><span>通过 StreamLake.com 平台直接调用模型 API，灵活集成到你的工作流中。</span></span></p> \n<p><span><span><strong>API KEY申请</strong></span><span><strong>：</strong></span></span></p> \n<p><span><span><span>https://streamlake.com/product/kat-coder</span></span></span></p> \n<p></p> \n<p><span><span><span><strong>方式二：Coding Plan 订阅</strong></span></span></span></p> \n<p><span><span>KAT-Coder-Pro V2 已纳入 Coding Plan 套餐，开箱即用。我们提供四档方案，你可以根据自己的使用频率按需选择：</span></span></p> \n<p><span><span><strong>Coding Plan订阅：</strong></span></span></p> \n<p><span><span><span>https://www.streamlake.com/marketing/coding-plan</span></span></span></p> \n<p></p> \n<p><span><span><strong>开发工具接入指南</strong></span><span><strong>：</strong></span></span></p> \n<p><span><span><span>https://www.streamlake.com/document/WANQING/me6ymdjrqv8lp4iq0o9</span></span></span></p> \n<p></p> \n<p><span><span>期待与开发者朋友们碰撞出更多火花。订阅我们</span><span>获取最新资讯！</span></span></p> \n<p></p>\n        ",
     "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "textLength": 2609,
+    "readingMinutes": 6,
     "sourceId": "kuaishou-csdn",
     "sourceUrl": "https://blog.csdn.net/kuaishoutech/article/details/159547871",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:58.801Z",
-    "nextRetryAt": "2026-11-09T09:07:58.801Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "74917889f770f34ee048038331d3b88e73175fdf1df450623f3668692fc2a2ed",
+    "fetchedAt": "2026-11-02T11:43:46.127Z",
+    "checkedAt": "2026-11-02T11:43:46.127Z",
+    "nextRetryAt": "2026-12-02T11:43:46.128Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

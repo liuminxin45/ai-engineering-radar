@@ -2,17 +2,124 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "6fec96700c2100587676",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n                    <h2 id=\"section-1-概述\"><a id=\"article-anchor-1\"></a><strong>1 概述</strong><a class=\"heading-anchor\" href=\"#section-1-概述\" aria-label=\"链接到本节：1 概述\">#</a></h2> \n<p></p> \n<p>一段内容进入另一种语言时，需要保留下来的往往不只有字面意思。字幕要适应画面时长，技术文档要保留术语和格式，小说要延续人物称呼与叙述风格，视频配音还要接住原声中的表达。翻译模型需要在语义忠实、任务约束和内容形态之间建立联系。</p> \n<p>围绕这些需求，哔哩哔哩 Index LLM 团队推出<strong>&nbsp;Index-Translate 系列</strong>。文本翻译覆盖<strong>&nbsp;150 种语言</strong>，提供&nbsp;<strong>2B、9B 和 35B-A3B（preview）&nbsp;</strong>三种规模，同时支持图文翻译；系列还提供语音翻译、音节控制与长文档翻译能力。本文简要介绍这些功能，重点展开它们背后的训练设计。</p> \n<p>我们还观察到图片文字翻译的跨模态泛化：Index-Translate 的中训练与后训练均未使用图片数据，但借助继承自 Qwen3.5 的视觉通路，模型可以直接根据图片生成译文。后文将结合多模态评测说明这种能力的表现，以及它随模型规模变化的边界。</p> \n<p>开源不到半个月，GitHub Star 已超过&nbsp;<strong>1,600</strong>，Hugging Face 系列模型总下载次数突破&nbsp;<strong>10 万次</strong>。感谢大家的关注、试用与反馈。</p> \n<p><strong>Index-Translate</strong>：主力翻译模型，支持多语言文本翻译与图文翻译；文本翻译可遵循术语、格式、风格与上下文指令。</p> \n<p>围绕不同内容形态与任务约束，我们还推出三款衍生模型：</p> \n<ul><li> <p><strong>Index-Echo</strong>：语音到文本、语音到语音翻译，并利用源音频提供音色条件。</p> </li><li> <p><strong>Index-Homura</strong>：根据指定音节数调整译文，用于字幕和配音等时间受限场景。</p> </li><li> <p><strong>Index-NativeLong</strong>：完整输入长文档，一次生成完整译文，学习跨段落的一致性。</p> </li></ul> \n<p></p> \n<ol><li> <p>在线 Demo：<em><a title=\"https://index-translate.bilibili.com/\" href=\"https://index-translate.bilibili.com/\" target=\"_blank\" rel=\"noopener noreferrer\">https://index-translate.bilibili.com/</a></em></p> </li><li> <p>GitHub：<em><a title=\"https://github.com/bilibili/Index-Translate\" href=\"https://github.com/bilibili/Index-Translate\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/bilibili/Index-Translate</a></em></p> </li><li> <p>Hugging Face：<em><a title=\"https://huggingface.co/collections/IndexTeam/index-translate\" href=\"https://huggingface.co/collections/IndexTeam/index-translate\" target=\"_blank\" rel=\"noopener noreferrer\">https://huggingface.co/collections/IndexTeam/index-translate</a></em></p> </li><li> <p>免费 API：<em><a title=\"https://github.com/bilibili/Index-Translate#option-1-free-online-api-zero-gpu-setup\" href=\"https://github.com/bilibili/Index-Translate#option-1-free-online-api-zero-gpu-setup\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/bilibili/Index-Translate#option-1-free-online-api-zero-gpu-setup</a></em></p> </li></ol> \n<p>完整方法与实验见 Index-Translate 技术报告（<em><a title=\"https://arxiv.org/abs/2609.40181\" href=\"https://arxiv.org/abs/2609.40181\" target=\"_blank\" rel=\"noopener noreferrer\">https://arxiv.org/abs/2609.40181</a></em>）[1]。</p> \n<p></p> \n<p></p> \n<p><img alt=\"图片\" height=\"545\" src=\"https://i-blog.csdnimg.cn/img_convert/6dd6408547173e215bb20b17ac56f09b.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>图 1 Index-Translate 文本翻译七维评测，包含 35B-A3B（preview）、9B、2B，以及 Hy-MT2-30B-A3B 等代表性模型。各轴按全部 14 款参评模型的最小值和最大值归一化至 0–100，表示相对表现，不是准确率；灰色虚线由各项非 Index 最优分数组成，并非单一模型。</p> \n<p></p> \n<h2 id=\"section-2-多语言底座如何形成\"><a id=\"article-anchor-2\"></a><strong>2 多语言底座如何形成</strong><a class=\"heading-anchor\" href=\"#section-2-多语言底座如何形成\" aria-label=\"链接到本节：2 多语言底座如何形成\">#</a></h2> \n<p></p> \n<p>Index-Translate 基于 Qwen3.5 base构建[2]。中训练同时使用通用文本回放（G）、独立采样的单语文本（M）和平行翻译数据（P）：前两者保留语言理解与表达能力，平行数据加强跨语言对齐。进入训练后期，再增加中转组织数据（V），关联同一内容的多个语言版本[3]。</p> \n<p>我们采用<strong>&nbsp;WSD（Warmup–Stable–Decay）学习率调度</strong>中的 constant 和 decay 阶段[4]。<strong>Constant 阶段</strong>保持固定学习率，使用通用、平行、单语数据的均衡配比；<strong>decay 阶段</strong>逐步降低学习率，并以中转数据为主，兼顾核心与完整语种覆盖。2B、9B、35B-A3B 共享下面的基础文本配方，使用 AdamW、4,096 tokens 序列长度和 4,096 条序列的全局 batch。</p> \n<p><strong>表 1 基础文本模型的 WSD 中训练配方</strong></p> \n<p></p> \n<p><img alt=\"图片\" height=\"142\" src=\"https://i-blog.csdnimg.cn/img_convert/dc46c2e659a977befdcc6534a75fc98b.png\" width=\"680\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>pivot-20 与 pivot-148 的计数不含英语、中文；加入这两种语言后，分别对应&nbsp;<strong>22 个核心语言条目</strong>和&nbsp;<strong>150 个完整语言条目</strong>。这里的中转是训练数据的组织方式，实际推理直接生成目标语言译文。</p> \n<p>配方选择参考了技术报告中的先导实验。下表保留代表性 constant 设置，以及相同 decay 预算下的平行／中转对比[1]。</p> \n<p><strong>表 2 Constant 与 decay 的代表性配方实验</strong></p> \n<p></p> \n<p><img alt=\"图片\" height=\"245\" src=\"https://i-blog.csdnimg.cn/img_convert/67c27192879063b480b52d4b05316c88.png\" width=\"680\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>Constant 组在 4K 上下文、step 7,000 比较，翻译分为 FLORES-200 与 WMT24++ 的英文源、中文源四项 COMET 均分的等权平均，分别覆盖 20 和 18 个目标语言。Decay 组采用 Qwen3-8B、16K 上下文，均到达 step 10,000，decay 预算同为 25.17B token positions，评测 20 个目标语言。两组翻译口径不同，应分组比较；NLU 为 11 项多语言通用任务的宏平均。粗体表示各组内的指标最优。先导实验与表 1 的最终共享配方分别报告。</p> \n<p><strong>Constant 阶段需要兼顾单语与平行数据。</strong>1:1:1 在完整的八种候选配比中取得最高翻译分，并列最高 NLU 分；去掉单语或平行数据，两项分数都下降。继续提高平行权重到 1:1:4，也没有带来更高的翻译分。</p> \n<p><strong>Decay 阶段的“纯中转”仍保留 G 和 M，只是不含普通平行数据 P。</strong>它的翻译分为 0.7991，略高于平行＋中转的 0.7971；后者完整比例为 G:M:P:V = 1:2:2:4，NLU 略高。加入 P 也改变了其他数据流的归一化份额，所以这是两套完整配方的比较。</p> \n<p>阶段收益还在 2B、9B 上单独跟踪。按“原始底座 → constant 结束 → decay 结束”，2B 的翻译分为<strong>&nbsp;0.7015 → 0.7707 → 0.7898</strong>，9B 为&nbsp;<strong>0.7726 → 0.7924 → 0.8007</strong>；两个阶段都观察到翻译收益。NLU 在 constant 阶段下降，在 decay 阶段部分恢复，但仍低于原始底座。这组结果来自 20+ 语种开发集。</p> \n<p>语言覆盖也要单独验证。在 81 个目标语言的实验中，2B 的 decay 数据由 20+ 扩到 100+ 语种后，61 个非核心语种的校正 COMET 均分（错目标语言输出计零）从&nbsp;<strong>0.5605 提升至 0.6570</strong>，目标语言偏离率从&nbsp;<strong>1.94% 降至 0.89%</strong>，核心语种均分大体稳定。后训练继续保留低资源方向，使这种覆盖能够延续下去。</p> \n<p></p> \n<p></p> \n<p><img alt=\"图片\" height=\"660\" src=\"https://i-blog.csdnimg.cn/img_convert/9379366c607872dccf3d2274f97ef026.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>图 2 多语言中训练之后，通用、指令与梗翻译专家分别学习任务能力，再通过参数融合和针对性蒸馏形成文本模型。图中的 0.8/0.1/0.1 融合权重对应报告中的 2B 与 9B 配置。</p> \n<p></p> \n<h2 id=\"section-3-通过任务奖励学习可用的翻译\"><a id=\"article-anchor-3\"></a><strong>3 通过任务奖励学习可用的翻译</strong><a class=\"heading-anchor\" href=\"#section-3-通过任务奖励学习可用的翻译\" aria-label=\"链接到本节：3 通过任务奖励学习可用的翻译\">#</a></h2> \n<p></p> \n<h3 id=\"section-3-1-先学习示例-再优化任务目标\"><a id=\"article-anchor-4\"></a><strong>3.1 先学习示例 再优化任务目标</strong><a class=\"heading-anchor\" href=\"#section-3-1-先学习示例-再优化任务目标\" aria-label=\"链接到本节：3.1 先学习示例 再优化任务目标\">#</a></h3> \n<p></p> \n<p>在共同底座上，我们分别训练通用翻译、指令翻译和梗翻译专家。监督微调（SFT）提供高质量示例，强化学习（RL）则让模型围绕各类任务的目标继续优化。</p> \n<p>通用翻译需要关注漏译、增译与事实偏移。仅靠语义相似度指标，可能无法充分惩罚这些错误。因此，我们将目标语言有效性、基于参考译文的 XCOMET-XXL 翻译质量评分[17]和基于源文的忠实性评分结合起来：语言错误触发门控，忠实性错误则降低奖励，避免一段流畅译文掩盖内容缺失。</p> \n<p>指令翻译面对的是更具体的要求，例如“保持 JSON 结构”“产品名按词表翻译”“保留代码占位符”“使用某种叙述语气”。我们采用 Rubric-as-Reward，将约束拆成可检查的硬条件和分级评估的软条件。结构、术语或占位符等硬检查失败时，奖励门控会置零；风格、上下文理解等软条件则参与分级评分。</p> \n<p></p> \n<p><img alt=\"图片\" height=\"236\" src=\"https://i-blog.csdnimg.cn/img_convert/8e9b0fe6ec019699e366b23dfb93547c.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>图 3 通用翻译奖励组合语言门控、参考质量与忠实性；指令翻译奖励进一步引入硬约束门控。g 表示二值门控，q 表示分级质量或约束评分。</p> \n<p></p> \n<p>通用与指令专家使用 GRPO 优化[1]，通过同一输入下多条候选译文的相对奖励学习更好的输出。梗翻译则使用上下文与参考引导的评审，让模型学习非字面含义、文化功能和语用效果，必要时选择意译、解释或文化适配。</p> \n<p></p> \n<h3 id=\"section-3-2-让评审器跟上模型变化\"><a id=\"article-anchor-5\"></a><strong>3.2 让评审器跟上模型变化</strong><a class=\"heading-anchor\" href=\"#section-3-2-让评审器跟上模型变化\" aria-label=\"链接到本节：3.2 让评审器跟上模型变化\">#</a></h3> \n<p></p> \n<p>奖励函数同样可能成为模型投机的对象：输出得到更高评分，不一定意味着真实翻译质量同步提高。随着策略模型更新，固定评审器面对的输出分布也在变化。</p> \n<p>我们引入 RIVAL 的对抗式评审监督[5]，交替更新评审器与策略模型，并结合偏好排序、辅助定量监督和历史输出回放，让评审器持续学习当前策略的错误模式。这样，强化学习中的监督可以随模型行为变化而调整，降低对固定评审器弱点的依赖。</p> \n<p></p> \n<h3 id=\"section-3-3-融合专家后改善薄弱任务表现\"><a id=\"article-anchor-6\"></a><strong>3.3 融合专家后改善薄弱任务表现</strong><a class=\"heading-anchor\" href=\"#section-3-3-融合专家后改善薄弱任务表现\" aria-label=\"链接到本节：3.3 融合专家后改善薄弱任务表现\">#</a></h3> \n<p></p> \n<p>不同专家各有所长，但将参数合并后，能力并不一定全部保留。我们先对兼容的专家做参数插值[6]，再评测融合模型在哪些任务上仍有不足。报告中的 2B、9B 配置采用通用、指令、梗翻译专家<strong>&nbsp;0.8/0.1/0.1</strong>&nbsp;的融合权重。</p> \n<p>随后，我们进行针对性的多教师 on-policy 蒸馏（MOPD）[7]：学生先生成自己的译文，再由与任务匹配的教师提供 token 级监督，使用 reverse-KL 目标优化。学生在自己实际会产生的输出路径上继续学习，用于改善融合后的薄弱任务；实际效果需要结合翻译质量与约束遵循共同评估。</p> \n<p>这套流程将“分别学好任务”“整合互补能力”和“检查整合后的缺口”连接起来，也保留了对能力迁移边界的观察。比如，精确音节控制在报告研究的融合与蒸馏设置下迁移较弱，因此我们继续保留专门的 Homura 模型。</p> \n<p></p> \n<h2 id=\"section-4-index-echo-如何连接翻译与声音\"><a id=\"article-anchor-7\"></a><strong>4 Index-Echo 如何连接翻译与声音</strong><a class=\"heading-anchor\" href=\"#section-4-index-echo-如何连接翻译与声音\" aria-label=\"链接到本节：4 Index-Echo 如何连接翻译与声音\">#</a></h2> \n<p></p> \n<p></p> \n<p><img alt=\"图片\" height=\"670\" src=\"https://i-blog.csdnimg.cn/img_convert/60f62356cff0f08818bbeabb9fcc39b3.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>图 4 Index-Echo 先学习语音到文本翻译，再通过 Hidden2CV mapper 连接语音生成路径。S2ST 的对齐与后续 DiffRO 阶段保持 S2TT 骨干冻结。</p> \n<p></p> \n<h3 id=\"section-4-1-从音频理解到目标语言文本\"><a id=\"article-anchor-8\"></a><strong>4.1 从音频理解到目标语言文本</strong><a class=\"heading-anchor\" href=\"#section-4-1-从音频理解到目标语言文本\" aria-label=\"链接到本节：4.1 从音频理解到目标语言文本\">#</a></h3> \n<p></p> \n<p>Index-Echo 的语音到文本翻译（S2TT）由音频编码器、连接器和 Index-Translate 解码器组成。音频编码器使用 Qwen3-Omni 的 AuT 模块[8]，连接器把音频特征接入翻译模型，目标语言指令控制输出方向。训练时，这些模块通过语音翻译监督端到端更新，使文本底座能够直接利用源音频完成翻译。</p> \n<p></p> \n<h3 id=\"section-4-2-用隐层表示接入语音生成\"><a id=\"article-anchor-9\"></a><strong>4.2 用隐层表示接入语音生成</strong><a class=\"heading-anchor\" href=\"#section-4-2-用隐层表示接入语音生成\" aria-label=\"链接到本节：4.2 用隐层表示接入语音生成\">#</a></h3> \n<p></p> \n<p>语音到语音翻译（S2ST）在已训练好的 S2TT 上继续扩展。我们使用约&nbsp;<strong>30M 参数的 Hidden2CV mapper</strong>，将翻译模型最后一层的 hidden states 映射到 CosyVoice3 的语义层[9]，让语音生成路径接收翻译模型的连续表示。源音频同时提供参考提示与 CampPlus 说话人向量，为跨语种输出提供音色条件。</p> \n<p>训练分两步进行：先冻结语音翻译与语音生成骨干，蒸馏对齐 mapper；随后进行可微奖励优化（DiffRO），继续保持 S2TT 冻结。DiffRO 通过 Gumbel-Softmax 对语音 token 采样做可微近似，使 Token2Text 内容一致性奖励能够沿语音生成路径回传，优化生成内容与目标译文的一致性[9]。</p> \n<p>目前发布的 S2ST 覆盖六个方向：中文到英语、西班牙语、日语，以及英语到中文、西班牙语、日语。Demo 中可以直接查看视频字幕翻译与跨语种配音效果。</p> \n<p></p> \n<h2 id=\"section-5-时间预算与长文档的专项训练\"><a id=\"article-anchor-10\"></a><strong>5 时间预算与长文档的专项训练</strong><a class=\"heading-anchor\" href=\"#section-5-时间预算与长文档的专项训练\" aria-label=\"链接到本节：5 时间预算与长文档的专项训练\">#</a></h2> \n<p></p> \n<h3 id=\"section-5-1-homura-让音节预算进入训练目标\"><a id=\"article-anchor-11\"></a><strong>5.1 Homura 让音节预算进入训练目标</strong><a class=\"heading-anchor\" href=\"#section-5-1-homura-让音节预算进入训练目标\" aria-label=\"链接到本节：5.1 Homura 让音节预算进入训练目标\">#</a></h3> \n<p></p> \n<p>配音中，一句译文即使含义正确，也可能读不进原视频留下的时间窗口。单纯要求“简短一些”难以稳定控制输出，过度压缩又可能损失信息。</p> \n<p>Index-Homura 将目标音节数作为显式输入，并用 GRPO 联合优化翻译质量和音节偏差。模型通过词汇选择与句法重组调整表达长度，使译文接近给定预算，同时尽量保留原意。音节数为时间受限翻译提供可操作的控制量；最终播放时长还与语速、停顿和语音合成设置有关。</p> \n<p>在技术报告的 SandGlass 评测中，Index-Homura-9B 的音节数落在目标值 ±10% 范围内的比例为&nbsp;<strong>81.92%</strong>。这类评测同时检查翻译质量与预算遵循，使长度控制的收益可以与内容损失一起分析。HOMURA 的研究背景和方法可进一步阅读论文（<em>https://arxiv.org/abs/2601.10187</em>）[10]。</p> \n<p></p> \n<h3 id=\"section-5-2-nativelong-学习持续生成完整译文\"><a id=\"article-anchor-12\"></a><strong>5.2 NativeLong 学习持续生成完整译文</strong><a class=\"heading-anchor\" href=\"#section-5-2-nativelong-学习持续生成完整译文\" aria-label=\"链接到本节：5.2 NativeLong 学习持续生成完整译文\">#</a></h3> \n<p></p> \n<p>文档翻译的难点会随着上下文拉长而变化。人物名、术语和概念区分可能在几十段之后再次出现；逐块翻译时，局部译文各自通顺，整篇却可能出现称呼漂移或概念混用。</p> \n<p>Index-NativeLong 将完整源文与完整目标译文作为文档级监督，让模型在保留全文上下文的条件下持续生成[11]。2B 模型结合长序列中训练衰减与文档 SFT，9B 模型则从融合后的文本模型继续进行文档训练。报告中的训练与评测覆盖约&nbsp;<strong>4K–64K 中文侧 tokens&nbsp;</strong>的文档长度分组。</p> \n<p>例如，一篇地质文献先区分 ice age 与其中的 glacial 阶段，后文再次出现这些词时，译文需要持续保留“冰河时代”与“冰期”的概念差异。文档级训练关注的正是这种跨段落关系，以及长输出中可能出现的漏译、提前结束和术语不一致。我们也构建了 NativeLongBench，按不同长度分组检验完整文档翻译能力。</p> \n<p></p> \n<h2 id=\"section-6-用不同评测检验不同能力\"><a id=\"article-anchor-13\"></a><strong>6 用不同评测检验不同能力</strong><a class=\"heading-anchor\" href=\"#section-6-用不同评测检验不同能力\" aria-label=\"链接到本节：6 用不同评测检验不同能力\">#</a></h2> \n<p></p> \n<h3 id=\"section-6-1-文本翻译评测\"><a id=\"article-anchor-14\"></a><strong>6.1 文本翻译评测</strong><a class=\"heading-anchor\" href=\"#section-6-1-文本翻译评测\" aria-label=\"链接到本节：6.1 文本翻译评测\">#</a></h3> \n<p></p> \n<p>通用翻译、指令遵循、文化表达和文档一致性，需要分别评测。我们使用 FLORES[12]、WMT24++[13]等检验通用质量，用 instTrans 检查格式、术语、风格与上下文约束，并通过 MEME、SandGlass 和 NativeLongBench 检验相应的专项能力。</p> \n<p>在报告的文本对比中，Index-Translate-35B-A3B（preview）的 FLORES COMET-22 为&nbsp;<strong>0.8794</strong>，instTrans IFscore 为&nbsp;<strong>0.8336</strong>。文本翻译与通用能力对比中的所有参评模型均关闭思考模式；语音评测中开启思考的基线在表内明确标注。各任务的完整设置、对比结果与分析见技术报告（<em>https://arxiv.org/abs/2609.40181</em>）。</p> \n<p>为便于阅读，技术报告的文本主表按指标分组呈现，保留全部 14 款对比模型。</p> \n<p><strong>表 3a 通用翻译 指令与文化表达</strong></p> \n<p></p> \n<p><img alt=\"图片\" height=\"574\" src=\"https://i-blog.csdnimg.cn/img_convert/ca8c6b2a020cc7ea818a71a6b0267a24.png\" width=\"680\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>FLORES 使用 COMET-22[16]；WMT26 为 0–100 的评审分，其余指标为 0–1，均为越高越好。instTrans 的译文质量（Quality）和指令遵循（IFscore）由 GPT-5.6-Sol 分别评审；MEME 评测社区与文化表达的翻译质量。粗体数值表示本列最优。</p> \n<p><strong>表 3b WMT24++ IFMTBench 与垂类评测</strong></p> \n<p></p> \n<p><img alt=\"图片\" height=\"548\" src=\"https://i-blog.csdnimg.cn/img_convert/ea7794847ae00c4633b65f551e9b7c70.png\" width=\"664\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>以上指标均为 0–1，越高越好。IFMTBench[14]的翻译质量与指令遵循分别报告；垂类均值为五项领域翻译分数的等权平均，包含 GuoFeng 文学翻译评测[15]。</p> \n<p><strong>表 4a 小语种通用翻译 FLORES_minor_pair</strong></p> \n<p></p> \n<p><img alt=\"图片\" height=\"523\" src=\"https://i-blog.csdnimg.cn/img_convert/cb839be9c0541b1e3985709614761bb6.png\" width=\"680\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>表 4b 小语种指令翻译 instTrans_minor</p> \n<p></p> \n<p><img alt=\"图片\" height=\"523\" src=\"https://i-blog.csdnimg.cn/img_convert/2b7cd680b35b4eb913ea929220856b38.png\" width=\"680\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>FLORES_minor_pair 覆盖 62 种语言的 1,040 个方向；instTrans_minor 含 2,793 项指令翻译任务。偏离率表示输出语言不是指定目标语言的比例，越低越好；其余指标越高越好。North-Small-Translate 指 218B-A25B 模型，TranslateGemma-12B 指 translategemma-12b-it。以上结果完整保留技术报告文本主表的指标与模型，更多设置见完整评测表（<em>https://github.com/bilibili/Index-Translate/blob/main/docs/evaluation.md</em>）。</p> \n<p></p> \n<h3 id=\"section-6-2-图片翻译能力的涌现\"><a id=\"article-anchor-15\"></a><strong>6.2 图片翻译能力的涌现</strong><a class=\"heading-anchor\" href=\"#section-6-2-图片翻译能力的涌现\" aria-label=\"链接到本节：6.2 图片翻译能力的涌现\">#</a></h3> \n<p></p> \n<p>Index-Translate 在文本训练后展现出图片翻译能力，可直接读取图片中的文字并生成目标语言译文。模型沿用 Qwen3.5 的视觉通路，中训练与后训练均使用文本数据[1,2]。</p> \n<p>我们在三组数据上评估图片翻译能力：MMTIT-Bench[18]&nbsp;包含 1,243 张图片、14 种源语言，译入英语和中文；FLORES-rendered 将 FLORES_minor_pair 文本渲染为 1,200 张纯色背景图片，覆盖 60 种源语言和两个目标语言；Vistra[19]&nbsp;包含 763 张自然场景图片、四个目标语言，采用按阅读顺序拼接的参考译文评估整图翻译。评测采用图片输入和零样本翻译指令，以 COMET-22[16]&nbsp;衡量译文质量，各模型使用统一的非思考推理设置。</p> \n<p><strong>Index-Translate-35B-A3B（preview）在三项评测中均取得表内最高分</strong>：MMTIT-Bench 为 0.7845，FLORES-rendered 为 0.7050，Vistra（适配）为 0.7168，分别比同规模 Qwen3.5 高 0.0038、0.0124 和 0.0137。从 2B、9B 到 35B-A3B，Index-Translate 的三项图片翻译得分逐步提高，较大模型表现出更强的跨模态翻译能力。</p> \n<p><strong>表 5 图片文字翻译评测</strong></p> \n<p></p> \n<p><img alt=\"图片\" height=\"270\" src=\"https://i-blog.csdnimg.cn/img_convert/c87b792589fff0567aeb9f662bb4a30e.png\" width=\"664\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>下一个版本，我们将进一步融合语音翻译、视觉语言翻译与文本翻译，并将长文本翻译能力纳入统一模型。通过统一的多语言与多模态能力，同一模型将面向文字、图片和语音输入完成翻译，同时强化长篇内容中的上下文衔接、术语一致性与完整译文生成，保留原文的语义和表达风格。</p> \n<p></p> \n<h2 id=\"section-7-在线体验与免费-api\"><a id=\"article-anchor-16\"></a><strong>7 在线体验与免费 API</strong><a class=\"heading-anchor\" href=\"#section-7-在线体验与免费-api\" aria-label=\"链接到本节：7 在线体验与免费 API\">#</a></h2> \n<p></p> \n<p>想先看看效果，可以打开&nbsp;Demo（<em>https://index-translate.bilibili.com/</em>）；推理代码与使用教程在&nbsp;GitHub（<em>https://github.com/bilibili/Index-Translate</em>），模型仓库汇总在&nbsp;Hugging Face（<em>https://huggingface.co/collections/IndexTeam/index-translate</em>）。</p> \n<p>我们也提供无需本地 GPU 的<strong>免费公开 API</strong>，兼容 OpenAI 的 chat completions 与 responses 接口。当前服务模型标识为&nbsp;<strong>Index-Translate-35B-A3B</strong>，可用下面的请求体验中文翻译：</p> \n<p>curl https://index-translate.bilibili.com/v1/chat/completions \\</p> \n<p>-H 'Content-Type: application/json' \\</p> \n<p>-d '{</p> \n<p>\"model\": \"Index-Translate-35B-A3B\",</p> \n<p>\"messages\": [</p> \n<p>{</p> \n<p>\"role\": \"user\",</p> \n<p>\"content\": \"Translate into Chinese: Welcome to EMNLP.\"</p> \n<p>}</p> \n<p>],</p> \n<p>\"temperature\": 0</p> \n<p>}'</p> \n<p>API base URL 为&nbsp;<strong>https://index-translate.bilibili.com/v1</strong>。更多调用方式与接入示例见免费 API 文档（<em>https://github.com/bilibili/Index-Translate#option-1-free-online-api-zero-gpu-setup</em>）。欢迎带着自己的术语表、字幕、小说或文档来试用，也欢迎在 GitHub 分享反馈。</p> \n<p></p> \n<h2 id=\"section-8-emnlp-现场见\"><a id=\"article-anchor-17\"></a><strong>8 EMNLP 现场见</strong><a class=\"heading-anchor\" href=\"#section-8-emnlp-现场见\" aria-label=\"链接到本节：8 EMNLP 现场见\">#</a></h2> \n<p></p> \n<p>如果你也会参加 EMNLP，欢迎来听我们的<strong>&nbsp;oral</strong>、到&nbsp;<strong>poster</strong>&nbsp;现场交流，一起聊聊翻译、强化学习和多语言内容生产。</p> \n<p><strong>HOMURA oral&nbsp;</strong>已安排在<strong>&nbsp;2026 年 10 月 27 日 09:00–10:30</strong>&nbsp;的 Machine Translation and Semantics session，地点<strong>&nbsp;F9-10</strong>。</p> \n<p>我们也会参加&nbsp;<strong>Poster Session D（10 月 26 日 11:00–12:30，Hall H）</strong>，以及&nbsp;<strong>WMT poster session</strong>，欢迎到现场交流。以上时间均为布达佩斯当地时间，具体安排请以&nbsp;EMNLP 官方日程（<em><a title=\"https://2026.emnlp.org/program/\" href=\"https://2026.emnlp.org/program/\" target=\"_blank\" rel=\"noopener noreferrer\">https://2026.emnlp.org/program/</a></em>）和&nbsp;WMT 官方日程（<em><a title=\"https://www2.statmt.org/wmt26/program.html\" href=\"https://www2.statmt.org/wmt26/program.html\" target=\"_blank\" rel=\"noopener noreferrer\">https://www2.statmt.org/wmt26/program.html</a></em>）为准。</p> \n<p>现场还会发放<strong>精美谷子</strong>，欢迎来交流技术与使用体验，把喜欢的周边带回去。我们 EMNLP 见！</p> \n<p></p> \n<p></p> \n<p><img alt=\"图片\" height=\"810\" src=\"https://i-blog.csdnimg.cn/img_convert/a8e105ba5666f310f5394fb3e87af13a.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>图 5 团队周边展示。</p> \n<p></p> \n<h2 id=\"section-参考文献\"><a id=\"article-anchor-18\"></a><strong>参考文献</strong><a class=\"heading-anchor\" href=\"#section-参考文献\" aria-label=\"链接到本节：参考文献\">#</a></h2> \n<p>[1] Tianjiao Li, Mengran Yu, Chenyu Shi, Lusheng Zhang, Qisi Chen, Yanshan Zhou, Ji Qi, Jingying Liu, Yuang Feng, Ziang Cui, and Tianxing Yan. Index-Translate: A Multilingual Translation Model Family — Text, Speech, Controlled Dubbing, and Long-Document Translation. arXiv:2609.40181, 2026.&nbsp;原文（<em>https://arxiv.org/abs/2609.40181</em>）.</p> \n<p>[2] Qwen Team. Qwen3.5: Towards Native Multimodal Agents. February 2026.&nbsp;原文（<em>https://qwen.ai/blog?id=qwen3.5</em>）.</p> \n<p>[3] Yingli Shen, Wen Lai, Shuo Wang, Ge Gao, Kangyang Luo, Alexander Fraser, and Maosong Sun. From Unaligned to Aligned: Scaling Multilingual LLMs with Multi-Way Parallel Corpora. Proceedings of EMNLP, pages 7357–7379, 2025.&nbsp;原文（<em>https://aclanthology.org/2025.emnlp-main.374/</em>）.</p> \n<p>[4] Shengding Hu et al. MiniCPM: Unveiling the Potential of Small Language Models with Scalable Training Strategies. arXiv:2404.06395, 2024.&nbsp;原文（<em>https://arxiv.org/abs/2404.06395</em>）.</p> \n<p>[5] Tianjiao Li, Mengran Yu, Chenyu Shi, Yanjun Zhao, Xiaojing Liu, Qiang Zhang, Qi Zhang, Xuanjing Huang, and Jiayin Wang. RIVAL: Reinforcement Learning with Iterative and Adversarial Optimization for Machine Translation. arXiv:2506.05070, 2025.&nbsp;原文（<em>https://arxiv.org/abs/2506.05070</em>）.</p> \n<p>[6] Mitchell Wortsman et al. Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time. ICML, PMLR 162:23965–23998, 2022.&nbsp;原文（<em>https://proceedings.mlr.press/v162/wortsman22a.html</em>）.</p> \n<p>[7] Wenhan Ma, Jianyu Wei, Liang Zhao, Hailin Zhang, Bangjun Xiao, Lei Li, Qibin Yang, Bofei Gao, Yudong Wang, Rang Li, Jinhao Dong, Zhifang Sui, and Fuli Luo. MOPD: Multi-Teacher On-Policy Distillation for Capability Integration in LLM Post-Training. arXiv:2606.30406, 2026.&nbsp;原文（<em>https://arxiv.org/abs/2606.30406</em>）.</p> \n<p>[8] Jin Xu et al. Qwen3-Omni Technical Report. arXiv:2509.17765, 2025.&nbsp;原文（<em>https://arxiv.org/abs/2509.17765</em>）.</p> \n<p>[9] Zhihao Du et al. CosyVoice 3: Towards In-the-wild Speech Generation via Scaling-up and Post-training. arXiv:2505.17589, 2025.&nbsp;原文（<em>https://arxiv.org/abs/2505.17589</em>）.</p> \n<p>[10] Ziang Cui et al. HOMURA: Taming the Sand-Glass for Time-Constrained LLM Translation via Reinforcement Learning. arXiv:2601.10187, 2026.&nbsp;原文（<em>https://arxiv.org/abs/2601.10187</em>）.</p> \n<p>[11] Yushi Bai et al. LongWriter: Unleashing 10,000+ Word Generation from Long Context LLMs. ICLR, 2025.&nbsp;原文（<em>https://arxiv.org/abs/2408.07055</em>）.</p> \n<p>[12] NLLB Team et al. No Language Left Behind: Scaling Human-Centered Machine Translation. arXiv:2207.04672, 2022.&nbsp;原文（<em>https://arxiv.org/abs/2207.04672</em>）.</p> \n<p>[13] Daniel Deutsch et al. WMT24++: Expanding the Language Coverage of WMT24 to 55 Languages &amp; Dialects. Findings of ACL, pages 12257–12284, 2025.&nbsp;原文（<em>https://aclanthology.org/2025.findings-acl.634/</em>）.</p> \n<p>[14] Mao Zheng et al. Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild. arXiv:2605.22064, 2026.&nbsp;原文（<em>https://arxiv.org/abs/2605.22064</em>）.</p> \n<p>[15] Longyue Wang et al. Findings of the WMT 2023 Shared Task on Discourse-Level Literary Translation: A Fresh Orb in the Cosmos of LLMs. Proceedings of the Eighth Conference on Machine Translation, pages 55–67, 2023.&nbsp;原文（<em>https://aclanthology.org/2023.wmt-1.3/</em>）.</p> \n<p>[16] Ricardo Rei et al. COMET-22: Unbabel-IST 2022 Submission for the Metrics Shared Task. Proceedings of the Seventh Conference on Machine Translation, pages 578–585, 2022.&nbsp;原文（<em>https://aclanthology.org/2022.wmt-1.52/</em>）.</p> \n<p>[17] Nuno M. Guerreiro, Ricardo Rei, Daan van Stigt, Luisa Coheur, Pierre Colombo, and André F. T. Martins. xCOMET: Transparent Machine Translation Evaluation through Fine-grained Error Detection. Transactions of the Association for Computational Linguistics, 12:979–995, 2024.&nbsp;原文（<em>https://aclanthology.org/2024.tacl-1.54/</em>）.</p> \n<p>[18] Gengluo Li et al. MMTIT-Bench: A Multilingual and Multi-Scenario Benchmark with Cognition-Perception-Reasoning Guided Text-Image Machine Translation. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 16593–16602, 2026.&nbsp;原文（<em>https://openaccess.thecvf.com/content/CVPR2026/html/Li_MMTIT-Bench_A_Multilingual_and_Multi-Scenario_Benchmark_with_Cognition-Perception-Reasoning_Guided_Text-Image_CVPR_2026_paper.html</em>）.</p> \n<p>[19] Elizabeth Salesky, Philipp Koehn, and Matt Post. Benchmarking Visually-Situated Translation of Text in Natural Images. Proceedings of the Ninth Conference on Machine Translation, pages 1167–1182, 2024.&nbsp;原文（<em>https://aclanthology.org/2024.wmt-1.115/</em>）.</p> \n<p></p> \n<p>-End-</p> \n<p>作者丨哔哩哔哩 Index LLM 团队</p>\n                ",
+    "headings": [
+      {
+        "id": "section-1-概述",
+        "level": 2,
+        "text": "1 概述"
+      },
+      {
+        "id": "section-2-多语言底座如何形成",
+        "level": 2,
+        "text": "2 多语言底座如何形成"
+      },
+      {
+        "id": "section-3-通过任务奖励学习可用的翻译",
+        "level": 2,
+        "text": "3 通过任务奖励学习可用的翻译"
+      },
+      {
+        "id": "section-3-1-先学习示例-再优化任务目标",
+        "level": 3,
+        "text": "3.1 先学习示例 再优化任务目标"
+      },
+      {
+        "id": "section-3-2-让评审器跟上模型变化",
+        "level": 3,
+        "text": "3.2 让评审器跟上模型变化"
+      },
+      {
+        "id": "section-3-3-融合专家后改善薄弱任务表现",
+        "level": 3,
+        "text": "3.3 融合专家后改善薄弱任务表现"
+      },
+      {
+        "id": "section-4-index-echo-如何连接翻译与声音",
+        "level": 2,
+        "text": "4 Index-Echo 如何连接翻译与声音"
+      },
+      {
+        "id": "section-4-1-从音频理解到目标语言文本",
+        "level": 3,
+        "text": "4.1 从音频理解到目标语言文本"
+      },
+      {
+        "id": "section-4-2-用隐层表示接入语音生成",
+        "level": 3,
+        "text": "4.2 用隐层表示接入语音生成"
+      },
+      {
+        "id": "section-5-时间预算与长文档的专项训练",
+        "level": 2,
+        "text": "5 时间预算与长文档的专项训练"
+      },
+      {
+        "id": "section-5-1-homura-让音节预算进入训练目标",
+        "level": 3,
+        "text": "5.1 Homura 让音节预算进入训练目标"
+      },
+      {
+        "id": "section-5-2-nativelong-学习持续生成完整译文",
+        "level": 3,
+        "text": "5.2 NativeLong 学习持续生成完整译文"
+      },
+      {
+        "id": "section-6-用不同评测检验不同能力",
+        "level": 2,
+        "text": "6 用不同评测检验不同能力"
+      },
+      {
+        "id": "section-6-1-文本翻译评测",
+        "level": 3,
+        "text": "6.1 文本翻译评测"
+      },
+      {
+        "id": "section-6-2-图片翻译能力的涌现",
+        "level": 3,
+        "text": "6.2 图片翻译能力的涌现"
+      },
+      {
+        "id": "section-7-在线体验与免费-api",
+        "level": 2,
+        "text": "7 在线体验与免费 API"
+      },
+      {
+        "id": "section-8-emnlp-现场见",
+        "level": 2,
+        "text": "8 EMNLP 现场见"
+      },
+      {
+        "id": "section-参考文献",
+        "level": 2,
+        "text": "参考文献"
+      }
+    ],
+    "textLength": 12777,
+    "readingMinutes": 29,
     "sourceId": "bilibili-csdn",
     "sourceUrl": "https://blog.csdn.net/bilibili_TC/article/details/168453213",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:38.344Z",
-    "nextRetryAt": "2026-11-09T09:07:38.344Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "d35dccf7591d183b8c36b03eb604f0f2db4876aeb3eb8459d36f56da2a9093f8",
+    "fetchedAt": "2026-11-02T11:41:33.262Z",
+    "checkedAt": "2026-11-02T11:41:33.262Z",
+    "nextRetryAt": "2026-12-02T11:41:33.262Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

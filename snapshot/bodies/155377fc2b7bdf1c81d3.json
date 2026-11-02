@@ -2,17 +2,109 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "155377fc2b7bdf1c81d3",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <blockquote> \n <p>VSAG 是蚂蚁集团开源的图索引向量检索框架。</p> \n <p>本文源自 VSAG 团队在 VLDB'25 发表的《VSAG: An Optimized Search Framework for Graph-based Approximate Nearest Neighbor Search》，介绍 VSAG 框架如何通过缓存优化、自动调参和距离计算加速，在保证高召回率前提下将检索性能提升最高 400%。</p> \n</blockquote> \n<p></p> \n<h2 id=\"section-一-背景\"><a id=\"article-anchor-1\"></a>一、背景<a class=\"heading-anchor\" href=\"#section-一-背景\" aria-label=\"链接到本节：一、背景\">#</a></h2> \n<h3 id=\"section-1-近似最近邻搜索\"><a id=\"article-anchor-2\"></a>1. 近似最近邻搜索<a class=\"heading-anchor\" href=\"#section-1-近似最近邻搜索\" aria-label=\"链接到本节：1. 近似最近邻搜索\">#</a></h3> \n<p>随着半结构化数据的快速增长，向量表示与检索技术在人脸识别（如支付宝）、图像搜索（如 Google）和视频推荐（如 YouTube）等场景中广泛应用。近似最近邻搜索（ANNS）作为海量向量检索的核心，旨在高效找出与查询向量距离最近的 Top-K 相似项，通过容忍少量召回误差显著提升搜索效率。</p> \n<p>当前主流索引分为两类：基于空间划分（如 IVF、LSH）和基于图（如 HNSW、DISKANN）。前者将数据划分为子空间，内存访问连续，缓存命中率高，但受限于高维分割精度，难以满足高召回需求；后者将向量建为图结构，通过贪心搜索实现高精度检索。图索引在高维场景下，能较好达到检索耗时和精度的平衡，其成为工业界和学术界的主流选择。</p> \n<p>然而，<strong>图索引面临随机内存访问频繁、缓存命中率低、参数敏感和计算开销大等挑战</strong>。</p> \n<p></p> \n<h3 id=\"section-2-图索引的挑战\"><a id=\"article-anchor-3\"></a>2. 图索引的挑战<a class=\"heading-anchor\" href=\"#section-2-图索引的挑战\" aria-label=\"链接到本节：2. 图索引的挑战\">#</a></h3> \n<h4><a id=\"article-anchor-4\"></a>2.1 缓存不命中</h4> \n<p><strong>目前对图算法的研究大部分都忽略了内存随机访问的开销。</strong>即使是相同的算法，不同的实现方式也会表现出显著的性能差异。在没有距离计算优化的图算法实现中，内存随机访问的开销不是瓶颈。然而，在使用一些算法加速（例如，标量量化 SQ）后，距离计算的耗时占比从 90% 锐减到 40% 。更值得关注的是，多达 40% 的开销来自缓存未命中。这些隐藏在复杂度分析背后的常量开销，实质上严重削弱了检索算法的性能。</p> \n<p></p> \n<h4><a id=\"article-anchor-5\"></a>2.2 参数选择</h4> \n<p>目前很多研究表明，向量检索的召回效果和检索效率都是参数敏感的，即使是同一个算法，采用不同参数配置也会产生天差地别的效果。同时，随着硬件迭代更新，现有的 AI 服务器有更快，容量更大的各级缓存。而 ANNS 的表现会随设备与硬件参数的变化呈现出各异的瓶颈。如何面向数据集、算法类型、检索方式与环境以及检索目标，给出最合适的参数配置，已成为业界生产中亟待解决的问题。传统调优手段多依赖专家经验，难以适配多样化的用户场景与快速演进的新算法，因此，<strong>在生产中探索更智能的参数调优策略</strong>大有裨益。</p> \n<p></p> \n<h4><a id=\"article-anchor-6\"></a>2.3 距离计算</h4> \n<p>目前许多研究以及工业实践都发现，向量距离计算占整个搜索流程耗时 90% 以上。得益于现代 CPU 的 SIMD 指令，距离计算开销中的常数项被大幅度减少。例如，AVX512 指令允许一次加载 512 比特的数据并行计算。虽然目前有许多研究利用了高效的量化方法（例如，乘积量化 PQ）来降低查询时间，但在基于图的算法上<strong>难以利用 SIMD 的优势</strong>，从而产生二选一的问题。如何高效利用 SIMD 指令和量化算法来优化距离计算时间，能大幅度减少搜索过程的主要开销。另外，如何减少不必要的 Distance Comparison Operations（DCO），也是一个长久的且困难的问题。</p> \n<p></p> \n<h2 id=\"section-二-vsag-检索框架\"><a id=\"article-anchor-7\"></a>二、VSAG 检索框架<a class=\"heading-anchor\" href=\"#section-二-vsag-检索框架\" aria-label=\"链接到本节：二、VSAG 检索框架\">#</a></h2> \n<p>针对上述挑战，我们提出了&nbsp;<strong>VSAG，一个由蚂蚁集团自主研发的面向图索引的开源近似最近邻搜索（ANNS）框架</strong>。VSAG 通过融合预取优化、多级自动调参和混合精度计算等关键技术，在保证高召回率的前提下显著提升了检索效率。</p> \n<ul><li> <p>论文链接：https://www.vldb.org/pvldb/vol18/p5017-cheng.pdf</p> </li><li> <p>项目地址：https://github.com/antgroup/vsag/</p> </li></ul> \n<h3 id=\"section-1-检索流程\"><a id=\"article-anchor-8\"></a>1. 检索流程<a class=\"heading-anchor\" href=\"#section-1-检索流程\" aria-label=\"链接到本节：1. 检索流程\">#</a></h3> \n<p></p> \n<p><img alt=\"image.png\" height=\"355\" src=\"https://i-blog.csdnimg.cn/img_convert/7f53115741c839c829c01f5a8a0cf856.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>图 1. VSAG 组件与检索流程</p> \n<p>VSAG 分别从<strong>访存优化、自动调参优化、距离计算优化</strong>三个方向展开。这些优化方向在实现上参与到了基于图的搜索算法的各个流程中，集中在索引存储布局、邻居距离计算、结果重排、参数选择上。</p> \n<p>具体来说，VSAG 使用<strong>部分冗余存储（Partial Redundant Storage, PRS）</strong>这一在距离计算优化和访存优化兼具灵活性和高性能的存储底座。在搜索阶段，基于图的索引维护了一个堆用于访问当前未被访问的距离最近的点。每次循环都从堆顶取出顶点，访问其所有邻居并计算距离。VSAG 应用确定访问<strong>贪心搜索（Deterministic Access Greedy Search）</strong>这一高速并缓存友好的搜索算法，将距离计算结果入堆。在每一次搜索都需要若干次这样的循环直至搜索收敛。最后使用<strong>精度过滤器（Precision Filter）</strong>来实现<strong>选择性重排（Selective Re-Rank）</strong>。整个搜索流程首先使用低精度向量快速导航，然后使用高精度向量进行选择性重排，实现了不同精度向量在不同搜索阶段的协同。整个过程中的各级参数，都实现<strong>自适应调整</strong>&nbsp;。</p> \n<p></p> \n<h3 id=\"section-2-缓存优化\"><a id=\"article-anchor-9\"></a>2. 缓存优化<a class=\"heading-anchor\" href=\"#section-2-缓存优化\" aria-label=\"链接到本节：2. 缓存优化\">#</a></h3> \n<p>在基于图的高维向量索引中，尽管内存访问速度远高于磁盘 I/O，但其性能仍受限于 CPU 缓存效率。由于图搜索过程涉及大量随机内存访问——例如在 100 万条 960 维向量数据上达到 90% 召回率时，单次查询需对内存中超过 3000 个不同位置的向量进行随机读取，累计访问数据量超过 10MB——这给有限容量的 L3 缓存（如典型 Xeon CPU 仅 33 MB）带来巨大压力。实际测试显示，此类随机访问导致缓存命中率不足 20%，大量时间消耗在等待数据从主存加载到缓存的过程中。这些缓存未命中显著增加了距离计算的常数项开销，成为制约检索性能的关键瓶颈。相比之下，基于空间划分的方法（如 IVF ）虽计算更多距离，但由于其连续内存访问模式能高效利用硬件预取机制，缓存表现更优。</p> \n<p>为解决这一问题，VSAG 提出了三层优化策略以最大化基于图的索引的缓存命中率：</p> \n<p><strong>1. 软件预取（Software-based Prefetch）</strong>：利用 CPU 支持的预取指令，在计算当前邻居向量的同时，异步预取后续可能访问的邻居数据，使数据在真正使用前已加载至缓存，避免计算流被阻塞。</p> \n<p><strong>2. 确定访问贪心搜索（Deterministic Access Greedy Search）</strong>：在搜索过程中先批量判断所有邻居的访问状态，仅对未访问节点进行预取。并且，针对提前取到的数据可能被驱逐，太晚取到的数据没有价值的问题，VSAG 通过“跳跃”若干步的方式匹配预取延迟与计算耗时。确保预取数据在需要时恰好就位，提升预取有效性并减少无效操作。</p> \n<p></p> \n<p><img alt=\"image.png\" height=\"668\" src=\"https://i-blog.csdnimg.cn/img_convert/850a9902c6479bbc4e5e7b52616d1638.jpeg\" width=\"648\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>图 2. (a) 通过软件预取来减少 cache miss； (b) 通过提前访问来减少不必要的预取；(c) 通过“跳跃”来减少缓存被驱逐。</p> \n<p></p> \n<p><strong>3. 部分冗余存储（Partial Redundant Storage）</strong>：改变传统图索引中邻居向量分散存储的方式，将每个节点及其邻居向量集中存储在同一连续内存区域，形成局部连续访问模式，从而激活高效的硬件预取机制；进一步地，提出部分冗余存储策略，允许用户按内存预算灵活配置冗余比例，在性能与资源消耗之间实现权衡。</p> \n<p></p> \n<p><img alt=\"image.png\" height=\"684\" src=\"https://i-blog.csdnimg.cn/img_convert/03c11c8d098c32a1b72115a505440e84.jpeg\" width=\"1072\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>图 3. (a) 当 CPU 是瓶颈时，可以提高 PRS 的内存用量以提高 QPS，进而缓解 CPU 压力；(b) 当内存是瓶颈时，可以降低 PRS 的内存用量并更换为更小实例，从而节省成本。</p> \n<p></p> \n<p>上述优化显著改善了基于图方法的缓存行为。软件预取有效掩盖了内存访问延迟，提升了 CPU 利用率。跳跃式预取结合批量过滤机制大幅减少了无效预取操作。冗余存储则从根本上改变了访问模式，使得原本低效的随机访问转变为可预测的连续访问，极大增强了硬件预取的效果。</p> \n<p>实验表明，这些技术协同作用下，缓存命中率显著提升，内存 IO 等待时间大幅降低，整体检索吞吐量得到明显增强。同时，部分冗余设计提供了良好的可配置性，使系统能够适应不同内存敏感场景。在保证高性能的同时控制存储开销，为大规模向量检索系统的工程实现提供了重要的缓存优化路径。</p> \n<p></p> \n<h3 id=\"section-3-自动调参\"><a id=\"article-anchor-10\"></a>3. 自动调参<a class=\"heading-anchor\" href=\"#section-3-自动调参\" aria-label=\"链接到本节：3. 自动调参\">#</a></h3> \n<p>在向量检索系统中，性能表现高度依赖于多种参数的合理配置。这些参数不仅影响检索速度（QPS），也直接影响召回率（Recall），但其最优值往往因环境、数据分布和业务需求的不同而变化。为此，VSAG 将关键参数划分为三类：<strong>环境级参数（ELP）、查询级参数（QLP）和&nbsp;索引级参数（ILP）</strong>，每类参数的调优难度和影响维度逐层递增。</p> \n<ul><li> <p><strong>环境级参数</strong>（如预取步数、预取行数）主要影响系统的执行效率，与硬件平台（CPU 计算速度、内存带宽等）密切相关，但不改变算法逻辑或召回结果。</p> </li><li> <p><strong>查询级参数</strong>（如候选集大小、重排率）在固定索引的前提下动态调整搜索行为，同时影响 QPS 和 Recall，二者之间存在明显的权衡关系。</p> </li><li> <p><strong>索引级参数</strong>（如邻边数 M、剪枝系数 Alpha）则直接决定图结构的拓扑特性，在构建阶段设定，对检索能力有根本性影响。然而，重新构建索引成本高昂，难以通过暴力遍历方式完成调优。</p> </li></ul> \n<p>由于这三类参数在优化目标、调参开销和影响范围上差异显著，统一的调参策略不可行，因此需要分层设计自动化调优机制，以实现高效、精准且低成本的参数选择。针对不同层级的参数特性，VSAG 提出了三种定制化的自动调参方案：</p> \n<p><strong>1. 基于搜索的环境级参数调优器（Search-based Auto ELPs Tuner）</strong></p> \n<p>针对仅影响执行效率的环境级参数，采用单目标优化策略。通过在真实部署环境中运行采样查询，使用网格搜索（Grid Search）遍历可能的参数组合，测量其对吞吐量（QPS）的影响，最终选取使检索速度最大化的配置。该过程无需考虑召回率，且可在索引构建完成后快速完成，具有低开销、高可复现的优点。</p> \n<p><strong>2. 基于难度感知的查询级参数调优器（Fine-Grained Auto QLPs Tuner）</strong></p> \n<p>不同查询达到目标召回率所需的参数差异显著，呈现“99% 简单查询 + 1% 复杂查询”的长尾分布。为此，VSAG 提出基于决策模型的查询难度分类方法，通过已扫描节点数、候选集距离分布及变化趋势等轻量特征，在搜索过程中动态判断是否可安全缩减候选集规模，实现个性化参数调优，在保障召回的同时有效提升检索效率。</p> \n<p><strong>3. 基于标签机制的索引级参数调优器（Labeling-based Auto ILPs Tuner）</strong></p> \n<p>我们发现，不同的索引级参数构建的索引实际上共享相当大部分的边。例如，在固定裁边策略时，较低的图度数限制构建出的图是更大度数限制构建的图的子图。VSAG 采用一种索引压缩的策略，可以在只使用更为“松弛”的索引级构建一次索引，给图上不同的边打上索引级参数标签。在搜索过程中，通过选择不同的索引级参数标签来“遮住”部分边进行搜索。从而能在只构建单个索引的成本上，搜索过程动态选择边来达到和使用不同的索引级参数构建相同的搜索效果。</p> \n<p></p> \n<p><img alt=\"image.png\" height=\"608\" src=\"https://i-blog.csdnimg.cn/img_convert/50147fd90749f1745ba7971c4ec6bd49.jpeg\" width=\"878\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>图 4. 在松弛的图索引的边上标记构建参数信息，从而能在搜索时实时选取不同的参数构建的索引</p> \n<p></p> \n<h3 id=\"section-4-距离计算优化\"><a id=\"article-anchor-11\"></a>4. 距离计算优化<a class=\"heading-anchor\" href=\"#section-4-距离计算优化\" aria-label=\"链接到本节：4. 距离计算优化\">#</a></h3> \n<p>在向量检索过程中，距离计算（DCO）通常占据整个搜索耗时的 90% 以上，尤其是在高维数据（如 960 维 GIST 数据集）场景下，每次查询需执行数千次距离计算，带来巨大计算开销。为突破这一性能瓶颈，VSAG 提出以<strong>多精度向量混合搜索</strong>为核心的优化框架，</p> \n<p id=\"article-anchor-12\">将距离计算总成本分解为低精度（<img alt=\"cost_{lp}\" src=\"https://latex.csdn.net/eq?cost_%7Blp%7D\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：cost_{lp}\">）和高精度（<img alt=\"cost_{lp}\" src=\"https://latex.csdn.net/eq?cost_%7Blp%7D\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：cost_{lp}\">）两部分，即：<img alt=\"cost = cost_{lp} + cost_{hp} = n_{lp} \\cdot t_{lp} + n_{hp} \\cdot t_{hp}\" src=\"https://latex.csdn.net/eq?cost%20%3D%20cost_%7Blp%7D%20&amp;plus;%20cost_%7Bhp%7D%20%3D%20n_%7Blp%7D%20%5Ccdot%20t_%7Blp%7D%20&amp;plus;%20n_%7Bhp%7D%20%5Ccdot%20t_%7Bhp%7D\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：cost = cost_{lp} + cost_{hp} = n_{lp} \\cdot t_{lp} + n_{hp} \\cdot t_{hp}\"></p> \n<p>通过同时降低单次计算开销和计算次数，实现端到端的效率提升。其核心思想是：在图搜索阶段使用低精度向量加速遍历，在关键路径或最终排序阶段按需使用高精度向量保障召回质量，从而在精度与效率之间取得最优平衡。</p> \n<p>为降低单次距离计算耗时，VSAG 结合标量量化（SQ）与&nbsp;SIMD 指令优化，实现低精度距离计算的极致加速。采用截断式标量量化（Truncated SQ），利用数据分布的 99% 分位数确定值域，避免异常值导致的量化精度损失，并支持从 float32 压缩至 int8 或 int4，显著减少存储与计算负载。配合 AVX512 等 SIMD 指令，可在单条指令中并行处理多个维度甚至多对向量，大幅提升计算吞吐。</p> \n<p></p> \n<p><img alt=\"image.png\" height=\"528\" src=\"https://i-blog.csdnimg.cn/img_convert/0590b56a430f0052daa31a9b6fc05abc.jpeg\" width=\"910\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>图 5.&nbsp;截断式标量量化过滤掉标量量化的异常值以提高 SQ4 方法的精度</p> \n<p></p> \n<p>此外，通过<strong>算子改写</strong>技术将 L2 距离分解为：</p> \n<p><img alt=\"\\|x_b - x_q\\|^2 = \\|x_b\\|^2 + \\|x_q\\|^2 - 2x_b \\cdot x_q\" src=\"https://latex.csdn.net/eq?%5C%7Cx_b%20-%20x_q%5C%7C%5E2%20%3D%20%5C%7Cx_b%5C%7C%5E2%20&amp;plus;%20%5C%7Cx_q%5C%7C%5E2%20-%202x_b%20%5Ccdot%20x_q\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：\\|x_b - x_q\\|^2 = \\|x_b\\|^2 + \\|x_q\\|^2 - 2x_b \\cdot x_q\"></p> \n<p>其中范数项可预先计算存储，仅实时计算交叉项，将 L2 距离的计算复杂度从 O(3D) 降至接近内积的 O(2D)，进一步压缩计算延迟。</p> \n<p>为进一步减少高精度距离计算次数，VSAG 引入<strong>选择性重排</strong>（Selective Re-Rank）机制，实现多精度向量的智能协同。具体来说，引入精度过滤器根据向量的近似距离来判断是否能对结果有较大贡献。在搜索过程中，VSAG 先使用低精度向量进行快速筛选，并结合“精度过滤器”判断是否值得进行高精度计算。该策略既可用于搜索阶段的候选点过滤，也可应用于结果重排阶段，避免对大量低价值结果进行冗余精算。相比传统全量重排，选择性重排显著降低了高精度计算的调用频次，在保证高召回率的同时极大提升了系统吞吐，特别适用于延迟敏感型与大规模检索场景。</p> \n<p></p> \n<p><img alt=\"image.png\" height=\"618\" src=\"https://i-blog.csdnimg.cn/img_convert/09de12a5ef0b7c6c95719719a0851211.jpeg\" width=\"514\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>图 6. 精度过滤器估计量化后的距离的入堆概率，以过滤掉不必要的全精度距离计算</p> \n<h2 id=\"section-三-实验\"><a id=\"article-anchor-13\"></a>三、实验<a class=\"heading-anchor\" href=\"#section-三-实验\" aria-label=\"链接到本节：三、实验\">#</a></h2> \n<h3 id=\"section-1-端到端性能\"><a id=\"article-anchor-14\"></a>1. 端到端性能<a class=\"heading-anchor\" href=\"#section-1-端到端性能\" aria-label=\"链接到本节：1. 端到端性能\">#</a></h3> \n<p></p> \n<p><img alt=\"image.png\" height=\"417\" src=\"https://i-blog.csdnimg.cn/img_convert/8d3d9e3edd94d44918a25607616bd823.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>图 7. 端到端性能对比</p> \n<p>图 7 评估了各算法在召回率（Recall@10）与查询吞吐量（QPS）之间的性能表现。我们报告了每个算法在所有可能参数配置下的最优性能。在所有数据集上，VSAG 在相同召回率下均能实现更高的 QPS。此外，VSAG 在高维向量数据集（如 GIST1M 和 OPENAI）上带来的 QPS 提升更为显著。特别是在 GIST1M 数据集上，当 Recall@10 = 90% 时，VSAG 的 QPS 超过 hnswlib 达 226%；在 OPENAI 数据集上，当 Recall@10 = 80% 时，QPS 提升接近 400%。其主要原因是 VSAG 采用了量化方法，能够在不牺牲搜索精度的前提下显著提升查询吞吐量，而这类方法对高维数据尤其有效。</p> \n<p></p> \n<h3 id=\"section-2-消融实验\"><a id=\"article-anchor-15\"></a>2. 消融实验<a class=\"heading-anchor\" href=\"#section-2-消融实验\" aria-label=\"链接到本节：2. 消融实验\">#</a></h3> \n<p><img alt=\"图片\" height=\"594\" src=\"https://i-blog.csdnimg.cn/img_convert/d38ba8862b54d07d55ae99af0888d5bd.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>表 1. 消融实验</p> \n<p>表 1 进行了消融实验，用于评估所提出各项优化策略的有效性。实验在 GIST1M 和 SIFT1M 数据集上进行，并将相关参数设置为固定值。各项策略按顺序逐步叠加，即第 k 行的结果表示在基线基础上依次引入前 k 项优化后的整体性能。</p> \n<p>第一项策略采用<strong>量化方法</strong>，在保证召回率不变的前提下显著提升了查询吞吐量（QPS）。具体来看，在 GIST1M 数据集上，QPS 从 510 提升至 1272，增长达 149%；在 SIFT1M 数据集上，QPS 从 1695 提升至 2881，增长 69%。这主要得益于量化技术大幅降低了距离计算的计算开销。</p> \n<p>第二至第五项策略聚焦于<strong>内存访问优化</strong>。通过引入软件预取、跳跃式预取、批量处理等机制，有效改善了缓存访问效率。实验结果显示，GIST1M 上的 L3 缓存未命中率从 93.89% 降至 39.23%，SIFT1M 上则从 77.88% 降至 20.98%。缓存命中率的显著提升带来了进一步的性能增益：GIST1M 上 QPS 再提升 70%，SIFT1M 上提升 74%。这是因为在引入量化后，距离计算成本已大幅降低，此时内存访问延迟成为搜索耗时的主要瓶颈。</p> \n<p>综上所述，各项优化策略逐级生效，量化显著降低计算开销，内存访问优化缓解缓存瓶颈，共同实现了端到端检索性能的大幅提升。</p> \n<p></p> \n<h3 id=\"section-3-自动调参效果\"><a id=\"article-anchor-16\"></a>3. 自动调参效果<a class=\"heading-anchor\" href=\"#section-3-自动调参效果\" aria-label=\"链接到本节：3. 自动调参效果\">#</a></h3> \n<p><img alt=\"image.png\" height=\"308\" src=\"https://i-blog.csdnimg.cn/img_convert/6c25d22af5c8b13099de69d959d12b6a.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></p> \n<p>表 2. 自动调参开销</p> \n<p>如表 2 所示，我们在 SIFT1M 和 GIST1M 数据集上展示了 VSAG 在不同索引级参数配置下，各阶段的时间消耗情况。实验统计了在 Recall@10 达到 99% 的条件下，执行 1000 次查询的总耗时。</p> \n<p>在离线阶段，索引级参数（ILP）和环境级参数（ELP）的调优耗时最长，分别为 68 秒和 10 秒。这是因为这些调优过程需要遍历多个参数组合，并通过实际搜索来评估性能，从而选出最优配置。尽管如此，所有调优流程的总耗时（共 128 秒）仍远低于索引构建本身所需的时间（5998 秒）。相比之下，hnswlib 在调参过程中需要为每组参数重复构建索引，累计耗时超过 30 小时，效率显著更低。</p> \n<p>在线阶段，查询级参数（QLP）的调优仅引入约 0.001 秒的额外开销，因为所使用的决策树模型仅依赖少量轻量特征，计算成本极低。这一开销相较于单次搜索耗时（0.217 秒）几乎可以忽略不计。即使将 QLP 调优开销计入，VSAG 的整体搜索延迟仍明显低于 hnswlib 的 0.37 秒，在保证高召回率的同时实现了更高的查询效率。</p> \n<p></p> \n<h2 id=\"section-总结\"><a id=\"article-anchor-17\"></a>总结<a class=\"heading-anchor\" href=\"#section-总结\" aria-label=\"链接到本节：总结\">#</a></h2> \n<p>VSAG 提出了一个开源的近似最近邻搜索（ANNS）框架，可广泛应用于大多数基于图的索引结构。VSAG 通过软件预取、确定性访问的贪心搜索以及部分冗余存储（PRS）等技术，显著降低了缓存未命中率，提升了内存访问效率。框架设计了三层参数自动调优机制，根据不同参数的调优复杂度和影响层级，分别进行环境级、查询级和索引级的自适应优化。同时，VSAG 融合量化技术和选择性重排序策略，将低精度与高精度距离计算有机结合，在保证检索精度的同时大幅减少计算开销。在多个真实数据集上的实验结果表明，VSAG 在相同召回率下显著优于现有主流方法，展现出更优的查询性能和系统效率。</p> \n<p></p> \n<h3 id=\"section-贡献总结\"><a id=\"article-anchor-18\"></a>贡献总结<a class=\"heading-anchor\" href=\"#section-贡献总结\" aria-label=\"链接到本节：贡献总结\">#</a></h3> \n<p>1. VSAG 提出了一种新型的基于图的索引检索框架，针对图索引在缓存命中率低、参数选择困难和距离计算开销大这三个核心挑战，分别设计了针对性的优化方案。</p> \n<p>2. 在缓存不命中问题上，VSAG 设计了一种缓存友好的检索模式，显著提升了检索效率与性能。</p> \n<p>3. 在参数选择方面，VSAG 从三层参数的不同视角出发，提出了相应的调参策略，能够在极低调参成本的前提下，高效地确定合适的参数配置。</p> \n<p>4. 在距离计算方面，VSAG 采用两阶段搜索策略，结合低精度向量的高效计算能力与高精度向量的准确优势，实现了精度与性能之间的良好平衡。</p> \n<p><strong>工业界启示</strong></p> \n<p>1. 两阶段搜索的思路具有较强的可扩展性，可推广至更多实际业务场景。例如，在成本敏感的应用中，第一阶段可采用 sq4_uniform 量化进行快速检索，第二阶段使用 sq8 量化进行精细重排，从而实现约 4 倍的内存压缩效果。</p> \n<p>2. 在选择索引类型时，不仅需考虑检索模式（如查询的 k 值大小），还应结合硬件特性（如对随机访问的支持程度），优先选择与硬件读取模式相匹配的索引结构，以充分发挥系统性能。</p> \n<p>3. 参数选择过程中，应认识到 ANNS 并非一个封闭的黑盒系统。需根据业务需求（如精度与性能的权衡）、索引结构（如图结构或倒排索引）等多方面因素，进行综合分析与调优。</p> \n<p></p> \n<h2 id=\"section-关于-vsag\"><a id=\"article-anchor-19\"></a>关于 VSAG<a class=\"heading-anchor\" href=\"#section-关于-vsag\" aria-label=\"链接到本节：关于 VSAG\">#</a></h2> \n<p>VSAG（Vector Search Algorithm Group）是一个用于向量相似性检索的索引库。其中的索引算法允许用户在大小各种规模的数据集上进行高效检索，特别是那些无法放进内存的数据集。VSAG 已在蚂蚁集团内部支撑数百亿非结构化数据的存储与检索。对外，VSAG 已为 OceanBase、TuGraph、GreptimeDB、Hologres、PolarDB 等工业级系统提供了生产级向量检索能力。</p> \n<p>项目地址：<a title=\"https://github.com/antgroup/vsag/\" href=\"https://github.com/antgroup/vsag/\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/antgroup/vsag/</a></p>\n        ",
+    "headings": [
+      {
+        "id": "section-一-背景",
+        "level": 2,
+        "text": "一、背景"
+      },
+      {
+        "id": "section-1-近似最近邻搜索",
+        "level": 3,
+        "text": "1. 近似最近邻搜索"
+      },
+      {
+        "id": "section-2-图索引的挑战",
+        "level": 3,
+        "text": "2. 图索引的挑战"
+      },
+      {
+        "id": "section-二-vsag-检索框架",
+        "level": 2,
+        "text": "二、VSAG 检索框架"
+      },
+      {
+        "id": "section-1-检索流程",
+        "level": 3,
+        "text": "1. 检索流程"
+      },
+      {
+        "id": "section-2-缓存优化",
+        "level": 3,
+        "text": "2. 缓存优化"
+      },
+      {
+        "id": "section-3-自动调参",
+        "level": 3,
+        "text": "3. 自动调参"
+      },
+      {
+        "id": "section-4-距离计算优化",
+        "level": 3,
+        "text": "4. 距离计算优化"
+      },
+      {
+        "id": "section-三-实验",
+        "level": 2,
+        "text": "三、实验"
+      },
+      {
+        "id": "section-1-端到端性能",
+        "level": 3,
+        "text": "1. 端到端性能"
+      },
+      {
+        "id": "section-2-消融实验",
+        "level": 3,
+        "text": "2. 消融实验"
+      },
+      {
+        "id": "section-3-自动调参效果",
+        "level": 3,
+        "text": "3. 自动调参效果"
+      },
+      {
+        "id": "section-总结",
+        "level": 2,
+        "text": "总结"
+      },
+      {
+        "id": "section-贡献总结",
+        "level": 3,
+        "text": "贡献总结"
+      },
+      {
+        "id": "section-关于-vsag",
+        "level": 2,
+        "text": "关于 VSAG"
+      }
+    ],
+    "textLength": 7936,
+    "readingMinutes": 18,
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/156419937",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:08:03.905Z",
-    "nextRetryAt": "2026-11-09T09:08:03.905Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "8a75f99d5823fd164ba545a963eb097e77ed1d3141fe4ed848936bac367154dd",
+    "fetchedAt": "2026-11-02T11:44:16.480Z",
+    "checkedAt": "2026-11-02T11:44:16.480Z",
+    "nextRetryAt": "2026-12-02T11:44:16.480Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

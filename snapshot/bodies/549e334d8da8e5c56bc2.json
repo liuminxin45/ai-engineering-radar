@@ -2,17 +2,80 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "549e334d8da8e5c56bc2",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "<p>当你在电商平台搜索“苹果”，系统会推荐“水果”还是“手机”？或者直接跳到某个品牌旗舰店？短短一个词，背后承载了完全不同的购买意图。而推荐是否精准，直接影响用户的搜索体验，也影响平台的转化效率。</p>\n\n<p></p>\n\n<p>查询推荐（Query Suggestion）是现代电商搜索系统中的关键功能，通过在用户输入过程中实时推荐相关查询，帮助用户快速明确意图，提升搜索体验与转化效率。传统方法通常采用多阶段级联架构（MCA），虽然在效率与效果之间取得了一定平衡，但由于各阶段目标不一致、长尾查询召回困难等问题，限制了系统性能的进一步突破。</p>\n\n<p></p>\n\n<p>基于上述问题，快手在业界首次提出端到端的生成式统一查询推荐框架——OneSug，成功将召回、粗排、精排等多个阶段统一在一个生成模型中，显著提升了推荐效果与系统效率，在快手电商场景中实现了业务指标与用户体验的双重提升。</p>\n\n<p></p>\n\n<p>本工作相关成果《OneSug: The Unified End-to-End Generative Framework for E-commerce Query Suggestion》已被人工智能顶级会议 AAAI 2026 接收。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"367\" src=\"https://i-blog.csdnimg.cn/img_convert/72d06118539c4eb7cf66b00380b54e1b.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>[🔮 论文链接]：https://arxiv.org/abs/2506.06913</p>\n\n<p></p>\n\n<h2 id=\"section-一-研究背景\"><strong>一、研究背景</strong><a class=\"heading-anchor\" href=\"#section-一-研究背景\" aria-label=\"链接到本节：一、研究背景\">#</a></h2>\n\n<p></p>\n\n<p>传统的查询推荐系统通常采用多阶段级联架构，依次进行召回、粗排和精排。虽然该架构在响应时间与转化率之间实现了一定平衡，但也带来了明显的局限性：</p>\n\n<ul><li>\n\t<p>级联式框架（召回-&gt;粗排-&gt;排序），前一链路性能决定下一链路上限；</p>\n\t</li><li>\n\t<p>召回、排序分离技术迭代范式，全链路统一目标优化难；</p>\n\t</li><li>\n\t<p>长尾前缀由于缺乏历史行为数据，难以召回高质量Query。</p>\n\t</li></ul>\n\n<p></p>\n\n<p>近年来，生成式检索（Generative Retrieval）因其强大的语义理解与生成能力，在推荐与搜索领域展现出巨大潜力。然而，现有方法多聚焦于视频推荐，其本质上是一个开集到开集的任务，难以直接应用于输入输出都是开放词表的的查询推荐场景。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"553\" src=\"https://i-blog.csdnimg.cn/img_convert/26e3bae6c1941fd971d51fc4fd4cc6bb.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"267\" src=\"https://i-blog.csdnimg.cn/img_convert/ee346cba6b5f2b54496fc6e52a126262.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h2 id=\"section-二-方法简介-onesug-的三大核心模块\"><strong>二、方法简介：OneSug 的三大核心模块</strong><a class=\"heading-anchor\" href=\"#section-二-方法简介-onesug-的三大核心模块\" aria-label=\"链接到本节：二、方法简介：OneSug 的三大核心模块\">#</a></h2>\n\n<p></p>\n\n<p>针对上述问题，我们提出了 OneSug 模型，整体架构如上图所示，主要包括3个部分：</p>\n\n<ul><li>\n\t<p>Prefix-Query表征增强模块（Prefix2Query Representation Enhancement）</p>\n\t</li><li>\n\t<p>统一的Enc-Dec生成架构（Unified Encoder-Decoder Architecture）</p>\n\t</li><li>\n\t<p>用户行为偏好对齐（User Preference Alignment）</p>\n\t</li></ul>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"555\" src=\"https://i-blog.csdnimg.cn/img_convert/29757c506058b6eb2efa893c7e96a60d.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h3 id=\"section-2-1-prefix-query表征增强模块\"><strong><em>2.1 Prefix-Query表征增强模块</em></strong><a class=\"heading-anchor\" href=\"#section-2-1-prefix-query表征增强模块\" aria-label=\"链接到本节：2.1 Prefix-Query表征增强模块\">#</a></h3>\n\n<p></p>\n\n<p>Sug场景下，用户输入的前缀往往较短且意图模糊（如“苹果”可指水果或品牌）。为此，我们提出的解决方式分为2个部分。</p>\n\n<p></p>\n\n<ul><li>\n\t<p>语义与业务空间对齐：我们以BGE作为base模型，同时引入用户真实的prefix2query、query2query数据，使用对比学习对 BGE进行微调，使其语义空间与快手电商的业务特征空间对齐。</p>\n\t</li><li>\n\t<p>层次化语义ID生成：在对齐语义空间的基础上，我们引入 RQ-VAE，为每个前缀和Query生成层次化的语义ID。RQ-VAE 可将任意文本映射为离散的语义ID；同时保证语义相近的query会被编码到相同的簇中；通过这种方式，对于任何一个用户输入的前缀，我们可以快速匹配到与其语义ID最接近的 top-K 个相关query，作为增强上下文输入后续生成模型。</p>\n\t</li></ul>\n\n<p></p>\n\n<h3 id=\"section-2-2统一的enc-dec生成架构\"><strong><em>2.2统一的Enc-Dec生成架构&nbsp;</em></strong><a class=\"heading-anchor\" href=\"#section-2-2统一的enc-dec生成架构\" aria-label=\"链接到本节：2.2统一的Enc-Dec生成架构\">#</a></h3>\n\n<p></p>\n\n<p>OneSug 的生成架构基于Enc-Dec结构，并直接通过自回归（Autoregressive）方式生成用户最有可能点击的Query。</p>\n\n<p></p>\n\n<p>该模型的输入包含四个关键部分：</p>\n\n<ul><li>\n\t<p>用户当前输入前缀（如 “智能手机”）</p>\n\t</li><li>\n\t<p>由PRE模块增强的相关查询序列（如 “智能手机性价比2025”）</p>\n\t</li><li>\n\t<p>用户历史行为序列（如过去搜索的 “蓝牙耳机”、“手机壳”等）</p>\n\t</li><li>\n\t<p>用户画像信息。</p>\n\t</li></ul>\n\n<p></p>\n\n<p>输出即为模型生成的Query列表（如 “智能手机推荐2025”、“智能手机性价比排行”）。</p>\n\n<p></p>\n\n<h3 id=\"section-2-3-用户行为偏好对齐-rwr\"><strong><em>2.3 用户行为偏好对齐（RWR）</em></strong><a class=\"heading-anchor\" href=\"#section-2-3-用户行为偏好对齐-rwr\" aria-label=\"链接到本节：2.3 用户行为偏好对齐（RWR）\">#</a></h3>\n\n<p></p>\n\n<h4>2.3.1 用户偏好量化</h4>\n\n<p>我们首先对用户在搜索场景下的真实行为进行了精细化的分级，将其划分为六个明确的层次，并为每个层级赋予一个基础奖励权重<img alt=\"{\\lambda}:\" src=\"https://latex.csdn.net/eq?%7B%5Clambda%7D%3A\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：{\\lambda}:\"></p>\n\n<p><img alt=\"图片\" height=\"529\" src=\"https://i-blog.csdnimg.cn/img_convert/1d4e40286e94ba12db3be99a773f3ea2.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>为了进一步细致的调节样本权重，额外引入了调节因子<img alt=\"r(x_u, q) ={\\lambda\\cdot {ctr}}\" src=\"https://latex.csdn.net/eq?r%28x_u%2C%20q%29%20%3D%7B%5Clambda%5Ccdot%20%7Bctr%7D%7D\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：r(x_u, q) ={\\lambda\\cdot {ctr}}\">，其中表示当前前缀下query的ctr。</p>\n\n<p></p>\n\n<h4>2.3.2 混合排序框架奖励加权偏好优化</h4>\n\n<p>传统的DPO使用&lt;正样本, 负样本&gt;对进行训练，但默认两者同等重要。这在业务场景中是不合理的，因为区分“点击”和“曝光”的难度远小于区分“点击”和“随机负样本”。</p>\n\n<p></p>\n\n<p>RWR 的核心思想是：根据正负样本之间的奖励差距，为不同的样本对赋予不同的学习权重。我们构建了九种类型的样本对（如 &lt;Order, Show&gt;, &lt;Click, Rand&gt;）。对于每一对样本，计算其奖励差异权重<img alt=\"rw_{\\Delta}\" src=\"https://latex.csdn.net/eq?rw_%7B%5CDelta%7D\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：rw_{\\Delta}\">：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"190\" src=\"https://i-blog.csdnimg.cn/img_convert/47d1cbf1e0ea7502624968196d359ea2.png\" width=\"936\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<ul><li>\n\t<p><img alt=\"rw_{\\Delta}\" src=\"https://latex.csdn.net/eq?rw_%7B%5CDelta%7D\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：rw_{\\Delta}\">值小：说明正负样本奖励差距大（如&lt;Click, Rand&gt;），是“容易样本”，模型正常学习即可。</p>\n\t</li></ul>\n\n<ul><li>\n\t<p><img alt=\"rw_{\\Delta}\" src=\"https://latex.csdn.net/eq?rw_%7B%5CDelta%7D\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：rw_{\\Delta}\">值大：说明正负样本奖励差距小（如&lt;Click, Show&gt;），是“困难样本”，RWR 会赋予更大的权重，迫使模型更加努力地学习其间微妙的偏好差异。</p>\n\t</li></ul>\n\n<p></p>\n\n<h4>2.3.3 混合排序框架</h4>\n\n<p>为了克服传统Pairwise范式的DPO在全局排序能力上的局限性，我们引入了一种混合排序框架。该框架将listwise范式的排序损失和point-wise范式的sft loss进行混合，使得模型既能获得高效的排序能力，同时避免reward hacking造成的生成能力下降。</p>\n\n<p></p>\n\n<p>Pairwise范式对齐模型，在包含多个负样本的候选中无法学习到“哪个是最好的”。受 Plackett-Luce 模型启发，我们设计了 Listwise 排序损失，对于正样本，让模型同时拉大它与所有负样本的奖励差距，迫使模型不仅要知道正样本比负样本好，还要学会在负样本越多、越强的情况下，依然将正样本排在前面，从而直接优化列表的整体排序质量。</p>\n\n<p></p>\n\n<p>论文中分别提出了基于Pairwise和ListWise范式的混合排序框架，同时在理论上证明了Pairwise范式的对齐模型是ListWise的特殊情况。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"336\" src=\"https://i-blog.csdnimg.cn/img_convert/71e08fa21f368c33a5cf471b3668ef36.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<h2 id=\"section-三-实验结果\"><strong>三、实验结果</strong><a class=\"heading-anchor\" href=\"#section-三-实验结果\" aria-label=\"链接到本节：三、实验结果\">#</a></h2>\n\n<h3 id=\"section-3-1-离线效果\"><strong><em>3.1 离线效果</em></strong><a class=\"heading-anchor\" href=\"#section-3-1-离线效果\" aria-label=\"链接到本节：3.1 离线效果\">#</a></h3>\n\n<p></p>\n\n<p>在快手电商场景的大规模数据集上，OneSug 在 HR@16 和 MRR@16 指标上均显著优于传统多阶段系统与生成式基线模型。论文中同时提到，OneSug不仅适用于Enc-Dec结构的生成式模型，Decode-only架构的模型同样适用，且具有更高的离线指标，因为现阶段的推理耗时约束暂时没有进行在线实验。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"787\" src=\"https://i-blog.csdnimg.cn/img_convert/11dcbc49e205a7f01a9df8e36dc98fd8.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h3 id=\"section-3-2-在线a-b\"><strong><em>3.2 在线A/B</em></strong><a class=\"heading-anchor\" href=\"#section-3-2-在线a-b\" aria-label=\"链接到本节：3.2 在线A/B\">#</a></h3>\n\n<p></p>\n\n<p>OneSug模型目前在快手电商搜索场景下全量推全，AB实验大幅度提高了Ctr、订单和GMV等指标，同时人工测评GSB指标也有很大幅度的提升。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"263\" src=\"https://i-blog.csdnimg.cn/img_convert/12b7410f330a0fb4aead1bed2f9fed73.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"279\" src=\"https://i-blog.csdnimg.cn/img_convert/e75135b688af5151bb1aec8486db0e01.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<h3 id=\"section-3-3-在线推理\"><strong><em>3.3 在线推理</em></strong><a class=\"heading-anchor\" href=\"#section-3-3-在线推理\" aria-label=\"链接到本节：3.3 在线推理\">#</a></h3>\n\n<h3></h3>\n\n<p>线上流程完全取代了召回-粗排-精排，使平均耗时降低了43.2%，为后续优化提供了充足的空间。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"323\" src=\"https://i-blog.csdnimg.cn/img_convert/b0d004af143c1068340a75d3ad1d6f35.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<h2 id=\"section-四-总结与展望\"><strong>四、总结与展望</strong><a class=\"heading-anchor\" href=\"#section-四-总结与展望\" aria-label=\"链接到本节：四、总结与展望\">#</a></h2>\n\n<p></p>\n\n<p>OneSug 是业界首个在电商场景中实现全流量部署的端到端生成式Query推荐系统，其统一建模方式显著提升了语义理解与个性化推荐的能力，为生成式模型在搜广推的落地提供了新的范式。</p>\n\n<p></p>\n\n<p>未来，我们将进一步探索大语言模型在排序阶段的强化学习优化、实时更新等方向，持续推动端到端生成式系统在推荐、广告等多业务场景中的广泛应用。</p>",
+    "headings": [
+      {
+        "id": "section-一-研究背景",
+        "level": 2,
+        "text": "一、研究背景"
+      },
+      {
+        "id": "section-二-方法简介-onesug-的三大核心模块",
+        "level": 2,
+        "text": "二、方法简介：OneSug 的三大核心模块"
+      },
+      {
+        "id": "section-2-1-prefix-query表征增强模块",
+        "level": 3,
+        "text": "2.1 Prefix-Query表征增强模块"
+      },
+      {
+        "id": "section-2-2统一的enc-dec生成架构",
+        "level": 3,
+        "text": "2.2统一的Enc-Dec生成架构"
+      },
+      {
+        "id": "section-2-3-用户行为偏好对齐-rwr",
+        "level": 3,
+        "text": "2.3 用户行为偏好对齐（RWR）"
+      },
+      {
+        "id": "section-三-实验结果",
+        "level": 2,
+        "text": "三、实验结果"
+      },
+      {
+        "id": "section-3-1-离线效果",
+        "level": 3,
+        "text": "3.1 离线效果"
+      },
+      {
+        "id": "section-3-2-在线a-b",
+        "level": 3,
+        "text": "3.2 在线A/B"
+      },
+      {
+        "id": "section-3-3-在线推理",
+        "level": 3,
+        "text": "3.3 在线推理"
+      },
+      {
+        "id": "section-四-总结与展望",
+        "level": 2,
+        "text": "四、总结与展望"
+      }
+    ],
+    "textLength": 2975,
+    "readingMinutes": 7,
     "sourceId": "kuaishou-csdn",
     "sourceUrl": "https://blog.csdn.net/kuaishoutech/article/details/157252993",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:08:01.326Z",
-    "nextRetryAt": "2026-11-09T09:08:01.326Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "68b59c9f60c0f9282a4f325c8c29269d3e7afeeea868d1cfe86dcd8c598cdc7e",
+    "fetchedAt": "2026-11-02T11:43:56.733Z",
+    "checkedAt": "2026-11-02T11:43:56.733Z",
+    "nextRetryAt": "2026-12-02T11:43:56.733Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

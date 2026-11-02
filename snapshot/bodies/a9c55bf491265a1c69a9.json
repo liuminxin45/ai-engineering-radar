@@ -2,17 +2,94 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "a9c55bf491265a1c69a9",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n          <p>那些为了“理解”世界而训练好的 VLM，是否体内沉睡着“创造”世界的能力？</p>\n\n<p></p>\n\n<p>答案是肯定的。</p>\n\n<p></p>\n\n<p>快手可图团队与华中科技大学联合提出全新技术 VGT（Visual Generation Tuning），用一个颠覆性思路改写多模态生成规则：无需从头训练庞大的生成模型，只要给现成的 VLM（视觉语言模型，如 Qwen2.5-VL、InternVL3）做 “专项微调”，就能激活其沉睡的 “生图天赋”，让 “理解世界” 的 AI 直接进化为 “创造世界” 的顶尖生图模型！</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"306\" src=\"https://i-blog.csdnimg.cn/img_convert/39f203bb2a1c94491b4a13bf6c200e10.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p>[🎯论文标题]&nbsp;：Visual Generation Tuning</p>\n\n<p>[🔮项目主页]&nbsp;：https://github.com/hustvl/VGT</p>\n\n<p>[📝ArXiv链接]&nbsp;：https://arxiv.org/abs/2511.23469</p>\n\n<p></p>\n\n<p>目前VGT代码已开源，并提供了基于 Qwen2.5-VL 和 InternVL3 的预训练及 SFT 权重供未来研究。欢迎 Star ⭐ GitHub 仓库，一起探索 VLM 的生成潜力！</p>\n\n<p></p>\n\n<h2 id=\"section-一-ai的-理解-能力将直接有潜力-创造\"><a id=\"article-anchor-1\"></a><strong>一、AI的“理解”能力将直接有潜力“创造</strong><a class=\"heading-anchor\" href=\"#section-一-ai的-理解-能力将直接有潜力-创造\" aria-label=\"链接到本节：一、AI的“理解”能力将直接有潜力“创造\">#</a></h2>\n\n<p></p>\n\n<h3 id=\"section-1-1-vgt-的颠覆性\"><a id=\"article-anchor-2\"></a>1.1 VGT 的颠覆性<a class=\"heading-anchor\" href=\"#section-1-1-vgt-的颠覆性\" aria-label=\"链接到本节：1.1 VGT 的颠覆性\">#</a></h3>\n\n<p>要理解 VGT 的颠覆性，我们得先看清当前自回归生成模型是怎么做的：</p>\n\n<p></p>\n\n<p>目前的自回归（Autoregressive, AR）图像生成模型通常依赖Diffusion系列中的VAE，其作为视觉表征与自回归的语言模型（LLM)）Gap非常大。通俗来讲就是语言模型不认识VAE，这就导致 AR 模型需要海量数据和计算资源去“硬啃”这些新视觉，训练不仅慢，而且难以收敛。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"346\" src=\"https://i-blog.csdnimg.cn/img_convert/265634c07292b23e6896c86aa2f58198.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>(a)中展示了当前自回归生图模型的粗暴做法，通常他们探索了一系列正则化方法使得语言模型(LLM)去更容易学习，但是事实上没有解决本质问题：VAE的空间与语言模型LLM存在天然的差距。于是我们提出了VGT(b)，直接利用VLM原生的图像表征去生成，仅微调好后展现了强大的生成能力，比之前用VAE的效率和上限都提高了(c)</p>\n\n<p></p>\n\n<h3 id=\"section-1-2-vgt-的关键突破\"><a id=\"article-anchor-3\"></a>1.2 VGT 的关键突破<a class=\"heading-anchor\" href=\"#section-1-2-vgt-的关键突破\" aria-label=\"链接到本节：1.2 VGT 的关键突破\">#</a></h3>\n\n<p>要明白VGT做了什么，我们要先回到现在视觉语言模型（VLM）：可以看成是“理解派”，这类模型经过海量数据预训练，早已具备 “看懂图 + 听懂话” 的能力，比如精准回答 “图里的猫在左边还是右边”，但它只会 “解读” 世界，不会 “创造” 世界；</p>\n\n<p></p>\n\n<p>经过VGT微调，VLM便能具有强大的生图能力，这直接证明了：“理解”模型VLM内部存在着非常好的创造潜力。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"290\" src=\"https://i-blog.csdnimg.cn/img_convert/fd9c36853e3faf2942f83e2dde153bcc.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>而&nbsp;LLaVA&nbsp;当年用 “视觉指令微调”，打破了语言模型（LLM）“看不懂图” 的壁垒。如今 VGT 致敬这一思路，用 “视觉生成微调”(VGT) 让 VLM 学会了 “画图”—— 这不仅是技术传承，更实现了关键突破：已经拥有强大理解能力的VLM，仅需少量微调，即可涌现强大的生图能力。</p>\n\n<p></p>\n\n<h2 id=\"section-二-vgt-技术拆解\"><a id=\"article-anchor-4\"></a><strong>二、VGT 技术拆解</strong><a class=\"heading-anchor\" href=\"#section-二-vgt-技术拆解\" aria-label=\"链接到本节：二、VGT 技术拆解\">#</a></h2>\n\n<p>既然核心痛点，VGT 又是如何打破这层壁垒的？答案藏在它对 “表征（Representation）” 与 “生成（Generation）” 关系的重新定义里不同于盲目堆砌算力，VGT 通过精细的语义对齐（Semantic Alignment）和流形正则化（Manifold Regularization），在连续潜在空间中实现了高效的自回归建模。</p>\n\n<h3 id=\"section-2-1-动机-打破-语义-像素-的二元对立\"><a id=\"article-anchor-5\"></a>2.1 动机：打破“语义-像素”的二元对立<a class=\"heading-anchor\" href=\"#section-2-1-动机-打破-语义-像素-的二元对立\" aria-label=\"链接到本节：2.1 动机：打破“语义-像素”的二元对立\">#</a></h3>\n\n<p>我们先通过聚类分析，找到了当前视觉生成的“根本性矛盾”：</p>\n\n<ul><li>\n\t<p>像素级编码器（如 DC-AE）：&nbsp;眼里只有纹理（Texture），比如会把相似的皮毛、布料纹理聚在一起，但在高层语义上是混乱的，导致 AR 模型难以捕捉全局结构，就像拿着一堆打乱的拼图碎片，根本拼不出全局结构。</p>\n\t</li><li>\n\t<p>语义级编码器（如 InternViT）：眼里只有类别（Category），比如能精准区分猫、狗、汽车，但直接用它生图会丢光细节 —— 画出来的猫只剩轮廓，没有毛发纹理，更谈不上真实感。</p>\n\t</li></ul>\n\n<p>其实自回归模型的收敛速度与生成质量，本质上取决于 Latent Space 的语义结构。VGT的目标是构建一个既具备 VLM 判别性语义，又兼容像素级重构的混合表征空间——让生图模型既能 “听懂指令”，又能 “画好细节”。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"724\" src=\"https://i-blog.csdnimg.cn/img_convert/f0814460ecbd7b738817d66cba0b788c.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>(图注：不同视觉编码器的特征聚类可视化。VGT-AE（中间）成功实现了语义结构与纹理细节的统一，这种结构化的 Latent 分布是高效 AR 建模的关键。)</p>\n\n<p></p>\n\n<h3 id=\"section-2-2-vgt-ae-面向生成的语义对齐-tokenizer\"><a id=\"article-anchor-6\"></a>2.2 &nbsp;VGT-AE：面向生成的语义对齐 Tokenizer<a class=\"heading-anchor\" href=\"#section-2-2-vgt-ae-面向生成的语义对齐-tokenizer\" aria-label=\"链接到本节：2.2 VGT-AE：面向生成的语义对齐 Tokenizer\">#</a></h3>\n\n<p>传统的 VAE 只懂像素，不懂语义，翻译出的 “图像密码” 逻辑混乱。为了解决这个问题，VGT 提出了 VGT-AE，它复用了 VLM 的视觉编码器（Vision Encoder），通过两阶段训练策略（自蒸馏 + 噪声正则化），将高维语义特征压缩为紧凑的结构化 Latent。</p>\n\n<p></p>\n\n<p>训练方法：</p>\n\n<p><strong>Stage 1：语义自蒸馏 (Semantic Self-Distillation)</strong></p>\n\n<p>怕微调时 VLM 忘了 “怎么理解语义”，我们设计了复合损失函数：除了常规的重构损失（MSE+LPIPS+GAN），引入了关键的自蒸馏项：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"79\" src=\"https://i-blog.csdnimg.cn/img_convert/36fde6c2ce9ea2611a3eb37fb4c2844b.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>这迫使 Encoder 在学习像素重构的同时，必须保持与原始 VLM Teacher 的语义一致性。简单说，就是逼着编码器在学 “还原像素” 的同时，必须牢牢记住 VLM 原本的语义知识 —— 不能练着练着就 “听不懂话” 了。</p>\n\n<p></p>\n\n<p><strong>Stage 2：流形正则化 (Manifold Regularization)</strong></p>\n\n<p>之前的研究表明，无约束的 Latent 分布会导致 Flow Matching 训练不稳定。为此，我们冻结 Encoder，仅优化 Decoder 和投影层，引入通道归一化与噪声注入：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"93\" src=\"https://i-blog.csdnimg.cn/img_convert/92daad44a908107efd28b1737e51b5d3.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>这一步将 Latent 强行拉回标准高斯先验附近，极大地平滑了后续生成任务的优化景观。这就像给特征分布 “定规矩”，让后续生图时的优化过程更平稳，不容易画崩。</p>\n\n<p></p>\n\n<p>结果：哪怕把图像压缩 28 倍，VGT-AE依然能实现了&nbsp;26.67 PSNR&nbsp;和&nbsp;0.50 rFID&nbsp;的重建质量，远超专门设计的 VAE（比如 DC-AE）。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"918\" src=\"https://i-blog.csdnimg.cn/img_convert/0af4486e7f2b26c3277129ccf2c23fc1.png\" width=\"1012\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h3 id=\"section-2-3-queryar-基于位置查询的并行因果建模\"><a id=\"article-anchor-7\"></a>2.3 QueryAR：基于位置查询的并行因果建模<a class=\"heading-anchor\" href=\"#section-2-3-queryar-基于位置查询的并行因果建模\" aria-label=\"链接到本节：2.3 QueryAR：基于位置查询的并行因果建模\">#</a></h3>\n\n<p>解决了 “特征表征” 的问题，又遇到了自回归生成的老毛病：“一笔一笔按顺序画”，不仅慢，还容易搞混空间关系。</p>\n\n<p></p>\n\n<p>VGT 摒弃了传统的离散 Token 预测（分类任务），转而在连续空间中进行回归预测。过去多个研究(MAR, Fuild)发现自回归生成时随机序列建模优于光栅顺序，因此我们提出了&nbsp;QueryAR，一种解耦了“位置”与“内容”的生成机制, 能够不改变下一个 token 生成范式的情况下，实现随机序列建模和并行生成。</p>\n\n<p></p>\n\n<ul><li>\n\t<p>因果建模：&nbsp;输入序列由位置查询（Position Query,&nbsp;）与图像 Latent&nbsp;() 交错构成：</p>\n\n\t<p><img alt=\"图片\" height=\"56\" src=\"https://i-blog.csdnimg.cn/img_convert/e2f083eafe0f8f8ada70edbc5836cabc.png\" width=\"350\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n\t<p>模型学习的是条件概率分布</p>\n\n\t<p><img alt=\"图片\" height=\"79\" src=\"https://i-blog.csdnimg.cn/img_convert/76bb47e2d4cc5d886a156f87770f4f27.png\" width=\"350\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n\t<p>该设计使得模型能够显式地感知“我在画哪里”，从而更好地捕捉全局空间关系。</p>\n\t</li><li>\n\t<p>续流匹配：&nbsp;区别于 VQ-VAE 的离散分类，使用轻量级的 Flow Matching Head 直接预测连续向量场：</p>\n\n\t<p><img alt=\"图片\" height=\"99\" src=\"https://i-blog.csdnimg.cn/img_convert/af77543d680bc297fdf961926780303f.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n\t<p>这种连续建模彻底消除了量化误差，是 VGT 能够生成高质量细节的关键。</p>\n\t</li><li>\n\t<p>并行推理 (Parallel Inference)：&nbsp;得益于 QueryAR 的设计，VGT 支持部分并行解码。在推理时，模型可以一次性接收多个位置查询</p>\n\n\t<p><img alt=\"图片\" height=\"104\" src=\"https://i-blog.csdnimg.cn/img_convert/0ca1bb20598fe089b6ea04d6880ad96b.png\" width=\"346\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n\t<p>，并并行预测对应的 Latent：&nbsp;</p>\n\n\t<p><img alt=\"图片\" height=\"112\" src=\"https://i-blog.csdnimg.cn/img_convert/a96b682aa33f649c10146b812f56b349.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n\t<p>实验证明，在&nbsp;16×&nbsp;加速下，VGT 仍保持极高的生成一致性，打破了自回归模型“生成慢”的固有印象，且生成质量损失极少。</p>\n\n\t<p></p>\n\t</li></ul>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"395\" src=\"https://i-blog.csdnimg.cn/img_convert/42593d588fce535304828536cd16a270.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"288\" src=\"https://i-blog.csdnimg.cn/img_convert/ff264635e643f4f3fff11e37c0739306.png\" width=\"1032\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<h2 id=\"section-三-实验结果\"><a id=\"article-anchor-8\"></a><strong>三、实验结果</strong><a class=\"heading-anchor\" href=\"#section-三-实验结果\" aria-label=\"链接到本节：三、实验结果\">#</a></h2>\n\n<p>巧思能否落地？数据是最好的证明。</p>\n\n<p></p>\n\n<p>VGT 的 “数据效率” 堪称惊艳——相比于其他动辄使用 20亿（2B）甚至更多数据训练的Diffusion和自回归生成模型，VGT 仅使用了不到 2500万（\\&lt;25M）的数据，就在多项基准测试中取得了 SOTA 成绩。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"360\" src=\"https://i-blog.csdnimg.cn/img_convert/5353e855fb91c742a12df0b8b388cc1b.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>在&nbsp;Text-to-Image Generation&nbsp;任务上：</p>\n\n<ul><li>\n\t<p>GenEval 评分：0.83&nbsp;—— 不仅超越了 SDXL (0.55)、DALLE3 (0.67)，甚至击败了 SD3-Medium (0.74)。</p>\n\t</li><li>\n\t<p>DPG-Bench 评分：81.28&nbsp;—— 在自回归模型赛道中遥遥领先，超越了 LlamaGen, VAR, Janus-Pro 等强力对手。</p>\n\t</li></ul>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"624\" src=\"https://i-blog.csdnimg.cn/img_convert/90c50b639ca167f501a10329999d197f.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<h2 id=\"section-四-deep-dive-vgt-背后的细节探索与架构灵活性\"><a id=\"article-anchor-9\"></a><strong>四、Deep Dive：VGT 背后的细节探索与架构灵活性</strong><a class=\"heading-anchor\" href=\"#section-四-deep-dive-vgt-背后的细节探索与架构灵活性\" aria-label=\"链接到本节：四、Deep Dive：VGT 背后的细节探索与架构灵活性\">#</a></h2>\n\n<p></p>\n\n<p>VGT 不仅仅是一个新的范式，更带来了对多模态生成的新思考。我们在研究中发现了两个超出预期的关键现象，或许能为领域发展提供新视角：</p>\n\n<p></p>\n\n<h3 id=\"section-4-1-重建越好-生成越强吗\"><a id=\"article-anchor-10\"></a>4.1 重建越好，生成越强吗？<a class=\"heading-anchor\" href=\"#section-4-1-重建越好-生成越强吗\" aria-label=\"链接到本节：4.1 重建越好，生成越强吗？\">#</a></h3>\n\n<p>在传统 VAE 训练中，我们往往追求极致的像素级重建（更高的 PSNR，更低的 rFID）。然而，VGT 的实验揭示了一个有趣的&nbsp;“重建-生成权衡”&nbsp;现象。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"422\" src=\"https://i-blog.csdnimg.cn/img_convert/bbc6de7b83de12c4028dcc63d647c4e6.png\" width=\"938\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p>这和文献 VAVAE 中 在 Diffusion 模型发现的规律类似：在VGT 的自回归架构中，那些在像素重建上做到极致的模型（如标准的 InternVL3 VGT-AE），其 Latent Space 往往高度纠缠、过于紧凑，导致自回归模型难以进行语义预测。反之，适度放松重建约束（Low Rec 变体），反而能让 Latent Space 呈现出更清晰的语义聚类结构，从而大幅提升 GenEval 生成得分。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"362\" src=\"https://i-blog.csdnimg.cn/img_convert/a7cd52566832841d0c9e58d54858e3e9.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>结论很明确：&nbsp;对于生成任务而言，一个语义解耦的 Latent Space 远比一个像素级精确但语义混乱的空间更有价值。</p>\n\n<p></p>\n\n<h3 id=\"section-4-2-跨模型-混搭-vgt-ae-的通用语义魔力\"><a id=\"article-anchor-11\"></a>4.2 跨模型“混搭”：VGT-AE 的通用语义魔力<a class=\"heading-anchor\" href=\"#section-4-2-跨模型-混搭-vgt-ae-的通用语义魔力\" aria-label=\"链接到本节：4.2 跨模型“混搭”：VGT-AE 的通用语义魔力\">#</a></h3>\n\n<p>我们曾有个核心疑问：VGT 的自编码器(AE) 和 语言模型 (LLM) 必须来自同一个 VLM 家族吗？</p>\n\n<p></p>\n\n<p>为了验证这一点，我们做了个大胆的“移花接木”实验：将&nbsp;Qwen2.5-VL 的 AE&nbsp;与&nbsp;InternVL3 的 LLM&nbsp;强行组合。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"531\" src=\"https://i-blog.csdnimg.cn/img_convert/e0c6bcb3c1b3e16d97cf15406da0dc3c.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p>结果令人惊讶：</p>\n\n<ul><li>\n\t<p>同源最佳：&nbsp;毫无疑问，AE 和 LLM 来自同一家族（如全套 Qwen2.5-VL）时效果最好，得益于预训练阶段的深度对齐。</p>\n\t</li><li>\n\t<p>混搭依然 SOTA：&nbsp;即使是“Qwen AE + InternVL LLM”这种完全未对齐的组合，其生成表现依然显著优于传统的 VAE 基线（DC-AE）。</p>\n\t</li></ul>\n\n<p></p>\n\n<p>这证明了 VGT-AE 习得的不仅仅是某种模型特有的参数，而是一种通用的、结构化的视觉语义表征。只要 VLM 经过了充分的多模态预训练，VGT 就能激活其潜在的生成能力，甚至跨越架构的藩篱。</p>\n\n<p></p>\n\n<h2 id=\"section-五-未来展望\"><a id=\"article-anchor-12\"></a><strong>五、未来展望</strong><a class=\"heading-anchor\" href=\"#section-五-未来展望\" aria-label=\"链接到本节：五、未来展望\">#</a></h2>\n\n<p>当然，VGT 并非完美无缺。尽管它在 Geneval 和 DPG-Bench 等指令理解类基准上，分数超过了大部分 Diffusion 模型，但实际生图细节效果并未远超那些经大量高质量数据和多阶段技术训练的模型，仍存在少量伪影问题。</p>\n\n<p></p>\n\n<p>探究背后的原因，我们发现：那些生图质量顶尖的 Diffusion 模型（比如 SANA） 在 Geneval 或者 DPG-Bench 的指令遵循能力（尤其是位置关系、主体关联等单项）上，弱于 VGT—— 这正是 VGT 的核心优势：源于 VLM 微调，天生就比 Diffusion 模型更懂语言，能精准捕捉指令中的语义细节。</p>\n\n<p></p>\n\n<p>因此，未来的优化方向很清晰，将继续发挥自回归生图的优势，同时，进一步借鉴 Diffusion 模型的先进训练技术进一步提升生图质量，让 VGT 既 “懂你说的话”，又 “画得更逼真”，真正实现 “理解与生成一体化” 的终极目标。</p>\n\n        ",
+    "headings": [
+      {
+        "id": "section-一-ai的-理解-能力将直接有潜力-创造",
+        "level": 2,
+        "text": "一、AI的“理解”能力将直接有潜力“创造"
+      },
+      {
+        "id": "section-1-1-vgt-的颠覆性",
+        "level": 3,
+        "text": "1.1 VGT 的颠覆性"
+      },
+      {
+        "id": "section-1-2-vgt-的关键突破",
+        "level": 3,
+        "text": "1.2 VGT 的关键突破"
+      },
+      {
+        "id": "section-二-vgt-技术拆解",
+        "level": 2,
+        "text": "二、VGT 技术拆解"
+      },
+      {
+        "id": "section-2-1-动机-打破-语义-像素-的二元对立",
+        "level": 3,
+        "text": "2.1 动机：打破“语义-像素”的二元对立"
+      },
+      {
+        "id": "section-2-2-vgt-ae-面向生成的语义对齐-tokenizer",
+        "level": 3,
+        "text": "2.2 VGT-AE：面向生成的语义对齐 Tokenizer"
+      },
+      {
+        "id": "section-2-3-queryar-基于位置查询的并行因果建模",
+        "level": 3,
+        "text": "2.3 QueryAR：基于位置查询的并行因果建模"
+      },
+      {
+        "id": "section-三-实验结果",
+        "level": 2,
+        "text": "三、实验结果"
+      },
+      {
+        "id": "section-四-deep-dive-vgt-背后的细节探索与架构灵活性",
+        "level": 2,
+        "text": "四、Deep Dive：VGT 背后的细节探索与架构灵活性"
+      },
+      {
+        "id": "section-4-1-重建越好-生成越强吗",
+        "level": 3,
+        "text": "4.1 重建越好，生成越强吗？"
+      },
+      {
+        "id": "section-4-2-跨模型-混搭-vgt-ae-的通用语义魔力",
+        "level": 3,
+        "text": "4.2 跨模型“混搭”：VGT-AE 的通用语义魔力"
+      },
+      {
+        "id": "section-五-未来展望",
+        "level": 2,
+        "text": "五、未来展望"
+      }
+    ],
+    "textLength": 4657,
+    "readingMinutes": 11,
     "sourceId": "kuaishou-csdn",
     "sourceUrl": "https://blog.csdn.net/kuaishoutech/article/details/155808576",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:08:06.081Z",
-    "nextRetryAt": "2026-11-09T09:08:06.081Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "50c3b271360325dc79d2f33c4cd9176abc54e5a3787274be09544779613374b3",
+    "fetchedAt": "2026-11-02T11:44:32.439Z",
+    "checkedAt": "2026-11-02T11:44:32.439Z",
+    "nextRetryAt": "2026-12-02T11:44:32.439Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

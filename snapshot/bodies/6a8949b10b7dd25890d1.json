@@ -2,17 +2,199 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "6a8949b10b7dd25890d1",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "\n                    <p>认证、存储、实时推送、数据库API——4个后端模块，传统开发要数周。本系列逐个拆解，首篇聚焦数据库API（Database Data API）：建表即得 API，无需手写后端。</p> \n<p>小张，AI创业公司的全栈工程师。老板让他做个产品目录页，展示产品与价格、支持上下架。传统做法要搭后端、写接口、配权限，工期少说1-2周；而在华为云RDS Supabase，建两张表、应用 SDK 直连，几分钟增删改查全跑通。</p> \n<h2 id=\"section-part-01-为什么需要-data-api\"><a id=\"article-anchor-1\"></a>Part 01 — 为什么需要 Data API<a class=\"heading-anchor\" href=\"#section-part-01-为什么需要-data-api\" aria-label=\"链接到本节：Part 01 — 为什么需要 Data API\">#</a></h2> \n<h2 id=\"section-创表即api-从建表到前端获取数据\"><a id=\"article-anchor-2\"></a>创表即API：从建表到前端获取数据<a class=\"heading-anchor\" href=\"#section-创表即api-从建表到前端获取数据\" aria-label=\"链接到本节：创表即API：从建表到前端获取数据\">#</a></h2> \n<p>建表 → 自动生成端点 /rest/v1/products → 前端 SDK 调用 supabase.from('products').select()</p> \n<p>建完表，API 即就绪；前端用 Publishable Key 引入 SDK，受 RLS 约束安全直连，一行代码获取数据：</p> \n<p>🗣️ 前端一行查询 → ✅ 返回JSON数组</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div><span>/</span><span>/</span> JavaScript——前端查询</div></div></li><li><div><div>const { <span>data</span> } <span>=</span> await supabase.<span>from</span>(<span>'products'</span>).<span>select</span>(<span>'id, name, category'</span>)</div></div></li></ol></code></pre> \n<p>返回示例：</p> \n<p>// 返回示例</p> \n<pre><code class=\"language-cobol\">[{<span>\"id\"</span>:<span>1</span>,<span>\"name\"</span>:<span>\"云服务器 ECS\"</span>,<span>\"category\"</span>:<span>\"计算\"</span>},{<span>\"id\"</span>:<span>2</span>,<span>\"name\"</span>:<span>\"对象存储 OBS\"</span>,<span>\"category\"</span>:<span>\"存储\"</span>}]</code></pre> \n<p>没有后端接口代码，没有 DAO 层，没有接口联调——建表即得 API。</p> \n<h2 id=\"section-data-api-能力速览\"><a id=\"article-anchor-3\"></a>Data API 能力速览<a class=\"heading-anchor\" href=\"#section-data-api-能力速览\" aria-label=\"链接到本节：Data API 能力速览\">#</a></h2> \n<div><div class=\"markdown-table-wrap\"><table><tbody><tr><td> <p><strong>能力</strong></p> </td><td> <p><strong>说明</strong></p> </td></tr><tr><td> <p>自动生成 CRUD 端点</p> </td><td> <p>增删改查全覆盖，建表即得</p> </td></tr><tr><td> <p>关联查询</p> </td><td> <p>支持表间关联，一次拉取关联数据</p> </td></tr><tr><td> <p>RLS 行级安全保护</p> </td><td> <p>每行数据按策略控制访问权限</p> </td></tr><tr><td> <p>无需手写后端</p> </td><td> <p>不写 DAO、不写接口、不联调</p> </td></tr></tbody></table></div></div> \n<h2 id=\"section-原理-postgrest-自动生成端点\"><a id=\"article-anchor-4\"></a>原理：PostgREST 自动生成端点<a class=\"heading-anchor\" href=\"#section-原理-postgrest-自动生成端点\" aria-label=\"链接到本节：原理：PostgREST 自动生成端点\">#</a></h2> \n<p>Data API 基于 RDS 托管的 PostgreSQL，由 PostgREST 按表结构自动生成 HTTP 接口，覆盖增删改查。新增表同步生成端点，无需额外配置。</p> \n<p>前端引入 Supabase JavaScript SDK 即可直连调用，启用 RLS 后，读写均受行级安全策略约束。</p> \n<h2 id=\"section-part-02-前置准备\"><a id=\"article-anchor-5\"></a>Part 02 — 前置准备<a class=\"heading-anchor\" href=\"#section-part-02-前置准备\" aria-label=\"链接到本节：Part 02 — 前置准备\">#</a></h2> \n<h2 id=\"section-第1步-获取访问地址\"><a id=\"article-anchor-6\"></a>第1步 获取访问地址<a class=\"heading-anchor\" href=\"#section-第1步-获取访问地址\" aria-label=\"链接到本节：第1步 获取访问地址\">#</a></h2> \n<p>应用的访问地址（内网或公网）及安全组、SSL 等网络配置，详见用户指南「登录应用」章节。完成配置后，记下 {Supabase应用访问地址}，第3步要用。</p> \n<h2 id=\"section-第2步-获取-api-key\"><a id=\"article-anchor-7\"></a>第2步 获取 API Key<a class=\"heading-anchor\" href=\"#section-第2步-获取-api-key\" aria-label=\"链接到本节：第2步 获取 API Key\">#</a></h2> \n<p>API Key 的类型与用途详见用户指南「查看 API Key」章节。日常对接只需两个：客户端用 Publishable Key（受 RLS 约束，可入前端），服务端用 Secret Key（绕 RLS，仅限服务端）。</p> \n<h2 id=\"section-第3步-安装-sdk-并初始化\"><a id=\"article-anchor-8\"></a>第3步 安装 SDK 并初始化<a class=\"heading-anchor\" href=\"#section-第3步-安装-sdk-并初始化\" aria-label=\"链接到本节：第3步 安装 SDK 并初始化\">#</a></h2> \n<p>安装 SDK 依赖（全文以 JavaScript 语言为例）：</p> \n<pre><code class=\"language-coffeescript\"><span>npm</span> install @supabase/supabase-js</code></pre> \n<p>创建 Supabase 客户端实例：</p> \n<pre><code class=\"language-typescript\"><ol><li><div><div><span>import</span> { createClient } <span>from</span> <span>'@supabase/supabase-js'</span></div></div></li><li><div><div><span>const</span> supabaseUrl = <span>\"{Supabase应用访问地址}\"</span></div></div></li><li><div><div><span>const</span> supabaseApiKey = <span>\"{Supabase应用API Key}\"</span></div></div></li><li><div><div><span>export</span> <span>const</span> supabase = <span>createClient</span>(supabaseUrl, supabaseApiKey)</div></div></li></ol></code></pre> \n<h2 id=\"section-part-03-让数据就位-建表与权限配置\"><a id=\"article-anchor-9\"></a>Part 03 — 让数据就位：建表与权限配置<a class=\"heading-anchor\" href=\"#section-part-03-让数据就位-建表与权限配置\" aria-label=\"链接到本节：Part 03 — 让数据就位：建表与权限配置\">#</a></h2> \n<p>前面已备齐地址、Key 与 SDK Client；表还没建，下面建表并配置权限——这步一次配好，后面增删改查直连受益。</p> \n<p>场景：产品定价管理。两张表——products 记录产品基础信息，product_pricings 记录各产品计费档位与价格，以 product_id 关联。</p> \n<h2 id=\"section-权限模型-grant-与-rls-两道门\"><a id=\"article-anchor-10\"></a>权限模型：GRANT 与 RLS 两道门<a class=\"heading-anchor\" href=\"#section-权限模型-grant-与-rls-两道门\" aria-label=\"链接到本节：权限模型：GRANT 与 RLS 两道门\">#</a></h2> \n<p>Supabase 的权限模型不是一道门，而是两道门。</p> \n<p>第一道是 GRANT（表级授权），好比🚪门禁卡：决定角色能否进这间屋子、对屋里数据做 SELECT/INSERT/UPDATE/DELETE。没有门禁卡，连门都进不来。</p> \n<p>第二道是 RLS（Row Level Security，行级安全策略），好比🗄️抽屉锁：进屋后，哪些抽屉能拉开、哪些对你锁着，由策略决定。它过滤的是\"行\"，让你只看到有权看到的数据。</p> \n<p>两层缺一不可。</p> \n<div><div class=\"markdown-table-wrap\"><table><tbody><tr><td> <p><strong>机制</strong></p> </td><td> <p><strong>作用层级</strong></p> </td><td> <p><strong>核心作用</strong></p> </td></tr><tr><td> <p>GRANT</p> </td><td> <p>表级</p> </td><td> <p>决定角色能否对表执行SELECT/INSERT/UPDATE/DELETE</p> </td></tr><tr><td> <p>RLS Policy</p> </td><td> <p>行级</p> </td><td> <p>决定哪些行可被哪些角色看到或操作</p> </td></tr></tbody></table></div></div> \n<p>以下 SQL 均可直接复制到 SQL Editor 执行，理解\"GRANT 管表级、RLS 管行级\"两层即可，无需逐行背语法。</p> \n<h2 id=\"section-第1步-创建产品表与定价表\"><a id=\"article-anchor-11\"></a>第1步 创建产品表与定价表<a class=\"heading-anchor\" href=\"#section-第1步-创建产品表与定价表\" aria-label=\"链接到本节：第1步 创建产品表与定价表\">#</a></h2> \n<p>两张表结构如下，在 Supabase 的 SQL Editor 里执行：</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div>-- SQL——创建产品表与定价表</div></div></li><li><div><div>CREATE <span>TABLE</span> products (</div></div></li><li><div><div>id BIGINT GENERATED <span>BY</span> <span>DEFAULT</span> <span>AS</span> IDENTITY PRIMARY <span>KEY</span>,</div></div></li><li><div><div>name TEXT <span>NOT</span> <span>NULL</span>,</div></div></li><li><div><div>category TEXT,</div></div></li><li><div><div>description TEXT,</div></div></li><li><div><div>created_<span>at</span> TIMESTAMPTZ <span>DEFAULT</span> now(),</div></div></li><li><div><div>updated_<span>at</span> TIMESTAMPTZ <span>DEFAULT</span> now()</div></div></li><li><div><div>);</div></div></li><li><div><div>CREATE <span>TABLE</span> product_pricings (</div></div></li><li><div><div>id BIGINT GENERATED <span>BY</span> <span>DEFAULT</span> <span>AS</span> IDENTITY PRIMARY <span>KEY</span>,</div></div></li><li><div><div>product_id BIGINT <span>NOT</span> <span>NULL</span> REFERENCES products(id) <span>ON</span> <span>DELETE</span> CASCADE,</div></div></li><li><div><div>tier TEXT <span>NOT</span> <span>NULL</span>,</div></div></li><li><div><div>price <span>NUMERIC</span>(<span>10,2</span>) <span>NOT</span> <span>NULL</span>,</div></div></li><li><div><div><span>unit</span> TEXT <span>DEFAULT</span> <span>'元/月'</span>,</div></div></li><li><div><div>effective_<span>from</span> <span>DATE</span> <span>DEFAULT</span> current_<span>date</span>,</div></div></li><li><div><div>created_<span>at</span> TIMESTAMPTZ <span>DEFAULT</span> now()</div></div></li><li><div><div>);</div></div></li></ol></code></pre> \n<p>关键字段说明：id 主键用 GENERATED BY DEFAULT AS IDENTITY 自增；product_id 是外键，关联 products(id)，加 ON DELETE CASCADE 后删除产品时其定价记录一并清除；price 用 NUMERIC(10,2)，总10位、小数2位，金额精度足够。</p> \n<p>👆 在 Supabase SQL Editor 左侧的 Table Editor 可看到两张表已创建成功</p> \n<h2 id=\"section-第2步-启用行级安全\"><a id=\"article-anchor-12\"></a>第2步 启用行级安全<a class=\"heading-anchor\" href=\"#section-第2步-启用行级安全\" aria-label=\"链接到本节：第2步 启用行级安全\">#</a></h2> \n<p>建表后默认无行级保护，需显式启用 RLS：</p> \n<pre><code class=\"language-sql\"><ol><li><div><div><span>-- SQL——启用行级安全</span></div></div></li><li><div><div><span>ALTER</span> <span>TABLE</span> products ENABLE <span>ROW</span> LEVEL SECURITY;</div></div></li><li><div><div><span>ALTER</span> <span>TABLE</span> product_pricings ENABLE <span>ROW</span> LEVEL SECURITY;</div></div></li></ol></code></pre> \n<p>启用后，所有 Data API 访问须由 RLS 策略放行。启用 RLS 但未配置策略时默认拒绝——anon 与 authenticated 都查不到任何行。</p> \n<h2 id=\"section-第3步-配置rls策略\"><a id=\"article-anchor-13\"></a>第3步 配置RLS策略<a class=\"heading-anchor\" href=\"#section-第3步-配置rls策略\" aria-label=\"链接到本节：第3步 配置RLS策略\">#</a></h2> \n<p>按角色配置策略：访客（anon）只读，登录运营人员（authenticated）可增删改查。</p> \n<pre><code class=\"language-vbnet\"><ol><li><div><div>-- SQL——配置RLS策略</div></div></li><li><div><div>CREATE POLICY <span>\"anon_select_products\"</span> <span>ON</span> <span>public</span>.products <span>FOR</span> <span>SELECT</span> <span>TO</span> anon <span>USING</span> (<span>true</span>);</div></div></li><li><div><div>CREATE POLICY <span>\"anon_select_product_pricings\"</span> <span>ON</span> <span>public</span>.product_pricings <span>FOR</span> <span>SELECT</span> <span>TO</span> anon <span>USING</span> (<span>true</span>);</div></div></li><li><div><div>CREATE POLICY <span>\"authenticated_select_products\"</span> <span>ON</span> <span>public</span>.products <span>FOR</span> <span>SELECT</span> <span>TO</span> authenticated <span>USING</span> (<span>true</span>);</div></div></li><li><div><div>CREATE POLICY <span>\"authenticated_select_product_pricings\"</span> <span>ON</span> <span>public</span>.product_pricings <span>FOR</span> <span>SELECT</span> <span>TO</span> authenticated <span>USING</span> (<span>true</span>);</div></div></li><li><div><div>CREATE POLICY <span>\"authenticated_insert_products\"</span> <span>ON</span> <span>public</span>.products <span>FOR</span> INSERT <span>TO</span> authenticated <span>WITH</span> CHECK (<span>true</span>);</div></div></li><li><div><div>CREATE POLICY <span>\"authenticated_insert_product_pricings\"</span> <span>ON</span> <span>public</span>.product_pricings <span>FOR</span> INSERT <span>TO</span> authenticated <span>WITH</span> CHECK (<span>true</span>);</div></div></li><li><div><div>CREATE POLICY <span>\"authenticated_update_products\"</span> <span>ON</span> <span>public</span>.products <span>FOR</span> UPDATE <span>TO</span> authenticated <span>USING</span> (<span>true</span>) <span>WITH</span> CHECK (<span>true</span>);</div></div></li><li><div><div>CREATE POLICY <span>\"authenticated_update_product_pricings\"</span> <span>ON</span> <span>public</span>.product_pricings <span>FOR</span> UPDATE <span>TO</span> authenticated <span>USING</span> (<span>true</span>) <span>WITH</span> CHECK (<span>true</span>);</div></div></li><li><div><div>CREATE POLICY <span>\"authenticated_delete_products\"</span> <span>ON</span> <span>public</span>.products <span>FOR</span> DELETE <span>TO</span> authenticated <span>USING</span> (<span>true</span>);</div></div></li><li><div><div>CREATE POLICY <span>\"authenticated_delete_product_pricings\"</span> <span>ON</span> <span>public</span>.product_pricings <span>FOR</span> DELETE <span>TO</span> authenticated <span>USING</span> (<span>true</span>);</div></div></li></ol></code></pre> \n<p>anon 只配 SELECT 且 USING(true)，所有行对访客可见——适合产品目录这类公开数据。authenticated 配齐增删改查四类策略。WITH CHECK(true) 约束写入的新行，USING(true) 控制可见的行；需按用户隔离数据时，把 true 换成条件表达式。</p> \n<h2 id=\"section-第4步-授予表级权限\"><a id=\"article-anchor-14\"></a>第4步 授予表级权限<a class=\"heading-anchor\" href=\"#section-第4步-授予表级权限\" aria-label=\"链接到本节：第4步 授予表级权限\">#</a></h2> \n<p>第一道门 GRANT 不可少：无 GRANT 则角色无表级权限，RLS 无处生效。</p> \n<pre><code class=\"language-sql\"><ol><li><div><div><span>-- SQL——授予表级权限</span></div></div></li><li><div><div><span>GRANT</span> <span>SELECT</span> <span>ON</span> <span>TABLE</span> public.products <span>TO</span> anon;</div></div></li><li><div><div><span>GRANT</span> <span>SELECT</span> <span>ON</span> <span>TABLE</span> public.product_pricings <span>TO</span> anon;</div></div></li><li><div><div><span>GRANT</span> <span>SELECT</span>, <span>INSERT</span>, <span>UPDATE</span>, <span>DELETE</span> <span>ON</span> <span>TABLE</span> public.products <span>TO</span> authenticated;</div></div></li><li><div><div><span>GRANT</span> <span>SELECT</span>, <span>INSERT</span>, <span>UPDATE</span>, <span>DELETE</span> <span>ON</span> <span>TABLE</span> public.product_pricings <span>TO</span> authenticated;</div></div></li><li><div><div><span>GRANT</span> <span>ALL</span> <span>ON</span> <span>ALL</span> TABLES <span>IN</span> SCHEMA public <span>TO</span> service_role;</div></div></li></ol></code></pre> \n<p>权限设计如下：</p> \n<div><div class=\"markdown-table-wrap\"><table><tbody><tr><td> <p><strong>角色</strong></p> </td><td> <p><strong>products</strong></p> </td><td> <p><strong>product_pricings</strong></p> </td></tr><tr><td> <p>anon（访客）</p> </td><td> <p>只读</p> </td><td> <p>只读</p> </td></tr><tr><td> <p>authenticated（登录用户）</p> </td><td> <p>增删改查</p> </td><td> <p>增删改查</p> </td></tr><tr><td> <p>service_role（服务端）</p> </td><td> <p>全部（绕过RLS）</p> </td><td> <p>全部（绕过RLS）</p> </td></tr></tbody></table></div></div> \n<h2 id=\"section-第5步-刷新schema缓存\"><a id=\"article-anchor-15\"></a>第5步 刷新schema缓存<a class=\"heading-anchor\" href=\"#section-第5步-刷新schema缓存\" aria-label=\"链接到本节：第5步 刷新schema缓存\">#</a></h2> \n<p>建表或改权限后需刷新 PostgREST 表结构缓存：</p> \n<pre><code class=\"language-sql\"><ol><li><div><div><span>-- SQL——刷新schema缓存</span></div></div></li><li><div><div>NOTIFY pgrst, <span>'reload schema'</span>;</div></div></li></ol></code></pre> \n<p>执行后立即生效，Data API 即可识别两张表并生成 GET/POST/PATCH/DELETE 端点。</p> \n<h2 id=\"section-part-04-增删改查-前端直连-data-api\"><a id=\"article-anchor-16\"></a>Part 04 — 增删改查，前端直连 Data API<a class=\"heading-anchor\" href=\"#section-part-04-增删改查-前端直连-data-api\" aria-label=\"链接到本节：Part 04 — 增删改查，前端直连 Data API\">#</a></h2> \n<p>表和权限就绪，用 SDK 跑通增删改查——全程不写后端接口。</p> \n<h2 id=\"section-key-与角色映射\"><a id=\"article-anchor-17\"></a>Key 与角色映射<a class=\"heading-anchor\" href=\"#section-key-与角色映射\" aria-label=\"链接到本节：Key 与角色映射\">#</a></h2> \n<p>初始化 SDK 用的 Key 与登录态，决定请求的角色与权限边界。映射如下：</p> \n<div><div class=\"markdown-table-wrap\"><table><tbody><tr><td> <p><strong>密钥类型</strong></p> </td><td> <p><strong>旧称</strong></p> </td><td> <p><strong>未登录时角色</strong></p> </td><td> <p><strong>用户登录后角色</strong></p> </td><td> <p><strong>是否可用于前端</strong></p> </td></tr><tr><td> <p>Publishable Key</p> </td><td> <p>Anon Key</p> </td><td> <p>anon（只读）</p> </td><td> <p>authenticated（受RLS约束）</p> </td><td> <p>是，配合 RLS 安全使用</p> </td></tr><tr><td> <p>Secret Key</p> </td><td> <p>Service Role Key</p> </td><td> <p>service_role（绕RLS）</p> </td><td> <p>service_role（绕RLS）</p> </td><td> <p>否，严禁放入前端代码</p> </td></tr></tbody></table></div></div> \n<p>未登录请求以 anon 身份发起：读操作 anon 即可，写操作须 authenticated（凭证由认证流程签发）。下面写操作默认已登录。</p> \n<h2 id=\"section-查询-select\"><a id=\"article-anchor-18\"></a>查询（Select）<a class=\"heading-anchor\" href=\"#section-查询-select\" aria-label=\"链接到本节：查询（Select）\">#</a></h2> \n<p>顾客浏览所有产品，或按分类筛选只看\"计算\"类商品。</p> \n<p>标准写法：解构出 data 与 error，先判错再取用 data：</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div><span>/</span><span>/</span> JavaScript——标准查询写法（先判 <span>error</span> 再取 <span>data</span>）</div></div></li><li><div><div>const { <span>data</span>, <span>error</span> } <span>=</span> await supabase</div></div></li><li><div><div>.<span>from</span>(<span>'products'</span>)</div></div></li><li><div><div>.<span>select</span>(<span>'*'</span>);</div></div></li><li><div><div><span>if</span> (<span>error</span>) {</div></div></li><li><div><div>console.<span>error</span>(<span>error</span>);</div></div></li><li><div><div><span>return</span>;</div></div></li><li><div><div>}</div></div></li></ol></code></pre> \n<p>条件查询指定字段，只取需要的列：</p> \n<p>🗣️ 请求</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div><span>/</span><span>/</span> JavaScript——按分类筛选并指定字段</div></div></li><li><div><div>const { <span>data</span>, <span>error</span> } <span>=</span> await supabase</div></div></li><li><div><div>.<span>from</span>(<span>'products'</span>)</div></div></li><li><div><div>.<span>select</span>(<span>'id, name, category'</span>)</div></div></li><li><div><div>.eq(<span>'category'</span>, <span>'计算'</span>);</div></div></li><li><div><div><span>if</span> (<span>error</span>) { console.<span>error</span>(<span>error</span>); <span>return</span>; }</div></div></li></ol></code></pre> \n<p>✅ 返回</p> \n<p>// 返回示例</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div>[</div></div></li><li><div><div>{ <span>\"id\"</span>: <span>1</span>, <span>\"name\"</span>: <span>\"云服务器 ECS\"</span>, <span>\"category\"</span>: <span>\"计算\"</span> },</div></div></li><li><div><div>{ <span>\"id\"</span>: <span>3</span>, <span>\"name\"</span>: <span>\"弹性公网IP\"</span>, <span>\"category\"</span>: <span>\"计算\"</span> }</div></div></li><li><div><div>]</div></div></li></ol></code></pre> \n<p>判错先于用数据：网络、权限、RLS 异常都反映在 error 里，跳过判错取 data 只得 undefined。</p> \n<h2 id=\"section-新增-insert\"><a id=\"article-anchor-19\"></a>新增（Insert）<a class=\"heading-anchor\" href=\"#section-新增-insert\" aria-label=\"链接到本节：新增（Insert）\">#</a></h2> \n<p>运营上架新品。传对象插入单行，传数组批量插入。</p> \n<p>🗣️ 请求</p> \n<pre><code class=\"language-php\"><ol><li><div><div><span>// JavaScript——插入单行</span></div></div></li><li><div><div>await supabase</div></div></li><li><div><div>.<span>from</span>(<span>'products'</span>)</div></div></li><li><div><div>.<span>insert</span>({</div></div></li><li><div><div><span>name</span>: <span>'云服务器 ECS'</span>,</div></div></li><li><div><div><span>category</span>: <span>'计算'</span>,</div></div></li><li><div><div><span>description</span>: <span>'弹性云服务器'</span></div></div></li><li><div><div>});</div></div></li></ol></code></pre> \n<p>✅ 返回</p> \n<p>// 返回示例</p> \n<pre><code class=\"language-cobol\">{ <span>\"status\"</span>: <span>201</span>, <span>\"statusText\"</span>: <span>\"Created\"</span> }</code></pre> \n<h2 id=\"section-更新-update\"><a id=\"article-anchor-20\"></a>更新（Update）<a class=\"heading-anchor\" href=\"#section-更新-update\" aria-label=\"链接到本节：更新（Update）\">#</a></h2> \n<p>运营更新 id 为 1 的商品描述。</p> \n<p>🗣️ 请求</p> \n<pre><code class=\"language-perl\"><ol><li><div><div>// JavaScript——更新指定行（必须带 .eq，否则更新全表）</div></div></li><li><div><div>await supabase</div></div></li><li><div><div>.from(<span>'products'</span>)</div></div></li><li><div><div>.update({ description: <span>'更新后的描述'</span> })</div></div></li><li><div><div>.e<span>q('id', 1)</span>;</div></div></li></ol></code></pre> \n<p>✅ 返回</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div><span>/</span><span>/</span> 返回示例</div></div></li><li><div><div>{ <span>\"status\"</span>: <span>204</span>, <span>\"statusText\"</span>: <span>\"No Content\"</span> }</div></div></li></ol></code></pre> \n<p>⚠️ update() 须搭配过滤条件（如 .eq('id', 1)），否则会更新全表——如同 SQL 的 UPDATE 不带 WHERE。</p> \n<h2 id=\"section-更新或新增-upsert\"><a id=\"article-anchor-21\"></a>更新或新增（Upsert）<a class=\"heading-anchor\" href=\"#section-更新或新增-upsert\" aria-label=\"链接到本节：更新或新增（Upsert）\">#</a></h2> \n<p>运营批量导入商品，数据可能已存在——存在则更新，不存在则新增。upsert 默认按主键判断冲突。</p> \n<p>非主键列做冲突判据时，须先建唯一约束：</p> \n<pre><code class=\"language-sql\"><ol><li><div><div><span>-- SQL——建唯一约束（在 SQL Editor 中执行）</span></div></div></li><li><div><div><span>ALTER</span> <span>TABLE</span> products</div></div></li><li><div><div><span>ADD</span> <span>CONSTRAINT</span> products_name_key <span>UNIQUE</span> (name);</div></div></li></ol></code></pre> \n<p>再用 onConflict 指定冲突列：</p> \n<p>🗣️ 请求</p> \n<pre><code class=\"language-php\"><ol><li><div><div><span>// JavaScript——基于 name 列冲突的 upsert</span></div></div></li><li><div><div><span>const</span> { data } = await supabase</div></div></li><li><div><div>.<span>from</span>(<span>'products'</span>)</div></div></li><li><div><div>.<span>upsert</span>(</div></div></li><li><div><div>{ <span>name</span>: <span>'云服务器 ECS'</span>, <span>category</span>: <span>'计算'</span> },</div></div></li><li><div><div>{ <span>onConflict</span>: <span>'name'</span> }</div></div></li><li><div><div>)</div></div></li><li><div><div>.<span>select</span>();</div></div></li></ol></code></pre> \n<p>✅ 返回</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div><span>/</span><span>/</span> 返回示例</div></div></li><li><div><div>[</div></div></li><li><div><div>{ <span>\"id\"</span>: <span>1</span>, <span>\"name\"</span>: <span>\"云服务器 ECS\"</span>, <span>\"category\"</span>: <span>\"计算\"</span> }</div></div></li><li><div><div>]</div></div></li></ol></code></pre> \n<p>用非主键列做冲突判据时，该列必须先有唯一约束，否则 upsert 退化为纯插入。</p> \n<h2 id=\"section-删除-delete\"><a id=\"article-anchor-22\"></a>删除（Delete）<a class=\"heading-anchor\" href=\"#section-删除-delete\" aria-label=\"链接到本节：删除（Delete）\">#</a></h2> \n<p>运营下架某个商品。</p> \n<p>🗣️ 请求</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div><span>/</span><span>/</span> JavaScript——删除指定行（必须带 .eq；外键 CASCADE 级联删定价）</div></div></li><li><div><div>await supabase</div></div></li><li><div><div>.<span>from</span>(<span>'products'</span>)</div></div></li><li><div><div>.<span>delete</span>()</div></div></li><li><div><div>.eq(<span>'id'</span>, <span>1</span>);</div></div></li></ol></code></pre> \n<p>✅ 返回</p> \n<p>// 返回示例</p> \n<pre><code class=\"language-cobol\">{ <span>\"status\"</span>: <span>204</span>, <span>\"statusText\"</span>: <span>\"No Content\"</span> }</code></pre> \n<p>⚠️ 因外键设了 ON DELETE CASCADE，删除商品后其定价档位（product_pricings 关联行）会一并级联删除。</p> \n<h2 id=\"section-part-05-关联查询-一次请求拿全产品与定价\"><a id=\"article-anchor-23\"></a>Part 05 — 关联查询：一次请求拿全产品与定价<a class=\"heading-anchor\" href=\"#section-part-05-关联查询-一次请求拿全产品与定价\" aria-label=\"链接到本节：Part 05 — 关联查询：一次请求拿全产品与定价\">#</a></h2> \n<h2 id=\"section-外键自动关联\"><a id=\"article-anchor-24\"></a>外键自动关联<a class=\"heading-anchor\" href=\"#section-外键自动关联\" aria-label=\"链接到本节：外键自动关联\">#</a></h2> \n<p>前面几节都是单表查询。但产品列表页常需同时展示名称与价格档位，详情页更需\"一产品多条定价\"一起渲染。</p> \n<p>无需手写 JOIN：PostgREST 通过外键自动识别表间关系，在 select() 用\"关联表(字段)\"嵌套子表字段，一次请求拿到关联数据。</p> \n<h2 id=\"section-一对多-产品带出定价\"><a id=\"article-anchor-25\"></a>一对多：产品带出定价<a class=\"heading-anchor\" href=\"#section-一对多-产品带出定价\" aria-label=\"链接到本节：一对多：产品带出定价\">#</a></h2> \n<p>查产品并带出其全部定价，子行以数组返回；加 .order 可排序、加 .eq 可过滤父表。</p> \n<p>🗣️ 请求</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div><span>/</span><span>/</span> JavaScript——查产品并嵌套定价，按分类过滤、按名称排序</div></div></li><li><div><div>const { <span>data</span> } <span>=</span> await supabase</div></div></li><li><div><div>.<span>from</span>(<span>'products'</span>)</div></div></li><li><div><div>.<span>select</span>(`id, name, category, product_pricings(id, tier, price, <span>unit</span>)`)</div></div></li><li><div><div>.eq(<span>'category'</span>, <span>'计算'</span>)</div></div></li><li><div><div>.<span>order</span>(<span>'name'</span>)</div></div></li></ol></code></pre> \n<p>✅ 返回</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div><span>/</span><span>/</span> 返回示例</div></div></li><li><div><div>[</div></div></li><li><div><div>{</div></div></li><li><div><div><span>\"id\"</span>: <span>1</span>,</div></div></li><li><div><div><span>\"name\"</span>: <span>\"云服务器 ECS\"</span>,</div></div></li><li><div><div><span>\"category\"</span>: <span>\"计算\"</span>,</div></div></li><li><div><div><span>\"product_pricings\"</span>: [</div></div></li><li><div><div>{ <span>\"id\"</span>: <span>1</span>, <span>\"tier\"</span>: <span>\"包月\"</span>, <span>\"price\"</span>: <span>99.00</span>, <span>\"unit\"</span>: <span>\"元/月\"</span> }</div></div></li><li><div><div>]</div></div></li><li><div><div>}</div></div></li><li><div><div>]</div></div></li></ol></code></pre> \n<p>product_pricings 是数组——一个产品可有多条定价，\"多\"侧自动入数组。反向从定价查产品，语法对称，products 则返回对象（\"一\"侧）。</p> \n<h2 id=\"section-内连接-inner\"><a id=\"article-anchor-26\"></a>内连接（!inner）<a class=\"heading-anchor\" href=\"#section-内连接-inner\" aria-label=\"链接到本节：内连接（!inner）\">#</a></h2> \n<p>只想返回\"存在价格低于 100 的定价档位\"的产品，用 !inner 强制内连接，过滤条件写在嵌入列上。</p> \n<p>🗣️ 请求</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div><span>/</span><span>/</span> JavaScript——内连接，只返回有低价档位的产品（!inner 过滤父行而非子行）</div></div></li><li><div><div>const { <span>data</span> } <span>=</span> await supabase</div></div></li><li><div><div>.<span>from</span>(<span>'products'</span>)</div></div></li><li><div><div>.<span>select</span>(<span>'id, name, product_pricings!inner(tier, price)'</span>)</div></div></li><li><div><div>.lt(<span>'product_pricings.price'</span>, <span>100</span>)</div></div></li></ol></code></pre> \n<p>✅ 返回</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div><span>/</span><span>/</span> 返回示例</div></div></li><li><div><div>[</div></div></li><li><div><div>{</div></div></li><li><div><div><span>\"id\"</span>: <span>1</span>,</div></div></li><li><div><div><span>\"name\"</span>: <span>\"云服务器 ECS\"</span>,</div></div></li><li><div><div><span>\"product_pricings\"</span>: [{ <span>\"tier\"</span>: <span>\"包月\"</span>, <span>\"price\"</span>: <span>99.00</span> }]</div></div></li><li><div><div>}</div></div></li><li><div><div>]</div></div></li></ol></code></pre> \n<p>去掉 !inner 则为左连接：仍返回全部产品，但每条只展示价格低于 100 的定价档位。!inner 决定\"父行是否被过滤\"，而非\"子行是否被过滤\"。</p> \n<h2 id=\"section-part-06-安全红线与最佳实践\"><a id=\"article-anchor-27\"></a>Part 06 — 安全红线与最佳实践<a class=\"heading-anchor\" href=\"#section-part-06-安全红线与最佳实践\" aria-label=\"链接到本节：Part 06 — 安全红线与最佳实践\">#</a></h2> \n<h2 id=\"section-key-使用红线\"><a id=\"article-anchor-28\"></a>Key 使用红线<a class=\"heading-anchor\" href=\"#section-key-使用红线\" aria-label=\"链接到本节：Key 使用红线\">#</a></h2> \n<p>1. 客户端只用 Publishable Key：受 RLS 策略约束，可安全写入前端源码。</p> \n<p>2. 服务端才用 Secret Key：对应 service_role，具 BYPASSRLS 属性、绕过所有行级策略，仅限服务端，严禁暴露到前端。</p> \n<p>Key 与角色映射详见 Part 04。</p> \n<h2 id=\"section-rls-是数据隔离的核心\"><a id=\"article-anchor-29\"></a>RLS 是数据隔离的核心<a class=\"heading-anchor\" href=\"#section-rls-是数据隔离的核心\" aria-label=\"链接到本节：RLS 是数据隔离的核心\">#</a></h2> \n<p>两层防护（GRANT 表级 + RLS 行级）详见 Part 03。两种典型坑：</p> \n<p>1. 只启用 RLS 不 GRANT——角色根本无权访问表，RLS 形同虚设。</p> \n<p>2. 只 GRANT 不设 RLS 策略——所有行对授权角色可见，等于没有行级保护。</p> \n<h2 id=\"section-写操作必须走登录态\"><a id=\"article-anchor-30\"></a>写操作必须走登录态<a class=\"heading-anchor\" href=\"#section-写操作必须走登录态\" aria-label=\"链接到本节：写操作必须走登录态\">#</a></h2> \n<p>读可用匿名，写必须先登录。</p> \n<h2 id=\"section-更新-删除必带过滤条件\"><a id=\"article-anchor-31\"></a>更新/删除必带过滤条件<a class=\"heading-anchor\" href=\"#section-更新-删除必带过滤条件\" aria-label=\"链接到本节：更新/删除必带过滤条件\">#</a></h2> \n<p>写更新或删除时必须搭配过滤条件（eq、match 等）。不带过滤的 update() 改全表，delete() 清空全表——事故级。</p> \n<h2 id=\"section-错误处理范式\"><a id=\"article-anchor-32\"></a>错误处理范式<a class=\"heading-anchor\" href=\"#section-错误处理范式\" aria-label=\"链接到本节：错误处理范式\">#</a></h2> \n<p>API 返回包含 data 和 error 的对象。先解构、先判错、再用数据：</p> \n<pre><code class=\"language-cobol\"><ol><li><div><div><span>/</span><span>/</span> JavaScript——错误处理范式</div></div></li><li><div><div>const { <span>data</span>, <span>error</span> } <span>=</span> await supabase.<span>from</span>(<span>'products'</span>).<span>select</span>(<span>'*'</span>)</div></div></li><li><div><div><span>if</span> (<span>error</span>) {</div></div></li><li><div><div>console.<span>error</span>(<span>error</span>)</div></div></li><li><div><div><span>return</span></div></div></li><li><div><div>}</div></div></li></ol></code></pre> \n<p>先用 data，直接渲染会掩盖异常。</p> \n<h2 id=\"section-免费体验\"><a id=\"article-anchor-33\"></a>免费体验<a class=\"heading-anchor\" href=\"#section-免费体验\" aria-label=\"链接到本节：免费体验\">#</a></h2> \n<p>建一张表即得一套 API，前端直连，无需为增删改查写后端接口——这就是 RDS Supabase 的 Database Data API。</p> \n<p>免费公测Region：华北-北京四、华东-上海一、华南-广州-友好用户环境、华南-广州、西南-贵阳一、中东-利雅得、中国-香港 已开放局点。其他局点暂处邀测阶段，可提交申请。</p> \n<p>了解更多：查看<a title=\"RDS Supabase 官方文档\" href=\"https://support.huaweicloud.com/usermanual-rds-pg/rds_supabase_01.html\" target=\"_blank\" rel=\"noopener noreferrer\">RDS Supabase 官方文档</a></p> \n<p></p>\n                ",
+    "headings": [
+      {
+        "id": "section-part-01-为什么需要-data-api",
+        "level": 2,
+        "text": "Part 01 — 为什么需要 Data API"
+      },
+      {
+        "id": "section-创表即api-从建表到前端获取数据",
+        "level": 2,
+        "text": "创表即API：从建表到前端获取数据"
+      },
+      {
+        "id": "section-data-api-能力速览",
+        "level": 2,
+        "text": "Data API 能力速览"
+      },
+      {
+        "id": "section-原理-postgrest-自动生成端点",
+        "level": 2,
+        "text": "原理：PostgREST 自动生成端点"
+      },
+      {
+        "id": "section-part-02-前置准备",
+        "level": 2,
+        "text": "Part 02 — 前置准备"
+      },
+      {
+        "id": "section-第1步-获取访问地址",
+        "level": 2,
+        "text": "第1步 获取访问地址"
+      },
+      {
+        "id": "section-第2步-获取-api-key",
+        "level": 2,
+        "text": "第2步 获取 API Key"
+      },
+      {
+        "id": "section-第3步-安装-sdk-并初始化",
+        "level": 2,
+        "text": "第3步 安装 SDK 并初始化"
+      },
+      {
+        "id": "section-part-03-让数据就位-建表与权限配置",
+        "level": 2,
+        "text": "Part 03 — 让数据就位：建表与权限配置"
+      },
+      {
+        "id": "section-权限模型-grant-与-rls-两道门",
+        "level": 2,
+        "text": "权限模型：GRANT 与 RLS 两道门"
+      },
+      {
+        "id": "section-第1步-创建产品表与定价表",
+        "level": 2,
+        "text": "第1步 创建产品表与定价表"
+      },
+      {
+        "id": "section-第2步-启用行级安全",
+        "level": 2,
+        "text": "第2步 启用行级安全"
+      },
+      {
+        "id": "section-第3步-配置rls策略",
+        "level": 2,
+        "text": "第3步 配置RLS策略"
+      },
+      {
+        "id": "section-第4步-授予表级权限",
+        "level": 2,
+        "text": "第4步 授予表级权限"
+      },
+      {
+        "id": "section-第5步-刷新schema缓存",
+        "level": 2,
+        "text": "第5步 刷新schema缓存"
+      },
+      {
+        "id": "section-part-04-增删改查-前端直连-data-api",
+        "level": 2,
+        "text": "Part 04 — 增删改查，前端直连 Data API"
+      },
+      {
+        "id": "section-key-与角色映射",
+        "level": 2,
+        "text": "Key 与角色映射"
+      },
+      {
+        "id": "section-查询-select",
+        "level": 2,
+        "text": "查询（Select）"
+      },
+      {
+        "id": "section-新增-insert",
+        "level": 2,
+        "text": "新增（Insert）"
+      },
+      {
+        "id": "section-更新-update",
+        "level": 2,
+        "text": "更新（Update）"
+      },
+      {
+        "id": "section-更新或新增-upsert",
+        "level": 2,
+        "text": "更新或新增（Upsert）"
+      },
+      {
+        "id": "section-删除-delete",
+        "level": 2,
+        "text": "删除（Delete）"
+      },
+      {
+        "id": "section-part-05-关联查询-一次请求拿全产品与定价",
+        "level": 2,
+        "text": "Part 05 — 关联查询：一次请求拿全产品与定价"
+      },
+      {
+        "id": "section-外键自动关联",
+        "level": 2,
+        "text": "外键自动关联"
+      },
+      {
+        "id": "section-一对多-产品带出定价",
+        "level": 2,
+        "text": "一对多：产品带出定价"
+      },
+      {
+        "id": "section-内连接-inner",
+        "level": 2,
+        "text": "内连接（!inner）"
+      },
+      {
+        "id": "section-part-06-安全红线与最佳实践",
+        "level": 2,
+        "text": "Part 06 — 安全红线与最佳实践"
+      },
+      {
+        "id": "section-key-使用红线",
+        "level": 2,
+        "text": "Key 使用红线"
+      },
+      {
+        "id": "section-rls-是数据隔离的核心",
+        "level": 2,
+        "text": "RLS 是数据隔离的核心"
+      },
+      {
+        "id": "section-写操作必须走登录态",
+        "level": 2,
+        "text": "写操作必须走登录态"
+      },
+      {
+        "id": "section-更新-删除必带过滤条件",
+        "level": 2,
+        "text": "更新/删除必带过滤条件"
+      },
+      {
+        "id": "section-错误处理范式",
+        "level": 2,
+        "text": "错误处理范式"
+      },
+      {
+        "id": "section-免费体验",
+        "level": 2,
+        "text": "免费体验"
+      }
+    ],
+    "textLength": 9117,
+    "readingMinutes": 21,
     "sourceId": "huawei-csdn",
     "sourceUrl": "https://blog.csdn.net/devcloud/article/details/168656475",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T09:07:33.309Z",
-    "nextRetryAt": "2026-11-09T09:07:33.309Z",
-    "error": "RSSHub HTTP 502",
-    "warnings": []
+    "contentHash": "ddacf9c19e0ebb13b8b916eac5b2e4d1374589eb08a4ea67832e479b27889fb8",
+    "fetchedAt": "2026-11-02T11:40:37.217Z",
+    "checkedAt": "2026-11-02T11:40:37.217Z",
+    "nextRetryAt": "2026-12-02T11:40:37.217Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "failed"
+        },
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
   }
 }
