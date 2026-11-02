@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "acb5d0791666de0fbd39",
+    "status": "ready",
+    "html": "<p>AI 应用从 Demo 走向生产的过程中，一个越来越普遍的判断正在形成：<strong>模型选型不再是主要瓶颈，另一个同样关键的变量，是那条把业务事件送进模型的数据链路。</strong></p><p><strong><br></strong></p><p>这个判断有三重含义。<strong>负载特征变了</strong>：Agent 任务、模型推理调用、工具执行普遍呈现长耗时、耗时高度不均的特征，跟传统消息负载的短平快模式不匹配。<strong>时效要求变了</strong>：RAG 和实时推荐要求上下文在秒级内可用，离线批处理供给不了 Agent 的决策现场，上下文时延就是决策质量。<strong>信任边界变了</strong>：数据流向越来越多的模型、Agent 和第三方工具，敏感字段一旦进入模型上下文就不可撤回；仅靠网络边界拦得住谁能连，拦不住敏感字段被合法读走后去了哪里。</p><p><br></p><p>8 月 28 日，由极客传媒 InfoQ、阿里云和 IBM 联合举办的「AI 实时数据沙龙 · 上海站」上，三位来自阿里云和 IBM 的一线工程师围绕这条链路做了分享：一场讲数据流平台面向 AI 的整体演进，另两场分别落到阿里云消息队列 Confluent 版（ApsaraMQ for Confluent）和云消息队列 Kafka 版（ApsaraMQ for Kafka）两款产品的演进与实践。三场分享层层承接，给出的判断是一致的：<strong>当模型能力趋于充裕，AI 生产化的瓶颈正移向实时数据链路。</strong></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_1832c989893f4b2fac2f89fa6d9c8617.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>关注「阿里云云原生」公众号，后台回复：0828</p><p>免费获得上海站讲师 PPT 合集</p><h2 id=\"section-事件驱动-ai-agent-生产化的范式转变\">事件驱动 AI：Agent 生产化的范式转变<a class=\"heading-anchor\" href=\"#section-事件驱动-ai-agent-生产化的范式转变\" aria-label=\"链接到本节：事件驱动 AI：Agent 生产化的范式转变\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_feeface0cb3a42d490ce76b872c024b6.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>吴敏达，IBM 中国科技事业部客户工程团队资深架构师</em></p><p>IBM 中国科技事业部客户工程团队资深架构师吴敏达在现场分享中提到，<strong>AI 应用的一个关键跃迁，是从“回答问题”转向“实现目标”</strong> —— 从“用户提问、模型回答”的交互模式，转向“业务事件发生、Agent 实时感知并采取受治理的行动”的事件驱动模式。他把这一转变总结为 <strong>“事件驱动 AI”（Event-Driven AI）</strong>：Agent 不再由人类唤起，而是嵌入企业基础设施、在变化发生的那一刻即时监控并做出反应；AI 的使用重点也从“关注输出”转向“以结果为导向”。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_59dd30517eec4ffaa076973bb03ced02.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>「Confluent AI 能力参考架构」 · 感知 / 供数 / 行动 三大支柱</em></p><p>支撑这个范式转变的技术底座，吴敏达用一张架构图总结成 <strong>Confluent Intelligence 的三大支柱加一层支撑层：</strong></p><p><strong><br></strong></p><ul><li><strong>感知</strong>把异常检测、情感分析、PII 脱敏等能力内置为流处理函数，从海量事件中筛出真正需要 Agent 决策的信号；</li><li><strong>供数</strong>用实时上下文引擎把 Kafka Topic 物化为低延迟的只读服务表，Agent 通过 MCP 协议直接查询订单、库存、设备状态等业务事实，把“批处理供给”变成“事件到达即可查”；</li><li><strong>行动</strong>让 Agent 以事件为触发器持续跑在 Kafka Topic 上并调用外部工具，Agent 生命周期与数据流生命周期在同一平面内管理。</li><li>底层还有模型推理、实时 Embedding、外部表检索、安全连接、RBAC 与审计作为支撑。</li></ul><p><br></p><p>三大支柱如何组合成闭环，吴敏达在现场用一个信用卡欺诈调查用例做了具象说明。</p><p><br></p><p><strong>Day 1，实时决策：</strong> 信用卡交易流实时接入 Kafka，流处理任务做异常检测和有状态富化（例如识别“30 分钟内两个不同地点金额激增”这类模式），Agent 结合规则、商家观察名单和用户历史标记记录实时判定风险，并驱动推送通知、冻结卡、生成工单等补救动作。</p><p><br></p><p><strong>Day 2，历史复盘：</strong> 另一个调查 Agent 通过 MCP 读取 Day 1 的决策数据流，结合人工处置结果和用户争议做跨系统推理，产出规则变更建议 —— <strong>优化后的规则回流到 Day 1 的执行链路，形成事件驱动的规则闭环</strong>，不再依赖离线批处理定期更新。案例背后的判断是：<strong>Agent 要在生产环境里承担业务职责，就必须让它站在“业务事件发生的那一刻”，不是回答用户的问题，而是响应世界的变化。</strong></p><p><strong><br></strong></p><p>在整个范式中，Confluent Connect 充当着实时数据总线与集成枢纽的核心角色，为 AI Agent 提供稳定、安全的上下文数据流。它通过无代码预置连接器与分布式架构，实时打通传统数据库、云存储及向量数据库等异构系统，不仅能在大规模高并发场景下保障数据流的不间断与故障自动恢复，还可以利用私有网络打通混合云环境，将企业内部数据安全输送至 AI 系统。</p><p><br></p><p>在实际应用中，Connect 可以在数据流转过程中进行轻量级的实时清洗与安全防护。例如，当企业将包含客户交易记录的数据库实时同步给 Agent 时，Connect 能够直接在传输链路中利用单条消息变换（SMT）将身份证或银行卡等敏感数据自动掩码脱敏，既无需额外套设数据清洗服务，又能防止敏感信息直接暴露给大模型，加速 Agent 从实验走向生产落地的过程。</p><h2 id=\"section-消费模型-数据新鲜度-信任边界-ai-时代重新定义了数据流平台\">消费模型、数据新鲜度、信任边界——AI 时代重新定义了数据流平台<a class=\"heading-anchor\" href=\"#section-消费模型-数据新鲜度-信任边界-ai-时代重新定义了数据流平台\" aria-label=\"链接到本节：消费模型、数据新鲜度、信任边界——AI 时代重新定义了数据流平台\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_d8837a1f80044d8c843f10cf33991897.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>刘尧，阿里云 · Kafka 产品负责人</em></p><p>感知、供数、行动这三大支柱，每一层都对底层数据流平台提出了跟传统 Kafka 不一样的要求。阿里云 Kafka 产品负责人刘尧在分享中给出的判断是：<strong>AI 应用的规模化落地正在重新定义“什么样的数据流平台才够用”</strong>，具体体现为消费模型、数据新鲜度、信任边界三条变化。他把这次 ApsaraMQ for Confluent 的版本升级定位为 <strong>“一次平台代际跃迁，而不是一次补丁升级”</strong> —— 三条变化在<strong>内核跨代、Queues for Kafka GA、CSFLE + 阿里云 KMS</strong> 这三项重要特性中同时落地。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_16c5b28e9bb1462faf2ab3a6cf092770.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>「ApsaraMQ for Confluent 重要特性」 · 内核跨代 / Queues for Kafka GA / CSFLE + 阿里云 KMS</em></p><h3 id=\"section-消费模型-从-分区消费-到-任务处理\">消费模型：从“分区消费”到“任务处理”<a class=\"heading-anchor\" href=\"#section-消费模型-从-分区消费-到-任务处理\" aria-label=\"链接到本节：消费模型：从“分区消费”到“任务处理”\">#</a></h3><p>传统 Kafka 消费组的分区分配语义匹配的是“事件流”负载 —— 消息量大、单条处理快、顺序敏感。但 Agent 时代的负载完全不同：<strong>Agent 任务、模型推理调用、工具执行都是长耗时、耗时高度不均的任务型负载</strong>，一个慢任务会阻塞整个分区里的后续消息。这次升级 GA 了 <strong>Queues for Kafka（KIP-932 共享组）</strong>，让多个消费者可以同时消费同一个分区、逐条确认与重投，消费者数量不再受分区数限制。<strong>“要顺序选消费组，要并发选共享消费组，两者可以在同一集群、同一 Topic 上并存。”</strong> 这也意味着<strong>一套 Kafka 可以同时承载事件流与任务队列</strong>。—— 对正在落地 Agent 与推理调度的团队，等于把“消息 + 队列”两套架构合并成一套。</p><h3 id=\"section-数据新鲜度-从-分钟级-到-秒级\">数据新鲜度：从“分钟级”到“秒级”<a class=\"heading-anchor\" href=\"#section-数据新鲜度-从-分钟级-到-秒级\" aria-label=\"链接到本节：数据新鲜度：从“分钟级”到“秒级”\">#</a></h3><p>RAG 与实时推荐要求上下文在秒级内可用；而“秒级”不只是流处理跑得快，还要求元数据、控制面、故障恢复整体匹配。这次升级完成了<strong>内核跨代 —— KRaft 成为唯一元数据平面</strong>，Apache Kafka 4.2 内核，ZooKeeper 完全退场，直接效果是<strong>故障恢复更快、控制面切换更平滑、元数据规模上限更大</strong>。对客户而言，<strong>少一套分布式协调系统，就少一类故障域、少一份运维与许可成本</strong> —— 对数据新鲜度敏感的 AI 场景来说，这是“能不能秒级供数”的前提。</p><h3 id=\"section-信任边界-从-网络边界-到-字段边界\">信任边界：从“网络边界”到“字段边界”<a class=\"heading-anchor\" href=\"#section-信任边界-从-网络边界-到-字段边界\" aria-label=\"链接到本节：信任边界：从“网络边界”到“字段边界”\">#</a></h3><p>当数据流向越来越多的模型、Agent 和第三方工具，网络边界只解决“谁能连”，无法约束“敏感字段流到了哪里”。这次升级 GA 了 <strong>CSFLE（Client-Side Field Level Encryption）</strong>，把加密边界前移到客户端：加解密在 SDK 内完成，基于 Schema 字段标签自动生效，<strong>密文在服务端、磁盘、备份、跨地域复制全链路始终是密文，服务端无解密能力</strong>；字段级粒度让身份证、手机号等敏感字段单独加密，其他字段仍可正常检索与计算。<strong>“CSFLE 让‘数据可流动’与‘敏感字段不泄露’不再互斥 —— 加密跟着数据走，而不是靠边界防护把数据锁死。”</strong></p><p><strong><br></strong></p><p>中国大陆场景的一个关键能力，是 <strong>CSFLE 原生对接阿里云 KMS</strong> —— KEK 常驻阿里云 KMS，密钥不出境、不出云，与阿里云 RAM 权限体系和操作审计打通。对金融、政务、医疗等对密钥属地与自主可控有强要求的行业，这条能力是“能不能上云用 Confluent”的前置条件。</p><p><br></p><p>三条变化不是孤立的技术升级，而是 <strong>AI 时代对企业数据流平台的三条重新定义</strong>。同一次升级带来的收益，可以还原到三类客户视角：合规敏感型行业（等保与行业审计场景有据可依）、高并发在线业务（长尾任务不再整批拖慢）、正在落地 AI 应用的团队（数据脱敏与并发弹性同时具备）。</p><h2 id=\"section-流接入-流计算-数据入湖-正在收敛进同一个平台\">流接入、流计算、数据入湖，正在收敛进同一个平台<a class=\"heading-anchor\" href=\"#section-流接入-流计算-数据入湖-正在收敛进同一个平台\" aria-label=\"链接到本节：流接入、流计算、数据入湖，正在收敛进同一个平台\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_fc6c0f2b4ec142d7854a70cb6e1796a8.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>张美平，阿里云 · Kafka 技术负责人</em></p><p>平台层的三条重新定义要真正落到生产可用，还有最后一层挑战：底层 Kafka 集群本身的架构需要重构。阿里云 Kafka 技术负责人张美平在分享中给出的判断是：过去要跑通一条“实时采集 → 计算 → 入湖”链路，通常需要拼装 Kafka + 独立计算引擎 + 入湖工具 + 元数据系统，<strong>每多一个系统，就多一组连接、一套状态、一个故障边界</strong>。他给出的答案，是让 Kafka 这个“实时数据的第一跳”承担更多职责 —— <strong>数据进来即算、算完即入湖</strong>，一个平台把流、算、湖三层能力收敛到同一个产品体系。这里的“一体化”不是把所有事情塞进一个进程，而是<strong>共享入口、共享底座；计算和入湖各自形成独立、可组合的闭环。</strong></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_7a3ca18e5a7f4c6cbc7e8414e8b02a56.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>「整体架构 · 一份数据，流转算存一体」 · 从数据源经流·算·湖到 AI 生态的完整数据链路</em></p><h3 id=\"section-产品形态-一个平台-三层-算-能力并行输出\">产品形态：一个平台，三层“算”能力并行输出<a class=\"heading-anchor\" href=\"#section-产品形态-一个平台-三层-算-能力并行输出\" aria-label=\"链接到本节：产品形态：一个平台，三层“算”能力并行输出\">#</a></h3><p>“算”这一层拆成三种能力：<strong>流计算 SQL</strong>（过滤、窗口聚合、多流 Join，结果多路输出）、<strong>实时 Embedding</strong>（数据流经 Kafka 即完成向量化，对接通义 DashScope 系列模型，写入 DashVector / OpenSearch）、<strong>Streaming Agent</strong>（数据流上运行智能体，实时调用通义千问 / 百炼做内容理解、分类、路由与连续决策）。三层能力并行叠加，<strong>让吴敏达提到的三大支柱（感知、供数、行动）落到具体的产品形态上</strong>。这三层能力也不是必须依次串联 —— 只做合规留存的团队可以让原始 Topic 直接持续成表；只做实时风控的团队可以只运行 SQL；需要“清洗聚合后再沉淀”的场景，则把 SQL 结果 Topic 继续启用成表。</p><h3 id=\"section-底座-存算分离-让故障切换与扩缩容不再搬数据\">底座：存算分离，让故障切换与扩缩容不再搬数据<a class=\"heading-anchor\" href=\"#section-底座-存算分离-让故障切换与扩缩容不再搬数据\" aria-label=\"链接到本节：底座：存算分离，让故障切换与扩缩容不再搬数据\">#</a></h3><p>传统 Kafka 架构下，节点故障需要在副本之间搬运历史数据，切换又慢又费带宽。团队采用<strong>共享存储 + IO Fence</strong> 重构了 HA 路径 —— 分区数据持久化到共享存储，副本只维护接管所需的少量状态；主从切换和扩缩容时新节点直接复用共享数据，<strong>切换目标秒级，不再触发全量数据迁移。</strong> 传统架构下的分区再平衡和数据搬运，正是 AI 流量峰谷下弹性能力的隐形上限。放到 Kafka 生态的坐标系里看，社区演进方向是从“本地副本复制”走向“分层 / 共享存储”（Kafka 3.9 Tiered Storage 生产可用、KIP-1150 已 Accepted），共享存储底座相当于把这条方向工程化落地。</p><h3 id=\"section-入湖-从-外置任务-收敛为-托管关系\">入湖：从“外置任务”收敛为“托管关系”<a class=\"heading-anchor\" href=\"#section-入湖-从-外置任务-收敛为-托管关系\" aria-label=\"链接到本节：入湖：从“外置任务”收敛为“托管关系”\">#</a></h3><p>传统链路下，即使不做窗口和 Join，把 Kafka 数据持续写成开放表，也要跑一套 ETL 任务，管理位点、Schema、事务提交与故障恢复。“Table Topic”把这一套外部运行时收敛为 Topic 与表之间的托管关系 —— 用户在原 Topic 上一键启用，平台承接消息到 Iceberg 表的映射、Schema 演进、事务提交与失败恢复；下游通过 Iceberg Catalog 读取，Spark / Flink / Trino / MaxCompute / Hologres 可复用同一份数据资产。用户视角的关键变化是：<strong>实时入湖不再是一条要自建自维的独立链路，而是 Topic 上一份可配置、可托管的能力。</strong></p><p><strong><br></strong></p><p>实时入湖还有一层容易被低估的长期成本：小文件、快照与元数据会持续膨胀。<strong>小文件合并（Compaction）、快照过期、未引用文件清理这些长期动作由服务后台自动执行</strong>，无需客户侧维护常驻任务&nbsp;—— 把治理成本从用户任务移到存储内核，是实时入湖能否长期跑下去的隐性门槛。</p><h3 id=\"section-流计算-sql-开发体验-独立计算运行时\">流计算：SQL 开发体验，独立计算运行时<a class=\"heading-anchor\" href=\"#section-流计算-sql-开发体验-独立计算运行时\" aria-label=\"链接到本节：流计算：SQL 开发体验，独立计算运行时\">#</a></h3><p>平台提供统一的流计算入口，用户通过 SQL 完成实时数据处理任务的开发、部署与运维。流计算任务运行于独立的计算资源与运行时，与 Kafka Broker 的核心消息服务解耦；复杂 Join、聚合、大状态计算或任务反压等计算侧压力被隔离在流计算域内，避免计算负载直接影响消息服务的稳定性。团队围绕单机效率和规模效率对 SQL 引擎做了多轮优化，落到用户可感的层面：<strong>实时任务吞吐更高、大状态场景扫描延迟显著下降、恢复更平稳</strong> —— 状态型算子和大流量场景从“状态受本地内存约束”跨越到“状态与计算容量解耦”。用张美平的话说：<strong>“前两层是把单机性能做到极致；后两层决定了系统在大状态、高流量场景下，能不能存得下、跑得快、扩得动、恢复得稳。”</strong></p><p><strong><br></strong></p><p>把底座、入湖、流计算这三层放在一起看，<strong>收敛路径的门槛不在“功能组合”，而在四个工程闭环同时成立</strong> —— HA 正确性（切换不丢、不乱、不搬数据）、Table 资产（位点与 Snapshot 一致推进）、流计算隔离（计算故障不打扰核心消息流链路）、AI 治理（模型调用与消息热路径解耦）。对客户而言，这意味着一份实时数据不再需要为不同用途重复搭建链路，同时不用为一体化牺牲运行边界的清晰。<strong>“可复制的是功能清单，难复制的是正确性、隔离性与长期运营闭环。”</strong></p><h2 id=\"section-数据侧能力-正在成为-ai-应用能否规模化的分水岭\">数据侧能力，正在成为 AI 应用能否规模化的分水岭<a class=\"heading-anchor\" href=\"#section-数据侧能力-正在成为-ai-应用能否规模化的分水岭\" aria-label=\"链接到本节：数据侧能力，正在成为 AI 应用能否规模化的分水岭\">#</a></h2><p>综合上述三条观察 —— 从事件驱动 AI 提出的应用范式诉求，到数据流平台的三条重新定义，再到底层 Kafka 集群的架构级重构 —— 一个更宏观的趋势正在浮现：<strong>AI 应用从 Demo 到生产的距离，越来越取决于数据侧的工程能力，而不是模型侧的选型能力。</strong> 这意味着评价一个 AI 应用团队的技术成熟度，除了看它对模型的理解，同样要看它对数据链路的掌控 —— 对上下文时效性的处理能力、对多源数据的融合能力、对流批一体架构的驾驭能力。这些能力过去分散在数据工程、消息中间件、流计算等多个技术领域，AI 应用的规模化正在推动它们融合到同一个平台上，指向一个共同的技术目标：<strong>让 Agent 始终基于最新的业务状态作出判断。</strong> 围绕这条链路的工程实践和技术判断，正在快速成型。</p><p><br></p><blockquote>本文根据 2026 年 8 月 28 日「AI 实时数据沙龙 · 上海站」（由极客传媒 InfoQ、阿里云与 IBM 联合举办）现场分享整理，观点归属讲师本人。分享嘉宾：吴敏达（IBM 中国科技事业部客户工程团队资深架构师）、刘尧（阿里云 · Kafka 产品负责人）、张美平（阿里云 · Kafka 技术负责人）。</blockquote><p><br></p><p>沙龙直播回放已上线，点击<a href=\"https://developer.aliyun.com/live/255837?spm=a2c6h.13046898.publish-article.16.50c76ffaO35GoN\" target=\"_blank\" rel=\"noopener noreferrer\">此处</a>即可查看完整内容。</p>",
+    "headings": [
+      {
+        "id": "section-事件驱动-ai-agent-生产化的范式转变",
+        "level": 2,
+        "text": "事件驱动 AI：Agent 生产化的范式转变"
+      },
+      {
+        "id": "section-消费模型-数据新鲜度-信任边界-ai-时代重新定义了数据流平台",
+        "level": 2,
+        "text": "消费模型、数据新鲜度、信任边界——AI 时代重新定义了数据流平台"
+      },
+      {
+        "id": "section-消费模型-从-分区消费-到-任务处理",
+        "level": 3,
+        "text": "消费模型：从“分区消费”到“任务处理”"
+      },
+      {
+        "id": "section-数据新鲜度-从-分钟级-到-秒级",
+        "level": 3,
+        "text": "数据新鲜度：从“分钟级”到“秒级”"
+      },
+      {
+        "id": "section-信任边界-从-网络边界-到-字段边界",
+        "level": 3,
+        "text": "信任边界：从“网络边界”到“字段边界”"
+      },
+      {
+        "id": "section-流接入-流计算-数据入湖-正在收敛进同一个平台",
+        "level": 2,
+        "text": "流接入、流计算、数据入湖，正在收敛进同一个平台"
+      },
+      {
+        "id": "section-产品形态-一个平台-三层-算-能力并行输出",
+        "level": 3,
+        "text": "产品形态：一个平台，三层“算”能力并行输出"
+      },
+      {
+        "id": "section-底座-存算分离-让故障切换与扩缩容不再搬数据",
+        "level": 3,
+        "text": "底座：存算分离，让故障切换与扩缩容不再搬数据"
+      },
+      {
+        "id": "section-入湖-从-外置任务-收敛为-托管关系",
+        "level": 3,
+        "text": "入湖：从“外置任务”收敛为“托管关系”"
+      },
+      {
+        "id": "section-流计算-sql-开发体验-独立计算运行时",
+        "level": 3,
+        "text": "流计算：SQL 开发体验，独立计算运行时"
+      },
+      {
+        "id": "section-数据侧能力-正在成为-ai-应用能否规模化的分水岭",
+        "level": 2,
+        "text": "数据侧能力，正在成为 AI 应用能否规模化的分水岭"
+      }
+    ],
+    "textLength": 6105,
+    "readingMinutes": 14,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1761350",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "73a90f37c50fd42e7ea0fa95ef980c5ee4f04b2c25514a577efcc200d63dc537",
+    "fetchedAt": "2026-11-02T07:09:00.818Z",
+    "checkedAt": "2026-11-02T07:09:00.818Z",
+    "nextRetryAt": "2026-12-02T07:09:00.818Z",
+    "warnings": []
+  }
+}

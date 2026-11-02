@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "a5284c887e4166b49101",
+    "status": "ready",
+    "html": "<p><span><span>近日，Agent 观测与优化 · Close the Loop 三城巡演第二站深圳站圆满落幕。本场活动联合 AgentScope 举办，吸引了近百名技术从业者参与，围绕“Evaluate / 评估与实验”这一主题，深度分享了 Agent 评估范式、AgentScope 2.0 企业级智能体底座、以及基于 AgentLoop 的电商客服助手评估实践，并设置了如何进行智能体评估的动手实操。</span><span><span>大家最关注的是：企业如何建立评估基建、组织内如何分工是最优解。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><strong>北京站回顾：</strong></span><span><span>《</span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.3.50c76ffayVR8Y0&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247586083&amp;idx=1&amp;sn=4c16de7c099d848875e8fd1209a0bc01&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>Agent 评估与优化三城巡演丨北京站精彩回顾 &amp; PPT 下载</span></a><span>》</span></span></p><p><strong></strong></p><figure><strong><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_929b1c211cf6486fae4eba470bc40431.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></strong></figure><p></p><p><strong><span><span>关注公众号，后台回复：</span><strong>0831</strong></span></strong></p><p><strong><span><span>免费获得深圳站讲师 PPT 合辑</span></span></strong></p><h3 id=\"section-议题一-agent-的评估和实验-如何证明我的-agent-更好-丨谢精杰-南珈-阿里云-agentloop-产品经理\">议题一：Agent 的评估和实验，如何证明我的 Agent 更好？丨谢精杰(南珈)，阿里云 AgentLoop 产品经理<a class=\"heading-anchor\" href=\"#section-议题一-agent-的评估和实验-如何证明我的-agent-更好-丨谢精杰-南珈-阿里云-agentloop-产品经理\" aria-label=\"链接到本节：议题一：Agent 的评估和实验，如何证明我的 Agent 更好？丨谢精杰(南珈)，阿里云 AgentLoop 产品经理\">#</a></h3><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_6885e4494e7b4ee8b978baf9830d918d.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>Agent 进入生产后，最大的难题不是让它跑起来，而是证明它确实比上一版更好。谢精杰从“感觉变好”与“可度量变好”的鸿沟切入，提出基于 Trajectory 的评估范式：把单次对话扩展为完整推理轨迹，用 Agent-as-a-Judge 在生产 Trace 上自动打分，并与人工专家保持 90% 以上一致性。评估不是一次性动作，而是嵌入在“运行—评估—实验—门禁”闭环中的基础设施：通过任务完成度、Groundedness、工具选择合理性等内置评估器量化 A/B 差异，用变更门禁拦截负向迭代，让每次上线都有据可依。</p><h3 id=\"section-议题二-基于-agentscope-构建智能体底座的实战丨刘军-陆龟-agentscope-maintainer\">议题二：基于 AgentScope，构建智能体底座的实战丨刘军(陆龟)，AgentScope Maintainer<a class=\"heading-anchor\" href=\"#section-议题二-基于-agentscope-构建智能体底座的实战丨刘军-陆龟-agentscope-maintainer\" aria-label=\"链接到本节：议题二：基于 AgentScope，构建智能体底座的实战丨刘军(陆龟)，AgentScope Maintainer\">#</a></h3><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_1eb661f6d4b24b78b617c295e793c81f.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>企业级 Agent 不同于单次调用的 LLM 应用，它需要长任务运行、状态持久化和多智能体协作。刘军介绍了 AgentScope 2.0 的核心升级：Harness 作为智能体运行内核，以 Workspace 为事实来源，通过抽象文件系统、四层上下文压缩和双层长期记忆，让 Agent 在长对话中不丢上下文、不忘事实；同时支持子智能体编排、委派、并行与异步通知，并接入 E2B Sandbox 实现文件与 Shell 隔离及快照恢复。</p><p><br></p><p>在控制面，AgentScope Service 不替代现有框架，而是为 LangChain、ADK 等不同技术栈提供统一管控，通过 Goal Pipeline 的执行—验证—反馈闭环、可运营 RAG Service 和 AgentTeams 多智能体协作状态机，把开发、运行、治理拉进同一个生命周期。</p><h3 id=\"section-议题三-基于-agentloop-的-agentscope-java-电商客服助手应用评估实践丨饶子昊-铖朴-阿里云-agentloop-研发工程师\">议题三：基于 AgentLoop 的 AgentScope Java 电商客服助手应用评估实践丨饶子昊(铖朴)，阿里云 AgentLoop 研发工程师<a class=\"heading-anchor\" href=\"#section-议题三-基于-agentloop-的-agentscope-java-电商客服助手应用评估实践丨饶子昊-铖朴-阿里云-agentloop-研发工程师\" aria-label=\"链接到本节：议题三：基于 AgentLoop 的 AgentScope Java 电商客服助手应用评估实践丨饶子昊(铖朴)，阿里云 AgentLoop 研发工程师\">#</a></h3><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_fd6f6718f42b4ef8a06ffb5db3dc6b27.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>本议题以一个 AgentScope Java 电商客服助手为例，完整演示了如何把评估从概念落到实验。Demo 围绕 6 个固定客服 Case，对 A/B 两版 Prompt 各跑 6 次，生成 12 条 Trace；通过 AliyunJavaAgent 5.1.2 自动上报到 AgentLoop，再用任务完成度、Groundedness（回答证据支持度）和工具选择合理性三个内置评估器做批量评估。</p><p><br></p><p>实验结论清晰可解释：B 版 Prompt 在保持任务完成度和工具选择合理性的前提下，Groundedness 明显优于 A 版，在售后工具失败的 Case 05 中不编造平台、电话和退款时效，在官方政策与论坛内容冲突的 Case 06 中以官方来源为准。该流程可直接作为 Agent 上线前的评估门禁：只有关键指标不下降、高风险 Case 不新增严重错误，才允许进入下一版。</p><h3 id=\"section-动手实操-给你的-agentscope-java-应用接上-agentloop-评估\">动手实操：给你的 AgentScope Java 应用接上 AgentLoop 评估<a class=\"heading-anchor\" href=\"#section-动手实操-给你的-agentscope-java-应用接上-agentloop-评估\" aria-label=\"链接到本节：动手实操：给你的 AgentScope Java 应用接上 AgentLoop 评估\">#</a></h3><p>此外，现场设置了动手实操环节，讲师带领大家基于电商客服 Demo 跑通“接入 AgentScope Java 应用 → 生成 A/B Trace → 在 AgentLoop 创建批量评估 → 解读评估结论”的完整链路，现场把从直觉到证据的评估方法跑了一遍。</p><h2 id=\"section-现场精彩瞬间\">现场精彩瞬间<a class=\"heading-anchor\" href=\"#section-现场精彩瞬间\" aria-label=\"链接到本节：现场精彩瞬间\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_6a430830cd804cd998b36e65902b95d7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_3e01837b28534434afea873cf1defa3b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_0f3c33ffaf1046109b032242d181609a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_3ce3e78e25bd46479895df157fc51aee.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [
+      {
+        "id": "section-议题一-agent-的评估和实验-如何证明我的-agent-更好-丨谢精杰-南珈-阿里云-agentloop-产品经理",
+        "level": 3,
+        "text": "议题一：Agent 的评估和实验，如何证明我的 Agent 更好？丨谢精杰(南珈)，阿里云 AgentLoop 产品经理"
+      },
+      {
+        "id": "section-议题二-基于-agentscope-构建智能体底座的实战丨刘军-陆龟-agentscope-maintainer",
+        "level": 3,
+        "text": "议题二：基于 AgentScope，构建智能体底座的实战丨刘军(陆龟)，AgentScope Maintainer"
+      },
+      {
+        "id": "section-议题三-基于-agentloop-的-agentscope-java-电商客服助手应用评估实践丨饶子昊-铖朴-阿里云-agentloop-研发工程师",
+        "level": 3,
+        "text": "议题三：基于 AgentLoop 的 AgentScope Java 电商客服助手应用评估实践丨饶子昊(铖朴)，阿里云 AgentLoop 研发工程师"
+      },
+      {
+        "id": "section-动手实操-给你的-agentscope-java-应用接上-agentloop-评估",
+        "level": 3,
+        "text": "动手实操：给你的 AgentScope Java 应用接上 AgentLoop 评估"
+      },
+      {
+        "id": "section-现场精彩瞬间",
+        "level": 2,
+        "text": "现场精彩瞬间"
+      }
+    ],
+    "textLength": 1680,
+    "readingMinutes": 4,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1761359",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "7186b16a0293268e20a6a3198b1c23b333f552dff18d1a8c86e3c0b32fd89830",
+    "fetchedAt": "2026-11-02T07:09:01.468Z",
+    "checkedAt": "2026-11-02T07:09:01.468Z",
+    "nextRetryAt": "2026-12-02T07:09:01.468Z",
+    "warnings": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "cc4052b84d8663a907b8",
+    "status": "ready",
+    "html": "<p>作者：班壮(旭山)，邵丹(营火)</p><p><br></p><blockquote>阿里云 AI 网关 Serverless 新版正式开启免费公测。全新架构、0 元起步，Agent 管理升级为一张拓扑图，AI fallback 让主模型限流时业务不中断。公测期间网关自身费用全免。</blockquote><h2 id=\"section-ai-应用开发者的三个真实困境\">AI 应用开发者的三个真实困境<a class=\"heading-anchor\" href=\"#section-ai-应用开发者的三个真实困境\" aria-label=\"链接到本节：AI 应用开发者的三个真实困境\">#</a></h2><p><br></p><p>如果你正在开发 AI 应用，大概率遇到过这些问题：</p><p><br></p><ul><li><strong>模型账单越来越看不懂。</strong> 不管是简单的文本摘要还是复杂的代码生成，所有请求都发给同一个旗舰模型，账单月月上涨，却说不清钱花在了哪。</li><li><strong>主模型一限流，业务就宕。</strong> 模型服务限速、抖动是常态，没有自动切换能力，用户看到的就是报错。</li><li><strong>Agent 越来越多，入口越来越乱。</strong> 百炼应用、AgentTeams 应用、Dify、Claude Code、自研 Agent……每个都有自己的接入方式、鉴权配置和日志，管理成本随数量线性上涨。</li></ul><p><br></p><p>这些问题的本质是一样的：AI 应用缺一个统一的流量入口。</p><p><br></p><p>这正是 AI 网关要解决的事——统一接入 LLM API、Agent API、MCP Server，统一做路由、认证、限流、安全防护和用量观测。</p><p><br></p><p>在完整的 AI 应用链路里，AI 网关存在于两个位置：外部流量进入 Agent 时的入口，以及 Agent 访问模型时的出口。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a089271cdbe14b80aa93d0ba69811de2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>AI 应用整体架构中 AI 网关的位置示意</em></p><p><em><br></em></p><h2 id=\"section-全新-serverless-架构-0-元起步-按实际用量付费\">全新 Serverless 架构：0 元起步，按实际用量付费<a class=\"heading-anchor\" href=\"#section-全新-serverless-架构-0-元起步-按实际用量付费\" aria-label=\"链接到本节：全新 Serverless 架构：0 元起步，按实际用量付费\">#</a></h2><p>过去，使用 AI 网关需要先付一笔起步费用，这让很多刚起步、流量还不大的业务望而却步。</p><p><br></p><p>本次公测的 AI 网关 Serverless 新版完成了架构升级：基于全新架构重构，资源使用效率更高，开通更快，用多少付多少。新版提供两种实例形态：</p><p><br></p><div><div class=\"markdown-table-wrap\"><table><thead><tr><td></td><td>Serverless 标准版</td><td>Serverless 企业版</td></tr></thead><tbody><tr><td>定位</td><td>小规模生产、低流量业务</td><td>正式生产、规模化业务</td></tr><tr><td>起步成本</td><td>0 元起步，无实例费</td><td>实例费 + 按量</td></tr><tr><td>访问入口</td><td>平台分配入口</td><td>独立入口、支持自定义域名和证书</td></tr><tr><td>服务等级</td><td>99.9%</td><td>99.95%</td></tr></tbody></table></div></div><p><br></p><p>标准版让你零成本把小规模业务跑起来，不为闲置资源付费；业务规模增长后，可以选择企业版获得独立入口、自定义域名、更高 QPS 和更高服务等级。后续还规划支持标准版一键升级为企业版，无需资源迁移。</p><h3 id=\"section-相比原-serverless-版本-新版升级了什么\">相比原 Serverless 版本，新版升级了什么<a class=\"heading-anchor\" href=\"#section-相比原-serverless-版本-新版升级了什么\" aria-label=\"链接到本节：相比原 Serverless 版本，新版升级了什么\">#</a></h3><ul><li><strong>0 元起步：</strong> 标准版取消起步费用，纯按实际用量付费，小规模业务的成本更可控。</li><li><strong>版本分层：</strong> 新增标准版和企业版两种形态，分别面向小规模生产和规模化生产，可以按业务规模选择，不用为用不上的规格付费。</li><li><strong>插件体系：</strong> 新版支持平台提供的插件体系，可以扩展认证鉴权、安全防护、流量治理和观测分析能力。</li><li><strong>能力演进：</strong> LLM API、Agent 管理、MCP Server、观测分析等核心能力统一在新版承载，后续新增能力也优先在新版落地。</li></ul><p><br></p><p>已有原 Serverless 实例可以继续使用，不强制迁移；新开通建议优先选择新版。</p><h2 id=\"section-ai-fallback-主模型出问题-请求自动落到备用模型\">AI Fallback：主模型出问题，请求自动落到备用模型<a class=\"heading-anchor\" href=\"#section-ai-fallback-主模型出问题-请求自动落到备用模型\" aria-label=\"链接到本节：AI Fallback：主模型出问题，请求自动落到备用模型\">#</a></h2><p>回到开头的第二个困境。模型服务限速、抖动是常态，这件事在网关侧可以直接消掉——对应的能力叫 AI Fallback。</p><p><br></p><p>它做的事情也很简单：当主模型服务因异常、故障或高负载无法正常响应时，网关自动切换到你预先配置的备用模型，调用成功就立即返回。应用侧感知不到这次抖动，用户也看不到那个报错。</p><p><br></p><p>一个 Model API 可以配置一到多个 Fallback 模型，网关按顺序依次调用。所以你能搭出「主模型 → 同能力备用模型 → 轻量兜底模型」这样的多级链路，逐级降级，而不是一次失败就把错误抛给用户。同一个服务也可以复用在多条策略里，不用为每个 API 重复建一遍。</p><p><br></p><p>什么情况下会切走，覆盖三类：</p><p><br></p><ul><li><strong>后端返回错误：</strong> 调用模型服务返回任意 4xx、5xx 状态码时触发，限流、鉴权失败、服务端错误都在里面。</li><li><strong>首包响应过慢：</strong> 流式场景下，首个响应包超过设定时间还没来就直接换一家，单位毫秒，设为 0 表示不启用。用户等的是第一个字什么时候出现，主模型排队排太久时，网关不会陪着一起等。</li><li><strong>网关侧限流或拦截：</strong> 默认同样触发；如果你只想在后端真的出错时才兜底，开启「仅 Fallback 后端服务错误」就能把这类情况排除在外。</li></ul><p><br></p><p>配置同样不需要改应用——在 Model API 上打开 Fallback 开关，从服务列表里选一个备用服务即可。模型名称默认透传，主备模型名不一致时也可以指定具体模型。</p><p><br></p><p><strong>稳定性策略和业务代码从此解耦。</strong> 备用模型换了、顺序调了、超时阈值改了，都是控制台上的一次配置变更，不用每个应用各写一套重试逻辑，也不用为了改一个兜底策略发一次版。</p><h2 id=\"section-agent-管理升级-一张拓扑图管好所有-agent\">Agent 管理升级：一张拓扑图管好所有 Agent<a class=\"heading-anchor\" href=\"#section-agent-管理升级-一张拓扑图管好所有-agent\" aria-label=\"链接到本节：Agent 管理升级：一张拓扑图管好所有 Agent\">#</a></h2><p>Agent 时代的流量有两个方向：外部业务如何访问你的 Agent，以及 Agent 自己如何访问模型。过去这两侧配置分散在不同入口，这次新版把它们收敛成了一个资源：<strong>Agent</strong>。</p><p><br></p><p>在控制台的「Agent管理」中，创建 Agent 只需要两步：起个名字，选择类型——支持<strong>百炼、AgentTeams、Dify、Claude Code 和自定义</strong>等多种 Agent 类型。</p><p>创建后进入 Agent 拓扑页，以你的 Agent 为中心：</p><p><br></p><ul><li><strong>左侧是 Agent 访问：</strong> 配置外部业务访问 Agent 的域名、路由和消费者认证，让百炼应用、Dify 应用以标准 API 的形式对外服务。</li><li><strong>右侧是模型访问：</strong> 配置 Agent 通过网关调用模型的链路，Claude Code 用户按接入指引几分钟即可把模型调用切换到网关上。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ded9a455bf88484881c5e1cbbe361f2b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>Agent 资源将 Agent 访问与模型访问收敛到同一个资源下管理</em></p><p><em><br></em></p><p>调用量、错误、Token 消耗和请求日志都按 Agent 维度聚合展示。你的每一个 Agent，流量从哪来、到哪去，一张拓扑图看得清清楚楚。</p><h2 id=\"section-公测权益与开放范围\">公测权益与开放范围<a class=\"heading-anchor\" href=\"#section-公测权益与开放范围\" aria-label=\"链接到本节：公测权益与开放范围\">#</a></h2><p><strong>公测时间：</strong> 7 月 31 日至 8 月 31 日。</p><p><strong>公测地域：</strong> 北京、上海、杭州、深圳、香港。</p><p><strong>公测优惠：</strong> 公测期间，AI 网关 Serverless 新版的网关自身费用不收费，仅公网流量按照 CDT（云数据传输）计费。模型服务、日志服务等其他云产品费用按对应产品规则收取。</p><h2 id=\"section-重磅新能力预告-智能路由\">重磅新能力预告：智能路由<a class=\"heading-anchor\" href=\"#section-重磅新能力预告-智能路由\" aria-label=\"链接到本节：重磅新能力预告：智能路由\">#</a></h2><blockquote>上线节奏说明：智能路由功能将先在实例型独享版（专享实例）上线，Serverless 版本随后推出，敬请期待。</blockquote><p><br></p><p>智能路由做的事情很简单：<strong>在能力足够的前提下，自动为每个任务选择更省、更快或更强的模型</strong>。简单任务走轻量模型，复杂任务才用旗舰模型，模型成本随任务结构自然下降。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_97aaadc571fe454191e0cbfcd5d0168c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>智能路由根据任务在候选模型中自动选择</em></p><p><em><br></em></p><p>使用方式也足够简单——无需额外 SDK，无需改造应用，把模型名换成 <code>auto/&lt;模式&gt;</code> 即可。提供四种开箱即用的路由模式：</p><p><br></p><ul><li><strong>综合均衡：</strong> 在成本、速度、质量之间自动权衡，适合大多数场景。</li><li><strong>成本优先：</strong> 任务能力充分的前提下选择最省的模型。</li><li><strong>速度优先：</strong> 优先响应更快的模型，适合交互式场景。</li><li><strong>质量优先：</strong> 关键任务始终使用能力最强的候选。</li></ul><p><br></p><p>新版智能路由还解决了两个真实场景中的难题：</p><p><br></p><p><strong>多轮对话和 Agent 工具链不“中途换脑”。</strong> 继续同一个任务时保持模型稳定，Agent 的工具调用链路全程绑定同一个执行模型；只有确认切换到新任务时才重新选择。从独立请求、多轮聊天到 Agent 工具链，一次接入全覆盖。</p><p><br></p><p><strong>平台模型与自有模型统一决策。</strong> 候选池既可以一键开启平台内置的不同档位模型，也可以纳入你自己已配置的模型服务。自有模型继续走你自己的服务和凭据，账单归属不变——路由更聪明，但边界不含糊。</p><h2 id=\"section-结语\">结语<a class=\"heading-anchor\" href=\"#section-结语\" aria-label=\"链接到本节：结语\">#</a></h2><p>从 0 元起步的标准版开始，不需要重写你的应用，也不需要迁移已有的模型服务。</p><p><br></p><p>你的 AI 应用，是时候有一个真正的流量入口了。</p><p><strong><br></strong></p><p><strong>立即体验：</strong> 阿里云控制台搜索「AI 网关」，或访问产品官网了解详情。</p><p><em><br></em></p><p><em>注：本文所述功能可用范围、地域、价格、服务等级、Agent 类型、模型档位和实例规格，均以产品控制台、官网价格页和相关公告展示为准。公测期间部分能力可能陆续开放。</em></p>",
+    "headings": [
+      {
+        "id": "section-ai-应用开发者的三个真实困境",
+        "level": 2,
+        "text": "AI 应用开发者的三个真实困境"
+      },
+      {
+        "id": "section-全新-serverless-架构-0-元起步-按实际用量付费",
+        "level": 2,
+        "text": "全新 Serverless 架构：0 元起步，按实际用量付费"
+      },
+      {
+        "id": "section-相比原-serverless-版本-新版升级了什么",
+        "level": 3,
+        "text": "相比原 Serverless 版本，新版升级了什么"
+      },
+      {
+        "id": "section-ai-fallback-主模型出问题-请求自动落到备用模型",
+        "level": 2,
+        "text": "AI Fallback：主模型出问题，请求自动落到备用模型"
+      },
+      {
+        "id": "section-agent-管理升级-一张拓扑图管好所有-agent",
+        "level": 2,
+        "text": "Agent 管理升级：一张拓扑图管好所有 Agent"
+      },
+      {
+        "id": "section-公测权益与开放范围",
+        "level": 2,
+        "text": "公测权益与开放范围"
+      },
+      {
+        "id": "section-重磅新能力预告-智能路由",
+        "level": 2,
+        "text": "重磅新能力预告：智能路由"
+      },
+      {
+        "id": "section-结语",
+        "level": 2,
+        "text": "结语"
+      }
+    ],
+    "textLength": 3224,
+    "readingMinutes": 8,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1755368",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "4f330b46b6822c608f2ea5625b838ccaefd0bf0c254d8e15c17b2f5bd8dd184b",
+    "fetchedAt": "2026-11-02T07:09:29.120Z",
+    "checkedAt": "2026-11-02T07:09:29.120Z",
+    "nextRetryAt": "2026-12-02T07:09:29.120Z",
+    "warnings": []
+  }
+}

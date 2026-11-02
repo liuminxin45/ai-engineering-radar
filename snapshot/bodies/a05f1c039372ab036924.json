@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "a05f1c039372ab036924",
+    "status": "ready",
+    "html": "<p>在 2026 云栖大会 AI 实时数据智能论坛上，<strong>千问办公联合 AgentBridge</strong> 正式发布 <strong>“数据分析专家”套件</strong>——业务人员用自然语言，即可安全调用企业多源数据，得到一份经过分析与复核、可直接交付的报告。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_6d2d20cca6e74bc2bc826a6dc0e74ecd.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>“这周退单为什么增加了？”</p><p><br></p><p>周会上的一句提问，往往意味着一连串准备工作：找到订单数据，核对物流状态，翻查客户投诉，确认统计口径，再把分析结果整理成报告。企业已经积累了大量数据，业务人员仍然需要花不少时间，才能把这些数据转化为一次判断和一份可用的材料。</p><p><br></p><p>千问办公与 AgentBridge 联合推出的“数据分析专家”套件，正是要缩短从“提问”到“结论”的这段路：<strong>业务人员用一句自然语言提问，套件便在企业授权范围内调用多源数据，完成分析与复核，并按需要延展出诊断看板、分析报告和处理建议，把数据分析融入日常办公，而不再是一场跨系统、跨口径的手工整理。</strong></p><h2 id=\"section-千问办公-让-agent-理解企业业务\">千问办公：让 Agent 理解企业业务<a class=\"heading-anchor\" href=\"#section-千问办公-让-agent-理解企业业务\" aria-label=\"链接到本节：千问办公：让 Agent 理解企业业务\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a7f64844a1674a8ca325a77613f1e553.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>千问办公是一款企业级 AI 办公智能体，覆盖桌面执行、云端创作和协同办公。桌面端支持本地文件操作、浏览器与桌面自动化，以及后台定时任务；云端 AI 工作空间承接内容创作和网页应用生成等工作；协作 Agent 则融入移动端与钉钉等办公入口，让用户能够在熟悉的工作环境中发起任务、跟进进度。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b0b94d6fc18740258079b28ac4dc4fa2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>围绕执行、连接、进化和管控，千问办公通过连接器与 MCP 协议衔接企业已有系统，将工作经验沉淀为可复用的技能和专家套件，并结合权限与行为审计管理 Agent 的使用。对于企业而言，这些能力的价值还在于，让经过验证的工作方法能够被团队成员重复使用——正如那句被反复提及的话：“Context is All You Need”。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_41c47920975d4184b34c1316a77ffebe.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>要做到这一点，Agent 需要理解企业自己的业务。相同的“退单率”，在不同团队中可能分别指申请退单比例或退款成功比例；同样一次客户投诉，也可能因订单状态、会员权益和历史处理记录不同，需要采用不同方案。通用知识之外，企业系统中的事实、知识库中的规则，以及工作中积累的经验，共同构成 Agent 完成任务所需的上下文。</p><h2 id=\"section-千问办公-agentbridge-协同完成业务分析\">千问办公&nbsp;× AgentBridge：协同完成业务分析<a class=\"heading-anchor\" href=\"#section-千问办公-agentbridge-协同完成业务分析\" aria-label=\"链接到本节：千问办公 × AgentBridge：协同完成业务分析\">#</a></h2><p>千问办公围绕企业上下文，连接 ERP、CRM、OA 等业务系统，以及知识库、SOP 和协作记录，结合任务需要组织相关信息。存量数据帮助 Agent 了解业务基础，持续沉淀的经验则为后续任务提供参考。千问办公与 AgentBridge 的结合，选择数据分析这一高频场景，让企业已有的数据资产能够更直接地服务业务人员。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_deb2f66cbe4f4f0aafcafebde227ce89.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>在这套方案中，千问办公提供岗位任务入口，承接用户的问题与最终办公成果。数据分析专家套件负责组织分析步骤，理解问题、规划任务，调用相应能力并整理交付物。AgentBridge 则提供多源数据接入（Connector）、统一数据目录（Catalog）、查询分析（Analysis），以及结合业务语义与知识检索的数据智能（Luma）能力，帮助套件找到可用数据，并在权限边界内完成分析。</p><p><br></p><p>这一分工覆盖问数取数、日报简报、周度复盘、异常诊断、专题分析和报表分析等高频办公任务。用户可以围绕业务目标连续提问，逐步形成结论、看板或报告，减少在查询工具与办公软件之间反复整理信息的工作。</p><h2 id=\"section-客户退单场景-关联多源事实与企业规则\">客户退单场景：关联多源事实与企业规则<a class=\"heading-anchor\" href=\"#section-客户退单场景-关联多源事实与企业规则\" aria-label=\"链接到本节：客户退单场景：关联多源事实与企业规则\">#</a></h2><p>本次展示以客户退单分析与挽留为例，呈现了这套方案的工作过程。示例客户 C10001 遇到物流延迟，并发生多次投诉。客服负责人需要了解订单出了什么问题、客户此前反映过什么，以及按照企业现行政策，可以提出哪些处理和挽留建议。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_7444e715ef5d4aa78a37c5c03d9f7259.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这些信息分散在不同系统中。演示使用 RocketMQ 中的退单事件作为分析入口，MySQL 提供客户、订单、商品和物流等业务事实，Elasticsearch 保存客服沟通记录。AgentBridge 通过 Connector 连接器与 Catalog 数据目录组织这些资源，让分析服务能够找到相关库表和字段，围绕同一客户与订单继续查找依据。售后政策、赔付规则、会员权益和历史案例则进入知识库，为后续建议提供可引用的规则。</p><h2 id=\"section-从一次提问到一份可交付的报告\">从一次提问到一份可交付的报告<a class=\"heading-anchor\" href=\"#section-从一次提问到一份可交付的报告\" aria-label=\"链接到本节：从一次提问到一份可交付的报告\">#</a></h2><p>数据与分析服务准备完成后，业务人员可以在千问办公里直接提问：“客户投诉了几次，每次投诉的情况是什么？”也可以进一步要求分析退单原因，结合赔付规则形成挽留建议。</p><p><br></p><p>围绕这些问题，方案采用语义探索与 SQL 复核相配合的分析方式。Luma 结合已配置的业务语义理解问题，遇到关键口径不清楚的情况，先澄清再查询。自然语言分析帮助发现投诉、退单和异常时点之间的关联，SQL 查询则用于复核关键数字，检查时间范围、指标定义和关联条件，为结论提供可核查的计算依据。</p><p><br></p><p>在生成看板和报告之前，数据分析专家套件还会通过数据质量分析（Analyze Data Quality）检查数据是否适合当前任务，包括数据是否足够新、查询结果是否存在截断等问题。这些检查帮助用户了解结论依赖的数据范围与限制，避免将不完整的信息直接当作完整的业务事实。</p><p><br></p><p>交付结果也按照业务人员的使用过程展开。即时结论呈现投诉与退单的基本情况，说明哪些信息已经核实、哪些仍待确认。诊断看板进一步展示订单、物流和客户贡献等相关信息。处理方案则将结论、证据和建议动作组织在一起，涉及赔付或挽留措施时，引用企业已经提供的政策与案例，供业务人员核对并推进后续处理。</p><h2 id=\"section-从单个客户到团队可复用的能力\">从单个客户到团队可复用的能力<a class=\"heading-anchor\" href=\"#section-从单个客户到团队可复用的能力\" aria-label=\"链接到本节：从单个客户到团队可复用的能力\">#</a></h2><p>单个客户的分析还可以继续延伸。客服负责人追问“最近一个月，类似退单问题是否普遍存在”，分析范围便从单一客户扩展到月度退单与投诉情况。千问办公承接进一步的分析任务，将结果整理成图表和可打开的报告文件，作为团队讨论、经营复盘和向上汇报的材料。面对“这个数字从哪里来”的追问，使用者也能够回到数据来源与分析依据进行核查。</p><p><br></p><p>这条工作链路依赖前期的数据接入、知识准备和分析服务配置。演示中，相关数据与知识库先关联到 Luma 分析服务，完成流程验证后，再通过 MCP 接入千问办公。已配置的连接与分析资源能够在后续办公任务中复用，连接器市场也提供了数据源接入入口。数据质量检查、看板构建和报告生成等步骤，由数据分析专家套件组织为可重复使用的任务流程。</p><p><br></p><p>对于需要反复开展经营复盘、客户分析或异常诊断的团队，这意味着数据连接、业务口径和分析方法可以成为共同使用的基础。业务人员围绕当前问题发起任务，在已有数据与规则之上继续分析，把更多精力放在确认结论、讨论方案和推动业务处理上。</p><p><br></p><p>如下是本次实践的演示视频：<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.9.52046ffanX6A09&amp;enc=SMzw1nMnDS3eKdd8EBvU9g%3D%3D.wktYp%2FfM6mcC%2FCXM5RxggBf%2FjuQvedCQE9jvxVrhGEgRhd8wF9znCKZVB3j4zEwU3QPQarBuugRv%2BFg2iqVJCw%3D%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://mp.weixin.qq.com/s/6EzH1AZM2YwOSYv3sU9gIg</a></p><h2 id=\"section-在千问办公中开始使用\">在千问办公中开始使用<a class=\"heading-anchor\" href=\"#section-在千问办公中开始使用\" aria-label=\"链接到本节：在千问办公中开始使用\">#</a></h2><p>目前，AgentBridge“数据分析专家”套件已上线千问办公“专家套件市场”。在千问办公左侧导航进入「扩展」下的「专家套件」，搜索“数据分析专家”，在套件广场中找到由阿里云 AgentBridge 提供的“数据分析专家”，点击安装即可。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_029dedbc81da4c6d9b75a1923050d588.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>套件安装后默认启用，连接 MySQL 或 Elasticsearch 连接器后，就可以在对话框中输入 / 调用以下三项技能的快捷命令，直接用自然语言提问。套件会查询业务数据、检索知识库口径，每个数字都附可复核的数据证据卡。</p><p><br></p><ul><li>数据质量分析（/数据质量分析 要检查的表或数据范围 + 用途，例：“订单表，用于本周经营复盘”）：在做分析、建仪表板或发布结论之前，评估已连接的 MySQL 等数据源中一张表或一组数据是否值得信任，输出质量评分卡、就绪等级和修复建议。当用户提到数据质量、数据能不能用、字段有没有问题、数据是不是完整、新鲜度、空值重复、口径核对、发布前检查时使用。</li><li>构建分析报告（/构建分析报告 报告目的与受众 + 时间和业务范围，例：“本周订单退款复盘，给业务负责人”）：把一个业务问题或一次已完成的分析，转成可读、可复核、可继续编辑的办公报告，包含执行摘要、发现、含义、建议、图表与数据证据卡。当用户提到写报告、出周报、经营复盘、月报、专题分析、给管理层的材料、会议一页纸、把结果整理成文档时使用。</li><li>构建经营仪表板（/构建经营仪表板 仪表板目标与受众 + 关注的指标和时间粒度，例：“订单支付退款大盘，给运营负责人看，按天”）：基于已连接的 MySQL 等业务数据源，构建有数据来源支撑的经营仪表板，用于监控核心指标、跟踪变化并定位变动因素，输出图表规格、口径定义与数据证据卡。当用户提到做仪表板、看板、大盘、监控面板、经营驾驶舱、指标监控、想持续盯某几个指标时使用。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_4c9cc1ef396e417d9ca367764908e1e8.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>欢迎有客户服务、经营分析及跨系统数据分析需求的企业，带着具体业务问题与数据源，与千问办公及 AgentBridge 团队交流。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_62ade08487d346ad8bf7ff48d7c913c1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>点击<a href=\"https://yunqi.aliyun.com/2026/session?spm=a2c6h.13046898.publish-article.12.52046ffanX6A09&amp;agendaId=107\" target=\"_blank\" rel=\"noopener noreferrer\">「此处」</a>回看本场论坛直播。</p>",
+    "headings": [
+      {
+        "id": "section-千问办公-让-agent-理解企业业务",
+        "level": 2,
+        "text": "千问办公：让 Agent 理解企业业务"
+      },
+      {
+        "id": "section-千问办公-agentbridge-协同完成业务分析",
+        "level": 2,
+        "text": "千问办公 × AgentBridge：协同完成业务分析"
+      },
+      {
+        "id": "section-客户退单场景-关联多源事实与企业规则",
+        "level": 2,
+        "text": "客户退单场景：关联多源事实与企业规则"
+      },
+      {
+        "id": "section-从一次提问到一份可交付的报告",
+        "level": 2,
+        "text": "从一次提问到一份可交付的报告"
+      },
+      {
+        "id": "section-从单个客户到团队可复用的能力",
+        "level": 2,
+        "text": "从单个客户到团队可复用的能力"
+      },
+      {
+        "id": "section-在千问办公中开始使用",
+        "level": 2,
+        "text": "在千问办公中开始使用"
+      }
+    ],
+    "textLength": 3530,
+    "readingMinutes": 8,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1773443",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "9401e18175fa7ad07d0e3f18e28c432b73c8132450368119b3680aec16bd4033",
+    "fetchedAt": "2026-11-02T07:08:48.002Z",
+    "checkedAt": "2026-11-02T07:08:48.002Z",
+    "nextRetryAt": "2026-12-02T07:08:48.002Z",
+    "warnings": []
+  }
+}

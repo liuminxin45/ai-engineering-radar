@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "6bc8d268f4eaeec90775",
+    "status": "ready",
+    "html": "<p>作者：元乙</p><p><br></p><p>谈到 AgenticOps，可能很容易先看 Agent 接了多少工具，能不能自动巡检、生成修复方案，甚至直接执行变更。</p><p><br></p><p>而在 STAROps 的建设中，我们更关心另一个问题：它判断的根因到底对不对？</p><p><br></p><p>STAROps 是阿里云打造的下一代 AI 原生全域智能运维平台（Agentic Operations Platform）。深度融合跨域可观测数据与大语言模型推理能力，支持用户通过自然语言定义目标，由运维智能体自主完成动态规划、受控执行与结果验证的全闭环，实现运维模式从被动响应向主动自治的转型。</p><p><br></p><p>我们认为 RCA 是 AgenticOps 的核心，因为它直接决定了后面的每一步应该对谁、做什么。根因一旦判断错误，影响评估、修复方案、变更执行和结果验证都会围绕错误对象展开。当 Agent 只能给建议时，错误的 RCA 会浪费工程师的时间；当 Agent 获得了执行权限，错误的 RCA 就会变成生产风险。</p><p><br></p><blockquote>RCA 决定行动的方向，其他能力决定这个方向能执行多快、走多远。</blockquote><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_7ba03645b156476eb59e5f67307b2c79.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-根因判断错了-后面的动作都会错\">根因判断错了，后面的动作都会错<a class=\"heading-anchor\" href=\"#section-根因判断错了-后面的动作都会错\" aria-label=\"链接到本节：根因判断错了，后面的动作都会错\">#</a></h2><p>告警通常只能告诉我们哪个指标越过了阈值，不能直接告诉我们故障从哪里开始。</p><p><br></p><p>一个前端接口出现 5xx，可能是前端代码出了问题，也可能是下游数据库变慢、缓存不可用、节点资源耗尽，或者刚刚发生的一次配置变更。CPU 高也不一定是根因，它可能是流量突增的结果，也可能伴随着 Full GC、线程池耗尽或异常循环。</p><p><br></p><p>这些区别会直接改变处置方向。把节点资源问题判断成应用容量不足，可能会继续扩容运行在故障节点上的 Pod；把慢 SQL 判断成前端代码缺陷，可能会推动一次没有作用的代码回滚；把 Deployment 被误缩容后的流量下降判断成网络问题，排查团队就会从一开始走错方向。</p><p><br></p><p>通用 Agent 已经能够查询很多数据，也能生成结构完整、读起来很合理的分析报告。问题在于，一份报告写得完整，不代表它找到了真正的故障对象。Agent 如果停在告警位置，或者把传播过程中的强异常当成根因，后面的推理越充分，错误结论反而越容易让人相信。</p><h2 id=\"section-为什么-poc-证明不了根因定位能力\">为什么 POC 证明不了根因定位能力<a class=\"heading-anchor\" href=\"#section-为什么-poc-证明不了根因定位能力\" aria-label=\"链接到本节：为什么 POC 证明不了根因定位能力\">#</a></h2><p>通常团队在做根因定位验收时，只会选择几类已知故障。比如准备一个 Pod CrashLoop、一个慢 SQL、一次 Redis 不可用，再看系统能不能按照预期给出答案。</p><p><br></p><p>这种验收方式很正常。题目明确、结果可核对，能够快速确认数据、工具和产品链路是否跑通。但它证明的是系统做通了 A、B、C 三类场景，还不能说明遇到第 D 类故障时，系统仍然知道该往哪里查。</p><p><br></p><p>如果每类告警都绑定一个 Skill 或工作流，POC 的结果通常会很好。告警类型、调查入口、查询顺序和预期答案都已经提前给定，Agent 只需要在设计好的路径中完成任务。换一种告警，或者让同一种故障从另一个业务位置暴露出来，原来的路径就可能失效。</p><p><br></p><p>这并不意味着 Skill 没有价值。资深 SRE 会知道“看到延迟先查哪几个指标”“什么情况下必须看变更”“哪些症状容易把人带偏”，这些经验当然应该沉淀下来。Skill 更适合提供调查线索和检查清单，帮助 Agent 少走弯路；它不应该成为 RCA 能力的边界。</p><h2 id=\"section-真正的生产故障没有固定剧本\">真正的生产故障没有固定剧本<a class=\"heading-anchor\" href=\"#section-真正的生产故障没有固定剧本\" aria-label=\"链接到本节：真正的生产故障没有固定剧本\">#</a></h2><p>然后，真正到了生产环境，故障的种类和情况会多得多。问题可能出现在应用、容器、节点、数据库、缓存、网络，也可能来自一次发布、扩缩容或配置修改。系统拓扑一直在变，数据不一定完整，几个异常还可能在同一个时间窗口出现。</p><p><br></p><p>同一种告警背后可以是完全不同的原因。同一个根因，也可能在不同系统中触发不同告警。根因在数据库，告警可能打在前端；根因在 Node，最先被用户看到的可能是某个业务接口流量下降。真实故障经常跨越多个数据域，沿着调用、部署和宿主关系一路传播。</p><p><br></p><p>这里所说的泛化，不是要求一个模型知道所有故障答案。更现实的标准是：没有完全匹配的工作流时，Agent 仍然知道如何开始调查。它能先确认告警指向哪个对象，再沿关系找到相关服务和资源；发现多个候选后，会补充证据、检查时间顺序、排除解释不了现象的假设；证据不够时，它也知道应该停下来，而不是勉强给出一个根因。</p><p><br></p><p>故障场景无法穷举，但调查问题的基本方法可以复用。STAROps 要构建的，正是这种面对新故障仍然能够推进和收敛的能力。</p><h2 id=\"section-starops-如何把-rca-做成一项系统能力\">STAROps 如何把 RCA 做成一项系统能力<a class=\"heading-anchor\" href=\"#section-starops-如何把-rca-做成一项系统能力\" aria-label=\"链接到本节：STAROps 如何把 RCA 做成一项系统能力\">#</a></h2><p>既然生产故障无法靠场景清单覆盖，建设重点就不能只是继续增加工作流。STAROps 把精力放在调查本身：Agent 如何理解当前系统，如何决定下一步查什么，如何证明结论可靠，以及如何从线上失败中继续改进。</p><h3 id=\"section-先把系统看明白-umodel\">先把系统看明白：UModel<a class=\"heading-anchor\" href=\"#section-先把系统看明白-umodel\" aria-label=\"链接到本节：先把系统看明白：UModel\">#</a></h3><p>很多 RCA 调查在第一步就可能走偏，因为不同系统对同一个对象使用了不同名字。</p><p><br></p><p>一个业务服务，在 APM 里是 Service，在 Trace 里是一组 Span，在 Kubernetes 里对应 Deployment 和 Pod，继续向下还会落到 ECS 或 Node。日志、指标、变更记录也各自使用不同字段。没有统一的对象关系，Agent 只能根据名称和上下文临时猜测，很容易把同一个对象拆成多个对象，或者把相邻对象误认为根因。</p><p><br></p><p>UModel 先把这些对象和关系组织起来。它记录服务运行在哪些 Pod 上、Pod 属于哪个 Deployment、宿主节点是谁、服务依赖哪些数据库，以及相关指标、日志和 Trace 应该从哪里查询。</p><p><br></p><p>这样做的直接作用，是让 Agent 知道自己正在查谁。从业务接口向下定位到 Service、Pod 和 Node，或者从一次变更向外分析受影响服务，都有明确关系可以沿用。模型负责提出假设和理解证据，UModel 提供稳定的系统地图。</p><h3 id=\"section-静态拓扑不够-调查过程也要画在图上\">静态拓扑不够，调查过程也要画在图上<a class=\"heading-anchor\" href=\"#section-静态拓扑不够-调查过程也要画在图上\" aria-label=\"链接到本节：静态拓扑不够，调查过程也要画在图上\">#</a></h3><p>控制台里的拓扑通常描述“系统有哪些对象、谁依赖谁”。一次故障调查还需要记录另一类信息：哪些对象已经检查过，哪里发现了异常，当前怀疑谁，还有哪些分支没有解释清楚。</p><p><br></p><p>STAROps 在 UModel 之上维护动态调查拓扑。调查从告警对象开始，随着证据逐步扩展。某个候选被排除，对应分支就停止；发现同一 Node 上多个 Pod 同时异常，调查会继续向宿主资源收敛；看到数据库连接变慢，Agent 会再去检查 SQL、连接池和上下游 Trace。</p><p><br></p><p>这张图既是调查地图，也是过程记录。指标、日志、Trace、事件和变更会挂到对应对象上，候选根因及其支持、反对证据也会被保留下来。工程师可以看到 Agent 为什么继续查某个方向，也可以在关键节点补充信息或接管。</p><h3 id=\"section-用-benchmark-拆穿-看起来正确\">用 Benchmark 拆穿“看起来正确”<a class=\"heading-anchor\" href=\"#section-用-benchmark-拆穿-看起来正确\" aria-label=\"链接到本节：用 Benchmark 拆穿“看起来正确”\">#</a></h3><p>RCA Agent 有一个很棘手的问题：答案可能是错的，解释却很像真的。只看最终报告，往往很难区分 Agent 是沿证据找到了根因，还是从告警表象猜中了一个常见答案。</p><p><br></p><p>RCA-Bench <strong>[</strong> <strong>1]</strong> 因此不只记录一个根因标签。当前公开的 RCA-100 包含 103 个故障用例，覆盖 6 大类、28 类故障类型。每个用例都记录了根因对象、故障类型、传播路径和关键证据，Agent 需要在可查询环境中自己决定先看什么、接着查哪里。</p><p><br></p><p>评估时会分别看三件事：根因对象找对了吗，故障原因判断对了吗，调查过程有没有证据。前两项主要通过 UModel 中的实体关系和故障类型关系计算，当前约 82% 的综合分由确定性规则完成。LLM 只辅助判断调查方向和证据是否充分，避免让一个模型完全决定另一个模型答得好不好。</p><h3 id=\"section-线上问题必须回到下一次迭代\">线上问题必须回到下一次迭代<a class=\"heading-anchor\" href=\"#section-线上问题必须回到下一次迭代\" aria-label=\"链接到本节：线上问题必须回到下一次迭代\">#</a></h3><p>离线 Benchmark 能回答“这项能力是否具备”，但生产环境还会加入权限、数据接入、客户拓扑和版本差异。一个离线高分版本，上线后仍可能因为查不到数据、选错工具或过早收敛而失败。</p><p><br></p><p>STAROps 会保留线上任务中的问题、工具调用、查询结果、错误、证据、耗时和用户反馈。遇到低分任务或 Bad Case，先判断问题出在对象识别、数据获取、调查方向、证据质量，还是最终结论。</p><p><br></p><p>能够复现的问题会进入回归样本。UModel、工具、Skill、模型或调查策略修改后，再用这些样本验证。这样，同一个错误不会只修当前案例，还会成为后续版本必须持续通过的一道检查。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_dfc803302322488abb36baf0c60d93e2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-能力横评-报告写得完整-不等于根因找得准确\">能力横评：报告写得完整，不等于根因找得准确<a class=\"heading-anchor\" href=\"#section-能力横评-报告写得完整-不等于根因找得准确\" aria-label=\"链接到本节：能力横评：报告写得完整，不等于根因找得准确\">#</a></h2><p>当前公开的&nbsp;RCA Agent 评测结果 <strong>[</strong> <strong>2]</strong> 使用 RCA-100 的 30 个案例分层评测集。STAROps 与 OpenClaw + DeepSeek-V4-Pro 接收相同任务输入，使用相同的 UModel MCP（ <a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.16.39406ffaNMsVB9&amp;enc=X2v0BD3Gjo%2FfRhrHghA2Sw%3D%3D.uBZawa6McR88BaRYADqIOUj9E1UCvxE19DsGSkwP4lGI2kkM%2BkXvTbSTN4HjMXM2LBRG78zmr548EAJqs4jrxA%3D%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/aliyun/alibabacloud-observability-mcp-server</a> ）并使用同一套 brise 评分器。</p><p><br></p><div><div class=\"markdown-table-wrap\"><table><thead><tr><td>评测项</td><td>STAROps</td><td>OpenClaw + DeepSeek-V4-Pro</td><td>差值</td></tr></thead><tbody><tr><td>综合分</td><td>75.23</td><td>51.02</td><td>+24.2</td></tr><tr><td>根因实体</td><td>90</td><td>52.8</td><td>+37.2</td></tr><tr><td>故障类型</td><td>58</td><td>33.3</td><td>+24.7</td></tr><tr><td>调查过程</td><td>75</td><td>69.8</td><td>+5.2</td></tr></tbody></table></div></div><p><br></p><p>总分之外，更值得看的是差距出现在哪里。</p><p><br></p><p>两套系统的调查过程分只差 5.2，说明通用 Agent 已经可以完成多轮查询，也能写出相对完整的分析。真正拉开差距的是根因实体和故障类型。调查对象一旦选错，后面的指标、日志和 Trace 都会围绕错误对象展开；故障类型一旦判断错，修复建议也就失去了基础。</p><p><br></p><p>分故障大类看，STAROps 在数据库、节点、代码和资源类案例中分别领先 50.6、29.9、27.6 和 24.2 分。流量类低于对照组 11.2 分，主要受限流场景影响。限流、DNS、CDN、第三方服务和公网链路等问题，是 STAROps 下一步的重点攻坚方向。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b65eab383332418db3cb74bf10262e88.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-典型示例\">典型示例<a class=\"heading-anchor\" href=\"#section-典型示例\" aria-label=\"链接到本节：典型示例\">#</a></h2><p>困难案例不一定使用了多么冷门的技术。真正的难点，往往是告警离根因很远，现场又同时存在几个说得通的解释。下面两个案例都属于这种情况。</p><h3 id=\"section-product-catalog-流量下降-问题却出在底层-node\">product-catalog 流量下降，问题却出在底层 Node<a class=\"heading-anchor\" href=\"#section-product-catalog-流量下降-问题却出在底层-node\" aria-label=\"链接到本节：product-catalog 流量下降，问题却出在底层 Node\">#</a></h3><p>节点 CPU 高案例 <strong>[</strong> <strong>3]</strong> 从一条 <code>product-catalog::ListProducts</code> 流量下降告警开始。</p><p><br></p><p>如果只看业务侧数据，最容易怀疑 frontend。它的流量和错误率同时发生变化，又是 product-catalog 的上游入口。通用型 ReAct Agent 最终判断为负载均衡故障，OpenClaw 判断为 frontend HTTP 5xx。两份报告都有数据，也都能讲出一条看起来成立的传播路径。</p><p><br></p><p>真实根因在 Kubernetes Node <code>cn-hongkong.10.0.1.107</code>。该节点 CPU 使用率从约 10.38% 升至 99.98%，同节点上的多个 Pod 一起受到影响。frontend 流量下降 66.66%，随后 <code>ListProducts</code> 流量下降 62.48%，最终触发业务告警。</p><p><br></p><p>STAROps 没有停在 frontend，而是从告警 Operation 找到所属 Service，再沿运行关系找到 Pod 和宿主 Node。其他节点保持正常、同一节点上的多个 Pod 同时退化，这两组证据把调查范围收敛到了基础设施层。</p><p><br></p><p>这次评测中，ReAct 得分 15，OpenClaw 得分 12，STAROps 得分 94。如果按照前两个结论处置，团队可能会继续检查负载均衡、扩容 frontend，真正占满 CPU 的 Node 却没有被处理。</p><pre><code>Node CPU 持续接近 100%\n        ↓\n同节点多个 Pod 运行受影响\n        ↓\nfrontend 等业务服务同步退化\n        ↓\nproduct-catalog 接口流量下降并告警</code></pre><h3 id=\"section-前端-checkout-变慢-根因却是-inventory-的慢-sql\">前端 Checkout 变慢，根因却是 inventory 的慢 SQL<a class=\"heading-anchor\" href=\"#section-前端-checkout-变慢-根因却是-inventory-的慢-sql\" aria-label=\"链接到本节：前端 Checkout 变慢，根因却是 inventory 的慢 SQL\">#</a></h3><p>数据库慢 SQL 案例 <strong>[</strong> <strong>4]</strong> 的告警打在 <code>frontend::POST /api/checkout</code>。现场同时出现了 checkout 内部耗时、Kafka 延迟、JVM GC、线程数变化和 Deployment 扩缩容。任何一个信号单独拿出来，都可能成为一个合理根因。</p><p><br></p><p>通用 ReAct Agent 认为 checkout 存在代码缺陷，OpenClaw 把问题定位在 frontend Checkout 逻辑。它们都抓到了一部分异常，但调查停在了传播链中间。</p><p><br></p><p>STAROps 继续沿 Trace 向下追。checkout 依赖 cart，cart 再依赖 inventory。inventory 的慢 Trace 中出现了耗时约 10.8 秒的 <code>SELECT</code>，获取数据库连接又花了约 2.1 秒。慢查询拖住 inventory，随后沿 <code>inventory → cart → checkout → frontend</code> 一路传导，最终表现为前端接口响应慢。</p><p><br></p><p>这条链路上还有不少干扰项。Kafka 延迟只有毫秒级，解释不了秒级超时；GC、线程数变化和 Deployment 扩缩容发生在服务退化过程中，更像慢查询引发的后续反应。把这些信号放回同一条时间线后，根因才从多个候选中收敛到 inventory 的 slow SQL。</p><p><br></p><p>ReAct Agent 和 OpenClaw 在这个案例中都得到 15 分，STAROps 得到 84 分。如果按代码缺陷处理，团队可能会回滚 frontend 或 checkout，而真正阻塞调用链的 SQL 仍然存在。</p><p><br></p><pre><code>inventory 慢查询与连接获取阻塞\n        ↓\ncart 调用 inventory 变慢\n        ↓\ncheckout 调用链延迟\n        ↓\nfrontend Checkout 响应慢并告警</code></pre><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_27415b578d684e7f8953ba7cc68dac2f.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-结语\">结语<a class=\"heading-anchor\" href=\"#section-结语\" aria-label=\"链接到本节：结语\">#</a></h2><p>这两个故障，一个发生在节点资源层，一个发生在数据库访问链路，看起来没有多少共同点。STAROps 使用的数据和调查路径也不一样，但判断方法是一致的：先确认对象，再沿关系取证；出现多个候选时，把它们放到同一条时间线里，检查谁能解释完整的传播过程，谁只是伴随症状。</p><p><br></p><p>这才是泛化能力需要解决的问题。我们无法实现让 Agent 预先知道每一种故障，却要保证面对陌生问题时，仍然有办法把调查推进下去，并在证据不足时守住边界。</p><p><br></p><p>因此，我们把 RCA 放在 STAROps 的核心位置。Agent 只有稳定找对对象、判对原因，影响分析、修复建议和变更执行才有可靠的起点。随着 Agent 获得更多生产权限，根因判断错误的代价也会随之放大。一次错误判断，可能从误导工程师升级为错误扩容、错误回滚或错误配置变更。</p><p><br></p><p>我们判断，未来 AgenticOps 的能力差距会越来越集中在判断质量上。工具调用和自动执行会逐渐成为基础能力。面对陌生故障时，能否建立完整的证据链，能否区分根因和伴随现象，能否在证据不足时及时停下，会直接决定 Agent 能不能真正进入生产。</p><p><br></p><p>对 STAROps 来说，根因定位是一项需要持续用真实故障校准的工程。把判断做准、把边界说清，仍然是我们推进生产级 AgenticOps 最重要的工作。</p><p><br></p><p><span><span><strong>相关链接：</strong></span></span></p><p><span><span><span>[1]&nbsp;</span></span><span><span>RCA-Bench</span></span></span><span><span><br></span></span></p><p><span><em><a href=\"https://sls.aliyun.com/doc/starops/benchmark/rca/rca_benchmark_dataset.html?spm=a2c6h.13046898.publish-article.17.39406ffaNMsVB9\" target=\"_blank\" rel=\"noopener noreferrer\">https://sls.aliyun.com/doc/starops/benchmark/rca/rca_benchmark_dataset.html</a></em><span><br></span></span><span></span></p><p><span><span><span>[2]&nbsp;</span></span><span><span>RCA Agent 评测结果</span></span></span><span><span><br></span></span></p><p><span><em><a href=\"https://sls.aliyun.com/doc/starops/benchmark/rca/rca_benchmark_results.html?spm=a2c6h.13046898.publish-article.18.39406ffaNMsVB9\" target=\"_blank\" rel=\"noopener noreferrer\">https://sls.aliyun.com/doc/starops/benchmark/rca/rca_benchmark_results.html</a></em><span><br></span></span><span></span></p><p><span><span><span>[3]&nbsp;</span></span><span><span>节点 CPU 高案例</span></span></span><span><span><br></span></span></p><p><span><em><a href=\"https://sls.aliyun.com/doc/starops/benchmark/rca/case_01_F026-nodeCpuHigh.html?spm=a2c6h.13046898.publish-article.19.39406ffaNMsVB9\" target=\"_blank\" rel=\"noopener noreferrer\">https://sls.aliyun.com/doc/starops/benchmark/rca/case_01_F026-nodeCpuHigh.html</a></em><span><br></span></span><span></span></p><p><span><span><span>[4]&nbsp;</span></span><span><span>数据库慢 SQL 案例</span></span></span><span><span><br></span></span></p><p><span><em><a href=\"https://sls.aliyun.com/doc/starops/benchmark/rca/case_31_F010-slowSQL.html?spm=a2c6h.13046898.publish-article.20.39406ffaNMsVB9\" target=\"_blank\" rel=\"noopener noreferrer\">https://sls.aliyun.com/doc/starops/benchmark/rca/case_31_F010-slowSQL.html</a></em></span></p>",
+    "headings": [
+      {
+        "id": "section-根因判断错了-后面的动作都会错",
+        "level": 2,
+        "text": "根因判断错了，后面的动作都会错"
+      },
+      {
+        "id": "section-为什么-poc-证明不了根因定位能力",
+        "level": 2,
+        "text": "为什么 POC 证明不了根因定位能力"
+      },
+      {
+        "id": "section-真正的生产故障没有固定剧本",
+        "level": 2,
+        "text": "真正的生产故障没有固定剧本"
+      },
+      {
+        "id": "section-starops-如何把-rca-做成一项系统能力",
+        "level": 2,
+        "text": "STAROps 如何把 RCA 做成一项系统能力"
+      },
+      {
+        "id": "section-先把系统看明白-umodel",
+        "level": 3,
+        "text": "先把系统看明白：UModel"
+      },
+      {
+        "id": "section-静态拓扑不够-调查过程也要画在图上",
+        "level": 3,
+        "text": "静态拓扑不够，调查过程也要画在图上"
+      },
+      {
+        "id": "section-用-benchmark-拆穿-看起来正确",
+        "level": 3,
+        "text": "用 Benchmark 拆穿“看起来正确”"
+      },
+      {
+        "id": "section-线上问题必须回到下一次迭代",
+        "level": 3,
+        "text": "线上问题必须回到下一次迭代"
+      },
+      {
+        "id": "section-能力横评-报告写得完整-不等于根因找得准确",
+        "level": 2,
+        "text": "能力横评：报告写得完整，不等于根因找得准确"
+      },
+      {
+        "id": "section-典型示例",
+        "level": 2,
+        "text": "典型示例"
+      },
+      {
+        "id": "section-product-catalog-流量下降-问题却出在底层-node",
+        "level": 3,
+        "text": "product-catalog 流量下降，问题却出在底层 Node"
+      },
+      {
+        "id": "section-前端-checkout-变慢-根因却是-inventory-的慢-sql",
+        "level": 3,
+        "text": "前端 Checkout 变慢，根因却是 inventory 的慢 SQL"
+      },
+      {
+        "id": "section-结语",
+        "level": 2,
+        "text": "结语"
+      }
+    ],
+    "textLength": 6413,
+    "readingMinutes": 15,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1758148",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "72f23c30b39aa7d00336303a746bbee80335678aa1871d6332c9fc79578c849a",
+    "fetchedAt": "2026-11-02T07:09:19.854Z",
+    "checkedAt": "2026-11-02T07:09:19.854Z",
+    "nextRetryAt": "2026-12-02T07:09:19.854Z",
+    "warnings": []
+  }
+}

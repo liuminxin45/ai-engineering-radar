@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "0ec15a913ea51fb23b10",
+    "status": "ready",
+    "html": "<p>作者：袁坤（丹坤）</p><p><br></p><blockquote>OpenAgentPack：把云端 Agent 带回 Git，让工作流不受硬件设备、平台绑定，可复现、可验证、可协作。</blockquote><p>你花了几周，调好一个行业研究 Agent。</p><p>它会按你的框架读访谈记录和市场资料，判断信源，调用工具，再输出一份结论先行的报告。你给它一句任务，它已经知道该查什么、怎么组织、哪些结论需要证据支撑。</p><p>直到有一天，你换了电脑、换了账号，或者进入一家新公司。</p><p>原来的 Agent 留在旧平台：Prompt 在一个页面，MCP 在另一处，Skill、知识文件和运行配置散在各处；密钥也只存在旧环境里。你带走的，可能只有截图、零散文件和一段很难复述清楚的经验。</p><p><strong>真正难带走的不是一次对话，而是那套已经被你调顺的工作流。</strong></p><p>这正是我们开源&nbsp;OpenAgentPack&nbsp;的原因。</p><p><strong>项目地址：</strong> GitHub - OpenAgentPack</p><p><a href=\"https://link.segmentfault.com/?enc=33HHmjisXrh23LYpKXWGzg%3D%3D.9QqBfxIiVDm%2F1ffH0aPophfw6CyvnLOqJVER5DK3Al5aTPbrNfkftEE%2Bkx8cdz%2Fq\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/modelstudioai/OpenAgentPack</a></p><h2 id=\"section-把-agent-打包-带回-git\">把 Agent 打包，带回 Git<a class=\"heading-anchor\" href=\"#section-把-agent-打包-带回-git\" aria-label=\"链接到本节：把 Agent 打包，带回 Git\">#</a></h2><p>一个能完成真实工作的云端 Agent，远不止一段 Prompt。</p><p>它还包括模型、运行环境、工具、Skill、MCP、知识文件、凭据引用、Memory 和任务调度。这些共同决定了它能做什么、如何做、能否稳定复现。</p><p>OpenAgentPack 用一份 <code>agents.yaml</code> 描述这套工作流，并用 Git 保存其演进：</p><pre><code>agents.yaml → validate → plan → apply</code></pre><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_7152abd8cc6d4c8b984bf04f6467dbbb.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>例如，一个研究 Agent 的关键组成可以放在同一个项目里：</p><pre><code>skills:\n  industry-research:\n    source: ./skills/industry-research/\nagents:\n  researcher:\n    instructions: ./prompts/researcher.md\n    environment: dev\n    skills: [industry-research]</code></pre><p>换到新环境时，不需要靠记忆重新点击控制台。你可以校验声明、预览变化，再部署到新的云端 Agent 平台：</p><pre><code>agents validate\nagents plan\nagents apply</code></pre><p>这不是把所有平台说成完全一样。不同 Provider 的能力确实不同。OpenAgentPack 会明确标识某项能力是 <code>native</code>、<code>emulated</code> 还是 <code>unsupported</code>，让你知道哪些核心工作流可以复现、哪里需要调整，而不是等到迁移后才发现差异。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b792ef261ef24dd4ae8a938ca9c71460.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-不是存一份文件-而是让工作流重新跑起来\">不是存一份文件，而是让工作流重新跑起来<a class=\"heading-anchor\" href=\"#section-不是存一份文件-而是让工作流重新跑起来\" aria-label=\"链接到本节：不是存一份文件，而是让工作流重新跑起来\">#</a></h2><p>“把 Prompt、MCP 和 Skill 放进 Git”，当然是第一步。</p><p>但 Git 保存的是配方；你仍然需要知道这份配方会怎样影响云端的真实 Agent：哪些资源会创建、哪些会更新、哪些会删除，依赖是否齐全，新的配置能不能真正把任务完成。</p><p>OpenAgentPack 的 <code>plan</code> 会比较三种状态：</p><ul><li><code>Config</code>：<code>agents.yaml</code> 中希望得到的 Agent；</li><li><code>State</code>：已管理资源与远端 ID、内容哈希的映射；</li><li><code>Remote</code>：Provider 上真实存在的资源。</li></ul><p>因此，在执行前就能看到即将发生的 <code>create</code>、<code>update</code> 和 <code>delete</code>。没有变化的资源不会重复更新；控制台里的手工改动也可以被识别为 Drift。</p><p>这让“带走 Agent”不只是备份，而是一次可预览、可追踪的复现。</p><h2 id=\"section-再跑一次-确认它仍然好用\">再跑一次，确认它仍然好用<a class=\"heading-anchor\" href=\"#section-再跑一次-确认它仍然好用\" aria-label=\"链接到本节：再跑一次，确认它仍然好用\">#</a></h2><p>基础设施部署正确，不等于 Agent 的效果仍然正确。</p><p>OpenAgentPack 自带本地 Playground。运行 <code>agents playground</code> 后，它会读取同一份 <code>agents.yaml</code>，让你选择已声明的 Agent，发起真实的云端 Session，观察工具调用和产物。</p><p>还是那个研究 Agent：上传访谈记录和市场调研 PDF，再交给它一个熟悉的任务。</p><p>帮我把这些访谈记录和市场调研笔记整理成一份结构清晰的行业研究报告，要求结论先行、数据驱动。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_f72e4fcbe944413194bea4df72b09d7b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>你可以直接检查它是否读到了正确资料、调用了预期工具、是否仍按你的框架输出结果。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_eb06a3560e0949b38f65fc308ee39864.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>可以把它理解为：<code>agents.yaml</code> 是图纸，<code>plan</code> 和 <code>apply</code> 是施工，Playground 是验收。图纸能带走，验收也能在新环境重做。</p><h2 id=\"section-从-我的-agent-到-团队的工作方法\">从“我的 Agent”到“团队的工作方法”<a class=\"heading-anchor\" href=\"#section-从-我的-agent-到-团队的工作方法\" aria-label=\"链接到本节：从“我的 Agent”到“团队的工作方法”\">#</a></h2><p>当一个人能带走自己调好的 Agent，团队才能真正开始积累。</p><p>一位资深研究员沉淀的，不只是某次报告，而是信源判断、分析框架、工具使用方式和交付标准。把它们放进 Git 后：</p><ul><li>研究框架升级，可以通过 Pull Request 讨论和审查；</li><li>工具、MCP 和权限扩大，有明确的变更记录；</li><li>效果下降，可以回到一个已验证的版本；</li><li>新同事可以复用经过验证的 Agent，而不是从零搭建；</li><li>团队需要换账号、换环境或评估新 Provider 时，核心工作流仍在自己手里。</li></ul><p>同样的方式也适用于日报周报、竞品追踪、内容生产、客服质检、数据分析和合规审阅。</p><p>如果这套工作流需要持续运行，也可以把 Agent、初始任务和调度方式一同声明为 Deployment：</p><pre><code>deployments:\n  daily-report:\n    agent: reporter\n    schedule:\n      expression: \"0 9 * * *\"\n      timezone: Asia/Shanghai\n    initial_events:\n      - type: user.message\n        content: \"汇总昨天的项目进展，按模板生成日报。\"</code></pre><p>Agent 可以继续通过钉钉等 IM Channel 进入团队熟悉的入口；但它背后的角色、知识、工具和环境不再是一个只能在控制台里猜测的黑盒。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_fc2f0d27b7244591b5638b5ac96fce74.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-五分钟-把一个-agent-带回-git\">五分钟，把一个 Agent 带回 Git<a class=\"heading-anchor\" href=\"#section-五分钟-把一个-agent-带回-git\" aria-label=\"链接到本节：五分钟，把一个 Agent 带回 Git\">#</a></h2><p>OpenAgentPack 目前处于 Beta 阶段，1.0&nbsp;前公开 API 和&nbsp;agents.yaml&nbsp;Schema 仍可能调整。建议从你正在使用的一个测试 Agent 开始。</p><p>准备 Node.js 22 或更高版本，以及任一已支持 Provider 的凭据：</p><pre><code>npm install -g @openagentpack/cli\nmkdir my-agents &amp;&amp; cd my-agents\nagents init</code></pre><p>然后检查并预览你的第一个声明：</p><pre><code>agents validate\nagents plan</code></pre><p>确认后部署，并运行一次真实任务：</p><pre><code>agents apply\nagents session run \"介绍一下你能做什么\" --agent assistant</code></pre><p>也可以启动本地 Playground：</p><pre><code>agents playground</code></pre><p>快速开始：<a href=\"https://link.segmentfault.com/?enc=3DE3e7yMqov2Sfk5beKkDw%3D%3D.86p%2Ff7X5lNEfN5uYj2US6trE7opPZsCYcFaIR%2Bx%2BQq4jskvNflfoS1ZiqNuMzva5%2BIGKT0FiZMsWbN3qE89RTxQe4VaXNFY0ofdZ%2BRSrvOqmmvSRe0v%2F5kIW1ZO5FqlC\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/modelstudioai/OpenAgentPack/blob/main/docs/getting-started.zh-CN.md</a></p><p>可运行示例：<a href=\"https://link.segmentfault.com/?enc=7CRG00dpiH%2BG97bASIIUtg%3D%3D.hW7oreUw2ZH776x2dttQ0UBfNf3AAUh8OxBb35Z1T272pTyikxgdwJNMkC5x9ejn2xdAZV1AO9XgYe8jhlTQGl7869S6h0dvY3I438F50%2FQ%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/modelstudioai/OpenAgentPack/tree/main/examples</a></p><p>Provider 能力矩阵：<a href=\"https://link.segmentfault.com/?enc=xWkm09ULdkgqVv%2FLd%2F9fHQ%3D%3D.ZcW3nLX5E7SZervzwk0Tugf%2FEbPF%2Fl0Wdk5lLsqjJlAcY0ZsaL8dyqYH3FXcGfOsRI9GIOeqyJ57WXeJsvzj%2FCUY0%2FudyL9sWN281SoYpQjFJUrZxXkpKtVy1HFnB31d\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/modelstudioai/OpenAgentPack/blob/main/docs/reference/providers.zh-CN.md</a></p><h2 id=\"section-把工作流留在自己手里\">把工作流留在自己手里<a class=\"heading-anchor\" href=\"#section-把工作流留在自己手里\" aria-label=\"链接到本节：把工作流留在自己手里\">#</a></h2><p>模型会变，账号和电脑会变，团队与平台也可能会变。</p><p>但你调教出的研究方法、工作流程和判断标准，不应该只活在某个控制台或某个个人环境里。</p><p>OpenAgentPack 想做的事情很具体：<strong>把云端 Agent 带回 Git，让它能被复现、验证、协作迭代，并在需要时保有迁移的选择。</strong></p><p><strong>相关链接：</strong></p><p>[1]&nbsp;把一个 Agent 带回 Git：Star OpenAgentPack</p><p><a href=\"https://link.segmentfault.com/?enc=GXzeHG7PFWhgiJbo4NxfTQ%3D%3D.EB27e7cNtkNWavJj8blM9CPgA69RraolOeEECgw0nC6m1dXZ%2Fb%2B7i93Gte0o5yWR\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/modelstudioai/OpenAgentPack</a></p><p>[2]&nbsp;提交 Issue</p><p><a href=\"https://link.segmentfault.com/?enc=RImp0jD%2FuOBZcnfOcgrAxw%3D%3D.yeUMvUpYbQ%2FMisWCL%2BKXkNtQC9QA%2FFbWLnPnrjTELQHPlsIMsa5LdWVoRW%2BLUbmu6knnm6lxhCk1pRYYvCyq7g%3D%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/modelstudioai/OpenAgentPack/issues</a></p><p>[3]&nbsp;参与贡献</p><p><a href=\"https://link.segmentfault.com/?enc=BQA1PMGwagiLSasQuUrq4w%3D%3D.W5WcLI%2BnnSIfWN9O%2Fg0elSkjg5HYHDB4Me8oN6Spm48FGD5kRxslQoudl8TYO2t18wJBRg974fRFszlAPDgCIxbSCrfpjnv41Zf5vUGwROI%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/modelstudioai/OpenAgentPack/blob/main/CONTRIBUTING.md</a></p>",
+    "headings": [
+      {
+        "id": "section-把-agent-打包-带回-git",
+        "level": 2,
+        "text": "把 Agent 打包，带回 Git"
+      },
+      {
+        "id": "section-不是存一份文件-而是让工作流重新跑起来",
+        "level": 2,
+        "text": "不是存一份文件，而是让工作流重新跑起来"
+      },
+      {
+        "id": "section-再跑一次-确认它仍然好用",
+        "level": 2,
+        "text": "再跑一次，确认它仍然好用"
+      },
+      {
+        "id": "section-从-我的-agent-到-团队的工作方法",
+        "level": 2,
+        "text": "从“我的 Agent”到“团队的工作方法”"
+      },
+      {
+        "id": "section-五分钟-把一个-agent-带回-git",
+        "level": 2,
+        "text": "五分钟，把一个 Agent 带回 Git"
+      },
+      {
+        "id": "section-把工作流留在自己手里",
+        "level": 2,
+        "text": "把工作流留在自己手里"
+      }
+    ],
+    "textLength": 3356,
+    "readingMinutes": 8,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1755288",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "b7ecb735766e87d966fc710ac590f9ee1f32009f237ee4f062ca5b090efc783f",
+    "fetchedAt": "2026-11-02T07:09:35.343Z",
+    "checkedAt": "2026-11-02T07:09:35.343Z",
+    "nextRetryAt": "2026-12-02T07:09:35.343Z",
+    "warnings": []
+  }
+}

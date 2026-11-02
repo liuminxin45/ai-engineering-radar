@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "dc175102d419c8544048",
+    "status": "ready",
+    "html": "<p>作者：金融通</p><p><br></p><p>近日，阿里云消息团队发表的 <strong>Apache RocketMQ</strong> 高可用创新论文 <strong>《无业务数据复制的故障接管：面向有状态服务的协议级安全接管》</strong>（英文原名：Replication-Free Failover: Protocol-Fenced Takeover for Stateful Services）入选 <strong>FSE 2026 Industry Papers Track</strong>。</p><p><br></p><p>ACM FSE（The ACM International Conference on the Foundations of Software Engineering）是享有盛誉的国际学术会议，被《中国计算机学会推荐国际学术会议和期刊目录》列为 CCF-A 类软件工程顶级会议。FSE 2026 于 2026 年 7 月 5 日至 9 日在加拿大蒙特利尔举行，Industry Papers Track 重点关注软件工程研究在真实工业场景中的创新与应用。</p><p><br></p><p>此次入选论文来自阿里云消息团队长期建设和运维大规模云上消息服务的实践。面对数千个租户隔离的 RocketMQ 有状态集群，团队提出 <strong>Replication-Free Failover</strong>，旨在<strong>低成本、高稳态性能和快速恢复</strong>之间取得更好的平衡。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_fc244bc59ef74af48c08ed2fc0809647.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>FSE 2026 官方论文页面</em></p><h2 id=\"section-创新亮点-不复制业务数据-也能安全接管有状态服务\">创新亮点：不复制业务数据，也能安全接管有状态服务<a class=\"heading-anchor\" href=\"#section-创新亮点-不复制业务数据-也能安全接管有状态服务\" aria-label=\"链接到本节：创新亮点：不复制业务数据，也能安全接管有状态服务\">#</a></h2><p>云上有状态服务通常希望同时获得低成本、高稳态性能和快速恢复，但三者很难兼得。围绕这一工程难题，论文的创新主要体现在以下几个方面。</p><h3 id=\"section-1-无需额外业务数据复制-正常数据路径保持不变\">1. 无需额外业务数据复制，正常数据路径保持不变<a class=\"heading-anchor\" href=\"#section-1-无需额外业务数据复制-正常数据路径保持不变\" aria-label=\"链接到本节：1. 无需额外业务数据复制，正常数据路径保持不变\">#</a></h3><p>方案继续使用单副本、单机文件系统和具备存储侧冗余能力的云块存储，不在 RocketMQ 服务层增加额外业务数据副本，也不引入额外写放大；同时无需重写 CommitLog / WAL，尽可能保留原有的成本与稳态性能优势，并最大程度保持与 Apache RocketMQ 社区版本的兼容性。</p><h3 id=\"section-2-协议级安全接管-并可验证所有权转移\">2. 协议级安全接管，并可验证所有权转移<a class=\"heading-anchor\" href=\"#section-2-协议级安全接管-并可验证所有权转移\" aria-label=\"链接到本节：2. 协议级安全接管，并可验证所有权转移\">#</a></h3><p>方案利用多挂载（Multi-Attach）提前使磁盘对候选节点可见，并通过 NVMe Persistent Reservation（NVMe PR）将写权限控制下沉至存储协议层。在此基础上，引入持有者校验、原子化抢占、关键阶段标记和退避机制，避免文件系统恢复过程中写权限被再次抢占。</p><h3 id=\"section-3-面向本地文件系统的接管一致性闭环\">3. 面向本地文件系统的接管一致性闭环<a class=\"heading-anchor\" href=\"#section-3-面向本地文件系统的接管一致性闭环\" aria-label=\"链接到本节：3. 面向本地文件系统的接管一致性闭环\">#</a></h3><p>方案将确认写权限、清理接管节点的旧缓存、挂载文件系统、执行文件系统日志回放与应用崩溃恢复，以及通过就绪检查恢复流量纳入同一状态机，解决共享盘对新节点可见以后，如何安全恢复持久化状态和服务的问题。</p><h3 id=\"section-4-基于持久化进展的去中心化故障探测\">4. 基于持久化进展的去中心化故障探测<a class=\"heading-anchor\" href=\"#section-4-基于持久化进展的去中心化故障探测\" aria-label=\"链接到本节：4. 基于持久化进展的去中心化故障探测\">#</a></h3><p>方案通过共享盘中租约（lease）记录的版本进展判断当前主节点是否仍能完成持久化，而不仅仅判断进程或者节点是否存活。因此，它能够识别 I/O 卡顿（I/O hang）等“节点仍然存活，但持久化状态已经停止推进”的故障，并减少对集中式控制面的依赖；在网络分区等场景下，则由存储协议层的写隔离保证接管后的单写安全。</p><h3 id=\"section-5-最小权限-可审计的生产级端到端落地\">5. 最小权限、可审计的生产级端到端落地<a class=\"heading-anchor\" href=\"#section-5-最小权限-可审计的生产级端到端落地\" aria-label=\"链接到本节：5. 最小权限、可审计的生产级端到端落地\">#</a></h3><p>方案将 NVMe PR、缓存处理和挂载等高权限操作收敛到节点侧 Agent，业务容器无需获得系统级权限；同时将故障发现、写权限切换、应用恢复和流量恢复串联起来，形成可观测、可审计、可持续演练的端到端恢复流程。</p><p><br></p><p>区别于通过重构存储引擎、引入共享 WAL 和对象存储，使节点无状态化的技术路线，本方案选择<strong>保留 RocketMQ 已有的单机文件系统和正常读写语义，只重新设计故障接管路径</strong>。由于高可用机制<strong>不替换正常存储引擎</strong>，既能继续复用成熟的 CommitLog、文件系统缓存和崩溃恢复能力，也使后续新增存储特性无需为高可用路径单独重构。</p><p><br></p><p>由此，方案<strong>既降低了对 Broker 核心代码的侵入和改造范围，也减少了后续社区版本升级与长期维护成本</strong>，更适合已经运行在生产环境中的单主有状态服务。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_943bd9857e674dc0b6b09d1ed3e72add.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>Replication-Free Failover 整体架构图</em></p><h2 id=\"section-评估与生产验证-从分钟级恢复压缩到秒级\">评估与生产验证：从分钟级恢复压缩到秒级<a class=\"heading-anchor\" href=\"#section-评估与生产验证-从分钟级恢复压缩到秒级\" aria-label=\"链接到本节：评估与生产验证：从分钟级恢复压缩到秒级\">#</a></h2><p>论文以 Apache RocketMQ 为代表性工作负载进行评估。结果表明，该方案可以将节点故障后的恢复时间从常见 Kubernetes 单副本云盘方案的<strong>分钟级缩短至秒级</strong>，同时<strong>保持接近原生单副本部署的吞吐和延迟表现</strong>。</p><p><br></p><p>论文还报告了方案的生产验证：系统已完成<strong>数万次灾备演练</strong>，并在<strong>生产环境运行</strong>。该工作将阿里云消息团队在节点宕机、I/O 卡顿和网络分区等真实故障中的实践，沉淀为一种适用于<strong>单主、单写有状态服务的高可用设计</strong>，为云上基础软件在成本、性能和恢复速度之间提供了新的工程化选择。</p><p><br></p><p>随着 AI Infra 对可靠消息传递和有状态服务的需求增长，这类高可用能力也具备进一步的复用价值。产品能力与配置说明可参见阿里云官方文档：云消息队列 RocketMQ 版实例容灾 <strong>[</strong> <strong>1]</strong> 。</p><p><br></p><p>面向未来，阿里云消息团队将继续围绕 Apache RocketMQ 的云原生、高可用、弹性伸缩和智能运维能力展开探索，把大规模生产经验转化为可复用的技术能力，为企业级消息系统提供<strong>更稳定、更高效、更低成本</strong>的基础设施支撑。</p><p><br></p><p><strong>附论文信息：</strong></p><p><strong>论文题目：</strong>《无业务数据复制的故障接管：面向有状态服务的协议级安全接管》（英文原名：Replication-Free Failover: Protocol-Fenced Takeover for Stateful Services）</p><p><strong>作者：</strong> 金融通、古崟佑、季俊涛、傅玉宝、刘涛、赖福智、蔡高扬、林清山（均来自阿里云）</p><p><strong><br></strong></p><p><strong>论文概述：</strong> 本文面向云上单主有状态服务，提出一种无需额外业务数据复制的故障接管机制。方案保持单副本单机文件系统的正常数据路径不变，并通过存储协议层的写隔离缩短恢复链路。实验与生产实践表明，该方案能够在保持接近单副本稳态性能的同时实现秒级恢复。</p><p><br></p><p><strong>相关链接：</strong></p><p><span><span><span>[1]&nbsp;</span></span><span><span>云消息队列 RocketMQ 版实例容灾产品能力与配置说明</span></span></span></p><p><span><em><a href=\"https://help.aliyun.com/zh/apsaramq-for-rocketmq/cloud-message-queue-rocketmq-5-x-series/security-and-compliance/instance-disaster-recovery?spm=a2c6h.13046898.publish-article.15.30d46ffaXp9BQZ#h3-data-ha\" target=\"_blank\" rel=\"noopener noreferrer\">https://help.aliyun.com/zh/apsaramq-for-rocketmq/cloud-message-queue-rocketmq-5-x-series/security-and-compliance/instance-disaster-recovery#h3-data-ha</a></em></span><span></span></p><p><span></span><span><span><span>[2]&nbsp;</span></span><span><span>FSE 2026 官方论文详情页</span></span></span></p><p><span><em><a href=\"https://conf.researchr.org/details/fse-2026/fse-2026-industry-papers/25/Replication-Free-Failover-Protocol-Fenced-Takeover-for-Stateful-Services?spm=a2c6h.13046898.publish-article.16.30d46ffaXp9BQZ\" target=\"_blank\" rel=\"noopener noreferrer\">https://conf.researchr.org/details/fse-2026/fse-2026-industry-papers/25/Replication-Free-Failover-Protocol-Fenced-Takeover-for-Stateful-Services</a></em></span></p><p><span></span><span><span><span>[3]&nbsp;</span></span><span><span>ACM Digital Library 完整论文下载</span></span></span></p><p><span><em><a href=\"https://dl.acm.org/doi/10.1145/3803437.3805226?spm=a2c6h.13046898.publish-article.17.30d46ffaXp9BQZ&amp;file=3803437.3805226\" target=\"_blank\" rel=\"noopener noreferrer\">https://dl.acm.org/doi/10.1145/3803437.3805226</a></em></span></p><p><br></p><p><span><span><span>欢迎关注 Apache RocketMQ 中文社区</span><em>（</em></span></span><span><span><em><a href=\"https://rocketmq-learning.com/?spm=a2c6h.13046898.publish-article.13.30d46ffaXp9BQZ\" target=\"_blank\" rel=\"noopener noreferrer\">https://rocketmq-learning.com/</a></em></span></span><span><span><em>）</em><span>，了解 RocketMQ 最新版本、技术文章、最佳实践与社区活动。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>也欢迎加入 Apache RocketMQ 开发者交流群（钉钉群号：44552972），与社区开发者一起交流 RocketMQ 在高可用、云原生架构与 AI 原生消息场景中的实践。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_6c6be13464814a2ea261dbefc60ba3c7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [
+      {
+        "id": "section-创新亮点-不复制业务数据-也能安全接管有状态服务",
+        "level": 2,
+        "text": "创新亮点：不复制业务数据，也能安全接管有状态服务"
+      },
+      {
+        "id": "section-1-无需额外业务数据复制-正常数据路径保持不变",
+        "level": 3,
+        "text": "1. 无需额外业务数据复制，正常数据路径保持不变"
+      },
+      {
+        "id": "section-2-协议级安全接管-并可验证所有权转移",
+        "level": 3,
+        "text": "2. 协议级安全接管，并可验证所有权转移"
+      },
+      {
+        "id": "section-3-面向本地文件系统的接管一致性闭环",
+        "level": 3,
+        "text": "3. 面向本地文件系统的接管一致性闭环"
+      },
+      {
+        "id": "section-4-基于持久化进展的去中心化故障探测",
+        "level": 3,
+        "text": "4. 基于持久化进展的去中心化故障探测"
+      },
+      {
+        "id": "section-5-最小权限-可审计的生产级端到端落地",
+        "level": 3,
+        "text": "5. 最小权限、可审计的生产级端到端落地"
+      },
+      {
+        "id": "section-评估与生产验证-从分钟级恢复压缩到秒级",
+        "level": 2,
+        "text": "评估与生产验证：从分钟级恢复压缩到秒级"
+      }
+    ],
+    "textLength": 3004,
+    "readingMinutes": 7,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1753193",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "582ad290869b74e71e9d02df61c3f2e220ab127518023b15fa4e7cf9dd1ee1bd",
+    "fetchedAt": "2026-11-02T07:09:37.268Z",
+    "checkedAt": "2026-11-02T07:09:37.268Z",
+    "nextRetryAt": "2026-12-02T07:09:37.268Z",
+    "warnings": []
+  }
+}

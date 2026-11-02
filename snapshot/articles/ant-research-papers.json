@@ -477,6 +477,14 @@
         "version": "source-index-1",
         "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
       "publicationStatus": "published",
       "locations": [
         {
@@ -485,15 +493,7 @@
           "url": "https://doi.org/10.1145/3768621"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "41227abcf40f869bc5e5",

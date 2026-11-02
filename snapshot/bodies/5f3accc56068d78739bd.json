@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "5f3accc56068d78739bd",
+    "status": "ready",
+    "html": "<p><span>作者：</span><span>腾讯<span><span><span>WorkBuddy</span></span></span>团队</span></p><p><span>很多</span><span>人在使用 WorkBuddy 时，都可能遇到过：对话一长就开始出错；只想聊思路，</span><span>但直接生成了文件；技能装了不少，真正要用时反而不知道怎么选……</span></p><p><span>此前，我们已经整理过一份&nbsp;<span>WorkBuddy 的「从入门到精通」完整指南</span>：从下载安装到基础使用，</span><span>再到进阶玩法与效率技巧，3 万字带你一步步摸清 WorkBuddy 的核心能力。无论你是</span><span>第一次接触，还是已经用过一段时间、想进一步解锁更多玩法，都可以在里面找到答案。</span></p><p><span>想系统了解 WorkBuddy 怎么用，可以直接移步公</span><span>众号查看这</span><span>篇长文：</span></p><p><span><span><span><span>3万字长文带你WorkBuddy 从入门到精通</span></span></span></span></p><p><span>本文转载自“腾讯WorkBuddy公众号”文章：</span><span><br></span></p><p><span><span><span><span>让你的 WorkBuddy 越用越好用的 10 个小技巧</span></span></span></span></p><p><span>大家在实际使用 WorkBuddy 的过程中，也陆续遇到了一些很具体的问题：有些功能会用，但还不够顺手；有些小设置调一调，使用体验就会差很多。</span></p><p><span><span>所以这一次，我们把其中最常被问到、也最值得掌握的一些问题单独整理了出来，形成了 10 个对应的操作技巧，帮助大家的 WorkBuddy 越用越顺手，也越来越懂你。</span></span></p><h2 id=\"section-技巧-1-对话框右下角的-上下文用量\"><span>技巧 1 · 对话框右下角的「上下文用量」</span><a class=\"heading-anchor\" href=\"#section-技巧-1-对话框右下角的-上下文用量\" aria-label=\"链接到本节：技巧 1 · 对话框右下角的「上下文用量」\">#</a></h2><blockquote><p><span>Q：对话聊久后，Agent 开始遗漏要求、反复出错，怎么判断是模型能力问题，还是上下文快满了？</span></p></blockquote><p><span>WorkBuddy 对话框右下角有一个<span>灰色的小圈</span>，很多人经常用但没点开过。</span></p><section><img src=\"https://inews.gtimg.com/om_bt/OlYj4l-8YtWPngYIs_IzUFd1SDA7FaIMXjmyUx0QWpEmsAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></section><p><strong><span><span>上下文圈圈的位置</span></span></strong><span><span>：对话框右下角。</span></span></p><p><span>点开后，你会看</span><span>到当前会话</span><span>的上下文用量，包括：</span></p><ul><li><section><span>当前上下文的使用比例</span></section></li><li><section><span>已使用量和模型窗口上限</span></section></li><li><section><span>系统提示词占用</span></section></li><li><section><span>工具及子智能体占用</span></section></li><li><section><span>对话消息占用</span></section></li><li><section><span>连接器、MCP 及技能占用</span></section></li></ul><p><span>例如，页面显示&nbsp;</span><code><span>4.9% · 49.4K/1000K</span></code><span>，意味着当前会话已经使用约 49.4K token，模型的上下文窗口上限为 1000K。</span></p><section><img src=\"https://inews.gtimg.com/om_bt/OgCPzA5efekurdu3yIxevqSv-zjBxfi-qyyI-Aje2SZ7MAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></section><p><span>WorkBuddy 产品经理</span><span><span><span><span>Anne</span></span></span> 有给出一个建议就是：\"模型最好的状态是圈圈用量在一半左右。“</span></p><p><span>\"超过一半，就该考虑压缩上下文或新开任务。”</span></p><h2 id=\"section-技巧-2-增强提示词-功能\"><span>技巧 2 · 「增强提示词」功能</span><a class=\"heading-anchor\" href=\"#section-技巧-2-增强提示词-功能\" aria-label=\"链接到本节：技巧 2 · 「增强提示词」功能\">#</a></h2><blockquote><p><span>Q：一个清晰、无干扰且节省 token 的提示词应该怎么写？哪些可能是属于废话会消耗 token 的？</span></p></blockquote><p><span>对话框右下角的小闪光图标，是 WorkBuddy 的「增强提示词」功能。</span></p><section><img src=\"https://inews.gtimg.com/om_bt/OeBvLYf4dI1Ot69ktHzZnw70PnWUd3QfYXYVedhvIPLMkAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></section><p><span>作用很直接：<span>如果你担心指令写不清楚、有废话、有歧义，可以让 AI 帮你改写一遍。</span></span></p><p><span>真的觉得写不清楚？<span>直接点「增强提示词」</span>，AI 会把你的原始诉求改写得更干净、更聚焦、更少废话。</span></p><p><span>这条技巧让你从纠结遣词造句里解脱出来，把注意力放回真正重要的事上：<span>你要 AI 帮你完成什么。</span></span></p><h2 id=\"section-技巧-3-只是讨论思路-就切到-仅问答模式\"><span>技巧 3 · 只是讨论思路，就切到「仅问答模式」</span><a class=\"heading-anchor\" href=\"#section-技巧-3-只是讨论思路-就切到-仅问答模式\" aria-label=\"链接到本节：技巧 3 · 只是讨论思路，就切到「仅问答模式」\">#</a></h2><blockquote><p><span>Q：我只是想跟 AI 聊聊思路，它会直接改我的文件。</span></p></blockquote><p><span>有时候你并不准备让 Agent 立刻修改文件或执行任务，只是想先聊一聊思路</span></p><p><span>这时可以打开<span>「仅问答模式」。</span></span></p><p><span><span>Plan 模式和仅问答模式</span>——都在对话框「+」旁边的模式入口里。</span></p><p><strong><span>仅问答 Ask 开关</span></strong><span>：适合问问题、找思路，无法做执行。</span></p><section><img src=\"https://inews.gtimg.com/om_bt/OwrlkuThDnW8G13GMmIDMFCtF2iZ--X3s8lIzYfT-Kz2oAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></section><p><span>仅问答模式不会加载部分执行和编辑相关的工具，因此可以减少工具定义带来的固定上下文开销，也能让模型更专注于分析和讨论。</span></p><p><span>适合使用的场景包括：</span></p><ul><li><section><span>梳理选题</span></section></li><li><section><span>讨论方案</span></section></li><li><section><span>分析问题</span></section></li><li><section><span>找灵感</span></section></li><li><section><span>在正式执行前明确需求</span></section></li></ul><h2 id=\"section-技巧-4-别装太多技能-每个都在悄悄吃你的上下文\"><span>技巧 4 · 别装太多技能，每个都在悄悄吃你的上下文</span><a class=\"heading-anchor\" href=\"#section-技巧-4-别装太多技能-每个都在悄悄吃你的上下文\" aria-label=\"链接到本节：技巧 4 · 别装太多技能，每个都在悄悄吃你的上下文\">#</a></h2><blockquote><p><span>Q：技能库里有很多技能，几个功能相似的技能应该怎么选？</span></p></blockquote><p><span>\"把长期用不到的技能先关掉，需要时再打开。\"</span></p><p><span>背后的机制是——<span>每个技能的定义本身，都要被发给模型看。</span></span></p><p><span>模型要理解你装了什么技能、每个技能干什么、什么时候该调用。</span></p><p><span>技能装得越多，光是「介绍这些技能」这件事就要吃掉一大块窗口。而且技能越多，模型判断「这次任务该用哪个」的干扰也越大。它可能选错，也可能纠结。</span></p><p><span>实用做法：</span></p><ul><li><section><span>打开技能管理页，把长期不用的技能关掉（不用删，关掉即可）</span></section></li><li><section><span>只保留你当前工作场景真正需要的</span></section></li><li><section><span>需要用的时候再打开——技能是可以随时开关的</span></section></li></ul><section><span><img src=\"https://inews.gtimg.com/om_bt/Ozmk-9trWmzMpyp1Rots5MDPVeL_rBc4iWZ37B_ps4pNgAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></span></section><h2 id=\"section-技巧-5-max-模式\"><span>技巧 5 · Max 模式</span><a class=\"heading-anchor\" href=\"#section-技巧-5-max-模式\" aria-label=\"链接到本节：技巧 5 · Max 模式\">#</a></h2><blockquote><p><span>Q：Max 模式到底是干嘛的？开着好还是关着好？</span></p></blockquote><section><img src=\"https://inews.gtimg.com/om_bt/O3CqF7VPPlXlW3woqXjZeZbBc4GGYyuPLRjIrNT2LXuQUAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></section><p><span><span>Max 模式开关在模型选择下拉的顶部</span></span></p><ul><li><strong><span>打开 Max：不压缩，保留完整上下文，适合需要长期<span><span><span>记忆</span></span></span>的复杂任务</span></strong></li><li><strong><span>关闭 Max：WorkBuddy 会在某个时机自动帮你压缩上下文，降低窗口使用</span></strong></li></ul><p><span>如果任务需要频繁引用之前的讨论、文件状态和复杂约束，打开 Max 可以保留更多信息，但可能增加积分消耗。</span></p><p><span>如果任务相对独立，或者已经积累了大量不再重要的讨论，关闭 Max 通常更合适。</span></p><h2 id=\"section-技巧-6-compact-一条指令手动压缩上下文\"><span>技巧 6 ·&nbsp;</span><code><span>/compact</span></code><span>：一条指令手动压缩上下文</span><a class=\"heading-anchor\" href=\"#section-技巧-6-compact-一条指令手动压缩上下文\" aria-label=\"链接到本节：技巧 6 · /compact：一条指令手动压缩上下文\">#</a></h2><blockquote><p><span>Q：对话太长，Agent 开始变慢、遗漏要求，又不想开新会话，怎么办？</span></p></blockquote><p><span>有时候会遇到这种情况：任务还没跑完，但对话已经很长，模型开始变慢或变笨。可以不用新开会话，直接在对话框里发一条斜杠指令：</span><span>/compact</span></p><p><span>WorkBuddy 会把当前上下文交给模型进行<span>主动压缩</span>——总结前面聊过的内容、替换掉原始对话记录、腾出窗口继续跑。</span></p><p><span>压缩通常比等到窗口接近上限后被动裁剪更可控，但压缩并不是完全无损的。部分细节、特殊约束和中间状态，仍然可能在总结过程中被弱化。</span></p><p><span>因此，复杂任务在压缩前，最好先让 Agent 整理一份「任务检查点」，包括：</span></p><ul><li><section><span>当前目标</span></section></li><li><section><span>已经完成的内容</span></section></li><li><section><span>重要约束</span></section></li><li><section><span>修改过的文件</span></section></li><li><section><span>尚未解决的问题</span></section></li><li><section><span>下一步动作</span></section></li></ul><p><span>如果这些信息很重要，还可以让 Agent 把它们写入<span><span><span>工作空间</span></span></span>里的文件，再执行&nbsp;</span><code><span>/compact</span></code><span>。</span></p><p><span>这样即使摘要遗漏了部分细节，新一轮上下文也可以重新读取任务状态。</span></p><section><img src=\"https://inews.gtimg.com/om_bt/OAuigHTFgyEd2sgeYWpngKsSaB7RYIiEl7DTeZsZoGKjEAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></section><h2 id=\"section-技巧-7-一个会话里-尽量别频繁切换模型\"><span>技巧 7 · 一个会话里，尽量别频繁切换模型</span><a class=\"heading-anchor\" href=\"#section-技巧-7-一个会话里-尽量别频繁切换模型\" aria-label=\"链接到本节：技巧 7 · 一个会话里，尽量别频繁切换模型\">#</a></h2><blockquote><p><span>Q：一个对话框可以频繁切换模型吗？想针对不同的内容切换低 token 或高 token 的模型进行输出。</span></p></blockquote><p><span>这是很多人踩过坑但没意识到的反常识点。同一对话里频繁切换模型，性能会下降，还可能造成信息丢失。原因有两个：</span></p><p><span>一是</span><strong><span><span><span><span>提示词缓存</span></span></span></span></strong><span>。模型可能会缓存之前处理过的部分内容，从而降低重复处理成本。但缓存通常与具体模型及服务机制有关。切换模型后，原有缓存不一定能够继续复用。</span></p><p><span>二是</span><strong><span>上下文窗口不同</span></strong><span>。不同模型支持的上下文长度并不一致。例如，你已经在一个较大窗口的模型中积累了大量内容，再切换到窗口更小的模型，就可能触发压缩或裁剪。</span></p><p><span>推荐做法：</span></p><ul><li><section><span>同一任务尽量用同一个模型跑完</span></section></li><li><section><span>一定要切模型？先&nbsp;</span><code><span>/compact</span></code><span>&nbsp;压缩一遍再切，成本消耗会降低</span></section></li><li><section><span>想尝试不同模型的效果？在同一工作空间开新的会话，别在原会话里切</span></section></li></ul><h2 id=\"section-技巧-8-什么时候该开新会话-什么时候留在原会话\"><span>技巧 8 · 什么时候该开新会话，什么时候留在原会话</span><a class=\"heading-anchor\" href=\"#section-技巧-8-什么时候该开新会话-什么时候留在原会话\" aria-label=\"链接到本节：技巧 8 · 什么时候该开新会话，什么时候留在原会话\">#</a></h2><blockquote><p><span>Q：一个任务跑了很多轮的对话，token 会消耗越来越多。有没有说超过多少轮，就建议起一个新的对话？</span></p></blockquote><p><span>两条清晰的判断标准：</span></p><p><strong><span>（1）该开新会话的信号：</span></strong></p><ul><li><section><span>上下文圈圈快满了（比如显示&nbsp;</span><code><span>900K/1000K</span></code><span>）</span></section></li><li><section><span>模型陷入某种循环，反复出错、任务再也完不成</span></section></li><li><section><span>两件事之间没有关联——比如刚刚在做调研，突然想聊环境保护，直接开新会话</span></section></li></ul><p><strong><span>（2）留在原会话的信号：</span></strong></p><ul><li><section><span>同一个任务的连续追问</span></section></li><li><section><span>前面的历史文件、状态需要延续</span></section></li></ul><p><span>有一个前提要记住：<span>新会话最好开在同一个工作空间里。</span>这样仍然可以读取项目文件和背景资料，相当于「工作台没变，但给任务换了一个更清醒的脑子」。</span></p><section><img src=\"https://inews.gtimg.com/om_bt/OStRe1LEwCPxA0gSiensMhfCQFVZT1qExOlkdAChRYxh4AA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></section><p><span><span>对话框左下角的「选择工作空间」下拉，能切换到任意已有空间</span></span></p><h2 id=\"section-技巧-9-分清-记忆-和-个性化\"><span>技巧 9 · 分清「记忆」和「个性化」</span><a class=\"heading-anchor\" href=\"#section-技巧-9-分清-记忆-和-个性化\" aria-label=\"链接到本节：技巧 9 · 分清「记忆」和「个性化」\">#</a></h2><blockquote><p><span>Q：设置里的「记忆」和「个性化」有什么区别？</span></p></blockquote><p><span>WorkBuddy 设置中有两个容易混淆的入口：记忆和个性化。</span></p><p><strong><span>记忆</span></strong><span>是 WorkBuddy 从历史互动中积累的信息，例如你的专业背景、工作习惯和表达偏好。</span></p><p><strong><span>个性化</span></strong><span>是你主动设置的内容，例如称呼、语气、人设和性格。</span></p><p><strong><span>设置 → 记忆：</span></strong><span><br></span></p><p><span>这里存的是 WorkBuddy 自动帮你提取的长期偏好。Anne 提到，WorkBuddy 每天晚上会从你当天的对话历史里提取有价值的信息，进入你的个人记忆库——比如「用户熟悉上下文工程」「用户表达偏好总分总结论」这一类。你不用手动做任何事，它自己在攒。</span></p><p><strong><span>设置 → 个性化：</span></strong><span><br></span></p><p><span>这里存的是你手动指定的东西——</span></p><ul><li><section><span>选择回复风格和语调，例如专业严谨、亲和友善、直言不讳或高效务实</span></section></li><li><section><span>设置是否显示加载过程欢迎语</span></section></li><li><section><span>设置是否展示文件变更的过程详情</span></section></li><li><section><span>添加应用于所有对话的自定义指令</span></section></li></ul><p><span>一个是自动攒的画像，一个是手动设的偏好。搞混了会用得很别扭。</span></p><section><img src=\"https://inews.gtimg.com/om_bt/OPsOpqmNnW3Vs2_gSPUOc76qXvGyyyh_amvQGwPdk2-OgAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></section><h2 id=\"section-技巧-10-把其他-ai-产品的记忆迁移进来\"><span>技巧 10 · 把其他 AI 产品的记忆迁移进来</span><a class=\"heading-anchor\" href=\"#section-技巧-10-把其他-ai-产品的记忆迁移进来\" aria-label=\"链接到本节：技巧 10 · 把其他 AI 产品的记忆迁移进来\">#</a></h2><blockquote><p><span>Q：以前在其他 AI 里积累的偏好，可以迁移到 WorkBuddy 吗？</span></p></blockquote><p><span>如果你长期使用其他 AI 产品，不必在 WorkBuddy 里从头建立个人偏好。复制 WorkBuddy 提供的迁移提示词，让原来的 AI 整理一份「关于你的记忆总结」，检查无误后，再导入 WorkBuddy 即可。</span></p><p><span>原本需要长期磨合的用户画像，可以通过两次复制粘贴完成初步迁移。</span></p><section><img src=\"https://inews.gtimg.com/om_bt/OSZVi-BgGNkLw26EkFMsGabLkfZz-c0tydBn5-KiXfWiYAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></section><h2 id=\"section-写在后面\"><span>写在后面</span><a class=\"heading-anchor\" href=\"#section-写在后面\" aria-label=\"链接到本节：写在后面\">#</a></h2><p><span>如果把这 10 个技巧再压缩一遍，核心无非三件事：</span></p><ol><li><section><span>看住上下文用量</span></section></li><li><section><span>用对模式和会话</span></section></li><li><section><span>别让不必要的技能和废话吃掉你的窗口</span></section></li></ol><p><span><span>抓住这三点，你的 WorkBuddy 一定能越用越顺手。</span></span></p><p><span>你还有哪些好用的小技巧，欢迎评论区分享～</span></p>",
+    "headings": [
+      {
+        "id": "section-技巧-1-对话框右下角的-上下文用量",
+        "level": 2,
+        "text": "技巧 1 · 对话框右下角的「上下文用量」"
+      },
+      {
+        "id": "section-技巧-2-增强提示词-功能",
+        "level": 2,
+        "text": "技巧 2 · 「增强提示词」功能"
+      },
+      {
+        "id": "section-技巧-3-只是讨论思路-就切到-仅问答模式",
+        "level": 2,
+        "text": "技巧 3 · 只是讨论思路，就切到「仅问答模式」"
+      },
+      {
+        "id": "section-技巧-4-别装太多技能-每个都在悄悄吃你的上下文",
+        "level": 2,
+        "text": "技巧 4 · 别装太多技能，每个都在悄悄吃你的上下文"
+      },
+      {
+        "id": "section-技巧-5-max-模式",
+        "level": 2,
+        "text": "技巧 5 · Max 模式"
+      },
+      {
+        "id": "section-技巧-6-compact-一条指令手动压缩上下文",
+        "level": 2,
+        "text": "技巧 6 · /compact：一条指令手动压缩上下文"
+      },
+      {
+        "id": "section-技巧-7-一个会话里-尽量别频繁切换模型",
+        "level": 2,
+        "text": "技巧 7 · 一个会话里，尽量别频繁切换模型"
+      },
+      {
+        "id": "section-技巧-8-什么时候该开新会话-什么时候留在原会话",
+        "level": 2,
+        "text": "技巧 8 · 什么时候该开新会话，什么时候留在原会话"
+      },
+      {
+        "id": "section-技巧-9-分清-记忆-和-个性化",
+        "level": 2,
+        "text": "技巧 9 · 分清「记忆」和「个性化」"
+      },
+      {
+        "id": "section-技巧-10-把其他-ai-产品的记忆迁移进来",
+        "level": 2,
+        "text": "技巧 10 · 把其他 AI 产品的记忆迁移进来"
+      },
+      {
+        "id": "section-写在后面",
+        "level": 2,
+        "text": "写在后面"
+      }
+    ],
+    "textLength": 3596,
+    "readingMinutes": 8,
+    "sourceId": "tencent-qqnews",
+    "sourceUrl": "https://news.qq.com/rain/a/20260909A0CS6700",
+    "ruleId": "tencent-news",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "4ae71eaad1667697a7ca0a05792b0bd850e79e312558eed1a9670e6e92bb459a",
+    "fetchedAt": "2026-11-02T06:24:34.516Z",
+    "checkedAt": "2026-11-02T06:24:34.516Z",
+    "nextRetryAt": "2026-12-02T06:24:34.517Z",
+    "warnings": []
+  }
+}

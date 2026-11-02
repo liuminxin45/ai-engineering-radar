@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "76e55bcad35339932d92",
+    "status": "ready",
+    "html": "<p>作者：古琦</p><p><br></p><p>2026 年，AI Agent 正在完成从「会聊天」到「会干活」的关键一跃：自己写代码并运行、操作浏览器查资料、调用一连串工具完成复杂任务。而让 Agent 放心「动手」的前提，是给它一个既安全又高效的执行环境——沙箱（Sandbox）因此成为 Agent 基础设施的事实标配。</p><p><br></p><p>阿里云容器计算服务 ACS 推出的 Agent Sandbox，以 MicroVM 级隔离、每分钟 15000 实例的弹性和内存级休眠唤醒，成为生产级 AI 智能体的沙箱算力底座。但一个新问题随之而来：<strong>隔离做得越好，沙箱内部就越像黑盒</strong>——Agent 在里面调了哪个模型、跑了什么代码、访问了哪些外部服务，运维和安全团队很难看清。</p><p><br></p><p>现在，这块拼图补齐了：<strong>云监控 2.0 的 OpenTelemetry 无侵入监控（OBI）正式支持 ACS Sandbox 场景。</strong> 不改一行代码、不重新构建镜像，沙箱内 AI Agent 的每一次模型调用、工具执行和外部访问，都会自动生成标准的调用链与指标。</p><h2 id=\"section-沙箱底座-隔离-弹性与状态\">沙箱底座：隔离、弹性与状态<a class=\"heading-anchor\" href=\"#section-沙箱底座-隔离-弹性与状态\" aria-label=\"链接到本节：沙箱底座：隔离、弹性与状态\">#</a></h2><p>AI Agent 执行的代码有一个显著特点：很多是大模型现场生成的。这些代码不可信、不可预测，绝不能与生产业务跑在同一个容器里。Agent Sandbox 给出的答案是 MicroVM 级别的隔离运行环境：每个沙箱独享内核，计算、网络、存储端到端隔离，即使沙箱内代码出现任何异常行为，也被牢牢锁在「箱子」里。</p><p><br></p><p>安全之外，是为 Agent 场景量身定制的三组能力。</p><p><br></p><p><strong>大规模低延迟弹性。</strong> Agent 任务往往是突发的：一次强化学习训练（AgentRL）可能瞬间需要数千个环境，一个在线服务（Agent Serving）的高峰期请求汹涌而至。Agent Sandbox 支持最高每分钟 15000 个沙箱的创建规模，配合 Warm Pool 预热池可实现百毫秒级拉起，镜像缓存加速让拉取耗时缩短 90% 以上。公开案例中，MiniMax 曾在 10 秒内拉起 5000 个沙箱。</p><p><br></p><p><strong>状态保持。</strong> 运行中的沙箱支持按需休眠，内存状态完整保留，1~10 秒内快速唤醒；配合 Checkpoint/Restore，Agent 的执行状态可存、可迁移、可克隆。多轮会话中断时不必销毁重建，休眠期间不收取 CPU 与内存费用，按秒计费的模式让「随用随停」真正省钱。</p><p><br></p><p><strong>开放生态。</strong> 提供 E2B 兼容 SDK 与 Kubernetes 原生的 Sandbox CR 两种接入方式，兼容 AgentScope、LangGraph 等主流 Agent 框架，覆盖 Code Interpreter（代码执行）、Browser Use（浏览器操作）等典型沙箱场景。</p><h2 id=\"section-监控盲区-越安全越像黑盒\">监控盲区：越安全越像黑盒<a class=\"heading-anchor\" href=\"#section-监控盲区-越安全越像黑盒\" aria-label=\"链接到本节：监控盲区：越安全越像黑盒\">#</a></h2><p>沙箱解决了「敢不敢跑」的问题，但「跑得怎么样」依然是一团迷雾。把传统 APM 方案逐一搬过来，会发现三条路都走不通。</p><p><br></p><p><strong>SDK 埋点埋不进去。</strong> 传统应用监控靠在代码里集成 SDK 或挂载语言探针。可沙箱里跑的代码是大模型即时生成的，五花八门、不可预置；Agent 框架本身也横跨 Python、Node.js 等多种语言。你不可能要求模型「生成代码时顺便埋好监控点」。</p><p><br></p><p><strong>主机级采集无处安放。</strong> ACS 是 Serverless 形态的容器计算服务，没有用户可见的节点，传统 DaemonSet 方式的主机级监控组件没有立足之地；MicroVM 的强隔离更是把「从宿主机看进去」这条路彻底堵死。</p><p><br></p><p><strong>沙箱生命周期太短。</strong> 百毫秒创建、用完即毁、随时休眠——等你登录上去排查问题，现场早已销毁。以主机为中心的监控模型，根本跟不上这种「朝生暮死」的节奏。</p><p><br></p><p>结果就是：Agent 任务失败了，不知道是模型响应慢、工具超时还是代码报错；token 成本涨了，不知道消耗在哪个环节；安全团队想审计沙箱内代码到底访问了什么外部地址，只能翻网络日志人肉比对。</p><h2 id=\"section-obi-方案-零改造实现-ai-agent-可观测\">OBI 方案：零改造实现 AI Agent 可观测<a class=\"heading-anchor\" href=\"#section-obi-方案-零改造实现-ai-agent-可观测\" aria-label=\"链接到本节：OBI 方案：零改造实现 AI Agent 可观测\">#</a></h2><p>OBI（OpenTelemetry eBPF Instrumentation，OpenTelemetry 无侵入监控）换了一个思路：不进入应用，而是站在应用与内核之间。</p><p><br></p><p>OBI 在内核和库函数层面拦截应用通信，解析协议语义，直接输出标准 OpenTelemetry 遥测数据。这意味着无论沙箱里跑的是 Go、Java、Python、Node.js 还是 .NET，无论用什么 HTTP 框架、连什么数据库、调哪家大模型，都无需修改任何代码即可自动采集监控数据——对「代码由模型现场生成」的沙箱场景，这几乎是唯一可行的解法。</p><p><br></p><p>在 ACS Sandbox 环境中，OBI 以 Sidecar 形式与沙箱工作负载相伴运行：安装 ARMS 探针接入助手 ack-onepilot（5.2.2 及以上版本）后，只需给工作负载 YAML 增加几行标签，OBI Sidecar 便会自动注入，采集的数据统一汇聚到云监控 2.0 控制台。（沙箱内运行 eBPF 需要特定的 Linux 内核权限，通过工单为账号开通即可。）</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_19bbc81b64624a81a188d20b92791008.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-能力清单-链路-指标与-genai-语义\">能力清单：链路、指标与 GenAI 语义<a class=\"heading-anchor\" href=\"#section-能力清单-链路-指标与-genai-语义\" aria-label=\"链接到本节：能力清单：链路、指标与 GenAI 语义\">#</a></h2><p>接入之后，能看到什么？</p><p><br></p><p>第一层是经典应用监控的全家桶：应用拓扑、调用链路、异常事务、慢事务、SQL 分析。沙箱内 Agent 的每一次对外调用都会生成 Trace——慢在模型推理还是工具执行，一条调用链看穿。</p><p><br></p><p>第二层，才是这次升级真正的亮点：AI Agent 可观测。OBI 内置了对 OpenAI、Anthropic、Google Gemini、通义千问（Qwen）四大 GenAI Provider 的协议级追踪，自动识别 LLM 调用并按 GenAI 语义规范生成遥测数据：</p><ul><li>LLM 调用：模型名、token 消耗、耗时、错误状态自动提取；</li><li>Tool Call：从模型响应中自动解析工具调用信息，Agent「决定用什么工具」一目了然；</li><li>MCP、Embedding、Rerank、向量检索：RAG 管线的核心环节全部覆盖。</li></ul><p><br></p><p>如果你的模型流量走的是 vLLM、LiteLLM 等自建推理服务或 LLM 网关，只需在配置中声明对应 Host，OBI 同样会按 OpenAI 兼容协议解析，纳入 AI Agent 可观测视图。</p><p><br></p><p>对沙箱场景，这些数据同时回答了三个问题：性能——任务慢在哪个环节；成本——token 到底消耗在哪类调用上；安全——沙箱内不可信代码访问了哪些外部地址，全部旁路记录，天然就是一份审计底账。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_dfdb2cdb6177492b8e39d97d32a14614.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-三步接入-安装-打标签-看数据\">三步接入：安装、打标签、看数据<a class=\"heading-anchor\" href=\"#section-三步接入-安装-打标签-看数据\" aria-label=\"链接到本节：三步接入：安装、打标签、看数据\">#</a></h2><p><strong>整个接入过程不需要动应用代码。</strong></p><p><strong><br></strong></p><p>第一步，在容器服务控制台为 ACS 集群安装 ack-onepilot 组件（5.2.2 及以上版本）。</p><p><br></p><p>第二步，为目标工作负载的 YAML 增加 OBI 标签：</p><pre><code>labels:\n  apsara.apm/application-type: obi    # 标明此应用通过 OBI 接入\n  armsPilotAutoEnable: 'on'\n  armsPilotCreateAppName: \"你的应用名\"\n  armsPilotAppWorkspace: \"工作空间名\"</code></pre><p>第三步，等待约 2 分钟，打开云监控 2.0 控制台：在「应用监控」查看拓扑与调用链，在「AI Agent 可观测」查看模型与工具调用明细。</p><p><br></p><p>第四步，到云监控 2.0 AI Agent 应用查看监控数据：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_50486a3d3f90403380c4a47b8ac4ce1f.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_78441faa322f4780a250264a04dfda5b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-写在最后\">写在最后<a class=\"heading-anchor\" href=\"#section-写在最后\" aria-label=\"链接到本节：写在最后\">#</a></h2><p>Agent 基础设施的竞争，正在从「跑得起来」进入「跑得明白」的阶段。ACS Agent Sandbox 负责让 AI Agent 安全、弹性地执行，OBI 负责让每一次执行透明可见——两者合在一起，生产级 Agent 的「安全」与「可观测」第一次可以同时成立，而代价是 0 行代码改造。</p><p><br></p><p>如果你正在构建 Agent 应用，欢迎从官方文档《通过 OBI 接入 ACS 应用》开始体验：<a href=\"https://help.aliyun.com/zh/cms/cloudmonitor-2-0/access-acs-applications-through-opentelemetry-non-intrusive-monitoring-obi?spm=a2c6h.13046898.publish-article.11.58b66ffaLVzvRT\" target=\"_blank\" rel=\"noopener noreferrer\">https://help.aliyun.com/zh/cms/cloudmonitor-2-0/access-acs-applications-through-opentelemetry-non-intrusive-monitoring-obi</a></p>",
+    "headings": [
+      {
+        "id": "section-沙箱底座-隔离-弹性与状态",
+        "level": 2,
+        "text": "沙箱底座：隔离、弹性与状态"
+      },
+      {
+        "id": "section-监控盲区-越安全越像黑盒",
+        "level": 2,
+        "text": "监控盲区：越安全越像黑盒"
+      },
+      {
+        "id": "section-obi-方案-零改造实现-ai-agent-可观测",
+        "level": 2,
+        "text": "OBI 方案：零改造实现 AI Agent 可观测"
+      },
+      {
+        "id": "section-能力清单-链路-指标与-genai-语义",
+        "level": 2,
+        "text": "能力清单：链路、指标与 GenAI 语义"
+      },
+      {
+        "id": "section-三步接入-安装-打标签-看数据",
+        "level": 2,
+        "text": "三步接入：安装、打标签、看数据"
+      },
+      {
+        "id": "section-写在最后",
+        "level": 2,
+        "text": "写在最后"
+      }
+    ],
+    "textLength": 3313,
+    "readingMinutes": 8,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1760437",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "b6f62257275810f72cb7ff7eed1e332fe4bca059df3f4e939e0a9d67cc211030",
+    "fetchedAt": "2026-11-02T07:09:13.287Z",
+    "checkedAt": "2026-11-02T07:09:13.287Z",
+    "nextRetryAt": "2026-12-02T07:09:13.287Z",
+    "warnings": []
+  }
+}

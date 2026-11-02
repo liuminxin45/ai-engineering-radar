@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "c0dd8dacc177ed18c081",
+    "status": "ready",
+    "html": "<p>今天，Agent 评估与优化 · Close the Loop 三城巡演首站北京站圆满落幕。</p><p><br></p><p>本场活动联合 Dify 举办，吸引了近百名技术从业者参与，围绕“Observe / 观测与审计”这一主题，深度分享了 Agent 可观测性范式、Dify 可解释性实践、AI Coding 观测与降本等议题，并设置了 AgentLoop 动手实操环节。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_1bf8fd88a5064ed3bb7e78d97c849924.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>关注「阿里云云原生」公众号，后台回复：Loop0821</p><p>获取北京站讲师 PPT 合辑</p><h3 id=\"section-议题一-agent-评估与优化全景\">议题一：Agent 评估与优化全景<a class=\"heading-anchor\" href=\"#section-议题一-agent-评估与优化全景\" aria-label=\"链接到本节：议题一：Agent 评估与优化全景\">#</a></h3><p><strong>分享嘉宾：</strong> 阿里云 Agentloop 产品经理 涯海</p><p><br></p><p>从企业 Agent 落地的六大挑战“看不清、评不准、存不下、改不动、控不住、复制难”开始，提出从 LLMOps 到 AgentOps 的范式升级：治理对象从单次调用变为完整推理轨迹 Trajectory，以“观测→评估→优化→回测”为主线构建数据飞轮：零代码插桩覆盖约 45 个框架，Agent-as-a-Judge 评估与专家一致性达 90%+，归因分析把评分转译为改进动作，变更门禁拦截负向变更。举例了 某游戏客户 3 天跑通优化闭环、客服质检覆盖率从 5% 升至 100%：谁的飞轮转得快，Agent 就越聪明。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_7cc1657d29e14caea7e3cb1ac9d6e998.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-议题二-dify-如何让-agent-的每一步可解释-可比较和可验证\">议题二：Dify 如何让 Agent 的每一步可解释、可比较和可验证<a class=\"heading-anchor\" href=\"#section-议题二-dify-如何让-agent-的每一步可解释-可比较和可验证\" aria-label=\"链接到本节：议题二：Dify 如何让 Agent 的每一步可解释、可比较和可验证\">#</a></h3><p><strong>分享嘉宾：</strong> Dify 工程师 姜涵煦</p><p><br></p><p>涵煦分享了在 Agent 编排平台侧的可观测实践：如何让开发者在可视化工作流中看清每个节点的输入输出与耗时，让不同版本的 Agent 编排可以横向比较，让每一次改动的效果可以被验证而非感觉变好了。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_cf2a068a87c44eb49b345831bb52d4e2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-议题三-ai-coding-的观测和科学降本实践\">议题三：AI Coding 的观测和科学降本实践<a class=\"heading-anchor\" href=\"#section-议题三-ai-coding-的观测和科学降本实践\" aria-label=\"链接到本节：议题三：AI Coding 的观测和科学降本实践\">#</a></h3><p><strong>分享嘉宾：</strong> 阿里云 Agentloop 研发工程师 马云雷</p><p><br></p><p>AI Coding 是当前 Token 消耗最大、调用链最深的 Agent 场景之一。本议题基于真实 AI Coding 场景，分享了两个问题的解法：一是怎么看清调用链，从一次编码任务出发，还原模型调用、工具执行、上下文组装的完整链路，定位耗时与失败点；二是怎么把成本科学地降下来，基于观测数据识别冗余调用与低效上下文，在不牺牲任务完成质量的前提下压缩 Token 开销。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_7540ae17773b4831bfe471c3bad3c7b2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-动手实操-给-coding-agent-或其他桌面端-agent-接入agentloop\">动手实操：给 Coding Agent 或其他桌面端 Agent 接入AgentLoop<a class=\"heading-anchor\" href=\"#section-动手实操-给-coding-agent-或其他桌面端-agent-接入agentloop\" aria-label=\"链接到本节：动手实操：给 Coding Agent 或其他桌面端 Agent 接入AgentLoop\">#</a></h3><p>通过 LoongSuite Pilot 将开发者本机的 AI Coding Agent 运行数据接入 AgentLoop，实现会话、模型调用、工具调用、Token 用量和 Trace 数据的统一观测与分析。</p><p><br></p><p><strong>实操文档：</strong> <a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.8.515b6ffaVIUuO4&amp;enc=gYZewP%2BkE1dzWC8A4SVmHw%3D%3D.HnRhuOoN85YKLkaj%2BhHJpFpQhaLPWIh1UbzzlgzZnlP7S%2BMVYsQjXwLgjwopBV2zUP5uGIA%2FOK7YDxMc%2FGg%2BMQ%3D%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://help.aliyun.com/zh/document_detail/3033878.html</a></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_e7e6679ab64844c092f9ad2637287e2f.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_96295551065f4e33a080d261d75169d2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_8866381ec6ae4cce95332fdff2200433.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-现场花絮\">现场花絮<a class=\"heading-anchor\" href=\"#section-现场花絮\" aria-label=\"链接到本节：现场花絮\">#</a></h3><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_451cb366384241769c4c44523ba6e91f.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_8c645b65c542462cbb0facbe4675d9f7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_53fb0159152a4152a90df42532f2fe6b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_960fe588459f4775a9e601bdc89ad7ab.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span>Agent 观测与优化 Close the Loop 巡回沙龙，</span><strong>8月29日深圳站</strong><span>将联合 AgentScope 分享“Evaluate / 评估与实验”，</span><strong>9月4日上海站</strong><span>联合 LangChain 分享“Optimize / 进化”。</span></span></p><p><span><span><br></span></span></p><p><span><span>报名审核制，审核通过将收到短信通知。</span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_c3c4ae833c244676a83a2083a2823f79.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [
+      {
+        "id": "section-议题一-agent-评估与优化全景",
+        "level": 3,
+        "text": "议题一：Agent 评估与优化全景"
+      },
+      {
+        "id": "section-议题二-dify-如何让-agent-的每一步可解释-可比较和可验证",
+        "level": 3,
+        "text": "议题二：Dify 如何让 Agent 的每一步可解释、可比较和可验证"
+      },
+      {
+        "id": "section-议题三-ai-coding-的观测和科学降本实践",
+        "level": 3,
+        "text": "议题三：AI Coding 的观测和科学降本实践"
+      },
+      {
+        "id": "section-动手实操-给-coding-agent-或其他桌面端-agent-接入agentloop",
+        "level": 3,
+        "text": "动手实操：给 Coding Agent 或其他桌面端 Agent 接入AgentLoop"
+      },
+      {
+        "id": "section-现场花絮",
+        "level": 3,
+        "text": "现场花絮"
+      }
+    ],
+    "textLength": 1253,
+    "readingMinutes": 3,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1758180",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "6b49bd88cfa7e63a7bfa9413cd5141bd72ce410e1403b25b8aa3390c0b626da3",
+    "fetchedAt": "2026-11-02T07:09:17.781Z",
+    "checkedAt": "2026-11-02T07:09:17.781Z",
+    "nextRetryAt": "2026-12-02T07:09:17.781Z",
+    "warnings": []
+  }
+}

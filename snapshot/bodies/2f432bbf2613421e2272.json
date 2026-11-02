@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "2f432bbf2613421e2272",
+    "status": "ready",
+    "html": "<p>你的 AI Agent，是不是还在用昨天的数据做今天的决策？</p><p><br></p><p>AI 应用从 Demo 走向生产，最容易被忽视的瓶颈不是模型本身，而是数据底座。如何在保障高性能、高可用的同时实现弹性扩展与成本可控？当上下文仍依赖 T+1 批处理供给，模型读到的永远是上一批次状态——如何为 AI 持续注入实时数据流，让决策始终基于最新业务事实？</p><p><br></p><p>8 月 28 日（周五）13:30-16:30，阿里云 ApsaraMQ × IBM Confluent 联合在上海举办「AI 实时数据沙龙」，带你跨越 AI 实时上下文鸿沟。</p><h2 id=\"section-为什么这场沙龙值得来\">🔥&nbsp;为什么这场沙龙值得来？<a class=\"heading-anchor\" href=\"#section-为什么这场沙龙值得来\" aria-label=\"链接到本节：🔥 为什么这场沙龙值得来？\">#</a></h2><p>三场分享沿数据流转链路依次展开，直击 AI 时代企业数据架构的核心痛点：</p><h3 id=\"section-①-从数据流到-ai-上下文-ibm-confluent-面向-ai-场景的能力演进\">①《从数据流到 AI 上下文：IBM Confluent 面向 AI 场景的能力演进》<a class=\"heading-anchor\" href=\"#section-①-从数据流到-ai-上下文-ibm-confluent-面向-ai-场景的能力演进\" aria-label=\"链接到本节：①《从数据流到 AI 上下文：IBM Confluent 面向 AI 场景的能力演进》\">#</a></h3><p>🧑‍💻 吴敏达（IBM 中国科技事业部 客户工程团队资深架构师）</p><p>源源不断的业务事件如何被加工为模型可直接消费的上下文？</p><h3 id=\"section-②-打造-al-ready-的数据管道-apsaramq-for-confluent-的演进与实践\">②《打造 Al-Ready 的数据管道：ApsaraMQ for Confluent 的演进与实践》<a class=\"heading-anchor\" href=\"#section-②-打造-al-ready-的数据管道-apsaramq-for-confluent-的演进与实践\" aria-label=\"链接到本节：②《打造 Al-Ready 的数据管道：ApsaraMQ for Confluent 的演进与实践》\">#</a></h3><p>🧑‍💻 刘尧（阿里云 Kafka 产品负责人）</p><p>一条数据管道要补齐哪些能力才称得上 AI-Ready？如何让实时数据真正进入 AI 应用？</p><h3 id=\"section-③-apsaramq-for-kafka-流-算-湖一体化实时数据平台\">③《ApsaraMQ for Kafka：流、算、湖一体化实时数据平台》<a class=\"heading-anchor\" href=\"#section-③-apsaramq-for-kafka-流-算-湖一体化实时数据平台\" aria-label=\"链接到本节：③《ApsaraMQ for Kafka：流、算、湖一体化实时数据平台》\">#</a></h3><p>🧑‍💻 张美平（阿里云 Kafka 技术负责人）</p><p>流接入、流计算、数据入湖能否收敛进同一个平台？降低传统架构中多组件拼装带来的复杂度与运维成本。</p><h2 id=\"section-活动详情\">📋&nbsp;活动详情<a class=\"heading-anchor\" href=\"#section-活动详情\" aria-label=\"链接到本节：📋 活动详情\">#</a></h2><ul><li>时间：2026 年 8 月 28 日（周五）13:30-16:30</li><li>地点：阿里巴巴徐汇滨江园区 D 区（上海市徐汇区龙启路8号）2F-201 千问星云</li></ul><p>✅&nbsp;你将获得：一线专家面对面｜&nbsp;100 分钟纯干货｜茶歇 + 互动好礼 🎁</p><p><span><span><span>🙋&nbsp;</span></span></span><span><span><span>报名方式：</span></span></span><span><span><span>扫描</span><strong>二维码</strong></span></span><span><span><span>或点击</span></span></span><a href=\"https://survey.aliyun.com/apps/zhiliao/D46NlVre1?spm=a2c6h.13046898.publish-article.9.15036ffaG2j5oO\" target=\"_blank\" rel=\"noopener noreferrer\"><strong><span><span><span>此处</span></span></span></strong></a><span><span><span>免费报名</span></span></span><span><span><span>（仅 50 席，审核制）。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_dcf15595770c49fdaec41024bf7c9964.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [
+      {
+        "id": "section-为什么这场沙龙值得来",
+        "level": 2,
+        "text": "🔥 为什么这场沙龙值得来？"
+      },
+      {
+        "id": "section-①-从数据流到-ai-上下文-ibm-confluent-面向-ai-场景的能力演进",
+        "level": 3,
+        "text": "①《从数据流到 AI 上下文：IBM Confluent 面向 AI 场景的能力演进》"
+      },
+      {
+        "id": "section-②-打造-al-ready-的数据管道-apsaramq-for-confluent-的演进与实践",
+        "level": 3,
+        "text": "②《打造 Al-Ready 的数据管道：ApsaraMQ for Confluent 的演进与实践》"
+      },
+      {
+        "id": "section-③-apsaramq-for-kafka-流-算-湖一体化实时数据平台",
+        "level": 3,
+        "text": "③《ApsaraMQ for Kafka：流、算、湖一体化实时数据平台》"
+      },
+      {
+        "id": "section-活动详情",
+        "level": 2,
+        "text": "📋 活动详情"
+      }
+    ],
+    "textLength": 792,
+    "readingMinutes": 2,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1758157",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "8f6ce22d97c885609912b58073be52b1b027a42e87629fe4cbd8b6e0888f5cb1",
+    "fetchedAt": "2026-11-02T07:09:22.590Z",
+    "checkedAt": "2026-11-02T07:09:22.590Z",
+    "nextRetryAt": "2026-12-02T07:09:22.590Z",
+    "warnings": []
+  }
+}

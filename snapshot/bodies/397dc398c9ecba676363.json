@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "397dc398c9ecba676363",
+    "status": "unavailable",
+    "html": "",
+    "headings": [],
+    "textLength": 0,
+    "readingMinutes": 0,
+    "sourceId": "kuaishou-csdn",
+    "sourceUrl": "https://blog.csdn.net/kuaishoutech/article/details/157505623",
+    "engineVersion": "radar-reader-1",
+    "checkedAt": "2026-11-02T07:55:52.663Z",
+    "nextRetryAt": "2026-11-09T07:55:52.663Z",
+    "error": "RSSHub 未取得 CSDN 正文，仅返回摘要（原站可能仍受 521 限制）。",
+    "warnings": []
+  }
+}

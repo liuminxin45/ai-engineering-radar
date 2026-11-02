@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "fdd58f1f2cac414a3108",
+    "status": "ready",
+    "html": "<p>作者：李水光、黄永琢</p><p><br></p><blockquote><strong>说明：</strong> 本文中 SysOM 为阿里云操作系统控制台运维组件。AI Profiling 作为 SysOM 中智算运维功能之一，主要聚焦 AI 作业的性能分析场景。该能力也是&nbsp;SysOM 与阿里云可观测在智算/AI Infra 方向上的协同探索，结合<strong>阿里云可观测在指标、链路、日志、告警等方向的基础能力</strong>，以及 SysOM AI Profiling 在 AI 作业级深度诊断上的能力，共同帮助用户定位 GPU 利用率低、显存异常、通信长尾等问题。</blockquote><p><br></p><p>你是否遇到过这些困扰：训练任务跑了几小时才发现 GPU 利用率不到 30%，推理服务上线后显存莫名增长直到 OOM，千卡集群中某几张卡的通信延迟拖慢整体训练速度，却无从下手定位？</p><p><br></p><p><strong>SysOM AI Profiling</strong>（下文简称为 AI Profiling）就是为解决这些问题而生的。它是一款专为 AI 应用设计的全生命周期性能观测与诊断工具——从训练到推理，从单卡到千卡集群，从 Python 层到 GPU Kernel 层，帮你看清每一微秒发生了什么。</p><p><br></p><p>进入【阿里云云原生】公众号查看此处视频。</p><h2 id=\"section-现有工具为什么不够用\">现有工具为什么不够用<a class=\"heading-anchor\" href=\"#section-现有工具为什么不够用\" aria-label=\"链接到本节：现有工具为什么不够用\">#</a></h2><p>在 AI Profiling 出现之前，大规模集群下的性能观测主要依赖业界已有的多类工具：有的能在 GPU 层面细粒度抓取 CUDA Stream、Kernel 及相关算子的执行情况，并以 Trace 格式输出；有的面向 Kubernetes Pod 与 GPU 维度做监控数据上报；有的借助 eBPF 从内核层面采集 CPU、内存、系统调用等追踪数据；也有的能较丰富地抓取框架层（如 Torch）与 Kernel 层的数据。这些工具各有所长，但在应对复杂 AI 作业时普遍存在一些共性局限——侵入性偏强、更适合短时间离线分析、难以做迭代级采集、与运行环境或框架版本强关联，且多数只覆盖单一维度、难以跨厂商兼容，最终导致维度信息不全、数据难以联动、诊断效率不高。</p><p><br></p><p>因此，新一代智能分析工具需要具备零侵入、全生命周期覆盖、跨厂商兼容的特点，以便更有效地优化资源利用和提升系统稳定性。这正是 AI Profiling 要解决的问题。</p><h2 id=\"section-ai-profiling-核心功能\">AI Profiling 核心功能<a class=\"heading-anchor\" href=\"#section-ai-profiling-核心功能\" aria-label=\"链接到本节：AI Profiling 核心功能\">#</a></h2><h3 id=\"section-一键-profiling-分钟级拿到分析结果\">一键 Profiling，分钟级拿到分析结果<a class=\"heading-anchor\" href=\"#section-一键-profiling-分钟级拿到分析结果\" aria-label=\"链接到本节：一键 Profiling，分钟级拿到分析结果\">#</a></h3><p>只需在输入实例 ID、GPU进程，AI Profiling 就会自动完成采集、回传、分析全流程。不用改一行代码，不用重启进程，不用手动拷贝 trace 文件到 Chrome Tracing——系统自带 TimeLine 视图，结果直接在前端呈现。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_8eed42004d734eba97c6ebec4ee1bd34.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-多维度深入观测\">多维度深入观测<a class=\"heading-anchor\" href=\"#section-多维度深入观测\" aria-label=\"链接到本节：多维度深入观测\">#</a></h3><p>AI Profiling 支持同时采集 Python 调用栈、CPU、GPU 算子、Torch 层调用、显存、FLOPS、RDMA 通信、TCP 网络等多维度数据，既能查看宏观的整体耗时分布，也能下钻到 GPU Kernel 级别的细粒度信息。</p><p><br></p><p><strong>具体来说，你能看到多进程聚合与单进程两种视图：</strong></p><p><strong><br></strong></p><p><strong>多进程聚合视图：</strong></p><ul><li><strong>基础概览</strong> —— 本次采集的进程列表、使用的卡编号、显存占用、卡显存总量以及单进程报告视角入口。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_7b0e39c01876468aa7ce3c038e34d170.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><ul><li><strong>核函数热力图</strong> —— 本次采集的所有涉及的 GPU 核函数在 GPU 上调用的热力图。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_e21648e36e394a4996174015864427fd.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><ul><li><strong>多进程 GPU Kernel 具体分析 timeline</strong> —— 本次采集的所有进程的 GPU 核函数聚合在一张 timeline 图上，能观察多进程之间 GPU 的执行情况。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_f1094c69d7694d8683f4a7c933c5baf7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><strong>单进程视图：</strong></p><ul><li><strong>整体性能概览</strong> ——设备与显存概况、GPU 利用率、各阶段时间占比等关键指标一览。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_62b030319dcc4fd3a618ebdd8f83c83e.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / “CPU/GPU Summary”面板</em></p><ul><li><strong>GPU 算子分析</strong> —— 展示 GPU 运算/通信/显存/空闲等时间占比，帮助快速判断作业的算力利用情况。</li><li><strong>GPU 核函数详细信息统计</strong> —— 按核函数维度统计调用次数、耗时分布与资源占用等指标，便于定位热点核函数。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_fffb9946a35a4ef2a5b2ae8a6b14b0dd.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / “GPU Kernel 分析”面板</em></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_f1822680472943a096b589f70926b9b7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / “Top内核函数”面板</em></p><ul><li><strong>迭代时间与损失精度统计</strong> ——按迭代维度统计各阶段耗时占比与损失精度，训练与推理作业均可自动切分迭代，并支持自定义迭代入口。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_068a1b98d3174049af479186eb5bed31.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / “迭代统计与差分分析”面板</em></p><ul><li><strong>TimeLine 原始数据展示</strong> —— 无需再打开 Perfetto/Chrome Tracing。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_e7d06c2ef0504c37a5787f9b1319cc2f.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图/多源异构数据融合 TimeLine 示意图</em></p><h3 id=\"section-显存快照分析\">显存快照分析<a class=\"heading-anchor\" href=\"#section-显存快照分析\" aria-label=\"链接到本节：显存快照分析\">#</a></h3><h4 id=\"article-anchor-6\">活跃显存分配释放时序图（Active Memory Timeline）</h4><p>从微观角度展示采样时间段内所有显存块（block）的大小、分配/释放与生命周期，直观呈现显存随时间的变化趋势。</p><p><br></p><p>当锁定某个迭代或某个可疑的 block 时，可进一步查看其调用堆栈，辅助定位显存异常的来源。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_e68b3747ab20455d8bd4f3c83bee46d4.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / “显存时序图”面板</em></p><h3 id=\"section-基于迭代锚点的差异分析\">基于迭代锚点的差异分析<a class=\"heading-anchor\" href=\"#section-基于迭代锚点的差异分析\" aria-label=\"链接到本节：基于迭代锚点的差异分析\">#</a></h3><p>在大规模 AI 训练/推理场景中，AI Profiling 采集的 Timeline 数据通常具有极高的复杂度与体量（通常可达数 GB），使得性能分析和异常定位极具挑战。尤其在进行性能对比或异常根因分析时，传统方法难以高效识别关键差异。</p><p><br></p><p>AI Profiling 通过在训练/推理流程中嵌入迭代标记，将整个执行过程精准划分为若干独立的迭代单元，并对每个迭代分别统计其损失值、计算耗时、存储开销及通信延迟等关键指标。进一步地，将这些指标以柱状图等形式进行可视化呈现，使用户能够“一眼识别”离群迭代——例如梯度爆炸导致的损失突变，或某次迭代中通信占比显著偏高等离群行为。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_76bc77670fe947f180927b8289ce63f1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / 基于迭代统计示意图</em></p><h2 id=\"section-你能从中获得什么\">你能从中获得什么<a class=\"heading-anchor\" href=\"#section-你能从中获得什么\" aria-label=\"链接到本节：你能从中获得什么\">#</a></h2><p><strong>零侵入，对业务无感</strong> —— 采用无侵入式 Profiling 技术，无需用户对容器做任何变更、重启。</p><p><strong>跨厂商兼容</strong> —— 支持 Nvidia、PPU、AMD 等设备类型，不必为不同硬件平台切换观测工具。</p><p><strong>极低开销</strong> —— 业界现有 Profiling工具在采集后，作业性能通常难以恢复到采集前水平；AI Profiling 在采集结束后能让业务性能快速恢复到采集前状态，对生产作业的持续影响可控。</p><p><strong>丰富性</strong> —— 支持按需采集 Python 调用栈、CPU 信息、GPU 算子、Torch、显存、FLOPS、RDMA、TCP 等指标。GPU/CPU 监控指标也支持按需采集。</p><p><strong>全流程自动化</strong> —— 全流程分钟级自动完成。只需要在前端配置实例 ID，就能够自动触发 AI Profiling，采集完成会自动回传中心端，分析完成会生成报告在前端显示；自带 TimeLine 视图，无需重新拷贝到 Chrome Tracing/Perfetto 等组件。多</p><p><strong>进程聚合分析</strong> —— 支持多进程采集，并支持多进程 GPU Kernel 合并观测分析。</p><p><strong>多维度采集</strong> —— 支持按时间采集与按迭代采集两种采集维度。同时支持自定义迭代入口与跳过前 n 迭代等高级配置。</p><p><strong>对比业内工具优势</strong> —— 除了 GPU Kernel 和 Torch 层数据，还覆盖 RDMA 通信、系统调用、DCGM 监控和 NVTX 标记；同时支持 Python 与 C++ 应用进程的数据采集，并可对非 GPU 相关进程进行统一监控。</p><h2 id=\"section-真实案例\">真实案例<a class=\"heading-anchor\" href=\"#section-真实案例\" aria-label=\"链接到本节：真实案例\">#</a></h2><h3 id=\"section-案例一-vllm-推理服务显存泄漏定位\">案例一：vLLM 推理服务显存泄漏定位<a class=\"heading-anchor\" href=\"#section-案例一-vllm-推理服务显存泄漏定位\" aria-label=\"链接到本节：案例一：vLLM 推理服务显存泄漏定位\">#</a></h3><p><strong>问题背景：</strong> 用户使用 vLLM 部署大模型推理服务时，在预设占用显存的情况下，运行过程中出现了显存 OOM（Out of Memory）错误，并观测到显存有明显增长。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_aa6c7a0f9f8b49d09f600385c508d0d4.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / 通过 dcgm-exporter 监控观察到有显存增长</em></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_e441ced5cf5e4f669c9f8cba6704921d.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / 观测 vLLM 日志发现 KV-Cache 利用率并未打满</em></p><h4 id=\"article-anchor-11\">使用 AI Profiling 显存分配追踪</h4><ol><li>进入阿里云操作系统控制台--&gt;GPU 性能与诊断--&gt;AI Profiling。</li><li>输入目标实例 ID， 对正在运行的 vLLM 推理服务进行 AI Profiling，配置 Profiling 采集项与分析模式点击开始分析。</li></ol><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_f400129b82b342448bfd2920e5565e22.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><ol start=\"3\"><li>系统自动完成采集、数据回传和中心端分析，全程无需人工干预，采集完成后，在前端查看自动生成的分析报告。</li></ol><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_26ba9b6e727e4839a1f973e81c55bede.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>通过 AI Profiling 报告中的 GPU Kernel Timeline，可以观察到显存增长的峰值出现在显存申请（cudaMalloc）操作中；在 Timeline 上定位到对应时间点后，进一步下钻到 Python 调用栈，最终定位到推理请求处理过程中框架的上下文管理逻辑动态预留了额外显存。尽管 vLLM 在服务启动时已预分配显存，但推理过程中的这部分动态预留仍使整体占用超出预期阈值，最终触发 OOM。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ccfb99cf024e402ba027fdfa6b8abad7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / 显存峰值增长定位</em></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_e14357ee1b8b4dd2a8889700b8d9ada0.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / 在 TimeLine 上标注所定位的 cudaMalloc 的时间部分</em></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a5b46588bde94fb9bbd17a6fbc1517ba.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / 通过 Python 调用栈逐层下钻，定位到触发额外显存申请的具体方法</em></p><p><em><br></em></p><p>结合 PyTorch 显存缓存机制分析， PyTorch 的显存管理采用分块（block）机制，会缓存已释放的内存块以减少频繁的 CUDA 内存分配开销。然而，这些缓存块的大小和数量会随模型推理复杂度动态变化。当显存使用率接近阈值时，缓存块的累积可能导致显存占用超出预期。例如，<code>nvidia-smi</code> 显示的显存占用包含 <code>reserved_memory</code>（缓存块）和 <code>allocated_memory</code>（实际使用），两者之和可能远超初始预留值。</p><h4 id=\"article-anchor-12\">解决方案与优化建议：</h4><p><strong>1. 避免显存碎片化：</strong> 当出现显存剩余量足够却无法分配连续的显存时，可以通过环境变量 <code>CUDA_PYTORCH_CUDA_ALLOC_CONF</code> 将 <code>max_split_size_mb</code> 调小，来减少显存碎片化的影响；</p><p><br></p><p><strong>2. 尝试其他优化策略：</strong> 除了调整 <code>max_split_size_mb</code> 外，还可以考虑其他优化策略来减少显存碎片化，如使用显存清理工具（如 <code>torch.cuda.empty_cache()</code>）或调整模型和数据加载策略。</p><h3 id=\"section-案例二-客户使用-ai-profiling-对比-sglang-与-vllm-性能差异\">案例二：客户使用 AI Profiling 对比 SGLang 与 vLLM 性能差异<a class=\"heading-anchor\" href=\"#section-案例二-客户使用-ai-profiling-对比-sglang-与-vllm-性能差异\" aria-label=\"链接到本节：案例二：客户使用 AI Profiling 对比 SGLang 与 vLLM 性能差异\">#</a></h3><p>同样如案例一的方式，进入阿里云操作系统控制台-&gt;GPU性能与诊断-&gt;AI Profiling，发起 AI Profiling 分析，得到分析报告。</p><p><br></p><p><strong>SGLang 推理：</strong> 根据 GPU/CPU Tracing 分析的 Timeline 图，可以发现其显著特征是：</p><p>1.&nbsp;图像编码未做 batch 处理，多个请求会看到多次独立的图像编码，单次编码耗时相对较高；</p><p>2.&nbsp;文本解码有 batch，在观测的参数配置下 batch 大小对单次 Decode 执行时间影响不大；</p><p>3.&nbsp;GPU 空闲主要由每个阶段开始时 GPU 算子下发不充分造成，并观察到部分毫秒级 GPU 空隙，疑与操作系统活动相关；</p><p>4.&nbsp;文本 decode 阶段的 GPU 空隙主要来自 Cuda Graph 处理的开销。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ae012d28abe241058d7ec2f87b6e1a9e.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / SGLang Python 函数调用栈分析</em></p><p><em><br></em></p><p><strong>vLLM pipeline：</strong> 根据 GPU/CPU Tracing 分析的 Timeline 图，可以发现 vLLM pipeline 的特征如下：</p><ul><li>图像编码：单次耗时略高于 SGLang 单请求的图像编码；</li><li>文本解码：单次耗时与 SGLang 基本相当，略高一些。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_d0ef04d93dfb4a3aa6e5cec893f8573e.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 / vLLM Python 函数调用栈分析</em></p><p><em><br></em></p><p>AI Profiling 入口链接（复制链接至浏览器打开）：</p><p><a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.19.24e96ffaKwfFBY&amp;enc=CUspwC0%2B2b0XhCJ%2FODGZQA%3D%3D.QSt%2B0C03SI3oszKkAOGFGfURcMruj9zRZ2fnjEr%2BGkf0hAEY6b%2B%2BCUdpbacEOWEoeRTYDG2QZBL1Uw60k2rV5w%3D%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://alinux.console.aliyun.com/sysom-ai/ai-infra-observation</a></p><h2 id=\"section-写在最后\">写在最后<a class=\"heading-anchor\" href=\"#section-写在最后\" aria-label=\"链接到本节：写在最后\">#</a></h2><p>从训练到推理、从单卡到千卡集群、从 Python 层到 GPU Kernel 层，AI Profiling 以零侵入、低开销、跨厂商兼容的方式，把过去难以看清的性能问题一一呈现出来——一键采集、分钟级出结果，多维度深入观测，配合显存快照与基于迭代锚点的差分分析，让 GPU 利用率不高、显存异常增长、集群通信长尾等问题都变得有迹可循，并已在真实的 vLLM 显存泄漏定位、SGLang 与 vLLM 性能对比等场景中得到验证。</p><h3 id=\"section-profiling-agent-从-看见问题-到-理解问题\">Profiling Agent：从“看见问题”到“理解问题”<a class=\"heading-anchor\" href=\"#section-profiling-agent-从-看见问题-到-理解问题\" aria-label=\"链接到本节：Profiling Agent：从“看见问题”到“理解问题”\">#</a></h3><p>在 AI Profiling 提供全生命周期采集与观测能力的基础上，我们进一步构建了 Profiling Agent（也称性能剖析 Agent），目标是打造源码级的问题分析与解决能力，实现“感知 → 诊断 → 分析 → 修复建议”的闭环。</p><p><br></p><p>前文展现的是 AI Profiling 在采集与观测层面“看得清、看得全”的能力；而 Profiling Agent 要解决的，是让机器自动读懂这些数据、定位根因并给出修复建议，把观测延伸为端到端的智能闭环。目前，Profiling Agent 已发布，后续会专门介绍以及讲解如何使用，欢迎关注。</p>",
+    "headings": [
+      {
+        "id": "section-现有工具为什么不够用",
+        "level": 2,
+        "text": "现有工具为什么不够用"
+      },
+      {
+        "id": "section-ai-profiling-核心功能",
+        "level": 2,
+        "text": "AI Profiling 核心功能"
+      },
+      {
+        "id": "section-一键-profiling-分钟级拿到分析结果",
+        "level": 3,
+        "text": "一键 Profiling，分钟级拿到分析结果"
+      },
+      {
+        "id": "section-多维度深入观测",
+        "level": 3,
+        "text": "多维度深入观测"
+      },
+      {
+        "id": "section-显存快照分析",
+        "level": 3,
+        "text": "显存快照分析"
+      },
+      {
+        "id": "section-基于迭代锚点的差异分析",
+        "level": 3,
+        "text": "基于迭代锚点的差异分析"
+      },
+      {
+        "id": "section-你能从中获得什么",
+        "level": 2,
+        "text": "你能从中获得什么"
+      },
+      {
+        "id": "section-真实案例",
+        "level": 2,
+        "text": "真实案例"
+      },
+      {
+        "id": "section-案例一-vllm-推理服务显存泄漏定位",
+        "level": 3,
+        "text": "案例一：vLLM 推理服务显存泄漏定位"
+      },
+      {
+        "id": "section-案例二-客户使用-ai-profiling-对比-sglang-与-vllm-性能差异",
+        "level": 3,
+        "text": "案例二：客户使用 AI Profiling 对比 SGLang 与 vLLM 性能差异"
+      },
+      {
+        "id": "section-写在最后",
+        "level": 2,
+        "text": "写在最后"
+      },
+      {
+        "id": "section-profiling-agent-从-看见问题-到-理解问题",
+        "level": 3,
+        "text": "Profiling Agent：从“看见问题”到“理解问题”"
+      }
+    ],
+    "textLength": 5130,
+    "readingMinutes": 12,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1758465",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "27d96f2934d8c94b682077e7d97a8defc23255db4a93430b8f534c34e4acc635",
+    "fetchedAt": "2026-11-02T07:09:14.736Z",
+    "checkedAt": "2026-11-02T07:09:14.736Z",
+    "nextRetryAt": "2026-12-02T07:09:14.736Z",
+    "warnings": []
+  }
+}

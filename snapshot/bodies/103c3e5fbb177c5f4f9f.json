@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "103c3e5fbb177c5f4f9f",
+    "status": "ready",
+    "html": "<p><strong>作者：</strong></p><p>席翁 · GOAI 世界人工智能开源大赛 · 新智基座 Agent Infra 赛道导师</p><p>盈楹 · GOAI 世界人工智能开源大赛 · 新智基座 Agent Infra 赛道技术运营</p><p><br></p><h2 id=\"section-写在前面\">写在前面<a class=\"heading-anchor\" href=\"#section-写在前面\" aria-label=\"链接到本节：写在前面\">#</a></h2><p>最近这半年，讲多 Agent 的好文章其实不少——有讲框架架构的、有讲协作范式的、有讲评估方法论的，读完能明显感觉到这个领域在快速沉淀，几位老师和团队的输出都很扎实，也让我从中学到不少。</p><p><br></p><p>但读多了之后，我个人有一点小小的感受：<strong>大家把“应该长什么样”讲得越来越清楚，但“实际做起来会撞到什么”讲得还不够多。</strong> 真正把一个多 Agent 系统从想法推到能演示、再往可信闭环上推的过程里，那些不太性感的工程判断——分工到几个 Agent 合适？Skill 的边界怎么定？Mock 数据和真实数据的契约怎么对齐？动作的风险等级怎么切？——反而是最容易被跳过、也最容易在后面反噬的部分。</p><p><br></p><p>正好 GOAI 世界人工智能开源大赛 · 新智基座 Agent Infra 赛道立了一个非常清晰的命题：让多 Agent 从 Demo 走到 Production。我借这个机会自己先动手做了一个刻意做小的多 Agent Demo，叫 OpsPilot Zero，算是抛砖引玉——把“最小可信闭环长什么样”这一步做透明，不藏方案、不藏权衡、也不藏 Demo 承认自己做不到的地方，让准备参赛或者正在做类似系统，但又没有这块经验的同学，能快速上手，也有一个具体的参照物去校准自己的方案。</p><p><br></p><p>场景选的是运维自愈：从客诉进来到生成事故报告并执行低风险修复，全程不需要人工介入。这个场景的好处是<strong>风险光谱够宽、证据来源够多、成功信号够明确</strong>，容易把多 Agent 协作的几个关键工程问题都暴露出来。</p><p><br></p><p>这篇文章不贴代码。它讲的是我在做这个 Demo 的过程中想通的 9 条工程判断，以及为什么我认为这 9 条判断决定了一个多 Agent 系统能不能扛真实业务。</p><h2 id=\"section-这个-demo-到底做什么\">这个 Demo 到底做什么<a class=\"heading-anchor\" href=\"#section-这个-demo-到底做什么\" aria-label=\"链接到本节：这个 Demo 到底做什么\">#</a></h2><p>场景是我们熟悉的：<strong>杭州某电商公司在 10:15 收到客诉，用户反馈下单失败率升高、支付页面一直转圈</strong>。运维同学接到告警时，往往要在网关、应用、日志、Trace、配置变更、数据库慢 SQL 这几个数据源之间来回跳，手工把时间线拼出来、定位根因、想清楚该怎么改、然后小心翼翼地执行——即便有 Runbook，从告警到恢复通常也要 30-60 分钟。</p><p><br></p><p>OpsPilot Zero 想把这段流程压到 5-10 分钟以内，并且在低风险动作上做到零人工值守、高风险动作生成可审批方案。它的核心是四个职责清晰的 Agent 顺序协作：</p><ul><li><strong>Alert Intake Agent</strong> 负责把散落在客诉、告警、监控指标里的信号归并成一个可追踪的事故对象；</li><li><strong>RCA Analyst Agent</strong> 关联日志、Trace、配置变更、慢 SQL 和 Runbook，排序根因候选并给出证据链；</li><li><strong>Remediation Planner Agent</strong> 生成修复计划、验证方案、回滚点，并给动作打上风险等级；</li><li><strong>Recovery Verifier Agent</strong> 执行被允许自动化的动作，用探针验证恢复效果，产出事故报告。</li></ul><p><br></p><p>Demo 里两个 mock 场景一次跑完：一个是&nbsp;db.pool.maxSize&nbsp;被从 50 改成 8 导致的连接池打满，一个是慢 SQL 扫描过多行拖慢系统。两次事故都能在几分钟内跑出根因、置信度、回滚计划和恢复报告。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_f28e4c873aca4fc69893c78accdc2d72.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>[配图 1：事故时间线图，标出 10:15 客诉到 10:27 恢复中间 4 个 Agent 的介入节点]</p><h2 id=\"section-4-个-agent-是怎么分工的\">4 个 Agent 是怎么分工的<a class=\"heading-anchor\" href=\"#section-4-个-agent-是怎么分工的\" aria-label=\"链接到本节：4 个 Agent 是怎么分工的\">#</a></h2><p>我想先讲一个可能反直觉的事：<strong>Agent 数量不是越多越好。</strong> 我最初的版本尝试过 7 个 Agent，把归并、影响面分析、根因、数据缺口诊断、修复计划、执行、验证各拆一个。跑了几次之后我把它压回到 4 个——原因是“Agent 数量”和“任务粒度”是两回事，多出来的 3 个 Agent 只是把同一件事切成了更小的片段，没有真正带来协作意义上的价值。</p><p><br></p><p><strong>判断分工的标准是“这一步产出的是不是一个可被下游 Agent 独立消费的语义对象”。</strong></p><ul><li>Alert Intake 输出的是“事故对象”（时间线、影响面、初始事实清单）——这是一个可以独立存在的东西；</li><li>RCA Analyst 输出的是“根因候选+证据链+置信度+缺失证据”——一个诊断结论；</li><li>Remediation Planner 输出的是“分级动作列表+回滚点+审批要求”——一个可执行方案；</li><li>Recovery Verifier 输出的是“执行结果+验证证据+恢复报告”——一个可回放的终态。</li></ul><p><br></p><p>四个输出物之间是接力式的语义交付，每一个下游 Agent 都可以只看上游给的对象、不需要回读原始数据。这样的分工让每个 Agent 的边界都清晰，评审时也容易判断“这一步做没做到位”。</p><p><br></p><p>Skill 层面同样做了收敛。7 个 Skill——<code>alert-fusion</code>、<code>impact-mapping</code>、<code>log-trace-rca</code>、<code>data-advisor</code>、<code>remediation-plan</code>、<code>risk-guard</code>、<code>recovery-verify</code>——每一个都对应一个具体的、可以独立评测的能力，而不是一段可有可无的 Prompt。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_85e76da2fb2c4f5097dec5699ff34881.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>[配图 2：4 个 Agent 的协作关系图，标注每一步的输入/输出契约]</p><h2 id=\"section-9-条工程判断\">9 条工程判断<a class=\"heading-anchor\" href=\"#section-9-条工程判断\" aria-label=\"链接到本节：9 条工程判断\">#</a></h2><p>下面是我在这个 Demo 里想通的 9 条判断。它们不是通用真理，是从这个具体场景里长出来的、我个人愿意为之辩护的选择。</p><h3 id=\"section-判断-1-skill-必须有-guardrail-段-而不只是-prompt\">判断 1：Skill 必须有 Guardrail 段，而不只是 Prompt<a class=\"heading-anchor\" href=\"#section-判断-1-skill-必须有-guardrail-段-而不只是-prompt\" aria-label=\"链接到本节：判断 1：Skill 必须有 Guardrail 段，而不只是 Prompt\">#</a></h3><p>Skill 的价值在于“稳定”，稳定的关键不是提示词写得多好，而是<strong>它有明确的边界和拒绝条件</strong>。RCA Analyst 用的 <code>log-trace-rca</code> Skill 里有一条硬约束：<strong>不允许在只有一条独立证据的情况下给出根因结论，除非报告里明确标注“结论较弱”</strong>。这条约束让 Agent 在证据不足时会选择“承认缺口+建议采集”而不是“编一个听起来合理的原因”。</p><p><br></p><p>对赛道评审来说，这类 Guardrail 直接决定“系统工程水平”和“安全可信”维度的分数——评委看的不是 Agent 有多聪明，而是它做不对时会不会硬编答案。</p><h3 id=\"section-判断-2-至少两条独立证据才能给结论-比让-llm-自由发挥更值\">判断 2：至少两条独立证据才能给结论，比让 LLM 自由发挥更值<a class=\"heading-anchor\" href=\"#section-判断-2-至少两条独立证据才能给结论-比让-llm-自由发挥更值\" aria-label=\"链接到本节：判断 2：至少两条独立证据才能给结论，比让 LLM 自由发挥更值\">#</a></h3><p>这条是判断 1 的具体化，但它值得单独列出来。多 Agent 系统最容易踩的坑就是“看起来什么都答得上来”——LLM 不擅长承认不知道。我在 Demo 里强制要求：<strong>任何根因结论必须至少引用两条独立来源的证据</strong>（比如日志 + 配置变更、Trace + 数据库慢查询），并把每条证据的引用路径写进报告。</p><p><br></p><p>这个约束的代价是有时候 Agent 会返回“证据不足，需要补充采集”这样看起来不够利落的结论。但从工程视角，“我不知道”比“我猜是 A”贵得多——后者会让运维同学基于错误结论去操作，损失远大于多花几分钟补数据。</p><h3 id=\"section-判断-3-风险分级不能只做二档-必须做-l0-l3-四档\">判断 3：风险分级不能只做二档，必须做 L0-L3 四档<a class=\"heading-anchor\" href=\"#section-判断-3-风险分级不能只做二档-必须做-l0-l3-四档\" aria-label=\"链接到本节：判断 3：风险分级不能只做二档，必须做 L0-L3 四档\">#</a></h3><p>我第一版做过“可自动/不可自动”的二档划分，很快就发现不够用。真实运维动作的风险光谱远比这两档细：</p><ul><li>L0：只读诊断（查日志、拉指标、看配置），完全无副作用；</li><li>L1：可回滚的低风险动作（配置回滚到已知良好值、重启无状态服务实例）；</li><li>L2：需要灰度+人审的中等风险动作（扩容、切流量、修改生产配置）；</li><li>L3：只生成方案不执行的高风险动作（建索引、变更数据库表结构、跨服务大规模改动）。</li></ul><p><br></p><p>自动执行的边界画在 L0 和 L1，L2/L3 一律生成审批工单。这不是保守，是<strong>让“自动化率”和“可回滚性”这两个指标都能给出数字</strong>。评审 Agent Infra 类作品时，评委会问：“你说你能自愈，那你自愈的是哪个风险等级的动作？”——没有分级的作品答不上这个问题。</p><h3 id=\"section-判断-4-mock-工具和真实工具必须共用一套-schema\">判断 4：Mock 工具和真实工具必须共用一套 Schema<a class=\"heading-anchor\" href=\"#section-判断-4-mock-工具和真实工具必须共用一套-schema\" aria-label=\"链接到本节：判断 4：Mock 工具和真实工具必须共用一套 Schema\">#</a></h3><p>Demo 里所有数据源都是 mock 的：mock 监控、mock 日志、mock Trace、mock 配置、mock 数据库慢 SQL。但我在设计的时候有一条硬要求——<strong>mock 工具和后续替换成 MCP Server 或真实数据源接入时，输入输出 Schema 必须完全一致。</strong></p><p><strong><br></strong></p><p>这条判断带来的直接好处是：Demo 阶段用 mock 数据快速迭代 Agent 逻辑，到复赛阶段接入真实系统时不需要改 Agent 一行——只需要换掉工具层的实现。<strong>Demo 与 Production 共用一套契约</strong>，这是我认为多 Agent 系统能从赛场走到生产的核心工程判断。</p><h3 id=\"section-判断-5-prompt-skill-agentspec-的内联版是过渡态-必须走-registry\">判断 5：Prompt / Skill / AgentSpec 的内联版是过渡态，必须走 Registry<a class=\"heading-anchor\" href=\"#section-判断-5-prompt-skill-agentspec-的内联版是过渡态-必须走-registry\" aria-label=\"链接到本节：判断 5：Prompt / Skill / AgentSpec 的内联版是过渡态，必须走 Registry\">#</a></h3><p>Demo 里所有 Agent 的 Prompt、Skill 定义、AgentSpec 都是内联在文件里的。这在初赛阶段没问题，但它有两个致命限制：<strong>没法多版本共存、没法灰度发布、没法审计谁在什么时候改了什么。</strong></p><p><strong><br></strong></p><p>真正到复赛/决赛阶段，这些东西必须进 Registry——比如 Nacos 的 AI 资源治理控制面。Prompt Registry、Skill Registry、AgentSpec Registry、AgentTeams Spec Registry 四层各自管理生命周期，才能支撑发布、灰度、回滚、审计的完整链路。内联版是给“能跑起来”用的；Registry 版是给“能扛业务”用的。</p><h3 id=\"section-判断-6-报告里必须有-缺失证据-这一段\">判断 6：报告里必须有“缺失证据”这一段<a class=\"heading-anchor\" href=\"#section-判断-6-报告里必须有-缺失证据-这一段\" aria-label=\"链接到本节：判断 6：报告里必须有“缺失证据”这一段\">#</a></h3><p>我在 <code>incident_report.md</code> 的模板里强制加了两段：Evidence Chain（列出所有支持结论的证据）和 <code>Telemetry Recommendations</code>（列出因为数据缺失而没能验证的假设、以及建议采集的指标）。</p><p><br></p><p>后者比前者更重要。它承认了这次诊断有哪些盲区、下次需要补什么数据。<strong>一个不会承认自己盲区的 Agent 系统，用得越久错得越离谱</strong>——因为运维同学会越来越相信它的结论，而它的置信度其实是被“用户不追问”惯出来的。</p><h3 id=\"section-判断-7-跑一次-和-跑一万次-是两个完全不同的工程问题\">判断 7：“跑一次”和“跑一万次”是两个完全不同的工程问题<a class=\"heading-anchor\" href=\"#section-判断-7-跑一次-和-跑一万次-是两个完全不同的工程问题\" aria-label=\"链接到本节：判断 7：“跑一次”和“跑一万次”是两个完全不同的工程问题\">#</a></h3><p>Demo 现在能跑通 2 个 mock 场景。这在赛道初赛是够的，但离生产还差得远。差在哪？差在<strong>评估集、稳定性、幂等性</strong>这三件事上：</p><ul><li><strong>评估集：</strong> 需要 Golden Case 和 Badcase 数据集，每次改 Prompt 或换模型前跑一遍对比，防止越迭代越差；</li><li><strong>稳定性：</strong> 同一份输入跑十次，结论应该是一致的，而不是有时候说 A 有时候说 B；</li><li><strong>幂等性：</strong> Agent 执行动作要有幂等键，网络抖动导致重复调用不能造成二次执行。</li></ul><p><br></p><p>这三件事在 Demo 里都是空白，但我认为它们是从“能演示”到“能上生产”必须补的三件套。赛道复赛/决赛的区分度大概率在这里。</p><h3 id=\"section-判断-8-agent-系统的可回滚性比自动化率更重要\">判断 8：Agent 系统的可回滚性比自动化率更重要<a class=\"heading-anchor\" href=\"#section-判断-8-agent-系统的可回滚性比自动化率更重要\" aria-label=\"链接到本节：判断 8：Agent 系统的可回滚性比自动化率更重要\">#</a></h3><p>如果一定要给“多 Agent 生产系统”选一个最重要的指标，我会选可回滚性，而不是自动化率。理由是：<strong>自动化率决定运维效率的上限，可回滚性决定运维事故的下限。</strong></p><p><strong><br></strong></p><p>一个 90% 自动化但没有回滚点的系统，一次误操作就能把线上打瘫；一个 60% 自动化但每一步都可回滚的系统，即便出错也能在几秒内恢复。Demo 里我给每个 L1 动作都强制附带回滚点，L2/L3 动作直接不执行——这不是保守，是承认“多 Agent 系统还处在'我们信任但需要证据'的阶段”。</p><h3 id=\"section-判断-9-这个-demo-敢开放-因为它承认自己的局限\">判断 9：这个 Demo 敢开放，因为它承认自己的局限<a class=\"heading-anchor\" href=\"#section-判断-9-这个-demo-敢开放-因为它承认自己的局限\" aria-label=\"链接到本节：判断 9：这个 Demo 敢开放，因为它承认自己的局限\">#</a></h3><p>这条不是技术判断，是我做这个 Demo 时想清楚的一件事。<strong>多 Agent 领域最缺的不是漂亮的架构图，是敢把不完美的方案摆出来的实践者。</strong></p><p><strong><br></strong></p><p>OpsPilot Zero 有一堆局限——数据是 mock 的、Skill 是内联的、评估集是空的、只在单一云环境跑过、没有真实业务流量验证。我把这些都写在文档里。因为我相信：<strong>一个承认自己边界的 Demo，比一个假装什么都能做的 Demo，工程价值大得多。</strong></p><h2 id=\"section-一份-agent-生成的报告长什么样\">一份 Agent 生成的报告长什么样<a class=\"heading-anchor\" href=\"#section-一份-agent-生成的报告长什么样\" aria-label=\"链接到本节：一份 Agent 生成的报告长什么样\">#</a></h2><p>上面讲了这么多设计判断，最直观的验证是看它到底产出什么。下面是 Demo 跑连接池耗尽场景时 RCA Analyst 和 Recovery Verifier 联合生成的事故报告（节选）：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_5b4db185980846a4bec42ef8a548e452.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>[配图 3：incident_report.md 截图，圈出以下几个关键段落]</p><p><br></p><p>从报告结构可以看到几件事：</p><ul><li><strong>Incident Summary&nbsp;段</strong>给了完整的事故时间线，每条事件都有具体时间和来源服务；</li><li><strong>Root Cause 段</strong>给出根因 <code>db_pool_exhausted</code>、置信度 <code>0.91</code>、以及三条独立证据（日志、指标、配置变更），符合“至少两条独立证据”的硬约束；</li><li><strong>Remediation Plan 段</strong>列出动作 <code>rollback_config</code>，标注风险等级 <code>L1</code>、自动执行 <code>yes</code>、并给出回滚点，符合“每个 L1 动作都必须有回滚点”的判断；</li><li><strong>Execution And Verification 段</strong>贴出探针验证结果和恢复后的关键指标；</li><li><strong>Telemetry Recommendations 段</strong>主动列出“这次诊断因为缺什么数据而没能验证什么假设”——这是判断 6 的直接体现。</li></ul><p><br></p><p>我认为这份报告的信息密度、证据链完整度、以及主动承认盲区的姿态，代表了一个多 Agent 系统在“最小可信闭环”这个标准上应该达到的水位。</p><h2 id=\"section-demo-承认自己不足的地方\">Demo 承认自己不足的地方<a class=\"heading-anchor\" href=\"#section-demo-承认自己不足的地方\" aria-label=\"链接到本节：Demo 承认自己不足的地方\">#</a></h2><p>按照判断 9 的原则，我把 OpsPilot Zero 目前的局限也写在这里：</p><p><br></p><ul><li><strong>数据全是 mock</strong>——真实的日志/Trace/慢 SQL 数据形态更复杂，噪声更大，Agent 面对真实数据的表现需要重新评估；</li><li><strong>Spec 全是内联</strong>——没有 Nacos Registry，无法支撑多版本、灰度、审计；</li><li><strong>没有评估集</strong>——目前只有 2 个场景跑通，Golden/Badcase 集合是空的，版本对比无从谈起；</li><li><strong>没有 Trace 看板</strong>——每一次 Agent、Skill、LLM 调用都记录了 trace，但没有可视化，排查 Agent 行为异常还得看 jsonl；</li><li><strong>只在单一云环境跑过</strong>——公有云、私有云、自建 IDC 之间的差异化排障场景没有覆盖到。</li></ul><p><br></p><p>这五条局限，恰好对应赛道复赛和决赛要打磨的方向——<strong>从“能跑通最小闭环”到“能承接真实生产流量”，工程上要补齐的就是这些。</strong></p><h2 id=\"section-跑通闭环本身就是一个效率锚点\">跑通闭环本身就是一个效率锚点<a class=\"heading-anchor\" href=\"#section-跑通闭环本身就是一个效率锚点\" aria-label=\"链接到本节：跑通闭环本身就是一个效率锚点\">#</a></h2><p>有同学可能会问：数据还是 mock 的，能谈什么业务价值？确实不能下定论。但有一个数字可以记下来做参考：</p><p><br></p><p>运维行业有 Runbook 的团队，MTTR（平均恢复时间）基线大约在 30-60 分钟。OpsPilot Zero 在 mock 场景里跑出的是 12 分钟全流程闭环、人工介入 0 次。<strong>这不是生产实测，是 mock 环境下的理想路径</strong>——真实环境的数据形态更复杂、噪声更大、工具链更碎，实际能压到多少，是参赛者在接入真实数据后需要进行验证和不停优化的内容和目标。</p><p><br></p><p>把这个数字放在这里，不是为了宣称“我们很快”，是为了说明：<strong>跑通闭环本身就能给出一个可对比的效率锚点——后续每一次改进，都有基线可以衡量。</strong></p><h2 id=\"section-写在最后\">写在最后<a class=\"heading-anchor\" href=\"#section-写在最后\" aria-label=\"链接到本节：写在最后\">#</a></h2><p>OpsPilot Zero 是我为 GOAI 世界人工智能开源大赛 · 新智基座 Agent Infra 赛道做的最小参考实现。因为我同时也是这个赛道的导师，看得到评委视角上什么样的作品会拿高分，就想把“最小可信闭环长什么样”这一步的判断标准做透明——让准备参赛的开发者，能对着一个真实存在的、承认自己局限的 Demo，去思考自己方案的边界在哪。</p><p><br></p><p>Demo 完整代码目前还没正式开源，计划在赛道决赛结束后一起放出来。如果你想现在就拿到完整代码跑通，或者想跟我聊聊上面这 9 条判断哪些你不同意、哪些你觉得还漏了——<strong>扫码进钉钉群：186080014742</strong>，我在群里；也会不定期在群里发 Demo 拆解、参赛 office hour 和评审视角的讨论。</p><p><br></p><p>大赛详细介绍在下面补充了，面向复杂任务下的多 Agent 基础设施与协同系统，¥190 万总奖池，1-3 人组队，8.16 初赛截止。</p><p><br></p><p>如果这篇文章对你正在做的事有一点帮助，评论区聊一下你在多 Agent 工程化上踩到的坑——比看到“来报名”更让我期待的，是看到有人拿着这些判断继续往前走。</p><p></p><h2 id=\"section-附-大赛介绍\">附：大赛介绍<a class=\"heading-anchor\" href=\"#section-附-大赛介绍\" aria-label=\"链接到本节：附：大赛介绍\">#</a></h2><h2 id=\"section-https-www-goaihz-com-tracks-track-infra\"><a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.3.30d46ffaAU72Wx&amp;enc=LAU1JV5aRO2RJ1P7PHgvUA%3D%3D.giR4kzaVK%2BTIHiotubZHRG0RU4m36J7Mz8uVKJ7rhJOnqo6aLQKqLAFeadgKzGeQ\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.goaihz.com/tracks?track=infra</a><a class=\"heading-anchor\" href=\"#section-https-www-goaihz-com-tracks-track-infra\" aria-label=\"链接到本节：https://www.goaihz.com/tracks?track=infra\">#</a></h2><p><br></p><h3 id=\"section-赛道定位-聚焦多智能体协同基础设施\">赛道定位：聚焦多智能体协同基础设施<a class=\"heading-anchor\" href=\"#section-赛道定位-聚焦多智能体协同基础设施\" aria-label=\"链接到本节：赛道定位：聚焦多智能体协同基础设施\">#</a></h3><p>新智基座赛道要求参赛团队从真实业务场景出发，设计由不少于 3 个不同职能 Agent 组成的完整任务闭环，展现任务拆解、上下文传递、工具调用、结果验证、执行证据沉淀以及安全审计等能力，并将关键能力封装为可复用的 Skill。</p><p><br></p><p>赛道从“团队协同、可验证可回滚、持续进化”三个维度考察系统工程能力，分别对应 AgentTeams 多 Agent 协同底座与 AgentLoop 观测评估飞轮两大开源基础设施。其中 AgentTeams 作为必选协同设计基点，通过 Manager–Team Leader–Worker 分层架构实现任务编排与混合框架调度；AgentLoop 提供全栈观测、效果评估与自进化调优能力，让 Agent 系统在真实业务反馈中持续进化。</p><p><br></p><p><strong>换言之，这条赛道考察的不是“谁的 Agent 更聪明”，而是“谁能把多个 Agent 组织成一个可治理、可观测、可进化的生产级系统”。</strong></p><h3 id=\"section-核心要求-skill-工程化与可复用性\">核心要求：Skill 工程化与可复用性<a class=\"heading-anchor\" href=\"#section-核心要求-skill-工程化与可复用性\" aria-label=\"链接到本节：核心要求：Skill 工程化与可复用性\">#</a></h3><p>赛道的核心导向，是“可复用”而非“一次性”。参赛作品应将关键能力沉淀为可复用的 Skill，而不是一段只能运行一次的脚本或一场单次演示。具体而言，参赛作品应重点体现：</p><ul><li>多 Agent 协同完成复杂任务；</li><li>Skill 可复用与工程化封装；</li><li>工具、系统或云产品的稳定接入；</li><li>上下文管理与执行证据沉淀；</li><li>安全边界、审批、回滚与审计机制；</li><li>作品的开放/开源计划与长期成长价值。</li></ul><h3 id=\"section-参赛条件-真实场景与闭环能力\">参赛条件：真实场景与闭环能力<a class=\"heading-anchor\" href=\"#section-参赛条件-真实场景与闭环能力\" aria-label=\"链接到本节：参赛条件：真实场景与闭环能力\">#</a></h3><p>赛道提供零人工运维、智能客服自主闭环、软件研发全流程协同、金融风控与理赔自动化等参考方向，但不限制行业，鼓励团队从自身最熟悉的真实业务出发。适合参赛的项目通常具备三个特点：</p><p><br></p><p>第一，问题来自真实场景，且需要多个角色协作完成；第二，任务能够形成闭环——系统不仅能提出建议，还能调用工具推动执行并验证结果；第三，关键能力可以复用——项目能沉淀出 Skill、工具接口或协同流程，迁移到相似场景中去。</p><p><br></p><p>赛道特别提示：相比功能庞杂却无法真正运行的“大平台”，一个场景真实、结构清晰、证据完整的“小闭环”，往往更具竞争力。</p><h3 id=\"section-评审标准-场景-协同与工程并重\">评审标准：场景、协同与工程并重<a class=\"heading-anchor\" href=\"#section-评审标准-场景-协同与工程并重\" aria-label=\"链接到本节：评审标准：场景、协同与工程并重\">#</a></h3><p>赛道设置五项评审维度：场景价值与行业可复制性（25%）、多 Agent 协同与自主闭环能力（25%）、Skill 工程体系与生态复用（25%）、工程落地与运行验证及安全审计（20%）、开放与开源贡献（5%）。</p><p><br></p><p>从权重分布可以看出，赛道并不单独奖励“炫技”，而是将真实场景价值、系统协同能力与工程落地水平放在同等重要的位置，引导团队做出既有行业意义、又经得起运行检验的作品。</p><h3 id=\"section-赛程与奖项\">赛程与奖项<a class=\"heading-anchor\" href=\"#section-赛程与奖项\" aria-label=\"链接到本节：赛程与奖项\">#</a></h3><p>赛道设计了从初赛到决赛的清晰进阶路径。初赛阶段不强制提交代码，团队可通过作品简介和方案 PPT 说明设计思路；复赛需提交可执行的 AgentTeams 代码包和可运行 Demo；决赛则需完成现场展示与答辩。</p><p><br></p><p><strong>赛程安排：</strong> 初赛提交截止 8 月 16 日；8 月 24 日公布复赛入围名单（Top 30）；9 月 3 日复赛提交截止；9 月 10 日公布决赛入围名单（Top 15）；9 月 22 日线下决赛答辩；9 月 23 日 GOAI DAY 颁奖及生态对接。</p><p><br></p><p><strong>奖项方面</strong>，赛道冠军 50 万元、亚军 30 万元、季军 10 万元；表现优异的项目还有机会角逐 100 万元 GOAI 全场大奖。参赛团队 1-3 人，组队规则和报名详情请访问大赛官网。</p><p><br></p><p>欢迎大家报名参赛（注：本赛道承办方阿里云所有员工，以及有机会接触赛题背景业务、产品、数据的所有人员，自动退出本次比赛，放弃参赛资格。）：</p><p><a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.4.30d46ffaAU72Wx&amp;enc=k6VWPgTvNWP4d5Wg%2BtLVJg%3D%3D.3MaOzPKfWuPr36zy95OiLrwt29qCXf39JVmpj8C0MeI%2BsHCFUf9%2BEWDzKPDllafy\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.goaihz.com/tracks?track=infra</a></p><p><br></p><p>大赛选手钉钉交流群群号：186080014742：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_9f9508077250471fb6f9c315292ed0fa.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [
+      {
+        "id": "section-写在前面",
+        "level": 2,
+        "text": "写在前面"
+      },
+      {
+        "id": "section-这个-demo-到底做什么",
+        "level": 2,
+        "text": "这个 Demo 到底做什么"
+      },
+      {
+        "id": "section-4-个-agent-是怎么分工的",
+        "level": 2,
+        "text": "4 个 Agent 是怎么分工的"
+      },
+      {
+        "id": "section-9-条工程判断",
+        "level": 2,
+        "text": "9 条工程判断"
+      },
+      {
+        "id": "section-判断-1-skill-必须有-guardrail-段-而不只是-prompt",
+        "level": 3,
+        "text": "判断 1：Skill 必须有 Guardrail 段，而不只是 Prompt"
+      },
+      {
+        "id": "section-判断-2-至少两条独立证据才能给结论-比让-llm-自由发挥更值",
+        "level": 3,
+        "text": "判断 2：至少两条独立证据才能给结论，比让 LLM 自由发挥更值"
+      },
+      {
+        "id": "section-判断-3-风险分级不能只做二档-必须做-l0-l3-四档",
+        "level": 3,
+        "text": "判断 3：风险分级不能只做二档，必须做 L0-L3 四档"
+      },
+      {
+        "id": "section-判断-4-mock-工具和真实工具必须共用一套-schema",
+        "level": 3,
+        "text": "判断 4：Mock 工具和真实工具必须共用一套 Schema"
+      },
+      {
+        "id": "section-判断-5-prompt-skill-agentspec-的内联版是过渡态-必须走-registry",
+        "level": 3,
+        "text": "判断 5：Prompt / Skill / AgentSpec 的内联版是过渡态，必须走 Registry"
+      },
+      {
+        "id": "section-判断-6-报告里必须有-缺失证据-这一段",
+        "level": 3,
+        "text": "判断 6：报告里必须有“缺失证据”这一段"
+      },
+      {
+        "id": "section-判断-7-跑一次-和-跑一万次-是两个完全不同的工程问题",
+        "level": 3,
+        "text": "判断 7：“跑一次”和“跑一万次”是两个完全不同的工程问题"
+      },
+      {
+        "id": "section-判断-8-agent-系统的可回滚性比自动化率更重要",
+        "level": 3,
+        "text": "判断 8：Agent 系统的可回滚性比自动化率更重要"
+      },
+      {
+        "id": "section-判断-9-这个-demo-敢开放-因为它承认自己的局限",
+        "level": 3,
+        "text": "判断 9：这个 Demo 敢开放，因为它承认自己的局限"
+      },
+      {
+        "id": "section-一份-agent-生成的报告长什么样",
+        "level": 2,
+        "text": "一份 Agent 生成的报告长什么样"
+      },
+      {
+        "id": "section-demo-承认自己不足的地方",
+        "level": 2,
+        "text": "Demo 承认自己不足的地方"
+      },
+      {
+        "id": "section-跑通闭环本身就是一个效率锚点",
+        "level": 2,
+        "text": "跑通闭环本身就是一个效率锚点"
+      },
+      {
+        "id": "section-写在最后",
+        "level": 2,
+        "text": "写在最后"
+      },
+      {
+        "id": "section-附-大赛介绍",
+        "level": 2,
+        "text": "附：大赛介绍"
+      },
+      {
+        "id": "section-https-www-goaihz-com-tracks-track-infra",
+        "level": 2,
+        "text": "https://www.goaihz.com/tracks?track=infra"
+      },
+      {
+        "id": "section-赛道定位-聚焦多智能体协同基础设施",
+        "level": 3,
+        "text": "赛道定位：聚焦多智能体协同基础设施"
+      },
+      {
+        "id": "section-核心要求-skill-工程化与可复用性",
+        "level": 3,
+        "text": "核心要求：Skill 工程化与可复用性"
+      },
+      {
+        "id": "section-参赛条件-真实场景与闭环能力",
+        "level": 3,
+        "text": "参赛条件：真实场景与闭环能力"
+      },
+      {
+        "id": "section-评审标准-场景-协同与工程并重",
+        "level": 3,
+        "text": "评审标准：场景、协同与工程并重"
+      },
+      {
+        "id": "section-赛程与奖项",
+        "level": 3,
+        "text": "赛程与奖项"
+      }
+    ],
+    "textLength": 8193,
+    "readingMinutes": 19,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1753141",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "0cfdd36b8f9e5d92cd32673c09e6ecd90a573f0b0eeeecccac0d1245e6ae197a",
+    "fetchedAt": "2026-11-02T07:09:42.358Z",
+    "checkedAt": "2026-11-02T07:09:42.358Z",
+    "nextRetryAt": "2026-12-02T07:09:42.358Z",
+    "warnings": []
+  }
+}

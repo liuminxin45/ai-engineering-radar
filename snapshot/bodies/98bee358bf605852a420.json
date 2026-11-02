@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "98bee358bf605852a420",
+    "status": "ready",
+    "html": "<figure><img src=\"https://qianwen-res.oss-cn-beijing.aliyuncs.com/assets/balance/main_results.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p><a href=\"https://github.com/QwenLM/Qwen2-Math\" target=\"_blank\" rel=\"noopener noreferrer\">GITHUB</a></p><p><a href=\"https://huggingface.co/collections/Qwen/qwen25-math-66eaa240a1b7d5ee65f1da3e\" target=\"_blank\" rel=\"noopener noreferrer\">HUGGING FACE</a></p><p><a href=\"https://modelscope.cn/organization/qwen\" target=\"_blank\" rel=\"noopener noreferrer\">MODELSCOPE</a></p><p><a href=\"https://discord.gg/yPEP2vHTu4\" target=\"_blank\" rel=\"noopener noreferrer\">DISCORD</a></p><h2 id=\"section-background\">Background<a class=\"heading-anchor\" href=\"#section-background\" aria-label=\"链接到本节：Background\">#</a></h2>\n<p>The Mixture-of-Experts (MoEs) architecture has become a popular model-parameter-scale-up technique. Typically, one MoE layer consists of a router (often parameterized as one single Linear layer) and a group of experts (for transformer-based models, each expert is one feedforward layer). Given an input, only a subset of experts will be activated, and then their outputs will be aggregated based on the scores the router assigned. Specifically, </p>\n<p>$$\n\\mathbb{y}=\\sum_{i\\in N_E,g_i\\in\\operatorname{topK}}g_i(\\mathbb{x})E_i(\\mathbb{x})\n$$</p>\n<h3 id=\"section-load-balancing-loss\">Load Balancing loss<a class=\"heading-anchor\" href=\"#section-load-balancing-loss\" aria-label=\"链接到本节：Load Balancing loss\">#</a></h3>\n<p>Load balancing loss is an essential regularization technique in training MoE-based networks, and high-level intuition encourages the balanced activation of all experts. It can be calculated as:</p>\n<p>$$\nL_{\\text{balance}}=N_E \\sum_{i=1}^{N_E} f_ip_i\n$$</p>\n<p>where $f_i$ is the activation frequency of the expert $E_i$, and the $p_i$ is the the average gating score that the expert $E_i$ is assigned. </p>\n<p>However, most existing MoE training frameworks (e.g., Megatron-core), implement <strong>micro-batch</strong> level balance, which means the $L_{\\text{balance}}$ is calculated within every micro-batch and is then averaged on the global batch level.</p>\n<p>Our key point is that this implementation could be problematic if one micro-batch does not contain diverse data. For instance, imagine one micro-batch only contains some code data; the aforementioned load-balancing loss still pushes the router to distribute these code tokens to all experts uniformly, potentially hurting the model performance and preventing expert specialization. </p>\n<p>This situation is even more common in training MoE-based LLMs: the data in one micro-batch is often from the same domain. This partially explains why most existing open-source MoE-based LLMs do not achieve notable expert specialization.</p>\n<p>This drawback motivates us to extend the current method to the global-batch level balance.</p>\n<h2 id=\"section-from-micro-batch-balance-to-global-batch-balance\">From micro-batch balance to global-batch balance<a class=\"heading-anchor\" href=\"#section-from-micro-batch-balance-to-global-batch-balance\" aria-label=\"链接到本节：From micro-batch balance to global-batch balance\">#</a></h2>\n<p>One easy way to calculate global-batch balance loss is to 1) Synchronize expert selection frequency $f_i$ across all parallel groups; 2) Calculate the load-balancing loss in each parallel group (e.g., one GPU); 3) Aggregate the loss across all micro-batches. </p>\n<p>Specifically,</p>\n<p>$$\nL_{\\text{global}}=N_E\\sum_{i=1}^{N_E}f_i^{\\text{global}}p_i^{\\text{global}}=N_E\\sum_{i=1}^{n_E}f_i^{\\text{global}}\\cdot(\\frac{1}{N_p}\\sum_{j=1}^{N_p}p_j)= \\frac{1}{N_P} \\sum_{j=1}^{N_p}(N_E \\sum_{i=1}^{N_E} \\bar{f_i} \\cdot P^j_i)\n$$</p>\n<p>Note that the expert selection frequency is just one expert-num-dimentional vector! It is almost free to synchronize them across micro-batches.</p>\n<h2 id=\"section-results-more-performant-and-interpretable-moe\">Results: More Performant and Interpretable MoE<a class=\"heading-anchor\" href=\"#section-results-more-performant-and-interpretable-moe\" aria-label=\"链接到本节：Results: More Performant and Interpretable MoE\">#</a></h2>\n<p>We experiment with three MoE configs (3.4B with 0.6B activated, 15B with 2.54B activated, and 43B with 6.6B activated) and two data configs (120B tokens and 400B tokens). The results are shown in the following figure and chart. </p>\n<p>In short, compared to the micro-batch-level loss, the global batch one achieves better performance in all settings (model, data, and tasks). More importantly, the MoE model achieves significant domain specialization with the global batch balance. In Figure (b) left, almost all experts are uniformly activated regardless of the domain. But in Figure (b) right, some experts are frequently activated by a specific domain, demonstrating their specialization.</p>\n<figure><img src=\"https://qianwen-res.oss-cn-beijing.aliyuncs.com/assets/balance/table_results.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p>We further compare the model performance with balance batch size on a 3.4B with 0.6B activated model. The ptr-training PPL decreases rapidly from balance BSZ 2 to 128, and gradually saturates after 128. In the current mainstream MoE framework, even with cross expert-parallel groups communication, the balance BSZ is generally between 8 and 16 for larger models, which further reflects the significance of our method.</p>\n<figure><img src=\"https://qianwen-res.oss-cn-beijing.aliyuncs.com/assets/balance/different_balance_BSZ.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p>Using global batch balance may result in a degradation in micro-batch balance, potentially affecting the computational efficiency of MoE. We further experimented with the effect of adding micro-batch balance loss on top of the global-batch balance loss (with constant weights of 0.01 of the global batch loss). It can be seen that adding local equalization improves the speed of the model (from 1.64 to 1.59 seconds per update step) while the effectiveness of the model is almost unaffected.</p>\n<figure><img src=\"https://qianwen-res.oss-cn-beijing.aliyuncs.com/assets/balance/efficiency.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><h2 id=\"section-conclusion\">Conclusion<a class=\"heading-anchor\" href=\"#section-conclusion\" aria-label=\"链接到本节：Conclusion\">#</a></h2>\n<p>In summary, we investigate the challenges associated with the LBL in training MoEs models. By introducing global-batch balance loss, we achieve improved performance and foster expert specialization within the MoE model. We believe this advancement addresses an essential limitation in existing MoE training, offering a novel perspective for MoEs model optimization.\nThough mainly experimenting with language-based tasks, we hope our work could pave the way for training more substantial and specialised MoE models in various domains.</p>\n<h2 id=\"section-citation\">Citation<a class=\"heading-anchor\" href=\"#section-citation\" aria-label=\"链接到本节：Citation\">#</a></h2>\n<p>If you find our work helpful, feel free to give us a citation.}}</p>\n",
+    "headings": [
+      {
+        "id": "section-background",
+        "level": 2,
+        "text": "Background"
+      },
+      {
+        "id": "section-load-balancing-loss",
+        "level": 3,
+        "text": "Load Balancing loss"
+      },
+      {
+        "id": "section-from-micro-batch-balance-to-global-batch-balance",
+        "level": 2,
+        "text": "From micro-batch balance to global-batch balance"
+      },
+      {
+        "id": "section-results-more-performant-and-interpretable-moe",
+        "level": 2,
+        "text": "Results: More Performant and Interpretable MoE"
+      },
+      {
+        "id": "section-conclusion",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "id": "section-citation",
+        "level": 2,
+        "text": "Citation"
+      }
+    ],
+    "textLength": 4898,
+    "readingMinutes": 11,
+    "sourceId": "qwen-research",
+    "sourceUrl": "https://docs.qwenlm.ai/research/global-load-balance/index.json",
+    "ruleId": "qwen-publisher-tokens",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "59501651b542ffd91e03dcc621306220527fb3acc845601da8b2eb29e864ee52",
+    "fetchedAt": "2026-11-02T06:38:26.637Z",
+    "checkedAt": "2026-11-02T06:38:26.637Z",
+    "nextRetryAt": "2026-12-02T06:38:26.637Z",
+    "warnings": []
+  }
+}

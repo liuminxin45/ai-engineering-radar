@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "02bbdd062a7ed6ecf0fd",
+    "status": "ready",
+    "html": "<p>作者：余韬（迅飞）</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_1af3c95675b64b22a0bcde2c8b9ef0c3.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>7 月，我们发布了阿里云 Agent 观测与优化平台<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.12.6c916ffaFsAmtU&amp;enc=xKHOd9Ckj6T9zXjSjbNX7w%3D%3D.aDqn6u4BmGMzgUq2zKSe5C9%2Fo2GoaxoILdrjbP1nyoqVr1GZQKV0jgkWtQtMXiFxV5Qco0iAIxIH41tN9B1ic%2BHRZogLpGfZ0eCHsaJiea72o%2BgDrpoz%2BNg8iX3r7in1t4SjAeMpVx%2FsZIanBBZ3L%2FKYsOPVNseAhUANZrYrbhe%2BcbdG1KaGUR6rYH5Cf2f%2F\" target=\"_blank\" rel=\"noopener noreferrer\">AgentLoop</a>，面向&nbsp;Agent 提供观测与审计、评估与实验、持续优化等能力。本文将从审计视角分享我们的认知和实践。</p><p><br></p><p>Coding Agent 的能力越强，它接触到的工作空间就越不再只是编辑器，而是代码仓库、模型上下文、工具调用、外部授权和企业内部数据共同组成的一条执行链路。</p><p><br></p><p>比如，近期讨论较多的一个issue，openai/codex#2847&nbsp;中提到 <code>.env</code>、<code>.pem</code>、<code>.aws/</code>、<code>.ssh/</code> 等敏感路径应该如何被更确定地排除。BeyondTrust 披露过 Codex branch name command injection 相关问题，风险包括 GitHub User Access Token 暴露。DARKNAVY / 安全内参也从未授权执行、恶意仓库和本地开发环境暴露等角度做过预警。</p><p><br></p><p>这些漏洞在提醒我们：当 Agent 的一次任务里同时出现模型输入、模型回复、工具调用、工具结果和应用上下文时，安全系统怎样判断哪一条风险真的该进入高危队列。</p><p><br></p><p>Agent 审计不是风吹草动就告警，而是让真正进入高危队列的风险更准。准不等于少报，也不等于放过不确定风险；准的意思是，单点命中要能回到上下文里被解释，风险事件要能说明它越过了哪条边界、影响了哪些对象、证据在哪里、下一步该怎么处置。</p><h2 id=\"section-完整事实底座是一切的前提\">完整事实底座是一切的前提<a class=\"heading-anchor\" href=\"#section-完整事实底座是一切的前提\" aria-label=\"链接到本节：完整事实底座是一切的前提\">#</a></h2><p>准确判断的前提，不是先写更激进的规则，而是先有足够完整的行为事实。LoongSuite Pilot 先解决的是“事实底座”问题：把不同 Coding Agent 和 Agent 应用里的会话、轮次、模型请求、模型回复、工具调用、工具结果统一采集起来。没有稳定的事实底座，检测规则再敏感，也只能在局部片段上猜。这也是 Agent 审计区别于普通日志告警的地方。一次凭证泄漏不一定只发生在某一行文本里。凭证可能先出现在工具结果里，再被拼进下一轮模型输入；也可能由模型回复生成出来，随后进入任务结果、工单评论或下游日志。只看单个字段，容易把局部可疑当成高危；只看最终结果，又可能看不见它是怎么来的。</p><p><br></p><p>所以 AgentLoop 审计要处理的不是一组孤立日志，而是一条能回放的行为链。会话、模型输入输出、工具调用和工具结果先被采集为事实；后续风险判断再把这些事实放回同一次任务、同一个应用和同一个风险对象里看。先看全，再判断准。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_151667e9f7eb450e96f83f5747d0c72d.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-agent-审计-从海量噪音中捞出真风险\">Agent 审计：从海量噪音中捞出真风险<a class=\"heading-anchor\" href=\"#section-agent-审计-从海量噪音中捞出真风险\" aria-label=\"链接到本节：Agent 审计：从海量噪音中捞出真风险\">#</a></h2><p>AgentLoop 审计的核心方法是这样一条链路：行为事实先被统一采集；规则在局部事实上命中，形成低保真信号；系统再联系上下文做语义判定，把证据更充分、边界更清楚的部分提升为高保真风险事件；最后把事件落到可以定位和治理的对象上。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_94206a99b21249d7b1368d5833bfe30c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>低保真信号并不是没用。模型输入里出现疑似 AK，模型回复里出现疑似 AK，工具参数里出现疑似敏感片段，这些都值得记录。问题在于，它们还只是局部事实上的命中。如果每一次命中都直接变成高危，安全同学看到的会是一堆“可能有问题”的红点，而不是真正可处置的风险。</p><p><br></p><p>高保真事件要多走一步。以阿里云凭证为例，单独看到一个 <code>LTA...</code> 片段，只能说明命中了一个可疑的 AK 泄漏规则；如果同一个凭证出现在模型输出和外部上传目标中，这条风险的性质就变了。它不再只是“疑似 AK 泄漏”，而是具体凭证在 Agent 行为链里被“确认暴露”。</p><p><br></p><p>上下文语义判定不是为了把告警做少，而是为了让高危队列更可信。低保真信号可以多，事实可以尽量全，但真正推到高危位置的事件必须能解释为什么值得优先处理。</p><h3 id=\"section-先知道今天该看什么\">先知道今天该看什么<a class=\"heading-anchor\" href=\"#section-先知道今天该看什么\" aria-label=\"链接到本节：先知道今天该看什么\">#</a></h3><p>安全运营不缺列表，真正缺的是优先级。如果所有风险都按发生时间倒排，一个反复泄漏的 AK、一个刚刚扩散到多个应用的凭证、一次孤立的低置信命中，会被混在同一张表里。用户看到的是“风险很多”，但很难判断今天先处理哪一个。</p><p><br></p><p>AgentLoop 审计概览页先回答这个运营问题。当前截图里，“影响面最大风险”指向的是“数据泄漏：密钥 / 阿里云凭证”，并显示已经影响 6 个应用；“恶化最快风险”则指向“密钥 / 认证头”的增长。这样的首屏不是为了制造紧张感，而是把风险从时间列表提升成工作队列：哪类风险影响面最大，哪类风险正在变坏，哪类问题值得先进入调查。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b8a56706776447ccb1dd48808d14cfaf.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-再判断泄露越过了哪条边界\">再判断泄露越过了哪条边界<a class=\"heading-anchor\" href=\"#section-再判断泄露越过了哪条边界\" aria-label=\"链接到本节：再判断泄露越过了哪条边界\">#</a></h3><p>同样是阿里云凭证出现，位置不同，风险边界不同，处置动作也不同。数据泄漏页把“密钥 / 阿里云凭证”拆到泄漏方式上看。截图里，敏感数据提交到模型有 38 次，模型回复泄露敏感数据有 43 次。这个分布很关键：提交到模型说明凭证进入了模型输入上下文；模型回复泄漏说明凭证已经到了输出侧，可能继续进入聊天窗口、任务结果或下游日志。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_c1eef56ee8ee4aea95d1cb98dbd6bf16.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这就是上下文语义判定的一部分。单独看“命中 AK”，只能知道有敏感片段；放到“模型输入”“模型回复”这些边界里，安全同学才知道该检查上下文拼接、输出过滤、日志落盘，还是先轮换已经暴露到输出侧的凭证。风险类型不仅让告警指标更清晰，而且让处置动作更快找对方向。</p><h3 id=\"section-从一类风险下钻到具体凭证\">从一类风险下钻到具体凭证<a class=\"heading-anchor\" href=\"#section-从一类风险下钻到具体凭证\" aria-label=\"链接到本节：从一类风险下钻到具体凭证\">#</a></h3><p>找到“阿里云凭证泄漏”还不够。一个 AK 泄漏多次，和多个 AK 分散泄漏，不是一回事。截图里的风险明细先按“风险类型 + 应用”聚类。筛选“模型回复泄露”后，可以看到同类风险在不同应用中的影响情况：例如&nbsp;loongsuite-pilot-qoder&nbsp;下有 3 个具体风险、19 条风险事件、4 个会话；其他应用也有各自的风险数和会话数。这一层先回答“哪个应用里的哪类风险更集中”。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_c7271d25c12c4171a03435411e1cde33.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>再展开一层，系统把具体泄漏的凭证值聚合出来。截图里可以看到多个被掩码的 <code>LTA...</code> 凭证，每个凭证后面都有对应的风险数、会话数和最近发生时间。这一层回答的是另一个问题：这是同一个 AK 反复暴露，还是多个 AK 分别暴露。</p><p><br></p><p>前者往往指向一个具体凭证要轮换、要追来源；后者更可能说明上下文拼接、输出过滤或应用使用方式存在系统性问题。只给一条条事件，用户要自己在重复项里判断；先聚合到风险类型、应用和具体凭证，系统就把调查入口提前整理好了。</p><h3 id=\"section-一键定位证据-而不是只给一段原文\">一键定位证据，而不是只给一段原文<a class=\"heading-anchor\" href=\"#section-一键定位证据-而不是只给一段原文\" aria-label=\"链接到本节：一键定位证据，而不是只给一段原文\">#</a></h3><p>风险详情页解决的是“证据在哪里”。在截图里，用户打开某条阿里云凭证泄漏后，能看到应用、严重性、发现 ID、证据摘要、命中字段和关联事件。右侧会话视图直接跳到风险事件，并把模型输出中的 AK 高亮出来。也就是说，系统不是只告诉你“模型回复泄漏了密钥”，而是把命中的字段、命中的值、发生的会话和具体文本位置一起摆出来。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ff3ae1c193444d36960c44cbcf2e548c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这对高保真判断很重要。安全同学不需要从一整段 prompt、response 或 tool result 里重新肉眼搜索，也不需要猜这条风险和哪次 Agent 交互有关。详情页把低保真命中背后的原始证据拉回到上下文里，让“命中”变成可复核的事件。</p><h3 id=\"section-用一个-ak-反查影响面\">用一个 AK 反查影响面<a class=\"heading-anchor\" href=\"#section-用一个-ak-反查影响面\" aria-label=\"链接到本节：用一个 AK 反查影响面\">#</a></h3><p>安全调查很多时候不是从会话开始，而是从对象开始。</p><p><br></p><p>当一个 AK 已经被确认泄漏，下一步自然会问：它还出现在哪里，关联了哪个应用，来自哪个用户，影响了哪些主机或容器，是否和某个工具调用持续相关。实体调查页把 Secret、PII、应用、主机 / 容器、用户、来源 IP、Tool 等对象变成调查入口，让用户从一个风险对象反查影响范围。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_1d9dd3d069d14cf59843c1cdf695bc29.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>截图里的 Secret 实体列表显示，某个 <code>LTA...</code> 凭证关联了模型输入暴露和模型输出暴露，并有对应的高危事件数、会话数。进入这个 AK 的关系图后，可以看到它关联到 <code>loongsuite-pilot-qoder</code> 应用、<code>qoder:exec</code> 工具、某个主机 / 容器、用户和来源 IP。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_1f8b3fa10fb148ca8cd017fc5e9bdb8e.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这一步把风险从“某条告警”推进到“可治理对象”。如果只影响一个会话和一个应用，处置可以更聚焦；如果同一个 AK 关联多个应用、主机、用户或工具，就要扩大排查范围，检查凭证来源、使用方式和上下文处理策略。实体视角提供的不是更多图表，而是更接近治理动作的入口。</p><h2 id=\"section-准确不等于没有边界\">准确不等于没有边界<a class=\"heading-anchor\" href=\"#section-准确不等于没有边界\" aria-label=\"链接到本节：准确不等于没有边界\">#</a></h2><p>降低误报不代表没有漏报，规则也不可能一次写完。AgentLoop 审计当前要做扎实的，是先把事实采集、规则命中、上下文语义判定和证据定位这条链路跑通。这条链路里，Pilot 负责让会话、模型输入输出、工具调用和工具结果这些事实不散落在各处；风险审计负责把局部命中放回上下文里，判断它是否已经越过输入、输出或其他关键边界；实体调查负责把确认后的风险对象拉成影响面，让治理动作不只停留在“看过一条详情”。</p><p><br></p><p>Agent 审计不应该风吹草动就把所有可疑点打成高危，也不应该为了少报而把不确定风险藏起来。真正有用的系统，要允许底层保留足够多的低保真信号，同时让高危队列里的事件更能被相信、被复核、被处置。从海量“噪音”中捞出真风险，靠的不是把声音调小，而是让每一条高危告警都有上下文、有证据、有影响面。</p><p><br></p><p>参考文献：</p><p><span><span><span>[1]&nbsp;</span></span><span><span>OpenAI：</span></span></span><span><span><span>Previewing GPT-5.6 Sol: a next-generation model</span></span></span></p><p><span><span><em><a href=\"https://openai.com/index/previewing-gpt-5-6-sol/?spm=a2c6h.13046898.publish-article.21.6c916ffaFsAmtU\" target=\"_blank\" rel=\"noopener noreferrer\">https://openai.com/index/previewing-gpt-5-6-sol/</a></em></span></span></p><p><span><span><span>[2]&nbsp;</span></span><span><span>OpenAI Codex GitHub Issue：</span></span></span><span><span><span>A way to exclude sensitive files</span></span></span></p><p><span><span><em><a href=\"https://github.com/openai/codex/issues/2847?spm=a2c6h.13046898.publish-article.22.6c916ffaFsAmtU\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/openai/codex/issues/2847</a></em></span></span></p><p><span><span><span>[3]&nbsp;</span></span><span><span>BeyondTrust：</span></span></span><span><span><span>How Command Injection Vulnerability in OpenAI Codex Leads to GitHub Token Compromise</span></span></span></p><p><span><em><a href=\"https://www.beyondtrust.com/blog/entry/openai-codex-command-injection-vulnerability-github-token?spm=a2c6h.13046898.publish-article.23.6c916ffaFsAmtU\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.beyondtrust.com/blog/entry/openai-codex-command-injection-vulnerability-github-token</a></em></span></p><p><span><span><span>[4]&nbsp;</span></span><span><span>DARKNAVY / 安全内参：</span></span></span><span><span><span>开发者请注意：使用 OpenAI Codex 可能被攻击</span></span></span></p><p><span><span><em><a href=\"https://www.secrss.com/articles/88579?spm=a2c6h.13046898.publish-article.24.6c916ffaFsAmtU\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.secrss.com/articles/88579</a></em></span></span></p><p><span><span><span>[5]</span></span><span><span>《</span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.25.6c916ffaFsAmtU&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247582661&amp;idx=1&amp;sn=188b11399165f96f173af74c3809ad76&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>让 OpenClaw 受控运行： SLS 一键接入与审计</span></a><span>》</span></span></span></p><p><span><span><span>[6]《</span></span><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.26.6c916ffaFsAmtU&amp;__biz=MzIzOTU0NTQ0MA==&amp;mid=2247560862&amp;idx=1&amp;sn=997c0e80d7bdc1f6ddc39fa4c79a4380&amp;scene=21&amp;poc_token=HCsna2qj6lNkdJsrhQBeZl3HMyjfvSQDnfwKWjWl#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>当 AI Coding Agent 成为基础设施：我们为什么要开源 LoongSuite Pilot</span></a><span>》</span></span></span><span></span></p><p><span></span><span><span><span>[7]&nbsp;</span></span><span><span>AgentLoop 审计帮助文档</span></span></span></p><p><span><em><a href=\"https://help.aliyun.com/zh/document_detail/3045691.html?spm=a2c6h.13046898.publish-article.27.6c916ffaFsAmtU\" target=\"_blank\" rel=\"noopener noreferrer\">https://help.aliyun.com/zh/document_detail/3045691.html</a></em></span></p>",
+    "headings": [
+      {
+        "id": "section-完整事实底座是一切的前提",
+        "level": 2,
+        "text": "完整事实底座是一切的前提"
+      },
+      {
+        "id": "section-agent-审计-从海量噪音中捞出真风险",
+        "level": 2,
+        "text": "Agent 审计：从海量噪音中捞出真风险"
+      },
+      {
+        "id": "section-先知道今天该看什么",
+        "level": 3,
+        "text": "先知道今天该看什么"
+      },
+      {
+        "id": "section-再判断泄露越过了哪条边界",
+        "level": 3,
+        "text": "再判断泄露越过了哪条边界"
+      },
+      {
+        "id": "section-从一类风险下钻到具体凭证",
+        "level": 3,
+        "text": "从一类风险下钻到具体凭证"
+      },
+      {
+        "id": "section-一键定位证据-而不是只给一段原文",
+        "level": 3,
+        "text": "一键定位证据，而不是只给一段原文"
+      },
+      {
+        "id": "section-用一个-ak-反查影响面",
+        "level": 3,
+        "text": "用一个 AK 反查影响面"
+      },
+      {
+        "id": "section-准确不等于没有边界",
+        "level": 2,
+        "text": "准确不等于没有边界"
+      }
+    ],
+    "textLength": 4242,
+    "readingMinutes": 10,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1762204",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "6fe655269b1037c784dc7b5968aecc367872bd623b1a6badef6c21805850031e",
+    "fetchedAt": "2026-11-02T07:08:56.715Z",
+    "checkedAt": "2026-11-02T07:08:56.715Z",
+    "nextRetryAt": "2026-12-02T07:08:56.715Z",
+    "warnings": []
+  }
+}

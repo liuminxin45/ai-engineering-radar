@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "3d3ff7894423c23b6ec5",
+    "status": "unavailable",
+    "html": "",
+    "headings": [],
+    "textLength": 0,
+    "readingMinutes": 0,
+    "sourceId": "ant-data-csdn",
+    "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/152330243",
+    "engineVersion": "radar-reader-1",
+    "checkedAt": "2026-11-02T07:56:00.326Z",
+    "nextRetryAt": "2026-11-09T07:56:00.326Z",
+    "error": "RSSHub 未取得 CSDN 正文，仅返回摘要（原站可能仍受 521 限制）。",
+    "warnings": []
+  }
+}

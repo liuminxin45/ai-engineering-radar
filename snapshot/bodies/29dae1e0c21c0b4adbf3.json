@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "29dae1e0c21c0b4adbf3",
+    "status": "ready",
+    "html": "<p>作者：沃森</p><p><br></p><p>很多企业一边想用 AI 智能评审能力提效，一边又卡在同一个问题上：代码库放在企业内网、专有网络或私有云里，出于安全合规，不希望把 GitLab 暴露到公网。</p><p><br></p><p>现在这个两难有了答案。云效 AI 智能评审正式支持 GitLab 集成——过去它主要服务云效 Codeup，如今无论是自建 GitLab 还是托管型 GitLab，只要云效服务能访问到你的 GitLab，就能接入，代码一步都不用搬。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_54db7ce4fc8e44bc9499a8fe1a8b30f1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>云效 AI 智能评审正式支持 GitLab 集成</em></p><p><em><br></em></p><h2 id=\"section-gitlab-接入-解决企业代码安全顾虑\">GitLab 接入，解决企业代码安全顾虑<a class=\"heading-anchor\" href=\"#section-gitlab-接入-解决企业代码安全顾虑\" aria-label=\"链接到本节：GitLab 接入，解决企业代码安全顾虑\">#</a></h2><p>对于重视代码安全的企业来说，将代码库部署在公网并不是理想选择。企业通常更关注：</p><ul><li>GitLab 是否可以继续部署在企业内网。</li><li>是否需要开放公网访问。</li><li>AI 评审服务能否访问私有 GitLab。</li><li>评审结果能否回写到 GitLab Merge Request。</li><li>是否可以继续在 GitLab 中完成评审和追问。</li></ul><p><br></p><p>云效 GitLab 集成能力围绕这些场景设计：</p><ul><li>支持自建 GitLab 和托管型 GitLab。</li><li>GitLab 无需迁移到云效 Codeup。</li><li>GitLab 无需暴露公网，只要云效服务具备网络访问能力即可。</li><li>支持通过 Personal Access Token 安全访问 GitLab API。</li><li>支持将 AI 评审结果回写到 GitLab Merge Request。</li><li>支持在 GitLab 中继续追问评审结果。</li></ul><h2 id=\"section-从代码变更到-ai-评审-流程保持不变\">从代码变更到 AI 评审，流程保持不变<a class=\"heading-anchor\" href=\"#section-从代码变更到-ai-评审-流程保持不变\" aria-label=\"链接到本节：从代码变更到 AI 评审，流程保持不变\">#</a></h2><p>接入 GitLab 后，开发者不需要改变原有的代码协作习惯。</p><p><br></p><p>当开发者新建或重新打开 Merge Request 时，GitLab 通过 Webhook 通知云效。云效 AI 智能评审服务读取代码变更及相关上下文，完成分析后，将评审结果写回当前 Merge Request。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_cec70491af1c479bae71b1db453c0086.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>GitLab Merge Request 的 AI 智能评审流程</em></p><h2 id=\"section-vpc-内的私有-gitlab-也可以接入\">VPC 内的私有 GitLab，也可以接入<a class=\"heading-anchor\" href=\"#section-vpc-内的私有-gitlab-也可以接入\" aria-label=\"链接到本节：VPC 内的私有 GitLab，也可以接入\">#</a></h2><p>GitLab 部署在企业 VPC 私网中时，云效可以通过专有网络访问能力连接企业网络。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_74b15d46ec5741fe99d4eb0ecee5c2a3.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>云效通过专有网络访问企业 VPC 内的 GitLab</em></p><p><em><br></em></p><p>管理员可以在云效控制台完成以下配置：</p><ol><li>开启专有网络访问。</li><li>配置 GitLab 的私网地址、端口及反向访问 IP。</li><li>在智能评审配置页面选择对应的反向访问 IP。</li><li>配置 GitLab Personal Access Token。</li><li>测试连接并保存配置。</li></ol><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_dbb7004829f849bca0cf58485caea04c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>GitLab 接入云效 AI 智能评审的配置流程</em></p><p><em><br></em></p><p>这种方式无需将 GitLab 地址暴露到公网，更适合对网络隔离和代码安全有较高要求的企业。</p><h2 id=\"section-一个-token-完成安全连接\">一个 Token，完成安全连接<a class=\"heading-anchor\" href=\"#section-一个-token-完成安全连接\" aria-label=\"链接到本节：一个 Token，完成安全连接\">#</a></h2><p>云效通过 GitLab Personal Access Token 调用 GitLab API，Token 授权范围需要配置为&nbsp;api。</p><p><br></p><p>测试连接时，云效会校验 GitLab 地址、Token 及网络连通性。测试通过后，即可保存 GitLab 集成配置。</p><h2 id=\"section-评审结果之外-还可以继续追问\">评审结果之外，还可以继续追问<a class=\"heading-anchor\" href=\"#section-评审结果之外-还可以继续追问\" aria-label=\"链接到本节：评审结果之外，还可以继续追问\">#</a></h2><p>AI 评审不是一次性输出结果。开发者可以针对评审意见继续追问，例如：</p><ul><li>这个问题为什么会影响当前逻辑？</li><li>有没有更安全的实现方式？</li><li>这个修改是否会影响其他模块？</li><li>如何补充对应的测试用例？</li></ul><p><br></p><p>需要注意的是，GitLab 的 System Hook 不支持 <code>Comments</code> 事件。如果需要使用评论追问功能，需要为相应的 GitLab 项目配置项目级 Webhook，并开启 <code>Merge request events</code> 和 <code>Comments</code> 事件。</p><h2 id=\"section-ai-评审正在从-看-diff-走向-理解代码\">AI 评审正在从“看 Diff”走向“理解代码”<a class=\"heading-anchor\" href=\"#section-ai-评审正在从-看-diff-走向-理解代码\" aria-label=\"链接到本节：AI 评审正在从“看 Diff”走向“理解代码”\">#</a></h2><p>除了支持 GitLab，云效 AI 智能评审还持续增强代码理解能力。</p><p><br></p><p>在跨文件评审场景中，AI 不再只关注当前变更文件，还会分析函数、类、变量在代码库中的调用关系，识别改动可能影响的上下游代码。</p><p><br></p><p>参考测试数据显示，跨文件风险问题的评审召回率从 61% 提升至 80%，更多潜在问题可以在合并前被发现。</p><p><br></p><p>无论代码托管在云效 Codeup，还是企业自己的 GitLab，AI 智能评审都希望帮助团队把问题发现得更早，把代码质量控制在合并之前。</p><h2 id=\"section-立即接入-gitlab-ai-智能评审\">立即接入 GitLab AI 智能评审<a class=\"heading-anchor\" href=\"#section-立即接入-gitlab-ai-智能评审\" aria-label=\"链接到本节：立即接入 GitLab AI 智能评审\">#</a></h2><p>如果您的企业正在使用 GitLab，同时希望引入云效 AI 智能评审，现在即可开始配置。</p><p><br></p><p>详细配置方法请参见：</p><p><span><span><span>GitLab 集成 AI 智能评审</span></span></span></p><p><span><span><em><a href=\"https://help.aliyun.com/zh/yunxiao/user-guide/gitlab-ai-code-review-integration?spm=a2c6h.13046898.publish-article.10.68f86ffa4KOLQR\" target=\"_blank\" rel=\"noopener noreferrer\">https://help.aliyun.com/zh/yunxiao/user-guide/gitlab-ai-code-review-integration</a></em></span></span></p><p><span><span><span>配置与使用代码评审 AI 助手</span></span></span></p><p><span><span><em><a href=\"https://help.aliyun.com/zh/yunxiao/user-guide/ai-intelligent-code-review?spm=a2c6h.13046898.publish-article.11.68f86ffa4KOLQR\" target=\"_blank\" rel=\"noopener noreferrer\">https://help.aliyun.com/zh/yunxiao/user-guide/ai-intelligent-code-review</a></em></span></span></p>",
+    "headings": [
+      {
+        "id": "section-gitlab-接入-解决企业代码安全顾虑",
+        "level": 2,
+        "text": "GitLab 接入，解决企业代码安全顾虑"
+      },
+      {
+        "id": "section-从代码变更到-ai-评审-流程保持不变",
+        "level": 2,
+        "text": "从代码变更到 AI 评审，流程保持不变"
+      },
+      {
+        "id": "section-vpc-内的私有-gitlab-也可以接入",
+        "level": 2,
+        "text": "VPC 内的私有 GitLab，也可以接入"
+      },
+      {
+        "id": "section-一个-token-完成安全连接",
+        "level": 2,
+        "text": "一个 Token，完成安全连接"
+      },
+      {
+        "id": "section-评审结果之外-还可以继续追问",
+        "level": 2,
+        "text": "评审结果之外，还可以继续追问"
+      },
+      {
+        "id": "section-ai-评审正在从-看-diff-走向-理解代码",
+        "level": 2,
+        "text": "AI 评审正在从“看 Diff”走向“理解代码”"
+      },
+      {
+        "id": "section-立即接入-gitlab-ai-智能评审",
+        "level": 2,
+        "text": "立即接入 GitLab AI 智能评审"
+      }
+    ],
+    "textLength": 1925,
+    "readingMinutes": 5,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1750820",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "e79ba4ccbb663193331550364ff6cd36691f4baab33679af6b22abc5e052d2d8",
+    "fetchedAt": "2026-11-02T07:09:47.019Z",
+    "checkedAt": "2026-11-02T07:09:47.019Z",
+    "nextRetryAt": "2026-12-02T07:09:47.019Z",
+    "warnings": []
+  }
+}

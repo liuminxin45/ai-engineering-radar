@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "f6d8bb55a9d8224a6caf",
+    "status": "unavailable",
+    "html": "",
+    "headings": [],
+    "textLength": 0,
+    "readingMinutes": 0,
+    "sourceId": "huawei-csdn",
+    "sourceUrl": "https://blog.csdn.net/devcloud/article/details/164336413",
+    "engineVersion": "radar-reader-1",
+    "checkedAt": "2026-11-02T07:55:47.213Z",
+    "nextRetryAt": "2026-11-09T07:55:47.213Z",
+    "error": "RSSHub 当前账号订阅中没有这篇历史文章。",
+    "warnings": []
+  }
+}

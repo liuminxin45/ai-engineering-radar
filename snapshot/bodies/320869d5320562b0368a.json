@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "320869d5320562b0368a",
+    "status": "ready",
+    "html": "<p>AI 时代，企业数据架构如何跟上？</p><p><br></p><p>AI 应用从 Demo 走向生产，企业数据底座同样需要升级：在保障高性能、高可用的同时实现弹性扩展与成本可控，还需要为 AI 应用持续供给实时数据流，让 Agent 始终基于最新的业务状态作出判断。</p><p><br></p><p>本次沙龙三场分享沿数据流转链路依次展开：源源不断的业务事件如何被加工为模型可直接消费的上下文，一条数据管道要补齐哪些能力才称得上 AI-Ready，流接入、流计算、数据入湖能否收敛进同一个平台，降低传统架构中多组件拼装带来的复杂度与运维成本。</p><p><br></p><ul><li>时间：2026 年 8 月 28 日（周五）13:30-16:30</li><li>地点：阿里巴巴徐汇滨江园区 D 区（上海市徐汇区龙启路8号）2F-201 千问星云</li></ul><p><br></p><p>✅ 一线专家面对面 ｜ 100 分钟纯干货 ｜ 茶歇 + 互动好礼</p><p>🔥 活动免费，仅 50 席，报名审核制。立即扫描二维码或点击文末阅读原文提交报名，审核通过后以短信通知您参会！</p><p>🎁 无法到场也可填写问卷，同步参与抽奖！</p><p><br></p><p>点击链接立即报名（扫码报名·仅 50 席）：<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.3.1e266ffa3X2KLd&amp;enc=Y5%2B7MzrykMFAPyf1I6NsuQ%3D%3D.RkxL2Dn7%2BHSK%2BQxTO5K4DfPX4fGhQVVhMIDcG9pbn3IVH5LtcQrMFPAm5MUqofXF6kFzJYsbT12hwkPDmZcpsQ%3D%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://survey.aliyun.com/apps/zhiliao/D46NlVre1</a></p><p>报名审核制，通过后以短信通知您参会，无法到场也可填写问卷，同步参与抽奖。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ea6821d7c81e4c16a952479a6dc64534.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [],
+    "textLength": 527,
+    "readingMinutes": 2,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1756571",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "e52041cae2db11070f1f1e8a7da8015fe4ab65ab6da3798b0ef27799c6627e93",
+    "fetchedAt": "2026-11-02T07:09:26.026Z",
+    "checkedAt": "2026-11-02T07:09:26.026Z",
+    "nextRetryAt": "2026-12-02T07:09:26.026Z",
+    "warnings": []
+  }
+}

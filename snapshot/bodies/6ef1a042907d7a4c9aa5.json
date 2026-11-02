@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "6ef1a042907d7a4c9aa5",
+    "status": "ready",
+    "html": "<p>随着 AI Agent 从简单的单轮问答走向复杂的编码与工具协作，任务执行周期被拉长至分钟甚至小时级。面对网络中断、资源争抢与状态丢失等生产级挑战，阿里云在 RocketMQ for AI 的持续演进中，于 9 月 22 日云栖大会 AI 实时数据智能论坛上正式发布 LiteTopic 的多项新特性，并展示了其在阿里云百炼与 Qoder Cloud Agents 中的落地实践。本文将深入解析如何利用 LiteTopic 构建高可靠的 Agent 异步通信架构。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_0614616940854574b93f54d5218da9c4.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-趋势与挑战-当-agent-遇上-长时任务\">趋势与挑战：当 Agent 遇上“长时任务”<a class=\"heading-anchor\" href=\"#section-趋势与挑战-当-agent-遇上-长时任务\" aria-label=\"链接到本节：趋势与挑战：当 Agent 遇上“长时任务”\">#</a></h2><p>当 AI Agent 开始承接编码、工具协作等复杂工作，一项任务可能经历多轮推理、外部执行与人工确认，持续数十分钟甚至更久。网络中断后能否接回已有输出，执行实例更换后能否延续进度，大量请求同时到来时如何分配算力，正在成为 Agent 进入生产环境必须解决的工程问题。</p><p><br></p><p>Agent 不再是简单的 Request-Response 模式，而是需要经历“提交-执行-等待-恢复-完成”的长生命周期。这种演进带来了三个核心挑战。首先是 <strong>“阻塞与等待”成为常态</strong>，复杂任务需要等待外部 Tool 回调、MCP 服务响应、Human-in-the-loop（人工确认），甚至排队等待 GPU 配额。其次是<strong>基础设施的不稳定性</strong>：在长达数小时的执行周期里，网络重连、Node 宕机、Pod 驱逐是不可避免的。第三是<strong>有限 GPU 资源的分配</strong>：需要在多用户之间公平调度有限算力，通过排队与错峰避免争抢和突发流量冲击。</p><p><br></p><p>针对长时任务场景，传统的内存态重试机制已难以胜任。为此，我们亟需一种全新的架构，通过将控制面与数据面解耦，来实现<strong>持久化执行（Durable Execution）</strong>。该架构能够将任务的状态与进度进行持久化存储，确保其可查询、可恢复，并支持实时通知。</p><h2 id=\"section-业界共识-agent-harness-的四个演进方向\">业界共识：Agent Harness 的四个演进方向<a class=\"heading-anchor\" href=\"#section-业界共识-agent-harness-的四个演进方向\" aria-label=\"链接到本节：业界共识：Agent Harness 的四个演进方向\">#</a></h2><p>为了实现上述目标，Agent 的执行控制面（Control Plane）正在发生深刻的演进。业界的核心共识已经凝聚在四个方向：<strong>状态外置、执行隔离、协议标准化以及协作可治理。</strong></p><p>首先是架构解耦，走向 <strong>Brain-Hands-Session</strong> 的彻底分离。过去，组件往往绑定在同一个容器中，进程一旦崩溃，任务便全部丢失，且难以替换。如今，通过将控制面与数据面拆解，让大模型推理（Brain）、沙箱执行环境（Hands）和会话上下文（Session）作为独立组件协同工作。这使得沙箱实现了完全的无状态化，可以随时销毁与重建。</p><p><br></p><p>与此同时，原生支持持久化执行（Durable Execution）与异步人工协作（HITL），将任务状态进行 Checkpoint 持久化并转向事件驱动架构，以优雅应对网络故障、异步回调和人工审批等断点续传场景。</p><p><br></p><p>此外，通过采用 MCP 协议统一工具接入、利用 A2A 实现跨框架 Agent 互联，并引入 Agent Skills 按需动态加载上下文，有效缓解了 Context Window 的膨胀压力；最终在执行层从单体模式升级为分层协作架构——由主 Agent（Supervisor）专注意图拆解与结果验收，多个子 Agent（Worker）在独立上下文和工作空间中并行执行具体任务，彻底告别了低效的串行处理和逻辑迷失。</p><h2 id=\"section-核心发布-rocketmq-litetopic-八大核心能力\">核心发布：RocketMQ LIteTopic 八大核心能力<a class=\"heading-anchor\" href=\"#section-核心发布-rocketmq-litetopic-八大核心能力\" aria-label=\"链接到本节：核心发布：RocketMQ LIteTopic 八大核心能力\">#</a></h2><p>为了解决上述问题，RocketMQ 推出了 <strong>LiteTopic</strong> 新特性。它将长时任务的“黑盒状态”转化为透明、可控的“消息事件流”。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ba3bfd21c3da47c19a2d1536b2c03f51.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>RocketMQ 还通过标准协议与插件的方式，全面融入现有 Agent 生态架构，真正做到“少改业务代码，用标准协议与插件接入异步 Agent 通信”。</p><h2 id=\"section-生产落地-通过-litetopic-实现会话状态的连续性\">生产落地：通过 LiteTopic 实现会话状态的连续性<a class=\"heading-anchor\" href=\"#section-生产落地-通过-litetopic-实现会话状态的连续性\" aria-label=\"链接到本节：生产落地：通过 LiteTopic 实现会话状态的连续性\">#</a></h2><p>在生产环境中，Agent 与 LLM 的流式接口高度依赖 SSE/WebSocket 长连接，而网关滚动发布、Pod 重启、网络抖动等，都会导致长连接瞬间断开，已生成的 Token 无法送达、GPU 算力空转，用户被迫重发，成本与等待时间成倍增加。传统 Redis Stream 方案在此场景下同样捉襟见肘——TTL 从 Key 创建时计算而非消息写入时，不支持通配订阅导致父 Topic 无法一次性覆盖子会话，appendfsync 策略更在可靠性与性能之间难以兼顾。</p><p><br></p><p>针对这一痛点，RocketMQ LiteTopic 提供了“断连不丢、续连不重、体验无感”的会话连续性方案。其核心架构分为四层：<strong>多会话接入层</strong>接收来自 Web 端的并发连接，每个 Session 携带唯一 ID；<strong>无状态应用集群</strong>不依赖本地状态，任何节点均可接管任意 Session，支持横向扩展；<strong>LiteTopic 会话队列层</strong>为每个 Session 分配一条独立子队列（如 <code>chat/Session1</code>），归属统一的父 Topic <code>CHAT_STREAM</code>；<strong>大模型任务调度层</strong>按 SessionID 将流式 Token 写入对应 LiteTopic。当连接断开时，消费者只需携带上次消费位点（Offset）重新订阅，即可从断点处续推，无需重传已生成的 Token，真正实现了会话状态的连续性与成本的最优化。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_047e2543205b436d9aaa3522e4aea4e5.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-生产落地-阿里云百炼通过-litetopic-实现细粒度隔离和限流\">生产落地：阿里云百炼通过 LiteTopic 实现细粒度隔离和限流<a class=\"heading-anchor\" href=\"#section-生产落地-阿里云百炼通过-litetopic-实现细粒度隔离和限流\" aria-label=\"链接到本节：生产落地：阿里云百炼通过 LiteTopic 实现细粒度隔离和限流\">#</a></h2><p>在共享 GPU 资源池中，平台需要同时考虑客户配额、基本服务机会与突发流量控制。若只使用全局限流，局部流量过高可能连带影响其他用户。</p><p><br></p><p>阿里云百炼的 LiteTopic 流程采用 userId 与 modelId 的组合进行路由，将不同用户对不同模型的请求写入相应队列。消费者通过父 Topic 的通配订阅，持续发现并处理动态产生的 LiteTopic。</p><p><br></p><p>限流组件按队列统计消费速率。当目标队列达到策略阈值时，通过 Suspend 暂停其消息投递，其他队列继续消费。条件恢复后，目标队列再按受控节奏处理积压请求。</p><p><br></p><p>这种方式将限流落实到用户与模型的具体组合，为配额保障和公平调度提供更细的执行手段。配合有界排队、等待时限和拒绝策略，平台可以缓冲短时超额请求，降低集中重试给下游带来的压力。实际可承接的流量仍取决于模型服务容量与调度策略。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_8eae5e52e1e7470d81f8885b63ef94ae.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-生产落地-qoder-cloud-agents-通过-litetopic-实现长程任务的状态托管与执行交接\">生产落地：Qoder Cloud Agents 通过 LiteTopic 实现长程任务的状态托管与执行交接<a class=\"heading-anchor\" href=\"#section-生产落地-qoder-cloud-agents-通过-litetopic-实现长程任务的状态托管与执行交接\" aria-label=\"链接到本节：生产落地：Qoder Cloud Agents 通过 LiteTopic 实现长程任务的状态托管与执行交接\">#</a></h2><p>Qoder Cloud Agents 的工程实践进一步展示了异步通信在复杂 Agent 运行时中的作用。其 Cloud Agent Runtime 面向 Serverless 云端 Agent 托管与执行，通过 LiteTopic 衔接任务步骤与执行结果。</p><p><br></p><p>针对长程任务，平台持久保存上下文与进度，为执行实例更换后的状态重建提供依据。针对大量并行会话，通过轻量业务通道组织相关消息，在满足通道内处理顺序要求的同时，让独立任务并行推进。</p><p><br></p><p>容量管理方面，模型与工具可以分池管理。对应资源暂时不足时，运行时局部暂停工作，并在条件具备、恢复事件到达后按需接手。等待期间能否释放具体资源，由运行时结合任务状态和执行环境决定。</p><p><br></p><p>通过这样的职责划分，平台承接长程任务的状态管理与执行交接，业务团队可以持续完善编码工作流，把开发重点放在任务完成质量与实际交付上。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_163a44b152bb4568906a91d123820d35.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-生态集成与未来展望\">生态集成与未来展望<a class=\"heading-anchor\" href=\"#section-生态集成与未来展望\" aria-label=\"链接到本节：生态集成与未来展望\">#</a></h2><p>在生态接入方面，RocketMQ 还通过标准协议与插件的方式，全面融入现有 Agent 生态架构，真正做到“少改业务代码，用标准协议与插件接入异步 Agent 通信”。</p><p>具体而言，RocketMQ 在生态适配层面实现了五大关键能力：</p><p><br></p><ul><li><strong>MCP Agentic Messaging Primitives：</strong> RocketMQ 以 Tasks、Subscriptions/Listen 与 Progress Notifications 等原语，支撑长循环、流式结果输出与途中干预，未来线路图还将继续完善 Webhooks、Channels 等服务端事件能力，让大模型 Agent 的通信行为有据可依。</li><li><strong>A2A Transport&nbsp;层面：</strong> RocketMQ 将传统的点对点 HTTP 协作升级为异步、可靠、可回溯的通信通道，天然支持跨集群协作、任务委派与结果回报，从根本上解决了 HTTP 同步调用在长时任务中的超时与不可靠问题。</li><li><strong>RocketMQ Flink Connector：</strong> 原生支持 LiteTopic 的消费。当 GPU 配额不足时，Flink worker 可以主动挂起消费，待资源恢复后从上次位点继续，避免消息积压持续冲击下游系统。</li><li><strong>OpenClaw RocketMQ Channel：</strong> 通过 LiteTopic 完成任务转发、结果汇聚与协同编排，开发者无需再自建消息通道，大幅降低了多 Agent 协同的工程成本。</li><li><strong>Spring Cloud Gateway RocketMQ Rate Limiter：</strong> 将传统的硬拒绝升级为 PASS、QUEUE、REJECT 三态缓冲：超限请求被异步卸载至 RocketMQ 队列，按受控速率逐步放行，仅在突发容量彻底耗尽时才返回 429，极大提升了系统的弹性与用户体验。</li></ul><p><br></p><p>详细的代码见仓库：<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.10.4f496ffaAJechE&amp;enc=zEruvI3DJYUwZQPpaqd4Lw%3D%3D.4p1mflQS9IWT%2By3qiDe%2F4lsV3n1L97aCPsYIYpLfdRC1e%2BJwAoxh9kas%2FgVgaE51\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/apache/rocketmq-ai</a></p><p><br></p><p>随着 Agent 承担更长、更复杂的工作，任务能否在等待和故障之后继续推进，将直接影响用户体验与资源使用效率。RocketMQ for AI 围绕 LiteTopic 展开的实践，为会话续传、精细调度和云端 Agent 执行提供了具体的架构参考。欢迎加入 RocketMQ for AI 钉钉交流群，与产品和技术团队交流 LiteTopic 的能力演进、应用场景与落地实践。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_80b137cf36fb4d64903a74b7fcf54717.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>点击<a href=\"https://yunqi.aliyun.com/2026/session?spm=a2c6h.13046898.publish-article.13.4f496ffaAJechE&amp;agendaId=107\" target=\"_blank\" rel=\"noopener noreferrer\">此处</a>回看本场论坛直播。</p>",
+    "headings": [
+      {
+        "id": "section-趋势与挑战-当-agent-遇上-长时任务",
+        "level": 2,
+        "text": "趋势与挑战：当 Agent 遇上“长时任务”"
+      },
+      {
+        "id": "section-业界共识-agent-harness-的四个演进方向",
+        "level": 2,
+        "text": "业界共识：Agent Harness 的四个演进方向"
+      },
+      {
+        "id": "section-核心发布-rocketmq-litetopic-八大核心能力",
+        "level": 2,
+        "text": "核心发布：RocketMQ LIteTopic 八大核心能力"
+      },
+      {
+        "id": "section-生产落地-通过-litetopic-实现会话状态的连续性",
+        "level": 2,
+        "text": "生产落地：通过 LiteTopic 实现会话状态的连续性"
+      },
+      {
+        "id": "section-生产落地-阿里云百炼通过-litetopic-实现细粒度隔离和限流",
+        "level": 2,
+        "text": "生产落地：阿里云百炼通过 LiteTopic 实现细粒度隔离和限流"
+      },
+      {
+        "id": "section-生产落地-qoder-cloud-agents-通过-litetopic-实现长程任务的状态托管与执行交接",
+        "level": 2,
+        "text": "生产落地：Qoder Cloud Agents 通过 LiteTopic 实现长程任务的状态托管与执行交接"
+      },
+      {
+        "id": "section-生态集成与未来展望",
+        "level": 2,
+        "text": "生态集成与未来展望"
+      }
+    ],
+    "textLength": 3982,
+    "readingMinutes": 9,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1773435",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "c0569615bb778c3564917470a2c1f1b5d1eb402a04e801cf58a2ae07063723cc",
+    "fetchedAt": "2026-11-02T07:08:48.660Z",
+    "checkedAt": "2026-11-02T07:08:48.660Z",
+    "nextRetryAt": "2026-12-02T07:08:48.660Z",
+    "warnings": []
+  }
+}

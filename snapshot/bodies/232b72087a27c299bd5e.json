@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "232b72087a27c299bd5e",
+    "status": "ready",
+    "html": "<section><span>作者：夏夏，</span><span>workbuddy 资料库 产品运营&nbsp;</span><span><br></span></section><p><span>你有没有遇到过这样的时刻？好不容易做出一个demo分享给同事，结果因为文件是本地</span><span>格式，发给同事看，展示处处有问题？</span></p><p><span><span><img src=\"https://inews.gtimg.com/om_bt/OZa5CU91p3Du9RUlnC6yAwTzJtBMHVAmKcJkoiUMWeKbwAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></span></span></p><p><span>最近和不少团队沟通，发现大家都有个极度相似的痛点：用 AI 生成一个产物，不用像古法时代一样一步一步手搓了；可一旦要把这个东西分享给同事，熟悉的麻烦感立刻回来了。</span></p><p><span>以前一星期才能手搓出来的东西，现在 AI 几秒钟就塞给你了，但产出越快，协作反而越卡壳：</span></p><ul><li><section><span>产品经理用 AI 拼出新功能 Demo，手里只有个本地 HTML。拿给研发讨论，改一个交互就要改代码、重新打包、再发一次；</span></section></li><li><section><span>销售用 AI 整理完客户方案 PPT，再让产品、技术确认细节，结果一个群里发出了十几个版本，改到最后谁也说不清哪一版才是最新的。</span></section></li><li><section><span>运营赶着上线活动，用 AI 搭建了一个页面，上线前晚才发现移动端按钮错位，连夜拉上一大群看着截图一头雾水的研发排查问题，沟通费时费力；</span></section></li></ul><p><span>你会发现，当下的核心矛盾已经变了：不再是\"AI 能不能帮我把东西做出来\"，<span>而是\"东西做出来之后，怎么让团队顺畅地接过去、继续高效地做下去\"。</span></span></p><h2 id=\"section-一-产品-demo-交接-告别本地文件难协作-把-demo-变成协作现场\"><span>一、产品 Demo 交接：告别本地文件难协作，把 Demo 变成协作现场</span><a class=\"heading-anchor\" href=\"#section-一-产品-demo-交接-告别本地文件难协作-把-demo-变成协作现场\" aria-label=\"链接到本节：一、产品 Demo 交接：告别本地文件难协作，把 Demo 变成协作现场\">#</a></h2><h3 id=\"section-before-本地页面老是出bug-根本无法共享协作\"><span>Before : 本地页面老是出bug，根本无法共享协作</span><a class=\"heading-anchor\" href=\"#section-before-本地页面老是出bug-根本无法共享协作\" aria-label=\"链接到本节：Before : 本地页面老是出bug，根本无法共享协作\">#</a></h3><p><span>产品策划好不容易<span><span><span>vibe coding</span></span></span>出了一个符合自己预期不错的新功能 Demo，在自己电脑上运行的也很流畅。想要发给研发看看，结果打包发过去之后，研发打开完全看不了，本地引用的图片路径失效、样式文件缺失，画面直接\"缺胳膊少腿\"，有些精心做好的特效根本显示不出来。</span></p><p><span><span><img src=\"https://inews.gtimg.com/om_bt/OKUjdQRkrrTPyz3QQuEQ1RQE-D22medgSzjPUj8yTsKsEAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></span></span></p><p><span>策划只能一边尴尬地解释\"在我电脑上是好的\"，一边继续改页面，把丢失的文件补发给研发。</span></p><p><span>连展示都容易出问题，更别提协作编辑。只要想微调一个样式，产品就得本地修改、重新打包、再重新发一次文件，群里的本地压缩包越堆越多，也越来越麻烦。</span></p><h3 id=\"section-after-存进-workbuddy-资料库-demo-直接变成了一个-在线可协作的活页面\"><span>After：存进 workbuddy 资料库，demo 直接变成了一个\"在线可协作的<span><span><span>活页面</span></span></span>\"</span><a class=\"heading-anchor\" href=\"#section-after-存进-workbuddy-资料库-demo-直接变成了一个-在线可协作的活页面\" aria-label=\"链接到本节：After：存进 workbuddy 资料库，demo 直接变成了一个&quot;在线可协作的活页面&quot;\">#</a></h3><p><span>研发打开链接就能直接试手感、看效果，在页面里跟产品用评论互动，确定细节；</span></p><p><span>需要进行修改时，产品和研发可以在页面里直接划线圈选任意区域，各自召唤专属 <span><span><span>Agent</span></span></span> 现场微调：\"把这个弹窗改成抽屉式\"，让Agent把进一步修改的活也干了；</span></p><p><span>告别本地文件重发和版本混乱，多人多 Agent 在同一画布上并行处理，大家眼前的永远是正在运行、最确定的同一个版本。</span></p><p><span><span><img src=\"https://inews.gtimg.com/om_bt/O--yk6mMvLMQ5LA0MVRcfKptPSGa_x3mFo0b3L4yNPJo8AA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></span></span></p><h2 id=\"section-二-ppt-ai-协同-告别本地-n-个版本-多人多-agent-在线编辑\"><span>二、PPT AI 协同 ：告别本地 N 个版本，多人多 Agent 在线编辑</span><a class=\"heading-anchor\" href=\"#section-二-ppt-ai-协同-告别本地-n-个版本-多人多-agent-在线编辑\" aria-label=\"链接到本节：二、PPT AI 协同 ：告别本地 N 个版本，多人多 Agent 在线编辑\">#</a></h2><h3 id=\"section-before-ppt版本满天飞-手动修改效率低下\"><span>Before : PPT版本满天飞，手动修改效率低下</span><a class=\"heading-anchor\" href=\"#section-before-ppt版本满天飞-手动修改效率低下\" aria-label=\"链接到本节：Before : PPT版本满天飞，手动修改效率低下\">#</a></h3><p><span>销售跟大客户初步沟通了解了基本情况，想用 AI 生成一版精致又丰富的客户方案 PPT，为了确保交付可行，他把PPT发给产品和技术团队共同确认细节。产品看到表达有些偏差的能力，技术看到有些问题的技术参数，售后看到一些不符合这个客户的习惯的细节，纷纷表示要修改PPT细节，帮助销售同学调整措辞和表达。</span></p><p><span>产品发送了一份功能修改的意见，技术把第一版PPT下载下来改了一些细节又传回去，售后给到了客户公司的一些背景材料和意见补充。</span></p><p><span>短短半天，群里就出现了令人头大的各种材料和文件，以及N个版本的客户方案PPT。销售顿时感到无奈，AI时代了，为什么PPT协作还是如此古朴又麻烦。</span></p><p><span><span><img src=\"https://inews.gtimg.com/om_bt/O7ZEKgWvtZB3t90W2dkt0zg2msMXcy4ww8GXjNnOQ50BUAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></span></span></p><h3 id=\"section-after-把ppt存进资料库-多人多agent一起共创-内测中-即将上线\"><span>After：把PPT存进资料库， 多人多Agent一起共创（内测中，即将上线）</span><a class=\"heading-anchor\" href=\"#section-after-把ppt存进资料库-多人多agent一起共创-内测中-即将上线\" aria-label=\"链接到本节：After：把PPT存进资料库， 多人多Agent一起共创（内测中，即将上线）\">#</a></h3><p><span>产品发现某页功能描述有偏差，直接在页面上圈选评论，技术觉得参数需要调整，把对应图表标注出来，让AI帮忙编辑好；</span></p><p><span>一个细节被AI改丢了，还能通过版本管理追溯回来，怎样修改都很安心；</span></p><p><span>更厉害的是，销售还能将大家在页面里的评论和反馈一起喂给AI，让 AI 根据大家的意见完成修改，彻底解放双手。</span></p><section><img src=\"https://inews.gtimg.com/om_bt/OD9bIRSPOh0a5P_f8h2pJN67lseW-YEc5Ff8SusOX8u1IAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></section><h2 id=\"section-三-运营活动发布-页面出-bug-直接在-第一现场-修\"><span>三、运营活动发布：页面出 Bug，直接在\"第一现场\"修</span><a class=\"heading-anchor\" href=\"#section-三-运营活动发布-页面出-bug-直接在-第一现场-修\" aria-label=\"链接到本节：三、运营活动发布：页面出 Bug，直接在&quot;第一现场&quot;修\">#</a></h2><h3 id=\"section-before-vibe-coding的页面出问题-修复和验收非常折腾\"><span>Before : vibe coding的页面出问题，修复和验收非常折腾</span><a class=\"heading-anchor\" href=\"#section-before-vibe-coding的页面出问题-修复和验收非常折腾\" aria-label=\"链接到本节：Before : vibe coding的页面出问题，修复和验收非常折腾\">#</a></h3><p><span>运营同学想用 AI 做一个用户征集系统，好不容易搭好活动页，要发布的前一天晚上却发现在移动端上按钮错位了，而且怎么点击都没效果。活动要着急上线，运营只好一口气把设计、产品、研发全都拉进群，开始讨论怎么解决。研发并不知道需求背景和历史情况，看着运营发的截图，也是一头雾水。群里立刻上演经典拉扯：截图发群➔ 找源文件 ➔ 确认问题 ➔ 研发改完重发 ➔ 运营重新拿文件验收。</span></p><p><span>原本运营想要省事省力，用AI几分钟做好的页面，结果拉人沟通，解释需求的背景，又等待修复和验收，整整折腾了半天。</span></p><p><span><span><img src=\"https://inews.gtimg.com/om_bt/OVM-BY9AIjrSSWK3PqarBEqepMEpvkYBpKbx5UnN658LEAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></span></span></p><h3 id=\"section-after-把活动页传进资料库-让活动页直接变成一个-实时协作画布\"><span>After：把活动页传进资料库， 让活动页直接变成一个\"实时协作画布\"</span><a class=\"heading-anchor\" href=\"#section-after-把活动页传进资料库-让活动页直接变成一个-实时协作画布\" aria-label=\"链接到本节：After：把活动页传进资料库， 让活动页直接变成一个&quot;实时协作画布&quot;\">#</a></h3><p><span>运营或测试直接在出问题的按钮上\"划线圈选+标记意见\"，精准定位问题；</span></p><p><span>研发不用翻找文件，直接在当前页面排查代码，或者一键把带标记的页面丢给 AI 智能修复；</span></p><p><span>运营刷新界面同步验收，从制作、修 Bug 到上线，全程不脱离同一个链接，把无意义的传文件时间彻底清零。</span></p><section><img src=\"https://inews.gtimg.com/om_bt/OQtHKya00wHfLPWp421gDY3JmsFqqG4IKZrNn9C8vBw-kAA/641\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></section><h2 id=\"section-从-两人传文件-到-多人多-agent-实时共创\"><span>从\"两人传文件\"，到\"多人多 Agent 实时共创\"</span><a class=\"heading-anchor\" href=\"#section-从-两人传文件-到-多人多-agent-实时共创\" aria-label=\"链接到本节：从&quot;两人传文件&quot;，到&quot;多人多 Agent 实时共创&quot;\">#</a></h2><p><span>不只是上面列举的这些场景，资料库的能力还可以服务到更多的团队场景，比如行政想要搭建一个意见反馈的工作台，市场想要将历史的各类宣发材料整合到资料库里……</span></p><p><span>过去我们习惯了在微信群里互发压缩包、在文件名结尾反复叠加\"最终版_9月15日_最新\"，把大把精力耗在麻烦又琐碎的交接上。</span></p><p><span>到了 AI 时代，我们明明几秒钟就能生成一个不错的 Demo 或 PPT，但只要还在靠\"导出文件—发群里—等回复—下载修改\"这套老路子走，那点省下来的时间，分分钟就被多轮修改和重传给吞掉了。</span></p><p><span>WorkBuddy 资料库做的事情，正是为了解决这些问题：把那些原本死在本地压缩包里的产物，变成大家随时能进去改的活画布。让Agent不只是把东西做出来，还能进一步修改到能直接交付。 告别\"在我电脑上明明是好的\"这种尴尬，把产物丢进资料库，让所有人与专属 Agent 在同一个页面里现场解决问题。</span></p><p><span>让团队的协同速度，真正赶上 AI 的进化速度。</span></p>",
+    "headings": [
+      {
+        "id": "section-一-产品-demo-交接-告别本地文件难协作-把-demo-变成协作现场",
+        "level": 2,
+        "text": "一、产品 Demo 交接：告别本地文件难协作，把 Demo 变成协作现场"
+      },
+      {
+        "id": "section-before-本地页面老是出bug-根本无法共享协作",
+        "level": 3,
+        "text": "Before : 本地页面老是出bug，根本无法共享协作"
+      },
+      {
+        "id": "section-after-存进-workbuddy-资料库-demo-直接变成了一个-在线可协作的活页面",
+        "level": 3,
+        "text": "After：存进 workbuddy 资料库，demo 直接变成了一个\"在线可协作的活页面\""
+      },
+      {
+        "id": "section-二-ppt-ai-协同-告别本地-n-个版本-多人多-agent-在线编辑",
+        "level": 2,
+        "text": "二、PPT AI 协同 ：告别本地 N 个版本，多人多 Agent 在线编辑"
+      },
+      {
+        "id": "section-before-ppt版本满天飞-手动修改效率低下",
+        "level": 3,
+        "text": "Before : PPT版本满天飞，手动修改效率低下"
+      },
+      {
+        "id": "section-after-把ppt存进资料库-多人多agent一起共创-内测中-即将上线",
+        "level": 3,
+        "text": "After：把PPT存进资料库， 多人多Agent一起共创（内测中，即将上线）"
+      },
+      {
+        "id": "section-三-运营活动发布-页面出-bug-直接在-第一现场-修",
+        "level": 2,
+        "text": "三、运营活动发布：页面出 Bug，直接在\"第一现场\"修"
+      },
+      {
+        "id": "section-before-vibe-coding的页面出问题-修复和验收非常折腾",
+        "level": 3,
+        "text": "Before : vibe coding的页面出问题，修复和验收非常折腾"
+      },
+      {
+        "id": "section-after-把活动页传进资料库-让活动页直接变成一个-实时协作画布",
+        "level": 3,
+        "text": "After：把活动页传进资料库， 让活动页直接变成一个\"实时协作画布\""
+      },
+      {
+        "id": "section-从-两人传文件-到-多人多-agent-实时共创",
+        "level": 2,
+        "text": "从\"两人传文件\"，到\"多人多 Agent 实时共创\""
+      }
+    ],
+    "textLength": 2426,
+    "readingMinutes": 6,
+    "sourceId": "tencent-qqnews",
+    "sourceUrl": "https://news.qq.com/rain/a/20260917A0C6YR00",
+    "ruleId": "tencent-news",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "9e3b887ad34a53f7bf25138ce85dcb6f67cd3075ec93b48d08c4fa4c82b69dd5",
+    "fetchedAt": "2026-11-02T06:24:21.159Z",
+    "checkedAt": "2026-11-02T06:24:21.159Z",
+    "nextRetryAt": "2026-12-02T06:24:21.159Z",
+    "warnings": []
+  }
+}

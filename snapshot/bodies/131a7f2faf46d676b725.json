@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "131a7f2faf46d676b725",
+    "status": "ready",
+    "html": "<p>作者：景纭</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_27d7a95787514cdca489bd5b9faa9c94.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>当用户反馈“网站打不开”或“接口突然变慢”时，网络监控通常能很快告诉我们发生了异常，真正困难的是继续回答：故障发生在用户到服务端之间的网络链路，还是服务端应用内部？只影响某个地域或运营商，还是所有用户？应该先找网络团队、应用团队，还是下游依赖的负责人？</p><p><br></p><p><strong>云拨测（Synthetic Monitoring）正是观察这段外部访问体验的工具。</strong> 它让分布在不同地域和运营商的探测节点，按照固定规则模拟真实用户访问网站、接口或域名，并记录 DNS 解析、TCP 建连、TLS 握手、服务端响应等阶段的数据。但传统拨测报告往往更擅长展示“发生了什么”，还不能直接解释“为什么发生”。</p><p><br></p><p><strong>STAROps 是面向可观测数据的智能运维分析能力。</strong> 它通过 Agent 自动查询任务配置、拨测日志和应用调用链，将原本分散在多个系统中的证据串联起来，最终回答四个问题：哪里发生了异常；影响了哪些用户路径；问题属于哪一侧；结论由哪些数据支撑。</p><p><br></p><p>这篇分享面向第一次接触云拨测智能分析的产品、研发和运维人员，<strong>重点说明 STAROps 为什么要打通云拨测、SLS、UModel 与 APM，以及这条链路如何把“发现异常”推进到“解释异常并给出处理方向”。</strong> 读完后，读者可以理解传统拨测分析为什么容易中断、STAROps 如何组织跨系统证据，以及网络问题与后端问题如何被区分。</p><p><br></p><blockquote><p><strong>导读：先认识分析链路中的核心概念</strong></p><ul><li>云拨测：由探测节点主动访问目标网站、接口或域名，从用户视角持续检查可用性和性能。</li><li>STAROps Agent：执行数据查询、证据聚合、故障判断和报告生成的智能分析单元。后文简称 Agent。</li><li>SLS：阿里云日志服务，用于保存每次拨测产生的原始执行记录，可以理解为分析时查找事实证据的“日志仓库”。</li><li>UModel：描述任务、应用等可观测对象及其关系的统一模型，可以理解为一张告诉 Agent“对象是谁、数据在哪里、彼此如何关联”的地图。</li><li>APM：应用性能监控，用于观察请求进入后端后的执行过程。一次完整请求称为 Trace，其中每个处理步骤称为 Span。</li><li>Workspace：一组相互隔离的可观测数据和资源范围。Agent 必须先确定 Workspace，才能定位正确的任务、日志和 APM 数据。</li></ul></blockquote><h2 id=\"section-背景-传统拨测分析的断点\">背景：传统拨测分析的断点<a class=\"heading-anchor\" href=\"#section-背景-传统拨测分析的断点\" aria-label=\"链接到本节：背景：传统拨测分析的断点\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_4da6d157e23c40dbac9b4afe8a1d65fb.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 1：传统拨测分析面临的主要断点</em></p><p><em><br></em></p><p>传统分析通常从一张拨测报告开始：先看可用率、响应时间和错误码，再由工程师手工切换日志、任务配置和 APM 页面寻找原因。这些指标适合作为健康概览，却难以直接形成可验证的根因证据，因此排障过程仍存在四个明显断点。</p><p><br></p><p><strong>第一，任务上下文不足。</strong> 同一个错误码放在不同任务类型、目标地址、DNS 配置、断言规则和探测点范围下，含义可能完全不同。只复述错误码，无法判断问题是配置错误、目标服务异常，还是某个协议阶段失败。</p><p><br></p><p><strong>第二，原始证据不足。</strong> OpenAPI 是系统对外提供的标准查询接口，中心侧指标则是已经聚合后的统计结果；二者适合稳定查询和健康概览，却无法覆盖临时下钻所需的全部细节。阶段耗时、城市和运营商、目标 IP、CNAME、DNS 原始应答、响应头、断言结果及 Trace 上下文等关键线索，往往存在于用户侧 SLS 原始拨测记录中。</p><p><br></p><p><strong>第三，协议阶段没有被充分展开。</strong> 一次 HTTP 拨测可能依次经过 DNS、TCP、TLS、请求发送、首包等待、HTTP 响应、响应下载和内容断言。只看总耗时和最终错误码，很容易把不同层级的问题混在一起。</p><p><br></p><p><strong>第四，拨测和后端应用之间缺少联动。</strong> 云拨测可以说明外部访问是否失败或变慢，但请求进入后端后，问题还可能发生在业务处理、数据库、缓存或下游依赖中。APM 中的 server span 表示后端接收并处理请求的入口，子 Span 则记录数据库、缓存和下游调用等内部步骤；缺少这些证据时，Agent 无法可靠定位后端内部问题。</p><p><br></p><p>因此，云拨测智能分析需要形成一条完整链路：任务识别 → 数据定位 → 原始样本查询 → 字段过滤与组合分析 → 协议阶段下钻 → 链路图表达 → APM 跨域对齐 → 最终定界。</p><h2 id=\"section-核心功能\">核心功能<a class=\"heading-anchor\" href=\"#section-核心功能\" aria-label=\"链接到本节：核心功能\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_0590dce3e14f4804820486394279e592.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 2：STAROps 云拨测智能分析的五项核心功能</em></p><h3 id=\"section-1-云拨测任务分析\">1. 云拨测任务分析<a class=\"heading-anchor\" href=\"#section-1-云拨测任务分析\" aria-label=\"链接到本节：1. 云拨测任务分析\">#</a></h3><p>每个拨测任务都有一个唯一标识 taskId。用户提供 taskId、任务名或目标地址后，Agent 会定位对应的 synthetics.task 实体；这里的“实体”是 UModel 对该拨测任务的结构化描述。Agent 随后读取任务类型、目标、探测频率、探测点、超时、断言和 Trace 配置，再查询指定时间范围内的原始拨测样本。</p><p><br></p><p>分析不仅计算样本数、成功率、可用率、响应时间和错误分布，还会按时间、地域、运营商、探测点、目标 IP、DNS Server、错误码和失败阶段进行筛选、聚合与对比。即使任务整体稳定，单任务分析仍会检查协议阶段、局部慢点和配置风险，而不是只返回“运行正常”。</p><p><br></p><p>当前覆盖 HTTP/HTTPS、Ping、TCP、UDP、DNS、DNSTRACE、SMTP、POP3、FTP、Traceroute、MTR、API、Multi、Browser、WebSocket 和 SSL。不同任务类型使用不同分析路径，例如 Ping 关注丢包与 RTT，API 和 Multi 关注失败请求及步骤，Browser 关注主文档、页面时序和资源瀑布。</p><p><br></p><p>其中，RTT 表示数据从探针到目标再返回所需的往返时间；API、Multi 和 Browser 则分别对应接口请求、多步骤任务和浏览器页面加载等不同拨测方式。</p><h3 id=\"section-2-workspace-智能巡检\">2. Workspace 智能巡检<a class=\"heading-anchor\" href=\"#section-2-workspace-智能巡检\" aria-label=\"链接到本节：2. Workspace 智能巡检\">#</a></h3><p>单任务分析回答“这个任务为什么异常”，Workspace 巡检则回答“这一组任务中哪些最值得优先处理”。Workspace 可以理解为一个独立的可观测工作空间，其中包含属于同一用户或业务范围的任务、日志和关联资源。</p><p><br></p><p>Workspace 巡检先汇总全部拨测任务，形成整体健康视图，再选择重点任务下钻。任务筛选综合考虑状态严重度、失败数、可用率、延迟、错误集中度、失败阶段集中度和异常持续时间，避免只按单一指标排序。</p><p><br></p><p>巡检支持三种周期场景：</p><ul><li><strong>高频监控：</strong> 关注最近 30 分钟的大范围不可用、集中超时和高优风险，重点分析 Top 1 至 3 个任务。</li><li><strong>每日诊断：</strong> 分析最近 24 小时并对比前一天同一窗口，输出变化趋势、遗留风险和重点任务。</li><li><strong>每周复盘：</strong> 分析最近 7 天并对比前一周，识别持续异常、反复波动、已恢复风险和治理事项。</li></ul><h3 id=\"section-3-协议细粒度诊断\">3. 协议细粒度诊断<a class=\"heading-anchor\" href=\"#section-3-协议细粒度诊断\" aria-label=\"链接到本节：3. 协议细粒度诊断\">#</a></h3><p>Agent 会根据任务类型选择相应的协议证据，而不是用同一组指标解释所有任务：</p><ul><li><strong>HTTP/HTTPS：</strong> 按 DNS → TCP → TLS → 请求发送 → 首包等待 → HTTP 响应 → 响应下载 → 断言逐段分析。</li><li><strong>DNS：</strong> 检查查询对象、DNS Server、RCODE、CNAME、解析 IP、SOA、期望匹配和域名存在性。</li><li><strong>WebSocket：</strong> 进一步判断 HTTP Upgrade 是否完成。</li><li><strong>API 和 Multi：</strong> 定位具体失败请求或步骤。</li><li><strong>Browser：</strong> 区分主文档、资源加载、页面性能和操作步骤异常。</li></ul><p><br></p><p>对初次接触网络协议的读者，可以这样理解：DNS 负责把域名翻译成 IP 地址，TCP 负责建立可靠连接，TLS 负责加密通信并校验证书；RCODE 是 DNS 服务器返回的结果状态，CNAME 表示域名别名，SOA 则记录域名权威区域的基础信息。</p><p><br></p><p>诊断同时覆盖配置问题和数据问题。例如，DNS 查询对象被误配为完整 URL、HTTP 200 但内容断言失败、任务已停用、查询时间窗小于探测间隔，或 SLS 中没有对应样本，都会被单独识别，不会被混写成目标服务异常。</p><h3 id=\"section-4-请求链路可视化\">4. 请求链路可视化<a class=\"heading-anchor\" href=\"#section-4-请求链路可视化\" aria-label=\"链接到本节：4. 请求链路可视化\">#</a></h3><p>拨测访问链路图根据真实样本动态生成。第一个节点固定为“探针”，后续只展示请求实际到达的协议阶段。请求在 DNS 阶段失败，图就停在 DNS，不会继续补画 TCP、TLS 或后端服务。</p><p><br></p><p>链路图采用“阶段节点 → 异常节点”的结构。例如，DNS 异常展示为“探针 → DNS 解析 → 解析异常（NXDOMAIN）”，而不是直接从探针跳到异常。正常节点、受影响路径和最终根因使用不同样式，避免把异常传播路径误认为根因。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_5a2c39e8f9234a9f9aaa61f6a8b74bb6.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 3：按真实执行阶段生成的拨测访问链路图</em></p><p><em><br></em></p><p>链路图不依赖 APM。没有 Trace 时仍可展示拨测访问路径；存在后端 Trace 时，再增加一张 APM 调用链图，展示后端入口、接口、业务处理、下游依赖和具体异常点。两张图通过 trace_id 表明属于同一次请求。</p><h3 id=\"section-5-apm-跨域定界\">5. APM 跨域定界<a class=\"heading-anchor\" href=\"#section-5-apm-跨域定界\" aria-label=\"链接到本节：5. APM 跨域定界\">#</a></h3><p>当 HTTP、API、Multi 或 Browser 任务中出现 trace_id、traceparent、traceInfo 等 Trace 证据时，Agent 会选择失败或高耗时样本查询 APM Trace，而不是只建议用户自行查询。</p><p><br></p><p>Trace 可以理解为一条请求从探针发出、进入后端并继续调用其他组件的完整轨迹；Span 是这条轨迹中的一个步骤。联动分析需要对齐以下四类 Span：</p><ul><li><strong>拨测 client span：</strong> 记录探针从发起请求到收到响应的外部视角。</li><li><strong>后端 server span：</strong> 记录请求进入应用到应用返回响应的入口视角。</li><li><strong>本地业务 Span：</strong> 记录 Handler、业务方法或内部计算的执行过程。</li><li><strong>下游依赖 Span：</strong> 记录数据库、缓存、RPC 或外部 HTTP 服务的调用过程。</li></ul><p><br></p><p>通过对比拨测阶段耗时、server span、子 Span 和第一个具体错误，Agent 可以给出网络链路侧、应用入口前链路、后端服务侧、下游依赖侧或证据不足的定界结论。后端接口返回 502 可能只是表面现象；如果第一个具体错误出现在下游 DNS、数据库或外部服务 Span，结论会进一步定位到下游依赖侧。</p><h2 id=\"section-拨测系统架构与技术方案\">拨测系统架构与技术方案<a class=\"heading-anchor\" href=\"#section-拨测系统架构与技术方案\" aria-label=\"链接到本节：拨测系统架构与技术方案\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_2093127a5bfc4e0582d2714f5213c904.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 4：UModel、SLS 与 APM 协同的分析架构</em></p><h3 id=\"section-数据组织-umodel-与-sls-双层协作\">数据组织：UModel 与 SLS 双层协作<a class=\"heading-anchor\" href=\"#section-数据组织-umodel-与-sls-双层协作\" aria-label=\"链接到本节：数据组织：UModel 与 SLS 双层协作\">#</a></h3><p>可以把 UModel 和 SLS 理解为“地图”和“现场记录”。UModel 保存相对稳定的对象信息：任务是谁、目标是什么、属于哪个 Workspace、数据存在哪里，以及它与其他对象有什么关系；SLS 保存不断产生的执行事实：某个探针在某个时间访问了什么目标、经历了哪些协议阶段、最终是否成功。</p><p><br></p><p>拨测任务创建后，UModel 中会形成一个 synthetics.task 实体，其中保存 taskId、任务类型、目标地址、探测配置、Workspace、SLS 数据坐标和 Trace 配置等元信息。每一次真实探测则在 SLS 中形成一条或多条执行记录。因此，一个任务实体会对应很多次拨测样本，而不是每次探测都创建一个新实体。</p><p><br></p><p>Agent 收到请求后，先使用 UModelSearch 查询这张“地图”，定位任务实体及其日志位置；再根据 taskId 和时间范围进入对应的 SLS Project 与 Logstore 查询样本。Project 是 SLS 中隔离资源的项目空间，Logstore 是其中存放某一类日志的数据容器。</p><h3 id=\"section-分析策略-总体聚合-风险筛选与协议下钻\">分析策略：总体聚合、风险筛选与协议下钻<a class=\"heading-anchor\" href=\"#section-分析策略-总体聚合-风险筛选与协议下钻\" aria-label=\"链接到本节：分析策略：总体聚合、风险筛选与协议下钻\">#</a></h3><p>取得拨测样本后，Agent 会先从整体上判断异常规模和分布，再逐步下钻到具体协议阶段。单任务分析按时间、地域、运营商、探测点、目标 IP、DNS Server、错误码和失败阶段进行聚合。Workspace 巡检则先汇总全部任务，再筛选低可用率、高延迟、错误集中或持续异常的重点对象。</p><p><br></p><p>完成风险筛选后，Agent 会读取具有代表性的失败或高耗时样本，并根据任务类型进入不同的分析路径。例如，HTTP 任务依次检查 DNS、TCP、TLS、请求发送、首包等待、响应下载、HTTP 状态码和内容断言；DNS 任务继续读取 RCODE、应答记录数量、CNAME、解析 IP、SOA、DNS Server 和匹配结果。</p><p><br></p><p>这种“总体聚合 → 风险筛选 → 协议下钻 → 代表样本”的分析方式，能够区分域名解析失败、网络建连异常、证书问题、服务端处理慢和内容断言失败，而不是只解释最终错误码。</p><h3 id=\"section-跨域联动-从拨测域进入-apm-域\">跨域联动：从拨测域进入 APM 域<a class=\"heading-anchor\" href=\"#section-跨域联动-从拨测域进入-apm-域\" aria-label=\"链接到本节：跨域联动：从拨测域进入 APM 域\">#</a></h3><p>当拨测样本包含 Trace 信息时，分析链路才有条件继续进入 APM。系统会为开启 Trace 的拨测任务生成一个合成拨测 APM 服务，并通过 UModel 中的 same_as 关系，把 synthetics.task 与这个合成服务建立稳定映射。对 Agent 来说，这条关系相当于一块“从拨测域进入 APM 域”的路标。</p><p><br></p><p>same_as 解决“这个拨测任务对应哪个合成 APM 对象”的问题；trace_id 则解决“这一次具体请求进入后端后经过了哪些应用和调用节点”的问题。前者是任务级的稳定关系，后者是单次请求级的精确关联。需要特别注意：same_as 不会把拨测任务直接等同于真实后端应用。</p><p><br></p><p>进入 APM 后，Agent 会同时查看拨测 client span、后端 server span、本地业务 Span 和下游依赖 Span：</p><ul><li>拨测耗时升高且 server span 同步升高，问题更偏后端服务侧。</li><li>主要耗时集中在数据库或下游调用，可继续定位到具体依赖。</li><li>client span 很慢而 server span 很短，问题更可能位于网络、CDN、网关、排队或其他未埋点环节。</li><li>DNS、TCP 或 TLS 阶段已经失败且没有 server span，说明请求尚未进入应用。</li></ul><p><br></p><p>如果样本存在 trace_id，但缺少完整后端 Span，Agent 会明确标记“APM 证据不足”，而不会把“没有查到数据”误判为“后端正常”。</p><h3 id=\"section-设计本质\">设计本质<a class=\"heading-anchor\" href=\"#section-设计本质\" aria-label=\"链接到本节：设计本质\">#</a></h3><p>STAROps Agent 并不是简单地把固定报表交给大模型总结，而是先制定查询计划，再用真实数据约束结论。它将 UModel 作为识别对象和关系的语义控制面，将用户侧 Logstore 作为保存观测事实的数据面；先通过已建立索引的字段快速筛选样本，再通过 SPL 查询和处理更细的协议原始信息。这里的“索引”可以理解为预先准备好的快速检索字段，SPL 则是用于过滤、聚合和转换日志数据的查询语言。</p><p><br></p><p>不同任务会加载不同的证据模型，将异构日志归一为“任务、单次执行、协议阶段、影响范围、调用链”五个层次。当样本携带 Trace 信息时，Agent 再以 trace_id 进入 APM，对齐外部拨测的 client span 与后端 server span、业务 Span 和下游依赖 Span。最终输出并非大模型仅基于字段名称推测的经验性判断，而是由原始样本、聚合结果、协议语义和跨域 Trace 共同约束的可追溯定界结论。</p><h3 id=\"section-端到端分析链路\">端到端分析链路<a class=\"heading-anchor\" href=\"#section-端到端分析链路\" aria-label=\"链接到本节：端到端分析链路\">#</a></h3><ol><li>解析用户输入，确定单任务或 Workspace 范围。</li><li>查询 synthetics.task，获得任务配置与 SLS 数据坐标。</li><li>固定时间窗口并校准时间单位。</li><li>使用索引字段完成总体聚合和风险筛选。</li><li>对异常任务读取代表性样本和无索引协议字段。</li><li>按任务类型进入 DNS、HTTP、Browser、API、Multi 等专项分析。</li><li>存在 Trace 时，选择失败或高耗时样本查询 APM 调用链。</li><li>对齐任务配置、拨测阶段、影响范围和 Span 证据，输出定界结论、链路图、建议动作与数据限制。</li></ol><p><br></p><p>核心策略是“总体聚合 → 风险筛选 → 协议下钻 → 代表样本 → 跨域对齐”。它既能控制大时间窗和大型 Workspace 的查询量，也保留定位具体错误阶段和根因所需的原始证据。</p><h2 id=\"section-使用方式\">使用方式<a class=\"heading-anchor\" href=\"#section-使用方式\" aria-label=\"链接到本节：使用方式\">#</a></h2><p>使用任务分析时，用户可以直接提供 taskId、任务名或 Workspace，例如：分析最近 30 分钟的拨测任务。</p><p><br></p><p>用户不需要自己编写日志查询语句。Agent 会把自然语言问题转换为任务定位、样本查询、协议分析和 APM 联动等具体步骤。</p><p><strong><br></strong></p><p><strong>Agent 会自动完成以下步骤：</strong></p><ol><li>识别任务范围，确认是单任务分析还是 Workspace 巡检。</li><li>通过 UModelSearch 或任务查询能力找到 synthetics.task。</li><li>定位用户侧 SLS Project 和 Logstore。</li><li>查询固定时间窗口内的原始拨测样本。</li><li>按任务类型执行协议阶段分析。</li><li>如存在 Trace 证据，继续查询 APM Trace。</li><li>输出完整的云拨测智能分析报告。</li></ol><p><br></p><p>长期巡检时，用户可以选择高频监控、每日诊断或每周复盘模板。巡检会周期性扫描 Workspace 下的拨测任务，筛选风险任务并自动生成报告。</p><p><br></p><p>STAROps 中的“长期任务”是一种按计划自动重复执行的分析任务；“数字员工”则是预先配置了技能、工具和数据权限的 Agent。二者组合后，可以让拨测巡检定时运行并把结果推送给指定人员。</p><h3 id=\"section-拨测任务分析\">拨测任务分析<a class=\"heading-anchor\" href=\"#section-拨测任务分析\" aria-label=\"链接到本节：拨测任务分析\">#</a></h3><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_723ec465331e4fb9a63c7c78430bc198.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 5：在 STAROps 控制台发起拨测任务分析</em></p><p><em><br></em></p><p>在 STAROps 控制台中，可以直接询问拨测任务详情，例如“分析最近半小时内的拨测任务”“分析某拨测任务的异常原因”或“查看最近一天可用率下降严重的拨测任务”。</p><h3 id=\"section-拨测巡检任务\">拨测巡检任务<a class=\"heading-anchor\" href=\"#section-拨测巡检任务\" aria-label=\"链接到本节：拨测巡检任务\">#</a></h3><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b71ab2bcc8ba4be1b0c49fd4581eec8b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 6：进入 STAROps 长期任务</em></p><ol><li>点击 STAROps 控制台左上角的“长期任务”。</li></ol><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a566bc14b532480087a75904d49cbaa2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 7：创建拨测巡检任务并配置 Workspace</em></p><ol start=\"2\"><li>点击页面右上角的“创建任务”，选择数字员工和任务所在的 Workspace，并输入提示词，例如“拨测巡检”。</li><li>选择或组合三种拨测巡检模板，使用文字描述巡检任务细节；默认执行 Workspace 级拨测巡检。</li></ol><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_958a322ac8614c8bb41363f6d20d8a89.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 8：配置通知对象并加入长期任务</em></p><ol start=\"4\"><li>点击“立即配置”添加通知对象，完成选择后点击“添加到长期任务”。</li><li>确认配置无误后，点击“确认执行”。</li></ol><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_f55df3ee675d411280d27a982faca6e5.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 9：查看长期任务生成的巡检报告</em></p><ol start=\"6\"><li>点击页面上方的“报告”，查看详细巡检结果。</li></ol><h2 id=\"section-定界逻辑\">定界逻辑<a class=\"heading-anchor\" href=\"#section-定界逻辑\" aria-label=\"链接到本节：定界逻辑\">#</a></h2><h3 id=\"section-1-先定位请求停在哪一层\">1. 先定位请求停在哪一层<a class=\"heading-anchor\" href=\"#section-1-先定位请求停在哪一层\" aria-label=\"链接到本节：1. 先定位请求停在哪一层\">#</a></h3><p>HTTP 链路遵循 DNS → TCP → TLS → 请求发送 → 首包等待 → HTTP 响应 → 下载 → 断言。Agent 根据最深可观测阶段判断请求是否到达服务入口。</p><p><br></p><p>例如，DNS 失败且没有 TCP 证据，说明请求尚未建立连接；已经收到 HTTP 502，则说明 DNS、TCP 和响应头返回已经发生，不能把问题写成“首包超时”。如果 HTTP 200 但断言失败，则服务可达，失败层位于响应内容或业务条件。</p><h3 id=\"section-2-再判断影响范围和时间形态\">2. 再判断影响范围和时间形态<a class=\"heading-anchor\" href=\"#section-2-再判断影响范围和时间形态\" aria-label=\"链接到本节：2. 再判断影响范围和时间形态\">#</a></h3><p>多城市、多运营商同时失败，更偏目标服务、公共入口或跨网路径；单城市或单运营商集中失败，更偏区域网络或运营商链路；同一城市、同一运营商内只有部分探测点失败，则在字段可用时继续按 client_id、DNS Server、本地 DNS 和出口路径下钻。</p><p><br></p><p>时间维度需要区分持续型、突发型、间歇型和恢复型异常。单次尖刺不会被泛化为持续性故障，平均值也不能替代 P95、最大值和异常时间桶。</p><h3 id=\"section-3-dns-证据优先于外层错误码\">3. DNS 证据优先于外层错误码<a class=\"heading-anchor\" href=\"#section-3-dns-证据优先于外层错误码\" aria-label=\"链接到本节：3. DNS 证据优先于外层错误码\">#</a></h3><p>DNS 的 error_code 表达探针判定，RCODE 表达 DNS 服务器的协议层响应，两者不是同一概念。</p><p><br></p><p>当 raw_exception 存在时，Agent 优先读取 rcode、rcode_name 和应答记录数量，区分 NXDOMAIN、SERVFAIL、REFUSED、FORMERR、NOTIMP，以及 RCODE 为 NOERROR 但目标记录为空的 NODATA。字段不存在时，再从 dns_raw、dns_raw_inner、message、SOA、EDE 和 DNSSEC 信息中提取证据，并明确标注结论强度。</p><p><br></p><p>DNS 分析还会对比 DNS Server、城市、运营商、探测点、CNAME、解析 IP 和目标节点。需要注意的是，error_code=0 但只返回 SOA、没有 A、AAAA 或 CNAME 记录时，只能说明当前规则判定成功，不能证明目标记录解析正常。</p><h3 id=\"section-4-apm-证据决定后端边界\">4. APM 证据决定后端边界<a class=\"heading-anchor\" href=\"#section-4-apm-证据决定后端边界\" aria-label=\"链接到本节：4. APM 证据决定后端边界\">#</a></h3><ul><li>拨测总耗时升高，DNS、TCP、TLS 正常，server span 同步升高：后端服务侧。</li><li>server span 中某个业务子 Span 占主要耗时：应用内部处理慢。</li><li>第一个具体错误或主要耗时位于下游依赖 Span：下游依赖侧。</li><li>client span 明显慢但 server span 很短：更偏入口前链路、网关、CDN 或未埋点环节。</li><li>DNS、TCP 或 TLS 失败且没有 server span：请求未进入应用。</li><li>有 trace_id 但 APM 无数据或 Span 不完整：证据不足，不能据此判断后端正常。</li></ul><p><br></p><p>client span 与 server span 的耗时差并不等于纯网络耗时，其中还可能包含 CDN、网关、入口代理、排队和未埋点环节。因此，最终结论必须同时参考拨测阶段字段、目标接入证据和 Span 父子关系。</p><h2 id=\"section-apm-跨域分析如何工作\">APM 跨域分析如何工作<a class=\"heading-anchor\" href=\"#section-apm-跨域分析如何工作\" aria-label=\"链接到本节：APM 跨域分析如何工作\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_fc05b48764c54b74b0eaf32860e36a2b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 10：从拨测任务进入 APM 调用链的分析流程</em></p><p><br></p><p>一次完整的 APM 联动分析可以概括为四步：</p><ol><li>Agent 从拨测任务出发，通过 UModelSearch 找到 synthetics.task，确认任务类型、目标地址、Workspace 和数据坐标。</li><li>Agent 查询拨测 SLS 样本，完成拨测侧分析；如果样本中存在 Trace 证据，则提取代表性 trace_id。</li><li>Agent 使用 trace_id 查询 APM Trace，获取同一次请求在后端应用内的 server span、业务处理 Span 和下游依赖 Span。</li><li>Agent 对齐拨测侧和 APM 侧证据，形成跨域定界结论。</li></ol><p><br></p><p>证据对齐遵循以下规则：</p><ul><li>拨测慢，APM server span 同步慢：问题更可能在后端服务侧。</li><li>拨测慢，APM 下游依赖 Span 同步慢：问题更可能在后端下游依赖侧。</li><li>拨测慢，APM server span 很短：问题更偏网络链路、入口层、网关或应用入口前链路。</li><li>DNS、TCP 或 TLS 阶段失败且没有 server span：请求未进入应用，优先定位入口前链路。</li><li>有 Trace 证据但查不到后端 server span：不能断言后端正常，只能标记“APM 证据不足”，并检查 Trace 上报、采样、Region、Workspace 和 APM 接入。</li></ul><p><br></p><p>APM 联动使用两条链路表达证据：一条展示外部拨测访问路径，另一条展示后端 Trace 路径；两者通过 trace_id 对齐为同一次请求。这样既能看到请求是否到达服务入口，也能看到请求进入应用后具体在哪个 Span 失败。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ca564c5cfc4840368ee5215e59438e13.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 11：通过 trace_id 对齐拨测访问路径与后端 APM Trace</em></p><p><em><br></em></p><h2 id=\"section-从-看见异常-到-给出处理方向\">从“看见异常”到“给出处理方向”<a class=\"heading-anchor\" href=\"#section-从-看见异常-到-给出处理方向\" aria-label=\"链接到本节：从“看见异常”到“给出处理方向”\">#</a></h2><p>STAROps 的价值不只是生成一份更长的报告，而是缩短从告警到行动之间的距离。它把任务配置、SLS 原始样本、探测点分布、协议阶段和 APM Trace 组织成连续证据，使用户可以从 taskId、任务名称或 Workspace 出发，逐步判断异常属于全局故障、区域网络、单一运营商、个别探测点、任务配置，还是后端应用及其下游依赖。</p><p><br></p><p>对于经验丰富的工程师，这套能力减少了在拨测控制台、SLS 和 APM 之间反复切换及手工拼接证据的工作；对于第一次处理拨测故障的用户，它把专家常用的排查顺序固化为可重复执行的分析流程。到了 Workspace 级场景，Agent 还能从大量任务中自动筛选高风险对象，持续执行高频监控、每日诊断和每周复盘。</p><p><strong><br></strong></p><p><strong>附录：术语说明</strong></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_e99edea8246d4e909baf92b981b37743.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-结语\">结语<a class=\"heading-anchor\" href=\"#section-结语\" aria-label=\"链接到本节：结语\">#</a></h2><p>云拨测看到的是用户抵达服务前的外部体验，APM 看到的是请求进入应用后的内部执行，SLS 保存事实证据，UModel 负责定位对象并连接不同数据域。STAROps 将这四部分组织成一条从任务发现、样本聚合、协议诊断到后端定界的连续链路。</p><p><br></p><p>这套实践的核心变化，是让云拨测从“展示异常指标的监控工具”进一步成为“能够解释异常并辅助决策的分析入口”。用户最终得到的不再是字段罗列，而是可核验的答案：请求走到了哪里，异常影响了谁，问题属于哪一侧，证据是什么，以及下一步应优先处理什么。</p>",
+    "headings": [
+      {
+        "id": "section-背景-传统拨测分析的断点",
+        "level": 2,
+        "text": "背景：传统拨测分析的断点"
+      },
+      {
+        "id": "section-核心功能",
+        "level": 2,
+        "text": "核心功能"
+      },
+      {
+        "id": "section-1-云拨测任务分析",
+        "level": 3,
+        "text": "1. 云拨测任务分析"
+      },
+      {
+        "id": "section-2-workspace-智能巡检",
+        "level": 3,
+        "text": "2. Workspace 智能巡检"
+      },
+      {
+        "id": "section-3-协议细粒度诊断",
+        "level": 3,
+        "text": "3. 协议细粒度诊断"
+      },
+      {
+        "id": "section-4-请求链路可视化",
+        "level": 3,
+        "text": "4. 请求链路可视化"
+      },
+      {
+        "id": "section-5-apm-跨域定界",
+        "level": 3,
+        "text": "5. APM 跨域定界"
+      },
+      {
+        "id": "section-拨测系统架构与技术方案",
+        "level": 2,
+        "text": "拨测系统架构与技术方案"
+      },
+      {
+        "id": "section-数据组织-umodel-与-sls-双层协作",
+        "level": 3,
+        "text": "数据组织：UModel 与 SLS 双层协作"
+      },
+      {
+        "id": "section-分析策略-总体聚合-风险筛选与协议下钻",
+        "level": 3,
+        "text": "分析策略：总体聚合、风险筛选与协议下钻"
+      },
+      {
+        "id": "section-跨域联动-从拨测域进入-apm-域",
+        "level": 3,
+        "text": "跨域联动：从拨测域进入 APM 域"
+      },
+      {
+        "id": "section-设计本质",
+        "level": 3,
+        "text": "设计本质"
+      },
+      {
+        "id": "section-端到端分析链路",
+        "level": 3,
+        "text": "端到端分析链路"
+      },
+      {
+        "id": "section-使用方式",
+        "level": 2,
+        "text": "使用方式"
+      },
+      {
+        "id": "section-拨测任务分析",
+        "level": 3,
+        "text": "拨测任务分析"
+      },
+      {
+        "id": "section-拨测巡检任务",
+        "level": 3,
+        "text": "拨测巡检任务"
+      },
+      {
+        "id": "section-定界逻辑",
+        "level": 2,
+        "text": "定界逻辑"
+      },
+      {
+        "id": "section-1-先定位请求停在哪一层",
+        "level": 3,
+        "text": "1. 先定位请求停在哪一层"
+      },
+      {
+        "id": "section-2-再判断影响范围和时间形态",
+        "level": 3,
+        "text": "2. 再判断影响范围和时间形态"
+      },
+      {
+        "id": "section-3-dns-证据优先于外层错误码",
+        "level": 3,
+        "text": "3. DNS 证据优先于外层错误码"
+      },
+      {
+        "id": "section-4-apm-证据决定后端边界",
+        "level": 3,
+        "text": "4. APM 证据决定后端边界"
+      },
+      {
+        "id": "section-apm-跨域分析如何工作",
+        "level": 2,
+        "text": "APM 跨域分析如何工作"
+      },
+      {
+        "id": "section-从-看见异常-到-给出处理方向",
+        "level": 2,
+        "text": "从“看见异常”到“给出处理方向”"
+      },
+      {
+        "id": "section-结语",
+        "level": 2,
+        "text": "结语"
+      }
+    ],
+    "textLength": 9733,
+    "readingMinutes": 22,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1756599",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "444e8f70d076fafe7cbbd91911578d8f3fd77d2ffd21160898dd749d7580a0d5",
+    "fetchedAt": "2026-11-02T07:09:26.692Z",
+    "checkedAt": "2026-11-02T07:09:26.692Z",
+    "nextRetryAt": "2026-12-02T07:09:26.692Z",
+    "warnings": []
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "2774ff21e7ad1b245c3f",
+    "status": "ready",
+    "html": "<p>Community Over Code 是 Apache 软件基金会（ASF）官方全球系列大会，前身为 ApacheCon，自 1998 年起持续吸引各个层级的开发者，在 350 多个 Apache 项目及其社区中探索“明天的技术”（Tomorrow's Technology Today）。今年，Community Over Code Asia 2026 将于 <strong>8 月 7-9</strong> 日在北京市海淀区中关村国家自主创新示范区会议中心举行，覆盖 AI、云原生、大数据、开源社区治理等热点领域。</p><p><br></p><p>阿里云云原生应用平台团队将携手开源社区贡献者和用户们，在消息、微服务、Web 应用与框架三大领域带来 <strong>11 个议题</strong>，欢迎大家报名参加。关注阿里云云原生公众号，在本文章评论区留言回复 <strong>ASFC+你想听的议题</strong>，<strong>前&nbsp;10 名</strong>参与互动的用户将获得大会三天通票一张（价值 <strong>999 元</strong>）。</p><p><strong><br></strong></p><p><strong>大会报名地址：</strong> <a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.17.5fab6ffap4jOJc&amp;enc=ysz4DOGeYncxkG2VxXslSQ%3D%3D.g2WdBqSehGVeHIymPux6oPjOVwNBfLCZdYO5fTnArAeoyxQBncMK8OdQ8M8XKRxD\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.bagevent.com/event/9200424</a></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_d32e71ae211a4980af5c08e6c09a3816.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-消息-messaging\">消息（Messaging）<a class=\"heading-anchor\" href=\"#section-消息-messaging\" aria-label=\"链接到本节：消息（Messaging）\">#</a></h2><p>伴随着云原生 Serverless、物联网、实时数据技术的规模化落地，事件驱动架构与事件流技术得到更广泛的应用，消息队列成为越来越重要的基础设施。在消息专题中，你将了解不同消息系统如何基于自身架构特点选择最优的技术演进方向——存算分离、Serverless、消息流一体，也能看到各大厂商如何结合行业特点与业务场景选择合适的消息技术。</p><h3 id=\"section-议题-1-面向-ai-的-apache-rocketmq-多-agent-系统的可靠协作机制\">议题 1：面向 AI 的 Apache RocketMQ：多 Agent 系统的可靠协作机制<a class=\"heading-anchor\" href=\"#section-议题-1-面向-ai-的-apache-rocketmq-多-agent-系统的可靠协作机制\" aria-label=\"链接到本节：议题 1：面向 AI 的 Apache RocketMQ：多 Agent 系统的可靠协作机制\">#</a></h3><p><strong>分享时间：</strong> 8 月 7 日 14:00-14:30</p><p><strong>分享嘉宾：</strong> Zhou Li丨阿里云消息传递专家，负责阿里巴巴核心消息中间件。</p><p><strong><br></strong></p><p><strong>议题介绍：</strong></p><p>第一部分：智能体协作中的工程挑战</p><p>1.1 通信复杂度：并发推理下的链路碎片化、资源争用和调度盲点。</p><p>1.2 工程风险：瞬态突发事件导致的通信链路中断、资源争用和调度失败，以及协作上下文丢失后故障恢复的难度。</p><p><br></p><p>第二部分：精简主题：海量会话的高效路由和调度</p><p>2.1 动态会话管理：构建基于 TTL 的二级动态拓扑，实现智能体间会话空间的逻辑隔离。</p><p>2.2 ReadySet 调度机制：通过分布式代理优化海量智能体事件的传递效率，解决超高并发下的“雷群效应”和延迟抖动问题。</p><p><br></p><p>第三部分：RocketMQ-A2A 异步交互模型：解耦与确定性控制</p><p>3.1 异步范式重构：构建一个全链路异步模型，用于“任务编排、触发执行和结果返回”，并将协作逻辑融入 RocketMQ 基础架构。</p><p>3.2 确定性通信编排：定义代理间通信的标准化协议，以确保复杂业务流程的确定性执行。</p><p><br></p><p>第四部分：协作一致性与可观测性：构建事件驱动的证据链</p><p>4.1 语义增强与状态恢复：利用幂等设计和事件日志，实现代理协作流程的原子中断重放和无损状态迁移。</p><p>4.2 全链路协作审计：基于结构化消息创建“协作证据链”，将分散的代理行为转换为可追溯、可归因的系统治理数据。</p><p><br></p><p>第五部分：大规模集群性能与实际闭环</p><p>5.1 高压协同下的稳定性与故障恢复</p><p>5.2 AI 网关如何利用消息传递基础架构实现大规模多智能体系统的故障自愈和协同任务编排</p><h3 id=\"section-议题-2-重新思考云端-apache-rocketmq-的高可用-面向秒级故障恢复的-protocol-fenced-接管\">议题 2：重新思考云端 Apache RocketMQ 的高可用：面向秒级故障恢复的 Protocol-Fenced 接管<a class=\"heading-anchor\" href=\"#section-议题-2-重新思考云端-apache-rocketmq-的高可用-面向秒级故障恢复的-protocol-fenced-接管\" aria-label=\"链接到本节：议题 2：重新思考云端 Apache RocketMQ 的高可用：面向秒级故障恢复的 Protocol-Fenced 接管\">#</a></h3><p><strong>分享时间：</strong> 8 月 7 日 15:45-16:15</p><p><strong>分享嘉宾：</strong> Rongtong Jin丨金融通（Rongtong Jin）是阿里云技术专家及 Apache RocketMQ PMC 成员。他致力于云消息系统的架构设计与生产运维，重点关注高可用性、存储可靠性及大规模有状态服务。他在 Apache RocketMQ 的云原生演进、生产环境落地及稳定性工程方面拥有丰富的实践经验。</p><p><strong><br></strong></p><p><strong>议题介绍：</strong> 在云环境中，有状态消息系统的高可用性往往受限于成本、稳态性能与故障转移速度之间难以平衡的矛盾。基于副本的方案虽能缩短恢复时间，但通常会引入额外的写放大、资源开销及运维复杂性。相比之下，单副本部署虽能保持良好的性能与成本效益，但在 Kubernetes 环境中，其故障转移路径往往受制于缓慢且不可预测的存储卷卸载/挂载（detach/attach）流程。</p><p><br></p><p>本次演讲将分享我们如何重新构思云上 Apache RocketMQ 的高可用方案，并构建一套经生产环境验证的架构：该架构无需在稳态下增加额外数据副本，即可实现秒级故障转移。其核心思路是保持 RocketMQ 正常存储路径不变，同时围绕“多挂载（Multi-Attach）”块存储与 NVMe 持久预留（Persistent Reservation）机制，重新设计接管路径。这种基于协议隔离的接管模式允许新节点安全地抢占磁盘所有权，防止脑裂（split-brain），并快速恢复服务，无需等待传统的存储迁移过程。我将详细介绍该架构、故障检测与接管流程、安全性与一致性考量，以及在 Apache RocketMQ 中的具体实现细节。此外，演讲还将探讨去中心化租约探测、节点侧接管编排与崩溃一致性恢复如何协同工作，从而缩短并稳定故障转移的关键路径。最后，我将分享来自阿里云的生产实践经验：该架构已应用于 Apache RocketMQ 服务，并通过了大规模容灾演练的验证。支撑本次演讲的技术成果已被 <strong>FSE 2026 工业赛道（Industry Track）</strong> 录用，而本次演讲将重点阐述生产级架构设计、工程权衡以及 Apache RocketMQ 实践中的经验教训。听众将深入了解如何在云原生环境下设计高可用的有状态消息系统，并学习如何在实际生产系统中平衡恢复目标、成本与性能。</p><h3 id=\"section-议题-3-apache-rocketmq-路由控制面演进\">议题 3：Apache RocketMQ 路由控制面演进<a class=\"heading-anchor\" href=\"#section-议题-3-apache-rocketmq-路由控制面演进\" aria-label=\"链接到本节：议题 3：Apache RocketMQ 路由控制面演进\">#</a></h3><p><strong>分享时间：</strong> 8 月 7 日 16:15-16:45</p><p><strong>分享嘉宾：</strong> Xiao Yang丨同程旅行基础架构工程团队，主要负责消息中间件的架构演进与维护工作。我热衷于开源事业，是Apache ShardingSphere 的 Committer，也是 Apache RocketMQ 的&nbsp;Committer。</p><p><strong><br></strong></p><p><strong>议题介绍：</strong> 本议题将介绍我们如何为 Apache RocketMQ 演进出一套轻量级的外部路由控制平面，从而在不改动 Broker、NameServer 或客户端访问模式的前提下，实现对大规模集群的治理。</p><p><br></p><p>随着多个业务线逐渐共用同一个集群，真正的挑战从吞吐量转向了治理层面：即更快的故障收敛、可控的 Topic 迁移以及灵活的基于“泳道（Lane）”的流量隔离。本次演讲将阐述为何在路由层解决这些问题更优，为何现有的 NameServer 和 Broker 机制无法满足需求，以及如何将 Broker 写入隔离、Topic 迁移和泳道流量隔离统一到一个控制平面中，从而支持大规模集群拆分，并实现更小的故障影响范围与更可控的治理。</p><h3 id=\"section-议题-4-实时湖仓管道-分离式-kafka-中的原生入湖与内嵌计算\">议题 4：实时湖仓管道：分离式 Kafka 中的原生入湖与内嵌计算<a class=\"heading-anchor\" href=\"#section-议题-4-实时湖仓管道-分离式-kafka-中的原生入湖与内嵌计算\" aria-label=\"链接到本节：议题 4：实时湖仓管道：分离式 Kafka 中的原生入湖与内嵌计算\">#</a></h3><p><strong>分享时间：</strong> 8 月 9 日 13:30-14:00</p><p><strong>分享嘉宾：</strong> Hongjian Fei丨费红健是一位 Apache 软件贡献者，长期致力于 RocketMQ 和 Kafka 的开发。在阿里云，他是 Kafka 解耦存储和计算架构的核心设计者之一，在 Kafka 的开发和运维方面拥有丰富的经验。</p><p><strong><br></strong></p><p><strong>议题介绍：</strong> Apache Kafka 已成为现代实时数据架构的核心。然而，在传统的湖仓式架构设计中，Kafka 中的数据通常需要经过 Flink 或 Spark 等外部计算引擎才能进行最终的存储、建模和组织，最终形成分析层。这种多跳的“消息传递 → 计算 → 存储”流水线不仅增加了运维复杂度，还引入了状态一致性差、端到端延迟高以及冷热数据生命周期碎片化等问题。</p><p><br></p><p>本次演讲将重点关注解耦式存储计算架构，并探讨 Kafka 在湖仓式场景下的原生功能演进。我们旨在通过以下核心技术重构实时数据流水线：</p><p><br></p><p>基于智能数据分层的解耦式存储计算。基于具有智能分层和轻量级高可用性架构的解耦式存储计算模型，我们采用了一种双路径表主题同步机制，在数据新鲜度和系统稳定性之间实现了最佳平衡。通过将摄取进度内部化到领导者的元数据中，我们彻底消除了对外部键值存储的依赖，在保持强一致性保证的同时，显著简化了管道。</p><p><br></p><p>具有强一致性保证的双行列式引擎。利用可插拔架构，我们实现了协议感知解析，并结合 Apache Parquet 列式格式的零拷贝直接写入，有效地将流式写入转化为即时的 Lakehouse 持久化。一个轻量级的分布式事务协调器，集成了开源支持的表目录，严格执行“精确一次”语义和跨节点故障的原子文件提交，为摄取管道提供高可用性灾难恢复和自主状态修复。</p><p><br></p><p>嵌入式声明式流处理。Apache Calcite 作为轻量级操作引擎嵌入其中，使用户能够通过 SQL 方言表达计算逻辑。通过操作符下推和逻辑计划的动态编译，过滤、聚合和转换操作在 Kafka 管道中原地执行，即在数据的源头。</p><h3 id=\"section-议题-5-rocketmq-5-在美团的生产实践\">议题 5：RocketMQ 5 在美团的生产实践<a class=\"heading-anchor\" href=\"#section-议题-5-rocketmq-5-在美团的生产实践\" aria-label=\"链接到本节：议题 5：RocketMQ 5 在美团的生产实践\">#</a></h3><p><strong>分享时间：</strong> 8 月 9 日 14:00-14:30</p><p><strong>分享嘉宾：</strong> Jiangge Zhang丨美团的一名架构师，隶属于消息传递基础设施团队。他曾从事 SOA 中间件开发，职业生涯一直专注于大规模分布式系统。</p><p><strong><br></strong></p><p><strong>议题介绍：</strong> 美团运营着中国最大的内部消息平台之一，该平台最初基于早期 Kafka 分支构建，内部代号为 Mafka。Mafka 曾为我们提供了良好的服务，但随着时间的推移，它遇到了两个硬性限制。首先，消费者扩展性受限于分区数量：增加超过分区数量的消费者实例并不能提升吞吐量。其次，客户端变得非常臃肿——承载着复杂的路由逻辑和网络协议，使得跨语言支持成为维护的噩梦。Apache RocketMQ 5 解决了这两个问题。Pop 消费模型按消息而非按分区管理消息生命周期，允许多个消费者同时共享队列，从而实现了横向弹性。基于 gRPC 的 Proxy 架构支持轻量级、与语言无关的客户端。但 RocketMQ 5 的开箱即用功能无法满足美团大规模部署的需求：统一的全局元数据层以及跨多个部署环境和业务部门的企业级流量隔离。</p><p><br></p><p>本次演讲将深入探讨美团在生产环境中采用 RocketMQ 5 背后的决策和权衡。我们将涵盖三个方面：首先，我们将介绍如何设计三层拓扑结构——租户、放置组和集群——其中放置组作为租户内部的传播半径边界；其次，我们将介绍如何完全在 RocketMQ 之外实现多种流量隔离和路由模式，从而使消息代理保持纯粹的消息传递原语状态，并且隔离策略可以独立演进；第三，我们将介绍如何构建一个权威的元数据服务，以确保所有组件保持同步。我们将以实际生产迁移的经验为基础进行演讲。大规模运行验证了我们核心架构选择的正确性，同时也暴露出一些我们仍在努力解决的难题——从 RocketMQ 5 复制模型中的数据平面限制到共享提交日志设计中固有的容量隔离挑战。我们希望这些生产经验能够对更广泛的 RocketMQ 社区有所帮助。</p><h3 id=\"section-议题-6-apache-rocketmq-低延迟优化的探索与实践\">议题 6：Apache RocketMQ 低延迟优化的探索与实践<a class=\"heading-anchor\" href=\"#section-议题-6-apache-rocketmq-低延迟优化的探索与实践\" aria-label=\"链接到本节：议题 6：Apache RocketMQ 低延迟优化的探索与实践\">#</a></h3><p><strong>分享时间：</strong> 8 月 9 日 14:30-15:00</p><p><strong>分享嘉宾：</strong> 魏熙凯丨腾讯云高级开发工程师，拥有多年计算、存储及分布式系统性能优化经验。</p><p><strong><br></strong></p><p><strong>议题介绍：</strong> 在某些使用场景中，存在严格的低延迟要求，核心需求是将 P99 或最大延迟稳定控制在固定阈值内。本次演讲将分享我们团队在优化和实现 Apache RocketMQ 低延迟模式方面所做的探索和努力。我们将从 RocketMQ 架构的核心延迟瓶颈入手，梳理影响端到端延迟的关键环节，包括网络传输、消息调度和资源分配，并详细阐述我们开展的针对性优化、架构调整以及实现效果验证。此外，本次演讲还将分享 RocketMQ 全链路延迟调优的方法和实践经验，希望能为社区开发者和用户提供一些帮助。</p><h3 id=\"section-议题-7-小米-rocketmq-在大规模集群中的生产实践\">议题 7：小米 RocketMQ 在大规模集群中的生产实践<a class=\"heading-anchor\" href=\"#section-议题-7-小米-rocketmq-在大规模集群中的生产实践\" aria-label=\"链接到本节：议题 7：小米 RocketMQ 在大规模集群中的生产实践\">#</a></h3><p><strong>分享时间：</strong> 8 月 9 日 15:15-15:45</p><p><strong>分享嘉宾：</strong> Kunming Han丨主要负责小米内部消息队列相关工作。</p><p><strong><br></strong></p><p><strong>议题介绍：</strong> 本次分享将重点介绍小米在大规模集群场景下应用 RocketMQ 和 MQTT 的实践经验，着重探讨小米在消息中间件领域面临的核心挑战及相应的解决方案。内容涵盖 RocketMQ 有序消息优化、容灾与限流机制、多维度性能调优，以及 MQTT 在千万级连接场景下的稳定性保障与架构优化实践。本次分享旨在为业界构建大规模消息系统提供参考与启示。</p><h2 id=\"section-微服务-microservice\">微服务（Microservice）<a class=\"heading-anchor\" href=\"#section-微服务-microservice\" aria-label=\"链接到本节：微服务（Microservice）\">#</a></h2><p>无论是云原生时代，还是 AI 引领变革的今天，微服务依然是分布式系统的基石。微服务专题覆盖高性能 RPC 框架、下一代服务网格、云原生与 AI 驱动的微服务等方向。</p><h3 id=\"section-议题-8-apache-seata-的成长之路与-ai-驱动的分布式事务探索\">议题 8：Apache Seata 的成长之路与 AI 驱动的分布式事务探索<a class=\"heading-anchor\" href=\"#section-议题-8-apache-seata-的成长之路与-ai-驱动的分布式事务探索\" aria-label=\"链接到本节：议题 8：Apache Seata 的成长之路与 AI 驱动的分布式事务探索\">#</a></h3><p><strong>分享时间：</strong> 8 月 8 日 15:30-16:15</p><p><strong>分享嘉宾：</strong> Ji Min丨现任阿里云分布式交易产品负责人。他是一位经验丰富的架构师，在中间件、云原生和微服务领域拥有超过 10 年的深厚专业知识。他曾主导阿里巴巴集团大规模采用中间件，并领导微服务 PaaS 的商业化和开源。目前，他专注于下一代智能应用架构的 AI 基础设施。</p><p><strong><br></strong></p><p><strong>议题介绍：</strong> 本次演讲将聚焦 Apache Seata 的孵化与成长历程：从阿里巴巴内部项目到进入 Apache 孵化、社区治理、生态扩展及版本演进的完整路径。演讲将分析多数据库支持、跨语言支持、性能优化及一致性保障等方面的关键技术挑战与设计决策。第二部分将展示针对 Seata 的 AI 驱动探索，涵盖基于机器学习的异常事务检测、智能冲突预测与自适应回滚策略、自动化性能瓶颈定位以及测试用例生成，并结合实际案例与成果进行阐述。适合对分布式事务实现、开源社区建设以及“AI+中间件”实践感兴趣的听众。</p><h3 id=\"section-议题-9-面向-agent-的开源项目演进-seata-走向-ai-友好之路\">议题 9：面向 Agent 的开源项目演进：Seata 走向 AI 友好之路<a class=\"heading-anchor\" href=\"#section-议题-9-面向-agent-的开源项目演进-seata-走向-ai-友好之路\" aria-label=\"链接到本节：议题 9：面向 Agent 的开源项目演进：Seata 走向 AI 友好之路\">#</a></h3><p><strong>分享时间：</strong> 8 月 9 日 15:15-15:45</p><p><strong>分享嘉宾：</strong> Feng Zhang丨开源爱好者；Apache Seata（Incubating）提交者。</p><p><strong><br></strong></p><p><strong>议题介绍：</strong> 过去，开源项目主要围绕人类开发者构建社区和运营：清晰的维基、易读的代码注释和用户友好的图形化仪表盘。然而，随着大型语言模型和人工智能代理的快速发展，开源代码库和基础设施正面临着全新的用户群体。未来，开源项目不仅应该方便人类使用，而且其结构也应该便于人工智能“理解”和“调试”。</p><p>从开源生态系统的角度出发，本文探讨了在人工智能时代，开源项目如何才能更加“人工智能友好”。我们将以 Apache Seata 为例，介绍我们迈向人工智能导向优化的历程。</p><h3 id=\"section-议题-10-深入剖析-在-apache-dubbo-中实现-otel-最新-rpc-语义约定\">议题 10：深入剖析：在 Apache Dubbo 中实现 OTel 最新 RPC 语义约定<a class=\"heading-anchor\" href=\"#section-议题-10-深入剖析-在-apache-dubbo-中实现-otel-最新-rpc-语义约定\" aria-label=\"链接到本节：议题 10：深入剖析：在 Apache Dubbo 中实现 OTel 最新 RPC 语义约定\">#</a></h3><p><strong>分享时间：</strong> 8 月 9 日 16:15-16:45</p><p><strong>分享嘉宾：</strong> Zihao Rao丨Zihao 是阿里云的一名软件工程师。过去几年里，他参与了多个知名开源项目，目前担任 Spring Cloud Alibaba 项目的指导委员会成员，同时也是 OpenTelemetry Java Instrumentation 的审批人（Approver）。</p><p><strong><br></strong></p><p><strong>议题介绍：</strong> 过去一年中，OTel 社区致力于稳定 RPC 相关的语义约定——特别是通过深入探讨，推动 RPC 框架语义从“实验性”状态向“稳定”状态过渡。本次演讲将概述 RPC 语义约定的最新进展，并详细介绍这些语义约定在 Dubbo 框架中的设计与实现。</p><h2 id=\"section-web-应用与框架-web-application-framework\">Web 应用与框架（Web Application &amp; Framework）<a class=\"heading-anchor\" href=\"#section-web-应用与框架-web-application-framework\" aria-label=\"链接到本节：Web 应用与框架（Web Application &amp; Framework）\">#</a></h2><p>从经典 Web 服务器（Tomcat、HTTP Server）到基础开发工具（Commons、FreeMarker、ECharts），再到企业级集成与安全框架（Camel、Shiro），Apache 生态的众多项目支撑着现代 Web 架构。本专题将呈现这些项目的最新进展与生产环境最佳实践。</p><h3 id=\"section-议题-11-编排与诊断-seata-go-agent-平台与-seata-ctl-工具链\">议题 11：编排与诊断：Seata-Go Agent 平台与 seata-ctl 工具链<a class=\"heading-anchor\" href=\"#section-议题-11-编排与诊断-seata-go-agent-平台与-seata-ctl-工具链\" aria-label=\"链接到本节：议题 11：编排与诊断：Seata-Go Agent 平台与 seata-ctl 工具链\">#</a></h3><p><strong>分享时间：</strong> 8 月 9 日 16:45-17:15</p><p><strong>分享嘉宾：</strong> Tun Guo丨某嵌入式 AI 公司的后端开发工程师，同时也是 Apache Seata (Incubator) 的 Committer。</p><p><strong><br></strong></p><p><strong>议题介绍：</strong> 为了应对长事务编排的复杂性以及分布式事务诊断的挑战，本次演讲将介绍 Seata Go 及其基础设施的演进历程、Agent 编排平台与诊断工具的功能特性，以及两者结合的实际应用场景。</p><p><br></p><p>欢迎大家在评论区积极留言互动，关注阿里云云原生公众号并在本文评论区留言回复 <strong>ASFC+你想听的议题</strong>，我们将为前&nbsp;10 位参与互动的粉丝每人赠送价值&nbsp;999 元的三天大会通票一张。</p><p><br></p><p>点击<a href=\"https://www.bagevent.com/event/9200424?spm=a2c6h.13046898.publish-article.20.5fab6ffap4jOJc\" target=\"_blank\" rel=\"noopener noreferrer\">此处</a>，直达大会报名地址。</p>",
+    "headings": [
+      {
+        "id": "section-消息-messaging",
+        "level": 2,
+        "text": "消息（Messaging）"
+      },
+      {
+        "id": "section-议题-1-面向-ai-的-apache-rocketmq-多-agent-系统的可靠协作机制",
+        "level": 3,
+        "text": "议题 1：面向 AI 的 Apache RocketMQ：多 Agent 系统的可靠协作机制"
+      },
+      {
+        "id": "section-议题-2-重新思考云端-apache-rocketmq-的高可用-面向秒级故障恢复的-protocol-fenced-接管",
+        "level": 3,
+        "text": "议题 2：重新思考云端 Apache RocketMQ 的高可用：面向秒级故障恢复的 Protocol-Fenced 接管"
+      },
+      {
+        "id": "section-议题-3-apache-rocketmq-路由控制面演进",
+        "level": 3,
+        "text": "议题 3：Apache RocketMQ 路由控制面演进"
+      },
+      {
+        "id": "section-议题-4-实时湖仓管道-分离式-kafka-中的原生入湖与内嵌计算",
+        "level": 3,
+        "text": "议题 4：实时湖仓管道：分离式 Kafka 中的原生入湖与内嵌计算"
+      },
+      {
+        "id": "section-议题-5-rocketmq-5-在美团的生产实践",
+        "level": 3,
+        "text": "议题 5：RocketMQ 5 在美团的生产实践"
+      },
+      {
+        "id": "section-议题-6-apache-rocketmq-低延迟优化的探索与实践",
+        "level": 3,
+        "text": "议题 6：Apache RocketMQ 低延迟优化的探索与实践"
+      },
+      {
+        "id": "section-议题-7-小米-rocketmq-在大规模集群中的生产实践",
+        "level": 3,
+        "text": "议题 7：小米 RocketMQ 在大规模集群中的生产实践"
+      },
+      {
+        "id": "section-微服务-microservice",
+        "level": 2,
+        "text": "微服务（Microservice）"
+      },
+      {
+        "id": "section-议题-8-apache-seata-的成长之路与-ai-驱动的分布式事务探索",
+        "level": 3,
+        "text": "议题 8：Apache Seata 的成长之路与 AI 驱动的分布式事务探索"
+      },
+      {
+        "id": "section-议题-9-面向-agent-的开源项目演进-seata-走向-ai-友好之路",
+        "level": 3,
+        "text": "议题 9：面向 Agent 的开源项目演进：Seata 走向 AI 友好之路"
+      },
+      {
+        "id": "section-议题-10-深入剖析-在-apache-dubbo-中实现-otel-最新-rpc-语义约定",
+        "level": 3,
+        "text": "议题 10：深入剖析：在 Apache Dubbo 中实现 OTel 最新 RPC 语义约定"
+      },
+      {
+        "id": "section-web-应用与框架-web-application-framework",
+        "level": 2,
+        "text": "Web 应用与框架（Web Application & Framework）"
+      },
+      {
+        "id": "section-议题-11-编排与诊断-seata-go-agent-平台与-seata-ctl-工具链",
+        "level": 3,
+        "text": "议题 11：编排与诊断：Seata-Go Agent 平台与 seata-ctl 工具链"
+      }
+    ],
+    "textLength": 6882,
+    "readingMinutes": 16,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1753207",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "718821546420a914c4eef1f853dbf96c85e860d73af9976b61f4587d6e63cbb9",
+    "fetchedAt": "2026-11-02T07:09:41.410Z",
+    "checkedAt": "2026-11-02T07:09:41.410Z",
+    "nextRetryAt": "2026-12-02T07:09:41.410Z",
+    "warnings": []
+  }
+}

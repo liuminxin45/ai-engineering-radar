@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "bcc5e3a3f360bce9a02e",
+    "status": "ready",
+    "html": "<p>作者：张世杰（靖泉）</p><p><br></p><p>海量用户，每人一条消息流，随时可能爆发的单用户流量风暴——这是百炼资产中心面对的消息链路。用户在百炼生成的图片、视频默认临时保存，要沉淀为长期资产，每条消息都要可靠处理。百炼资产中心的答案是 RocketMQ LiteTopic（轻量主题）：一个用户一个 Topic。在传统 MQ 的经验里这近乎禁忌，而 LiteTopic 让它成为默认做法。</p><h2 id=\"section-从临时链接到长期资产-资产中心要解决什么\">从临时链接到长期资产：资产中心要解决什么<a class=\"heading-anchor\" href=\"#section-从临时链接到长期资产-资产中心要解决什么\" aria-label=\"链接到本节：从临时链接到长期资产：资产中心要解决什么\">#</a></h2><p>用户在百炼平台调用模型生成图片、视频后，产物存放在 OSS 临时目录，过期即清理，只提供临时下载链接。但用户有两类长期诉求：</p><ul><li><strong>持久保存：</strong> 生成结果需长期留存为个人数字资产；</li><li><strong>素材复用：</strong> 已生成的内容和上传的图片，可作为后续再创作的输入素材反复调用，免去重复上传。</li></ul><p><br></p><p>资产中心服务因此而生：<strong>统一管理用户生成及上传的图片、视频、音频资产，对每一份产物完成安全检测等处理后持久化落库。这条处理链路要求消息可靠消费。</strong></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_91177efa9f23476eb0b75e659732f0f9.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-一条天然按用户组织的消息链路\">一条天然按用户组织的消息链路<a class=\"heading-anchor\" href=\"#section-一条天然按用户组织的消息链路\" aria-label=\"链接到本节：一条天然按用户组织的消息链路\">#</a></h2><p>资产中心选择了消息驱动的架构，整条链路分为生产与消费两段：</p><ul><li><strong>生产侧：</strong> 模型生成图片/视频后写入 OSS 临时目录，随后发送消息——消息体携带资源元数据和 OSS 位置索引，不传文件本身；</li><li><strong>消费侧：</strong> 资产中心消费消息并依次处理：白名单校验、内容安全检测（违规内容机器审核），最终把资产持久化落库。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a3cd5b624ac340c2a5072f9ce109841d.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这条链路的特征决定了它对消息系统的要求：<strong>消息量大、需要可靠消费——而更关键的是，这条消息流天然是按用户组织的。</strong></p><h2 id=\"section-传统-topic-接不住-按用户组织-的消息流\">传统 Topic 接不住“按用户组织”的消息流<a class=\"heading-anchor\" href=\"#section-传统-topic-接不住-按用户组织-的消息流\" aria-label=\"链接到本节：传统 Topic 接不住“按用户组织”的消息流\">#</a></h2><p>每个用户的资产相互独立：要单独做安全审核、单独控节奏，重度用户批量生成大量内容时，也不能拖累其他用户的入库进度。这推出三项治理诉求：</p><ul><li><strong>用户级隔离：</strong> 单用户堆积、异常不阻塞他人；</li><li><strong>用户级限流：</strong> 限流阈值按用户单独设置，而非全局一刀切；</li><li><strong>用户级挂起：</strong> 触发限流时只暂停该用户的消费，而不是全体。</li></ul><p><br></p><p>而传统 Topic 的隔离单元是队列而非用户：</p><ul><li>所有用户共享同一组队列，单用户风暴下消费线程被他的消息占满，其余用户的资产入库全部排队等待；</li><li>只能全局限流，无法区分用户；</li><li>消费挂起的粒度是整个消费组——要停一个用户，就得停所有人。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a1eb619aabcc495c898868a10eda7691.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>想补齐，就得在 Topic 之上自建用户路由层和用户级限流，等于在 MQ 之上再造一套 MQ。</p><p><br></p><p>问题的本质是：<strong>业务的并发单元是“用户”，而传统 Topic 的隔离单元是“队列”</strong>，两者错位，所有治理都得靠业务代码补齐。</p><h2 id=\"section-litetopic-把-用户-变成消息系统的原生隔离单元\">LiteTopic：把“用户”变成消息系统的原生隔离单元<a class=\"heading-anchor\" href=\"#section-litetopic-把-用户-变成消息系统的原生隔离单元\" aria-label=\"链接到本节：LiteTopic：把“用户”变成消息系统的原生隔离单元\">#</a></h2><p>LiteTopic（轻量主题）是 RocketMQ 5.x 引入的轻量级队列形态：<strong>单 Broker 支撑百万级队列，运行时按需创建、按 TTL 自动回收，同一消费组下不同实例可订阅不同的队列子集。</strong></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_bbf9dc592efa4160bd60cfac51a54c67.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>它把 <strong>“百万用户 × 各自一条消息流”</strong> 的业务模型直接变成消息系统的原生原语，上述三项诉求恰好逐一对应：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ca982c9f2ee94e1bbcc714029d10193c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>落到用法上：</p><ul><li><strong>发送侧</strong>按用户写入对应 LiteTopic，不存在时由 Broker 自动创建，无需预建和维护清单；</li><li><strong>消费侧</strong>一次通配符订阅覆盖全部用户，新用户接入零改动；</li><li><strong>限流侧</strong>在消费回调中返回挂起指令，Broker 在指定时长内只停止该 LiteTopic 的投递。</li></ul><p><br></p><p>整个过程中，业务侧没有自建任何路由层与限流层。</p><h2 id=\"section-落地效果\">落地效果<a class=\"heading-anchor\" href=\"#section-落地效果\" aria-label=\"链接到本节：落地效果\">#</a></h2><p>对资产中心而言，价值落在三点：</p><ul><li><strong>架构简化：</strong> 用户隔离、限流、挂起由消息系统原生提供，业务方零开发成本获得多租户治理能力；</li><li><strong>稳定性：</strong> 用户间故障域隔离，单个重度用户的流量风暴通过“限流 + 定向挂起”自动降压，不影响整体 SLA；</li><li><strong>增长零改造：</strong> 用户与资产规模增长，无需预建队列、无需调整订阅，链路随业务自然扩展。</li></ul><h2 id=\"section-同一个原语-两种用法\">同一个原语，两种用法<a class=\"heading-anchor\" href=\"#section-同一个原语-两种用法\" aria-label=\"链接到本节：同一个原语，两种用法\">#</a></h2><p>此前百炼网关用 LiteTopic 重构了大模型限流（见《<a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.19.2fe56ffaH7Kd9T&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247584931&amp;idx=1&amp;sn=7c198b149d0a7710ef2a91874c99088e&amp;scene=21&amp;poc_token=HNoloWqj5pIl9SXyaFdMMdhc3vaumXokBrEbOOQ2\" target=\"_blank\" rel=\"noopener noreferrer\">限流比降 10 倍：百炼网关如何用 RocketMQ LiteTopic 重构大模型限流</a>》一文），那是把它当作分布式漏桶；资产中心这次则用它做用户级消息治理——同一个原语，两种用法，验证的都是同一件事：当业务的并发单元是“用户”时，消息系统的治理单元也应该是“用户”。</p><p><br></p><p>如果你的业务同样是“海量用户 × 轻量消息”的形态，不妨把用户路由和限流层从业务代码里拿掉，交给 RocketMQ LiteTopic。</p><p><br></p><p><span><span><span>🔗 加入 RocketMQ for AI 钉钉交流群，交流 LiteTopic 实践经验、获取最新动态：</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_dfb54942068a453bb72ffafeb1e4ee7e.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span><span>钉钉群号：110085036316</span></span></span></p><p>📖 点击<a href=\"https://www.aliyun.com/activity/middleware/ai-mq?spm=a2c6h.13046898.publish-article.18.2fe56ffaH7Kd9T\" target=\"_blank\" rel=\"noopener noreferrer\">此处</a>了解 RocketMQ for AI 完整方案。</p>",
+    "headings": [
+      {
+        "id": "section-从临时链接到长期资产-资产中心要解决什么",
+        "level": 2,
+        "text": "从临时链接到长期资产：资产中心要解决什么"
+      },
+      {
+        "id": "section-一条天然按用户组织的消息链路",
+        "level": 2,
+        "text": "一条天然按用户组织的消息链路"
+      },
+      {
+        "id": "section-传统-topic-接不住-按用户组织-的消息流",
+        "level": 2,
+        "text": "传统 Topic 接不住“按用户组织”的消息流"
+      },
+      {
+        "id": "section-litetopic-把-用户-变成消息系统的原生隔离单元",
+        "level": 2,
+        "text": "LiteTopic：把“用户”变成消息系统的原生隔离单元"
+      },
+      {
+        "id": "section-落地效果",
+        "level": 2,
+        "text": "落地效果"
+      },
+      {
+        "id": "section-同一个原语-两种用法",
+        "level": 2,
+        "text": "同一个原语，两种用法"
+      }
+    ],
+    "textLength": 1835,
+    "readingMinutes": 5,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1761936",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "d0a24e8acf9169408958689b8fb0d536b1966ce64cd5730b2f285ab1be30f8fc",
+    "fetchedAt": "2026-11-02T07:08:57.351Z",
+    "checkedAt": "2026-11-02T07:08:57.351Z",
+    "nextRetryAt": "2026-12-02T07:08:57.351Z",
+    "warnings": []
+  }
+}

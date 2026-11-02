@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "148eb52d0678735c5926",
+    "status": "ready",
+    "html": "<p>本文系统性地总结了我们以<strong>华为昇腾 910C</strong> 为<strong>国产算力</strong>底座，在大模型在线推理场景下完成国产化适配与性能优化工作。项目从建立 Qwen3.5-35B-A3B 在 910C 上的性能基线出发，通过 MindStudio 进行性能剖析定位瓶颈，按照「镜像与版本升级 → 参数与环境变量调优 → vllm-ascend 源码修改 → 算子层融合优化 → MTP 投机解码」五个层次逐层推进，累计落地 20 余项有效优化。</p>\n<p><strong>最终成果：</strong> 在 910C-560t（单卡双 die、TP=2）上，未开启投机解码时，TPOT（Time Per Output Token，单 token 解码延迟）从基线 <strong>14.22ms 降至 7.8ms</strong>（c=1，下降 45.1%）；开启 MTP 投机解码并叠加全部源码级优化后，真实业务场景的数据集上 c=1/c=4/c=8 的 TPOT 分别达到 <strong>5.0ms/8.8ms/11.9ms</strong>，较基线分别下降 <strong>64.8%/49.9%/43.8%</strong>；在 GSM8K 公开数据集上 c=1 TPOT 达到 4.2ms。同时，同一套优化方法论在 Qwen3.6-27B 上也得到验证（c=1 从 30.7ms 降至 11.8ms）。</p>\n<p><strong>文中详细给出每一项优化的动机、实现（含具体源码改动路径与关键代码片段）、验证数据与踩坑记录（包括十余项实测无效或负向的尝试），希望为同样在国产算力上做推理优化的团队提供一份可直接复用的工程参考。</strong></p>\n<h2 id=\"section-一-背景\">一、背景<a class=\"heading-anchor\" href=\"#section-一-背景\" aria-label=\"链接到本节：一、背景\">#</a></h2>\n<p>当前国内 NVIDIA GPU 供给持续紧张，<strong>H20 已无新增算力供给，核心业务算力的国产化替代已迫在眉睫</strong>。华为昇腾 910C 作为主流国产算力，已在实际业务的离线推理场景完成投产验证，证明了国产算力在批处理场景下的可行性。然而，在在线实时推理场景中，由于业务对响应时间（RT）要求较为严苛，直接部署大参数模型会导致 RT 无法满足 SLA，因此 910C 暂时无法直接替换现有在线服务。为保证 910C 能应用于在线推理业务，通过轻量级小模型（如 Qwen3-32B、Qwen3.5-35B-A3B、Qwen3.5-27B、Qwen3.6-27），实现在线场景下国产算力的平滑替代。</p>\n<h2 id=\"section-昇腾npu与英伟达gpu软硬件架构对比\">昇腾NPU与英伟达GPU软硬件架构对比<a class=\"heading-anchor\" href=\"#section-昇腾npu与英伟达gpu软硬件架构对比\" aria-label=\"链接到本节：昇腾NPU与英伟达GPU软硬件架构对比\">#</a></h2>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/2af1382c9bf64baf84791b4768b906df.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\">\n::: center<br><em>昇腾与英伟达架构对比</em>\n:::</p>\n<h2 id=\"section-英伟达与昇腾架构核心差异概览\">英伟达与昇腾架构核心差异概览<a class=\"heading-anchor\" href=\"#section-英伟达与昇腾架构核心差异概览\" aria-label=\"链接到本节：英伟达与昇腾架构核心差异概览\">#</a></h2>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/49cdd0949b9ab6f345c622c08676d90c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p><strong>项目目标：</strong>\n以华为昇腾 910C 为核心国产化算力底座，完成在线推理优化的目标为：建立 Qwen3.5 系列模型在 910C 上的性能基线，并以 H20 作为对照组；通过系统优化将低并发（c=1/4/8）TPOT 与 H20 的差距缩小到 80%。</p>\n<h2 id=\"section-二-软硬件环境\">二、软硬件环境<a class=\"heading-anchor\" href=\"#section-二-软硬件环境\" aria-label=\"链接到本节：二、软硬件环境\">#</a></h2>\n<h2 id=\"section-硬件配置\">硬件配置<a class=\"heading-anchor\" href=\"#section-硬件配置\" aria-label=\"链接到本节：硬件配置\">#</a></h2>\n<p>本次优化使用的机器型号为昇腾 910C-560t，单卡双 die 形态：一张加速卡上封装两个 chip（die），每个 chip 拥有独立的 64GB HBM，整机 8 卡共 16 个 die。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/2e4586398c34c007a2bc4812067d7178.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h2 id=\"section-模型信息-qwen3-5-35b-a3b\">模型信息：Qwen3.5-35B-A3B<a class=\"heading-anchor\" href=\"#section-模型信息-qwen3-5-35b-a3b\" aria-label=\"链接到本节：模型信息：Qwen3.5-35B-A3B\">#</a></h2>\n<p>优化工作的主力模型是 Qwen3.5-35B-A3B——总参数约 35B、激活参数约 3B 的 MoE（Mixture of Experts）混合架构模型。<strong>该模型的架构特点对推理优化策略影响很大</strong>，这里展开说明：</p>\n<ul>\n<li><p><strong>混合注意力结构：</strong> 模型包含 30 层 GDN（Gated DeltaNet）线性注意力层与 10 层全注意力（Full Attention）层交替，GDN 层使用递归状态（recurrent state/mamba state）代替 KV Cache，decode 阶段每层都要执行 causal_conv1d、L2Norm、recurrent kernel 等一系列小算子，算子数量多、launch 开销占比高，是优化的重点对象。</p>\n</li>\n<li><p><strong>MoE + 共享专家：</strong> 每个 MoE 层除路由专家（routed experts, GroupedMatmul）外还有一个共享专家（shared expert），decode 低并发时专家权重从 HBM 读取的带宽开销显著，这为权重预取（weight prefetch）与多流重叠提供了优化空间。</p>\n</li>\n<li><p><strong>Gemma 风格 RMSNorm：</strong> 归一化权重以 (1.0 + weight) 的形式参与计算，若不做缓存，每层每步都会产生一次加法 + 拷贝开销。</p>\n</li>\n<li><p><strong>MTP（Multi-Token Prediction）头：</strong> 模型自带 MTP 模块，可直接用于投机解码（speculative decoding），训练时未开启 MTP 的真实业务场景的微调模型也可以在推理时直接受益。</p>\n</li>\n</ul>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/4052c8c4d04b1ad3babbe780b24a882a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p>需要特别说明的是框架版本这条线：vllm-ascend 社区版本迭代很快，不同版本在图编译、MoE 通信（MC2/AllToAll）、投机解码等路径上的实现差异很大。我们早期的基线建立在 0.22.0rc1 上，优化中期切换到 0.23.0rc1 并获得了 15% 以上的直接收益（见 4.1 节），最终所有源码级优化都迁移并固化在正式发布的 v0.23.0 基线的内部分支上。</p>\n<h2 id=\"section-压测方法与指标定义\">压测方法与指标定义<a class=\"heading-anchor\" href=\"#section-压测方法与指标定义\" aria-label=\"链接到本节：压测方法与指标定义\">#</a></h2>\n<p>为保证数据可比，所有优化实验都遵循统一的压测协议：</p>\n<ul>\n<li><p><strong>核心指标：</strong> TPOT（Time Per Output Token，decode 阶段每个输出 token 的平均延迟，在线场景主优化指标）与 TTFT（Time To First Token，首 token 延迟），对照组为 H20 单卡（vLLM 0.23.0）。</p>\n</li>\n<li><p><strong>默认负载：</strong> 输入 1024 token、输出 512 token（min/max prompt 与 min/max tokens 分别锁定为 1024/512），并发取 1/4/8 三档，覆盖在线低并发场景。</p>\n</li>\n<li><p><strong>数据集：</strong> 基线使用 random dataset（排除缓存与数据分布影响），后期验证使用真实业务场景的数据集与 gsm8k 公开数据集。</p>\n</li>\n<li><p><strong>profile 工具：</strong> （昇腾官方 profiler）采集 NPU/host 时间线，通过 MindStudio 定位每个 decode step 内部的算子耗时、通信耗时与 host 侧空隙。</p>\n</li>\n</ul>\n<p><strong>标准的 evalscope 压测命令如下：</strong></p>\n<pre><code>evalscope perf \\\n  --parallel 1 4 8 \\\n  --number 40 80 80 \\\n  --warmup-num 20 \\\n  --model &lt;model_name&gt; \\\n  --url http://127.0.0.1:5001/v1/chat/completions \\\n  --api openai \\\n  --stream \\\n  --dataset random \\\n  --max-tokens 512 --min-tokens 512 \\\n  --min-prompt-length 1024 --max-prompt-length 1024 \\\n  --prefix-length 0 \\\n  --tokenizer-path &lt;path/to/model&gt;/qwen3.5-35b-a3b \\\n  --outputs-dir \"./my_output\"\n</code></pre>\n<h2 id=\"section-三-性能基线与瓶颈分析\">三、性能基线与瓶颈分析<a class=\"heading-anchor\" href=\"#section-三-性能基线与瓶颈分析\" aria-label=\"链接到本节：三、性能基线与瓶颈分析\">#</a></h2>\n<h2 id=\"section-基线数据\">基线数据<a class=\"heading-anchor\" href=\"#section-基线数据\" aria-label=\"链接到本节：基线数据\">#</a></h2>\n<p>在 910C-752t（单卡双 die、TP=2）、vllm-ascend 0.22.0rc1、默认开启 cudagraph、random 数据集、输入 1024/输出 512 条件下，测得 Qwen3.5-35B-A3B 的基线如下：</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/4d5e9dde274cf2a98934924c8cd6df56.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p>基线阶段还同步建立了 Qwen3-8B/14B/32B 与 Qwen3.5-4B/9B/27B 等模型在 910C 与 H20 上的完整对照基线（涵盖单卡单 die、单卡双 die 两种形态，输入输出 1024-512/1024-1024/4096-512 三种负载），总体规律一致：TTFT（首 token 延迟）方面昇腾占优，H20 约为昇腾的 24 倍，说明昇腾在 prefill 阶段（计算密集）效率不错；TPOT（decode 延迟）方面 H20 占优，H20 约为昇腾的 0.60.65 倍，decode 是在线场景的主优化指标，也是本次优化的主攻方向。</p>\n<h2 id=\"section-profile-分析\">Profile 分析<a class=\"heading-anchor\" href=\"#section-profile-分析\" aria-label=\"链接到本节：Profile 分析\">#</a></h2>\n<p>我们用 MindStudio 对 c=1 的 decode 时间线做了逐层剖析。Qwen3.5-35B-A3B 单个 decode step 要穿过 40 个 decoder 层，每层包含 GDN/全注意力 + MoE 两个子模块，一个 step 内要 launch 上千个算子。剖析结果可以归纳为六大类开销：</p>\n<ul>\n<li><p><strong>host 侧调度与下发开销：</strong> 低并发下每个算子的计算时间极短（微秒级），host 侧的 kernel dispatch、aclnn 执行、event record/wait 成为主要开销。典型例子：triton slot_mapping kernel 固定约 131us 的 launch 开销；每层 conv 权重 transpose+contiguous 约 4.3us × 30 层 ≈ 129us/step。</p>\n</li>\n<li><p><strong>host-device 同步与冗余拷贝：</strong> 投机解码验证路径上，MinTokens logits processor 每步在 host 侧用 numpy 重建 (rows, toks) 掩码，并从分页内存做 H2D 拷贝——分页内存的 non_blocking 拷贝实际是同步的，直接把异步调度流水打断，实测占单步时间约 30%；model_runner 中还有大量每步无条件执行的 copy_to_gpu/fill_。</p>\n</li>\n<li><p><strong>集合通信开销：</strong> TP=2 下每层有多次 AllReduce。默认配置下 HCCL 的集合通信算子跑在 AI CPU 上，占用独立的 AI CPU 资源且与计算难以重叠；此外 compute_logits 会做全词表 logits 的 all-gather，通信量高达 O(batch × vocab_size)，而贪婪采样其实只需要 argmax。</p>\n</li>\n<li><p><strong>HBM 带宽瓶颈（MoE 权重读取）：</strong> c=1 decode 时 batch 极小，MoE GroupedMatmul 是带宽受限的，专家权重从 HBM 加载的时间构成关键路径；shared expert 的权重加载与 routed expert 计算默认串行。</p>\n</li>\n<li><p><strong>图模式编译质量：</strong> aclnn 动态 shape kernel 在 replay 阶段仍要走 runtime GetWorkspaceSize 等流程；静态 kernel 预编译可以把这部分开销固化掉，但需要框架版本与编译选项支持。</p>\n</li>\n<li><p><strong>内存分配开销：</strong> host 侧 glibc malloc 在高频小对象分配场景下锁竞争明显；device 侧 HBM 分配器的 page 粒度影响碎片与映射开销。</p>\n</li>\n</ul>\n<p>这六类开销分别对应了后文的五个优化层次。总体思路是<strong>先易后难</strong>，先做容易见效的调整，比如版本升级、环境变量等参数调整，再做需要改源码的精细优化，最后再进行底层的算子融合。</p>\n<p><strong>下面是通过 MindStudio 进行昇腾性能分析是示例图：</strong></p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/5c71a03839c3e1c4ae3678366d3fd491.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p>::: center<br><em>MindStudio 进行性能 profile 分析示例</em>\n:::</p>\n<h2 id=\"section-优化路线图总览\">优化路线图总览<a class=\"heading-anchor\" href=\"#section-优化路线图总览\" aria-label=\"链接到本节：优化路线图总览\">#</a></h2>\n<p>整个优化过程历时约 1 个月，按层次与时间线归纳如下：</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/fc24241f79bfe71793a32c398b63fa18.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h2 id=\"section-四-优化实践-一-镜像版本与参数调优\">四、优化实践（一）：镜像版本与参数调优<a class=\"heading-anchor\" href=\"#section-四-优化实践-一-镜像版本与参数调优\" aria-label=\"链接到本节：四、优化实践（一）：镜像版本与参数调优\">#</a></h2>\n<p>本章记录所有不需要改源码、通过换版本或调参数/环境变量就能生效的优化。这部分<strong>投入产出比</strong>最高，建议任何做昇腾推理优化的团队先系统性地过一遍。</p>\n<h2 id=\"section-推理框架版本升级\">推理框架版本升级<a class=\"heading-anchor\" href=\"#section-推理框架版本升级\" aria-label=\"链接到本节：推理框架版本升级\">#</a></h2>\n<p>优化初期我们的基线建立在 vllm-ascend 0.22.0rc1 上。将镜像切换到 0.23.0rc1（其余参数完全保持不变）后，c=1 TPOT 直接从 14.2ms 降到 12.0ms，下降 15.4%。</p>\n<p>::: center<br><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/a906c290ed8d4f777d32d8e40bd863e5.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\">\n:::</p>\n<p>::: center<br><em>升级 vllm-ascend 0.23.0rc1 后的压测结果（TPOT 12.0ms）</em>\n:::</p>\n<p>版本升级的收益来自社区在 MoE 通信路径、图编译、调度器等方面的持续迭代。之后我们又试验了基于 v0.23.0 的 nightly 镜像，额外收益约 0.1ms（提升很小）。这也给出一条经验：<strong>版本升级要趁早做、一次到位</strong>，后面所有源码级优化都应建立在最新稳定版本之上，避免将来再做一次痛苦的迁移。我们最终的工程基线是正式发布版 v0.23.0。</p>\n<p>CANN 层面同理：从 CANN 9.0.0 镜像更换为 CANN 9.1.0 镜像后，c=1 TPOT 从 8.8ms 降到 8.5ms（-3.4%），并且 9.1.0 是后续 SuperKernel stream fusion 等编译选项（见 6.2 节）的前置依赖。</p>\n<h2 id=\"section-集合通信下沉到-aivector-hccl-op-expansion-mode-aiv\">集合通信下沉到 AIVector：HCCL_OP_EXPANSION_MODE=AIV<a class=\"heading-anchor\" href=\"#section-集合通信下沉到-aivector-hccl-op-expansion-mode-aiv\" aria-label=\"链接到本节：集合通信下沉到 AIVector：HCCL_OP_EXPANSION_MODE=AIV\">#</a></h2>\n<p>默认情况下，HCCL 的集合通信算子（主要是 AllReduce）由 AICPU 执行。AICPU 是独立于 AI Core 的计算单元，其算力与带宽都弱于 AI Core，且通信算子跑在 AICPU 上时与主计算流难以重叠，成为 decode 关键路径上的串行开销。</p>\n<p>通过设置环境变量，可以把集合通信算子「展开」到 AIV（AI Vector）单元上执行：export HCCL_OP_EXPANSION_MODE=AIV。</p>\n<p>在 Qwen3.5-35B-A3B（0.23.0rc1 基线）上，该配置使 c=1 TPOT 从 12.0ms 降到 11.2ms（-6.6%）；此前在 Qwen3-8B 上验证时为 9.9ms → 9.25ms（-6.5%），收益稳定。值得注意的是，vllm-ascend 社区后来也在特定模型（如 MiniMax-M2）的 ACL graph 捕获路径上默认开启了同样的配置，侧面印证了该优化的通用性。</p>\n<p>::: center<br><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/041ae83dbc1bdb359cbe2ffd5aab665e.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\">\n:::</p>\n<p>::: center<br><em>HCCL_OP_EXPANSION_MODE=AIV 压测结果</em>\n:::</p>\n<h2 id=\"section-静态-kernel-预编译-static-kernel\">静态 kernel 预编译（Static Kernel）<a class=\"heading-anchor\" href=\"#section-静态-kernel-预编译-static-kernel\" aria-label=\"链接到本节：静态 kernel 预编译（Static Kernel）\">#</a></h2>\n<p>vllm-ascend 的图模式默认使用动态 shape 的 aclnn kernel：即使是 cudagraph 捕获的固定 batch size，replay 时 runtime 仍要执行 GetWorkspaceSize 等动态推导逻辑。静态 kernel 预编译的思路是：在服务启动的 graph capture 阶段，提前为每个 cudagraph_capture_size（如 [1,2,4,8,...]）预编译静态 shape 的 aclnn kernel，把 workspace 计算固化进编译产物，replay 时直接走预编译的静态路径。</p>\n<p>开启方式（注意多卡场景必须设置 LOCAL_WORLD_SIZE）：</p>\n<pre><code>export ASCEND_RT_VISIBLE_DEVICES=0,1\nexport LOCAL_WORLD_SIZE=2            # 多卡必须设置\nvllm serve /root/workspace/models/Qwen3-32B \\\n  --tensor-parallel-size 2 \\\n  --compilation-config '{\"cudagraph_mode\": \"FULL_DECODE_ONLY\"}' \\\n  --additional-config '{\"ascend_compilation_config\": {\"enable_static_kernel\": true}}'\n</code></pre>\n<p>收益与模型规模强相关：Qwen3-32B 上叠加前序优化后，c=1 TPOT 从 31.5ms 降到 30.9ms（-1.9%）；而在 Qwen3.5-35B-A3B 上，叠加 HCCL AIV 后收益高达 18.7%（11.2ms → 9.1ms），因为 A3B 激活参数小、decode step 内算子多且碎，host 侧动态推导开销占比更高。</p>\n<p>::: center<br><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/565d05751c7a5d3cab530369b68ff87d.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\">\n:::</p>\n<p>::: center<br><em>静态 kernel + HCCL AIV 叠加后的压测结果</em>\n:::</p>\n<p>静态 kernel 编译本身也有一些坑：编译过程中会调用 CANN 工具链，部分头文件路径与 CANN 版本相关。我们在容器环境里遇到过 cann_compat.h 缺失导致编译失败的问题，最终通过启动脚本内联生成兼容头文件解决（见下篇）。</p>\n<h2 id=\"section-hbm-分配器调优-虚拟内存映射-pin-memory-page-size\">HBM 分配器调优：虚拟内存映射 + pin_memory + page_size<a class=\"heading-anchor\" href=\"#section-hbm-分配器调优-虚拟内存映射-pin-memory-page-size\" aria-label=\"链接到本节：HBM 分配器调优：虚拟内存映射 + pin_memory + page_size\">#</a></h2>\n<p>torch_npu 的设备内存分配器支持一组通过 PYTORCH_NPU_ALLOC_CONF 控制的调优项。针对在线低并发场景，我们开启了虚拟内存映射（expandable segments）、1GB 大页、pin memory 后台线程等组合：</p>\n<p>export PYTORCH_NPU_ALLOC_CONF=expandable_segments:True,base_addr_aligned_kb:16,page_size:1g,pinned_use_background_threads:True,pin_memory_expandable_segments:True。</p>\n<p>各项的含义：</p>\n<ul>\n<li><p><strong>expandable_segments:True：</strong> 采用虚拟内存映射方式分配 HBM，segment 可按需扩展，缓解碎片问题，大张量分配不再要求物理连续。</p>\n</li>\n<li><p><strong>page_size:1g：</strong> 把虚拟内存页大小调整为 1GB，减少页表项数量与映射开销。</p>\n</li>\n<li><p><strong>pinned_use_background_threads:True/pin_memory_expandable_segments:True：</strong> pin memory（锁页内存）分配走后台线程，避免阻塞推理主流程，同时锁页内存池可扩展。</p>\n</li>\n<li><p><strong>base_addr_aligned_kb:16/roundup_power2_divisions:16：</strong> 控制分配对齐与分桶粒度，减少小对象分配的碎片。</p>\n</li>\n</ul>\n<p>该组合在叠加前序优化的基础上，使 c=1 TPOT 从 9.1ms 降到 8.8ms（-3.3%）。后期配合 jemalloc（见 4.5）时，我们改用了更精简的组合：expandable_segments:True,roundup_power2_divisions:16。</p>\n<p>::: center<br><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/fef85ebb9791c7e3979f99ab01e416f0.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\">\n:::</p>\n<p>::: center<br><em>虚拟内存 + pin_memory + page_size 调优后的压测结果</em>\n:::</p>\n<h2 id=\"section-host-侧内存分配优化-jemalloc-替换-glibc-malloc\">host 侧内存分配优化：jemalloc 替换 glibc malloc<a class=\"heading-anchor\" href=\"#section-host-侧内存分配优化-jemalloc-替换-glibc-malloc\" aria-label=\"链接到本节：host 侧内存分配优化：jemalloc 替换 glibc malloc\">#</a></h2>\n<p>vLLM 的 Python/host 侧每步会产生大量小对象分配（tensor 元数据、调度结构、通信描述符等）。glibc 的 ptmalloc 在多线程高频小对象场景下存在 arena 锁竞争与碎片膨胀问题。我们通过 LD_PRELOAD 将分配器替换为 jemalloc：</p>\n<p>export LD_PRELOAD=/usr/lib64/libjemalloc.so.2。</p>\n<p>收益随并发增大而增大：c=1 -0.1ms、c=4 -0.3ms、c=8 -0.6ms。原理上并发越高，host 侧线程间分配竞争越激烈，jemalloc 的 thread cache 结构优势越明显。这是一项<strong>零风险的通用优化</strong>，建议默认开启。</p>\n<h2 id=\"section-算子缓存与-batch-memcpy\">算子缓存与 batch memcpy<a class=\"heading-anchor\" href=\"#section-算子缓存与-batch-memcpy\" aria-label=\"链接到本节：算子缓存与 batch memcpy\">#</a></h2>\n<p>aclnn 算子在 host 侧有一层执行信息缓存，默认缓存条目有限。ACLNN_CACHE_LIMIT 用于配置单算子执行时 host 侧缓存的算子信息条目数：</p>\n<p>export ACLNN_CACHE_LIMIT=100000</p>\n<p>export VLLM_ASCEND_ENABLE_BATCH_MEMCPY=1</p>\n<p>ACLNN_CACHE_LIMIT=100000，提高 host 侧算子缓存上限，避免 decode 过程中缓存淘汰导致的重复解析，实测 p99 从 9.1ms 降到 8.9ms，收益不大但稳定，对消除尾延迟毛刺有帮助；VLLM_ASCEND_ENABLE_BATCH_MEMCPY=1，把分散的小块 H2D/D2H memcpy 合并为批量拷贝，减少拷贝次数与 launch 开销。</p>\n<h2 id=\"section-moe-权重预取-weight-prefetch\">MoE 权重预取（Weight Prefetch）<a class=\"heading-anchor\" href=\"#section-moe-权重预取-weight-prefetch\" aria-label=\"链接到本节：MoE 权重预取（Weight Prefetch）\">#</a></h2>\n<p>c=1 decode 时 MoE 层的 GroupedMatmul 是带宽受限的：专家权重体量远大于激活数据，每个 step 都要从 HBM 读取。weight prefetch 机制利用 NPU 的 prefetch 能力，在当前层计算时提前把下一层的权重搬进 L2 Cache，用计算时间掩盖权重加载延迟。</p>\n<p><strong>开启方式：</strong></p>\n<pre><code>--additional-config '{..., \"weight_prefetch_config\": {\"enabled\": true}, \"pa_shape_list\": [1,4,8]}'\n</code></pre>\n<p>这里有三个关键细节。<strong>预取阈值改动（源码）：</strong> 上游 vllm_ascend/ops/weight_prefetch.py 中 MOE_PREFETCH_TOKEN_THRESHOLD = 96，即 batch 中 token 数少于 96 时不做 MoE 预取——这是为吞吐场景设计的保守值。而我们的在线场景恰恰是 c=1~8 的极小 batch，decode 时 token 数等于并发数，永远达不到阈值。将阈值改为 1 后，c=1 decode 也能触发预取：</p>\n<pre><code>MOE_PREFETCH_TOKEN_THRESHOLD = 1   # 原值 96\n</code></pre>\n<p><strong>pa_shape_list：</strong> 显式声明 decode 的 batch 形状列表 [1,4,8]，让 paged attention 与预取逻辑对这些低并发形状做针对性处理。<strong>shared expert 预取扩展（源码）：</strong> 原实现只预取 routed expert 的 w13（gate_up）权重，我们在 preprocess 阶段追加了对下一层 shared expert gate_up 权重的预取（_get_moe_shared_expert_gate_up_prefetch_weight），使其在当前层 routed expert GroupedMatmul 执行期间提前进入 L2，填补多流重叠暴露出的空窗。</p>\n<p><strong>收益：</strong> c=8 时 TTFT 改善（prefill 阶段 expert 权重提前进 L2 cache）、c=4 TPOT 改善 0.2ms、c=1 改善 0.1ms。</p>\n<h2 id=\"section-hccl-通信参数与-cpu-绑定\">HCCL 通信参数与 CPU 绑定<a class=\"heading-anchor\" href=\"#section-hccl-通信参数与-cpu-绑定\" aria-label=\"链接到本节：HCCL 通信参数与 CPU 绑定\">#</a></h2>\n<p>最终最佳实践脚本中还固化了以下通信与调度参数：</p>\n<ul>\n<li><p><strong>HCCL_BUFFSIZE=128：</strong> HCCL 通信缓冲区大小（MB），影响通信分块粒度，需按消息大小试参。</p>\n</li>\n<li><p><strong>HCCL_DETERMINISTIC=false：</strong> 关闭确定性归约，确定性模式会强制固定的分块与归约顺序，牺牲一部分通信效率换取结果可复现，在线服务不要求比特级复现，关闭后通信更快。</p>\n</li>\n<li><p><strong>HCCL_WHITELIST_DISABLE=1：</strong> 禁用 HCCL 白名单校验，减少通信建链开销。</p>\n</li>\n<li><p><strong>COMBINED_ENABLE=1：</strong> 开启算子组合（combined）标志，优化两个非连续算子的组合场景（在 35B-A3B 单独测试时未见收益，但与整体组合保留）。</p>\n</li>\n<li><p><strong>OMP_NUM_THREADS=1/GE_USE_STATIC_MEMORY=1：</strong> 限制 OpenMP 线程数避免 host 侧线程争抢，GE 使用静态内存减少图引擎动态分配。</p>\n</li>\n<li><p><strong>enable_cpu_binding: true（additional-config）：</strong> 开启 worker 进程的 CPU 绑核，注意这与更激进的 CPU_AFFINITY_CONF=2 精细化绑核不同——后者实测是负优化（见 4.10）。</p>\n</li>\n</ul>\n<h2 id=\"section-cudagraph-配置-模式-捕获尺寸与-warmup\">cudagraph 配置：模式、捕获尺寸与 warmup<a class=\"heading-anchor\" href=\"#section-cudagraph-配置-模式-捕获尺寸与-warmup\" aria-label=\"链接到本节：cudagraph 配置：模式、捕获尺寸与 warmup\">#</a></h2>\n<p>图模式是 decode 优化的基石，我们把所有 decode 都放进图里执行：</p>\n<ul>\n<li><p><strong>cudagraph_mode = FULL_DECODE_ONLY：</strong> 只对纯 decode 步骤做整图捕获，prefill 与混合批走 eager 路径，兼顾性能与灵活性。</p>\n</li>\n<li><p><strong>cudagraph_capture_sizes：</strong> 非投机场景使用 [1,2,4,8]，开启 MTP（num_speculative_tokens=4）后，每步实际执行的 token 数 = 并发数 / dp × (1 + 投机长度)，例如 c=4、TP=2 对应 2×5=10，再考虑 bonus token，我们把捕获尺寸调整为 [5,20,40]（详见 7.2 节），这一步是修复 MTP 下 c=4/c=8 从 10.4ms 劣化到 42ms 的关键。</p>\n</li>\n<li><p><strong>cudagraph warmup 次数（源码）：</strong> vllm_ascend/platform.py 中 cudagraph_num_of_warmups 从 1 提到 3，原 1 次 warmup 下，部分 aclnn 算子（尤其 MoE fused experts）首次执行仍残留 host 侧编译/初始化开销，提到 3 次后稳态命中率显著提升，低并发收益最大（约 -0.2~-0.3ms）。</p>\n</li>\n</ul>\n<h2 id=\"section-实测无效或负向的尝试-避坑清单\">实测无效或负向的尝试（避坑清单）<a class=\"heading-anchor\" href=\"#section-实测无效或负向的尝试-避坑清单\" aria-label=\"链接到本节：实测无效或负向的尝试（避坑清单）\">#</a></h2>\n<p>优化的另一半工作是证伪。下表记录了我们实测无效、报错或负向的参数尝试，供后来者避坑。所有结论都基于 Qwen3.5-35B-A3B、TP=2、vllm-ascend 0.23.0 链路实测：</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/7d858455e7888f81adde68bd44def3a7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p><strong>几个有价值的观察：</strong> 其一，昇腾的环境变量多达数百个，很多开关与 SoC 型号、CANN 版本、模型结构强耦合，文档上的「推荐值」不能替代实测；其二，部分功能（如 MatmulAllReduce、FlashComm）在 910C（ascend910_93）上的算子库支持尚不完整；其三，同一优化在不同模型上结论可能相反（FINE_GRAIN_REPLAY_SYNC），<strong>建立「每模型必实测」的流程比记住任何具体参数都重要。</strong></p>\n<p><strong>本文为《国产算力·昇腾 910C 大模型推理优化》上篇，聚焦镜像版本升级与参数调优。下篇将继续深入 vllm-ascend 源码修改、算子层优化与 MTP 投机解码，敬请期待。</strong></p>\n<h2 id=\"section-往期回顾\">往期回顾<a class=\"heading-anchor\" href=\"#section-往期回顾\" aria-label=\"链接到本节：往期回顾\">#</a></h2>\n<p>1.<a href=\"https://cloud.tencent.com/developer/article/2761592\" target=\"_blank\" rel=\"noopener noreferrer\">动态规则的 Agent 实践：用确定性工程驾驭 LLM 的资产智能验收</a></p>\n<p>2.<a href=\"https://cloud.tencent.com/developer/article/2756439\" target=\"_blank\" rel=\"noopener noreferrer\">发一张图，它居然\"跃\"出屏幕了？一文读懂得物 3D 空间图片技术实践</a></p>\n<p>3.<a href=\"https://cloud.tencent.com/developer/article/2750363\" target=\"_blank\" rel=\"noopener noreferrer\">别再只卷向量检索了，得物交易搜索如何用“生成式”实现召回范式跃迁？</a></p>\n<p>4.<a href=\"https://cloud.tencent.com/developer/article/2745514\" target=\"_blank\" rel=\"noopener noreferrer\">指标平台：从语义底座到智能消费的实践路径｜得物技术</a></p>\n<p>5.<a href=\"https://cloud.tencent.com/developer/article/2740678\" target=\"_blank\" rel=\"noopener noreferrer\">企业级 MultiAgent 落地：Plan 模式与主子 Agent 协作｜得物技术</a></p>\n<h2 id=\"section-文-映川\">文 / 映川<a class=\"heading-anchor\" href=\"#section-文-映川\" aria-label=\"链接到本节：文 / 映川\">#</a></h2>\n<p>关注得物技术，每周四更新技术干货</p>\n<p>要是觉得文章对你有帮助的话，欢迎评论转发点赞～</p>\n<p>未经得物技术许可严禁转载，否则依法追究法律责任。</p>\n",
+    "headings": [
+      {
+        "id": "section-一-背景",
+        "level": 2,
+        "text": "一、背景"
+      },
+      {
+        "id": "section-昇腾npu与英伟达gpu软硬件架构对比",
+        "level": 2,
+        "text": "昇腾NPU与英伟达GPU软硬件架构对比"
+      },
+      {
+        "id": "section-英伟达与昇腾架构核心差异概览",
+        "level": 2,
+        "text": "英伟达与昇腾架构核心差异概览"
+      },
+      {
+        "id": "section-二-软硬件环境",
+        "level": 2,
+        "text": "二、软硬件环境"
+      },
+      {
+        "id": "section-硬件配置",
+        "level": 2,
+        "text": "硬件配置"
+      },
+      {
+        "id": "section-模型信息-qwen3-5-35b-a3b",
+        "level": 2,
+        "text": "模型信息：Qwen3.5-35B-A3B"
+      },
+      {
+        "id": "section-压测方法与指标定义",
+        "level": 2,
+        "text": "压测方法与指标定义"
+      },
+      {
+        "id": "section-三-性能基线与瓶颈分析",
+        "level": 2,
+        "text": "三、性能基线与瓶颈分析"
+      },
+      {
+        "id": "section-基线数据",
+        "level": 2,
+        "text": "基线数据"
+      },
+      {
+        "id": "section-profile-分析",
+        "level": 2,
+        "text": "Profile 分析"
+      },
+      {
+        "id": "section-优化路线图总览",
+        "level": 2,
+        "text": "优化路线图总览"
+      },
+      {
+        "id": "section-四-优化实践-一-镜像版本与参数调优",
+        "level": 2,
+        "text": "四、优化实践（一）：镜像版本与参数调优"
+      },
+      {
+        "id": "section-推理框架版本升级",
+        "level": 2,
+        "text": "推理框架版本升级"
+      },
+      {
+        "id": "section-集合通信下沉到-aivector-hccl-op-expansion-mode-aiv",
+        "level": 2,
+        "text": "集合通信下沉到 AIVector：HCCL_OP_EXPANSION_MODE=AIV"
+      },
+      {
+        "id": "section-静态-kernel-预编译-static-kernel",
+        "level": 2,
+        "text": "静态 kernel 预编译（Static Kernel）"
+      },
+      {
+        "id": "section-hbm-分配器调优-虚拟内存映射-pin-memory-page-size",
+        "level": 2,
+        "text": "HBM 分配器调优：虚拟内存映射 + pin_memory + page_size"
+      },
+      {
+        "id": "section-host-侧内存分配优化-jemalloc-替换-glibc-malloc",
+        "level": 2,
+        "text": "host 侧内存分配优化：jemalloc 替换 glibc malloc"
+      },
+      {
+        "id": "section-算子缓存与-batch-memcpy",
+        "level": 2,
+        "text": "算子缓存与 batch memcpy"
+      },
+      {
+        "id": "section-moe-权重预取-weight-prefetch",
+        "level": 2,
+        "text": "MoE 权重预取（Weight Prefetch）"
+      },
+      {
+        "id": "section-hccl-通信参数与-cpu-绑定",
+        "level": 2,
+        "text": "HCCL 通信参数与 CPU 绑定"
+      },
+      {
+        "id": "section-cudagraph-配置-模式-捕获尺寸与-warmup",
+        "level": 2,
+        "text": "cudagraph 配置：模式、捕获尺寸与 warmup"
+      },
+      {
+        "id": "section-实测无效或负向的尝试-避坑清单",
+        "level": 2,
+        "text": "实测无效或负向的尝试（避坑清单）"
+      },
+      {
+        "id": "section-往期回顾",
+        "level": 2,
+        "text": "往期回顾"
+      },
+      {
+        "id": "section-文-映川",
+        "level": 2,
+        "text": "文 / 映川"
+      }
+    ],
+    "textLength": 11074,
+    "readingMinutes": 25,
+    "sourceId": "dewu-tencent",
+    "sourceUrl": "https://developer.cloud.tencent.com/article/2766437",
+    "ruleId": "tencent-article-json",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "43cb8d336bcc199f004f9b994b07e83dced546e50f76961cffb65a3e4114afe1",
+    "fetchedAt": "2026-11-02T06:23:31.059Z",
+    "checkedAt": "2026-11-02T06:23:31.059Z",
+    "nextRetryAt": "2026-12-02T06:23:31.059Z",
+    "warnings": []
+  }
+}

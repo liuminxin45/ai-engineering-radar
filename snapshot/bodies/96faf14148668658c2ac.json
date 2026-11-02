@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "96faf14148668658c2ac",
+    "status": "partial",
+    "html": "<section><h4><span><span>6000+ 个直接抢</span></span></h4><p><span><span>这个拼手速，第一时间打开这篇文章你就有可能抢到。</span></span><span><span>也说明你是我们的忠实读者，谢谢一直以来的关注。</span></span></p><section><span><br></span></section></section><section><p><span>如果你手速够快，可以一下领到三款。要是发现红包封面全被抢光了，别急，还有下面的获取方式。</span></p><h4><span><span><br></span></span></h4><h4><span><strong><span><span>6000个直接抽奖</span></span></strong></span></h4></section>",
+    "headings": [],
+    "textLength": 110,
+    "readingMinutes": 1,
+    "sourceId": "tencent-qqnews",
+    "sourceUrl": "https://news.qq.com/rain/a/20260924A0CGM800",
+    "ruleId": "tencent-news",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "a45b8dc2806d4e09ced107d3584eac597aeb0c6b5e9f08fc75b5ec1d1f171fa1",
+    "fetchedAt": "2026-11-02T06:24:04.715Z",
+    "checkedAt": "2026-11-02T06:24:04.715Z",
+    "nextRetryAt": "2026-11-09T06:24:04.715Z",
+    "warnings": [
+      "取得的正文较短，可能不完整。"
+    ]
+  }
+}

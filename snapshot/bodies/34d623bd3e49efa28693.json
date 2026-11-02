@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "34d623bd3e49efa28693",
+    "status": "ready",
+    "html": "\n<blockquote>\n<p><span>核心观点：可复用学习组件的设计与评价，应以其支持的决策为中心，而非仅考察其输出内容。</span></p>\n</blockquote>\n<h2 id=\"section-本文导读\">本文导读<a class=\"heading-anchor\" href=\"#section-本文导读\" aria-label=\"链接到本节：本文导读\">#</a></h2>\n<p>供应链库存管理需要在需求与供给均存在不确定性的条件下，对补货数量、库存配置和执行时点作出决策。基础模型与智能体已可用于需求估计、供应商信息解析和候选计划生成，但模型输出并不等同于业务决策。只有将其纳入明确的业务目标、仓容与箱规约束、运力条件和执行流程，才可能形成可实施、可检验的运营方案。</p>\n<p>《ScoAI: Toward OR-Native Decision Intelligence》讨论的正是模型输出与实际决策之间仍待衔接的环节 [1]。论文提出 <span>ScoAI = SC + OR + AI：供应链业务界定决策情境、可用资源与行动后果，运筹学将目标、约束和跨环节协同转化为可计算的问题，AI 提供可在相关任务间复用的估计与判断。三者并非彼此独立的能力叠加，而是共同构成围绕业务决策运行、校验和更新的计算闭环。作为一篇 Perspective，着重讨论一个方法论问题：当基础模型与智能体应用于库存、调拨和规划业务时，如何使其从生成表面合理的答案，进一步转向支持可校验、可执行且可追溯的决策。</span></p>\n<ul>\n<li>\n<p>论文：ScoAI: Toward OR-Native Decision Intelligence</p>\n</li>\n<li>\n<p>副标题：A Perspective on Foundation Models and Agents for Supply Chains</p>\n</li>\n<li>\n<p>链接：<a href=\"https://www.preprints.org/manuscript/202610.0845\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.preprints.org/manuscript/202610.0845</a></p>\n</li>\n</ul>\n<h2 id=\"section-背景\">背景<a class=\"heading-anchor\" href=\"#section-背景\" aria-label=\"链接到本节：背景\">#</a></h2>\n<p>以一批存在延期到货风险的促销商品为例，即使模型给出的延期概率较低，计划人员仍需在继续等待、安排加急和实施跨仓调拨之间作出选择。概率预测只是决策输入之一；缺货损失、加急成本、其他仓库的可用库存和运输能力，都会影响最终方案。当潜在损失足够大时，即便事件发生的概率不高，提前干预仍可能是更合理的选择。同类问题普遍存在于库存管理中。更准确的需求预测并不必然产生更合理的补货量；单仓成本较低的方案，未必能够降低整条履约链路的成本；已经审批的计划数量，也可能因库存占用、部分发货或人工调整而无法完整执行。与此同时，缺货期间观测到的销量通常低于真实需求，未满足需求无法仅凭销售记录直接还原。</p>\n<p>基于这些现象，论文将模型进入决策流程时面临的关键问题概括为三个方面：模型判断如何转化为具体行动，局部选择如何反映完整链路的价值，以及计划结果如何与实际执行相衔接。ScoAI 的理论分析、系统接口和评价框架均由此展开。</p>\n<p><img alt=\"截屏2026-10-13 00.52.49.png\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-10-13-00-52tNFSVZj8dJ10sw6.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：截屏2026-10-13 00.52.49.png\"></p>\n<h2 id=\"section-核心思路\">核心思路<a class=\"heading-anchor\" href=\"#section-核心思路\" aria-label=\"链接到本节：核心思路\">#</a></h2>\n<p>论文的主要推进并非提出新的网络结构，而是将决策结构提升为模型接口的组成部分。在常见流程中，模型负责输出预测，目标、约束和执行规则则由外部业务系统另行处理。ScoAI 主张在建模之初即明确这些要素及其关系，使其可以被独立检验，并贯穿训练、求解和运行更新的全过程。</p>\n<p>论文将这一要求概括为 <span>OR-native（运筹原生）。运筹原生并不只是为系统接入一个求解器，而是要求业务目标、可选行动、不确定因素、决策时可获得的信息和执行反馈均以明确形式进入模型或智能体接口。这样，模型输出才能直接服务于后续计算；当业务规则发生变化时，系统也能够识别应当调整的具体环节。</span></p>\n<p>这一划分对于库存系统尤为重要。库存守恒是确定性的业务关系，无需交由模型学习；仓容、箱规和服务水平要求是当前生效的运营规则，需要明确表达并进行版本管理；需求、交期、替代关系和供应商响应则具有不确定性，需要依据数据加以估计。论文将学习组件与显式运营机制的结合称为 <span>数据—机制融合。</span></p>\n<p>数据—机制融合并非在预测模型之后简单附加优化程序。业务损失的结构会决定预测环节应重点刻画均值、分位数还是尾部风险；求解器识别出的不可行性可以用于修正建模假设或候选方案；真实的发货与到货记录则应更新下一轮决策所依据的系统状态。不同反馈作用于不同对象，不能笼统地归结为模型误差。<br><img alt=\"2.png\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-10-13-00-54d0Io5213HpaVPhjfK.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：2.png\"></p>\n<p>论文进一步将决策误差分解为三类：优质方案未进入候选集合，模型未能正确比较候选方案的业务价值，以及在有限计算预算下未能完成充分搜索。不同误差对应不同的改进路径。提高求解能力只能改善搜索质量，既无法补充缺失的候选方案，也不能修正错误的价值评估。</p>\n<p>跨环节决策还需要将下游影响传递至上游。选品结果会改变后续补货需求，补货方案又会占用运输与收货能力，因此局部成本较低的选择可能增加全链路成本。论文以“补全价值”衡量局部方案继续形成高质量完整计划的潜力，并通过资源价格将共享容量的机会成本传递至各个环节。对于包含整箱要求、整数变量和共享资源的业务，最终方案仍须通过联合可行性检验。</p>\n<h2 id=\"section-系统设计\">系统设计<a class=\"heading-anchor\" href=\"#section-系统设计\" aria-label=\"链接到本节：系统设计\">#</a></h2>\n<p>论文提出的智能体架构并不要求基础模型承担完整决策流程。模型适合用于理解文本信息、估计需求与交期以及提出候选方案；确定性的日期计算、库存守恒、整箱约束、仓容限制和共享资源协调仍由程序与求解器负责；权限校验、资源预占和业务提交则继续由业务系统管理。</p>\n<p>结构化判断模型可以通过边界清晰的接口接入系统：读取经过授权的状态信息，对定义明确的问题作出判断，并将选项概率或等级结果提交给规划器。模型置信度本身不能构成执行许可。最终方案仍需从语义、信息、价值、计算和运行五个层面接受校验。</p>\n<p><img alt=\"3.png\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-10-13-00-55MRPLgJrtgG8hCay.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：3.png\"></p>\n<p>执行记录是这一架构不可缺少的组成部分。系统应分别保存模型或规划器提出的方案、审批结果与实际执行动作，并以实际动作而非原始计划更新业务状态。对于库存管理，这既关系到下一周期在手量和在途量的准确性，也决定了后续观测可以用于支持哪些分析和判断。</p>\n<p><img alt=\"4.png\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-10-13-00-55LEA6T12w1269dCOjo.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：4.png\"></p>\n<h2 id=\"section-供应链场景\">供应链场景<a class=\"heading-anchor\" href=\"#section-供应链场景\" aria-label=\"链接到本节：供应链场景\">#</a></h2>\n<p>论文结合京东既有研究，说明上述接口在不同供应链场景中已具备相应的技术基础。在库存控制方面，已有工作以动态规划产生的决策作为监督信号训练补货策略，并依据实际运营成本进行适应；区域仓与前置仓的选品分配研究将需求预测、共享库存、仓容和履约成本纳入同一优化问题；生成式规划用于连接业务请求、数据与分析工具；ORLA 引入求解器参与优化模型的生成和选择；SCOPE 则面向完整链路协调选品、货源、补货周期与履约路径。</p>\n<p>这些研究展示了学习与优化之间的多种连接方式：运筹解可以作为训练监督，运营成本可以转化为学习信号，求解反馈可以修正模型输出，下游结果也可用于评价上游选择。需要说明的是，这些工作分别面向不同场景，并采用不同的实验设计，其结果不能汇总为 ScoAI 的整体业务收益。论文引用这些案例，旨在说明不同类型的接口如何在具体任务中实现。</p>\n<p>这一方法论也与我们团队近期的两项研究相呼应。其中一项研究将大邻域搜索中的变量选择表示为可学习的结构化问题 [2]；另一项研究探讨语言模型如何在库存控制的设计阶段提供先验知识与策略结构，并由运筹控制器负责实际运行 [3]。两项工作的研究任务和技术方法并不相同，但共同体现了一个原则：AI 应在职责明确的计算环节中提供可复用能力，而不应取代既有的约束表达、优化求解和执行控制机制。</p>\n<p>论文中的构造算例进一步表明，业务规则变化不能仅依赖模型的语义理解进行处理。当门店发货上限由 4 调整为 2 时，旧方案即使仍获得较高的模型评分，也已不再属于新的可行域。此时，需求估计与库存守恒关系均未改变，变化的是允许采取的行动范围。因此，正确的处理方式是更新约束并重新求解，而非优先重新训练预测模型。</p>\n<p><img alt=\"5.png\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-10-13-00-55ymI8ipXLs13y24xgg.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：5.png\"></p>\n<p>整箱约束体现了同样的问题。对按单件计算的发货方案直接取整，可能同时造成门店需求无法满足或总库存约束被违反。更可靠的做法是将箱规直接写入联合决策模型并重新计算。此类仓配业务中的基本要求表明，显式决策结构不能由自由文本生成替代。</p>\n<h2 id=\"section-对业务的启示\">对业务的启示<a class=\"heading-anchor\" href=\"#section-对业务的启示\" aria-label=\"链接到本节：对业务的启示\">#</a></h2>\n<p>ScoAI 的意义不在于以通用模型取代现有业务系统，而在于明确 AI 能力在决策链路中的适用范围。需求与交期可以依据数据进行估计，库存守恒与箱规约束必须被显式执行；供应商文本可以交由模型解析，是否采取加急措施仍需综合成本与资源条件确定；候选方案可以由模型生成，但在提交之前仍须完成校验、资源预占和权限审核。对于现有库存系统，相较于直接替换成熟算法，这一路径更具可实施性。</p>\n<p>论文同时提供了更具针对性的诊断框架。当策略表现下降时，可以分别检查候选集合是否包含优质方案、候选价值排序是否准确，以及搜索过程是否充分。仓容变化需要更新约束，交期分布变化需要更新响应模型，实际发货数量与计划不一致则需要修正执行记录。许多被笼统归因于“模型漂移”的问题，实际可能发生在决策链路的不同环节。相应地，数据记录也需要覆盖完整的决策过程。仅保存输入和最终结果不足以支持准确归因；还需关联决策时采用的规则版本、候选方案、系统建议、审批结果、实际执行及后续观测，才能区分模型、求解器、人工干预与执行偏差各自带来的影响。系统评价也不应局限于预测精度和模型调用成本，而应同时考察决策质量、硬约束满足情况、任务覆盖范围与端到端总成本。</p>\n<p>通用模型并非适用于所有供应链任务。对于规则稳定、问题边界清晰的补货场景，成熟的专用运筹流程通常仍具有更高的可靠性和经济性。当同一组理解、估计或建模能力可以服务多类相关决策时，可复用模型才更可能体现优势；其价值仍应以决策有效性、任务覆盖率和整体成本为依据进行评价。</p>\n<h2 id=\"section-总结\">总结<a class=\"heading-anchor\" href=\"#section-总结\" aria-label=\"链接到本节：总结\">#</a></h2>\n<p>ScoAI 关注的并非 AI 能否进入供应链，而是 AI 参与供应链决策之后，哪些内容适合通过数据学习，哪些关系必须显式计算，以及哪些结果需要依据执行记录进行验证。其基本分工是：供应链业务定义问题、资源与行动后果，运筹学表达目标、约束和协同关系，AI 提供可复用的估计与判断。真正用于改进后续决策的，不仅是模型生成的初始结果，还包括实际采取的行动及其产生的业务反馈。</p>\n<h2 id=\"section-论文与相关工作\">论文与相关工作<a class=\"heading-anchor\" href=\"#section-论文与相关工作\" aria-label=\"链接到本节：论文与相关工作\">#</a></h2>\n<p>[1] <a href=\"https://www.preprints.org/manuscript/202610.0845\" target=\"_blank\" rel=\"noopener noreferrer\">ScoAI: Toward OR-Native Decision Intelligence</a><br>作者：<span>Yang Liu, Yulin Huang, Xue Yu, Haowei Zhou, Jiaxin Wang, Qiqi Yan, Tianqi Zhou, Yi Yao, Zhongxuan Han, Shaomin Li, Jianshen Zhang, Zhe Chen, Yongzhi Qi*, Wei Qi, Zuo-Jun (Max) Shen.<br>[2] <a href=\"https://arxiv.org/abs/2609.22350\" target=\"_blank\" rel=\"noopener noreferrer\">Recasting the Destroy Step of Large Neighborhood Search as Dense Segmentation</a><br>作者：<span>Yang Liu, Yulin Huang, Jianshen Zhang, Yongzhi Qi*.<br>[3] <a href=\"https://arxiv.org/abs/2609.19760\" target=\"_blank\" rel=\"noopener noreferrer\">SabreAgent: Language Models at Design Time for Lost-Sales Inventory Control</a><br>作者：<span>Yang Liu, Yulin Huang, Xue Yu, Jiong Dong, Jianshen Zhang, Yongzhi Qi*.</span></span></span></p>\n\n",
+    "headings": [
+      {
+        "id": "section-本文导读",
+        "level": 2,
+        "text": "本文导读"
+      },
+      {
+        "id": "section-背景",
+        "level": 2,
+        "text": "背景"
+      },
+      {
+        "id": "section-核心思路",
+        "level": 2,
+        "text": "核心思路"
+      },
+      {
+        "id": "section-系统设计",
+        "level": 2,
+        "text": "系统设计"
+      },
+      {
+        "id": "section-供应链场景",
+        "level": 2,
+        "text": "供应链场景"
+      },
+      {
+        "id": "section-对业务的启示",
+        "level": 2,
+        "text": "对业务的启示"
+      },
+      {
+        "id": "section-总结",
+        "level": 2,
+        "text": "总结"
+      },
+      {
+        "id": "section-论文与相关工作",
+        "level": 2,
+        "text": "论文与相关工作"
+      }
+    ],
+    "textLength": 4458,
+    "readingMinutes": 10,
+    "sourceId": "jd-cnblogs",
+    "sourceUrl": "https://www.cnblogs.com/Jcloud/p/23367542",
+    "ruleId": "cnblogs",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "77c90a7f94fba570d16905edcc80df5981cc4eacfdc5016d0951c20bc69a4def",
+    "fetchedAt": "2026-11-02T06:23:37.237Z",
+    "checkedAt": "2026-11-02T06:23:37.237Z",
+    "nextRetryAt": "2026-12-02T06:23:37.237Z",
+    "warnings": []
+  }
+}

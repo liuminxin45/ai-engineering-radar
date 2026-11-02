@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "8b93469a7728a0596086",
+    "status": "ready",
+    "html": "<p><a href=\"https://dashscope.aliyun.com/\" target=\"_blank\" rel=\"noopener noreferrer\">API</a></p><p><a href=\"https://huggingface.co/spaces/Qwen/Qwen-Max-0428\" target=\"_blank\" rel=\"noopener noreferrer\">DEMO</a></p><p><a href=\"https://discord.gg/yPEP2vHTu4\" target=\"_blank\" rel=\"noopener noreferrer\">DISCORD</a></p><p>Previously, we opensourced a series of Qwen1.5 model ranging from 0.5 to 110 billion parameters. Now, we release a larger model, Qwen-Max-0428. Qwen-Max-0428 is an instruction-tuned model for chat service. Very recently, it is available via <a href=\"https://chat.lmsys.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Chatbot Arena</a> and it has now become the top-10 in the leaderboard. Furthermore, our evaluation of MT-Bench also demonstrates that the new model outperforms our previous largest model Qwen1.5-110B-Chat.</p>\n<figure><img src=\"https://qianwen-res.oss-cn-beijing.aliyuncs.com/arena_leaderboard.jpg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><div class=\"markdown-table-wrap\"><table>\n<thead>\n<tr>\n<th>Models</th>\n<th>MT-Bench</th>\n<th>Arena</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Qwen1.5-110B-Chat</td>\n<td>8.88</td>\n<td>1172</td>\n</tr>\n<tr>\n<td>Qwen-Max-0428</td>\n<td>8.96</td>\n<td>1186</td>\n</tr>\n</tbody></table></div>\n<p>We provide a demo of chat service of Qwen-Max-0428 (<a href=\"https://huggingface.co/spaces/Qwen/Qwen-Max-0428\" target=\"_blank\" rel=\"noopener noreferrer\">link</a>) in Hugging Face Spaces:</p>\n<p>It is also accessible through the official DashScope API (<a href=\"https://dashscope.aliyun.com/\" target=\"_blank\" rel=\"noopener noreferrer\">link</a>). Additionally, now the DashScope API is compatible with the OpenAI API format. Below is an example of usage:}}</p>\n<p>This model is available in our web service and APP (<a href=\"https://tongyi.aliyun.com/qianwen/\" target=\"_blank\" rel=\"noopener noreferrer\">link</a>, only accessible in mainland China). Enjoy!</p>\n<h2 id=\"section-citation\">Citation<a class=\"heading-anchor\" href=\"#section-citation\" aria-label=\"链接到本节：Citation\">#</a></h2>\n",
+    "headings": [
+      {
+        "id": "section-citation",
+        "level": 2,
+        "text": "Citation"
+      }
+    ],
+    "textLength": 898,
+    "readingMinutes": 2,
+    "sourceId": "qwen-research",
+    "sourceUrl": "https://docs.qwenlm.ai/research/qwen-max-0428/index.json",
+    "ruleId": "qwen-publisher-tokens",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "d13636d056a74398614f3c8642e7d10accd2d67b0eb41506fa007fb7199cdb00",
+    "fetchedAt": "2026-11-02T06:38:41.020Z",
+    "checkedAt": "2026-11-02T06:38:41.020Z",
+    "nextRetryAt": "2026-12-02T06:38:41.020Z",
+    "warnings": []
+  }
+}

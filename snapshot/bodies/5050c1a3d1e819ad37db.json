@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "5050c1a3d1e819ad37db",
+    "status": "ready",
+    "html": "<p>在 AI 重塑产业的当下，开源正成为 AI 技术演进的主航道——从 Agent 运行时、模型训练和推理框架到云原生基础设施，越来越多的核心能力在开源社区中被共同定义。阿里云是全球领先的云计算及人工智能科技公司，在全球范围内提供可扩展、安全和可靠的人工智能和云计算服务，多年来持续投入开源、贡献开源，与全球开发者并肩同行，为智能时代打造坚实的技术基础。</p><p><br></p><p><strong>2026 年 9 月 5 日至 9 日，AGNTCon + MCPCon、PyTorch Conf China、KubeCon + CloudNativeCon China 等开源 AI 顶会即将在上海举办。</strong> 阿里云技术专家们将在大会上，为广大开发者带来 Agent 运行时、模型训练和推理、云原生基础设施等领域的开源项目最新进展分享。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_0c0e38cd8da14030948137470b7608a7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [],
+    "textLength": 343,
+    "readingMinutes": 1,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1761387",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "c95e9648104388dd50d519a004234088ebe18aeed7fdf8d491e0539a5731b131",
+    "fetchedAt": "2026-11-02T07:09:06.706Z",
+    "checkedAt": "2026-11-02T07:09:06.706Z",
+    "nextRetryAt": "2026-12-02T07:09:06.706Z",
+    "warnings": []
+  }
+}

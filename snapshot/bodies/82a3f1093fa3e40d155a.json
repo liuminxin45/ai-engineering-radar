@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "82a3f1093fa3e40d155a",
+    "status": "ready",
+    "html": "<p><a href=\"https://chat.qwen.ai/\" target=\"_blank\" rel=\"noopener noreferrer\">QWEN CHAT</a></p><p><a href=\"https://huggingface.co/Qwen/QwQ-32B\" target=\"_blank\" rel=\"noopener noreferrer\">Hugging Face</a></p><p><a href=\"https://modelscope.cn/models/Qwen/QwQ-32B\" target=\"_blank\" rel=\"noopener noreferrer\">ModelScope</a></p><p><a href=\"https://huggingface.co/spaces/Qwen/QwQ-32B-Demo\" target=\"_blank\" rel=\"noopener noreferrer\">DEMO</a></p><p><a href=\"https://discord.gg/yPEP2vHTu4\" target=\"_blank\" rel=\"noopener noreferrer\">DISCORD</a></p><p>Scaling Reinforcement Learning (RL) has the potential to enhance model performance beyond conventional pretraining and post-training methods. Recent studies have demonstrated that RL can significantly improve the reasoning capabilities of models. For instance, DeepSeek R1 has achieved state-of-the-art performance by integrating cold-start data and multi-stage training, enabling deep thinking and complex reasoning.</p>\n<p>Our research explores the scalability of Reinforcement Learning (RL) and its impact on enhancing the intelligence of large language models. We are excited to introduce QwQ-32B, a model with 32 billion parameters that achieves performance comparable to DeepSeek-R1, which boasts 671 billion parameters (with 37 billion activated). This remarkable outcome underscores the effectiveness of RL when applied to robust foundation models pretrained on extensive world knowledge. Furthermore, we have integrated agent-related capabilities into the reasoning model, enabling it to think critically while utilizing tools and adapting its reasoning based on environmental feedback. These advancements not only demonstrate the transformative potential of RL but also pave the way for further innovations in the pursuit of artificial general intelligence.</p>\n<p>QwQ-32B is open-weight in <a href=\"https://huggingface.co/Qwen/QwQ-32B\" target=\"_blank\" rel=\"noopener noreferrer\">Hugging Face</a> and <a href=\"https://modelscope.cn/models/Qwen/QwQ-32B\" target=\"_blank\" rel=\"noopener noreferrer\">ModelScope</a> under the Apache 2.0 license and is accessible via <a href=\"https://chat.qwen.ai/?models=Qwen2.5-Plus\" target=\"_blank\" rel=\"noopener noreferrer\">Qwen Chat</a>.</p>\n<h2 id=\"section-performance\">Performance<a class=\"heading-anchor\" href=\"#section-performance\" aria-label=\"链接到本节：Performance\">#</a></h2>\n<p>QwQ-32B is evaluated across a range of benchmarks designed to assess its mathematical reasoning, coding proficiency, and general problem-solving capabilities. The results below highlight QwQ-32B's performance in comparison to other leading models, including DeepSeek-R1-Distilled-Qwen-32B, DeepSeek-R1-Distilled-Llama-70B, o1-mini, and the original DeepSeek-R1.</p>\n<figure><img src=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/qwq-32b-final.jpg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><h2 id=\"section-reinforcement-learning\">Reinforcement Learning<a class=\"heading-anchor\" href=\"#section-reinforcement-learning\" aria-label=\"链接到本节：Reinforcement Learning\">#</a></h2>\n<p>We began with a cold-start checkpoint and implemented a reinforcement learning (RL) scaling approach driven by outcome-based rewards. In the initial stage, we scale RL specifically for math and coding tasks. Rather than relying on traditional reward models, we utilized an accuracy verifier for math problems to ensure the correctness of final solutions and a code execution server to assess whether the generated codes successfully pass predefined test cases. As training episodes progress, performance in both domains shows continuous improvement. After the first stage, we add another stage of RL for general capabilities. It is trained with rewards from general reward model and some rule-based verifiers. We find that this stage of RL training with a small amount of steps can increase the performance of other general capabilities, such as instruction following, alignment with human preference, and agent performance, without significant performance drop in math and coding.</p>\n<h2 id=\"section-use-qwq-32b\">Use QwQ-32B<a class=\"heading-anchor\" href=\"#section-use-qwq-32b\" aria-label=\"链接到本节：Use QwQ-32B\">#</a></h2>\n<p>Below are brief examples demonstrating how to use QwQ-32B via Hugging Face Transformers and Alibaba Cloud DashScope API.}}&gt;}}</p>\n<h2 id=\"section-future-work\">Future Work<a class=\"heading-anchor\" href=\"#section-future-work\" aria-label=\"链接到本节：Future Work\">#</a></h2>\n<p>This marks Qwen's initial step in scaling Reinforcement Learning (RL) to enhance reasoning capabilities. Through this journey, we have not only witnessed the immense potential of scaled RL but also recognized the untapped possibilities within pretrained language models. As we work towards developing the next generation of Qwen, we are confident that combining stronger foundation models with RL powered by scaled computational resources will propel us closer to achieving Artificial General Intelligence (AGI). Additionally, we are actively exploring the integration of agents with RL to enable long-horizon reasoning, aiming to unlock greater intelligence with inference time scaling.</p>\n",
+    "headings": [
+      {
+        "id": "section-performance",
+        "level": 2,
+        "text": "Performance"
+      },
+      {
+        "id": "section-reinforcement-learning",
+        "level": 2,
+        "text": "Reinforcement Learning"
+      },
+      {
+        "id": "section-use-qwq-32b",
+        "level": 2,
+        "text": "Use QwQ-32B"
+      },
+      {
+        "id": "section-future-work",
+        "level": 2,
+        "text": "Future Work"
+      }
+    ],
+    "textLength": 3639,
+    "readingMinutes": 9,
+    "sourceId": "qwen-research",
+    "sourceUrl": "https://docs.qwenlm.ai/research/qwq-32b/index.json",
+    "ruleId": "qwen-publisher-tokens",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "17a82bee39f78d94784f728ae375cbf4b6f84a6f14756a7d64ded64911bedb9e",
+    "fetchedAt": "2026-11-02T06:38:22.691Z",
+    "checkedAt": "2026-11-02T06:38:22.691Z",
+    "nextRetryAt": "2026-12-02T06:38:22.691Z",
+    "warnings": []
+  }
+}

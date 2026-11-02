@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "4602eb23a6f547fec68e",
+    "status": "ready",
+    "html": "<p>作者：马云雷</p><p><br></p><blockquote><p>AgentLoop 数据飞轮实践系列&nbsp;· 第 5 篇 / 共 5 篇。</p><p>上一篇：<a href=\"https://mp.weixin.qq.com/s/f4S3sU7sZ6YW6r3sCTVlkA\" target=\"_blank\" rel=\"noopener noreferrer\">实验：回测与离线实验平台</a></p></blockquote><p><br></p><p>前四篇走通了“人类专家驱动”的调优闭环。这一篇是数据飞轮的最后一块、也是最自动化的一块：<strong>经验库</strong>——让 Agent 从自己的历史运行中自动沉淀经验，越跑越好。最后，我们用消融实验回答一个关键问题：经验注入到底有没有用、怎么用收益最大。</p><h2 id=\"section-经验库是什么\">经验库是什么<a class=\"heading-anchor\" href=\"#section-经验库是什么\" aria-label=\"链接到本节：经验库是什么\">#</a></h2><p>经验库的核心机制：<strong>算法自动从 Agent 的运行轨迹中挖掘成功模式和失败模式</strong>，沉淀成经验资产。</p><p><br></p><p>它建立在一个朴素的观察上：Agent 的每一次运行，都应该为后续的运行积累经验。同一个坑，第一次踩了可以原谅，第一百次还踩就是浪费。经验库做的事就是把“踩坑”和“走通”的历史变成可复用的知识：成功的模式告诉 Agent 该怎么做，失败的模式告诉 Agent 别怎么做。经验以上下文注入的方式进入 Agent 的运行过程，让 Agent 越跑越好。</p><p><br></p><p>经验库挖掘的是通用 Agent 领域的常见优化手段：各种工具调用的执行情况、延时、执行准确率、执行路径等通用场景。这些维度不依赖具体业务，任何 Agent 都在反复遇到。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_0733f73c1dbb4e8780b5569fd7b067e4.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 1：经验库机制：从运行轨迹自动挖掘经验，经 Skill 召回后注入 Agent 上下文</em></p><h2 id=\"section-开启经验库与自动挖掘\">开启经验库与自动挖掘<a class=\"heading-anchor\" href=\"#section-开启经验库与自动挖掘\" aria-label=\"链接到本节：开启经验库与自动挖掘\">#</a></h2><p>前提是数据接入已经完成（见<a href=\"https://mp.weixin.qq.com/s/lmZaSJpyTKdBeytRYeIeJg\" target=\"_blank\" rel=\"noopener noreferrer\">第 2 篇</a>）——没有轨迹数据，挖掘就是无米之炊。然后创建经验库：选择对应的应用、命名、设置<strong>挖掘起始时间</strong>——起始时间设得早一点，可以挖掘更多轨迹：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_c7cffff2ff534372af4ee89eb2dfefc2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 2：创建经验库：选择应用与挖掘起始时间</em></p><p>挖掘完成后可以看到结果。演示中挖出了 <strong>4 条经验</strong>，每条经验可以看到经验的内容、适用的场景，以及它来自哪条 Trace，全程可追溯——经验不是黑箱里蹦出来的结论，每一条都能回查它的出处，这在后面调优排障时非常重要：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_e4535aa87e244d05a218e435fc0a627c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 3：挖掘结果：4 条经验及经验内容</em></p><h2 id=\"section-agent-集成-一个-skill-完成召回\">Agent 集成：一个 Skill 完成召回<a class=\"heading-anchor\" href=\"#section-agent-集成-一个-skill-完成召回\" aria-label=\"链接到本节：Agent 集成：一个 Skill 完成召回\">#</a></h2><p>要让 Agent 用上经验，需要在 Agent 侧做集成。整体思路是：给 Agent 装一个经验召回的 Skill，Agent 运行到这个 Skill 时，自动从经验库里检索相关经验并注入上下文。步骤如下：</p><ol><li><strong>创建 API Key</strong>，用 API Key 的方式完成配置——这是 Agent 访问经验库的凭证；</li><li><strong>安装 Skill</strong>：<code>alibabacloud-agentloop-experience</code>，进入 Agent 的目录下执行安装命令：</li></ol><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_fe48a1f241bb42b4a1156e173bbb4722.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 4：安装 alibabacloud-agentloop-experience Skill</em></p><ol start=\"3\"><li>把经验库信息写进 env 配置，让 Skill 知道去哪个经验库检索；</li><li>让 Skill 生效还有两个权限条件：</li></ol><ul><li>Skill 要加入 Agent 的<strong>白名单</strong>；</li><li>经验召回需要调用一个 <strong>shell 命令</strong>，所以要打开 <strong>Shell 权限</strong>；新建会话时还要 <strong>allow shell</strong>，允许这个会话使用 shell 指令：</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ce1dea2745f64dd3abbbf1d30d701af4.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 5：打开 Shell 权限并 allow shell</em></p><p>权限这一步容易漏：白名单、Shell 权限、allow shell 三者缺一，召回就不会发生。</p><h3 id=\"section-召回验证\">召回验证<a class=\"heading-anchor\" href=\"#section-召回验证\" aria-label=\"链接到本节：召回验证\">#</a></h3><p>集成完成后，向 Agent 提问『AgentLoop 如何使用经验库』『当前经验列表里有哪些内容』，可以看到经验被成功召回：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_514e9b65b03f4fceb62eb15d561a4949.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 6：召回验证：向 Agent 提问并成功召回经验</em></p><p>注意召回是有判断的：与经验相关的问题会召回对应经验；没有类似经验时不会召回——这个“宁缺毋滥”的设计很关键，它防止无关甚至错误的经验误导 Agent。</p><h3 id=\"section-直观对比\">直观对比<a class=\"heading-anchor\" href=\"#section-直观对比\" aria-label=\"链接到本节：直观对比\">#</a></h3><p>换一个 Session ID 重新发起同一个请求，对比执行过程：这个请求之前要走&nbsp;12 步左右，注入经验之后步骤显著减少——经验让 Agent 绕过了试错环节：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_22eb0857f0bb41148a83046031422920.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 7：更换 Session ID 重新发起，对比执行步骤</em></p><h2 id=\"section-消融实验-找到最佳注入策略\">消融实验：找到最佳注入策略<a class=\"heading-anchor\" href=\"#section-消融实验-找到最佳注入策略\" aria-label=\"链接到本节：消融实验：找到最佳注入策略\">#</a></h2><p>看到步骤减少先别急着上线。通用优化手段之外，真实业务总有自定义需求——经验的注入方式（召回多少、放在哪、怎么呈现）会直接影响效果，甚至可能帮倒忙。为了<strong>严格保证经验注入之后是正向作用</strong>，真正部署前要做召回测试，找到最佳策略。演示中以<strong>无经验作为基线</strong>，做了一轮消融实验：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_7fa6ba2f62bb4b58b713f1c028589909.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 8：消融实验：召回阈值、注入条数等策略对比</em></p><p>要调的参数包括：</p><ul><li><strong>召回阈值设为多少：</strong> 阈值 1 表示最相似，0 表示最不相似。阈值太高会漏召回，太低会召回噪声。最终选&nbsp;0.6——一个“相对相似”的水位；</li><li><strong>注入几条经验：</strong> 只返回&nbsp;top1，只取最相似的一条。经验注入不是越多越好，多了会稀释注意力、挤占上下文；</li><li><strong>经验放在上下文的哪个位置：</strong> 实测下来的顺序是——用户的真实问题 → 业务经验的使用规则 → 最后是 top1 经验。位置影响模型对经验的采纳程度；</li><li><strong>经验瘦身：</strong> 经验内容只保留标题摘要、使用条件和关键结论，并限制字符个数——原始经验往往带着具体场景的冗余细节，瘦身后信噪比更高；</li><li><strong>防护护栏：</strong> 说明经验只是<strong>历史参考</strong>，防止经验产生负面影响。经验来自过去，不一定适用于当前，护栏给模型留了“不照办”的余地。</li></ul><p><br></p><p>每一个参数都是一次“注入经验 vs 不注入/换种注入”的对照——这正是消融实验的含义：逐个因素拆开验证，而不是笼统地说“加了经验会更好”。</p><h2 id=\"section-最终收益\">最终收益<a class=\"heading-anchor\" href=\"#section-最终收益\" aria-label=\"链接到本节：最终收益\">#</a></h2><p>经过消融实验选定的策略（并删掉各种实验无关信息和内部标识符之后），相比基线：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_818712c3df534db9b4e01e3b07752a0f.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 9：消融实验效果：耗时与成本对比基线显著下降</em></p><div><div class=\"markdown-table-wrap\"><table><thead><tr><td>指标</td><td>相比基线</td></tr></thead><tbody><tr><td>耗时</td><td>降低 30%~40%</td></tr><tr><td>成本</td><td>降低 20%~47%</td></tr><tr><td>Token 消耗</td><td>大幅下降</td></tr><tr><td>工具调用</td><td>大幅减少</td></tr></tbody></table></div></div><p>消融实验的价值有两层：它帮助我们<strong>找到最佳策略</strong>（阈值、条数、位置、瘦身、护栏的组合），并且<strong>证明经验注入在真实业务下有真实效果</strong>——不是理论可行，而是数字可查。演示里的数字属于演示场景，也建议每个使用者在自己的真实业务场景里做一遍召回率测试，找到属于自己的最佳策略。</p><h2 id=\"section-系列回顾-飞轮转起来了\">系列回顾：飞轮转起来了<a class=\"heading-anchor\" href=\"#section-系列回顾-飞轮转起来了\" aria-label=\"链接到本节：系列回顾：飞轮转起来了\">#</a></h2><p>五篇文章走完了数据飞轮完整的一圈：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_af879f7d10f5425ca8848bb3b72bc3ef.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 10：数据飞轮完整一圈：接入 → 观测/审计 →&nbsp;评估 → 数据集 → 实验回测 → 经验库 → 反哺 Agent</em></p><ul><li><strong>人类专家驱动模式</strong>（第 2~4 篇）：专家知识 → 黄金指标与 Rubric → 评估抓 badcase → 实验回测针对性调优；</li><li><strong>全自动化模式</strong>（本篇）：经验库自动挖掘 + Skill 自动召回，消融实验验证正向收益。</li></ul><p><br></p><p>回头看，这个飞轮的每个环节都在回答一个问题：接入回答“发生了什么”，观测回答“细节是什么”，评估回答“做得好不好”，实验回答“改动有没有用”，经验库回答“怎么自动变得更好”。五个问题首尾相接，Agent 的每一次运行都同时是服务的输出和下一轮优化的输入。</p><p><br></p><p>Agent 上线不是终点。把运行数据变成评估样本，把评估结论变成优化动作，把历史轨迹变成经验资产——飞轮每转一圈，Agent 都比上一圈更好。这就是 AgentLoop 数据飞轮实践的全部要义。</p>",
+    "headings": [
+      {
+        "id": "section-经验库是什么",
+        "level": 2,
+        "text": "经验库是什么"
+      },
+      {
+        "id": "section-开启经验库与自动挖掘",
+        "level": 2,
+        "text": "开启经验库与自动挖掘"
+      },
+      {
+        "id": "section-agent-集成-一个-skill-完成召回",
+        "level": 2,
+        "text": "Agent 集成：一个 Skill 完成召回"
+      },
+      {
+        "id": "section-召回验证",
+        "level": 3,
+        "text": "召回验证"
+      },
+      {
+        "id": "section-直观对比",
+        "level": 3,
+        "text": "直观对比"
+      },
+      {
+        "id": "section-消融实验-找到最佳注入策略",
+        "level": 2,
+        "text": "消融实验：找到最佳注入策略"
+      },
+      {
+        "id": "section-最终收益",
+        "level": 2,
+        "text": "最终收益"
+      },
+      {
+        "id": "section-系列回顾-飞轮转起来了",
+        "level": 2,
+        "text": "系列回顾：飞轮转起来了"
+      }
+    ],
+    "textLength": 2788,
+    "readingMinutes": 7,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1761385",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "f60a0cd80f9703ba55fb67ce7f1f3b26f881853f8b46740ff6e463cb00222adc",
+    "fetchedAt": "2026-11-02T07:09:07.383Z",
+    "checkedAt": "2026-11-02T07:09:07.383Z",
+    "nextRetryAt": "2026-12-02T07:09:07.383Z",
+    "warnings": []
+  }
+}

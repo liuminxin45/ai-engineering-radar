@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "ab57c0f3b1186bbbc43f",
+    "status": "ready",
+    "html": "<p>作者：刘军</p><p><br></p><p><strong>AgentScope 2.0 既是可深度定制的 Agent Framework，更是一套面向企业任务的通用 Agent Harness。</strong></p><p><strong><br></strong></p><p>我们在 AI 发展过程中一直引领智能体企业构建的行业实践，从 Spring AI Alibaba、AgentScope 1.0 到 AgentScope 2.0，几乎每款产品都在企业内得到了广泛的应用。同时，也不得不感慨 Agent 时代技术路线发展之快，最新的 AgentScope 2.0 已经全面升级为一套通用 Harness，我将从任务、信息、行动三个层面解析作为通用 Harness 的底层核心机制，并说明其“服务侧统一编排、沙箱内隔离执行”的架构如何支撑企业构建 Managed Agents 平台，实现 Harness 服务化。</p><h2 id=\"section-企业-agent-的构建方式与服务化趋势\">企业 Agent 的构建方式与服务化趋势<a class=\"heading-anchor\" href=\"#section-企业-agent-的构建方式与服务化趋势\" aria-label=\"链接到本节：企业 Agent 的构建方式与服务化趋势\">#</a></h2><p>企业对 Agent 的需求，正在从连接模型和工具，扩展到持续处理复杂任务，并向多个业务团队提供服务。围绕这些需求，形成了四类常见的构建入口：</p><p><br></p><ul><li><strong>高代码框架：</strong> 以代码定义和扩展 Agent 的行为、上下文与执行机制。</li><li><strong>产品化 Harness：</strong> 通过 CLI 或 SDK 复用成熟的任务规划、工作区和工具执行能力。</li><li><strong>Managed Agents 服务：</strong> 将约定范围内的 Harness 与运行基础交给平台承载。</li><li><strong>Agent 云平台：</strong> 利用预置资源和管理能力，完成 Agent 的创建、配置与发布。</li></ul><p><br></p><p>四类入口体现了不同的责任分工，也可以组合使用。企业选择时，需要考虑定制深度、数据与执行边界，以及运行维护能力；任务路径明确时采用确定性流程，需要动态探索时引入 Agent，审批等边界固定而局部判断复杂时则结合两者。</p><p><br></p><p>这些实践呈现出一个共同趋势：<strong>通用工作机制沉淀为可复用的 Harness，并进一步以服务形式交付。</strong> 业务团队聚焦领域知识、工具与结果验收，平台团队统一提供状态管理、隔离环境、权限和观测，减少重复建设。</p><p><br></p><p>AgentScope 同时提供框架的代码级控制能力和通用 Harness 的成熟工作机制，适合企业在复用基础能力的同时，掌握自己的业务逻辑与运行边界。其面向企业服务化的一项重要架构优势，是将统一编排与隔离执行解耦的 Tool-In-Sandbox 模式：Agent Loop、模型调用和上下文编排运行在服务侧，需要隔离的文件操作、命令和代码执行通过工具接口进入沙箱，执行结果再返回 Harness。企业由此可以集中维护和升级 Harness，按用户或会话配置执行环境，并分别扩展编排服务与沙箱资源，在复用同一套 Agent 能力的同时保留清晰的执行边界。</p><p><br></p><p>在这一架构之上，企业结合共享状态、任务调度、沙箱资源管理和身份体系，可以更快构建自己的 Managed Agents 平台，让业务应用通过 API 提交任务、接收进度、参与审批并取得产物，将 Harness 服务化落实到任务的完整生命周期。</p><h2 id=\"section-从-spring-ai-alibaba-到-agentscope-2-0\">从 Spring AI Alibaba 到 AgentScope 2.0<a class=\"heading-anchor\" href=\"#section-从-spring-ai-alibaba-到-agentscope-2-0\" aria-label=\"链接到本节：从 Spring AI Alibaba 到 AgentScope 2.0\">#</a></h2><h3 id=\"section-spring-ai-alibaba-让-java-应用连接模型与企业系统\">Spring AI Alibaba：让 Java 应用连接模型与企业系统<a class=\"heading-anchor\" href=\"#section-spring-ai-alibaba-让-java-应用连接模型与企业系统\" aria-label=\"链接到本节：Spring AI Alibaba：让 Java 应用连接模型与企业系统\">#</a></h3><p>Java 开发者最初遇到的问题，是如何把模型能力接入已有应用：统一不同模型的调用方式，将企业数据用于检索增强，把已有 API 暴露为模型可以使用的工具，并沿用熟悉的应用开发和运维方式。</p><p><br></p><p>Spring AI Alibaba 围绕这些需求展开，面向 Java 应用生态提供集成和能力增强，并进一步探索 Agent 与多 Agent 编排。这一阶段降低了 Java 开发者进入 AI 应用开发的门槛，也让模型能够真正连接企业的数据与服务。</p><p><br></p><blockquote>Spring AI Alibaba 官方定位说明：<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.3.17b56ffaJDvjdT&amp;enc=xCfAf8qxZ1Pl6nsRKQmVjA%3D%3D.L7ZN1eSjpL14eGkeH8%2Bd03ALpmSFnjphEYTNBjWfph14KZaF5NxKl5jT0TM%2BlVesqfW3YRBFFCnTYKdjNtqidA%3D%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://java2ai.com/en/blog/saa-agentscope-announcement/</a></blockquote><p><br></p><p>随着Agent应用需求及模型能力发展，关注点开始从“怎样调用模型”，转向“怎样组织模型与环境之间的持续交互”。</p><h3 id=\"section-agentscope-1-0-以-agent-为中心组织应用\">AgentScope 1.0：以 Agent 为中心组织应用<a class=\"heading-anchor\" href=\"#section-agentscope-1-0-以-agent-为中心组织应用\" aria-label=\"链接到本节：AgentScope 1.0：以 Agent 为中心组织应用\">#</a></h3><p>沿着这条技术探索路线，AgentScope 1.0 阶段进一步聚焦 Agent 本身：模型如何推理和行动，工具结果如何进入下一轮判断，多个 Agent 如何协同，开发者如何控制和扩展执行过程。</p><p><br></p><p>ReAct 循环提供了一个清晰的基础：模型根据当前信息决定下一步，调用工具获取新事实，再继续判断。开发者不必把所有可能的分支预先穷举出来，Agent 可以根据环境反馈调整路径。</p><p><br></p><p>但从这套基础抽象出发，每个团队仍然会遇到相似的工程工作：为长任务维护计划，为大结果设计存储，为历史消息做压缩，为子 Agent 限定上下文，为危险操作接入确认，为跨调用执行保存状态。</p><p><br></p><p>这些能力往往决定一个 Agent 能否从演示走向日常使用，却又需要在不同业务中反复建设。</p><h3 id=\"section-agentscope-2-0-把长程任务的工作方式交给-harness\">AgentScope 2.0：把长程任务的工作方式交给 Harness<a class=\"heading-anchor\" href=\"#section-agentscope-2-0-把长程任务的工作方式交给-harness\" aria-label=\"链接到本节：AgentScope 2.0：把长程任务的工作方式交给 Harness\">#</a></h3><p>AgentScope 2.0 将这些共性能力收敛到 HarnessAgent。开发者获得的不只是模型、消息、工具等组件，还包括这些组件围绕长程任务协同工作的方式。</p><p><br></p><p>例如，工具结果过大时，可以卸载到工作区；任务需要规划时，可以进入 Plan Mode；独立探索可以委派给子 Agent；历史增长时，可以压缩并重新组织模型输入；执行环境可以从本地文件系统切换到沙箱或远程存储。</p><p><br></p><p>这条路线可以概括为：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_03d27c76b44d46f3a998a0ae4ef5e854.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这里描述的是技术关注点的演进。Spring AI Alibaba 与 AgentScope 各自具有独立的产品定位；在 AgentScope 内部，Harness 能力也经历了逐步积累，并非到 2.0 才突然出现。2.0 的关键变化，是让通用 Harness 成为面向复杂任务的主要开发入口。</p><h2 id=\"section-为什么-harness-成为更重要的工程层\">为什么 Harness 成为更重要的工程层<a class=\"heading-anchor\" href=\"#section-为什么-harness-成为更重要的工程层\" aria-label=\"链接到本节：为什么 Harness 成为更重要的工程层\">#</a></h2><p>Framework 与 Harness 的差别，可以从它们交付给开发者的东西来理解。</p><p><br></p><p>Framework 提供模型、工具、消息、状态和扩展点等抽象，帮助开发者组织代码。Harness 在这些基础上，提供一组已经协同工作的机制：如何向模型提供信息，如何推进任务，如何调用工具，如何保存进度，如何让人参与执行。</p><p><br></p><p>Runtime 则承担执行基础，例如调度、状态持久化、恢复和事件传递。这三个概念存在交集，但它们回答的问题不同：Framework 关注如何构建，Runtime 关注如何运行，Harness 关注模型在任务过程中怎样有效工作。</p><p><br></p><p>Harness 更受重视，是因为 Agent 的失败越来越多地发生在连续工作的过程中。</p><p><br></p><p>一个模型可能准确理解了漏洞公告，却因为没有看见项目约束而升级了错误的依赖；可能写出了正确补丁，却在上下文压缩后忘记测试；也可能完成了检查，却把测试报告对应的旧代码当作当前版本。此时，仅仅提高一次回答的质量，无法解决整个任务链的问题。</p><p><br></p><p>企业也无法依靠模型能力来替代执行契约。模型再强，仍然需要系统提供实时业务事实、持久状态、真实凭证和执行环境。是否允许发布、一次写操作是否实际发生、验证结果对应哪个版本，都需要由模型之外的代码和系统来落实。</p><p><br></p><p>因此，Harness 的价值同时体现在两方面：减少模型在长程任务中的遗忘和偏移；把模型能力接入可控制、可检查的企业工作过程。随着模型升级，某些提示策略可以简化，状态、权限和环境这些工程责任仍然存在。</p><p><br></p><p>这并不要求所有应用都启用完整 Harness。一次结构化提取、短链路问答，或者路径已经确定的业务流程，仍然适合更轻量的调用和编排。HarnessAgent 主要解决的是路径需要动态发现、任务需要多步推进、信息会持续积累的工作。</p><h2 id=\"section-从-coding-agent-提炼通用工作机制\">从 Coding Agent 提炼通用工作机制<a class=\"heading-anchor\" href=\"#section-从-coding-agent-提炼通用工作机制\" aria-label=\"链接到本节：从 Coding Agent 提炼通用工作机制\">#</a></h2><p>Coding Agent 产品提供了一个很有价值的观察窗口：模型为什么能够在代码仓库中工作较长时间，并持续产生可检查的结果？</p><p><br></p><p>代码场景天然具备明确的工作对象。文件承载输入和产物，命令行提供行动入口，测试和运行结果提供反馈，版本记录帮助理解变化。计划、进度文件和上下文管理进一步支持跨阶段续行。公开的长程 Agent 研究也展示了这种方式：通过明确的任务清单、增量推进和交接材料，帮助后续执行理解此前的工作。</p><p><br></p><blockquote>长程 Agent 的 Harness 实践：<a href=\"https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents?spm=a2c6h.13046898.publish-article.6.17b56ffaJDvjdT\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents</a></blockquote><p><br></p><p>从企业应用的角度看，可以把这些机制推广到其他工作对象：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_7ff893c4ae3f41efbbea4e1739bcd95a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>AgentScope Java 要沉淀的，正是这些可迁移的工作机制。对于研发 Agent，工作区里可能是代码；对于研究 Agent，可能是来源材料和报告；对于数据分析 Agent，则可能是查询结果、分析脚本和数据质量证据。工作对象变化，任务推进、信息组织和行动反馈的基本结构仍然成立。</p><p><br></p><p>下面以一个企业任务贯穿这三个层面：<strong>分析某支付服务的高危依赖漏洞，完成修复和验证，形成可审批的变更材料。当前授权范围不包含生产发布。</strong></p><h2 id=\"section-第一层-任务如何持续推进\">第一层：任务如何持续推进<a class=\"heading-anchor\" href=\"#section-第一层-任务如何持续推进\" aria-label=\"链接到本节：第一层：任务如何持续推进\">#</a></h2><h3 id=\"section-稳定的-agent-loop-与可组合的工程能力\">稳定的 Agent Loop 与可组合的工程能力<a class=\"heading-anchor\" href=\"#section-稳定的-agent-loop-与可组合的工程能力\" aria-label=\"链接到本节：稳定的 Agent Loop 与可组合的工程能力\">#</a></h3><p>HarnessAgent 内部复用 ReActAgent，将工作区、计划、记忆、子 Agent 和执行环境等能力，通过 Middleware、工具及专门的模型请求准备边界组合到执行链中。</p><p><br></p><p>这样的结构保留了 Agent 循环的清晰性：读取当前信息，调用模型，执行工具，接收结果，再决定下一步。新的工程能力可以在明确的位置介入，例如在模型调用前装配任务视图，在工具执行时检查权限，在历史过长时触发压缩。</p><p><br></p><p>围绕具体业务接入验收后，一个任务的推进过程可以表示为下面的逻辑闭环。图中的业务验收与完成判定，需要由应用配置和实现：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_1df0fb03516b43fa85729b4ac7720c18.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>在漏洞修复案例中，新的依赖分析结果可能改变升级方案，测试失败可能产生修复项，用户追加约束可能缩小修改范围。持续推进依赖的是这些反馈不断进入下一轮，而不是要求模型在开始时就预测完整路径。</p><h3 id=\"section-让目标和进度成为显式状态\">让目标和进度成为显式状态<a class=\"heading-anchor\" href=\"#section-让目标和进度成为显式状态\" aria-label=\"链接到本节：让目标和进度成为显式状态\">#</a></h3><p>长任务不能只依赖聊天历史表达进度。几百条消息里可能同时出现旧计划、新要求、过期测试结果和已经取消的行动。模型每轮重新推断“现在到底做到哪里”，既浪费上下文，也容易产生歧义。</p><p><br></p><p>AgentScope 通过 AgentState 保存运行状态，通过 RuntimeContext 传递本次调用的用户、会话等信息。任务列表由 <code>todo_write</code> 更新，Plan Mode 状态也随 AgentState 保存。模型每次推理时，可以获得当前进度的投影。</p><p><br></p><p>任务状态还需要区分三件事：用户希望达到的目标、执行过程中维护的进度，以及支持结果成立的证据。当前任务状态设计进一步引入了候选要求与已确认要求的区别：模型可以提出需要遵守的约束或验收条件，应用负责确认其来源与授权。模型提出一条要求，不意味着它已经代表用户作出决定。</p><p><br></p><p>对应到漏洞修复任务，“修复并形成变更材料”是目标，“正在运行集成测试”是进度，“这份补丁通过了指定版本的测试”才是验证事实。这些信息应有各自明确的含义。</p><h3 id=\"section-plan-mode-把规划阶段变成可执行约束\">Plan Mode 把规划阶段变成可执行约束<a class=\"heading-anchor\" href=\"#section-plan-mode-把规划阶段变成可执行约束\" aria-label=\"链接到本节：Plan Mode 把规划阶段变成可执行约束\">#</a></h3><p>对于影响面较大的任务，先探索、再制定计划、确认后执行，是一种实用的工作方式。</p><p><br></p><p>AgentScope 提供 <code>plan_enter</code>、<code>plan_write</code> 和 <code>plan_exit</code>。进入 Plan Mode 后，一般修改工具会被阻止，只读工具以及计划、任务协作白名单中的工具仍可使用；计划可以写入 <code>plans/PLAN.md</code>，模型请求退出时进入人工确认流程。</p><p><br></p><p>这一设计的关键在于约束发生的位置。“先写计划”可以写在提示词里，但计划期间禁止一般写操作，需要由执行链落实。专用的 <code>plan_write</code> 允许产出计划，同时避免开放任意文件写入。</p><p><br></p><p>启用 Plan Mode 能力与实际进入该模式是两件事。如果业务要求任务必须从规划开始，应由应用显式进入，而不是仅依赖模型自行选择。</p><p><br></p><p>下面是应用中的配置片段，<code>model</code> 和 <code>workspace</code> 由调用方提供：</p><pre><code>HarnessAgent agent = HarnessAgent.builder()\n        .name(\"remediation-agent\")\n        .model(model)\n        .workspace(workspace)\n        .enablePlanMode()\n        .enableTaskList()\n        .planFileDirectory(\"plans\")\n        .build();\nRuntimeContext context = RuntimeContext.builder()\n        .userId(\"engineer-42\")\n        .sessionId(\"remediation-42\")\n        .build();\nagent.enterPlanMode(context);\nagent.call(\n        new UserMessage(\"分析支付服务的依赖漏洞，先提交修复计划；不要发布生产环境。\"),\n        context).block();</code></pre><p>计划批准解决的是阶段切换，生产发布仍应由独立的权限策略控制。子 Agent 的工具范围也需要显式配置，不能把父任务处于只读阶段等同于所有执行者自动只读。</p><h3 id=\"section-subagent-为独立子任务提供独立上下文\">Subagent 为独立子任务提供独立上下文<a class=\"heading-anchor\" href=\"#section-subagent-为独立子任务提供独立上下文\" aria-label=\"链接到本节：Subagent 为独立子任务提供独立上下文\">#</a></h3><p>复杂任务往往包含可以单独处理的部分。在漏洞修复中，可以委派一个子 Agent 调查依赖影响，另一个在补丁稳定后进行独立评审。</p><p><br></p><p>子 Agent 首先带来的是上下文隔离：依赖树、长日志和候选方案可以在子任务里展开，主 Agent 只接收需要整合的结论与证据引用。不同子任务还可以采用不同模型、工具和工作区配置；当任务互不依赖时，再利用并行减少等待时间。</p><p><br></p><p>AgentScope 支持通过工作区规格文件或 Java 配置声明子 Agent，使用 <code>agent_spawn</code> 发起任务，并支持同步和后台执行。后台任务具有可跟踪的任务标识，结果可以在后续推进中被消费。</p><p><br></p><p>委派需要清晰边界：交付什么、允许读写什么、依据哪个版本、如何报告失败。独立上下文并不自动等于独立权限，更不等于代码仓库已经具备分支级隔离。共享修改需要额外的工作区和冲突控制。</p><p><br></p><p>主 Agent 仍然负责整合结果。子 Agent 返回“没有问题”只是一项待采用的结论，应结合它实际检查的对象、范围和证据判断。</p><h3 id=\"section-让续行依赖状态-而不是依赖原连接\">让续行依赖状态，而不是依赖原连接<a class=\"heading-anchor\" href=\"#section-让续行依赖状态-而不是依赖原连接\" aria-label=\"链接到本节：让续行依赖状态，而不是依赖原连接\">#</a></h3><p>长任务可能跨越多次调用和多个上下文窗口。AgentScope 通过 AgentStateStore、工作区和会话记录保存继续工作所需的信息；配置共享存储与相应运行设施后，可以支持跨进程或跨节点接续。</p><p><br></p><p>这里要区分会话恢复和外部行动恢复。重新加载进度，并不能证明一个超时的变更单创建请求没有成功。业务工具仍需提供幂等键、状态查询和恢复策略，避免因为响应丢失而重复执行。</p><p><br></p><p>对于漏洞修复任务，继续点应能说明当前补丁在哪里、哪些检查已经完成、哪些结果仍然有效、是否等待确认，以及下一步是什么。这样，新一轮执行才有明确的起点。</p><h2 id=\"section-第二层-信息如何在有限窗口中有效组织\">第二层：信息如何在有限窗口中有效组织<a class=\"heading-anchor\" href=\"#section-第二层-信息如何在有限窗口中有效组织\" aria-label=\"链接到本节：第二层：信息如何在有限窗口中有效组织\">#</a></h2><p>任务越长，积累的信息越多，而模型每次只能处理一个有限窗口。Harness 必须持续决定：哪些信息此刻需要进入窗口，哪些应该保存在窗口之外，哪些值得跨任务复用。</p><h3 id=\"section-把上下文构建做成明确的管线\">把上下文构建做成明确的管线<a class=\"heading-anchor\" href=\"#section-把上下文构建做成明确的管线\" aria-label=\"链接到本节：把上下文构建做成明确的管线\">#</a></h3><p>一个任务的模型输入通常来自多个地方：Agent 指令、项目规则、用户要求、计划、近期交互、历史摘要、工具说明，以及相关知识和记忆。</p><p><br></p><p>这些来源具有不同的责任和可信度。项目规则可以指导工作，工具返回的网页则是待分析材料；历史经验可能有帮助，但不能覆盖当前环境事实。把它们全部拼成同一段提示词，会丢失这些区别。</p><p><br></p><p>AgentScope 当前的上下文构建实现通过 HarnessContextBuilder，在实际模型请求发出前集中处理材料、预算和布局。System 指令、对话、临时任务状态和参考资料具有明确的位置；工具调用及其结果需要保持配对；工具 Schema 也计入输入预算。</p><p><br></p><p>这让“模型看到什么”成为可以检查的工程行为。构建过程产生 Context Manifest，记录来源标识、内容版本、预算与变换信息，便于定位某项资料是否进入了请求、是否被压缩或移除。Manifest 本身不需要复制全部原文。</p><p><br></p><p>当前预算策略不等于一个已经能自动理解所有资料价值的相关性引擎。企业仍需要通过知识检索、工具筛选和业务规则提供合适的候选材料，并在读取阶段完成身份和数据权限控制。</p><h3 id=\"section-大结果卸载与历史压缩解决不同问题\">大结果卸载与历史压缩解决不同问题<a class=\"heading-anchor\" href=\"#section-大结果卸载与历史压缩解决不同问题\" aria-label=\"链接到本节：大结果卸载与历史压缩解决不同问题\">#</a></h3><p>假设一次安全扫描返回了数万行结果。下一轮 Agent 也许只需要知道剩余阻断项，以及如何找到它们。让完整报告随每轮请求重复发送，会持续占用窗口。</p><p><br></p><p>工具结果卸载将完整内容保存在外部文件中，在活动上下文里保留紧凑内容和读取引用。模型需要细节时，再通过搜索、范围读取或其他工具取得。这种方式尤其适合日志、依赖树、搜索结果和扫描报告。</p><p><br></p><p>历史压缩处理的是另一种增长：多轮探索累积了大量消息，其中不少过程已经可以用摘要表达。压缩需要保留任务目标、关键决定、尚未解决的问题和继续位置；近期精确交互则保留在活动窗口中。</p><p><br></p><p>两者应与结构化状态配合。Todo、权限模式和验证摘要等信息，可以从当前状态重新投影，不必完全依赖模型从旧对话里概括。当前上下文管线还会在最终预算及结构校验通过后，才提交候选历史替换，降低压缩失败对活动历史的影响。</p><p><br></p><p>评估这些机制，除了看节省多少 Token，更应检查压缩后能否继续任务、关键事实是否仍可取回、失败尝试是否被遗忘。窗口变短只有在任务仍然连贯时才有价值。</p><h3 id=\"section-workspace-承载窗口之外的工作过程\">Workspace 承载窗口之外的工作过程<a class=\"heading-anchor\" href=\"#section-workspace-承载窗口之外的工作过程\" aria-label=\"链接到本节：Workspace 承载窗口之外的工作过程\">#</a></h3><p>Workspace 是 Harness 的重要基础：Agent 可以把输入、计划、中间分析和最终产物放在一个可寻址、可检查的空间里，逐步读取和修改。</p><p><br></p><p>AgentScope 将工作区访问抽象为可插拔文件系统，可以连接本地目录、远程存储或沙箱。Agent 使用的是一致的文件操作方式，底层存储和执行位置则由部署配置决定。</p><p><br></p><p>在漏洞修复案例中，工作区可以组织为下面的示意结构。这里展示的是业务目录设计，并非框架强制生成的完整布局：</p><pre><code>workspace/\n├── AGENTS.md                 项目规则\n├── skills/                   修复和评审方法\n├── subagents/                子 Agent 规格\n├── plans/PLAN.md             当前计划\n├── inputs/                   漏洞公告与任务输入\n├── scratch/                  临时分析\n├── artifacts/                补丁与变更材料\n└── evidence/                 测试和扫描报告</code></pre><p>文件的作用在这里超出了存储。它们也是人和 Agent 共同检查工作的接口：计划是否合理、补丁改了什么、报告是否齐全，都可以直接查看。</p><p><br></p><p>但任务权威状态不能任意混入模型可改写的工作文件。框架管理的执行记录与验证记录应由相应状态存储承载；报告文件和路径则作为可引用的产物与证据。一个文件被写出来，与它已经通过验收，仍然是不同状态。</p><h3 id=\"section-memory-knowledge-和-skill-分别沉淀什么\">Memory、Knowledge 和 Skill 分别沉淀什么<a class=\"heading-anchor\" href=\"#section-memory-knowledge-和-skill-分别沉淀什么\" aria-label=\"链接到本节：Memory、Knowledge 和 Skill 分别沉淀什么\">#</a></h3><p>长程工作需要的信息，不只有当前任务文件。</p><p><br></p><p>Knowledge 提供企业维护的事实，例如依赖升级制度、系统架构和发布规范。Memory 保存值得在后续任务中再次使用的经验，例如某个模块的特殊兼容约束。Skill 则封装完成一类任务的方法，包括指令、脚本、模板和参考资料。</p><p><br></p><p>AgentScope 的记忆机制区分按日期追加的记忆流水与整理后的长期记忆，也支持在压缩前提取有价值的信息。这提供了经验积累的基础，但经验是否可信、属于哪个用户或项目、何时失效，仍需要明确的治理规则。一次未验证的推测，不应因为被写入记忆就升级为稳定事实。</p><p><br></p><p>Skill 进一步把可复用方法变成可以维护的能力包。以漏洞修复为例，Skill 可以说明如何读取公告、核对依赖链、生成方案、执行检查和整理交付材料，把重复且确定的步骤交给脚本，把需要理解和判断的部分留给模型。</p><p><br></p><p>为了控制上下文成本，Skill 采用按需加载的方式：先提供名称和描述，选中后加载具体指令，需要时再读取参考文件与脚本。AgentScope 通过 Skill Repository 接入工作区、Git 等不同来源，业务团队可以维护自己的方法集合。</p><p><br></p><p>三者的区别会影响更新方式：制度变化应更新 Knowledge，经过验证的项目经验可以进入 Memory，稳定的方法应沉淀为 Skill。Skill 的指令仍需服从当前工具权限，不能因为加载了一个能力包就获得额外授权。</p><h2 id=\"section-第三层-行动如何受控-并产生可信反馈\">第三层：行动如何受控，并产生可信反馈<a class=\"heading-anchor\" href=\"#section-第三层-行动如何受控-并产生可信反馈\" aria-label=\"链接到本节：第三层：行动如何受控，并产生可信反馈\">#</a></h2><p>前两个层面分别解决任务推进和信息组织。第三层要回答的是：模型提出行动之后，系统如何执行，以及执行结果怎样影响下一轮判断。</p><h3 id=\"section-工具调用是一项意图-执行需要额外契约\">工具调用是一项意图，执行需要额外契约<a class=\"heading-anchor\" href=\"#section-工具调用是一项意图-执行需要额外契约\" aria-label=\"链接到本节：工具调用是一项意图，执行需要额外契约\">#</a></h3><p>模型生成工具名称和参数时，只表达了它希望采取的动作。真正执行前，系统还需要完成参数校验、身份绑定、权限判断和必要的人工确认。</p><p><br></p><p>AgentScope 的权限机制支持 ALLOW、DENY 和 ASK：允许执行、拒绝执行，或者等待确认。与 Plan Mode 结合后，任务阶段也可以影响可执行动作。</p><p><br></p><p>这里需要分开理解工具注册、工具披露和执行授权。系统注册了某个工具，说明它知道怎样调用；向模型展示工具，说明模型可以考虑该能力；某次调用是否允许，则取决于执行时的策略。企业不能只靠工具描述中的一句“谨慎使用”来保护高影响操作。</p><p><br></p><p>在漏洞修复任务中，“创建待审批变更材料”和“发布生产环境”应设计为不同的业务动作。即使都连接同一个变更平台，它们的授权范围、输入要求和验收方式也不同。批准修复计划，不应直接扩大为发布授权。</p><h3 id=\"section-通用执行能力与业务工具协同\">通用执行能力与业务工具协同<a class=\"heading-anchor\" href=\"#section-通用执行能力与业务工具协同\" aria-label=\"链接到本节：通用执行能力与业务工具协同\">#</a></h3><p>文件、Shell 和代码执行让 Agent 可以处理大量未被预先封装的任务，例如分析日志、转换数据、运行测试。业务工具则提供更明确的语义，例如查询服务依赖、创建变更单、核对审批状态。</p><p><br></p><p>AgentScope 可以通过 MCP 等方式接入外部工具，也可以把具有独立执行过程的工作委派给远程 Agent。连接协议降低了集成成本，但业务权限与结果验收仍需在调用链中落实。</p><p><br></p><p>前文介绍的 Tool-In-Sandbox 模式，将这种编排与执行的分工落实到工具调用链中：服务侧的 Harness 发起工具调用，沙箱执行后返回结果与产物，Harness 再继续推理和推进任务。企业业务 API 等其他工具仍可通过各自的受控入口执行。平台可以分别管理 Harness 服务实例与沙箱的容量和生命周期，在配置共享状态、工作区恢复与并发控制后，为多用户、长程任务提供持续服务。</p><p><br></p><p>对通用执行能力，沙箱负责限制实际运行环境。Harness 的文件系统与沙箱适配使同一套 Agent 逻辑能够在不同环境中工作；生产部署还需要确定网络、挂载、凭证和资源配额。</p><p><br></p><p>例如，修复环境可以允许修改代码并运行测试，同时不注入生产集群凭证；发布动作只通过企业专门的工具入口发生。权限控制与环境隔离从不同层面落实同一条业务边界。</p><h3 id=\"section-从工具回执到可验证事实\">从工具回执到可验证事实<a class=\"heading-anchor\" href=\"#section-从工具回执到可验证事实\" aria-label=\"链接到本节：从工具回执到可验证事实\">#</a></h3><p>工具返回“成功”是最容易被高估的信号之一。HTTP 请求成功不一定代表业务对象进入了目标状态，Shell 退出码为零也不能证明执行了完整的测试集合。</p><p><br></p><p>AgentScope 当前的执行反馈实现将行动观察独立保存，关联工具调用与执行尝试，并保留生产者提供的结构化事实。例如 Shell 可以直接提供退出码和输出截断信息，避免从自然语言日志里猜测成功。</p><p><br></p><p>在此基础上，确定性校验可以读取调用方明确选定的行动记录，检查退出码或 JSON Schema 等条件，并将报告与任务要求、被检查对象的版本绑定。</p><p><br></p><p>版本绑定尤其重要。补丁 A 的测试结果只对相应版本有效；如果后续又修改为补丁 B，原来的通过结论不能继续被当作当前证据。当前版本维护需要应用显式接入对象变更与失效处理，不能只用没有反映未提交修改的 Git HEAD 代替真实工作区版本。</p><p><br></p><p>这条链路让完成判定有了更可靠的输入，但边界必须清楚：<strong>已有执行观察和局部确定性校验，不等于框架已经默认完成整个业务任务的自动验收。</strong> 当前实现中，检查对象、验收条件和校验器由调用方明确指定，统一的循环退出完成门禁仍需进一步建设。</p><p><br></p><p>对于本文案例，企业应用可以将验收定义为：受影响依赖已消除，要求的测试和安全扫描通过，补丁范围符合计划，变更材料齐全。满足这些条件，才能交付“可审批变更”；目标没有包含生产发布，就不应把未发布误判为任务未完成。</p><p><br></p><p>这种设计也适用于非代码场景。数据分析检查数据口径与结果一致性，报告检查来源覆盖和证据引用，业务工单检查权威系统中的实际状态。通用 Harness 提供执行与反馈机制，业务系统定义什么结果值得被接受。</p><h3 id=\"section-用事件与评估持续改进-harness\">用事件与评估持续改进 Harness<a class=\"heading-anchor\" href=\"#section-用事件与评估持续改进-harness\" aria-label=\"链接到本节：用事件与评估持续改进 Harness\">#</a></h3><p>长任务需要持续向用户反馈状态。AgentScope 的事件流可以呈现文本增量、工具调用、执行结果和相关自定义事件，再由服务或渠道适配成业务界面。用户看到任务正在等待确认，才能作出有效干预；看到产物和证据，才能检查交付质量。</p><p><br></p><p>对开发团队而言，这些事件还需要与模型调用、上下文构建、子任务和执行记录关联起来。一次失败究竟来自缺少信息、错误工具选择、环境异常，还是验收规则不足，应能沿着执行过程定位。</p><p><br></p><p>单次任务的 Verifier 与跨版本 Evaluation 具有不同目的。前者检查当前结果是否符合指定条件；后者比较模型、提示词、工具、Skill 或上下文策略改变后，整个 Agent 是否变得更好。</p><p><br></p><p>评估时，既要看最终产物，也要看过程和成本：是否遗漏目标，是否重复探索，压缩后是否偏离方向，是否出现不必要的审批，是否在错误版本上验证。不同版本还应使用可比较的环境、数据与预算。</p><p><br></p><p>这样的反馈才能指导有针对性的修改：缺失事实时调整检索与上下文，重复走弯路时改善任务状态与方法，工具误用时调整 Schema 和权限，错误宣告完成时加强验收。每次修改再进入回归，而不只是不断给提示词增加例外说明。</p><h2 id=\"section-面向企业任务的通用-harness\">面向企业任务的通用 Harness<a class=\"heading-anchor\" href=\"#section-面向企业任务的通用-harness\" aria-label=\"链接到本节：面向企业任务的通用 Harness\">#</a></h2><p>回到最初的漏洞修复任务，三个层面形成了一条连续的工作链：任务层保持目标、计划和协作关系；信息层提供当前需要的规则、事实与证据；行动层在授权环境中执行，并把真实结果送回任务过程。</p><p><br></p><p>同样的结构可以迁移到经营分析、研究报告、业务运营和客户服务。开发者需要定义领域事实、业务工具、可复用方法与验收条件，Harness 则承载这些能力持续工作的共性机制。</p><p><br></p><p>AgentScope 2.0 的架构为这种分工保留了开放性：可以直接使用 HarnessAgent，也可以通过 Middleware 和底层 ReActAgent 定制执行方式；可以采用不同模型、状态存储与运行环境，也可以把 Harness 嵌入现有企业服务。通用默认能力与底层可扩展性共同构成新的开发入口。</p><p><br></p><p>从 Spring AI Alibaba 到 AgentScope 1.0，再到 AgentScope 2.0 HarnessAgent，我们不断扩展 Java 开发者能够交给 Agent 的工作范围。今天，框架要帮助开发者管理的对象，已经延伸到一次任务的持续推进、信息积累、受控行动和结果交付。</p><p><br></p><p>这也是 AgentScope 作为通用 Harness 的新定位：让企业能够在自己的模型、数据、工具和运行环境之上，构建能够持续工作、接受干预，并以证据支撑交付的智能体。</p>",
+    "headings": [
+      {
+        "id": "section-企业-agent-的构建方式与服务化趋势",
+        "level": 2,
+        "text": "企业 Agent 的构建方式与服务化趋势"
+      },
+      {
+        "id": "section-从-spring-ai-alibaba-到-agentscope-2-0",
+        "level": 2,
+        "text": "从 Spring AI Alibaba 到 AgentScope 2.0"
+      },
+      {
+        "id": "section-spring-ai-alibaba-让-java-应用连接模型与企业系统",
+        "level": 3,
+        "text": "Spring AI Alibaba：让 Java 应用连接模型与企业系统"
+      },
+      {
+        "id": "section-agentscope-1-0-以-agent-为中心组织应用",
+        "level": 3,
+        "text": "AgentScope 1.0：以 Agent 为中心组织应用"
+      },
+      {
+        "id": "section-agentscope-2-0-把长程任务的工作方式交给-harness",
+        "level": 3,
+        "text": "AgentScope 2.0：把长程任务的工作方式交给 Harness"
+      },
+      {
+        "id": "section-为什么-harness-成为更重要的工程层",
+        "level": 2,
+        "text": "为什么 Harness 成为更重要的工程层"
+      },
+      {
+        "id": "section-从-coding-agent-提炼通用工作机制",
+        "level": 2,
+        "text": "从 Coding Agent 提炼通用工作机制"
+      },
+      {
+        "id": "section-第一层-任务如何持续推进",
+        "level": 2,
+        "text": "第一层：任务如何持续推进"
+      },
+      {
+        "id": "section-稳定的-agent-loop-与可组合的工程能力",
+        "level": 3,
+        "text": "稳定的 Agent Loop 与可组合的工程能力"
+      },
+      {
+        "id": "section-让目标和进度成为显式状态",
+        "level": 3,
+        "text": "让目标和进度成为显式状态"
+      },
+      {
+        "id": "section-plan-mode-把规划阶段变成可执行约束",
+        "level": 3,
+        "text": "Plan Mode 把规划阶段变成可执行约束"
+      },
+      {
+        "id": "section-subagent-为独立子任务提供独立上下文",
+        "level": 3,
+        "text": "Subagent 为独立子任务提供独立上下文"
+      },
+      {
+        "id": "section-让续行依赖状态-而不是依赖原连接",
+        "level": 3,
+        "text": "让续行依赖状态，而不是依赖原连接"
+      },
+      {
+        "id": "section-第二层-信息如何在有限窗口中有效组织",
+        "level": 2,
+        "text": "第二层：信息如何在有限窗口中有效组织"
+      },
+      {
+        "id": "section-把上下文构建做成明确的管线",
+        "level": 3,
+        "text": "把上下文构建做成明确的管线"
+      },
+      {
+        "id": "section-大结果卸载与历史压缩解决不同问题",
+        "level": 3,
+        "text": "大结果卸载与历史压缩解决不同问题"
+      },
+      {
+        "id": "section-workspace-承载窗口之外的工作过程",
+        "level": 3,
+        "text": "Workspace 承载窗口之外的工作过程"
+      },
+      {
+        "id": "section-memory-knowledge-和-skill-分别沉淀什么",
+        "level": 3,
+        "text": "Memory、Knowledge 和 Skill 分别沉淀什么"
+      },
+      {
+        "id": "section-第三层-行动如何受控-并产生可信反馈",
+        "level": 2,
+        "text": "第三层：行动如何受控，并产生可信反馈"
+      },
+      {
+        "id": "section-工具调用是一项意图-执行需要额外契约",
+        "level": 3,
+        "text": "工具调用是一项意图，执行需要额外契约"
+      },
+      {
+        "id": "section-通用执行能力与业务工具协同",
+        "level": 3,
+        "text": "通用执行能力与业务工具协同"
+      },
+      {
+        "id": "section-从工具回执到可验证事实",
+        "level": 3,
+        "text": "从工具回执到可验证事实"
+      },
+      {
+        "id": "section-用事件与评估持续改进-harness",
+        "level": 3,
+        "text": "用事件与评估持续改进 Harness"
+      },
+      {
+        "id": "section-面向企业任务的通用-harness",
+        "level": 2,
+        "text": "面向企业任务的通用 Harness"
+      }
+    ],
+    "textLength": 11109,
+    "readingMinutes": 25,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1768655",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "4679888e9dae80ee4de24583cecf622c7c9dff648fb454efa5e3b438eb46d1ad",
+    "fetchedAt": "2026-11-02T07:08:50.053Z",
+    "checkedAt": "2026-11-02T07:08:50.053Z",
+    "nextRetryAt": "2026-12-02T07:08:50.054Z",
+    "warnings": []
+  }
+}

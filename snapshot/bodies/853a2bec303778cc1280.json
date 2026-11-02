@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "853a2bec303778cc1280",
+    "status": "ready",
+    "html": "<h2 id=\"section-本月可观测热文回顾\">本月可观测热文回顾<a class=\"heading-anchor\" href=\"#section-本月可观测热文回顾\" aria-label=\"链接到本节：本月可观测热文回顾\">#</a></h2><p><strong>文章一览：</strong></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.19.50c76ffa3qjNre&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247586344&amp;idx=1&amp;sn=cbccb4cd543e021f8a709185f35b8064&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>从业务告警追到数据库根因：STAROps 与瑶池 Agent 提升跨层诊断精度</span></a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.20.50c76ffa3qjNre&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247586247&amp;idx=1&amp;sn=cb94e324883485e159c6d3b4b14dca97&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>零代码改造：让 AI Agent Sandbox 不再是黑盒</span></a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.21.50c76ffa3qjNre&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247586093&amp;idx=1&amp;sn=b000a1e511267c903d379f59b09451be&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>GPU 利用率低却难定位根因？试试这款零侵入 AI Profiling 工具</span></a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.22.50c76ffa3qjNre&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247585984&amp;idx=1&amp;sn=29e6b463e4b1ec063588d1eae38829a1&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>迈向生产级 AgenticOps：STAROps 如何构建可泛化的根因定位能力</span></a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.23.50c76ffa3qjNre&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247585902&amp;idx=1&amp;sn=ea5b81830714b8991bf73af6890a3b1b&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>STAROps 云拨测智能分析实践：从任务分析到 APM 跨域定界</span></a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.24.50c76ffa3qjNre&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247585796&amp;idx=1&amp;sn=3f5f8e6e4f906cd337e92ba2347cc801&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>阿里云联合 Datadog，补齐 Go 可观测性最后短板</span></a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.25.50c76ffa3qjNre&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247585778&amp;idx=1&amp;sn=166a016b41c3112ba9f5058820d43b7d&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>一张告警卡片到一键 RCA：塔斯汀万店连锁的智能运维闭环实践</span></a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.26.50c76ffa3qjNre&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247585673&amp;idx=1&amp;sn=c51236152e560cadf0ab29c419614a16&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>Flutter RUM 监控实践：还原 AI 应用一次等待的完整现场</span></a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.27.50c76ffa3qjNre&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247585537&amp;idx=1&amp;sn=8186fb67b6fd282a4b339b1cd1973312&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>从“自己造轮子”到“OpenAPI 嵌进来”：精臣全栈上云后的智能运维底座之选</span></a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.28.50c76ffa3qjNre&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247585482&amp;idx=1&amp;sn=20751e12ec52ac358ea7a9acaa442d0d&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>STAROps 主机智能巡检：给你的 ECS 请个 24 小时在线的 AI 医生</span></a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.29.50c76ffa3qjNre&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247585483&amp;idx=1&amp;sn=9445e72938d65eb046ad4057362e9f69&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\"><span>从“看得见”到“自己治”：畅捷通可观测与智能运维实践</span></a></span></p><h2 id=\"section-功能快报\">功能快报<a class=\"heading-anchor\" href=\"#section-功能快报\" aria-label=\"链接到本节：功能快报\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_8f510b6da5df4f5aa4d972d9ef5d470e.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>点击<a href=\"https://www.aliyun.com/product/arms?spm=a2c6h.13046898.publish-article.30.50c76ffa3qjNre&amp;utm_content=g_1000408142\" target=\"_blank\" rel=\"noopener noreferrer\">此处</a>，了解更多产品详情。</p>",
+    "headings": [
+      {
+        "id": "section-本月可观测热文回顾",
+        "level": 2,
+        "text": "本月可观测热文回顾"
+      },
+      {
+        "id": "section-功能快报",
+        "level": 2,
+        "text": "功能快报"
+      }
+    ],
+    "textLength": 410,
+    "readingMinutes": 1,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1761367",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "f666c12490d3e5bb4bfed9821c253fec257202f4bba8545f58f63e5e40d9327a",
+    "fetchedAt": "2026-11-02T07:09:03.387Z",
+    "checkedAt": "2026-11-02T07:09:03.387Z",
+    "nextRetryAt": "2026-12-02T07:09:03.387Z",
+    "warnings": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "7f995d1c7011c6c63203",
+    "status": "ready",
+    "html": "<p>作者：马云雷</p><p><br></p><blockquote><p>AgentLoop 数据飞轮实践系列&nbsp;·&nbsp;第 2 篇&nbsp;/ 共 5 篇：</p><p>上一篇：<a href=\"https://mp.weixin.qq.com/s/q53_zsgspgaxKgc7YRz_dQ\" target=\"_blank\" rel=\"noopener noreferrer\">总览 —— 让 Agent 持续调优的闭环</a>/ 下一篇：评估 —— 从黄金指标到 Rubric</p></blockquote><p><br></p><p>数据接入是数据飞轮的起点：没有高质量的运行数据，观测、评估、实验都无从谈起。但“把数据接上来”这件事本身并不简单——Agent 不像传统微服务只有一种调用形态，它可能是开箱即用的通用 Agent，可能是基于框架研发的，可能是高代码自研的，甚至可能完全不想改一行代码。</p><p><br></p><p>这一篇讲清楚两件事：智能体观测与优化平台 AgentLoop&nbsp;的数据接入能力是怎么设计的（为什么四种形态的 Agent 都能接），以及如何亲手把一个基于 Claude Code 的 Agent 接入平台。</p><h2 id=\"section-技术底座-otel-协议-探针\">技术底座：OTel 协议+探针<a class=\"heading-anchor\" href=\"#section-技术底座-otel-协议-探针\" aria-label=\"链接到本节：技术底座：OTel 协议+探针\">#</a></h2><p>AgentLoop 的数据接入构建在&nbsp;OTel（OpenTelemetry）标准协议之上，以探针的形式工作：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_30f9aa8dca484df08f90228e0aef2f40.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 1：基于 OTel 标准协议的探针接入</em></p><p>探针会把 Agent 里各个<strong>调模型的地方、调工具的地方</strong>都以 Trace ID 的形式串联起来，并且把上下文的依赖关系完整串联，形成一张&nbsp;Trace 拓扑图：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_80160c83e63b4b93a02ddc4f66b13358.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 2：Trace 拓扑：探针以 Trace ID 串联模型调用与工具调用，还原完整执行轨迹（示意图，依据演示描述绘制）</em></p><p>在此基础上，再基于拓扑图组装出 Agent 完整的<strong>思考和执行轨迹</strong>。</p><p><br></p><p>选择 OTel + 探针不是偶然：OTel 是可观测性领域的事实标准，意味着接入不锁定、数据可互通；而探针是打磨了十多年的数据采集技术，能在不侵入业务逻辑的前提下把程序里各个角落的数据串联起来——这是整个接入能力的核心竞争力。选标准协议做底座，本质上是在保证：今天接进来的数据，未来任何基于 OTel 的生态都能消费。</p><h2 id=\"section-四种接入方式\">四种接入方式<a class=\"heading-anchor\" href=\"#section-四种接入方式\" aria-label=\"链接到本节：四种接入方式\">#</a></h2><p>Agent 的形态千差万别，一套接入方式不可能通吃。针对不同形态的 Agent，AgentLoop 提供四种接入方式：</p><h3 id=\"section-1-通用-agent-一键对接\">1. 通用 Agent：一键对接<a class=\"heading-anchor\" href=\"#section-1-通用-agent-一键对接\" aria-label=\"链接到本节：1. 通用 Agent：一键对接\">#</a></h3><p>针对常见的通用 Agent，AgentLoop 做了<strong>专业化的埋点</strong>，可以直接一键对接。如果你用的就是这类开箱即用的通用 Agent，不需要任何开发工作，直接采用这种方式即可。</p><h3 id=\"section-2-agent-框架-sdk-集成\">2. Agent 框架：SDK 集成<a class=\"heading-anchor\" href=\"#section-2-agent-框架-sdk-集成\" aria-label=\"链接到本节：2. Agent 框架：SDK 集成\">#</a></h3><p>如果 Agent 是基于 AgentScope 这类 Agent 框架研发的，直接通过集成方式就能快速完成数据的对接和上报：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_3d45dbd968104dcea178d7738d2ccc42.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 3：基于 AgentScope 框架的 Agent 通过集成方式接入</em></p><p>框架集成的好处是埋点跟着框架走：框架知道模型调用、工具调用发生在哪，SDK 在这些关键位置自动完成采集，开发者几乎无感。</p><h3 id=\"section-3-自定义高代码-注解埋点\">3. 自定义高代码：注解埋点<a class=\"heading-anchor\" href=\"#section-3-自定义高代码-注解埋点\" aria-label=\"链接到本节：3. 自定义高代码：注解埋点\">#</a></h3><p>高代码场景（包括用 AI-coding 方式自研的 Agent）可以引用 AgentLoop 的依赖包，在程序里需要埋点的地方用注解的方式采集数据，上报到云端：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_3be2e0b692dc42e793f5af78c883c3e5.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 4：自定义高代码接入：依赖包 + 注解方式采集</em></p><p>这种方式把埋点位置的控制权交还给开发者：哪段逻辑需要观测，就在哪里加注解。值得一提的是，现在采用 AI-coding 方式开发的话，加几行埋点代码的成本非常低，高代码接入实际上也很简单。</p><h3 id=\"section-4-ebpf-无侵入\">4. eBPF：无侵入<a class=\"heading-anchor\" href=\"#section-4-ebpf-无侵入\" aria-label=\"链接到本节：4. eBPF：无侵入\">#</a></h3><p>如果完全不想改代码，可以用&nbsp;eBPF&nbsp;方案——通过内核级的监控，无需修改任何代码即可对接。它能够观测到 Agent 与模型网关之间的交互、执行工具过程中的指令，同时覆盖模型调用和 Agent 执行的观测：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_9b6539b9fa46483187140cb239f5ce3f.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 5：eBPF 无侵入接入：内核级监控</em></p><p>eBPF 工作在内核层，采集对应用完全透明——适合存量系统、无法改动的闭源组件，或者就是想先看看数据再决定怎么埋点的场景。</p><p><br></p><p>小结：探针方式覆盖通用 Agent、Agent 框架、自定义高代码三类场景；eBPF 作为无侵入兜底。四种方式不是互斥的选择题，而是按你的 Agent 形态和改造意愿选择成本最低的一条路。</p><h2 id=\"section-两个关键概念-service-name-与-license-key\">两个关键概念：Service Name 与 License Key<a class=\"heading-anchor\" href=\"#section-两个关键概念-service-name-与-license-key\" aria-label=\"链接到本节：两个关键概念：Service Name 与 License Key\">#</a></h2><p>接入时有两个必填概念。所有数据都在同一个 AgentSpace（workspace）之下，那么怎么区分数据从哪个应用来、是谁上报的？答案就是这两个字段：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_254480bff410456396d6c55bf4ccab4a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 6：Service Name 区分应用，License Key 用于鉴权</em></p><ul><li>Service Name：同一个 AgentSpace 下，用 Service Name 区分不同的应用、区分来源是哪一种 Agent。可以为不同的 Agent 取不同的名字。它是数据的“归属标识”——后续观测、评估按 Service Name 圈定范围；</li><li>License Key：用于数据鉴权——上报数据时需要 License Key 做身份标识和鉴权。它是数据的“通行证”，没有它数据报不上来。</li></ul><h2 id=\"section-实操-接入-claude-code-构建的客服-agent\">实操：接入 Claude Code 构建的客服 Agent<a class=\"heading-anchor\" href=\"#section-实操-接入-claude-code-构建的客服-agent\" aria-label=\"链接到本节：实操：接入 Claude Code 构建的客服 Agent\">#</a></h2><p>概念讲完，动手。演示用的客服 Agent 是 AgentLoop 自身的一个 Agent，基于 <strong>Claude Code / Claude Agent SDK</strong> 构建。这种 Agent 有两种接入方式：</p><p><br></p><p><strong>1. 探针方式</strong>接入；</p><p><strong>2. Claude Code webhook</strong> 方式——从 Claude Code 支持的 webhook 把数据发出来。</p><p>本次演示采用更原生的 webhook 方案，配合&nbsp;LoongSuite Pilot&nbsp;完成接入。</p><h3 id=\"section-步骤-1-获取-license-key-执行安装命令\">步骤 1：获取 License Key，执行安装命令<a class=\"heading-anchor\" href=\"#section-步骤-1-获取-license-key-执行安装命令\" aria-label=\"链接到本节：步骤 1：获取 License Key，执行安装命令\">#</a></h3><p>先在控制台获取 License Key，然后执行安装命令：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_525af722cbd7477c81b9b487ee1e35fb.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 7：在机器上执行安装命令，部署 LoongSuite Pilot</em></p><p>安装命令会在机器上先装一个依赖，再部署采集组件。整个过程只需要这一条命令。</p><h3 id=\"section-步骤-2-理解采集工作机制\">步骤 2：理解采集工作机制<a class=\"heading-anchor\" href=\"#section-步骤-2-理解采集工作机制\" aria-label=\"链接到本节：步骤 2：理解采集工作机制\">#</a></h3><p>整个采集机制是：安装一个&nbsp;LoongSuite Pilot——它是一个旁路进程；Claude Code 的配置里加了一些 webhook，会把相关信息发送到 Pilot 进程，再由 Pilot 上报到云端：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ae299c0711c34e1d9018adf3fae0741b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 8：采集链路：Claude Code 经 webhook 发送到 LoongSuite Pilot 旁路进程，再上报云端（示意图）</em></p><p>“旁路”是这个设计的关键词：Pilot 不在 Agent 的执行路径上，采集的开销和故障都不会影响 Agent 本身——数据发不出去时，Agent 照常工作。</p><h3 id=\"section-步骤-3-拷贝配置并重启-agent\">步骤 3：拷贝配置并重启 Agent<a class=\"heading-anchor\" href=\"#section-步骤-3-拷贝配置并重启-agent\" aria-label=\"链接到本节：步骤 3：拷贝配置并重启 Agent\">#</a></h3><p>安装完成后，hooks 已经配置在&nbsp;settings.json&nbsp;里：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_bc146e908b0c4e83ae26ebeb479b5c8a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 9：settings.json 里已安装好 hooks</em></p><p><strong>注意：</strong> 这是 Claude Code 默认的配置文件，安装时会默认装到默认目录。我们需要把它<strong>拷贝到自己 Agent 的安装目录</strong>下面，然后<strong>重启 Agent</strong>，让 hooks 生效。这一步容易踩坑——忘了拷贝或忘了重启，数据就不会上报。</p><h3 id=\"section-步骤-4-测试并到观测页验证\">步骤 4：测试并到观测页验证<a class=\"heading-anchor\" href=\"#section-步骤-4-测试并到观测页验证\" aria-label=\"链接到本节：步骤 4：测试并到观测页验证\">#</a></h3><p>重启后做一次测试，Agent 正常响应。接着到观测页面确认数据是否上报：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_4f41db162935458ca357088a6220bf2d.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 10：观测页已能看到上报的数据</em></p><p>数据已经上报上来了。点开链路明细，可以看到完整的执行链路，包括<strong>大模型的处理</strong>步骤：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_40684dfedf3e4c8a9f26a95c5187de52.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>图 11：链路明细中可见大模型处理步骤</em></p><p>能看到大模型处理这一步，说明探针把模型调用也串进来了——不只是工具调用。至此，数据接入流程全部完成：从执行一条安装命令，到观测页看到完整链路，前后不到十分钟。接入打通之后，飞轮就有了持续的数据供给，下一篇进入“Agent 跑得怎么样”。</p><h2 id=\"section-小结\">小结<a class=\"heading-anchor\" href=\"#section-小结\" aria-label=\"链接到本节：小结\">#</a></h2><div><div class=\"markdown-table-wrap\"><table><thead><tr><td>要点</td><td>说明</td></tr></thead><tbody><tr><td>协议底座</td><td>OTel 标准协议 + 探针，Trace ID 串联全链路</td></tr><tr><td>四种方式</td><td>通用 Agent 一键对接 / Agent 框架集成 / 高代码注解 / eBPF 无侵入</td></tr><tr><td>两个概念</td><td>Service Name（区分应用）、License Key（鉴权）</td></tr><tr><td>Claude Code 实操</td><td>webhook + LoongSuite Pilot 旁路进程，拷贝 settings、重启生效</td></tr><tr><td>验证方式</td><td>观测页查看上报数据与链路明细</td></tr></tbody></table></div></div><p><strong><br></strong></p><p><strong>下一篇预告：</strong> 数据进来之后，下一步是回答“Agent 跑得怎么样”。我们将定义客服场景的黄金指标，让 AI 帮忙拆解成 Rubric，创建评估器并跑通第一个评估任务。</p>",
+    "headings": [
+      {
+        "id": "section-技术底座-otel-协议-探针",
+        "level": 2,
+        "text": "技术底座：OTel 协议+探针"
+      },
+      {
+        "id": "section-四种接入方式",
+        "level": 2,
+        "text": "四种接入方式"
+      },
+      {
+        "id": "section-1-通用-agent-一键对接",
+        "level": 3,
+        "text": "1. 通用 Agent：一键对接"
+      },
+      {
+        "id": "section-2-agent-框架-sdk-集成",
+        "level": 3,
+        "text": "2. Agent 框架：SDK 集成"
+      },
+      {
+        "id": "section-3-自定义高代码-注解埋点",
+        "level": 3,
+        "text": "3. 自定义高代码：注解埋点"
+      },
+      {
+        "id": "section-4-ebpf-无侵入",
+        "level": 3,
+        "text": "4. eBPF：无侵入"
+      },
+      {
+        "id": "section-两个关键概念-service-name-与-license-key",
+        "level": 2,
+        "text": "两个关键概念：Service Name 与 License Key"
+      },
+      {
+        "id": "section-实操-接入-claude-code-构建的客服-agent",
+        "level": 2,
+        "text": "实操：接入 Claude Code 构建的客服 Agent"
+      },
+      {
+        "id": "section-步骤-1-获取-license-key-执行安装命令",
+        "level": 3,
+        "text": "步骤 1：获取 License Key，执行安装命令"
+      },
+      {
+        "id": "section-步骤-2-理解采集工作机制",
+        "level": 3,
+        "text": "步骤 2：理解采集工作机制"
+      },
+      {
+        "id": "section-步骤-3-拷贝配置并重启-agent",
+        "level": 3,
+        "text": "步骤 3：拷贝配置并重启 Agent"
+      },
+      {
+        "id": "section-步骤-4-测试并到观测页验证",
+        "level": 3,
+        "text": "步骤 4：测试并到观测页验证"
+      },
+      {
+        "id": "section-小结",
+        "level": 2,
+        "text": "小结"
+      }
+    ],
+    "textLength": 3309,
+    "readingMinutes": 8,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1761364",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "344edbc07dd6598f236c9f56b9cd45a951d2bb401feb38e628a9f299eb40481a",
+    "fetchedAt": "2026-11-02T07:09:04.765Z",
+    "checkedAt": "2026-11-02T07:09:04.765Z",
+    "nextRetryAt": "2026-12-02T07:09:04.765Z",
+    "warnings": []
+  }
+}

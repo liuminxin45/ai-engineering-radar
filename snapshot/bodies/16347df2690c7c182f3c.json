@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "16347df2690c7c182f3c",
+    "status": "ready",
+    "html": "<p>云栖大会 Agentic 技术主论坛，阿里云发布 Alibaba Cloud AI Agent Handbook，旨在呈现 Agent 的前沿思考和落地实践，为企业选型、内部立项和创造价值提供参考。</p><p>开源地址：<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.3.20ba6ffaasZNBT&amp;enc=QsTXXQviHzo7h%2FzI13Ze7A%3D%3D.ljKzeu%2BtU%2FjXwQ55z6ze09d%2FB5gzN4hRvO9kDn19kr51py5HfjwYjPWmrSd%2F96Le\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/aliyun/ai-agent-handbook</a></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_61db00393fa144d8829f98de8cd9a71c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-为什么要撰写这本-handbook\">为什么要撰写这本 Handbook？<a class=\"heading-anchor\" href=\"#section-为什么要撰写这本-handbook\" aria-label=\"链接到本节：为什么要撰写这本 Handbook？\">#</a></h2><p>去年 9 月，我们发布了<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.4.20ba6ffaasZNBT&amp;enc=zky9JRxvVsVuj3LJ%2FP%2BkGQ%3D%3D.Ylm%2BgU%2FjDvOCn1OqBRc9OW8afjgbQVwThV9ACRF6Tn9SWTyxMNyhd9wYCqqSamWltrEt9QgZJDtHT%2BnnSOtkulbgDZG7Vq%2Bvxa2gNvDHPHttfh49VFY7oPb638sjj%2B6EPQOj0luhM74bk6C594ZoJVVRVeJmR4HUtCw256XRkyZgASU%2BDA0iE9qDJK9qOIgZ\" target=\"_blank\" rel=\"noopener noreferrer\">《AI 原生应用架构白皮书》</a>，围绕 AI 原生应用的 DevOps 全生命周期，从架构设计、技术选型、工程实践到运维优化，对概念和重难点进行体系化的拆解，并尝试提供一些解题思路。但随着模型和智能体技术的快速发展，我们发现，市场的关注度已经从快速构建智能体，转向以下三大新挑战：</p><p><br></p><ul><li><strong>工程化挑战：</strong> 从概率智能到可靠生产力，Agent 能够承担关键任务。</li><li><strong>规模化挑战：</strong> 稳定、安全、性能、成本，从单点试验到智能基础设施，Agent 能够被大规模部署。</li><li><strong>组织化挑战：</strong> 从 Agent 孤岛到智能组织，Agent 能够进入核心业务流程。</li></ul><p><br></p><p>去年的那本白皮书，显然难以应对这些新的诉求。</p><p><br></p><p>因此，我们重新梳理了白皮书的架构，希望通过更与时俱进的内容，更高的实践篇幅占比，以及更社区化的协作，为企业选型和内部立项提供参考，并计划长期维护该白皮书，持续呈现 AI 原生应用架构的前沿思考和落地实践。</p><h2 id=\"section-handbook-主要讲什么\">Handbook 主要讲什么？<a class=\"heading-anchor\" href=\"#section-handbook-主要讲什么\" aria-label=\"链接到本节：Handbook 主要讲什么？\">#</a></h2><p>Handbook 白皮书依旧围绕智能体应用的全生命周期展开，依次为架构-构建-运行-治理-调优。</p><h3 id=\"section-架构篇-第-1-2-章\">架构篇（第 1–2 章）<a class=\"heading-anchor\" href=\"#section-架构篇-第-1-2-章\" aria-label=\"链接到本节：架构篇（第 1–2 章）\">#</a></h3><p>Agent 不是一上来就动手构建，而是要先从业务场景、目标和需求出发，做好架构的设计与选型。</p><p><br></p><p>过去一年，AI 原生应用的构建起点发生了位移。模型不再只是被应用调用的生成引擎，而是能够维持任务状态、分解目标、调用工具并根据执行反馈调整行为的执行主体。Codex、Claude Code、Qoder 等 Coding Agent 率先在软件研发中验证了这种形态：它们不只给出代码建议，还读取代码仓库、维护任务计划、修改文件、运行终端与测试，并在长时间任务中持续接受人的引导。</p><p><br></p><p>模型获得更大的任务自主权，并不意味着模型本身即构成 Agent。任务越长、工具越多、环境影响越大，模型之外的工程系统就越关键。上下文组织、任务状态、工具控制、环境隔离、失败恢复、结果评估与风险约束共同构成 Harness，Agent 由 Model 与 Harness 共同构成。这一判断改变了架构对象：企业需要设计的不再是一次模型调用，而是一个跨越认知、状态、执行、控制与持续改进的完整系统。</p><p><br></p><p>架构篇处理生命周期五阶段中的第一个阶段。它给出判断与边界：采用什么应用形态、授予多大自主权、哪些能力自建、哪些由共享平台提供、什么结果构成完成。这些边界若推迟到构建阶段再确定，后续运行、治理与调优将出现混乱。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_8bb87f3437ae45fb84347dda8e6a9355.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-构建篇-第-3-6-章\">构建篇（第 3–6 章）<a class=\"heading-anchor\" href=\"#section-构建篇-第-3-6-章\" aria-label=\"链接到本节：构建篇（第 3–6 章）\">#</a></h3><p>Agent 构建的核心工作有两项：决定 Harness 由谁实现，以及把模型的离散判断组织为可持续推进、可中断恢复、可验证结束的任务过程。</p><p><br></p><p>Coding Agent 为这项工作提供了一个可观察的工程样本。在代码、文件与测试构成的环境中，模型可以通过工具持续行动，系统也可以用编译、测试和文件差异验证结果。它说明模型能力只有经过上下文组织、任务循环、状态管理、工具执行、权限控制与结果验证，才可能稳定转化为任务结果。但编码场景不能替代全部企业任务：审批、交易、客服与运营具有不同的业务状态、权限边界与成功标准，企业应复用其中可泛化的 Harness 机制，而非照搬一套 Coding Agent 流程。</p><p><br></p><p>这里的构建不是一次性开发活动，被构建出的编排逻辑会在每次任务运行时持续工作，其质量直接决定运行篇要承载什么、治理篇要观测什么、调优篇能改什么。同时，本篇只描述并绑定可用能力，物理执行、状态落盘与环境隔离由运行篇承担，这条边界贯穿四章。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_2375864360a7464fb7f5483dc814cdb9.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-运行篇-第-7-12-章\">运行篇（第 7–12 章）<a class=\"heading-anchor\" href=\"#section-运行篇-第-7-12-章\" aria-label=\"链接到本节：运行篇（第 7–12 章）\">#</a></h3><p>Agent 构建完，提供对外服务的时候，需要从稳定性、安全、性能、成本等角度去设计运行环境。</p><p><br></p><p>一个在开发环境里跑通的 Agent，与一个对外提供规模化服务的 Agent，要回答的问题并不相同。前者只需在一次会话内把逻辑走通；后者要回答它在什么环境里执行、状态存在哪里、流量怎么进出、任务跨越请求与进程之后如何持久化、多个 Agent 同时工作时如何协调与通信。</p><p><br></p><p>这些问题在开发阶段同样存在，区别在于规模掩盖了它们的代价：状态没有外置，单人调试时只是重来一次，生产并发下会变成任务丢失、重复执行与无法归因；一个人可访问的 Agent，与面向成千上万用户提供服务的 Agent，业务需求与工程复杂度完全不是一个量级。运行篇处理的正是企业运行环境和用户规模带来的复杂度，它在稳定性、安全、性能与成本四个维度上同时决定系统能否可靠运行。</p><p><br></p><p>运行篇的六章沿两条主线展开。第一条主线是运行的地基，解决 Agent 如何稳定运行；第二条主线是运行的秩序，解决多个 Agent 如何协同运行。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_4fb118509faa4e0eaa4fabaa12e0eae3.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-治理篇-第-13-16-章\">治理篇（第 13–16 章）<a class=\"heading-anchor\" href=\"#section-治理篇-第-13-16-章\" aria-label=\"链接到本节：治理篇（第 13–16 章）\">#</a></h3><p>Agent&nbsp;实际执行了什么，我们看不看得见；它会不会越过授权边界，或者被外部内容操纵；它依赖的 Prompt、Skill、MCP、Agent 散落在各处，有没有统一管理；它的行为在上线之前，能不能先验证一遍。治理篇让 Agent 的运行实现可观测、行为有边界、依赖的资产可管理、上线前的行为可验证，让一个自主运行的系统变得可信。</p><p><br></p><p>治理不是给运行额外附加约束的环节，而是让一个已经在运行的系统变得可信：可观测、有边界、资产可管理、行为可验证。治理沉淀的观测指标、审计证据、资产记录与验证结论，同时构成调优篇判断问题所依赖的可信事实。缺少这一层，改进只能依靠推测。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_fae69b4bb2d14976afa377a1ab83f85d.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-调优篇-第-17-24-章\">调优篇（第 17–24 章）<a class=\"heading-anchor\" href=\"#section-调优篇-第-17-24-章\" aria-label=\"链接到本节：调优篇（第 17–24 章）\">#</a></h3><p>调优篇负责把运行与治理的证据转化为能力提升。它直接决定前四个责任域的投入能否持续转化为生产收益，也因此是智能体工程中持续投入最集中的环节之一。</p><p><br></p><p>本篇的组织方式由归因决定。真实系统中的缺口可能在模型权重里，也可能在 Agent 如何被组织、被供给信息与被约束执行上，两者需要不同的方法。因此本篇以两条面向优化对象的主线展开，并补充一章相对独立的专题。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_598922d6f4144730aed31497c6279949.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-实践篇-第-25-29-章\">实践篇（第 25–29 章）<a class=\"heading-anchor\" href=\"#section-实践篇-第-25-29-章\" aria-label=\"链接到本节：实践篇（第 25–29 章）\">#</a></h3><p>覆盖研发效能、设计工程、运维安全与企业 IT、客服销售与运营等领域，同时我们把世界人工智能开源大赛中的优秀作品也纳入进来，既有企业实践，也有来自开发者的前沿探索。</p><p><br></p><p>其中，研发效能共计 7 个案例，覆盖了阿里云在<strong>代码审查、代码缺陷修复、研发协作</strong>等多个领域，同时包含了将 Agent 产品化过程中的一些思考。设计工程共计计 2 个案例，全面介绍了阿里云在 <strong>Vibe Designing、GenUI 方面</strong>的思考和实践。运维安全与企业 IT 共计 3 个案例，介绍了畅捷通、吉利汽车、塔斯汀在大规模生产业务在智能运维方面的实践。客服销售与运营共计 3 个案例，介绍了 MiniMax 和 B 站构建上下文和记忆的实践，会计师事务所信永中和办公提效方面的探索，以及阿里云在智能问数领域的实践。</p><p><br></p><p>此外，2026 年 GOAI 世界人工智能开源大赛 Agent Infra 新智基座赛道提供了 9 个作品，涉及<strong>能源电力、金融、建筑工程设计、零售连锁、数字内容（游戏 / XR / 电商）、企业运营与组织治理、财务与渠道佣金结算、软件工程与交付、IT 运维与故障恢复、网络安全运营、数据工程</strong>，多达 11 个领域，提供了更加垂直化的实践样本。</p><h3 id=\"section-总结与展望篇-第-30-章\">总结与展望篇（第 30 章）<a class=\"heading-anchor\" href=\"#section-总结与展望篇-第-30-章\" aria-label=\"链接到本节：总结与展望篇（第 30 章）\">#</a></h3><p>当同一家企业同时运行多个 Agent、使用多种框架、服务多个租户时，前面每一篇提出的工程要求都会在每个应用里被重复实现一次，且实现方式互不一致。这类重复不是某个应用的实现缺陷，而是缺少一个位于应用之下、被所有 Agent 共享的层。</p><p><br></p><p>第 30 章阐述的是哪些能力应该从应用层下沉到系统层，以及下沉之后可能长成什么形态。我们把这一形态称为 Agentic OS，同时明确它现在还不是一个已经存在的产品类别，也不必然对应一个新的内核；它更接近一组正在成形的系统职责。</p><h2 id=\"section-如何让今天建设的-agent-不被明天的技术变化推倒重来\">如何让今天建设的 Agent，不被明天的技术变化推倒重来？<a class=\"heading-anchor\" href=\"#section-如何让今天建设的-agent-不被明天的技术变化推倒重来\" aria-label=\"链接到本节：如何让今天建设的 Agent，不被明天的技术变化推倒重来？\">#</a></h2><p>过去一两年，Agent 开发的变化速度，可能超过了很多团队的预期。不少团队都有类似经历：一开始自己写 Agent Loop，后来接入 LangChain、LangGraph 等框架，再后来又开始关注模型公司提供的 Agent SDK 和 Harness Runtime。每一次模型能力升级，似乎都伴随一次架构调整。</p><p><br></p><p>以前需要业务团队自己实现的 Planner、Memory、Router、重试和状态管理，正在逐渐变成模型或平台的通用能力。于是，一个现实问题摆在面前：如果模型、Harness 还会继续变化，今天投入建设的 Agent，哪些部分能够真正留下来？</p><p><br></p><p>Handbook 提出了 Agent 的建设“智能面积”：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_35974b49b1054bc5bad7f582eeccf511.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>横轴代表通用智能，包括 Memory、Planner、Managed Runtime、Agent 协作等能力。这些能力是模型公司和云平台持续投入的方向，企业应该跟进，并尽量复用，避免重复制造已经逐渐成为基础设施的技术或产品，同时采用开放策略。这条轴上的能力，未必适合作为企业长期资产。</p><p><br></p><p>纵轴代表业务深度，包括企业持续产生的业务事实，业务对象之间的关系，企业内部统一的业务语义，具体流程和规则，行业知识与业务经验。这些内容不会因为模型和云平台升级替企业完成，仍然需要企业在业务侧沉淀。</p><p><br></p><p>模型公司沿着通用智能的方向不断向前，企业沿着业务深度的方向持续向上，获得的智能面积越大，企业生产力的 ROI 越高。</p><p><br></p><p>Skills 与工作流、知识与记忆、工具契约、评测集与质量基线，这些都是企业的 AI 资产，通过不断的构建、优化和沉淀，模型越强，Agent 基于这些资产的推理和行动，才更可靠。</p><h2 id=\"section-ai-如此强大的当下-白皮书还有价值么\">AI 如此强大的当下，白皮书还有价值么<a class=\"heading-anchor\" href=\"#section-ai-如此强大的当下-白皮书还有价值么\" aria-label=\"链接到本节：AI 如此强大的当下，白皮书还有价值么\">#</a></h2><p>去年发布<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.5.20ba6ffaasZNBT&amp;enc=PxjivPVOemo4Z9J29BZNXQ%3D%3D.j4BTe0KYYpRRSq%2FKeBRTd6kmUxrJcdu5Dr9LFhzvGRP%2BASv0PEGHFS%2FxnVWayN32HGh3Yz7DKQ5xtuUkDQzaAmmiIfEhBTunhka5h5wK1yI9hSgvmjRa9JMKAyJjrPnpcuUs8ykD1Ps%2FUQBGsDPMker7rNKcZ%2FCQpNGakns5jDr2FtcVAJKyyJxXZxlv9aev\" target=\"_blank\" rel=\"noopener noreferrer\">《AI 原生应用架构白皮书》</a>后，我们收到了大量企业的积极反馈，认为这是非常体系化的科普读物，有利于组织内对齐概念，也是 AI 项目立项的重要参考资料。但是这一年，AI 在加速发展，能力之强大、应用范围之广，已经远超去年。很多开发者可能会问，现在 AI 分分钟能写 10 本质量不错的白皮书出来，你们还有必要再去写一本白皮书吗？</p><p><br></p><p>是的，这也是我们集结众多一线研发工程师前，扪心自问过的问题。文字生产成本虽然下降了，但并没有让写作失去价值，稀缺的东西不会消失，只会转移。</p><p><br></p><ul><li><strong>比如自洽的概念和语言：</strong> Harness、Runtime、Agent、Workflow 这些词，不同人、不同视角，讲的可能并不完全是一件事。AI 会放大这种混乱，我们希望通过白皮书建立一套自洽的概念和叙事框架，让不同团队之间能够在同一个上下文里讨论问题、做决策。这件事虽然没有什么技术含量，但需要有实践经验的团队统筹各个领域的一线工程师，有意识地去梳理，和做取舍。</li><li><strong>比如判断：</strong> 模型很擅长把已经存在的信息重新组织成通顺的表达，但它提供的，往往是一个看起来很合理的平均值。例如以什么样的叙事结构来讲 Agent Handbook 才能引起读者的共鸣，这是需要作者自行判断的。</li><li><strong>比如经验：</strong> 模型的语料，本质上是已公开文本的再混合。某个系统在真实生产环境里到底发生过什么，什么地方反复出问题，这些来自一线工程师的一手经验，已经内化成工程师们的技艺，AI 很难替代，尤其是涉及多方依赖的软件系统，运用到严肃场景、需要长期维护、规模化使用的场景。</li><li><strong>比如教训：</strong> 内容越是丰富，什么不该做就比什么可以做更稀缺。真实的失败模式是从实际生产环境人为提炼出来，不是语言模型顺着上下文续写出来的。我们希望能把这些教训显式地写下来，哪怕它们看上去不那么光鲜，帮读者节省试错成本。</li></ul><p><br></p><p>Agent&nbsp;变化太快，这本书里的体系、判断、经验、教训，也许在不久的时间里就会被修正甚至推翻。我们期望白皮书不是一本写完就封存的文档，而是让白皮书保持持久的生命力，这也是我们以开源方式撰写白皮书的初衷。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_955ff13dd9d646e1bd4afcbc8531b3a4.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>在发布 Handbook 之外，云栖大会公布了阿里已加入 Agentic AI Foundation（AAIF）、成为 Gold Member。Handbook 聚焦 Agent 工程实践的沉淀，基金会参与则面向开放标准与开源生态协作，阿里云将持续参与 Agentic AI 相关标准建设，与全球开发者和产业伙伴共享规模化落地经验。</p>",
+    "headings": [
+      {
+        "id": "section-为什么要撰写这本-handbook",
+        "level": 2,
+        "text": "为什么要撰写这本 Handbook？"
+      },
+      {
+        "id": "section-handbook-主要讲什么",
+        "level": 2,
+        "text": "Handbook 主要讲什么？"
+      },
+      {
+        "id": "section-架构篇-第-1-2-章",
+        "level": 3,
+        "text": "架构篇（第 1–2 章）"
+      },
+      {
+        "id": "section-构建篇-第-3-6-章",
+        "level": 3,
+        "text": "构建篇（第 3–6 章）"
+      },
+      {
+        "id": "section-运行篇-第-7-12-章",
+        "level": 3,
+        "text": "运行篇（第 7–12 章）"
+      },
+      {
+        "id": "section-治理篇-第-13-16-章",
+        "level": 3,
+        "text": "治理篇（第 13–16 章）"
+      },
+      {
+        "id": "section-调优篇-第-17-24-章",
+        "level": 3,
+        "text": "调优篇（第 17–24 章）"
+      },
+      {
+        "id": "section-实践篇-第-25-29-章",
+        "level": 3,
+        "text": "实践篇（第 25–29 章）"
+      },
+      {
+        "id": "section-总结与展望篇-第-30-章",
+        "level": 3,
+        "text": "总结与展望篇（第 30 章）"
+      },
+      {
+        "id": "section-如何让今天建设的-agent-不被明天的技术变化推倒重来",
+        "level": 2,
+        "text": "如何让今天建设的 Agent，不被明天的技术变化推倒重来？"
+      },
+      {
+        "id": "section-ai-如此强大的当下-白皮书还有价值么",
+        "level": 2,
+        "text": "AI 如此强大的当下，白皮书还有价值么"
+      }
+    ],
+    "textLength": 5072,
+    "readingMinutes": 12,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1774447",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "0665faaf65d6496c78ab2a9a4555b9da81272c214e0e911e9a6b2cad9b52830d",
+    "fetchedAt": "2026-11-02T07:08:45.369Z",
+    "checkedAt": "2026-11-02T07:08:45.369Z",
+    "nextRetryAt": "2026-12-02T07:08:45.370Z",
+    "warnings": []
+  }
+}

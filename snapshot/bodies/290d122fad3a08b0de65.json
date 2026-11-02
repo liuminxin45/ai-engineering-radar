@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "290d122fad3a08b0de65",
+    "status": "ready",
+    "html": "<p>作者：默研</p><p><br></p><p><span><span><span><span>一份工作项能否支撑研发协作，不取决于文字有多长，而取决于目标、范围、规则和验收标准是否清晰。云效工作项智能优化通过「智能澄清需求」与「智能优化内容」两项能力，先识别并确认缺失信息，再将已有事实组织成可评审、可开工、可验收的工作项。</span></span></span></span></p><hr><h2 id=\"section-一句话需求-往往把成本留给后续协作\">一句话需求，往往把成本留给后续协作<br><a class=\"heading-anchor\" href=\"#section-一句话需求-往往把成本留给后续协作\" aria-label=\"链接到本节：一句话需求，往往把成本留给后续协作\">#</a></h2><p><span><span><span>评审会上经常出现这样的工作项：标题看起来很明确，描述却只有一句“支持优惠券叠加，具体以实际为准”。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>创建时少写几句话，看似节省了时间，后续却需要产品、开发和测试反复追问：哪些优惠券可以叠加？计算顺序是什么？发生冲突或退款时如何处理？什么状态才算验收通过？原本用于判断方案和风险的评审会，最终变成了需求补录会。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>工作项既承接需求，也是开发、测试和交付共同依赖的上下文。内容不完整带来的问题，并不会随着工作项进入流程而消失，而是会转化为后续的沟通、返工与决策成本。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>云效结合全域智能运维平台 STAROps，持续推进研发全流程的智能化升级。在工作项协同场景中，云效 AI 助手提供「智能澄清需求」和「智能优化内容」两个入口，分别处理信息缺失与信息组织问题。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_cc470cdb8d3644828ba2ed46534632eb.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span><span>工作项内容较少时，可以先澄清需求；信息基本完整时，可以直接优化内容。</span></span></span></p><hr><h2 id=\"section-先判断-需要优化表达-还是补齐事实\">先判断：需要优化表达，还是补齐事实<br><a class=\"heading-anchor\" href=\"#section-先判断-需要优化表达-还是补齐事实\" aria-label=\"链接到本节：先判断：需要优化表达，还是补齐事实\">#</a></h2><p><span><span><span>工作项写不清，并不总是表达问题。有时必要信息已经存在，只是结构松散；有时关键业务规则本身尚未确定。两种情况需要不同的处理方式。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_920d03b9d8ef48bba615c7409d278123.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span><span>如果评论中已经讨论过相关内容，云效 AI 助手会优先将其转化为确认问题，避免从头重复询问。完成确认的结论会继续进入内容优化流程；暂时无法确定的信息则保留为「待确认」，不会被补写成看似完整、实际未经确认的答案。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>在实际使用中，用户不需要预先作出精确判断。云效 AI 助手会先分析现有上下文，说明哪些内容已经明确、哪些维度仍然缺失，再进入相应处理流程。</span></span></span></p><hr><h2 id=\"section-需求澄清-先识别信息缺口-再逐项确认\">需求澄清：先识别信息缺口，再逐项确认<br><a class=\"heading-anchor\" href=\"#section-需求澄清-先识别信息缺口-再逐项确认\" aria-label=\"链接到本节：需求澄清：先识别信息缺口，再逐项确认\">#</a></h2><p><span><span><span>仍以优惠券叠加需求为例。原描述只有“支持优惠券叠加，具体以实际为准”，评论和关联项也没有提供额外信息。面对这样的输入，可靠的处理方式不是直接生成一份完整需求，而是先确认哪些关键信息尚未具备。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>云效 AI 助手会从用户与场景、触发入口、核心规则、异常与降级、验收标准、非功能要求和范围外等维度进行诊断，定位缺失或模糊的信息。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>为避免一次抛出过多问题，需求澄清会按主题分轮进行。每轮聚焦少量关键决策，并尽量提供清晰选项；如果现有选项不符合实际情况，用户也可以补充自己的答案。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_d8778e4995234ecc9972dcd33488d298.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span><strong>先确认最关键的核心规则，再继续处理计算方式、异常场景和适用范围。</strong></span></span></p><p><span><span><strong><br></strong></span></span></p><p><span><span><span>完成多轮问答后，云效 AI 助手会汇总已经确认的核心规则、异常与降级方式和验收标准。用户可以在写回前检查结论，确保其准确反映真实业务意图。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>至此，问题从“不知道还缺什么”，转变为“如何将确认结果组织进工作项”。接下来，内容优化会承接这些结论，将其整理为团队可以直接阅读和执行的内容。</span></span></span></p><hr><h2 id=\"section-内容优化-把确认结论变成可执行内容\">内容优化：把确认结论变成可执行内容<br><a class=\"heading-anchor\" href=\"#section-内容优化-把确认结论变成可执行内容\" aria-label=\"链接到本节：内容优化：把确认结论变成可执行内容\">#</a></h2><p><span><span><span>内容优化并不是将原描述简单扩写得更长，而是把分散信息组织为可供不同角色理解和执行的共同上下文。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>以下页面将逐步完善后的工作项内容与需求澄清结论并列展示，既方便用户核对业务规则，也能确认每项内容的来源。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_4bbb712211634758a8eea18be9e84994.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span><span>澄清结论进入内容优化后，被整理为结构清晰的工作项描述。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>以优惠券叠加需求为例，</span></span></span><span><span><strong>优化前</strong></span></span><span><span><span>只有“支持优惠券叠加，具体以实际为准”，团队无法据此判断具体范围。</span></span></span><span><span><strong>优化后</strong></span></span><span><span><strong>，</strong><span>叠加范围、计算方式、金额兜底、适用范围、异常处理和验收标准分别进入对应位置，原本隐藏在沟通中的规则转化为清晰的工作项内容。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>同一份工作项对不同角色承担不同作用：评审者需要快速判断目标、范围和风险；开发者需要明确核心规则与异常处理；测试人员需要据此设计用例，并判断结果是否符合预期。经过澄清和优化后，工作项才能成为跨角色协作的共同依据。</span></span></span></p><hr><h2 id=\"section-不同工作项-需要不同的优化重点\">不同工作项，需要不同的优化重点<br><a class=\"heading-anchor\" href=\"#section-不同工作项-需要不同的优化重点\" aria-label=\"链接到本节：不同工作项，需要不同的优化重点\">#</a></h2><p><span><span><span>需求、任务和缺陷承载的信息不同，不适合套用同一套内容结构。云效 AI 助手会根据工作项类型调整整理重点：</span></span></span></p><ul><li><span><span><strong>需求</strong></span></span><span><span><strong>：</strong><span>重点梳理背景与目标、核心功能、影响范围和验收标准。</span></span></span><br></li><li><span><span><strong>任务</strong></span></span><span><span><strong>：</strong><span>重点明确执行步骤、完成定义、前置依赖和交付物。</span></span></span><br></li><li><span><span><strong>缺陷</strong></span></span><span><span><strong>：</strong><span>重点整理复现环境、复现步骤、期望与实际行为以及修复验证。</span></span></span><br></li></ul><p><span><span><span><br></span></span></span></p><p><span><span><span>项目管理员可以在「项目设置 &gt; AI 工具配置」中维护工作项优化提示词，既可以设置所有类型通用的规则，也可以针对需求、任务和缺陷分别配置。执行优化时，云效 AI 助手会优先采用当前工作项类型对应的规则，使关注重点贴合团队实际。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>除优化提示词外，团队还可以按照具体工作项类型配置描述模板。内容优化会沿用模板中的章节结构，将已有信息和确认结论填入对应位置，而不是用默认格式覆盖团队原有习惯；项目未配置相关规则或模板时，再使用系统默认方式。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b41cd8f062ef41a2ac71861a99bca411.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span><span>项目管理员可以在「AI 工具配置」中维护智能规则，并在对应的工作项类型设置中维护描述模板。</span></span></span></p><hr><h2 id=\"section-优化结果写回前-始终由用户确认\">优化结果写回前，始终由用户确认<span><em><span><br></span></em></span><a class=\"heading-anchor\" href=\"#section-优化结果写回前-始终由用户确认\" aria-label=\"链接到本节：优化结果写回前，始终由用户确认\">#</a></h2><p><span><span><span>工作项内容会直接影响后续评审、开发和验收，因此，智能优化不仅要提升内容质量，也要明确事实边界和写回边界。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><strong>云效 AI 助手只整理原工作项中的已有信息和用户确认过的结论，不会自行补充业务规则；未经用户确认，也不会覆盖原内容。</strong></span></span></p><p><span><span><strong><br></strong></span></span></p><p><span><span><span>优化过程中，仍然缺失的信息会明确保留为「待确认」，提醒团队后续继续补充。原描述中的截图和日志图片也会被完整保留，并在预览前、写回前检查图片地址和数量，避免改写后丢失关键上下文。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>生成完成后，云效 AI 助手会展示本次采用的优化规则、主要改动，以及标题和描述的前后对比。用户可以分别接受优化结果、保留原内容或进行自定义修改。只有确认后，内容才会写回工作项；写回后，系统还会重新读取并验证结果。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>整个过程一次只处理一条工作项。通过逐条处理、结果预览和用户确认，确保智能优化不会在未经审阅的情况下改变原始需求。</span></span></span></p><hr><h2 id=\"section-写在最后\">写在最后<a class=\"heading-anchor\" href=\"#section-写在最后\" aria-label=\"链接到本节：写在最后\">#</a></h2><p><span><span><span>需求澄清和内容优化解决的是两个相邻但不同的问题：前者负责识别并确认缺失信息，后者负责组织已有事实和确认结论。二者衔接起来，才能避免一边追求文档完整，一边把未经确认的推断写成业务事实。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>下一次再遇到“具体以实际为准”的一句话需求，无须等到评审会上才开始追问。信息尚未确定时，可以先澄清业务规则、异常场景和适用范围；信息已经齐全时，则可以直接优化标题、内容结构和验收表达。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>工作项中的目标、范围、业务规则和验收标准越清晰，评审越容易聚焦关键决策，开发与测试也越能基于同一组已确认的信息推进工作。通过在流程前端完成澄清与整理，可以减少后续反复追问，并降低因理解不一致带来的协作成本。</span></span></span></p><p><span><span><span><br></span></span></span></p><ul><li><span><span><strong>立即体验</strong></span></span><span><span><strong>：</strong><span>打开工作项详情页，点击「智能澄清需求」或「智能优化内容」；也可以在云效 AI 助手中带上工作项卡片、ID 或链接，直接说明需要澄清或优化的内容。</span></span></span><br></li><li><span><span><strong>团队配置</strong></span></span><span><span><strong>：</strong><span>进入「项目设置 &gt; AI 工具配置」维护优化提示词；需要统一描述结构时，可在需求、任务或缺陷对应的工作项类型设置中维护描述模板。</span></span></span><br></li></ul>",
+    "headings": [
+      {
+        "id": "section-一句话需求-往往把成本留给后续协作",
+        "level": 2,
+        "text": "一句话需求，往往把成本留给后续协作"
+      },
+      {
+        "id": "section-先判断-需要优化表达-还是补齐事实",
+        "level": 2,
+        "text": "先判断：需要优化表达，还是补齐事实"
+      },
+      {
+        "id": "section-需求澄清-先识别信息缺口-再逐项确认",
+        "level": 2,
+        "text": "需求澄清：先识别信息缺口，再逐项确认"
+      },
+      {
+        "id": "section-内容优化-把确认结论变成可执行内容",
+        "level": 2,
+        "text": "内容优化：把确认结论变成可执行内容"
+      },
+      {
+        "id": "section-不同工作项-需要不同的优化重点",
+        "level": 2,
+        "text": "不同工作项，需要不同的优化重点"
+      },
+      {
+        "id": "section-优化结果写回前-始终由用户确认",
+        "level": 2,
+        "text": "优化结果写回前，始终由用户确认"
+      },
+      {
+        "id": "section-写在最后",
+        "level": 2,
+        "text": "写在最后"
+      }
+    ],
+    "textLength": 2761,
+    "readingMinutes": 7,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1776498",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "c322088db2801956c4252af0467ea46157f93de258c2db543e53d4fd4c1e9523",
+    "fetchedAt": "2026-11-02T07:13:47.267Z",
+    "checkedAt": "2026-11-02T07:13:47.267Z",
+    "nextRetryAt": "2026-12-02T07:13:47.268Z",
+    "warnings": []
+  }
+}

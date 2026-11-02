@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "db6bca5952f19255bfb7",
+    "status": "ready",
+    "html": "<p>AI Agent 的上线只是开始，数据管道决定它能跑多远。</p><p><br></p><p>从 PoC 到生产环境，模型选型早就不是瓶颈。真正卡住 AI 应用的，是那条把业务事件送进模型的链路——上下文靠 T+1 批处理拼出来，Agent 拿到的永远是上一批次的业务事实，决策依据滞后、检索到的知识片段过期、时序敏感任务频繁失准。</p><p><br></p><p>这场沙龙，我们不做大而全的分享，就聊一件事：怎么让实时数据以低延迟、高可靠、可弹性的方式，持续供给模型与 Agent。</p><p><br></p><p>三位一线工程师，沿数据链路依次展开：</p><p>▸ 实时数据流如何被加工成模型可消费的上下文</p><p>▸ 一条数据管道要补齐哪些能力才称得上 AI-Ready</p><p>▸ 流接入、流计算、数据入湖能否收敛进同一个平台</p><p><br></p><p>三场串起来看，就是回答一个问题：如何用一条实时数据链路，让 AI 应用真正在生产环境里落地。</p><p><br></p><p><span><span><strong>8月28日（周五）下午</strong></span></span><span><span><strong>，</strong></span></span><span><span><strong>上海徐汇滨江</strong></span></span><span><span><strong>，</strong><span>线下一场深聊。</span></span></span><span><span><span>如果你正在把 AI 应用、Agent 或 RAG 推向生产环境，欢迎来现场。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>👇 扫描下方</span><strong>海报二维码</strong><span>，或点击</span></span></span><a href=\"https://survey.aliyun.com/apps/zhiliao/D46NlVre1\" target=\"_blank\" rel=\"noopener noreferrer\"><span><span><strong>此处</strong></span></span></a><span><span><span>报名</span></span></span></p><p><span><span><span><br></span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_e52ffa47806d43188df5adefe45da4df.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [],
+    "textLength": 429,
+    "readingMinutes": 1,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1760411",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "e2c1cbc47246351a551536b8495d97cb0af5318cd228139bad0e1648695e9953",
+    "fetchedAt": "2026-11-02T07:09:11.321Z",
+    "checkedAt": "2026-11-02T07:09:11.321Z",
+    "nextRetryAt": "2026-12-02T07:09:11.321Z",
+    "warnings": []
+  }
+}

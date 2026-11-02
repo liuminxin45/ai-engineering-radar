@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "25392e6fa991722ad64c",
+    "status": "ready",
+    "html": "<h2 id=\"section-一-智能客服当下的痛点\">一、智能客服当下的痛点<a class=\"heading-anchor\" href=\"#section-一-智能客服当下的痛点\" aria-label=\"链接到本节：一、智能客服当下的痛点\">#</a></h2>\n<p><strong>听不懂人话、自作聪明：</strong> 无法准确理解用户意图，频繁答非所问。<strong>人工成本高、排队严重：</strong> 高并发场景下人力无法覆盖。<strong>问题解决能力弱：</strong> 只能处理简单 FAQ，复杂多轮问题无能为力。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/cf3fc51c5d68cf401de268a0200b4906.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h2 id=\"section-二-智能客服-agent-落地的必然性与挑战\">二、智能客服 Agent 落地的必然性与挑战<a class=\"heading-anchor\" href=\"#section-二-智能客服-agent-落地的必然性与挑战\" aria-label=\"链接到本节：二、智能客服 Agent 落地的必然性与挑战\">#</a></h2>\n<h2 id=\"section-agent-智能客服的必然性\">Agent 智能客服的必然性<a class=\"heading-anchor\" href=\"#section-agent-智能客服的必然性\" aria-label=\"链接到本节：Agent 智能客服的必然性\">#</a></h2>\n<p>传统结构存在上限：意图分类 + NER + 对话管理 + FAQ 召回 + 重排的流水线架构，无法处理多步骤任务，上下文衔接不畅。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/be1267b8e5c84f158dd2480cceacf567.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p>SOP 人工维护成本高：场景问法无法穷举。多模型运维成本高：多套小模型分头部署，“牵一发而动全身”，运维成本极高。会话拟人度 / 流畅度不佳：出话单一，无法复刻优秀人工的决策和话术能。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/5842657fd1a888c8c8a18135f897f670.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/a991779a8d53166e8b69b85fc97bc15b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h2 id=\"section-agent-智能客服的挑战\">Agent 智能客服的挑战<a class=\"heading-anchor\" href=\"#section-agent-智能客服的挑战\" aria-label=\"链接到本节：Agent 智能客服的挑战\">#</a></h2>\n<p>场景复杂指令优化成本高：场景复杂，知识流程繁琐，长尾 case 的 PE 优化成本高。长 Context 多轮能力不足：结合用户多样性需求和长历史上下文的多轮决策 / 协商挑战较大。对齐人工拟人化能力不足：人工回复多样性高，昵称 / 话术 / 表情 / 模态运用灵活，需要 “人工辅助 Agent”。多轮半双工下消息控制：推理时长较长，半双工环境下，消息打断 / 上下文话题切换，控制难度较大。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/b63e5fdd431257c82e0549d0370295c1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h2 id=\"section-三-客服-agent-多轮协商优化-高可控性pe自动化\">三、客服 Agent 多轮协商优化（高可控性PE自动化）<a class=\"heading-anchor\" href=\"#section-三-客服-agent-多轮协商优化-高可控性pe自动化\" aria-label=\"链接到本节：三、客服 Agent 多轮协商优化（高可控性PE自动化）\">#</a></h2>\n<h2 id=\"section-单场景架构演进\">单场景架构演进<a class=\"heading-anchor\" href=\"#section-单场景架构演进\" aria-label=\"链接到本节：单场景架构演进\">#</a></h2>\n<p><strong>第一阶段：Single-Agent（单 Prompt）</strong></p>\n<p>基于 Qwen 的 Single-Agent 架构，问题在于：</p>\n<ul>\n<li><p>Prompt 过长，模型指令遵循能力有限。</p>\n</li>\n<li><p>串行 Pipeline 无法实现 Agent 多轮 ReAct。</p>\n</li>\n</ul>\n<p><strong>第二阶段：Multi-Agent（渐进式披露）</strong></p>\n<p>采用 AutoGen 的 Multi-Agent 架构，引入：</p>\n<ul>\n<li><p><strong>总控 Agent：</strong> 负责任务调度与流程管控。</p>\n</li>\n<li><p><strong>出话 Agent：</strong> 负责生成最终回复话术。</p>\n</li>\n<li><p><strong>评估器 Agent：</strong> 对输出质量进行实时评估。</p>\n</li>\n<li><p><strong>润色 Agent：</strong> 提升回复的自然度和拟人感。</p>\n</li>\n</ul>\n<p>通过 <code>SelectorGroupChat</code> 模式实现动态调度，解决率提升明显。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/176b0856e6df24b19989b373186915f6.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h2 id=\"section-跨场景-harness-架构\">跨场景 Harness 架构<a class=\"heading-anchor\" href=\"#section-跨场景-harness-架构\" aria-label=\"链接到本节：跨场景 Harness 架构\">#</a></h2>\n<p>为解决跨场景复用问题，进一步演进至 Harness 架构，核心能力包括：</p>\n<ul>\n<li><p><strong>跨会话 Memory：</strong> 支持用户历史上下文记忆。</p>\n</li>\n<li><p><strong>上下文压缩与轨迹压缩：</strong> 有效管理长对话。</p>\n</li>\n<li><p><strong>总控 Agent 管理：</strong> 提高回复可控性。</p>\n</li>\n<li><p><strong>数据飞轮驱动模型持续优化。</strong></p>\n</li>\n<li><p><strong>Skill 自动化生成</strong>（进行中）。</p>\n</li>\n</ul>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/4e56a2db7ba796311349a9225d6ff415.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h2 id=\"section-数据飞轮-pe-自动化与模型训练\">数据飞轮：PE 自动化与模型训练<a class=\"heading-anchor\" href=\"#section-数据飞轮-pe-自动化与模型训练\" aria-label=\"链接到本节：数据飞轮：PE 自动化与模型训练\">#</a></h2>\n<h3 id=\"section-pe-自动化优化\">PE 自动化优化<a class=\"heading-anchor\" href=\"#section-pe-自动化优化\" aria-label=\"链接到本节：PE 自动化优化\">#</a></h3>\n<p>人工 Prompt Engineering 存在明显痛点：时间成本高。多个 case 引发 Prompt 冲突与歧义。Token 成本和指令遵循能力有限。</p>\n<p>为此，我们构建了 <strong>PE 自动化流水线</strong>。 对比数据抽取：LLM 抽取转人工 case 中 Agent 回复（Bad）和人工回复（Good）。PE 修改建议：LLM 分析 Prompt 修改建议。人工 Review：人工标注 check 是否可行。离线跑测：合并修改建议，跑测同批数据。上线实验：积累数据，持续优化。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/24006fc9f529adfbbede1af0f818fe8c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p><strong>效果验证：</strong></p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/b420ff8efc9cd968c30620be6612e048.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/bfa4695eb0b2235deda9ebd9b91c3069.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p><strong>数据飞轮-模型训练</strong></p>\n<p>通过 DPO 模型训练飞轮，利用 “LLM-as-a-Judge” 搜集回流数据并重新训练：</p>\n<ul>\n<li><p>能否回复判别模型。</p>\n</li>\n<li><p>回复正确性模型。</p>\n</li>\n<li><p>是否拟人判别模型。</p>\n</li>\n<li><p>构造 chosen 和 reject 样本。</p>\n</li>\n<li><p>训练润色模型。</p>\n</li>\n</ul>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/648872d9db8e22be3c822e14b42a3b60.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h2 id=\"section-四-rl-决策训练-让-agent-学会-正确决策\">四、RL 决策训练：让 Agent 学会\"正确决策\"<a class=\"heading-anchor\" href=\"#section-四-rl-决策训练-让-agent-学会-正确决策\" aria-label=\"链接到本节：四、RL 决策训练：让 Agent 学会&quot;正确决策&quot;\">#</a></h2>\n<h2 id=\"section-训练框架\">训练框架<a class=\"heading-anchor\" href=\"#section-训练框架\" aria-label=\"链接到本节：训练框架\">#</a></h2>\n<p>RL 训练框架分三大模块：</p>\n<p><strong>数据基建</strong></p>\n<ul>\n<li><p>线上反馈数据采集，策略埋点构造 Multi-turn RL 训练数据。</p>\n</li>\n<li><p>专家模型生成决策理由，进行 CoT-RL 训练。</p>\n</li>\n<li><p>MCP Server 部署实时 Tools 调用。</p>\n</li>\n</ul>\n<p><strong>模型训练</strong></p>\n<ul>\n<li><p>Cold-start SFT 预热。</p>\n</li>\n<li><p>可验证奖励：Rule-Based-Reward。</p>\n</li>\n<li><p>生成式奖励：Model-Based-Reward。</p>\n</li>\n<li><p>GRPO 训练。</p>\n</li>\n</ul>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/73734b95d07e1d31dce947f20093ecff.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p><strong>评测体系</strong></p>\n<ul>\n<li><p>LLM-as-a-Judge。</p>\n</li>\n<li><p>人工评测。</p>\n</li>\n<li><p>用户模拟器一致性评测。</p>\n</li>\n</ul>\n<p><strong>对抗 Reward Hacking</strong></p>\n<ul>\n<li><p>优化 Reward。</p>\n</li>\n<li><p>解决数据有偏问题。</p>\n</li>\n<li><p>增加思考过程 - CoT 训练。</p>\n</li>\n</ul>\n<p><strong>训练效果对比</strong></p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/831bda8b6ec6f0a3d3ea85cba3a9425b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h2 id=\"section-实验\">实验<a class=\"heading-anchor\" href=\"#section-实验\" aria-label=\"链接到本节：实验\">#</a></h2>\n<p><strong>消融实验</strong></p>\n<ul>\n<li><p>不同epoch对比。</p>\n</li>\n<li><p>不同cold-start sft底座对比。</p>\n</li>\n<li><p>不同lr对比。</p>\n</li>\n</ul>\n<p><strong>业务干扰度消融实验</strong></p>\n<ul>\n<li><p>A 业务。</p>\n</li>\n<li><p>B 业务。</p>\n</li>\n<li><p>A 业务 + B 业务。</p>\n</li>\n</ul>\n<p><strong>RL 训练减少灾难性遗忘</strong></p>\n<p><strong>测试标准：</strong> C-Eval、CMMLU。</p>\n<p><strong>规避方法：</strong></p>\n<ul>\n<li><p>降低学习率（全量训练 ≤ 5e-5）。</p>\n</li>\n<li><p>通过 eval-step 实时监控通用基准指标。</p>\n</li>\n<li><p>限制训练 2~4 epoch。</p>\n</li>\n<li><p>数据比例控制：模型自推理 VS 模型依赖 Tool 调用 = 1:1。</p>\n</li>\n</ul>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/99fb0bec29f1f9435431a4ed1c8043ac.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h2 id=\"section-五-情感温度-人类经验对齐模型蒸馏\">五、情感温度：人类经验对齐模型蒸馏<a class=\"heading-anchor\" href=\"#section-五-情感温度-人类经验对齐模型蒸馏\" aria-label=\"链接到本节：五、情感温度：人类经验对齐模型蒸馏\">#</a></h2>\n<h2 id=\"section-服务测评标准\">服务测评标准<a class=\"heading-anchor\" href=\"#section-服务测评标准\" aria-label=\"链接到本节：服务测评标准\">#</a></h2>\n<p>建立了完整的百分制测评体系：</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/7e42991ab25b43adef87072b5b86ac68.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/2d563b1810e25336ebc5ff5c700bd835.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h2 id=\"section-模型蒸馏训练\">模型蒸馏训练<a class=\"heading-anchor\" href=\"#section-模型蒸馏训练\" aria-label=\"链接到本节：模型蒸馏训练\">#</a></h2>\n<p><strong>三种训练模式协同工作：</strong> CoT-RL 策略蒸馏：蒸馏优秀客服的决策逻辑；DPO 话术蒸馏：对齐对话语气、减少重复、规范表情包和称谓使用；表情模块：表情分类 + 语境分析，精细化控制表情使用时机。</p>\n<p><strong>表情分类体系：</strong> 开场欢迎 / 积极开心 / 思考疑惑 / 抱歉安抚 / 提醒强调 / 期待等待 / 完成确认 / 正在努力 / 物流配送 / 价格优惠 / 对接售后 / 结束感谢。</p>\n<h2 id=\"section-人工对齐效果\">人工对齐效果<a class=\"heading-anchor\" href=\"#section-人工对齐效果\" aria-label=\"链接到本节：人工对齐效果\">#</a></h2>\n<p>模型评分接近 Top5% 优秀人工水平。</p>\n<h2 id=\"section-六-多轮消息流控制-半双工对话逻辑设计\">六、多轮消息流控制：半双工对话逻辑设计<a class=\"heading-anchor\" href=\"#section-六-多轮消息流控制-半双工对话逻辑设计\" aria-label=\"链接到本节：六、多轮消息流控制：半双工对话逻辑设计\">#</a></h2>\n<h2 id=\"section-消息收发模式\">消息收发模式<a class=\"heading-anchor\" href=\"#section-消息收发模式\" aria-label=\"链接到本节：消息收发模式\">#</a></h2>\n<p>智能客服场景特殊性：用户可随时发送消息（全双工），但 Agent 回复期间不应被打断（半双工）；<strong>用户→Agent：</strong> 全双工，可打断；<strong>Agent→用户：</strong> 半双工，不可打断。</p>\n<h2 id=\"section-多消息处理策略\">多消息处理策略<a class=\"heading-anchor\" href=\"#section-多消息处理策略\" aria-label=\"链接到本节：多消息处理策略\">#</a></h2>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/2d4e3cc8a6b23e6e9aa65bdecd7f4bbc.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/b85c29cd96574c8e82145327173871a8.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<p>为实现精准的消息合并/切分判断，训练专用分类模型：</p>\n<ul>\n<li><p><strong>数据采集：</strong> 拉取线上用户连续消息进行标注。</p>\n</li>\n<li><p><strong>数据增强：</strong> 负样本 LLM 扩写。</p>\n</li>\n<li><p><strong>模型训练：</strong> Qwen3-4B 分类训练。</p>\n</li>\n</ul>\n<h2 id=\"section-七-总结与展望\">七、总结与展望<a class=\"heading-anchor\" href=\"#section-七-总结与展望\" aria-label=\"链接到本节：七、总结与展望\">#</a></h2>\n<h2 id=\"section-本次实践总结\">本次实践总结<a class=\"heading-anchor\" href=\"#section-本次实践总结\" aria-label=\"链接到本节：本次实践总结\">#</a></h2>\n<p>本次分享围绕以下核心技术展开：客服 Agent 挑战与架构设计（Single-Agent→Multi-Agent→Harness）；高可控性数据飞轮（PE 自动化 + DPO 训练）；RL 策略训练和人工经验对齐；多轮半双工消息流控制。</p>\n<h2 id=\"section-未来展望\">未来展望<a class=\"heading-anchor\" href=\"#section-未来展望\" aria-label=\"链接到本节：未来展望\">#</a></h2>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/1bf19f759e40a9a926dc0b7ec375c047.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n<h2 id=\"section-往期回顾\">往期回顾<a class=\"heading-anchor\" href=\"#section-往期回顾\" aria-label=\"链接到本节：往期回顾\">#</a></h2>\n<p>1.<a href=\"https://cloud.tencent.com/developer/article/2708833\" target=\"_blank\" rel=\"noopener noreferrer\">得物推荐系统诊断 Agent：从 “调接口” 到 “会思考”｜AICon 演讲整理</a></p>\n<p>2.<a href=\"https://cloud.tencent.com/developer/article/2705644\" target=\"_blank\" rel=\"noopener noreferrer\">得物 OceanBase 落地实践</a></p>\n<p>3.<a href=\"https://cloud.tencent.com/developer/article/2701896\" target=\"_blank\" rel=\"noopener noreferrer\">AI UITester：AI Native 的 UI 自动化测试新范式｜得物技术</a></p>\n<p>4.<a href=\"https://cloud.tencent.com/developer/article/2700595\" target=\"_blank\" rel=\"noopener noreferrer\">从狂野代码到按目标生产：得物推荐 AI Harness 的工程化实践｜AICon 演讲整理</a></p>\n<p>5.<a href=\"https://cloud.tencent.com/developer/article/2697687\" target=\"_blank\" rel=\"noopener noreferrer\">从表单到 Agent：得物社区活动搭建的 AI 实践之路</a></p>\n<h2 id=\"section-文-天行\">文 / 天行<a class=\"heading-anchor\" href=\"#section-文-天行\" aria-label=\"链接到本节：文 / 天行\">#</a></h2>\n<p>关注得物技术，每周更新技术干货</p>\n<p>要是觉得文章对你有帮助的话，欢迎评论转发点赞～</p>\n<p>未经得物技术许可严禁转载，否则依法追究法律责任。</p>\n",
+    "headings": [
+      {
+        "id": "section-一-智能客服当下的痛点",
+        "level": 2,
+        "text": "一、智能客服当下的痛点"
+      },
+      {
+        "id": "section-二-智能客服-agent-落地的必然性与挑战",
+        "level": 2,
+        "text": "二、智能客服 Agent 落地的必然性与挑战"
+      },
+      {
+        "id": "section-agent-智能客服的必然性",
+        "level": 2,
+        "text": "Agent 智能客服的必然性"
+      },
+      {
+        "id": "section-agent-智能客服的挑战",
+        "level": 2,
+        "text": "Agent 智能客服的挑战"
+      },
+      {
+        "id": "section-三-客服-agent-多轮协商优化-高可控性pe自动化",
+        "level": 2,
+        "text": "三、客服 Agent 多轮协商优化（高可控性PE自动化）"
+      },
+      {
+        "id": "section-单场景架构演进",
+        "level": 2,
+        "text": "单场景架构演进"
+      },
+      {
+        "id": "section-跨场景-harness-架构",
+        "level": 2,
+        "text": "跨场景 Harness 架构"
+      },
+      {
+        "id": "section-数据飞轮-pe-自动化与模型训练",
+        "level": 2,
+        "text": "数据飞轮：PE 自动化与模型训练"
+      },
+      {
+        "id": "section-pe-自动化优化",
+        "level": 3,
+        "text": "PE 自动化优化"
+      },
+      {
+        "id": "section-四-rl-决策训练-让-agent-学会-正确决策",
+        "level": 2,
+        "text": "四、RL 决策训练：让 Agent 学会\"正确决策\""
+      },
+      {
+        "id": "section-训练框架",
+        "level": 2,
+        "text": "训练框架"
+      },
+      {
+        "id": "section-实验",
+        "level": 2,
+        "text": "实验"
+      },
+      {
+        "id": "section-五-情感温度-人类经验对齐模型蒸馏",
+        "level": 2,
+        "text": "五、情感温度：人类经验对齐模型蒸馏"
+      },
+      {
+        "id": "section-服务测评标准",
+        "level": 2,
+        "text": "服务测评标准"
+      },
+      {
+        "id": "section-模型蒸馏训练",
+        "level": 2,
+        "text": "模型蒸馏训练"
+      },
+      {
+        "id": "section-人工对齐效果",
+        "level": 2,
+        "text": "人工对齐效果"
+      },
+      {
+        "id": "section-六-多轮消息流控制-半双工对话逻辑设计",
+        "level": 2,
+        "text": "六、多轮消息流控制：半双工对话逻辑设计"
+      },
+      {
+        "id": "section-消息收发模式",
+        "level": 2,
+        "text": "消息收发模式"
+      },
+      {
+        "id": "section-多消息处理策略",
+        "level": 2,
+        "text": "多消息处理策略"
+      },
+      {
+        "id": "section-七-总结与展望",
+        "level": 2,
+        "text": "七、总结与展望"
+      },
+      {
+        "id": "section-本次实践总结",
+        "level": 2,
+        "text": "本次实践总结"
+      },
+      {
+        "id": "section-未来展望",
+        "level": 2,
+        "text": "未来展望"
+      },
+      {
+        "id": "section-往期回顾",
+        "level": 2,
+        "text": "往期回顾"
+      },
+      {
+        "id": "section-文-天行",
+        "level": 2,
+        "text": "文 / 天行"
+      }
+    ],
+    "textLength": 2825,
+    "readingMinutes": 7,
+    "sourceId": "dewu-tencent",
+    "sourceUrl": "https://developer.cloud.tencent.com/article/2710241",
+    "ruleId": "tencent-article-json",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "c09a632634df751454cd121feaf163551f5b7b2a73df0d17e7c82842c58bf5f0",
+    "fetchedAt": "2026-11-02T06:25:41.552Z",
+    "checkedAt": "2026-11-02T06:25:41.552Z",
+    "nextRetryAt": "2026-12-02T06:25:41.552Z",
+    "warnings": []
+  }
+}

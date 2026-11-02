@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "deafbbeec83c19e45dea",
+    "status": "ready",
+    "html": "<p>KCD Hangzhou 2026 将于 11 月 28 日在杭州举办，即日起面向社区征集演讲议题，截止时间为 9 月 30 日。</p><p><br></p><p>杭州是阿里巴巴和 DeepSeek、宇树科技等多家人工智能企业的诞生地，也是全国首批“国家新一代人工智能创新发展试验区”，云原生与 AI 的开发者社区在这里都有深厚积累。11 月，我们期待与大家再次相聚杭州，围绕 Agent 时代的云原生技术展开交流。</p><h2 id=\"section-会议信息\">会议信息<a class=\"heading-anchor\" href=\"#section-会议信息\" aria-label=\"链接到本节：会议信息\">#</a></h2><div><div class=\"markdown-table-wrap\"><table><thead><tr><td>项目</td><td>内容</td></tr></thead><tbody><tr><td>主办单位</td><td>KCD Hangzhou 2026 组委会</td></tr><tr><td>支持单位</td><td>云原生计算基金会（CNCF）</td></tr><tr><td>会议时间</td><td>2026 年 11 月 28 日</td></tr><tr><td>会议地点</td><td>杭州市西湖区灯彩街1009号云谷中心</td></tr></tbody></table></div></div><h2 id=\"section-会议背景\">会议背景<a class=\"heading-anchor\" href=\"#section-会议背景\" aria-label=\"链接到本节：会议背景\">#</a></h2><p>KCD（Kubernetes Community Days，Kubernetes 社区日）是由社区组织的区域性活动，汇聚开源和云原生领域的采用者和技术人员，旨在促进教育、协作和交流。KCD 活动由云原生计算基金会（CNCF）提供支持。</p><h2 id=\"section-大会主题\">大会主题<a class=\"heading-anchor\" href=\"#section-大会主题\" aria-label=\"链接到本节：大会主题\">#</a></h2><h3 id=\"section-cloud-native-in-the-age-of-agents-当云原生遇见-agent\">Cloud Native in the Age of Agents：当云原生遇见 Agent<a class=\"heading-anchor\" href=\"#section-cloud-native-in-the-age-of-agents-当云原生遇见-agent\" aria-label=\"链接到本节：Cloud Native in the Age of Agents：当云原生遇见 Agent\">#</a></h3><p>AI Agent 正在重塑软件的构建方式和运行形态。从 MCP 协议到推理引擎优化，从 Agent 沙箱隔离到多 Agent 编排，Kubernetes 正在成为 Agent 工作负载的标准运行时，CNCF 生态中的 OpenTelemetry、Envoy、Knative 等项目正在为 Agent 时代提供新的基础设施保障。</p><p><br></p><p>KCD Hangzhou 2025 以 AI + Cloud Native 双 Track 吸引了 82 份投稿、39 位讲师、316 名到场参会者和 20,000+ 线上观众，参会者反馈最强烈的声音是——希望更多深度 AI 内容和互动环节。今年我们围绕“Agent on Kubernetes”这一核心叙事，设置三个分论坛：Agent 如何在 K8s 上运行、如何用 CNCF 可观测生态保障 AI 系统质量、AI 推理引擎如何与 K8s 调度深度结合。每个 Track 都扎根于 CNCF/K8s 生态，同时回应 Agent 时代的新需求。</p><h2 id=\"section-分论坛设置\">分论坛设置<a class=\"heading-anchor\" href=\"#section-分论坛设置\" aria-label=\"链接到本节：分论坛设置\">#</a></h2><h3 id=\"section-track-1-agent-infra-k8s-上的-agent-运行时与基础设施\">Track 1：Agent Infra — K8s 上的 Agent 运行时与基础设施<a class=\"heading-anchor\" href=\"#section-track-1-agent-infra-k8s-上的-agent-运行时与基础设施\" aria-label=\"链接到本节：Track 1：Agent Infra — K8s 上的 Agent 运行时与基础设施\">#</a></h3><p><strong>出品人</strong>：</p><ul><li>Fupan Li, Kata Containers architecture committee (AC) member</li><li>张振，PhD，OpenKruise Maintainer</li></ul><p><br></p><p>Agent 的生产化部署本质上是 Kubernetes 上的一类新工作负载。如何安全隔离 Agent 代码执行、如何通过 CNCF 网关项目治理 MCP/A2A 流量、如何利用 K8s 原生的编排能力协调多 Agent 协作——本论坛聚焦 K8s 生态如何承载 Agent 工作负载。</p><p><strong><br></strong></p><p><strong>推荐选题方向：</strong></p><ol><li>Agent Gateway：CNCF 网关生态在 Agent 流量治理中的角色；</li><li>Agent Sandbox 与运行时隔离；</li><li>Agent 编排、注册与通信；</li><li>Agent 工作负载调度与资源管理。</li></ol><h3 id=\"section-track-2-observability-reliability-for-ai-cncf-可观测生态在-ai-agent-时代的演进\">Track 2：Observability &amp; Reliability for AI — CNCF 可观测生态在 AI/Agent 时代的演进<a class=\"heading-anchor\" href=\"#section-track-2-observability-reliability-for-ai-cncf-可观测生态在-ai-agent-时代的演进\" aria-label=\"链接到本节：Track 2：Observability &amp; Reliability for AI — CNCF 可观测生态在 AI/Agent 时代的演进\">#</a></h3><p><strong>出品人</strong>：</p><ul><li>Juraci Paixão Kröhling, Governance Committee member for the OpenTelemetry project</li><li>张乎兴，OpenTelemetry Go Compile time Instrumentation SIG maintainer, Alibaba Cloud</li></ul><p><br></p><p>OpenTelemetry 是 CNCF 除 Kubernetes 之外最成功的 Graduated 项目。Agent 时代对可观测提出了全新挑战：GenAI 语义规范、多 Agent Trace 关联、推理性能指标采集。同时，混沌工程、SRE 实践也在向 AI/Agent 场景延伸。本论坛聚焦 CNCF 可观测与可靠性生态如何保障 AI/Agent 系统的质量。</p><p><strong><br></strong></p><p><strong>推荐选题方向：</strong></p><ol><li>OpenTelemetry × GenAI：语义规范与 Agent Trace 标准化；</li><li>AI 系统可观测实践；</li><li>Agent 评测与混沌工程；</li><li>语义知识底座与智能运维。</li></ol><h3 id=\"section-track-3-ai-infra-llm-serving-k8s-上的推理引擎与-ai-基础设施\">Track 3：AI Infra &amp; LLM Serving — K8s 上的推理引擎与 AI 基础设施<a class=\"heading-anchor\" href=\"#section-track-3-ai-infra-llm-serving-k8s-上的推理引擎与-ai-基础设施\" aria-label=\"链接到本节：Track 3：AI Infra &amp; LLM Serving — K8s 上的推理引擎与 AI 基础设施\">#</a></h3><p><strong>出品人</strong>：</p><ul><li>宋净超（Jimmy Song），HAMi Community Manager, CNCF Ambassador</li><li>张家驹，vLLM 社区贡献者，红帽大中华区 CTO</li></ul><p><br></p><p>大模型推理是 Agent 时代的算力底座，而 Kubernetes 是推理引擎的标准部署平台。vLLM、SGLang 等开源推理引擎如何在 K8s 上高效运行、GPU 调度如何优化、平台工程如何支撑 AI 工作负载——本论坛聚焦 K8s 作为 AI 推理基础设施的工程实践。</p><p><strong><br></strong></p><p><strong>推荐选题方向：</strong></p><ol><li>vLLM / SGLang on Kubernetes：生产部署实践；</li><li>推理性能深度优化；</li><li>长上下文、多模态推理与成本控制；</li><li>模型生命周期管理。</li></ol><h2 id=\"section-议题提交说明\">议题提交说明<a class=\"heading-anchor\" href=\"#section-议题提交说明\" aria-label=\"链接到本节：议题提交说明\">#</a></h2><p>CFP 地址：<a href=\"https://link.segmentfault.com/?enc=2KNe1N1huejNOGjbq8O%2Fxw%3D%3D.%2BwySlj0NcsD6q8PcexnHWuNCJkgpTquTHMNNvRMS%2B4zEEUh1pEF31UCKj%2BA3muUq\" target=\"_blank\" rel=\"noopener noreferrer\">https://sessionize.com/kcd-hangzhou-2026/</a></p><p><strong><br></strong></p><p><strong>议题形式</strong>：</p><ul><li>标准演讲：30 分钟（含 Q&amp;A）；</li><li>闪电演讲：10 分钟（技术亮点速览）。</li></ul><p><strong><br></strong></p><p><strong>截止时间</strong>：北京时间 2026 年 9 月 30 日 23:59（以提交时间为准）。</p><p><strong>结果通知</strong>：通过初审的议题将于提交后 14 个工作日内收到确认函。</p><h2 id=\"section-参会须知\">参会须知<a class=\"heading-anchor\" href=\"#section-参会须知\" aria-label=\"链接到本节：参会须知\">#</a></h2><ul><li>本活动采用定向邀请制，参会资格需经组委会审核；</li><li>主办方不承担参会者差旅及住宿费用（特殊情况请与主办方沟通）。</li></ul><h2 id=\"section-联系方式\">联系方式<a class=\"heading-anchor\" href=\"#section-联系方式\" aria-label=\"链接到本节：联系方式\">#</a></h2><p><strong>议题提交：</strong></p><p>邮箱：<a href=\"mailto:tunan.wr@alibaba-inc.com\" target=\"_blank\" rel=\"noopener noreferrer\">tunan.wr@alibaba-inc.com</a></p><p>微信：dig_403</p><p><strong><br></strong></p><p><strong>赞助咨询：</strong></p><p>邮箱：<a href=\"mailto:yukuo.liu@geekbang.com\" target=\"_blank\" rel=\"noopener noreferrer\">yukuo.liu@geekbang.com</a>&nbsp; &nbsp;&nbsp;</p><p>微信：liuyukuo111</p><h2 id=\"section-认识-kcd-杭州组织者\">认识 KCD 杭州组织者<a class=\"heading-anchor\" href=\"#section-认识-kcd-杭州组织者\" aria-label=\"链接到本节：认识 KCD 杭州组织者\">#</a></h2><p><strong>我们专业的组织团队致力于举办一场充满活力和包容性的活动：</strong></p><ul><li>蔡威：CNCF Ambassador, DaoCloud</li><li>江波：Head of Growth and Ecosystem, Robbyant</li><li>夏小雅：Open Source Program Manager, Ant Group</li><li>王蓉：Open Source Program Office Operations Manager, Alibaba Cloud</li><li>张乎兴：OpenTelemetry Go Compile time Instrumentation SIG maintainer, Alibaba Cloud</li></ul><h2 id=\"section-合作伙伴\">合作伙伴<a class=\"heading-anchor\" href=\"#section-合作伙伴\" aria-label=\"链接到本节：合作伙伴\">#</a></h2><p>InfoQ、极客时间、极客时间企业版、TGO 鲲鹏会、模力工场。</p>",
+    "headings": [
+      {
+        "id": "section-会议信息",
+        "level": 2,
+        "text": "会议信息"
+      },
+      {
+        "id": "section-会议背景",
+        "level": 2,
+        "text": "会议背景"
+      },
+      {
+        "id": "section-大会主题",
+        "level": 2,
+        "text": "大会主题"
+      },
+      {
+        "id": "section-cloud-native-in-the-age-of-agents-当云原生遇见-agent",
+        "level": 3,
+        "text": "Cloud Native in the Age of Agents：当云原生遇见 Agent"
+      },
+      {
+        "id": "section-分论坛设置",
+        "level": 2,
+        "text": "分论坛设置"
+      },
+      {
+        "id": "section-track-1-agent-infra-k8s-上的-agent-运行时与基础设施",
+        "level": 3,
+        "text": "Track 1：Agent Infra — K8s 上的 Agent 运行时与基础设施"
+      },
+      {
+        "id": "section-track-2-observability-reliability-for-ai-cncf-可观测生态在-ai-agent-时代的演进",
+        "level": 3,
+        "text": "Track 2：Observability & Reliability for AI — CNCF 可观测生态在 AI/Agent 时代的演进"
+      },
+      {
+        "id": "section-track-3-ai-infra-llm-serving-k8s-上的推理引擎与-ai-基础设施",
+        "level": 3,
+        "text": "Track 3：AI Infra & LLM Serving — K8s 上的推理引擎与 AI 基础设施"
+      },
+      {
+        "id": "section-议题提交说明",
+        "level": 2,
+        "text": "议题提交说明"
+      },
+      {
+        "id": "section-参会须知",
+        "level": 2,
+        "text": "参会须知"
+      },
+      {
+        "id": "section-联系方式",
+        "level": 2,
+        "text": "联系方式"
+      },
+      {
+        "id": "section-认识-kcd-杭州组织者",
+        "level": 2,
+        "text": "认识 KCD 杭州组织者"
+      },
+      {
+        "id": "section-合作伙伴",
+        "level": 2,
+        "text": "合作伙伴"
+      }
+    ],
+    "textLength": 2787,
+    "readingMinutes": 7,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1758455",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "5821aedd6527f1c007014e247d4cbebd4972c21f0a5b8d1db23765043ea366a3",
+    "fetchedAt": "2026-11-02T07:09:15.451Z",
+    "checkedAt": "2026-11-02T07:09:15.451Z",
+    "nextRetryAt": "2026-12-02T07:09:15.451Z",
+    "warnings": []
+  }
+}

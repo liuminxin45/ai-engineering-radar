@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "987a2a6d43efc66fa201",
+    "status": "unavailable",
+    "html": "",
+    "headings": [],
+    "textLength": 0,
+    "readingMinutes": 0,
+    "sourceId": "bilibili-csdn",
+    "sourceUrl": "https://blog.csdn.net/bilibili_TC/article/details/155320541",
+    "engineVersion": "radar-reader-1",
+    "checkedAt": "2026-11-02T07:55:52.667Z",
+    "nextRetryAt": "2026-11-09T07:55:52.667Z",
+    "error": "RSSHub 未取得 CSDN 正文，仅返回摘要（原站可能仍受 521 限制）。",
+    "warnings": []
+  }
+}

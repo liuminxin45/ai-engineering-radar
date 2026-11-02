@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "bf2f6a1b00aa6adc7844",
+    "status": "ready",
+    "html": "<p>作者：胡亦锟（易仑）</p><p><br></p><blockquote>依托钉群无人值守、跨群会话记忆、组织知识检索及前端专业 Skill，<strong>阿里云云原生消息前端团队自研的内部研发协作平台 Domino</strong> 正经历关键演进——从单一的代码执行工具，升级为能够理解团队上下文、持续沉淀演进并闭环真实交付的研发 Agent 系统。</blockquote><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_86007ba1ca114818b00c519cffc7ea96.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-从上一次实践说起\">从上一次实践说起<a class=\"heading-anchor\" href=\"#section-从上一次实践说起\" aria-label=\"链接到本节：从上一次实践说起\">#</a></h2><p>在此前，Domino 诞生于内部的一个前端源码定位工具，随着能力的不断增强，逐渐演变为了覆盖需求理解、编码、评审、部署和验收的研发平台。</p><p><br></p><p>那一阶段解决的核心问题是：<strong>怎样让 CodingAgent 在真实仓库和真实研发链路中完成一次任务。</strong></p><p><strong><br></strong></p><p>这一阶段建设了独立沙箱、单应用任务、Flow 多应用流水线、CodeReview、O2/AoneCD 部署和 AI 页面验证，让 Agent 不再只生成一段代码，而是可以真正把代码送进研发流程。</p><p><br></p><p>但投入日常使用后，一个更基础的问题逐渐浮现：</p><ul><li>用户通常不会先打开一个 AI 平台，再思考该创建什么任务；问题往往直接发生在钉群里。</li><li>大量研发问题并不需要立即创建沙箱，可能只是查询历史决策、确认发布流程或定位一段已有逻辑。</li><li>一个任务结束后，Agent 获得的业务背景和团队结论也随会话一起沉没，下次仍要从头解释。</li><li>通用 CodingAgent 会读写代码，却不了解控制台项目的工程规范、国际化链路、登录方式、设计稿结构和发布验证方法。</li></ul><p><br></p><p>如果这些问题不解决，Agent 再强也仍然是一个“需要人主动操作的高级工具”，而不是团队日常协作的一部分。</p><p><br></p><p>因此，Domino 平台最近一轮演进的重点不再只是“把一个任务做得更自动”，而是重新回答三个问题：</p><ol><li>Agent 如何自然地进入团队每天已经在使用的协作入口？</li><li>不同群、不同会话中的上下文，如何沉淀为可以复用的组织知识？</li><li>通用模型如何真正掌握前端控制台研发中的专业方法？</li></ol><p><br></p><p>对应的答案，是一套由 <strong>ConsoleAgent、KBase 空间记忆、知识检索、专业 SKILL 与 SandboxAgent</strong> 组成的分层 Agent 体系。</p><p><br></p><p>不是一个“全能 Agent”，而是两类 Agent 接力。</p><p><br></p><p>系统没有继续把所有能力塞进一个 Agent，而是将“理解与路由”和“执行与交付”拆给两个生命周期完全不同的角色。</p><pre><code>钉群 @机器人\n      │\n      ▼\nConsoleAgent（长期入口）\n      │\n      ├── 群上下文 ──▶ 延续当前讨论\n      ├── KBase 记忆 ─▶ 找到跨群、跨会话的团队约定与历史决策\n      ├── 知识库 ─────▶ 查询产品、流程和架构知识\n      ├── CodeWiki ───▶ 查询代码实现事实\n      ├── 直接答疑\n      │\n      └── 需要真实仓库或代码改动\n                 │\n                 ▼\n        创建单应用任务 / Flow\n                 │\n                 ▼\nSandboxAgent（任务执行）\n                 │\n      读码 → 改码 → 验证 → CodeReview → 部署 → AI 页面验证</code></pre><h3 id=\"section-consoleagent-钉群里的常驻研发入口\">ConsoleAgent：钉群里的常驻研发入口<a class=\"heading-anchor\" href=\"#section-consoleagent-钉群里的常驻研发入口\" aria-label=\"链接到本节：ConsoleAgent：钉群里的常驻研发入口\">#</a></h3><p>ConsoleAgent 面向高频、碎片化、随时发生的研发问题。管理员将 Agent 绑定到钉群后，群成员只需要 <code>@Domino</code> 助手，就可以直接询问：</p><ul><li>某个控制台功能是如何实现的？</li><li>这类变更应该走哪个发布流程？</li><li>团队之前对这个方案做过什么约定？</li><li>页面上这句中文文案对应哪个代码位置？</li><li>帮我到真实仓库里排查，必要时直接修改并验证。</li></ul><p><br></p><p>这里的“常驻”不是要求某个 FaaS 进程永远不重启，而是业务语义上的常驻：每个群都持久化自己的 <code>conversationId</code>、<code>sessionId</code> 和消息历史。底层实例发生切换后，ConsoleAgent 仍可以恢复会话，而不是让用户重新建立上下文。</p><p><br></p><p>同时，它按照钉群交互特性做了无人值守约束：不使用只能在 Web 页面中点击的交互式问答工具；信息不足时直接在群里提出问题，等待下一条消息；可以直接回答的问题即时回复，需要长时间执行或修改代码的问题则自动创建 Domino 任务并返回链接。群成员不需要守着一个流式窗口，也不需要知道沙箱、模型和任务编排的内部细节。</p><h3 id=\"section-sandboxagent-进入真实仓库完成交付\">SandboxAgent：进入真实仓库完成交付<a class=\"heading-anchor\" href=\"#section-sandboxagent-进入真实仓库完成交付\" aria-label=\"链接到本节：SandboxAgent：进入真实仓库完成交付\">#</a></h3><p>ConsoleAgent 不会在 Console 服务目录里“猜”业务代码，也不会直接修改业务仓库。只要问题需要深入读取真实代码、运行命令或产生变更，就交给 SandboxAgent。</p><p><br></p><p>SandboxAgent 由单应用任务或 Flow Stage 触发。系统会准备独立沙箱、克隆目标仓库、创建工作分支，并注入任务上下文、SKILL 和 MCP 授权。它负责完成真正的工程执行：</p><pre><code>理解需求 → 定位代码 → 实施修改 → 构建/测试\n        → Git 推送 → CodeReview → 绑定变更并部署 → AI 页面验证</code></pre><p>这种边界带来两个直接收益：</p><ul><li>轻量答疑不再为每个问题创建昂贵沙箱。</li><li>任何代码修改都发生在隔离、可追踪、可以验证的研发环境中。</li></ul><p><br></p><p>由此形成了一个清晰原则：<strong>ConsoleAgent 负责理解、检索和路由，SandboxAgent 负责在真实环境中执行和交付。</strong></p><h2 id=\"section-从-聊天记录-到-团队记忆\">从“聊天记录”到“团队记忆”<a class=\"heading-anchor\" href=\"#section-从-聊天记录-到-团队记忆\" aria-label=\"链接到本节：从“聊天记录”到“团队记忆”\">#</a></h2><p>让 Agent 进入群聊并不难，难的是让它既能延续当前讨论，又不会被某一个群的偶然信息绑住。</p><p><br></p><p>为此，Domino 没有把所有消息简单拼进模型上下文，而是建立了三层不同粒度的认知来源。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_be26ff1b48d84106b0a99546b5c69baf.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-第一层-群级-session-保存局部上下文\">第一层：群级 Session，保存局部上下文<a class=\"heading-anchor\" href=\"#section-第一层-群级-session-保存局部上下文\" aria-label=\"链接到本节：第一层：群级 Session，保存局部上下文\">#</a></h3><p>每个钉群维护独立 Session。同一个群后续追问可以自然延续，例如用户先问“这次变更为什么失败”，下一轮只补充“那预发版本应该看哪个”，Agent 仍然知道讨论对象。</p><p><br></p><p>不同群的 Session 相互隔离。一个业务群里的临时讨论不会直接污染另一个群，也避免把不适合跨群传播的聊天内容无差别共享。</p><p><br></p><p>Session 解决的是“这个群刚刚在聊什么”，但它不能独立解决跨群、跨时间的知识复用。</p><h3 id=\"section-第二层-kbase-空间记忆-连接跨群跨会话的历史\">第二层：KBase 空间记忆，连接跨群跨会话的历史<a class=\"heading-anchor\" href=\"#section-第二层-kbase-空间记忆-连接跨群跨会话的历史\" aria-label=\"链接到本节：第二层：KBase 空间记忆，连接跨群跨会话的历史\">#</a></h3><p>对于需要长期复用的团队上下文，ConsoleAgent 会在回答前检索 KBase 空间记忆。空间记忆与某一次对话解耦，因此同一条经过沉淀的团队约定，可以被不同钉群、不同成员和后续新会话重新召回。</p><p><br></p><p>适合进入空间记忆的内容包括：</p><ul><li>团队已经确认的技术决策及取舍原因；</li><li>项目长期有效的目录、模块和负责人信息；</li><li>特殊环境约束、联调方式和排障结论；</li><li>多次协作后形成的研发规范与操作约定。</li></ul><p><br></p><p>这让 Domino 获得了一种过去单次 Agent 会话不具备的连续性。一次讨论不再只是“这次回答完就结束”，其中有复用价值的结论可以成为团队之后解决问题的起点。</p><p><br></p><p>空间记忆也有明确边界：它服务于团队共享上下文，不用于保存个人隐私或把整段群聊原样归档；更新与删除都需要定位明确的记忆条目。目标是积累经过提炼的事实和决策，而不是不断膨胀的聊天日志。</p><h3 id=\"section-第三层-知识库与-codewiki-连接正式事实源\">第三层：知识库与 CodeWiki，连接正式事实源<a class=\"heading-anchor\" href=\"#section-第三层-知识库与-codewiki-连接正式事实源\" aria-label=\"链接到本节：第三层：知识库与 CodeWiki，连接正式事实源\">#</a></h3><p>记忆适合保存经验与决策，但不能代替正式文档和代码事实。ConsoleAgent 会根据问题类型选择不同检索路径：</p><ul><li>产品知识、研发规范、部署流程、架构说明等问题，查询团队知识库；</li><li>实现逻辑、接口定义和代码结构等问题，优先查询 CodeWiki 和代码平台；</li><li>页面中文文案无法直接在源码中命中时，先通过国际化反查 SKILL 找到 key，再定位调用位置；</li><li>多次检索仍无法得到可信答案时，不继续编造，而是委派 SandboxAgent 进入真实仓库排查。</li></ul><p><br></p><p>三层上下文的职责因此变得明确：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b20d4a49ab294237988ce0147a146cd9.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这并不是简单地给模型“塞更多上下文”，而是让 Agent 知道：<strong>什么是当前对话，什么是历史经验，什么才是需要引用的正式事实。</strong></p><h2 id=\"section-skill-把前端工程经验变成-agent-可执行的方法\">SKILL：把前端工程经验变成 Agent 可执行的方法<a class=\"heading-anchor\" href=\"#section-skill-把前端工程经验变成-agent-可执行的方法\" aria-label=\"链接到本节：SKILL：把前端工程经验变成 Agent 可执行的方法\">#</a></h2><p>通用模型可以写 React，也可以解释 TypeScript，但真实控制台研发中最耗时间的部分，往往是模型不知道的团队隐性知识：这个项目属于哪套框架、请求应该怎么封装、中文文案存在哪里、沙箱为什么没有登录态、设计稿如何落到现有组件、改完后怎样验证预发。</p><p><br></p><p>过去这些知识依赖熟悉项目的工程师口口相传。现在，其中稳定、可复用的部分被提炼成 Domino 内置 SKILL。</p><p><br></p><p>SKILL 不是一段万能提示词，而是一份带触发条件、执行步骤、工具选择和验收标准的工程方法。Agent 只在命中场景时加载对应内容，避免每轮对话都携带所有规范。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_39a83feececa4dccbc55b883860448eb.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-面向前端控制台的专业能力-最小化跨角色协作门槛\">面向前端控制台的专业能力，最小化跨角色协作门槛<a class=\"heading-anchor\" href=\"#section-面向前端控制台的专业能力-最小化跨角色协作门槛\" aria-label=\"链接到本节：面向前端控制台的专业能力，最小化跨角色协作门槛\">#</a></h3><h4 id=\"article-anchor-10\"><code>mq-frontend-skill</code>：识别工程，再按项目规范开发</h4><p>这是消息控制台前端研发的总入口。它先识别目标项目，再路由到对应的工程子技能：</p><ul><li><code>xconsole</code>：覆盖 RocketMQ、EventBridge、KafkaNext 等现代控制台工程；</li><li><code>recore</code>：覆盖 MNS、AMQP、MQTT、Kafka 等存量框架工程。</li></ul><p><br></p><p>技能中固化 TypeScript、组件复用、请求封装、样式、国际化和验证方式等约束。Agent 不再把所有前端仓库当成同一种 React 项目，而是按真实工程栈选择实现方式。</p><h4 id=\"article-anchor-11\"><code>find-i18n-key</code>：从页面中文反查真实源码</h4><p>控制台代码通常不硬编码中文。用户说“帮我改一下‘创建实例’按钮”时，直接搜索中文往往没有结果。</p><p><br></p><p><code>find-i18n-key</code> 会先从国际化资源反查文案 key，再到代码平台或真实仓库中定位 key 的调用位置。它把“用户看到的页面语言”转换成“工程中的代码坐标”，显著缩短问题定位路径。</p><h4 id=\"article-anchor-12\"><code>frontend-sandbox-auth</code>：解决沙箱页面登录与接口权限</h4><p>前端页面在沙箱中启动后，常见问题不是代码编译，而是预发接口的 Cookie、<code>sec_token</code>、代理和启动参数不匹配。这个技能沉淀了沙箱代理下的认证配置与排查方法，让 Agent 能区分代码缺陷和环境登录问题。</p><h4 id=\"article-anchor-13\"><code>medusa</code>：把国际化变更纳入交付</h4><p>新增文案不是只改一个 key。<code>medusa</code> 覆盖多语言文案查询、写入、批量更新、翻译、审计和发布，让国际化资源和代码变更进入同一条 Agent 工作流。</p><h4 id=\"article-anchor-14\"><code>mgdone-dsl-analyze</code>：把设计稿变成结构化输入</h4><p>面对 MasterGo 设计稿，Agent 不再只依赖截图猜布局，而是通过 MCP 获取设计 DSL，分析组件层级、布局和样式数据，并将原始设计信息归档。设计输入因此从“视觉参考”升级为可以分析和追踪的结构化上下文。</p><h4 id=\"article-anchor-15\"><code>ai-testing</code>：让“页面看起来没问题”变成可执行验证</h4><p>完成编码和部署后，Agent 可以根据任务目标生成 AI Testing 指令，对预发控制台执行 E2E、冒烟或回归验证，并持续跟踪结果。验证通过或失败后还可以发送钉钉通知。AI 验证能力通过对接云原生 SRE 团队的 SQA 平台工具，让 AI 结合任务执行完整上下文自动生成自然语言的验证指令，不仅关注增量变更结果验证通过，同时保证存量页面功能不被影响。</p><p><br></p><p>这使前端任务的终点从“代码已经提交”进一步推进到“页面行为已经验证”。</p><h3 id=\"section-不只会执行-也先学会澄清\">不只会执行，也先学会澄清<a class=\"heading-anchor\" href=\"#section-不只会执行-也先学会澄清\" aria-label=\"链接到本节：不只会执行，也先学会澄清\">#</a></h3><p><code>/brainstorming</code> 用于在复杂实现前澄清目标、约束和验收标准。它体现了一项持续验证的判断：<strong>很多失败不是模型不会写代码，而是在动手前没有把问题理解清楚。</strong> 同时，凭借着生产中人为解决问题的经验积累以及多层上下文知识的来源，在任务执行的事前、事前、事后系统提示词都进行了充分约束，保证任务的执行方向与质量。</p><pre><code>You are a senior engineer who ships production-quality code. Follow these principles on every task:\n** More Prompts ... **</code></pre><p>在任务页输入 <code>/</code>，用户也可以显式选择 SandboxAgent 当前环境中的内置 SKILL。运行时技能清单由平台统一管理和展示，不再要求每个用户手工复制 Prompt。</p><h2 id=\"section-skill-与-cli-mcp-工程方法与平台工具的分工\">SKILL 与 CLI/MCP：工程方法与平台工具的分工<a class=\"heading-anchor\" href=\"#section-skill-与-cli-mcp-工程方法与平台工具的分工\" aria-label=\"链接到本节：SKILL 与 CLI/MCP：工程方法与平台工具的分工\">#</a></h2><p>在 Domino 中，SKILL 与 CLI/MCP 解决的是两个不同层面的问题：</p><ul><li><strong>SKILL 固化工程方法：</strong> 描述什么时候触发、按什么步骤执行、使用哪些检查方式，以及达到什么验收标准。</li><li><strong>CLI/MCP 连接真实平台：</strong> 通过标准化工具接口访问知识、代码、协作、设计和发布系统，把方法落实到实际数据与操作上。</li></ul><p><br></p><p>SKILL 决定“怎么做”，CLI/MCP 决定“能访问什么”。两者结合后，Agent 才能把团队经验转化为可执行、可验证的研发动作，而不是停留在通用建议层面。</p><p><br></p><p>例如“根据设计稿开发一个控制台页面”并不是一次模型生成，而是一连串的工作流：</p><p>1. <code>brainstorming</code> 先澄清交互和验收标准；</p><p>2. <code>mgdone-dsl-analyze</code> 通过 MasterGo MCP 获取结构化设计数据；</p><p>3. <code>mq-frontend-skill</code> 根据工程类型约束实现方式；</p><p>4. <code>find-i18n-key</code> 与 <code>medusa</code> 处理已有及新增文案；</p><ol start=\"5\"><li>SandboxAgent 在真实仓库中编码并运行构建；</li><li>代码进入 CodeReview 和 O2 迭代；</li></ol><p>7. <code>ai-testing</code> 在预发页面验证最终效果。</p><p><br></p><p>模型能力仍然重要，但决定生产可用性的，是模型能否调用真实系统，并遵循团队已经验证过的方法完成闭环。</p><p><br></p><p>平台访问基于 OAuth 认证对接 Aone 开放平台。MCP 工具调用沿用当前授权主体的身份：ConsoleAgent 使用其配置的授权，任务委派后 SandboxAgent 优先使用真实 requester 的授权。服务端不需要保存平台密码，授权失效时也能明确反馈具体平台能力不可用，从而提升跨平台工具调用的安全性与可追踪性。</p><p><br></p><p>目前 Domino 已接入 Aone 协作平台、代码平台、知识平台、变更发布、O2、语雀、MasterGo 等 MCP。系统会按 Agent 角色、用户授权和工具白名单注入必要能力，避免无关工具占用上下文，也避免 Agent 获得不必要的操作范围。</p><h2 id=\"section-从一条钉群问题-到一次可追踪交付\">从一条钉群问题，到一次可追踪交付<a class=\"heading-anchor\" href=\"#section-从一条钉群问题-到一次可追踪交付\" aria-label=\"链接到本节：从一条钉群问题，到一次可追踪交付\">#</a></h2><p>把前面的能力串起来，一次真实协作可以是这样的：</p><p><br></p><p>用户在业务群里问：“实例详情页的消息堆积量为什么和监控页不一致？如果是前端问题帮我修一下。”</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_27daba946e8548308f8c56872f3f3a77.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>ConsoleAgent 首先延续当前群 Session，并检索 KBase 中是否有相关历史结论；随后查询知识库和 CodeWiki，确认指标口径及已有实现。</p><p><br></p><p>如果知识中已经有确定答案，它直接在群里回复并给出依据。如果必须读取最新仓库、复现页面或修改代码，它会查询已注册应用，创建一个单应用任务，并把任务链接发回钉群。</p><p><br></p><p>任务创建时，真实提问者的工号和昵称会作为 requester 透传。后续沙箱、MCP 授权、任务记录和 Dashboard 统计归属实际用户，而不是机器人创建者或内部 CLI 身份。</p><p><br></p><p>SandboxAgent 进入独立沙箱后：</p><ol><li>使用前端项目 SKILL 识别工程规范；</li><li>结合文案反查、代码搜索和真实运行环境定位问题；</li><li>修改代码并完成构建、测试；</li><li>用户在任务对话中确认结果；</li><li>将任务记录分享给评审者，或委派协助者继续处理；</li><li>通过「任务改动提交」完成 Git 推送、CodeReview、O2 变更绑定和部署；</li><li>使用 AI Testing 验证预发页面，最终把结果带回研发协作链路。</li></ol><p><br></p><p>从群聊答疑到代码交付，不再是两个互不相干的系统，而是同一条可以接力、追踪和统计的链路。</p><h3 id=\"section-沙箱工作记录-从个人会话到多人协作\">沙箱工作记录：从个人会话到多人协作<a class=\"heading-anchor\" href=\"#section-沙箱工作记录-从个人会话到多人协作\" aria-label=\"链接到本节：沙箱工作记录：从个人会话到多人协作\">#</a></h3><p>沙箱不是一次性的黑盒执行环境。任务过程中的对话、Agent 工具调用、阶段进度、代码变更、CodeReview、部署状态和页面验证结果，都会持续保存在 Console 中，形成一份可以回看、分享和继续推进的工作记录。</p><p><br></p><p>这使协作方式发生了变化：分享的不只是一个最终链接或一段代码，而是完整的研发上下文。</p><p><br></p><p>对于控制台需求，这种上下文共享尤其重要。接口实现者不必再从零拼接需求描述、页面现象、调用链、相关代码、测试账号和验证结果；任务记录可以一次性把这些信息带齐，让实现者直接进入问题定位和方案落地阶段。需求提出者、产品、前端、后端和测试之间因此少了多轮转述与反复确认，跨角色沟通成本显著下降，交付节奏也更容易保持连续。</p><ul><li>可分享：通过任务或对话链接让评审者了解需求、过程和当前结果；只读场景可以安全查看，不必进入沙箱操作。</li><li>可交接：任务负责人可以指定协助者，并附带当前背景、测试账号、截止时间和后续工作；协助者进入同一任务后可以继续对话和处理代码。</li><li>可追溯：每次输入、Agent 回复、工具结果和阶段状态都留在同一条记录中，方便复盘“为什么这样改”和“问题在哪一步解决”。</li><li>有边界的多人协作：任务创建者、真实 requester、指定协助者和管理员分别拥有不同的读写权限；同一 Session 的执行权也按请求隔离，避免多人查看或插话时误中断彼此的操作。</li></ul><p><br></p><p>当前协作以任务负责人/提问者与指定协助者为核心关系，但底层记录和权限模型已经把 Agent 任务从“个人草稿”提升为团队可以共同阅读、交接和验收的研发空间。</p><h2 id=\"section-这次演进真正改变了什么\">这次演进真正改变了什么<a class=\"heading-anchor\" href=\"#section-这次演进真正改变了什么\" aria-label=\"链接到本节：这次演进真正改变了什么\">#</a></h2><p>如果只看功能列表，这一轮新增的是钉群机器人、记忆、知识库和若干 SKILL。但从工作方式上看，变化更深：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_5713f1fa318a4ad7bb5dc9a0107df521.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>Domino 的定位也随之发生变化：它不再只是一个“云端 CodingAgent 控制台”，而是在尝试建设一套团队级 Agent 基础设施——有长期入口，有共享记忆，有正式知识，有专业方法，也有真正能执行和交付的工作环境。</p><h3 id=\"section-上线后的使用截图\">上线后的使用截图<a class=\"heading-anchor\" href=\"#section-上线后的使用截图\" aria-label=\"链接到本节：上线后的使用截图\">#</a></h3><p>7 月初上线，统计至 7 月 31 日，月内发起 135 代码任务，完成 127 次群内业务答疑，20+ 团队活跃用户，覆盖 60%+ 日常任务答疑和存量页面的开发工作。</p><h4 id=\"article-anchor-22\">业务答疑</h4><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_e0abffd7052a4b92ad0a3c2443fa326e.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h4 id=\"article-anchor-23\">代码任务委派</h4><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ba890ed676084ddbbc98f47d3043fee8.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h4 id=\"article-anchor-24\">代码任务详情以及一站式的研发任务部署与验证</h4><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ab0bce18a7d14848a2b6f04f074140c1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_2fc222734db847d1820032c6548e38cb.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h4 id=\"article-anchor-25\">群内知识纠正与记忆沉淀</h4><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_9809d2dff25a4fdfb76659232cd9a6ef.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-系统核心模块矩阵\">系统核心模块矩阵<a class=\"heading-anchor\" href=\"#section-系统核心模块矩阵\" aria-label=\"链接到本节：系统核心模块矩阵\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_80493ba75f41404b9d3459c96f5950eb.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-一些阶段性认识\">一些阶段性认识<a class=\"heading-anchor\" href=\"#section-一些阶段性认识\" aria-label=\"链接到本节：一些阶段性认识\">#</a></h2><h3 id=\"section-1-agent-要进入工作-而不是让工作迁移到-agent\">1. Agent 要进入工作，而不是让工作迁移到 Agent<a class=\"heading-anchor\" href=\"#section-1-agent-要进入工作-而不是让工作迁移到-agent\" aria-label=\"链接到本节：1. Agent 要进入工作，而不是让工作迁移到 Agent\">#</a></h3><p>钉群不是新增的展示渠道，而是多数问题天然发生的地方。只有进入现有协作入口，Agent 才能覆盖那些用户不会专门创建任务、却每天大量消耗研发时间的问题。</p><h3 id=\"section-2-上下文越多不一定越好-分层比堆叠更重要\">2. 上下文越多不一定越好，分层比堆叠更重要<a class=\"heading-anchor\" href=\"#section-2-上下文越多不一定越好-分层比堆叠更重要\" aria-label=\"链接到本节：2. 上下文越多不一定越好，分层比堆叠更重要\">#</a></h3><p>群 Session、空间记忆、知识库和代码事实有不同可信度与生命周期。把它们混成一段超长 Prompt，不仅浪费 token，也会模糊事实边界。让 Agent 按问题检索、按来源判断，才能让记忆真正提升而不是干扰回答质量。</p><h3 id=\"section-3-团队经验必须从-prompt-走向可维护的-skill\">3. 团队经验必须从 Prompt 走向可维护的 SKILL<a class=\"heading-anchor\" href=\"#section-3-团队经验必须从-prompt-走向可维护的-skill\" aria-label=\"链接到本节：3. 团队经验必须从 Prompt 走向可维护的 SKILL\">#</a></h3><p>一次性的 Prompt 很容易过期，也难以验证。SKILL 将触发条件、工具链和验收方式组织成版本化资产，可以由领域工程师持续维护，并在 ConsoleAgent 与 SandboxAgent 中按需分发。</p><h3 id=\"section-4-无人值守不等于无人负责\">4. 无人值守不等于无人负责<a class=\"heading-anchor\" href=\"#section-4-无人值守不等于无人负责\" aria-label=\"链接到本节：4. 无人值守不等于无人负责\">#</a></h3><p>ConsoleAgent 可以自主检索、答疑和委派任务，SandboxAgent 可以自主编码和验证，但 CodeReview、部署确认和最终发布仍保留人的决策节点。目标不是移除责任人，而是让人从重复执行中退出，把注意力留给业务判断和风险决策。</p><h3 id=\"section-5-生产可用来自边界-而不是-全能\">5. 生产可用来自边界，而不是“全能”<a class=\"heading-anchor\" href=\"#section-5-生产可用来自边界-而不是-全能\" aria-label=\"链接到本节：5. 生产可用来自边界，而不是“全能”\">#</a></h3><p>ConsoleAgent 不直接修改业务代码，SandboxAgent 不默认继承整个群聊，空间记忆不保存个人信息，MCP 按授权和白名单注入。正是这些边界，让 Agent 能力可以被放心地放进真实研发流程。</p>",
+    "headings": [
+      {
+        "id": "section-从上一次实践说起",
+        "level": 2,
+        "text": "从上一次实践说起"
+      },
+      {
+        "id": "section-consoleagent-钉群里的常驻研发入口",
+        "level": 3,
+        "text": "ConsoleAgent：钉群里的常驻研发入口"
+      },
+      {
+        "id": "section-sandboxagent-进入真实仓库完成交付",
+        "level": 3,
+        "text": "SandboxAgent：进入真实仓库完成交付"
+      },
+      {
+        "id": "section-从-聊天记录-到-团队记忆",
+        "level": 2,
+        "text": "从“聊天记录”到“团队记忆”"
+      },
+      {
+        "id": "section-第一层-群级-session-保存局部上下文",
+        "level": 3,
+        "text": "第一层：群级 Session，保存局部上下文"
+      },
+      {
+        "id": "section-第二层-kbase-空间记忆-连接跨群跨会话的历史",
+        "level": 3,
+        "text": "第二层：KBase 空间记忆，连接跨群跨会话的历史"
+      },
+      {
+        "id": "section-第三层-知识库与-codewiki-连接正式事实源",
+        "level": 3,
+        "text": "第三层：知识库与 CodeWiki，连接正式事实源"
+      },
+      {
+        "id": "section-skill-把前端工程经验变成-agent-可执行的方法",
+        "level": 2,
+        "text": "SKILL：把前端工程经验变成 Agent 可执行的方法"
+      },
+      {
+        "id": "section-面向前端控制台的专业能力-最小化跨角色协作门槛",
+        "level": 3,
+        "text": "面向前端控制台的专业能力，最小化跨角色协作门槛"
+      },
+      {
+        "id": "section-不只会执行-也先学会澄清",
+        "level": 3,
+        "text": "不只会执行，也先学会澄清"
+      },
+      {
+        "id": "section-skill-与-cli-mcp-工程方法与平台工具的分工",
+        "level": 2,
+        "text": "SKILL 与 CLI/MCP：工程方法与平台工具的分工"
+      },
+      {
+        "id": "section-从一条钉群问题-到一次可追踪交付",
+        "level": 2,
+        "text": "从一条钉群问题，到一次可追踪交付"
+      },
+      {
+        "id": "section-沙箱工作记录-从个人会话到多人协作",
+        "level": 3,
+        "text": "沙箱工作记录：从个人会话到多人协作"
+      },
+      {
+        "id": "section-这次演进真正改变了什么",
+        "level": 2,
+        "text": "这次演进真正改变了什么"
+      },
+      {
+        "id": "section-上线后的使用截图",
+        "level": 3,
+        "text": "上线后的使用截图"
+      },
+      {
+        "id": "section-系统核心模块矩阵",
+        "level": 2,
+        "text": "系统核心模块矩阵"
+      },
+      {
+        "id": "section-一些阶段性认识",
+        "level": 2,
+        "text": "一些阶段性认识"
+      },
+      {
+        "id": "section-1-agent-要进入工作-而不是让工作迁移到-agent",
+        "level": 3,
+        "text": "1. Agent 要进入工作，而不是让工作迁移到 Agent"
+      },
+      {
+        "id": "section-2-上下文越多不一定越好-分层比堆叠更重要",
+        "level": 3,
+        "text": "2. 上下文越多不一定越好，分层比堆叠更重要"
+      },
+      {
+        "id": "section-3-团队经验必须从-prompt-走向可维护的-skill",
+        "level": 3,
+        "text": "3. 团队经验必须从 Prompt 走向可维护的 SKILL"
+      },
+      {
+        "id": "section-4-无人值守不等于无人负责",
+        "level": 3,
+        "text": "4. 无人值守不等于无人负责"
+      },
+      {
+        "id": "section-5-生产可用来自边界-而不是-全能",
+        "level": 3,
+        "text": "5. 生产可用来自边界，而不是“全能”"
+      }
+    ],
+    "textLength": 7830,
+    "readingMinutes": 18,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1763144",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "66c2e00f0c03f93c0ba3a1fe6572a520e31c8189b0adbbbef7602fcfa4002ab1",
+    "fetchedAt": "2026-11-02T07:08:54.731Z",
+    "checkedAt": "2026-11-02T07:08:54.731Z",
+    "nextRetryAt": "2026-12-02T07:08:54.731Z",
+    "warnings": []
+  }
+}

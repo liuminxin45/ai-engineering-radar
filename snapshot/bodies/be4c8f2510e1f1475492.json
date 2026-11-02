@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "be4c8f2510e1f1475492",
+    "status": "ready",
+    "html": "<p>Agent 的上线只是开始，持续改进和可信赖的交付才是终点。</p><p><br></p><p>我们联合业内主流的开发框架和平台，AgentScope、Dify、LangChain，为大家分享靠谱的 Agent Engineering实践，不再是全家桶式的分享，而是每个城市讲透一个点，并通过实操掌握入门技，一起来 Close Agent Loop。</p><p><span><br></span></p><p><span>Agent 评估和优化，开启</span><strong>北京、深圳、上海</strong><span>三城巡回沙龙，分享靠谱的 Agent Engineering 实践，现场指导实操，扫描下方</span><strong>海报二维码</strong><span>或点击</span><strong>阅读原文</strong><span>报名。</span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_0072d64e0e0f44499a2b7dc008c8af4a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [],
+    "textLength": 239,
+    "readingMinutes": 1,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1758143",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "a837d04920edb3b97211ef6da5436381b40f6e812caeb237ac7076e571564310",
+    "fetchedAt": "2026-11-02T07:09:18.413Z",
+    "checkedAt": "2026-11-02T07:09:18.413Z",
+    "nextRetryAt": "2026-12-02T07:09:18.413Z",
+    "warnings": []
+  }
+}

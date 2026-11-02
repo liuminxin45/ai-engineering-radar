@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "9838a3bf3da5ba7485c1",
+    "status": "ready",
+    "html": "<p>近日，由中国通信标准化协会主办、中国信息通信研究院（以下简称“中国信通院”）承办的 <strong>2026 可信云大会暨首届 Token 云服务大会圆满落幕。</strong></p><p><strong><br></strong></p><p>会上，围绕软件 AI 原生端到端交付的关键环节，中国信息通信研究院持续推进《智能原生软件工程》系列标准建设及测评工作，<strong>并向阿里云全域智能运维平台 STAROps 颁发《智能原生软件工程》系列标准的认证证书，系国内首批。</strong></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_c6e6f63f170e45518f70c02e1a0d064a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>STAROps 是阿里云今年 5 月发布的全域智能运维平台，以智能助手、长期任务与数字员工三种形态，让运维从被动响应告警走向 Agentic Ops，实现自然语言查数、跨域根因定位、7×24 自主巡检，并将专家经验固化为可复用的运维 Skill。目前，STAROps 已在吉利汽车、畅捷通、精臣智慧等多家企业的生产环境中承担 7×24 小时智能运维职责，覆盖从基础设施到业务链路的全栈观测与诊断。</p>",
+    "headings": [],
+    "textLength": 379,
+    "readingMinutes": 1,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1753195",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "f2ab63d5130525535513c4d1e82be5fc7247ec4185df4a944faf3f20f12fbe51",
+    "fetchedAt": "2026-11-02T07:09:38.701Z",
+    "checkedAt": "2026-11-02T07:09:38.701Z",
+    "nextRetryAt": "2026-12-02T07:09:38.701Z",
+    "warnings": []
+  }
+}

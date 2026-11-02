@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "a8fb73c1a59d3537187a",
+    "status": "ready",
+    "html": "<h2 id=\"section-tech-report-github-hugging-face-modelscope-discord\"><a href=\"https://github.com/QwenLM/Qwen3-Coder/blob/main/qwen3_coder_next_tech_report.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Tech Report</a>\n<a href=\"https://github.com/QwenLM/Qwen3-Coder\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>\n<a href=\"https://huggingface.co/collections/Qwen/qwen3-coder-next\" target=\"_blank\" rel=\"noopener noreferrer\">Hugging Face</a>\n<a href=\"https://modelscope.cn/collections/Qwen/Qwen3-Coder-Next\" target=\"_blank\" rel=\"noopener noreferrer\">ModelScope</a>\n<a href=\"https://discord.gg/yPEP2vHTu4\" target=\"_blank\" rel=\"noopener noreferrer\">DISCORD</a><a class=\"heading-anchor\" href=\"#section-tech-report-github-hugging-face-modelscope-discord\" aria-label=\"链接到本节：Tech Report GitHub Hugging Face ModelScope DISCORD\">#</a></h2><h2 id=\"section-introduction\">Introduction<a aria-hidden=\"true\" href=\"#section-introduction\">#</a><a class=\"heading-anchor\" href=\"#section-introduction\" aria-label=\"链接到本节：Introduction#\">#</a></h2><p>We introduce <strong>Qwen3-Coder-Next</strong>, an open-weight language model designed specifically for coding agents and local development.\nBuilt on top of <strong>Qwen3-Next-80B-A3B-Base</strong>, which adopts a novel architecture with hybrid attention and MoE, Qwen3-Coder-Next has been agentically trained at scale on large-scale executable task synthesis, environment interaction, and reinforcement learning, obtaining strong coding and agentic capabilities with significantly lower inference costs.</p><h2 id=\"section-scaling-agentic-training\">Scaling Agentic Training<a aria-hidden=\"true\" href=\"#section-scaling-agentic-training\">#</a><a class=\"heading-anchor\" href=\"#section-scaling-agentic-training\" aria-label=\"链接到本节：Scaling Agentic Training#\">#</a></h2><p>Rather than relying solely on parameter scaling, Qwen3-Coder-Next focuses on <strong>scaling agentic training signals</strong>. We train the model using large collections of <em>verifiable coding tasks</em> paired with executable environments, enabling the model to learn directly from environment feedback. This includes:</p><ul><li>Continued pretraining on code- and agent-centric data</li><li>Supervised fine-tuning on data containing high-quality agent trajectories</li><li>Domain-specialized expert training (e.g., software engineering, QA, web/UX)</li><li>Expert distillation into a single deployment-ready model</li></ul><p>This recipe emphasizes <strong>long-horizon reasoning, tool usage, and recovery from execution failures</strong>, which are essential for real-world coding agents.</p><h2 id=\"section-performance-on-coding-agent-benchmarks\">Performance on Coding Agent Benchmarks<a aria-hidden=\"true\" href=\"#section-performance-on-coding-agent-benchmarks\">#</a><a class=\"heading-anchor\" href=\"#section-performance-on-coding-agent-benchmarks\" aria-label=\"链接到本节：Performance on Coding Agent Benchmarks#\">#</a></h2><h3 id=\"section-agent-centric-benchmark-results\">Agent-Centric Benchmark Results<a aria-hidden=\"true\" href=\"#section-agent-centric-benchmark-results\">#</a><a class=\"heading-anchor\" href=\"#section-agent-centric-benchmark-results\" aria-label=\"链接到本节：Agent-Centric Benchmark Results#\">#</a></h3><p>The figure below summarizes performance across several widely used <strong>coding agent benchmarks</strong>, including SWE-Bench (Verified, Multilingual, and Pro), TerminalBench 2.0, and Aider.</p><figure><img src=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/benchmarks.png\" alt=\"Qwen3 Coder Next Benchmarks\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：Qwen3 Coder Next Benchmarks\"></figure><p>The figure demonstrates that:</p><ul><li>Qwen3-Coder-Next achieves <strong>over 70% on SWE-Bench Verified</strong> using the SWE-Agent scaffold.</li><li>Performance remains competitive across <strong>multilingual settings</strong> and the more challenging <strong>SWE-Bench Pro</strong> benchmark.</li><li>Despite its small active footprint, the model matches or exceeds several much larger open-source models across agent-centric evaluations.</li></ul><p>As shown in the figure below, Our model achieves strong results on SWE-Bench Pro by scaling the number of agent turns, providing evidence that the model excels at long-horizon reasoning in multi-turn agentic tasks.</p><figure><img src=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/swebench_pro_vs_turns.png\" alt=\"SWE-Bench Pro turns\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：SWE-Bench Pro turns\"></figure><h3 id=\"section-efficiency-performance-tradeoff\">Efficiency–Performance Tradeoff<a aria-hidden=\"true\" href=\"#section-efficiency-performance-tradeoff\">#</a><a class=\"heading-anchor\" href=\"#section-efficiency-performance-tradeoff\" aria-label=\"链接到本节：Efficiency–Performance Tradeoff#\">#</a></h3><p>This figure highlights how Qwen3-Coder-Next achieves an improved Pareto tradeoff between efficiency and performance.</p><figure><img src=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/swebench_pro.png\" alt=\"Qwen3 Coder Next Main Image\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：Qwen3 Coder Next Main Image\"></figure><p>This comparison makes the efficiency story clear:</p><ul><li><strong>Qwen3-Coder-Next (3B active)</strong> achieves SWE-Bench-Pro performance comparable to models with <strong>10×–20× more active parameters</strong>.</li><li>Qwen3-Coder-Next sits on a strong Pareto frontier for <strong>cost-effective agent deployment</strong>.</li></ul><h2 id=\"section-demo\">Demo<a aria-hidden=\"true\" href=\"#section-demo\">#</a><a class=\"heading-anchor\" href=\"#section-demo\" aria-label=\"链接到本节：Demo#\">#</a></h2><p>The small and fast coder model can be integrated into different downstream applications, and below we demonstrate showcases of OpenClaw, Qwen Code, Claude Code, Web dev, browser use, Cline, etc.</p><h3 id=\"section-web-dev\">Web Dev<a aria-hidden=\"true\" href=\"#section-web-dev\">#</a><a class=\"heading-anchor\" href=\"#section-web-dev\" aria-label=\"链接到本节：Web Dev#\">#</a></h3><div><div><div><span>Creating a Chat Interface</span>\n<a>Next</a></div><div><div></div><div><figure><p><a href=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/WebDev/lua_terminal.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure></div></div></div><div><div><span>Create an Interactive Game</span>\n<a>Next</a></div><div><div></div><div><figure><p><a href=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/WebDev/chico_paredao.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure></div></div></div><div><div><span>Building an Interactive ASCII Art Drawing Tool</span>\n<a>Next</a></div><div><div></div><div><figure><p><a href=\"http://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/WebDev/particle_system.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure></div></div></div></div><h3 id=\"section-cli\">CLI<a aria-hidden=\"true\" href=\"#section-cli\">#</a><a class=\"heading-anchor\" href=\"#section-cli\" aria-label=\"链接到本节：CLI#\">#</a></h3><div><div><div><span>Desktop Cleanup</span>\n<a>Next</a></div><div><div></div><div><figure><p><a href=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/qwencode/exp-tidy-desktop.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure></div></div></div><div><div><span>Implementing a Web Game: Zombies vs. Plants</span>\n<a>Next</a></div><div><div></div><div><figure><p><a href=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/claudecode/cc_zombine_vs_plants.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure></div></div></div></div><h3 id=\"section-cline\">Cline<a aria-hidden=\"true\" href=\"#section-cline\">#</a><a class=\"heading-anchor\" href=\"#section-cline\" aria-label=\"链接到本节：Cline#\">#</a></h3><div><div><div><span>Creating a Multicolor Animation</span>\n<a>Next</a></div><div><div></div><div><figure><p><a href=\"http://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/cline/multicolor_animation.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure></div></div></div><div><div><span>Building an Interactive Sound Art Tool</span>\n<a>Next</a></div><div><div></div><div><figure><p><a href=\"http://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/cline/sound_art.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure></div></div></div></div><h3 id=\"section-openclaw\">OpenClaw<a aria-hidden=\"true\" href=\"#section-openclaw\">#</a><a class=\"heading-anchor\" href=\"#section-openclaw\" aria-label=\"链接到本节：OpenClaw#\">#</a></h3><div><div><div><span>Web Page for Qwen3 Coder Next</span>\n<a>Next</a></div><div><div></div><div><figure><p><a href=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/openclaw/claw_mix.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure></div></div></div></div><h3 id=\"section-browser-use-agent\">Browser Use Agent<a aria-hidden=\"true\" href=\"#section-browser-use-agent\">#</a><a class=\"heading-anchor\" href=\"#section-browser-use-agent\" aria-label=\"链接到本节：Browser Use Agent#\">#</a></h3><div><div><div><span>Searching for a Product on Amazon</span>\n<a>Next</a></div><div><div></div><div><figure><p><a href=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/bua/amazon.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure></div></div></div><div><div><span>Testing a Website</span>\n<a>Next</a></div><div><div></div><div><figure><p><a href=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/bua/vibe.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure></div></div></div></div><h3 id=\"section-coder-qwen-ai\">coder.qwen.ai<a aria-hidden=\"true\" href=\"#section-coder-qwen-ai\">#</a><a class=\"heading-anchor\" href=\"#section-coder-qwen-ai\" aria-label=\"链接到本节：coder.qwen.ai#\">#</a></h3><div><div><div><span>Building a Gomoku Game</span>\n<a>Next</a></div><div><div></div><div><figure><p><a href=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/code.qwen/gomoku.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure></div></div></div><div><div><span>Writing a Gradio Demo for Qwen3-TTS</span>\n<a>Next</a></div><div><div></div><div><p></p><figure><p><a href=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/code.qwen/tts_develop.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure><figure><p><a href=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/code.qwen/tts_demo.mp4\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></figure><p></p><p><a href=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3-Coder-Next/code.qwen/tts_audio.wav\" target=\"_blank\" rel=\"noopener noreferrer\">在原站查看媒体</a></p></div></div></div></div><h2 id=\"section-summary-and-future-work\">Summary and Future Work<a aria-hidden=\"true\" href=\"#section-summary-and-future-work\">#</a><a class=\"heading-anchor\" href=\"#section-summary-and-future-work\" aria-label=\"链接到本节：Summary and Future Work#\">#</a></h2><p>Qwen3-Coder-Next shows promising results on coding agent benchmarks, providing good speed and reasoning abilities for practical use. While it performs competitively—even compared to some larger open-source models—there is still much room for improvement.</p><p>Looking ahead, we believe strong agent skills—like using tools by itself, handling tough problems, and managing complex tasks—are key for better coding agents. Next, we plan to improve the model’s reasoning and decision-making, support more tasks, and update quickly based on how people use it.</p><h2 id=\"section-citation\">Citation<a aria-hidden=\"true\" href=\"#section-citation\">#</a><a class=\"heading-anchor\" href=\"#section-citation\" aria-label=\"链接到本节：Citation#\">#</a></h2><p>If you find our work helpful feel free to give us a cite.</p><pre tabindex=\"0\"><code>@techreport{qwen_qwen3_coder_next_tech_report,\n  title        = {Qwen3-Coder-Next Technical Report},\n  author       = {{Qwen Team}},\n  url          = {https://github.com/QwenLM/Qwen3-Coder/blob/main/qwen3_coder_next_tech_report.pdf},\n  note         = {Accessed: 2026-02-03}\n}\n</code></pre>",
+    "headings": [
+      {
+        "id": "section-tech-report-github-hugging-face-modelscope-discord",
+        "level": 2,
+        "text": "Tech Report GitHub Hugging Face ModelScope DISCORD"
+      },
+      {
+        "id": "section-introduction",
+        "level": 2,
+        "text": "Introduction#"
+      },
+      {
+        "id": "section-scaling-agentic-training",
+        "level": 2,
+        "text": "Scaling Agentic Training#"
+      },
+      {
+        "id": "section-performance-on-coding-agent-benchmarks",
+        "level": 2,
+        "text": "Performance on Coding Agent Benchmarks#"
+      },
+      {
+        "id": "section-agent-centric-benchmark-results",
+        "level": 3,
+        "text": "Agent-Centric Benchmark Results#"
+      },
+      {
+        "id": "section-efficiency-performance-tradeoff",
+        "level": 3,
+        "text": "Efficiency–Performance Tradeoff#"
+      },
+      {
+        "id": "section-demo",
+        "level": 2,
+        "text": "Demo#"
+      },
+      {
+        "id": "section-web-dev",
+        "level": 3,
+        "text": "Web Dev#"
+      },
+      {
+        "id": "section-cli",
+        "level": 3,
+        "text": "CLI#"
+      },
+      {
+        "id": "section-cline",
+        "level": 3,
+        "text": "Cline#"
+      },
+      {
+        "id": "section-openclaw",
+        "level": 3,
+        "text": "OpenClaw#"
+      },
+      {
+        "id": "section-browser-use-agent",
+        "level": 3,
+        "text": "Browser Use Agent#"
+      },
+      {
+        "id": "section-coder-qwen-ai",
+        "level": 3,
+        "text": "coder.qwen.ai#"
+      },
+      {
+        "id": "section-summary-and-future-work",
+        "level": 2,
+        "text": "Summary and Future Work#"
+      },
+      {
+        "id": "section-citation",
+        "level": 2,
+        "text": "Citation#"
+      }
+    ],
+    "textLength": 4150,
+    "readingMinutes": 10,
+    "sourceId": "qwen-research",
+    "sourceUrl": "https://qwen.ai/blog?id=qwen3-coder-next",
+    "ruleId": "qwen",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "abeefebfa75df0aab258218c27dc55ce752465338499c394cde61c2dfdddd4e9",
+    "fetchedAt": "2026-11-02T06:26:33.949Z",
+    "checkedAt": "2026-11-02T06:26:33.949Z",
+    "nextRetryAt": "2026-12-02T06:26:33.950Z",
+    "warnings": []
+  }
+}

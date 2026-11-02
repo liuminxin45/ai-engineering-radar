@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "23fd1e301b62ec764f18",
+    "status": "ready",
+    "html": "<ul><li>论坛名称：AI 原生研发组织论坛</li><li>时间：9月23日13:30-16:45</li><li>地点：杭州国际博览中心一期，一楼，103B 厅</li></ul><p><br></p><p>Agent 是否真正进入生产链路、承担真实工作，并重新定义组织的流程、角色、协作与度量方式，是研发组织能否迈向 AI Native 的重要分水岭。阿里云 CTO 线正在研发、运维、测试、产品设计和运营等领域积极探索，已经形成一批具有代表性的 AI Native 实践。与此同时，如何由局部实践进一步走向组织层面的系统性变革，仍是一个刚刚展开的课题。</p><p><br></p><p>云栖大会《AI 原生研发组织论坛》甄选的议题，正是这些探索的缩影。我们希望通过来自一线的真实分享，为各行各业建设 AI 原生研发组织提供启发与参考。</p><p><br></p><p>报名地址：<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.3.769d6ffa145feD&amp;enc=2GPm6S%2BIWQQVHgypzO%2BEIA%3D%3D.ebJRjfrMxK6mAeeTPlXG0c9DmycChdrpZH666Dy1rtDrXwOCl5R6Vhhans3DaSUO\" target=\"_blank\" rel=\"noopener noreferrer\">https://yunqi.aliyun.com/2026/agenda</a></p><p><br></p><p>报名后记得订阅，纳入我的日程喔。扫码文末海报二维码加入现场群。</p><p><br></p><p>更多推荐论坛：</p><p>《<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.4.769d6ffa145feD&amp;enc=Wf3qV8VfP9XXn6wJnUhsQQ%3D%3D.HWl%2FLKL3ixBAQdX%2Bf5BOBfaT7VnKJ39uUFkqCW82oC1HbDCTehm6JdqSZCROMRSsBXhH%2F4O3FMrJoETptDiOBLYrSug4Z10fOaMGyzbNA71ozrMQDWtOXLceRfAiWqJ%2BSV7i7UMcXdsxP3Sy10y77b5x2N8r5DSgvZDmxglLU0XepRmzKUAG1Zt1YNL5%2BTjs\" target=\"_blank\" rel=\"noopener noreferrer\">论坛剧透丨当企业有 1000 个智能体后怎么跑怎么管？</a>》</p><h3 id=\"section-趋势和背景\">趋势和背景<a class=\"heading-anchor\" href=\"#section-趋势和背景\" aria-label=\"链接到本节：趋势和背景\">#</a></h3><p>AI 工具的普及，正推动研发组织加速向 AI Native 演进，组织中的流程、角色、协作与度量方式也正在被重新定义。我们将分享阿里云在探索 AI 原生组织中，所遇到的需求、挑战和最新进展，并进一步探讨这些实践正在给组织带来怎样的变化。</p><h3 id=\"section-圆桌对话\">圆桌对话<a class=\"heading-anchor\" href=\"#section-圆桌对话\" aria-label=\"链接到本节：圆桌对话\">#</a></h3><p>AI 原生研发组织的北极星目标是什么，AI 原生度如何连接价值创造与商业成功？当个人产能不等于全局吞吐、工程师从写代码转向定位问题和全局兜底，组织与管理应如何升级？面对变革，个人与组织谁先行动，AI 时代工程师又将如何成长？</p><h3 id=\"section-产品设计进化\">产品设计进化<a class=\"heading-anchor\" href=\"#section-产品设计进化\" aria-label=\"链接到本节：产品设计进化\">#</a></h3><p>当 Agent 进入产品设计，变化不只是多了一个提效工具，更在于从需求洞察、方案构思到设计验证与迭代优化，开始由人与 Agent 共同完成。我们将分享阿里云产品设计全链路的 AI Native 实践，探讨在新的协作方式中，人如何做好目标设定、关键判断与最终决策。</p><h3 id=\"section-代码审查进化\">代码审查进化<a class=\"heading-anchor\" href=\"#section-代码审查进化\" aria-label=\"链接到本节：代码审查进化\">#</a></h3><p>AI 生成代码让 PR 数量快速增长，代码审查的瓶颈也从有没有工具转向是否真正懂业务。我们将分享阿里云如何沉淀领域知识、缺陷模式与历史反馈，为不同代码仓库构建定制化审查能力，让代码审查从通用规则走向专家级判断，并在评测与反馈中持续进化。</p><h3 id=\"section-代码修复进化\">代码修复进化<a class=\"heading-anchor\" href=\"#section-代码修复进化\" aria-label=\"链接到本节：代码修复进化\">#</a></h3><p>报警只是问题处理的起点，真正影响研发效率的，是后续定位、修复与验证能否形成闭环。我们将分享阿里云在代码自动修复方向的 Loop 工程实践，探讨如何让 Agent 从发现问题进一步走向处理问题，并通过持续反馈提升修复能力与工程可靠性。</p><h3 id=\"section-研发协作进化\">研发协作进化<a class=\"heading-anchor\" href=\"#section-研发协作进化\" aria-label=\"链接到本节：研发协作进化\">#</a></h3><p>AI Coding 提升了写代码的速度，却未必同步提升团队的整体交付效率。我们将分享阿里云的人机协作实践：如何让 Agent 承担真实研发任务，让人与 Agent 在研发流程中形成新的分工与协作，并将局部编码提效逐步延伸为端到端交付能力。</p><h3 id=\"section-全域运维进化\">全域运维进化<a class=\"heading-anchor\" href=\"#section-全域运维进化\" aria-label=\"链接到本节：全域运维进化\">#</a></h3><p>Agent 要进入生产环境，首先需要一把可信的尺子。我们将分享阿里云如何把真实故障演练、因果证据、可执行 Ground Truth 与多重质量门禁连接成评测数据生产线，实现从手工造障到可信数据规模化量产，为 Agent 能力迭代提供可重放、可验证的评测基准。</p><h3 id=\"section-组织进化\">组织进化<a class=\"heading-anchor\" href=\"#section-组织进化\" aria-label=\"链接到本节：组织进化\">#</a></h3><p>产品内置 Agent，并不意味着研发组织已经实现 AI Native。我们将分享阿里云真实问题如何经过样本沉淀、评测定位、Agent 修改、多级验证和人工放行，转化为下一版产品能力；并进一步呈现，当产品开始受控自进化，研发、安全、测试与交付团队如何围绕结果重构协作。</p><h3 id=\"section-产品运营进化\">产品运营进化<a class=\"heading-anchor\" href=\"#section-产品运营进化\" aria-label=\"链接到本节：产品运营进化\">#</a></h3><p>传统产品运营依赖固定流程和人工接力，面对多渠道、快节奏的增长任务时容易形成瓶颈。我们将分享阿里云 Agent 数字人团队在产品运营与增长中的实践，探讨多个 Agent 如何围绕目标协同工作，以及产品运营如何从流程驱动逐步走向人机协同和持续进化。</p><p><br></p><p>9月23日下午，欢迎来到杭州国际博览中心一期一楼 103B 厅，与我们一起讨论 Agent 进入生产链路之后，研发组织将如何真正发生变化。</p><p><br></p><p>论坛详细议程如下：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_6530fa3f122d439b98fc849da29aab5d.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [
+      {
+        "id": "section-趋势和背景",
+        "level": 3,
+        "text": "趋势和背景"
+      },
+      {
+        "id": "section-圆桌对话",
+        "level": 3,
+        "text": "圆桌对话"
+      },
+      {
+        "id": "section-产品设计进化",
+        "level": 3,
+        "text": "产品设计进化"
+      },
+      {
+        "id": "section-代码审查进化",
+        "level": 3,
+        "text": "代码审查进化"
+      },
+      {
+        "id": "section-代码修复进化",
+        "level": 3,
+        "text": "代码修复进化"
+      },
+      {
+        "id": "section-研发协作进化",
+        "level": 3,
+        "text": "研发协作进化"
+      },
+      {
+        "id": "section-全域运维进化",
+        "level": 3,
+        "text": "全域运维进化"
+      },
+      {
+        "id": "section-组织进化",
+        "level": 3,
+        "text": "组织进化"
+      },
+      {
+        "id": "section-产品运营进化",
+        "level": 3,
+        "text": "产品运营进化"
+      }
+    ],
+    "textLength": 1648,
+    "readingMinutes": 4,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1764752",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "b83e46ede5e94389e710ed74d432ca637e60b9d6ab970b7c219cbd6e0c4b6eac",
+    "fetchedAt": "2026-11-02T07:08:51.944Z",
+    "checkedAt": "2026-11-02T07:08:51.944Z",
+    "nextRetryAt": "2026-12-02T07:08:51.944Z",
+    "warnings": []
+  }
+}

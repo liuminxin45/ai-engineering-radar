@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "46fe092df68c192b9e1a",
+    "status": "ready",
+    "html": "<p>2026 世界人工智能大会，进入倒计时。</p><p><br></p><p>云的用户，正在从人变成人+Agent。当 Agent 可以 &nbsp;7×24 小时不间断工作，对算力和推理的需求就没有尽头，支撑这一切的云，必须重做一遍。这个判断，阿里云会在 WAIC 现场完整展开。</p><p><br></p><p>今年 WAIC 的主题是“智能伙伴，共创未来”，阿里云给自己的命题更具体：面向 Agentic 时代，全栈就绪。</p><h3 id=\"section-阿里云论坛-agent-native-cloud-专题分享\">阿里云论坛：Agent Native Cloud 专题分享<a class=\"heading-anchor\" href=\"#section-阿里云论坛-agent-native-cloud-专题分享\" aria-label=\"链接到本节：阿里云论坛：Agent Native Cloud 专题分享\">#</a></h3><p>7 月 18 日 9:30，阿里云将在世博中心银厅举办“Agentic Cloud: 智能体时代的基础设施”主题论坛。这个论坛上会聊一个关键问题——当智能体已经能写代码、能查数据、能跑流程了，企业该怎么把它们变成可控、可复用、可协作、会进化的组织资产。</p><p><br></p><p>阿里云的答案是全新升级的&nbsp;Agentic Native Cloud。底层 Agent Infra 给 Agent 一间可信的工位，上层 Agent Desktop 让它坐进真实的业务现场，中间的 Agent Platform，是让智能体成为企业原生能力的关键枢纽。</p><p><br></p><p>阿里云云原生应用平台负责人周琦会在专场讲透这套逻辑：为什么“接入一个 Agent”和“让 Agent 成为企业原生能力”是两回事；控制平面怎么把身份、权限、观测、进化统一起来；以及阿里云自己是怎么用这套体系，让一群智能体长期跑在真实业务里的。</p><p><br></p><p>那些藏在架构背后的细节，比如核心组件如何联动、Leader 怎么带 Worker、智能体的 Loop 靠什么驱动自进化，都将在现场展开。</p><h3 id=\"section-7-17-7-20-waic-现场见\">7/17-7/20，WAIC 现场见<a class=\"heading-anchor\" href=\"#section-7-17-7-20-waic-现场见\" aria-label=\"链接到本节：7/17-7/20，WAIC 现场见\">#</a></h3><p>WAIC 2026 阿里云的完整议程分享给大家。AgentTeams、AgentLoop、STAROps&nbsp;的产品技术负责人大会期间一直会在阿里云 Agent Native Cloud 展区，欢迎大家来当面聊聊，您的企业正处的 Agent 工程化阶段、当前遇到了什么问题和挑战。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_2e5f2453a5984201bf0b14b55e5fa725.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [
+      {
+        "id": "section-阿里云论坛-agent-native-cloud-专题分享",
+        "level": 3,
+        "text": "阿里云论坛：Agent Native Cloud 专题分享"
+      },
+      {
+        "id": "section-7-17-7-20-waic-现场见",
+        "level": 3,
+        "text": "7/17-7/20，WAIC 现场见"
+      }
+    ],
+    "textLength": 806,
+    "readingMinutes": 2,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1748659",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "a2c1616ce8d7cf0adb26d6e33704bf2a73f677dc2937ca64aec7f2e75ea5d76e",
+    "fetchedAt": "2026-11-02T07:09:49.970Z",
+    "checkedAt": "2026-11-02T07:09:49.970Z",
+    "nextRetryAt": "2026-12-02T07:09:49.970Z",
+    "warnings": []
+  }
+}

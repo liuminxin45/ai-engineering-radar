@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "f62ad4ff0a483db6f7e7",
+    "status": "ready",
+    "html": "<p><strong>论坛名称：</strong> AI 实时数据智能</p><p><strong>时间：</strong> 9月22日 13:30-17:00</p><p><strong>地点：</strong> 杭州国际博览中心一期 四楼 404 厅</p><h2 id=\"section-ai-应用规模化生产的关键-正转向实时数据智能\">AI 应用规模化生产的关键，正转向实时数据智能<a class=\"heading-anchor\" href=\"#section-ai-应用规模化生产的关键-正转向实时数据智能\" aria-label=\"链接到本节：AI 应用规模化生产的关键，正转向实时数据智能\">#</a></h2><p>随着 AI 应用进入规模化生产，行业关注点正从模型与算力，转向另一套更关键的系统能力：<strong>持续数据供给、实时上下文、可靠异步通信，以及多源数据到 Agent 的集成能力。</strong></p><p><strong><br></strong></p><p>Demo 很快能跑起来，但一进入真实业务，问题就会迅速暴露：Agent 拿不到持续、实时的数据输入，关键任务缺少可追溯的运行时上下文，长任务在等待、恢复和续跑过程中很容易断链，多源业务数据也难以及时组织成可直接参与决策的依据。<strong>AI 应用能否真正进入生产，越来越取决于实时数据智能与异步通信能力能否跟上。</strong></p><p><strong><br></strong></p><p>围绕这一方向，阿里云云原生团队正在推进一系列关键能力升级：云消息队列 Kafka 版走向<strong>流算湖一体化实时数据平台</strong>，日志服务 SLS 升级为<strong>运行时数据智能引擎</strong>，RocketMQ for AI 以<strong>百万级 LiteTopic</strong> 支撑 Agent 有状态异步通信，AgentBridge 打通<strong>多源数据到 Agent 的集成链路。</strong></p><p><strong><br></strong></p><p>这场论坛聚焦一个具体的问题：<strong>AI 应用如何依托实时数据智能与异步通信能力，真正进入生产？</strong></p><p><strong><br></strong></p><p>如果你关注 Agent 架构、实时数据处理、运行时数据、消息系统或者企业智能化落地，不妨来现场看看。</p><p><br></p><ul><li><strong>报名地址：</strong> <a href=\"https://link.segmentfault.com/?enc=HUM0mFAE1xnPmvX609YyPA%3D%3D.xA5Q165BMmFCj1%2BW9VWLC%2FWEuvOP8p9LzFfaFDzmn0gxRNZfsENyrjxeTIZR2lV0\" target=\"_blank\" rel=\"noopener noreferrer\">https://yunqi.aliyun.com/2026/agenda</a></li><li>报名后记得订阅 <strong>「AI 实时数据智能论坛」</strong>，加入个人日程。</li><li>也欢迎扫描海报二维码加入现场群，获取更多论坛和展区互动信息。</li></ul><h2 id=\"section-六场演讲-拆解从实时数据到-agent-的生产链路\">六场演讲，拆解从实时数据到 Agent 的生产链路<a class=\"heading-anchor\" href=\"#section-六场演讲-拆解从实时数据到-agent-的生产链路\" aria-label=\"链接到本节：六场演讲，拆解从实时数据到 Agent 的生产链路\">#</a></h2><h3 id=\"section-01-一个平台-如何打通实时数据的采集-计算与沉淀\">01 一个平台，如何打通实时数据的采集、计算与沉淀？<a class=\"heading-anchor\" href=\"#section-01-一个平台-如何打通实时数据的采集-计算与沉淀\" aria-label=\"链接到本节：01 一个平台，如何打通实时数据的采集、计算与沉淀？\">#</a></h3><p>阿里云智能集团产品专家刘尧、高级技术专家张美平将分享云消息队列 Kafka 版的升级路径。Kafka 不止于消息，而是正在走向流算湖一体化实时数据平台：既作为统一的实时数据入口，也在平台内提供实时 SQL、实时 Embedding、Streaming Agent 等原生流计算能力，并支持通过 Table Topic 原生入湖。数据进来即算、算完即入湖，一个 Kafka 正在把“采集—计算—沉淀”的实时链路收拢到同一个平台。</p><h3 id=\"section-02-当-agent-成为数据生产者-谁来记录并理解它的运行过程\">02 当 Agent 成为数据生产者，谁来记录并理解它的运行过程？<a class=\"heading-anchor\" href=\"#section-02-当-agent-成为数据生产者-谁来记录并理解它的运行过程\" aria-label=\"链接到本节：02 当 Agent 成为数据生产者，谁来记录并理解它的运行过程？\">#</a></h3><p>阿里云智能集团产品专家何晓峰将分享日志服务 SLS 如何从传统日志分析平台，升级为 Agent 时代的智能数据引擎。当 Agent 进入生产系统，对话、模型调用、工具调用，以及跨轮次、跨服务的任务过程，都在形成新的运行时数据。SLS 围绕 Session 组织运行事实，沉淀过程资产与语义层，让 Agent 的执行过程变得可理解、可追溯、可验证。</p><h3 id=\"section-03-从-demo-到协作平台-企业如何用实时数据驱动智能体协同\">03 从 Demo 到协作平台：企业如何用实时数据驱动智能体协同？<a class=\"heading-anchor\" href=\"#section-03-从-demo-到协作平台-企业如何用实时数据驱动智能体协同\" aria-label=\"链接到本节：03 从 Demo 到协作平台：企业如何用实时数据驱动智能体协同？\">#</a></h3><p>震坤行高级架构师田军权将分享一线 AI Native 实践。面向产研场景，震坤行正在通过实时数据与异步通信驱动人与智能体协作，构建产研智能体协作平台。</p><h3 id=\"section-04-当-agent-开始做长时任务-异步执行为什么成了关键能力\">04 当 Agent 开始做长时任务，异步执行为什么成了关键能力？<a class=\"heading-anchor\" href=\"#section-04-当-agent-开始做长时任务-异步执行为什么成了关键能力\" aria-label=\"链接到本节：04 当 Agent 开始做长时任务，异步执行为什么成了关键能力？\">#</a></h3><p>阿里云智能集团产品专家杨文婷将分享 RocketMQ for AI 面向 Agent 的异步通信架构演进。Agent 进入复杂任务后，系统常态不再是“同步返回”，而是等待、恢复与继续执行。围绕这一变化，RocketMQ for AI 基于 LiteTopic 支撑会话连续性、局部挂起、断点续传与按需调度，让长时任务真正跑起来。阿里巴巴 ATH 事业群 Qoder 技术专家泮圣伟也将带来 Qoder Cloud Agents 的生产实践。</p><h3 id=\"section-05-企业真正缺的-不是更多数据-而是-agent-可用的实时上下文\">05 企业真正缺的，不是更多数据，而是 Agent 可用的实时上下文<a class=\"heading-anchor\" href=\"#section-05-企业真正缺的-不是更多数据-而是-agent-可用的实时上下文\" aria-label=\"链接到本节：05 企业真正缺的，不是更多数据，而是 Agent 可用的实时上下文\">#</a></h3><p>阿里云智能集团产品专家陈涛、高级技术专家沈林将分享全新发布的智能体数据集成平台 AgentBridge。企业 Agent 上生产时，难点往往不在“数据有没有”，而在于分散在多系统中的实时事实、历史记录和业务规则，能不能被组织成 Agent 可直接使用的上下文。AgentBridge 通过统一数据的理解、查询与获取，围绕业务任务组织实时业务时间线，让 Agent 基于更完整、可追溯的依据形成判断。</p><h3 id=\"section-06-当数据分析进入日常工作-人人可用的智能分析还有多远\">06 当数据分析进入日常工作，人人可用的智能分析还有多远？<a class=\"heading-anchor\" href=\"#section-06-当数据分析进入日常工作-人人可用的智能分析还有多远\" aria-label=\"链接到本节：06 当数据分析进入日常工作，人人可用的智能分析还有多远？\">#</a></h3><p>阿里巴巴 ATH 事业群千问办公硬件产品设计师吴嘉程将分享千问办公如何通过 AgentBridge 连接企业多源数据。现场，AgentBridge 还将联合千问办公发布数据分析专家套件，推动智能分析进入日常工作场景。</p><p><br></p><p>9 月 22 日下午，欢迎来到杭州国际博览中心一期四楼 404 厅，与我们一起讨论实时数据智能如何支撑 AI 应用真正进入生产。</p>",
+    "headings": [
+      {
+        "id": "section-ai-应用规模化生产的关键-正转向实时数据智能",
+        "level": 2,
+        "text": "AI 应用规模化生产的关键，正转向实时数据智能"
+      },
+      {
+        "id": "section-六场演讲-拆解从实时数据到-agent-的生产链路",
+        "level": 2,
+        "text": "六场演讲，拆解从实时数据到 Agent 的生产链路"
+      },
+      {
+        "id": "section-01-一个平台-如何打通实时数据的采集-计算与沉淀",
+        "level": 3,
+        "text": "01 一个平台，如何打通实时数据的采集、计算与沉淀？"
+      },
+      {
+        "id": "section-02-当-agent-成为数据生产者-谁来记录并理解它的运行过程",
+        "level": 3,
+        "text": "02 当 Agent 成为数据生产者，谁来记录并理解它的运行过程？"
+      },
+      {
+        "id": "section-03-从-demo-到协作平台-企业如何用实时数据驱动智能体协同",
+        "level": 3,
+        "text": "03 从 Demo 到协作平台：企业如何用实时数据驱动智能体协同？"
+      },
+      {
+        "id": "section-04-当-agent-开始做长时任务-异步执行为什么成了关键能力",
+        "level": 3,
+        "text": "04 当 Agent 开始做长时任务，异步执行为什么成了关键能力？"
+      },
+      {
+        "id": "section-05-企业真正缺的-不是更多数据-而是-agent-可用的实时上下文",
+        "level": 3,
+        "text": "05 企业真正缺的，不是更多数据，而是 Agent 可用的实时上下文"
+      },
+      {
+        "id": "section-06-当数据分析进入日常工作-人人可用的智能分析还有多远",
+        "level": 3,
+        "text": "06 当数据分析进入日常工作，人人可用的智能分析还有多远？"
+      }
+    ],
+    "textLength": 1943,
+    "readingMinutes": 5,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1768656",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "d3148afdaadb399dd115aa39878d128ddcef1231d5a45894758932cdc96a9721",
+    "fetchedAt": "2026-11-02T07:08:49.278Z",
+    "checkedAt": "2026-11-02T07:08:49.278Z",
+    "nextRetryAt": "2026-12-02T07:08:49.278Z",
+    "warnings": []
+  }
+}

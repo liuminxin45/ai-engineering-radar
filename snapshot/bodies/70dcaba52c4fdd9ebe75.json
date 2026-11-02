@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "70dcaba52c4fdd9ebe75",
+    "status": "ready",
+    "html": "<p>作者：浩瀚能源软件团队</p><p><br></p><p><strong>扁鹊三兄弟的启示：</strong></p><p>《鹖冠子》里有一则关于扁鹊的记载。魏文侯问扁鹊：“你们兄弟三人，谁医术最高明？”扁鹊答，大哥最高明，能察神态、治未病，在病症尚未显现时就根除隐患；二哥治欲病，在病症刚露头时施治；而自己只擅长治已病，看似起死回生，因此名声最大。</p><p><br></p><p>这则故事放在今天的高可用建设语境里，依然发人深省。很多团队谈到稳定性，第一反应就是“搞容灾、做多活”，仿佛架构升级就能一劳永逸。但真正经历过大规模生产故障的人都知道：<strong>故障从来不会因为多了一套备份就消失，它只是被推迟、被转移，甚至被放大</strong>。</p><p><br></p><p>浩瀚能源是基于吉利生态的新能源出行智慧能源平台，为全社会新能源汽车用户提供优质补能体验，满足用户在家、在途以及紧急情况下的全场景补能需求。浩瀚能源从成立之初就以解决用户里程焦虑为核心，前瞻视野布局下一代补能网络，成为行业内首个大规模落地&nbsp;800V&nbsp;超快充、无感充电、智慧场站等领先理念的公司。</p><p><br></p><p>在过去一年多里，<strong>与阿里云一起走完了从“救火”到“防火”的完整闭环。</strong> 本文将着重介绍浩瀚能源技术团队是如何将体系建设，架构演进到常态化演练，形成了一套可以复制的高可用治理方法论。本文以浩瀚能源充电业务的异地双活建设为主线，还原这段“治未病”的工程实践。</p><h2 id=\"section-业务背景-一根充电桩背后的稳定性焦虑\">业务背景：一根充电桩背后的稳定性焦虑<a class=\"heading-anchor\" href=\"#section-业务背景-一根充电桩背后的稳定性焦虑\" aria-label=\"链接到本节：业务背景：一根充电桩背后的稳定性焦虑\">#</a></h2><p>如果把新能源车主的一次充电体验拆开看，其实是四个动作——<strong>查、扫、充、付</strong>：查桩、扫码、充电、支付。看似简单的四步，背后是一条横跨&nbsp;IoT&nbsp;设备接入、订单交易、支付清结算、消息推送、数据分析的复杂链路。</p><p><br></p><p>浩瀚能源承接的是吉利体系内多个品牌的公充与家充业务，同时开放服务全社会的新能源车辆。截止2026年8月底，浩瀚能源全国累计上线自建充电站超2,500座，超11,000&nbsp;根，覆盖232座城市，超快充 超1,500&nbsp;座，超6,700根，覆盖213座城市，车企自建800V超快充桩保有量行业领先。</p><p><br></p><p>充电桩业务有几个天然的稳定性挑战：</p><p><br></p><p><strong>第一，强实时性</strong>。车主插枪的那一刻，扫码鉴权、桩状态同步、启动指令下发必须在秒级完成，任何一次超时都意味着一次\"充不上电\"的糟糕体验。</p><p><strong>第二，高并发脉冲</strong>。业务高峰集中在早晚通勤与节假日出行，零点前后的第三方枪状态数据同步会形成瞬时流量尖峰，任何一次消息积压都可能引发雪崩。</p><p><strong>第三，跨地域容灾诉求</strong>。公充业务覆盖全国多个城市，杭州主站一旦出现&nbsp;Region&nbsp;级故障，需要能够把流量快速逃生到备用站点，而不是等待机房恢复。</p><p><strong>第四，历史包袱</strong>。在启动高可用专项之前，浩瀚能源曾经历过多次重大故障，对于一个C端核心应用而言，内部对\"再来一次\"的容忍度极低。</p><p><br></p><p>正是在这样的背景下，浩瀚能源与阿里云在&nbsp;2025&nbsp;年下半年启动了高可用专项治理，目标非常明确——<strong>SLA 99.99%</strong> <strong>，年停机时间不超过&nbsp;52&nbsp;分钟，单次故障恢复时间小于&nbsp;30&nbsp;分钟，RTO≤2&nbsp;分钟，RPO=0</strong>。</p><h2 id=\"section-方法论先行-1-3-5-7-治理体系\">方法论先行：1•3•5•7 治理体系<a class=\"heading-anchor\" href=\"#section-方法论先行-1-3-5-7-治理体系\" aria-label=\"链接到本节：方法论先行：1•3•5•7 治理体系\">#</a></h2><p>在讨论具体架构之前，浩瀚能源团队做了一件更重要的事——<strong>先立方法论</strong>。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_878ee061ef2c4e15934eb5f2b6c4999a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>▲&nbsp;图1：浩瀚能源高可用&nbsp;1·3·5·7&nbsp;治理体系总览</em></p><p><em><br></em></p><p>这套被称为“1·3·5·7”的治理体系，是整个高可用治理体系沉淀的核心框架：</p><ul><li><strong>1&nbsp;个目标</strong>：SLA&nbsp;与&nbsp;1-5-30&nbsp;承诺。1&nbsp;分钟发现、5&nbsp;分钟响应、10&nbsp;分钟恢复用户使用。这个数字不是拍脑袋，而是从“错误预算”倒推出来的——99.99%&nbsp;意味着一年只能宕机&nbsp;52.6&nbsp;分钟，多挂一分钟都在烧预算。</li><li><strong>3&nbsp;个阶段</strong>：容灾能力的阶梯演进。V1&nbsp;同城多活抵御单机房故障，V2&nbsp;异地应用多活实现分钟级跨地域逃生，V3&nbsp;异地多活单元化做到多活对等、无损切换。三个阶段的顺序不能颠倒，因为每一层都要为下一层提供基础设施与组织能力的储备。</li><li><strong>5&nbsp;个步骤</strong>：治理落地的闭环动作。风险梳理（识别单点、容量、依赖、变更问题）→&nbsp;应急流程（预案、SOP、值班、升级机制）→&nbsp;架构治理（解耦、限流、降级、熔断）→&nbsp;双活落地（热备、流量调度、数据同步）→&nbsp;常态演练（红蓝对抗、故障注入、复盘）。</li><li><strong>7&nbsp;个维度</strong>：基础设施、应用架构、数据存储、稳定保障、可观测、应急响应、组织流程。任何一个维度掉队，整套体系都会漏水。</li></ul><p><br></p><p>这套方法论最可贵之处在于，它把“高可用”从一个技术命题，翻译成了一个<strong>可度量、可分工、可迭代</strong>的工程命题。产品、开发、运维、业务负责人用同一组数字谈“够不够稳”，告别了“感觉还挺好”的主观判断。</p><h2 id=\"section-架构演进-从同城多活到异地单元化\">架构演进：从同城多活到异地单元化<a class=\"heading-anchor\" href=\"#section-架构演进-从同城多活到异地单元化\" aria-label=\"链接到本节：架构演进：从同城多活到异地单元化\">#</a></h2><p>方法论落地，需要架构承载。主流容灾多活方案对比（同城多活&nbsp;/&nbsp;异地应用多活&nbsp;/&nbsp;异地多活单元化），浩瀚能源的演进路径清晰地体现了“3&nbsp;阶段”的思想。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_c4eb0ee71d22497988280dde621ab937.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-第一阶段-消除单-az-风险\">第一阶段：消除单 AZ 风险<a class=\"heading-anchor\" href=\"#section-第一阶段-消除单-az-风险\" aria-label=\"链接到本节：第一阶段：消除单 AZ 风险\">#</a></h3><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b6cbf30aad04411ba4b03465bf657066.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>同城多活的核心是“多可用区对等部署”。浩瀚能源选择了杭州&nbsp;Region&nbsp;的三个可用区，把负载均衡&nbsp;NLB、云原生网关、ACK&nbsp;集群、注册中心、云数据库、Redis、消息队列等均做了跨&nbsp;AZ&nbsp;部署。</p><p><br></p><p>流量层用云解析&nbsp;DNS&nbsp;做全局调度，支持&nbsp;Failover&nbsp;故障切换与主备切换；网关层用&nbsp;NLB +&nbsp;云原生&nbsp;API&nbsp;网关的组合，实现双可用区容灾与秒级故障转移；应用层基于&nbsp;ACK&nbsp;托管容器服务，Worker&nbsp;节点跨&nbsp;AZ&nbsp;对等部署；数据层则直接使用云数据库、Redis、MQ&nbsp;的多可用区版本。</p><p><br></p><p>这一步看起来“平平无奇”，但它几乎解决了&nbsp;80%&nbsp;的日常稳定性问题——<strong>绝大多数生产故障都是单点级别的，同城多活足以覆盖。</strong></p><h3 id=\"section-第二阶段-为-region-级故障做准备\">第二阶段：为 Region 级故障做准备<a class=\"heading-anchor\" href=\"#section-第二阶段-为-region-级故障做准备\" aria-label=\"链接到本节：第二阶段：为 Region 级故障做准备\">#</a></h3><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_2e0ed245eadb483a8e724465fe5b026b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>同城多活能抗住机房级故障，但抗不住&nbsp;Region&nbsp;级故障。25&nbsp;年&nbsp;9&nbsp;月，浩瀚能源与阿里云一起启动了异地应用多活的方案设计，核心选型是<strong>阿里云&nbsp;MSHA（Multi-Site High Availability）</strong> 。</p><p><br></p><p>MSHA&nbsp;的能力可以拆解为四层：</p><ul><li><strong>域名与&nbsp;GTM</strong>：DNS&nbsp;解析&nbsp;CNAME&nbsp;到&nbsp;GTM&nbsp;域名，GTM&nbsp;提供基于地理位置和访问延时的访问策略、实时健康检查、手动/自动故障切换。</li><li><strong>流量网关&nbsp;MSE</strong>：在网关层做流量路由的成本最低、对时延影响最小。支持按比例分流到不同&nbsp;Region，也支持基于&nbsp;Header/Cookie/QueryString&nbsp;的精准灰度路由。特殊场景下可以把某个&nbsp;Region&nbsp;流量切到&nbsp;0，实现故障逃生。</li><li><strong>数据库层</strong>：Redis、RDS、ElasticSearch、Lindorm&nbsp;在&nbsp;Region&nbsp;间单向同步，切流过程中支持局部禁写保护，客户端可以做单数据源粒度的读写切换。</li><li><strong>MSHA&nbsp;管控台</strong>：把上述所有组件的切流动作封装成“切流单”，一键执行、全程可观测。</li></ul><h3 id=\"section-第三阶段-异地多活单元化\">第三阶段：异地多活单元化<a class=\"heading-anchor\" href=\"#section-第三阶段-异地多活单元化\" aria-label=\"链接到本节：第三阶段：异地多活单元化\">#</a></h3><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_c2cf31d16d0c483788bb167f62f36ad7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>单元化是浩瀚能源下一阶段的目标。相比双活的“主备切换”，单元化脚骨追求的是<strong>多活对等、无损切换</strong>——流量按单元化规则路由，每个单元都能独立承接完整业务，消息在&nbsp;Region&nbsp;间双向同步，数据库支持日常禁写保护。这一步对应用改造的要求极高，需要在&nbsp;ID&nbsp;生成、数据分片、路由规则上做深度重构。</p><h2 id=\"section-msha-双活落地-七个中间件-五个踩坑点\">MSHA 双活落地：七个中间件、五个踩坑点<a class=\"heading-anchor\" href=\"#section-msha-双活落地-七个中间件-五个踩坑点\" aria-label=\"链接到本节：MSHA 双活落地：七个中间件、五个踩坑点\">#</a></h2><p>方法论和架构图画起来都很美，但真正的工程挑战在落地。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_4623c7c312054f28aa201fb472a381d1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>▲&nbsp;图6：浩瀚能源补能业务异地双活整体架构（接入层&nbsp;/&nbsp;服务层&nbsp;/&nbsp;数据层）</em></p><p><em><br></em></p><p>浩瀚能源补能业务的双活改造，涉及 <strong>7&nbsp;个中间件</strong>：MySQL（全球数据多活）、Redis（Tair&nbsp;全球多活）、MongoDB、PolarDB、Elasticsearch（CCR&nbsp;跨集群复制）、RabbitMQ（全球消息路由）、Kafka（Connector&nbsp;生态集成）。每一个中间件的多活方案都不尽相同，改造工作量巨大。</p><p><br></p><p>从&nbsp;2025&nbsp;年&nbsp;11&nbsp;月&nbsp;MSHA&nbsp;首次上线，到&nbsp;2026&nbsp;年&nbsp;5&nbsp;月补能业务全量切换，中间要趟的问题数不过来。但真正值得记录的，并不是那些改个配置、升个版本就能消掉的琐碎&nbsp;bug，而是几个围绕浩瀚的真实场景反复打磨、最终沉淀成产品能力与最佳实践的“硬骨头”。下面挑出最具代表性的五个。</p><h3 id=\"section-场景-1-一条-dts-任务背后的-成本-与-限流-之辩\">场景 1：一条&nbsp;DTS&nbsp;任务背后的“成本”与“限流”之辩<a class=\"heading-anchor\" href=\"#section-场景-1-一条-dts-任务背后的-成本-与-限流-之辩\" aria-label=\"链接到本节：场景 1：一条 DTS 任务背后的“成本”与“限流”之辩\">#</a></h3><p>双活要同步的数据链路多，DTS&nbsp;任务动辄几十条。出于成本考虑，浩瀚能源在预发环境把三十多个保护规则复用在同一条&nbsp;DTS&nbsp;任务上——这本是精打细算的合理选择。可真正切流时，麻烦来了：高频查询瞬间打满，触发了&nbsp;DTS&nbsp;的限流保护，切流单卡在中间进退不得；与此同时，MSHA&nbsp;侧的锁竞争又叠加进来，让这次切换彻底停滞。</p><p><br></p><p>我们与阿里云一起定位，最后没有简单地“加资源、去流控”，而是把查询节奏收敛到&nbsp;10 QPS——既守住了切流的稳定性，也保住了那条复用任务的成本初衷。稳定性与成本的平衡，从来不是二选一，而是要找到那个刚刚好的节奏。</p><h3 id=\"section-场景-2-当-延迟建链-遇上-提前建链\">场景 2：当“延迟建链”遇上“提前建链”<a class=\"heading-anchor\" href=\"#section-场景-2-当-延迟建链-遇上-提前建链\" aria-label=\"链接到本节：场景 2：当“延迟建链”遇上“提前建链”\">#</a></h3><p>阿里云&nbsp;MSHA&nbsp;为了兼容更多场景，把数据库的实际建链动作刻意往后延；而浩瀚自研链路里的&nbsp;ShardingSphere&nbsp;组件，习惯在启动阶段就提前把连接建好。两种设计各有道理，却在压测的高并发下正面相撞，连接池被瞬间打穿，报错&nbsp;SQLSTATE(08003), SQLNonTransientConnectionException: Can't call rollback，压测根本跑不满。</p><p>排查清楚这不是谁的&nbsp;bug，而是两套建链时机的设计不匹配后，阿里云产品侧没有要求浩瀚去改自己的分库分表框架，而是专门开放了一个启动参数&nbsp;-Dmsha.db.connection.check=true，把“什么时候建链”的控制权交回业务侧。</p><h3 id=\"section-场景-3-一次-503-牵出双层网关的-串流-真相\">场景 3：一次&nbsp;503，牵出双层网关的“串流”真相<a class=\"heading-anchor\" href=\"#section-场景-3-一次-503-牵出双层网关的-串流-真相\" aria-label=\"链接到本节：场景 3：一次 503，牵出双层网关的“串流”真相\">#</a></h3><p>某日，一批普通的&nbsp;7&nbsp;层域名突然大面积报&nbsp;503。第一反应很容易归到“域名转发触发了底层限流”，但我们没有停在表象。顺着流量路径一层层往下扒，真正的根因浮出水面：从单层网关升级到双层网关后，第一层网关是通过外网负载均衡去调用第二层网关的，而这一层工作在公网模式；当客户端&nbsp;IP&nbsp;数量不多、后端又挂着多个&nbsp;RS&nbsp;时，同一个五元组的请求会经过不同的&nbsp;RS，产生串流，建连随之异常，最终表现为&nbsp;503。</p><p><br></p><p>有意思的是，CLB&nbsp;和内网&nbsp;NLB&nbsp;因为工作模式不同，根本不会有这个问题。这也解释了为什么故障只在特定链路上复现。定位清楚后，运维重新梳理了网关间的调用与负载均衡模式，503&nbsp;应声消失。越是复杂的架构，越要警惕“看起来像”的根因；真正的答案，往往藏在两层网关之间的那段链路里。</p><h3 id=\"section-场景-4-waf-该站在哪一层\">场景 4：WAF&nbsp;该站在哪一层<a class=\"heading-anchor\" href=\"#section-场景-4-waf-该站在哪一层\" aria-label=\"链接到本节：场景 4：WAF 该站在哪一层\">#</a></h3><p>同样源于单层到双层网关的架构升级。接入&nbsp;MSHA&nbsp;后，WAF&nbsp;被放在了&nbsp;MSHA&nbsp;网关到业务网关之间的内网位置。平时相安无事，可一旦遇到流量攻击，问题就暴露了：由于经过&nbsp;WAF&nbsp;的转发&nbsp;IP&nbsp;只是固定的几个内网地址，WAF&nbsp;的&nbsp;IP&nbsp;限流被率先触发，攻击还没拦住，正常用户的流量反而先受了损。</p><p><br></p><p>我们重新审视了双层网关下的安全防护位置，正确做法应当是把&nbsp;WAF&nbsp;提到第一层容灾网关之前，让它直接承接外部流量；或者把原本的&nbsp;WAF&nbsp;切换成从其他负载均衡接收流量的模式。运维据此把&nbsp;WAF&nbsp;前移，安全防护回到了它该在的位置。架构升级不是把老组件原样搬进新拓扑，安全能力的位置，必须跟着流量入口一起重新设计。</p><h3 id=\"section-场景-5-gtm-与-dns-为什么不能共用一个域名\">场景 5：GTM&nbsp;与&nbsp;DNS，为什么不能共用一个域名<a class=\"heading-anchor\" href=\"#section-场景-5-gtm-与-dns-为什么不能共用一个域名\" aria-label=\"链接到本节：场景 5：GTM 与 DNS，为什么不能共用一个域名\">#</a></h3><p>当我们切流到上海后，发现仍有小部分流量顽固地打回杭州。一系列排查后发现，GTM&nbsp;的域名解析权重偶发被&nbsp;DNS&nbsp;解析权重覆盖。根因藏在&nbsp;DNS&nbsp;的解析机制里：GTM&nbsp;配的是&nbsp;CNAME&nbsp;类型记录，只会应答针对该域名的&nbsp;A、AAAA、CNAME&nbsp;查询；一旦有&nbsp;TXT&nbsp;等其他类型的查询，就会透传到公网权威解析，而公网权威上又恰好配了同名&nbsp;CNAME，于是应答了公网权威的结果并被&nbsp;LocalDNS&nbsp;缓存下来。等再查这个域名的&nbsp;A&nbsp;记录时，LocalDNS&nbsp;命中了那条被缓存的公网&nbsp;CNAME，解析自然就乱了。</p><p><br></p><p>结论朴素却关键：GTM&nbsp;和DNS&nbsp;不要配置相同的域名。运维据此关闭了冲突的&nbsp;DNS&nbsp;解析，流量调度恢复干净。这类问题不会写在产品手册里，它是两个成熟能力叠加时才浮现的边界，只有在真实切流里才抓得住。</p><p><br></p><p>以上&nbsp;5&nbsp;个场景，每一个背后都是一次次深夜排查、一次次跨团队协作、一次次产品迭代。<strong>MSHA&nbsp;的生产稳定版本也从&nbsp;1.5.6&nbsp;一路演进到&nbsp;1.5.14</strong>，这不是阿里云单方面的产品升级，而是浩瀚能源与阿里云产研团队在真实生产场景里共同打磨出来的版本。</p><h2 id=\"section-生产演练-2026-06-04-的那-26-分钟\">生产演练：2026-06-04 的那 26 分钟<a class=\"heading-anchor\" href=\"#section-生产演练-2026-06-04-的那-26-分钟\" aria-label=\"链接到本节：生产演练：2026-06-04 的那 26 分钟\">#</a></h2><p>架构建好了，坑踩平了，最后一步是<strong>验证</strong>。</p><p><br></p><p>2026&nbsp;年&nbsp;6&nbsp;月&nbsp;4&nbsp;日晚上&nbsp;21:00，浩瀚能源在生产环境做了一次真实的双活逃生演练。演练目标是模拟杭州数据中心业务集群故障，验证&nbsp;1-5-30&nbsp;目标是否达成。</p><p>时间线如下：</p><p><br></p><ul><li><strong>21:01</strong> 测试团队验证杭州地区相关业务功能可用性。</li><li><strong>21:03</strong> 验证通过。</li><li><strong>21:07</strong> 运维进入&nbsp;K8s&nbsp;集群控制台，对智慧场站服务做缩容处理，容器数销毁成&nbsp;0。</li><li><strong>21:09</strong> 收到相关业务告警，开发排查阿里云&nbsp;SLS，确认服务调用链路异常。</li><li><strong>21:10</strong> 测试复现业务故障，确认业务不可用。</li><li><strong>21:14</strong> 应急小组决定因杭州集群短时间无法恢复，执行逃生&nbsp;SOP&nbsp;流程。</li><li><strong>21:15</strong> 运维提交阿里云&nbsp;MSHA&nbsp;逃生切换工单（杭州区逃生到上海区）。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_9fdd17f4e72a4228be1e74bd8ff8358b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>▲&nbsp;图7：2026-06-04&nbsp;生产演练&nbsp;MSHA&nbsp;逃生切换工单（杭州→上海）</em></p><p><em><br></em></p><ul><li><strong>21:17</strong> 阿里云逃生切换工单流程执行完成，上海区服务日志有流量正常进入。</li><li><strong>21:18</strong> 测试验证上海区业务功能一切正常。</li><li><strong>21:26</strong> 杭州区故障恢复，运维对智慧场站服务做扩容处理。</li><li><strong>21:30</strong> 服务流量正常切回杭州。</li><li><strong>21:35</strong> 测试验证杭州区业务功能一切正常。</li><li><strong>22:30</strong> 演练复盘会议与总结。</li></ul><p><strong><br></strong></p><p><strong>5&nbsp;分钟定位，2&nbsp;分钟切流，整体过程监控正常，完全符合&nbsp;1530&nbsp;目标</strong>。这次演练的意义不仅在于验证了架构，更在于验证了组织——从告警触发到应急决策，从工单提交到流量切换，每一个环节都有明确的责任人和&nbsp;SOP。</p><h2 id=\"section-那些被-预防-的故障\">那些被“预防”的故障<a class=\"heading-anchor\" href=\"#section-那些被-预防-的故障\" aria-label=\"链接到本节：那些被“预防”的故障\">#</a></h2><p>高可用建设的价值，往往体现在“没有发生的故障”上。</p><h3 id=\"section-案例-1-nlb-故障-3az-改造救场\">案例&nbsp;1：NLB&nbsp;故障——3AZ&nbsp;改造救场<a class=\"heading-anchor\" href=\"#section-案例-1-nlb-故障-3az-改造救场\" aria-label=\"链接到本节：案例 1：NLB 故障——3AZ 改造救场\">#</a></h3><p>某日下午，杭州地区阿里云&nbsp;NLB&nbsp;服务发生故障，I、J&nbsp;两个可用区不可用。因为浩瀚能源提前对&nbsp;NLB&nbsp;做了&nbsp;3AZ&nbsp;改造（I、J、K），K&nbsp;区仍然健康，充电服务对外完全正常。如果当初只做了双&nbsp;AZ，这次故障就是一次生产事故。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_8c2113396c794dacb72beecd6d76d456.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>▲&nbsp;图8：NLB 3AZ&nbsp;改造成功抵御杭州&nbsp;I/J&nbsp;可用区故障</p><h3 id=\"section-案例-2-ecs-故障-msha-流量调度自愈\">案例&nbsp;2：ECS&nbsp;故障——MSHA&nbsp;流量调度自愈<a class=\"heading-anchor\" href=\"#section-案例-2-ecs-故障-msha-流量调度自愈\" aria-label=\"链接到本节：案例 2：ECS 故障——MSHA 流量调度自愈\">#</a></h3><p>某天晚上阿里云&nbsp;ECS&nbsp;故障，导致数十万设备同时发生重连。团队紧急启动应急响应机制和双活架构流量调度措施，让数十万&nbsp;QPS&nbsp;的用户流量非常平稳地快速调度到了另外几台&nbsp;ECS&nbsp;服务器上，<strong>在用户无感的情况下实现了系统自愈</strong>。自动切流用户无感，满足集团数字化质量&nbsp;1530&nbsp;目标。</p><h3 id=\"section-案例-3-rabbitmq-流量暴涨-云上弹性扩容\">案例&nbsp;3：RabbitMQ&nbsp;流量暴涨——云上弹性扩容<a class=\"heading-anchor\" href=\"#section-案例-3-rabbitmq-流量暴涨-云上弹性扩容\" aria-label=\"链接到本节：案例 3：RabbitMQ 流量暴涨——云上弹性扩容\">#</a></h3><p>某天&nbsp;00:00:01，因业务提速导致三方枪状态数据流量激增，触发&nbsp;RabbitMQ&nbsp;的弹性扩容。如果&nbsp;RabbitMQ&nbsp;还是采用自建方案，这波大流量大概率会使整个集群雪崩，从而导致充电核心流程不可用。<strong>把中间件上云，本质上是用云的弹性能力对冲业务的脉冲流量</strong>。</p><h3 id=\"section-案例-4-全天候无损发布\">案例&nbsp;4：全天候无损发布<a class=\"heading-anchor\" href=\"#section-案例-4-全天候无损发布\" aria-label=\"链接到本节：案例 4：全天候无损发布\">#</a></h3><p>借助&nbsp;MSE&nbsp;的无损上下线能力，浩瀚能源理论上可以在任何时候对&nbsp;C&nbsp;端核心服务做生产发布。过去为了避开业务高峰，发布往往安排在凌晨，研发团队通宵作战是常态；现在发布计划的安排更加从容，成功避免了因通宵发布带来的一系列负面影响。</p><h2 id=\"section-高可用建设的三个认知升级\">高可用建设的三个认知升级<a class=\"heading-anchor\" href=\"#section-高可用建设的三个认知升级\" aria-label=\"链接到本节：高可用建设的三个认知升级\">#</a></h2><p>回顾整个项目，有三个认知层面的升级值得分享。</p><p><br></p><p><strong>第一，高可用不是产品，是体系</strong>。</p><p>早期团队也认为“买个多活产品就能解决稳定性问题”。但真正落地后发现，MSHA&nbsp;只是体系中的一环，它需要配合&nbsp;GTM、MSE、DTS、ARMS、WAF&nbsp;等十几个云产品，更需要配合应用改造、组织流程、演练机制。<strong>任何试图用一个产品解决所有稳定性问题的想法，都是危险的</strong>。</p><p><br></p><p><strong>第二，演练比架构更重要</strong>。</p><p>架构图画得再漂亮，如果没有经过真实演练的检验，都是纸面能力。浩瀚能源在预发环境做了多轮演练，在生产环境做了&nbsp;2&nbsp;次真实逃生，每一次演练都会暴露新的问题——DTS&nbsp;限流、锁竞争、控制台崩溃、GTM&nbsp;权重冲突……<strong>这些问题如果在真实故障时才第一次出现，代价将是灾难性的</strong>。</p><p><br></p><p><strong>第三，与云厂商共建，而不是单向采购</strong>。</p><p>MSHA&nbsp;从&nbsp;1.5.6&nbsp;到&nbsp;1.5.14&nbsp;的版本演进，浩瀚能源贡献了至少&nbsp;13&nbsp;个生产场景&nbsp;Bug&nbsp;的修复建议。这种“客户提出场景&nbsp;→&nbsp;产研快速响应&nbsp;→&nbsp;版本迭代验证&nbsp;→反哺产品能力”的正循环，是传统甲乙方采购模式很难实现的。<strong>云原生时代，客户与云厂商的关系正在从“买卖”走向“共建”</strong> 。</p><h2 id=\"section-从异地双活到智能运维\">从异地双活到智能运维<a class=\"heading-anchor\" href=\"#section-从异地双活到智能运维\" aria-label=\"链接到本节：从异地双活到智能运维\">#</a></h2><p>浩瀚能源的高可用建设还在路上。下一阶段的重点有四个方向：</p><ul><li><strong>DevOps&nbsp;能力升级</strong>：实现需求、代码、CI/CD、测试、发布、变更等流程全程可观测，将代码分支规范的治理落实为平台能力。</li><li><strong>持续推进异地多活单元化</strong>：基于&nbsp;MSHA&nbsp;产品能力，对核心服务做异地多活的单元化改造，从&nbsp;V2&nbsp;迈向&nbsp;V3。</li><li><strong>质量文化建设</strong>：团队建立质量第一观念，从研发到运维，人人参与质量护航工作。</li><li><strong>AI&nbsp;场景化告警</strong>：借助&nbsp;AI&nbsp;能力细化业务流程，进行颗粒度更细的业务异常告警，做到比三方更快感知对方的系统异常，实现更智能、更高效的异常感知能力。</li></ul><h2 id=\"section-治未病-是一种工程文化\">治未病，是一种工程文化<a class=\"heading-anchor\" href=\"#section-治未病-是一种工程文化\" aria-label=\"链接到本节：治未病，是一种工程文化\">#</a></h2><p>高可用建设的最高境界，往往不是故障发生时的力挽狂澜，而是故障从未发生时的波澜不惊。浩瀚能源高可用改造过程中最大的收获不是某个具体的架构方案，也不是某个产品的版本升级，而是<strong>把“治未病”从一句口号，变成了一套可执行、可度量、可持续迭代的工程文化</strong>。</p><p><br></p><p>这套文化，值得每一个正在或即将面对稳定性挑战的团队借鉴。</p>",
+    "headings": [
+      {
+        "id": "section-业务背景-一根充电桩背后的稳定性焦虑",
+        "level": 2,
+        "text": "业务背景：一根充电桩背后的稳定性焦虑"
+      },
+      {
+        "id": "section-方法论先行-1-3-5-7-治理体系",
+        "level": 2,
+        "text": "方法论先行：1•3•5•7 治理体系"
+      },
+      {
+        "id": "section-架构演进-从同城多活到异地单元化",
+        "level": 2,
+        "text": "架构演进：从同城多活到异地单元化"
+      },
+      {
+        "id": "section-第一阶段-消除单-az-风险",
+        "level": 3,
+        "text": "第一阶段：消除单 AZ 风险"
+      },
+      {
+        "id": "section-第二阶段-为-region-级故障做准备",
+        "level": 3,
+        "text": "第二阶段：为 Region 级故障做准备"
+      },
+      {
+        "id": "section-第三阶段-异地多活单元化",
+        "level": 3,
+        "text": "第三阶段：异地多活单元化"
+      },
+      {
+        "id": "section-msha-双活落地-七个中间件-五个踩坑点",
+        "level": 2,
+        "text": "MSHA 双活落地：七个中间件、五个踩坑点"
+      },
+      {
+        "id": "section-场景-1-一条-dts-任务背后的-成本-与-限流-之辩",
+        "level": 3,
+        "text": "场景 1：一条 DTS 任务背后的“成本”与“限流”之辩"
+      },
+      {
+        "id": "section-场景-2-当-延迟建链-遇上-提前建链",
+        "level": 3,
+        "text": "场景 2：当“延迟建链”遇上“提前建链”"
+      },
+      {
+        "id": "section-场景-3-一次-503-牵出双层网关的-串流-真相",
+        "level": 3,
+        "text": "场景 3：一次 503，牵出双层网关的“串流”真相"
+      },
+      {
+        "id": "section-场景-4-waf-该站在哪一层",
+        "level": 3,
+        "text": "场景 4：WAF 该站在哪一层"
+      },
+      {
+        "id": "section-场景-5-gtm-与-dns-为什么不能共用一个域名",
+        "level": 3,
+        "text": "场景 5：GTM 与 DNS，为什么不能共用一个域名"
+      },
+      {
+        "id": "section-生产演练-2026-06-04-的那-26-分钟",
+        "level": 2,
+        "text": "生产演练：2026-06-04 的那 26 分钟"
+      },
+      {
+        "id": "section-那些被-预防-的故障",
+        "level": 2,
+        "text": "那些被“预防”的故障"
+      },
+      {
+        "id": "section-案例-1-nlb-故障-3az-改造救场",
+        "level": 3,
+        "text": "案例 1：NLB 故障——3AZ 改造救场"
+      },
+      {
+        "id": "section-案例-2-ecs-故障-msha-流量调度自愈",
+        "level": 3,
+        "text": "案例 2：ECS 故障——MSHA 流量调度自愈"
+      },
+      {
+        "id": "section-案例-3-rabbitmq-流量暴涨-云上弹性扩容",
+        "level": 3,
+        "text": "案例 3：RabbitMQ 流量暴涨——云上弹性扩容"
+      },
+      {
+        "id": "section-案例-4-全天候无损发布",
+        "level": 3,
+        "text": "案例 4：全天候无损发布"
+      },
+      {
+        "id": "section-高可用建设的三个认知升级",
+        "level": 2,
+        "text": "高可用建设的三个认知升级"
+      },
+      {
+        "id": "section-从异地双活到智能运维",
+        "level": 2,
+        "text": "从异地双活到智能运维"
+      },
+      {
+        "id": "section-治未病-是一种工程文化",
+        "level": 2,
+        "text": "治未病，是一种工程文化"
+      }
+    ],
+    "textLength": 7197,
+    "readingMinutes": 16,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1775335",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "68b63160ce8ba709a1406f1cc4794417f0db16e2b135266e19e27755dbfb9189",
+    "fetchedAt": "2026-11-02T07:08:42.708Z",
+    "checkedAt": "2026-11-02T07:08:42.708Z",
+    "nextRetryAt": "2026-12-02T07:08:42.708Z",
+    "warnings": []
+  }
+}

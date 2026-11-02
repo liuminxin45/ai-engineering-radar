@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "fc2b37a024b570d99436",
+    "status": "ready",
+    "html": "\n<h3 id=\"section-背景\">背景<a class=\"heading-anchor\" href=\"#section-背景\" aria-label=\"链接到本节：背景\">#</a></h3>\n<p>2026年，Skill 的热度不减，已成为 AI 辅助编程领域的标配。在日常研发中，无论是沉淀个人经验，还是将团队的优秀范本标准化，将知识“蒸馏”为 Skill 已是大家的常规操作。但随之而来的问题是：一个 Skill 的“好坏”，究竟由谁定义？评判它的标准又是什么？</p>\n<p>带着这个困惑，我近期翻阅了大量技术资料，也一直在寻找一套可量化的评测体系。巧合的是，阿里近期开源了一款名为 Skill-Up 的测评工具——它专门面向 Agent Skill 开发者，支持在 Claude Code、Codex、Qoder CLI 等真实 Agent Engine 环境中验证 Skill 的功能正确性，并可将失败用例转化为精准的修复指引，同时支持本地与 CI 环境的持续回归。</p>\n<p>于是，就有了下面这次实践。</p>\n<h3 id=\"section-skill-up是什么\">Skill-up是什么<a class=\"heading-anchor\" href=\"#section-skill-up是什么\" aria-label=\"链接到本节：Skill-up是什么\">#</a></h3>\n<p>skill-up 是一个面向 Agent Skill 的命令行评测工具。<br><span>具体目录结构如下</span></p>\n<pre><code>my-skill/\n  SKILL.md              # 你的 Skill 定义\n  evals/                # 评测目录\n    eval.yaml           # 评测入口配置\n    cases/              # 用例目录\n      basic-test.yaml   # 一个评测用例\n      edge-case.yaml    # 另一个评测用例\n    fixtures/           # 测试资源（可选）\n      repos/            # 仓库模板\n      scripts/          # 评估脚本\n</code></pre>\n<h3 id=\"section-安装方式\">安装方式<a class=\"heading-anchor\" href=\"#section-安装方式\" aria-label=\"链接到本节：安装方式\">#</a></h3>\n<p><span>使用 Skill-upper，也是推荐的方式</span></p>\n<pre><code># Codex，全局安装\nnpx skills add https://github.com/alibaba/skill-up/tree/main/skills/skill-upper -g -a codex -y\n</code></pre>\n<p><span>也可以使用命令行安装，那你将可以使用纯命令运行，也很爽</span></p>\n<pre><code>curl -fsSL https://raw.githubusercontent.com/alibaba/skill-up/main/install.sh | bash\n</code></pre>\n<p>关键命令</p>\n<pre><code># 运行所有用例\nskill-up run ./evals/eval.yaml\n\n# 只运行匹配的用例\nskill-up run ./evals/eval.yaml --include-case-name \"basic-*\"\n\n# 排除特定用例\nskill-up run ./evals/eval.yaml --exclude-case-name \"*-old\" --exclude-case-name \"*-deprecated\"\n\n# 指定 Engine 和模型\nskill-up run ./evals/eval.yaml --engine codex --model openai/gpt-4\n\n# 临时覆盖用例并行数\nskill-up run ./evals/eval.yaml --parallelism 4\n\n# 启用基线对比\nskill-up run ./evals/eval.yaml --baseline\n\n# 生成多种格式报告\nskill-up run ./evals/eval.yaml --format json --format html --format junit\n\n# 连续运行 3 轮，产物分别写入 iteration-1/ 到 iteration-3/\nskill-up run ./evals/eval.yaml --iteration 3\n\n# 自动检测模式（直接消费 Anthropic evals.json）\nskill-up run --auto\nskill-up run --auto --engine codex\nskill-up run ./my-skill/ --auto\n</code></pre>\n<p><span>如此代表安装成功<br><img alt=\"image.png\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-08-23-09-42L0IpPTlizfhXwfR.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"><br><span>通过codex也能唤起<br><img alt=\"image.png\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-08-01-12-420Wn6hF1pjPUdJOy.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></span></span></p>\n<h3 id=\"section-创建并运行第一组评测\">创建并运行第一组评测<a class=\"heading-anchor\" href=\"#section-创建并运行第一组评测\" aria-label=\"链接到本节：创建并运行第一组评测\">#</a></h3>\n<p><img alt=\"image.png\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-08-23-09-46ngZ10q46a8ipXTykL.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"><br><span>Demo测评的报告结果<br><img alt=\"image.png\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-08-03-10-33k7OpRecLK6LkUSk.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：image.png\"></span></p>\n\n",
+    "headings": [
+      {
+        "id": "section-背景",
+        "level": 3,
+        "text": "背景"
+      },
+      {
+        "id": "section-skill-up是什么",
+        "level": 3,
+        "text": "Skill-up是什么"
+      },
+      {
+        "id": "section-安装方式",
+        "level": 3,
+        "text": "安装方式"
+      },
+      {
+        "id": "section-创建并运行第一组评测",
+        "level": 3,
+        "text": "创建并运行第一组评测"
+      }
+    ],
+    "textLength": 1595,
+    "readingMinutes": 4,
+    "sourceId": "jd-cnblogs",
+    "sourceUrl": "https://www.cnblogs.com/Jcloud/p/22679409",
+    "ruleId": "cnblogs",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "9a661434304a512b536606f165b8c089a1b493f36f564e323d928f40c2df973f",
+    "fetchedAt": "2026-11-02T06:25:07.391Z",
+    "checkedAt": "2026-11-02T06:25:07.391Z",
+    "nextRetryAt": "2026-12-02T06:25:07.391Z",
+    "warnings": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "d140242e2be28ef06443",
+    "status": "unavailable",
+    "html": "",
+    "headings": [],
+    "textLength": 0,
+    "readingMinutes": 0,
+    "sourceId": "huawei-csdn",
+    "sourceUrl": "https://blog.csdn.net/devcloud/article/details/168877926",
+    "engineVersion": "radar-reader-1",
+    "checkedAt": "2026-11-02T07:55:47.068Z",
+    "nextRetryAt": "2026-11-09T07:55:47.068Z",
+    "error": "RSSHub 未取得 CSDN 正文，仅返回摘要（原站可能仍受 521 限制）。",
+    "warnings": []
+  }
+}

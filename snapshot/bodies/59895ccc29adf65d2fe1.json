@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "59895ccc29adf65d2fe1",
+    "status": "ready",
+    "html": "<p>作者：张硕</p><p><br></p><p>近日，由阿里云消息团队发表的 <strong>Apache RocketMQ</strong> 创新论文 <strong>《面向大规模多智能体协作的会话级可重放事件流》</strong>（英文原名：RocketMQ-A2A: Reliable Session-Level Replayable Event Streams for Large-Scale Multi-Agent Collaboration）入选&nbsp;FSE 2026 Industry Papers Track。</p><p><br></p><p>ACM FSE（The ACM International Conference on the Foundations of Software Engineering）是享有盛誉的国际学术会议，被《中国计算机学会推荐国际学术会议和期刊目录》列为 CCF-A 类软件工程顶级会议。FSE 2026 于 2026 年 7 月 5 日至 9 日在加拿大蒙特利尔举行，Industry Papers Track 重点关注软件工程研究在真实工业场景中的创新与应用。</p><p><br></p><p>这篇论文聚焦 <strong>多智能体系统（Multi-Agent System，简称 MAS）</strong> 从 Demo 走向生产时的可靠协作难题，提出以 <strong>“会话级可重放事件流”</strong> 为核心的&nbsp;RocketMQ-A2A&nbsp;交互范式，回答了一个关键问题：当 MAS 进入海量会话、突发流量和频繁故障的真实生产环境，消息、状态和会话隔离应由谁可靠承载？</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_be98336d0a204b9cad5ac74eeb6eede7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-生产-mas-的真正瓶颈不在模型层\">生产 MAS 的真正瓶颈不在模型层<a class=\"heading-anchor\" href=\"#section-生产-mas-的真正瓶颈不在模型层\" aria-label=\"链接到本节：生产 MAS 的真正瓶颈不在模型层\">#</a></h2><p>多智能体系统（MAS）正在从实验室演示走向真实生产流量。这个转变带来的问题是：Demo 阶段几个 Agent 跑通一条链路即可，生产环境则意味着海量并发会话、不可预测的突发流量、随时可能发生的进程崩溃，以及对每一次协作过程可追溯的要求。</p><p><br></p><p>阿里云消息队列 RocketMQ 在服务多个生产级多智能体系统的过程中发现，制约 MAS 规模化落地的往往不是单次推理结果是否正确，而是整个执行链路是否足够可靠、可扩展、可恢复。具体表现为四类工程瓶颈：</p><ul><li><strong>突发流量治理（Burst handling）：</strong> 突发流量在 Worker 进程内排队，放大内存增长和系统抖动；</li><li><strong>会话隔离（Session isolation）：</strong> 海量短会话下，“一会话一 Topic”的传统模型让控制面成本爆炸；</li><li><strong>故障恢复（Recovery）：</strong> 非持久化的调用导致长链路任务崩溃后无法续跑；</li><li><strong>可审计性（Auditability）：</strong> 非结构化日志无法提供可回放的交互证据用于排障和审计。</li></ul><p><br></p><p>这些问题不是靠优化 Prompt 或调整 Agent 角色能解决的——通信与状态语义需要被当作一等公民来治理，生产 MAS 需要的不只是 Agent 框架，还需要可恢复、可审计的会话级异步通信语义，这也正是论文的研究重点。</p><h2 id=\"section-创新亮点-把每个智能体协作会话变成一条可重放事件流\">创新亮点：把每个智能体协作会话变成一条可重放事件流<a class=\"heading-anchor\" href=\"#section-创新亮点-把每个智能体协作会话变成一条可重放事件流\" aria-label=\"链接到本节：创新亮点：把每个智能体协作会话变成一条可重放事件流\">#</a></h2><p>论文的研究贡献覆盖两个层面：基于 RocketMQ 研发轻量级事件队列模型&nbsp;LiteTopic，并以此为底层能力，设计实现以 <strong>“会话级可重放事件流”</strong> 为核心的 MAS 交互范式&nbsp;RocketMQ-A2A。</p><h3 id=\"section-litetopic-面向海量会话的轻量队列模型\">LiteTopic：面向海量会话的轻量队列模型<a class=\"heading-anchor\" href=\"#section-litetopic-面向海量会话的轻量队列模型\" aria-label=\"链接到本节：LiteTopic：面向海量会话的轻量队列模型\">#</a></h3><p>传统 Topic 的创建和管理涉及较多资源与配置，无法支撑海量短生命周期会话。LiteTopic&nbsp;是基于 RocketMQ 设计的轻量队列模型，具备四个关键特性：</p><ul><li><strong>动态创建与销毁：</strong> 可按业务需要以任意名称（例如会话 ID 或任务 ID ）动态创建 LiteTopic，无需预配置，TTL 到期自动回收，随用随销；</li><li><strong>低成本隔离：</strong> 创建和维护成本远低于普通 Topic，支持海量轻量会话通道；</li><li><strong>精准订阅：</strong> 每个 Consumer 可自由订阅不同的 LiteTopic 集合，灵活组织事件投递；</li><li><strong>顺序消息：</strong> 同一 LiteTopic 内消息有序投递，保障处理顺序。</li></ul><h3 id=\"section-a2a-异步交互范式\">A2A 异步交互范式<a class=\"heading-anchor\" href=\"#section-a2a-异步交互范式\" aria-label=\"链接到本节：A2A 异步交互范式\">#</a></h3><p>论文提出的范式转换是：把 A2A 风格的异步交互形式转化为持久化、可重放的会话级事件流，通过消息系统将任务调度与结果回传彻底解耦。主控智能体 Supervisor 不再同步等待工作智能体 Worker 的长任务完成，而是按事件推进会话状态机。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b56a35d6a1f64bb0a9a9a27ca7e3e615.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>传统同步 RPC vs RocketMQ-A2A 双 Topic 异步范式</em></p><p><em><br></em></p><p>在实现层面，依托底层普通队列和轻量队列能力，RocketMQ-A2A 构建出一个全异步的协作架构。</p><ul><li><strong>普通 Topic：</strong> 负责从 Supervisor 到工作智能体 Worker 的高吞吐任务分发。突发流量进入 MQ backlog，多个 Worker 按自身能力无状态消费处理，避免进程内堆积；</li><li><strong>LiteTopic：</strong> 作为回传通道，Worker 将执行结果信息与状态事件回传到 Supervisor。利用轻量且隔离的特性，将任务会话标识与物理存储解耦，避免“海量会话 → 海量 Topic”的元数据爆炸，同时提供有序、持久、可重放的结果流；</li><li><strong>会话级重放恢复：</strong> 主控 Supervisor 崩溃后可从上次中断的位置重放对应会话的 LiteTopic，实现断点续跑，任务无需从头再来，同时沉淀结构化、可检索、可审计的交互日志。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_92e2209d3bd34d16a08610d721255861.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>Supervisor / Worker 状态机图</em></p><p><em><br></em></p><p>Supervisor 和 Worker 各自拥有独立的状态机，两个组件的状态转换均通过 MQ 消息驱动，两种角色间的调用链完全解耦，Agent 之间互不影响。借助消息堆积和持久化能力，RocketMQ-A2A 天然形成一种事件驱动、可伸缩、故障透明恢复的异步 A2A 架构。</p><p><br></p><p>实验结果显示，在 25× 过载场景下，RocketMQ-A2A 将突发积压外化到持久队列，老年代峰值仅增长 <strong>8.2%</strong>；相比之下，HTTP 异步 RPC 老年代增长 <strong>456.6%</strong>，纯 A2A 暴涨 <strong>1366.1%</strong>。在 12 种故障注入配置下，RocketMQ-A2A 全部实现 <strong>100% 端到端任务完成率</strong>；10 Broker 集群可稳定支撑 <strong>1500 万并发 LiteTopic + 50k TPS</strong>；传统“每会话一个 Topic”模型在 2 万通道时已无法稳定完成测试，而 LiteTopic 在 <strong>20 万通道</strong>下仍保持约 15ms 延迟与稳定 CPU。</p><h2 id=\"section-ai-mq-落地与展望\">AI MQ 落地与展望<a class=\"heading-anchor\" href=\"#section-ai-mq-落地与展望\" aria-label=\"链接到本节：AI MQ 落地与展望\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_14c3e0ef5a8245799f2d6b91ac077889.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>Apache RocketMQ Landscape</em></p><p><em><br></em></p><p>论文原文披露，LiteTopic 与 RocketMQ-A2A 已开源至 Apache RocketMQ，并在阿里云大模型服务平台百炼（Alibaba Cloud Model Studio）生产部署，支撑企业级模型服务与智能体应用的可靠协作。</p><h3 id=\"section-百炼-用-litetopic-实现精细化模型服务流控\">百炼：用 LiteTopic 实现精细化模型服务流控<a class=\"heading-anchor\" href=\"#section-百炼-用-litetopic-实现精细化模型服务流控\" aria-label=\"链接到本节：百炼：用 LiteTopic 实现精细化模型服务流控\">#</a></h3><p>阿里云大模型服务平台百炼承载百万级租户同时调用千问（Qwen）等数十种大模型。在 GPU 稀缺与突发尖峰叠加下，需要进行精准流控来保证服务质量。传统“按客户切资源”的限流方案，面临成本随客户数线性膨胀、单租户流量异常影响其他租户的问题。</p><p><br></p><p>借助 RocketMQ LiteTopic 轻量、隔离、可动态 Suspend 调速的特性，百炼将限流升级为分布式漏桶矩阵，做到对每个租户独立、按需、精细化的弹性治理，最终实现<strong>限流相关成本降低 10 倍</strong>，限流导致的用户可感知异常也大幅收敛。</p><h3 id=\"section-qoder-cloud-agents-用-litetopic-承载云端-agent-协作\">Qoder Cloud Agents：用 LiteTopic 承载云端 Agent 协作<a class=\"heading-anchor\" href=\"#section-qoder-cloud-agents-用-litetopic-承载云端-agent-协作\" aria-label=\"链接到本节：Qoder Cloud Agents：用 LiteTopic 承载云端 Agent 协作\">#</a></h3><p>在 Qoder Cloud Agents 这一 Serverless 云端 Agent 托管平台上，RocketMQ 支撑起了大规模智能体协作的执行底座。云端 Agent 负载兼具长程任务、海量在途会话与高 QPS 事件三重特征，传统“会话绑定 Worker”的架构会让等待持续占用算力，难以兼顾成本与弹性。</p><p><br></p><p>团队基于 RocketMQ 构建“手脑分离”的分布式 Agent 架构，以 Session 为有序隔离边界，将状态推进、异步交接与按需计算彻底解耦。最终，平台实现了支撑<strong>万级推理并发、等待时释放算力</strong>、事件到来后<strong>任意节点秒级接续</strong>的弹性能力。它既能承载在途任务平稳运行，也能应对瞬时事件洪峰，在成本、性能与体验之间取得平衡。</p><h3 id=\"section-从业务消息到-ai-native-mq\">从业务消息到 AI Native MQ<a class=\"heading-anchor\" href=\"#section-从业务消息到-ai-native-mq\" aria-label=\"链接到本节：从业务消息到 AI Native MQ\">#</a></h3><p>RocketMQ 在 Agent 领域的工程实践与沉淀，意味着它正在消息队列传统能力基础上，持续向 AI Native 方向演进，不断拓展面向 AI 时代的新生态和新能力。</p><p><br></p><p>从经典业务消息中间件到 AI Native MQ，RocketMQ 正在重新定义消息在 AI 时代的核心价值：<strong>不只是传递消息，更是承载 Agent 协作、状态管理与通信的基础设施。</strong></p><p><strong><br></strong></p><p><strong>附论文信息：</strong></p><p><strong>论文题目：</strong> 《面向大规模多智能体协作的会话级可重放事件流》（英文原名：RocketMQ-A2A: Reliable Session-Level Replayable Event Streams for Large-Scale Multi-Agent Collaboration）</p><p><strong>作者：</strong> 周礼、张硕、季俊涛、张世杰、赵科、傅玉宝、林清山（均来自阿里云）</p><p><strong><br></strong></p><p><strong>论文概述：</strong> 本文调研了阿里云生产级多智能体系统（MAS）的部署瓶颈，发现主导性挑战是运维层面而非模型层面的：突发流量导致进程内排队、内存压力与 GC 抖动；海量并发下会话隔离成本高昂；中间上下文若未持久记录并可重放，故障后难以恢复。为此，论文提出 RocketMQ-A2A，一种面向生产 MAS 的会话级交互范式，将每个协作会话建模为持久化、可重放的事件流，并通过消息中间件解耦任务调度与结果回传，面向千万级并发会话、每会话独立回复流，为异步 A2A 调用链提供基于重放的恢复与可审计的追踪。</p><p><br></p><p><strong>相关链接：</strong></p><p><span><span><span>[1]&nbsp;</span></span><span><span>FSE 2026 官方论文详情页</span></span></span></p><p><span><span><em><a href=\"https://conf.researchr.org/details/fse-2026/fse-2026-industry-papers/29/RocketMQ-A2A-Reliable-Session-Level-Replayable-Event-Streams-for-Large-Scale-Multi-A?spm=a2c6h.13046898.publish-article.16.30d46ffad2LVvS\" target=\"_blank\" rel=\"noopener noreferrer\">https://conf.researchr.org/details/fse-2026/fse-2026-industry-papers/29/RocketMQ-A2A-Reliable-Session-Level-Replayable-Event-Streams-for-Large-Scale-Multi-A</a></em></span></span></p><p><span></span><span><span><span>[2]&nbsp;</span></span><span><span>ACM Digital Library 完整论文下载</span></span></span></p><p><span><span><em><a href=\"https://dl.acm.org/doi/10.1145/3803437.3805231?spm=a2c6h.13046898.publish-article.17.30d46ffad2LVvS&amp;file=3803437.3805231\" target=\"_blank\" rel=\"noopener noreferrer\">https://dl.acm.org/doi/10.1145/3803437.3805231</a></em></span></span></p><p><span></span><span><span><span>[3]&nbsp;</span></span><span><span>RocketMQ-A2A 开源仓库（含可运行示例）</span></span></span></p><p><span><span><em><a href=\"https://github.com/apache/rocketmq-a2a?spm=a2c6h.13046898.publish-article.18.30d46ffad2LVvS\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/apache/rocketmq-a2a</a></em></span></span></p><p><br></p><p><span><span><span>🔗 加入 RocketMQ for AI 钉钉交流群，交流实践经验、获取最新动态：</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a5c592145d454573a881cfbc34be1641.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span><span>钉钉群号：110085036316</span></span></span></p><p>📖 点击<a href=\"https://www.aliyun.com/activity/middleware/ai-mq?spm=a2c6h.13046898.publish-article.19.30d46ffad2LVvS\" target=\"_blank\" rel=\"noopener noreferrer\">此处</a>了解 RocketMQ for AI 完整方案。</p>",
+    "headings": [
+      {
+        "id": "section-生产-mas-的真正瓶颈不在模型层",
+        "level": 2,
+        "text": "生产 MAS 的真正瓶颈不在模型层"
+      },
+      {
+        "id": "section-创新亮点-把每个智能体协作会话变成一条可重放事件流",
+        "level": 2,
+        "text": "创新亮点：把每个智能体协作会话变成一条可重放事件流"
+      },
+      {
+        "id": "section-litetopic-面向海量会话的轻量队列模型",
+        "level": 3,
+        "text": "LiteTopic：面向海量会话的轻量队列模型"
+      },
+      {
+        "id": "section-a2a-异步交互范式",
+        "level": 3,
+        "text": "A2A 异步交互范式"
+      },
+      {
+        "id": "section-ai-mq-落地与展望",
+        "level": 2,
+        "text": "AI MQ 落地与展望"
+      },
+      {
+        "id": "section-百炼-用-litetopic-实现精细化模型服务流控",
+        "level": 3,
+        "text": "百炼：用 LiteTopic 实现精细化模型服务流控"
+      },
+      {
+        "id": "section-qoder-cloud-agents-用-litetopic-承载云端-agent-协作",
+        "level": 3,
+        "text": "Qoder Cloud Agents：用 LiteTopic 承载云端 Agent 协作"
+      },
+      {
+        "id": "section-从业务消息到-ai-native-mq",
+        "level": 3,
+        "text": "从业务消息到 AI Native MQ"
+      }
+    ],
+    "textLength": 4346,
+    "readingMinutes": 10,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1753147",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "b7cff95d0c63b14cb18f815809d4f71691394448f086ee0a2cc4ab813442fb1d",
+    "fetchedAt": "2026-11-02T07:09:40.046Z",
+    "checkedAt": "2026-11-02T07:09:40.046Z",
+    "nextRetryAt": "2026-12-02T07:09:40.046Z",
+    "warnings": []
+  }
+}

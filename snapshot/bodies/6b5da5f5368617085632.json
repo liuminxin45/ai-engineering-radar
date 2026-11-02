@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "6b5da5f5368617085632",
+    "status": "ready",
+    "html": "<p>作者：望陶、方羞、钟玟</p><p><br></p><p>AI 编码 Agent 真正跑起任务后，问题往往不再是“它有没有完成”，而是：这一轮为什么花了 47 秒？时间卡在模型还是工具？失败后重试了几次？Token 消耗来自主 Agent 还是 Subagent？</p><p><br></p><p>DeepSeek Harness（下文简称 DSH）已经保存了很完整的 Session 日志，但要回答耗时、调用关系和成本问题，还需要把事件组织成 Trace 和 Metrics，才能看清问题的全貌。</p><p><br></p><p>为了采集 DSH 全景可观测数据，阿里云可观测团队基于开源的 LoongSuite，为 DSH 提供了两条开源可观测路线：一条是可以从 DSH 插件市场独立安装的&nbsp;@loongsuite/dsh-plugin，另一条是 LoongSuite Pilot 内置的 DSH 集成。它们都基于 OpenTelemetry GenAI 语义 <strong>[</strong> <strong>1]</strong> ，数据可以进入用户自己选择的兼容后端，但部署形态和适用场景并不相同。</p><p><br></p><p>本文从实践角度出发，为 DeepSeek Harness 提供全景可观测的实践方案。</p><h2 id=\"section-先认识-deepseek-harness\">先认识 DeepSeek Harness<a class=\"heading-anchor\" href=\"#section-先认识-deepseek-harness\" aria-label=\"链接到本节：先认识 DeepSeek Harness\">#</a></h2><p>DeepSeek Harness（<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.23.39406ffawrRO7w&amp;enc=fKGGHdynSFN%2BItHw5bf6Sg%3D%3D.0MbDHTfprnKCjEwp3iKwtWgWHK7MIVHNAeVM56%2BCFk1m0fiJZZe50MFb1hkH4rcq\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/deepseek-ai/deepseek-harness</a> ）是 DeepSeek 开源的编码 Agent 运行时。模型负责生成，而 Harness 负责维护会话、组织 ReAct 循环、执行工具调用、管理权限与沙箱，并在需要时派生 Subagent。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_574a42e926184e3b8ad6b3c60a56544a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>DSH 以 npm 包&nbsp;@deepseek-ai/dsh&nbsp;分发，命令行入口是&nbsp;dsh。官方随包提供 Web 和 headless 两种 Profile 模板，也允许用户安装和组合自定义 Profile，例如第三方终端界面。Web 默认监听&nbsp;127.0.0.1:3080。</p><p><br></p><p>它的插件体系建立在 Cordis 之上，配置由多层 patch 组合而成。用户层配置支持热更新，因此插件可以在不侵入 Agent 主循环的情况下，订阅原生生命周期并增加新的数据出口。</p><p><br></p><p>DSH 本身也保存 append-only 的 Session 事件流，其中包含 Turn、Step、工具调用、模型消息和流式增量；官方还提供了默认关闭的 OTLP Logs 插件。这些日志非常适合审计、回放和事实排查，但日志与 Trace、Metrics 解决的是两类不同问题。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_aa58fd28f55c4a049e1a6861204b2654.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-为什么有日志-还需要-trace\">为什么有日志，还需要 Trace<a class=\"heading-anchor\" href=\"#section-为什么有日志-还需要-trace\" aria-label=\"链接到本节：为什么有日志，还需要 Trace\">#</a></h2><p>日志是一串按时间排列的事实，Trace 则是一棵带父子关系和时间区间的调用树。</p><p><br></p><p>只有日志时，我们可以知道“发生了什么”；有了 Trace，才更容易直接回答：</p><ul><li>一轮任务的总耗时分布在模型、工具和等待的哪些阶段；</li><li>哪次工具调用失败，它属于哪一个推理步骤；</li><li>同一个 Step 是否触发了模型重试；</li><li>每次模型调用的 TTFT、输入 Token、输出 Token 和缓存 Token；</li><li>主 Agent 与 Subagent 之间的执行和成本关系；</li><li>多轮会话、多个模型乃至多个 Agent 的整体使用情况。</li></ul><p><br></p><p>因此，Logs 与 Trace 不是二选一：日志保留完整事件账本，Trace 提供适合性能、错误和成本分径的结构化投影。</p><h2 id=\"section-loongsuite-的两条-dsh-可观测路线\">LoongSuite 的两条 DSH 可观测路线<a class=\"heading-anchor\" href=\"#section-loongsuite-的两条-dsh-可观测路线\" aria-label=\"链接到本节：LoongSuite 的两条 DSH 可观测路线\">#</a></h2><p>先看两条路线实际经过的数据路径。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_cb88e9e0779b406e8d9015b98759466c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>两条路线遵循同一套 OpenTelemetry GenAI 语义，但采集位置、数据路径和适用场景不同。</p><p><br></p><p>这里有一个容易混淆的地方：Pilot 中的 DSH 插件是 Pilot 采集链路的一部分，负责把 DSH 原生事件落到本地、交给 daemon 继续处理；它不是另一个面向插件市场、可以脱离 Pilot 单独安装和直发 OTLP 的插件。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_f6ed06d7748944d6b12875dedd7a8341.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-应该怎么选\">应该怎么选<a class=\"heading-anchor\" href=\"#section-应该怎么选\" aria-label=\"链接到本节：应该怎么选\">#</a></h3><ul><li>同时使用 Claude Code、Codex、Cursor、Qoder、OpenClaw、DSH 等多个 Agent，或者需要本地 Dashboard、长期日志和统一成本视图：优先选择 Pilot。</li><li>只使用 DSH，并且已有 Jaeger、Tempo、SigNoz、Langfuse 或 OpenTelemetry Collector：优先选择独立插件，链路最短。</li><li>两条路线在技术上可以共存，但如果同时向同一个后端、同一个服务名发送 DSH Trace，会形成两份语义相近的链路。除非是在做对照验证，否则建议只让其中一条路线负责 DSH Trace。</li></ul><h2 id=\"section-路线-a-独立插件-两分钟直发-otlp\">路线 A：独立插件，两分钟直发 OTLP<a class=\"heading-anchor\" href=\"#section-路线-a-独立插件-两分钟直发-otlp\" aria-label=\"链接到本节：路线 A：独立插件，两分钟直发 OTLP\">#</a></h2><p>@loongsuite/dsh-plugin <strong>[</strong> <strong>2]</strong> 已发布正式版&nbsp;0.1.0，并已被&nbsp;DSH 社区插件市场 <strong>[</strong> <strong>3]</strong> 收录。当前版本支持 DSH&nbsp;&gt;=0.1.0-rc.6 &lt;0.2.0，要求 Node.js&nbsp;&gt;=22.19.0。</p><p><br></p><p>DSH 插件按 Profile 安装。观测 Web Profile：</p><pre><code>dsh plugin --profile web add @loongsuite/dsh-plugin</code></pre><p>如果还要观测 headless 任务，需要再安装到对应 Profile：</p><pre><code>dsh plugin --profile headless add @loongsuite/dsh-plugin</code></pre><p>最小配置只需要标准 OTLP 地址和服务名：</p><pre><code>export OTEL_SERVICE_NAME=dsh-agent\nexport OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318\ndsh --profile web</code></pre><p>公共 endpoint 会自动补成 <code>/v1/traces</code> 和 <code>/v1/metrics</code>。如果后端只接收 Trace，可以关闭 Metric 导出：</p><pre><code>OTEL_METRICS_EXPORTER=none dsh --profile web</code></pre><p>插件直接监听 DSH 的 Session、Turn、Step、<code>llm/stream</code> 和 Tool 生命周期，在进程内构建 <code>ENTRY → AGENT → STEP → LLM / TOOL</code> 调用树。每次真实模型调用都对应独立的 LLM Span，因此同一 Step 中的失败与重试不会被合并。</p><h3 id=\"section-接入-langfuse\">接入 Langfuse<a class=\"heading-anchor\" href=\"#section-接入-langfuse\" aria-label=\"链接到本节：接入 Langfuse\">#</a></h3><p>Langfuse 接收 OTLP Trace，但不接收 OTLP Metric。可以在 <code>$DSH_HOME/profiles/&lt;profile&gt;/cordis.patch.yml</code> 中显式填写完整 Trace 地址：</p><pre><code>- id: loongsuite-observability\n  config:\n    traceEndpoint: https://cloud.langfuse.com/api/public/otel/v1/traces\n    serviceName: dsh-agent\n    headers:\n      Authorization: \"Basic &lt;Base64(public_key:secret_key)&gt;\"\n      x-langfuse-ingestion-version: \"4\"\n    captureContent: false\n    exportMetrics: false</code></pre><p>自建 Langfuse 时替换域名即可。鉴权值是 <code>public_key:secret_key</code> 的 Base64 结果，不要把真实密钥提交到仓库。</p><h3 id=\"section-接入云监控-2-0\">接入云监控 2.0<a class=\"heading-anchor\" href=\"#section-接入云监控-2-0\" aria-label=\"链接到本节：接入云监控 2.0\">#</a></h3><p>云监控 2.0 - 接入中心 - 应用监控&amp;链路追踪 - OpenTelemetry。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_997c1fe6f2a246928a87379e53a4f360.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>点击获取 LicenseKey， 填入应用名，选择公网，HTTP。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_0cb62c54cbae47a7b3528b0a22daf5ed.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>然后配置：</p><pre><code>- id: loongsuite-observability\n  config:\n    endpoint: https://&lt;project&gt;.&lt;region&gt;.log.aliyuncs.com/apm/trace/opentelemetry\n    serviceName: dsh-agent\n    headers:\n      x-arms-license-key: &lt;License Key&gt;\n      x-arms-project: &lt;ARMS Project&gt;\n      x-cms-workspace: &lt;云监控工作空间&gt;\n    resourceAttributes:\n      acs.arms.service.feature: genai_app\n    captureContent: false\n    exportMetrics: true</code></pre><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_8ee3397cc82344d4bc99c62709b05384.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这里填写不带 Signal 路径的 OTLP 基地址。插件会自动生成 Trace 上报地址 /v1/traces 和 Metric 上报地址 /v1/metrics。云监控 2.0 支持通过 HTTP/Protobuf 接收 Trace 和 Metric，因此这里保持 exportMetrics: true。</p><h3 id=\"section-常用配置项\">常用配置项<a class=\"heading-anchor\" href=\"#section-常用配置项\" aria-label=\"链接到本节：常用配置项\">#</a></h3><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_1402b6c0adfd4147be0466e6b4b813af.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>想先在本地验证，可以使用仓库中的&nbsp;Jaeger Quickstart，不注册任何云服务就能看到第一条 DSH Trace。</p><h3 id=\"section-dsh-原生日志上报\">DSH 原生日志上报<a class=\"heading-anchor\" href=\"#section-dsh-原生日志上报\" aria-label=\"链接到本节：DSH 原生日志上报\">#</a></h3><p>DSH 原生提供 session-telemetry-otel 插件，将日志以原生 OTel 的方式上报到任意 OTel 的后端，如果想要上报原生 session 日志，可以通过修改&nbsp;~/.dsh/cordis.patch.yml&nbsp;实现动态开启。</p><pre><code>- id: session-telemetry-otel\n  config:\n    mode: FEEDBACK_ONLY\n    shutdownTimeoutMillis: 5000\n    exporter:\n      url: 'https://&lt;project&gt;.&lt;region&gt;.log.aliyuncs.com/apm/trace/opentelemetry/v1/logs'\n      compression: gzip\n      timeoutMillis: 3000\n      headers:\n        x-arms-license-key: '&lt;License Key&gt;'\n        x-arms-project: '&lt;ARMS Project&gt;'\n        x-cms-workspace: '&lt;云监控工作空间&gt;'\n    processor:\n      scheduledDelayMillis: 10000\n      maxQueueSize: 2048\n      # Equal to maxQueueSize so the shutdown drain is a single batch.\n      maxExportBatchSize: 2048\n      exportTimeoutMillis: 4000</code></pre><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_db31836fa14d4a0ea01bcff741817d3d.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><strong>注意：</strong> DSH 默认关闭原生日志上报。示例使用 mode: FEEDBACK_ONLY：平时不上报，只有在触发 feedback/record 时，才会回放并上报对应的日志后缀；如果改为 mode: FULL，则会持续上报完整 Session 事件，其中可能包含用户输入、模型输出和工具参数等敏感信息。请仅在确认数据安全边界后启用，并妥善保护接入凭证。</p><h2 id=\"section-路线-b-用-pilot-统一观察多个-agent\">路线 B：用 Pilot 统一观察多个 Agent<a class=\"heading-anchor\" href=\"#section-路线-b-用-pilot-统一观察多个-agent\" aria-label=\"链接到本节：路线 B：用 Pilot 统一观察多个 Agent\">#</a></h2><p>LoongSuite Pilot <strong>[</strong> <strong>4]</strong> 是运行在本机的统一 Agent 可观测采集器。它会发现已经安装的 Agent，为不同产品部署对应的 Hook、插件或数据读取器，再把不同格式归一成统一的 GenAI 事件。</p><p><br></p><p>安装后即使不配置远端后端也能使用：Pilot 默认把归一化事件写入本地 JSONL，并提供本地 Dashboard，用于查看多 Agent 的 Token、会话、模型、工具和仓库活跃度。</p><pre><code>curl -fsSL https://loongcollector-community-edition.oss-cn-shanghai.aliyuncs.com/loongsuite-pilot/installer.sh \\\n  -o /tmp/loongsuite-pilot-installer.sh\nbash /tmp/loongsuite-pilot-installer.sh install\nloongsuite-pilot status\nloongsuite-pilot info</code></pre><p>Pilot 检测到 DSH 后，会向&nbsp;$DSH_HOME/cordis.patch.yml（默认是&nbsp;~/.dsh/cordis.patch.yml）加入带有归属标记的配置块，加载 Pilot 自带的 DSH 采集插件。这个操作是可逆的，禁用或卸载时只会清理 Pilot 自己管理的部分。</p><p><br></p><p>首次启用或重新安装后，需要启动一个新的 DSH 进程。随后，插件把每个 Session 的原生事件写到 Pilot 数据目录，daemon 再完成归一化和输出。</p><p><br></p><p>这条链路的价值不只是获得 DSH Trace，而是让 DSH 与其他 Agent 进入同一套查询、成本和审计体系。</p><h3 id=\"section-接入-langfuse-2\">接入 Langfuse<a class=\"heading-anchor\" href=\"#section-接入-langfuse-2\" aria-label=\"链接到本节：接入 Langfuse\">#</a></h3><p>编辑&nbsp;~/.loongsuite-pilot/config.json：</p><pre><code>{\n  \"collectTrace\": true,\n  \"serviceName\": \"team-agents\",\n  \"agents\": {\n    \"dsh\": {\n      \"enabled\": true,\n      \"captureMessageContent\": false\n    }\n  },\n  \"otlpTrace\": {\n    \"endpoint\": \"https://cloud.langfuse.com/api/public/otel\",\n    \"headers\": {\n      \"Authorization\": \"Basic &lt;AUTH_STRING&gt;\",\n      \"x-langfuse-ingestion-version\": \"4\"\n    },\n    \"captureMessageContent\": false\n  }\n}</code></pre><p>Pilot 会在 endpoint 后自动补&nbsp;/v1/traces。这里同时关闭 Agent 归一化内容和 Trace 正文，适合先用结构、耗时与 Token 数据完成接入验证。</p><h3 id=\"section-接入云监控-2-0-2\">接入云监控 2.0<a class=\"heading-anchor\" href=\"#section-接入云监控-2-0-2\" aria-label=\"链接到本节：接入云监控 2.0\">#</a></h3><p>Pilot 提供了 ARMS/CMS 简写配置，会自动构造所需 Header 和 Resource 属性：</p><pre><code>{\n  \"collectTrace\": true,\n  \"serviceName\": \"team-agents\",\n  \"agents\": {\n    \"dsh\": {\n      \"enabled\": true,\n      \"captureMessageContent\": false\n    }\n  },\n  \"cms\": {\n    \"licenseKey\": \"&lt;License Key&gt;\",\n    \"endpoint\": \"https://&lt;你的接入点&gt;/v1/traces\",\n    \"workspace\": \"&lt;云监控工作空间&gt;\"\n  }\n}</code></pre><p>otlpTrace&nbsp;与&nbsp;cms&nbsp;可以同时配置，把同一批 Trace 发送到多个后端。</p><p><br></p><p>Trace 之外，Pilot 还能把归一化事件作为日志发到阿里云 SLS，用于集中检索、大盘、告警和长期存储，以及后续的安全审计。安装时就能带上：</p><pre><code>bash /tmp/loongsuite-pilot-installer.sh install \\\n  --sls-endpoint \"https://cn-hangzhou.log.aliyuncs.com\" \\\n  --sls-project \"my-project\" \\\n  --sls-logstore \"my-logstore\" \\\n  --sls-api-key \"&lt;API Key&gt;\"</code></pre><p>也支持 AK 模式和 WebTracking 模式，详见仓库的&nbsp;docs/sls-output.md。</p><h2 id=\"section-配完之后能看到什么\">配完之后能看到什么<a class=\"heading-anchor\" href=\"#section-配完之后能看到什么\" aria-label=\"链接到本节：配完之后能看到什么\">#</a></h2><h3 id=\"section-在-langfuse-里\">在 Langfuse 里<a class=\"heading-anchor\" href=\"#section-在-langfuse-里\" aria-label=\"链接到本节：在 Langfuse 里\">#</a></h3><p>一轮对话就是一棵完整的调用链。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_dbbb7c62c51e4606b3e40bf40136318e.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>能直接读出来的信息：</p><ul><li><strong>时间去哪了：</strong> 17.42 秒里，第 3、4 步各占 5 秒多，而单次 LLM 调用最长 4.38 秒；</li><li><strong>每次模型调用的 TTFT 和 token：</strong> gen_ai.response.time_to_first_token、input_tokens&nbsp;/&nbsp;output_tokens&nbsp;/&nbsp;cache_read.input_tokens&nbsp;都在 span 属性里；</li><li><strong>失败与回退：</strong> web_search&nbsp;连续两次 ERROR，模型改用&nbsp;bash&nbsp;完成任务——错误状态收敛在对应的 TOOL span 上，不用去日志里找；</li><li><strong>重试可见：</strong> 每一次真实 LLM 调用都是独立 span，同一个 STEP 下能看到多次尝试；</li><li><strong>会话维度：</strong> gen_ai.session.id&nbsp;和&nbsp;gen_ai.turn.id&nbsp;让 Langfuse 的 Sessions 视图能把一个会话的多轮串起来。</li></ul><h3 id=\"section-在云监控-2-0-里\">在云监控 2.0 里<a class=\"heading-anchor\" href=\"#section-在云监控-2-0-里\" aria-label=\"链接到本节：在云监控 2.0 里\">#</a></h3><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_d3919d8da71e4bfe8dc2a7e0d023f169.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>除此之外，同样的调用链瀑布图，还多了几个 AI 应用专用视图：</p><ul><li><strong>链路追踪：</strong> 调用树、链路图、时序线、推理轨迹、链路分析多个视角；</li><li><strong>会话分析：</strong> 按 session 聚合，看一个会话跨多轮的完整轨迹；</li><li><strong>模型分析 / 工具分析：</strong> 按模型看 p95 延迟、token 与成本，按工具看调用次数、耗时和失败率；</li><li><strong>Agent 列表：</strong> 一台机器（或一个团队）上有哪些 agent 在跑、各自的量级；</li><li><strong>智能分析：</strong> 自动分析 agent 轨迹，定位异常步骤、失败原因和性能瓶颈。</li></ul><p><br></p><p>如果用 Pilot 采多个 agent，这些视图就是跨 agent 的统一账本；只装插件的话，就是 DSH 单个 agent 的深度视图。</p><h2 id=\"section-隐私边界\">隐私边界<a class=\"heading-anchor\" href=\"#section-隐私边界\" aria-label=\"链接到本节：隐私边界\">#</a></h2><p>两条路线都支持关闭正文采集，但默认行为和数据路径不同，不能简单概括成“都不采集正文”。</p><h3 id=\"section-独立插件\">独立插件<a class=\"heading-anchor\" href=\"#section-独立插件\" aria-label=\"链接到本节：独立插件\">#</a></h3><ul><li>默认不把提示词、回复、工具定义、参数和结果写入 Span；</li><li>显式配置&nbsp;captureContent: false&nbsp;可以覆盖进程环境变量，适合强制关闭正文的 Profile；</li><li>插件使用私有 TracerProvider 和 MeterProvider，不替换应用的全局 OpenTelemetry Provider；</li><li>导出失败会被隔离，不会改变 Agent 的模型调用和工具执行行为。</li></ul><h3 id=\"section-loongsuite-pilot\">LoongSuite Pilot<a class=\"heading-anchor\" href=\"#section-loongsuite-pilot\" aria-label=\"链接到本节：LoongSuite Pilot\">#</a></h3><ul><li>建议在敏感环境显式设置&nbsp;agents.dsh.captureMessageContent: false&nbsp;和&nbsp;otlpTrace.captureMessageContent: false；</li><li>captureMessageContent&nbsp;控制的是归一化输出和 Trace，不会删除 Pilot 为完成转换而保存的 DSH 原生源日志；</li><li>源日志包含原生消息与工具数据，应按敏感数据保护。Pilot 会在落盘前过滤名称类似 Token、Secret、Password、Credential、Cookie 和 API Key 的字段，并在 POSIX 系统上把目录和文件权限限制为&nbsp;0700&nbsp;/&nbsp;0600；</li><li>如果组织不允许任何本地原始内容落盘，应选择独立插件，并保持&nbsp;captureContent: false。</li></ul><p><br></p><p>无论选择哪条路线，开启正文前都应确认其中是否可能包含源码、凭据或个人数据，并评估后端的访问控制与留存策略。</p><h3 id=\"section-除了观测还能做什么\">除了观测还能做什么<a class=\"heading-anchor\" href=\"#section-除了观测还能做什么\" aria-label=\"链接到本节：除了观测还能做什么\">#</a></h3><p>有了这些观测数据之后，可以进一步对 DeepSeek Harness 的过程进行安全审计，行为评估分析，以及针对 DeepSeek Harness 进行进一步优化，这些将在后续的文章中介绍。</p><h2 id=\"section-总结\">总结<a class=\"heading-anchor\" href=\"#section-总结\" aria-label=\"链接到本节：总结\">#</a></h2><p>如果只记住一句话：@loongsuite/dsh-plugin&nbsp;解决“怎样最轻量、最原生地看清 DeepSeek Harness”；LoongSuite Pilot 解决“怎样把 DSH 和机器上的其他 Agent 放进同一套可观测体系”。</p><p><br></p><p>今天这篇先完成全景观测的介绍和路线选择。后续我们会继续拆开&nbsp;@loongsuite/dsh-plugin@0.1.0：它如何从 DSH 原生生命周期构建&nbsp;ENTRY → AGENT → STEP → LLM / TOOL，如何保留模型重试、处理缓存 Token 与 TTFT，以及如何在默认不采集正文的前提下把 Trace 和 Metric 发送到任意兼容 OTLP 的后端。</p><p><br></p><p><strong>相关链接：</strong></p><p>[1]&nbsp;OpenTelemetry GenAI 语义约定：开放的数据模型与后端生态</p><p><a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.24.39406ffawrRO7w&amp;enc=O6ts%2F7UDrmMBB7COxDs8aw%3D%3D.OO1Duiim4mQ2SyP6l%2FYxd5L7l7rxPV%2BvAl7GHmMpwG%2BrrgKoyxkSLUwVR8bucWvFbWW2T4DPqVNQHv7huHFlGA%3D%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/open-telemetry/semantic-conventions-genai</a></p><p>[2]&nbsp;@loongsuite/dsh-plugin：独立安装、进程内直发 OTLP</p><p><a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.25.39406ffawrRO7w&amp;enc=P9QcDcXWPdD9zeOQktd1uA%3D%3D.jkOkXJt0pSx4reLxuglfLe1rjAeYgK7WkpCXs%2BZvVuJdV6xRoFStdiLxL1D3Ckk2\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/loongsuite/dsh-plugin</a></p><p>[3]&nbsp;DSH 插件市场页面：通过市场发现和安装</p><p><a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.26.39406ffawrRO7w&amp;enc=6jZ23AXnAKtZmraL5sCvSg%3D%3D.XKwgdJuE18XviWka05cM97NnQYWwSQ32WKPUprF3KLgiOAhbMJM99UfNJ%2FmWDcwmdi6YDzYvq%2Fdk4r%2FI0uOwTA%3D%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://awesome-dsh-plugin.com/p/loongsuite/dsh-plugin/</a></p><p>[4]&nbsp;LoongSuite Pilot：多 Agent 统一采集、本地 Dashboard 与多种数据出口</p><p><a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.27.39406ffawrRO7w&amp;enc=D21LOZZepc%2Bb%2FT2Jzb28EA%3D%3D.2g5kEmBxhjDkqatztUO0yY8S%2BO1ev04Dls3IPtdrizpEGgYiY1oxKkFZV6IVMgl%2F\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/alibaba/loongsuite-pilot</a></p><p><br></p><p><span>Agent 评估和优化，开启</span><strong>北京、深圳、上海</strong><span>三城巡回沙龙，分享靠谱的 Agent Engineering 实践，现场指导实操，赢取阿里云官方证书，扫描下方</span><strong>海报二维码</strong><span>报名。</span></p><p><span><br></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_67b3966622724a60951e85ceaaf84872.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [
+      {
+        "id": "section-先认识-deepseek-harness",
+        "level": 2,
+        "text": "先认识 DeepSeek Harness"
+      },
+      {
+        "id": "section-为什么有日志-还需要-trace",
+        "level": 2,
+        "text": "为什么有日志，还需要 Trace"
+      },
+      {
+        "id": "section-loongsuite-的两条-dsh-可观测路线",
+        "level": 2,
+        "text": "LoongSuite 的两条 DSH 可观测路线"
+      },
+      {
+        "id": "section-应该怎么选",
+        "level": 3,
+        "text": "应该怎么选"
+      },
+      {
+        "id": "section-路线-a-独立插件-两分钟直发-otlp",
+        "level": 2,
+        "text": "路线 A：独立插件，两分钟直发 OTLP"
+      },
+      {
+        "id": "section-接入-langfuse",
+        "level": 3,
+        "text": "接入 Langfuse"
+      },
+      {
+        "id": "section-接入云监控-2-0",
+        "level": 3,
+        "text": "接入云监控 2.0"
+      },
+      {
+        "id": "section-常用配置项",
+        "level": 3,
+        "text": "常用配置项"
+      },
+      {
+        "id": "section-dsh-原生日志上报",
+        "level": 3,
+        "text": "DSH 原生日志上报"
+      },
+      {
+        "id": "section-路线-b-用-pilot-统一观察多个-agent",
+        "level": 2,
+        "text": "路线 B：用 Pilot 统一观察多个 Agent"
+      },
+      {
+        "id": "section-接入-langfuse-2",
+        "level": 3,
+        "text": "接入 Langfuse"
+      },
+      {
+        "id": "section-接入云监控-2-0-2",
+        "level": 3,
+        "text": "接入云监控 2.0"
+      },
+      {
+        "id": "section-配完之后能看到什么",
+        "level": 2,
+        "text": "配完之后能看到什么"
+      },
+      {
+        "id": "section-在-langfuse-里",
+        "level": 3,
+        "text": "在 Langfuse 里"
+      },
+      {
+        "id": "section-在云监控-2-0-里",
+        "level": 3,
+        "text": "在云监控 2.0 里"
+      },
+      {
+        "id": "section-隐私边界",
+        "level": 2,
+        "text": "隐私边界"
+      },
+      {
+        "id": "section-独立插件",
+        "level": 3,
+        "text": "独立插件"
+      },
+      {
+        "id": "section-loongsuite-pilot",
+        "level": 3,
+        "text": "LoongSuite Pilot"
+      },
+      {
+        "id": "section-除了观测还能做什么",
+        "level": 3,
+        "text": "除了观测还能做什么"
+      },
+      {
+        "id": "section-总结",
+        "level": 2,
+        "text": "总结"
+      }
+    ],
+    "textLength": 8564,
+    "readingMinutes": 20,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1758142",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "c540da7e77afdd6a9f7d0d182fb579fe358f68ee5b4c72fda4fec8bd7eb7f13e",
+    "fetchedAt": "2026-11-02T07:09:20.541Z",
+    "checkedAt": "2026-11-02T07:09:20.541Z",
+    "nextRetryAt": "2026-12-02T07:09:20.541Z",
+    "warnings": []
+  }
+}

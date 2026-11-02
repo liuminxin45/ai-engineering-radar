@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "3e39cdf46299dfd3c509",
+    "status": "ready",
+    "html": "<p>作者：陈诗雁</p><p><br></p><blockquote>又是凌晨三点，一通告警电话把你从床上拽起来。你睡眼惺忪地连上跳板机，一台台机器 top、dmesg、iostat 敲下去，两个小时过去，天都快亮了，才发现是一块网卡在悄悄丢包。如果这一幕你也不陌生，那这篇文章，就是写给你的。</blockquote><p><br></p><h2 id=\"section-大多数故障-其实早就预约过了\">大多数故障，其实早就预约过了<a class=\"heading-anchor\" href=\"#section-大多数故障-其实早就预约过了\" aria-label=\"链接到本节：大多数故障，其实早就预约过了\">#</a></h2><p>复盘海量线上事故后，我们发现了一个看似矛盾却极其真实的规律：服务器极少真正“猝死”，绝大多数故障都是慢性病累积而成的急症。</p><p><br></p><p>内存使用率连着三天一点点往上爬，你没在意，直到某个深夜 OOM 精准杀掉了最关键的那个进程；conntrack 连接跟踪表悄悄逼近满载，你没看到，直到新连接开始成批失败；磁盘被日志一寸寸蚕食，你没管，直到数据库写不进去、整个服务瘫痪；一块网卡的光模块正在老化，你更不可能盯着，直到重传率飙升十倍、用户投诉像潮水一样涌进来。</p><p><br></p><p>这些致命隐患在爆发前都曾留下清晰的“病历”。然而，传统监控往往只在指标触顶时才发出告警，为时已晚；人工巡检又受限于精力，无法对数百台机器的全栈状态进行高频、深度的排查。说到底，与其让运维在故障爆发后手忙脚乱地补课，不如给每台服务器配一个看得深、查得全、反应快的“贴身医生”——这就是「STAROps&nbsp;主机智能巡检」（以下简称主机智能巡检）想做的事。</p><h2 id=\"section-把话说明白-主机智能巡检到底是什么\">把话说明白：主机智能巡检到底是什么？<a class=\"heading-anchor\" href=\"#section-把话说明白-主机智能巡检到底是什么\" aria-label=\"链接到本节：把话说明白：主机智能巡检到底是什么？\">#</a></h2><p>一句话——自动体检 + AI 医生。</p><p><br></p><p><strong>主机智能巡检</strong>是阿里云全域智能运维平台 STAROps 的一项核心能力。<strong>STAROps</strong> 这个名字里的 STAR，本身就代表了它做运维的四层理念：全域感知（Sense）、目标导向（Target）、自主运维（Autonomy）、业务韧性（Resilience）。而主机智能巡检，正是“业务韧性”最锋利的那把刀——从事后救火，转向事前防护。</p><p><br></p><p>就像人要定期体检，服务器也需要定期做一次全面检查。主机智能巡检会自动为你的每一台主机做一次“全身 CT”，一次覆盖 CPU、内存、磁盘、网络、GPU、内核、硬件七大领域、超过 50 个检查项。而当它发现异常时，绝不会只甩你一句冷冰冰的“有问题”，而是会像一位经验老到的医生那样，接着告诉你“为什么会这样”和“接下来该怎么办”。</p><p><br></p><p>而要让这位“AI&nbsp;医生”既能读懂全局、又能扎进底层，靠的正是&nbsp;STAROps&nbsp;与阿里云操作系统控制台的分工协作。STAROps&nbsp;是面向用户的统一入口和智能运维大脑，你用自然语言下发一次巡检、一次排障，它负责编排流程、关联全域数据、生成分级报告；而扎到内核、内存、磁盘、网络这些底层去做专业诊断的活儿，则交给阿里云操作系统控制台的运维组件&nbsp;SysOM——它提供&nbsp;memgraph（内存分析）、diskanalysis（磁盘诊断）这类专项诊断算子，专治操作系统层的疑难杂症。这二者是清晰的调用关系：主机智能巡检一旦发现异常，STAROps&nbsp;便作为编排者并发调用&nbsp;SysOM&nbsp;的底层诊断工具做深度定位，再把&nbsp;SysOM&nbsp;返回的内核级结论汇总进巡检报告。换句话说，SysOM&nbsp;是&nbsp;STAROps&nbsp;在主机场景下的一个关键能力提供方，一个负责“望闻问切、统筹开方”，一个负责“深入病灶、精准化验”，两者合力，才凑齐了这位&nbsp;24&nbsp;小时在线的&nbsp;AI&nbsp;医生。</p><h2 id=\"section-一张表-看懂主机智能巡检凭什么不一样\">一张表，看懂主机智能巡检凭什么不一样<a class=\"heading-anchor\" href=\"#section-一张表-看懂主机智能巡检凭什么不一样\" aria-label=\"链接到本节：一张表，看懂主机智能巡检凭什么不一样\">#</a></h2><p>传统巡检给你的是现象，而主机智能巡检给你的是答案。具体可见下方表格：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_1ffba95bdc9f43a784269549788b4d35.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-三大硬核优势\">三大硬核优势<a class=\"heading-anchor\" href=\"#section-三大硬核优势\" aria-label=\"链接到本节：三大硬核优势\">#</a></h2><h3 id=\"section-覆盖广-别人看不到的-它能看到\">覆盖广：别人看不到的，它能看到<a class=\"heading-anchor\" href=\"#section-覆盖广-别人看不到的-它能看到\" aria-label=\"链接到本节：覆盖广：别人看不到的，它能看到\">#</a></h3><p>普通监控只盯着 CPU、内存、磁盘这些“大众指标”，可真正的故障往往藏在更深处。主机智能巡检把探头一路伸进了内核态和硬件层。</p><p><br></p><p>在内核事件里，它能揪出那些被常规工具忽略的“隐形杀手”：让业务线程活活饿死的 softlockup、进程僵住超两分钟的 hungtask、预示内核死锁的 RCU stall，还有让新连接被悄悄丢弃的 conntrack 表满。</p><p><br></p><p>在硬件层面，它信奉“坏了再换就太晚了”：处理器退化的 MCE 错误、内存条即将失效的 ECC 错误、硬盘濒临故障的 SMART 告警、光模块老化导致丢包的 CRC 错误——所有隐患都能在事故爆发前被提前点亮。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b43d2aac78b7477f96541d6100d365b8.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-诊断深-不只说-你有病-还告诉你-病根-和-药方\">诊断深：不只说“你有病”，还告诉你“病根”和“药方”<a class=\"heading-anchor\" href=\"#section-诊断深-不只说-你有病-还告诉你-病根-和-药方\" aria-label=\"链接到本节：诊断深：不只说“你有病”，还告诉你“病根”和“药方”\">#</a></h3><p>以最常见的“业务突然变慢”为例。</p><p><br></p><p>传统监控只会冷冷丢下一句“CPU iowait 90%”——然后呢？剩下的全靠你自己熬。而 STAROps 给出的是一条完整的证据链：先发现异常“iowait 持续偏高”，接着自动定位“通过诊断锁定 MySQL 进程频繁 fsync”，再深挖根因“sync_binlog=1 让每次事务提交都要等磁盘”，最后直接递上可执行的解决建议。</p><p><br></p><p>一次巡检 = 发现 + 定位 + 根因 + 方案，全自动一步到位。这背后正是 STAROps 的 AI 诊断引擎，它把资深 SRE 几个小时甚至几天的排查功力，压进了一次自动巡检里。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_034e0820d0c04a1d8a19ae74f45782fb.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-经验真-不是纸上谈兵-是百万实例的实战沉淀\">经验真：不是纸上谈兵，是百万实例的实战沉淀<a class=\"heading-anchor\" href=\"#section-经验真-不是纸上谈兵-是百万实例的实战沉淀\" aria-label=\"链接到本节：经验真：不是纸上谈兵，是百万实例的实战沉淀\">#</a></h3><p>主机智能巡检的所有巡检能力，都来自阿里云海量真实客户故障的沉淀，而非教科书里的理论。规则不是拍脑袋定的——生产数据告诉我们，只有符合特定规律的持续性异常才是真问题，从而把误报死死摁住；场景不是照着“资料”抄的——从 conntrack 表满到 RCU stall，每个检测项背后都躺着真实客户的血泪教训；方案不是理论推导的——每条修复建议都过了线上验证，还按紧急 / 中期 / 长期三步走；而且每一项巡检都配了故障注入测试用例，确保 100% 准确检出。</p><h2 id=\"section-三个真实案例-一次巡检-胜过熬夜三天\">三个真实案例：一次巡检，胜过熬夜三天<a class=\"heading-anchor\" href=\"#section-三个真实案例-一次巡检-胜过熬夜三天\" aria-label=\"链接到本节：三个真实案例：一次巡检，胜过熬夜三天\">#</a></h2><p>电商大促前夜。主机智能巡检发现内核 Slab 内存（SReclaimable）异常升高，已占到系统内存的 30%。AI 诊断出是日志采集 Agent 遍历&nbsp;/proc/*/fd&nbsp;产生了海量 dentry 缓存。调整采集策略后释放 8GB 内核内存，成功避开了大促当天的 OOM 风险。若没有这次巡检，大促当天核心服务极可能被 OOM 杀掉，损失以数百万计。</p><p><br></p><p>微服务集群间歇性超时。主机智能巡检发现 conntrack 表使用率已达 92%，dmesg 报出 “table full, dropping packet”。AI 判定是 K8s 大量短连接场景下 conntrack_max 默认值不足，调大参数并启用 keepalive 后，超时彻底消失。若靠人工逐一排查网络设备，往往要耗上好几个小时。</p><p><br></p><p>数据库慢查询突增。主机智能巡检发现磁盘写延迟从 5ms 飙到 200ms，AI 诊断为 O_SYNC 写入叠加同盘混部引发的 IOPS 争抢。分离 WAL 日志盘与数据盘后，延迟迅速回落到 5ms。而在此之前，DBA 已在 SQL 优化的错误方向上白白折腾了两天——真正的病根在存储层。</p><h2 id=\"section-怎么用-像跟同事说话一样简单\">怎么用？像跟同事说话一样简单<a class=\"heading-anchor\" href=\"#section-怎么用-像跟同事说话一样简单\" aria-label=\"链接到本节：怎么用？像跟同事说话一样简单\">#</a></h2><p>主机智能巡检提供三种巡检姿势，随你挑：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_00c54b3a036e4a01ac51d042a8824d4d.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_19b3d0433c69437d9979dd957ec8ccba.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>你甚至可以直接对主机智能巡检说：“帮我看看这台机器的内存情况”，它便会自动跑一整套内存全景分析、OOM 检测、Slab 检查，最后交给你一份完整报告。这就是 STAROps 的“数字员工”——一个你能自定义职责、权限和技能的专属 SRE 智能体，既能陪你聊，也能替你干活。</p><h2 id=\"section-看一次真实的巡检长什么样\">看一次真实的巡检长什么样<a class=\"heading-anchor\" href=\"#section-看一次真实的巡检长什么样\" aria-label=\"链接到本节：看一次真实的巡检长什么样\">#</a></h2><p>说得再多，不如让你亲眼看一次。下面这组截图来自主机智能巡检的真实演示——从用户敲下一句自然语言，到 Agent 自主完成全部诊断、生成分级报告，全程五步，前后不过一两分钟。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_16a57f89681b49d9bb2f9dbcd7aa4491.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><strong>1、用户下发指令。</strong> 在 STAROps 对话框里敲一句：“/主机巡检，对当前 workspace 的所有 ecs 做一次巡检”——没有 UI 点选、没有 YAML 配置、没有工单流转，一句自然语言就是全部指令。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_0ab3f1ab2e144530a5bcc074ff6974d7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><strong>2、Agent 读取 Skill 与参数。</strong> Agent 立即读取 Skill 内容，自动补齐一次巡检需要的全部上下文：region、UID、workspace、time_range。谁执行、查哪个云账号、覆盖哪些实例、看多久的窗口——这些以前要靠人反复确认的参数，Skill 帮你一次性写进流程。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_063782b2b2e5425ba617d5929b18745b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><strong>3、执行异常事件查询。</strong> Agent 调用底层的 SLS 异常事件查询能力，对整个 workspace 做扫描。结果一目了然：共发现 3 类 CRITICAL 异常，影响 102 台实例，累计 1380 个事件。这一步在人工时代意味着要挨个登机器 grep 日志——现在只是一次查询的延迟。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_d8c651a8d5364f0094fa5d1f75715cd8.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><strong>4、触发 SysOM 自动诊断。</strong> Agent 不满足于“发现异常”，紧接着对关键异常实例并发调用 SysOM 诊断——对内存偏高的实例跑 memgraph 内存热点分析，对磁盘吃紧的实例跑 diskanalysis 磁盘分析，形成机器可读、可执行的结构化诊断结论。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_2eac35c925984fd286c2755bb55e17f2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><strong>5、分级巡检报告。</strong> 所有诊断结论最终被汇总成一份分级报告：🔴 需立即处置（P0 严重问题、附建议动作）+ 🟢 持续观察（P2 已恢复但需关注）两级，一屏看完当前 workspace 的健康画像。“3 类 CRITICAL、102 台实例、1380 事件”就是这一屏最好的注解。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_2fd812c9818d4fb8982ae90d062eb631.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>再往下钻一层，你会看到 AI 医生（主机智能巡检）真正的“手艺”：</p><ul><li>内存热点：memgraph 诊断结论 “warning — 内存利用率过高，存在内存不足风险”，直接把嫌疑锁定到具体进程，并进一步指出某个目录下 30 个 32MB 分片文件 = 2.72GB 疑似共享内存泄露——从“内存高”一路追问到“是谁、在哪儿、多大量”。</li><li>磁盘诊断：diskanalysis 诊断结论 “error — 磁盘使用率 91.7%，存在空间耗尽风险”，直接把根因贴到你脸上：到底是哪个文件占了 31.6GB 测试填充文件；处置建议是“立即删除该文件”——不是让你自己想，是告诉你按哪个键。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_d82f55439ad846ad96c8a210839f708b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这就是 Skill + Agent + SysOM 三件套跑出来的结果。从“帮我看看有没有问题”到“这几台机器要立刻删这个文件、那几台要排查共享内存泄露”，中间的所有排查、判断、诊断、汇总，全都被压进了一次自动巡检里。</p><p><br></p><p>视频请至公众号【阿里云云原生】查看。</p><h2 id=\"section-你关心的-我们都想到了\">你关心的，我们都想到了<a class=\"heading-anchor\" href=\"#section-你关心的-我们都想到了\" aria-label=\"链接到本节：你关心的，我们都想到了\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_28c693dbbe9046d1a74cfd85726b5c54.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-别等故障发生-才后悔没早点检查\">别等故障发生，才后悔没早点检查<a class=\"heading-anchor\" href=\"#section-别等故障发生-才后悔没早点检查\" aria-label=\"链接到本节：别等故障发生，才后悔没早点检查\">#</a></h2><p>服务器不会说话，但它一直在给你留信号。区别只在于——你是在故障爆发后手忙脚乱地翻日志，还是让一位 24 小时在线、永不疲倦的 AI 运维专家提前把风险按下去。</p><p>现在就打开云监控 2.0，点开 STAROps，给你的每一台服务器约一次“体检”。</p><p><br></p><p>第一次巡检，可能就帮你躲过下一个凌晨三点。</p><p><br></p><p><strong>云监控&nbsp;2.0&nbsp;链接：</strong> <a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.4.55d16ffaNTQCZZ&amp;enc=HEEcwJXLka8mNyDQTFNBCg%3D%3D.ugW3WkfR%2B63%2FaH7FIhCgq27b%2FY8ksr6SgxiIZiAocEE1pkOlPdzRl%2BfI2onHix6j\" target=\"_blank\" rel=\"noopener noreferrer\">https://cmsnext.console.aliyun.com</a></p><p><strong><br></strong></p><p><strong>联系我们：</strong></p><p>您在使用 STAROps 主机智能巡检的过程中，有任何疑问和建议，可以搜索群号：94405014449 加入钉钉群反馈，欢迎大家加入交流。</p>",
+    "headings": [
+      {
+        "id": "section-大多数故障-其实早就预约过了",
+        "level": 2,
+        "text": "大多数故障，其实早就预约过了"
+      },
+      {
+        "id": "section-把话说明白-主机智能巡检到底是什么",
+        "level": 2,
+        "text": "把话说明白：主机智能巡检到底是什么？"
+      },
+      {
+        "id": "section-一张表-看懂主机智能巡检凭什么不一样",
+        "level": 2,
+        "text": "一张表，看懂主机智能巡检凭什么不一样"
+      },
+      {
+        "id": "section-三大硬核优势",
+        "level": 2,
+        "text": "三大硬核优势"
+      },
+      {
+        "id": "section-覆盖广-别人看不到的-它能看到",
+        "level": 3,
+        "text": "覆盖广：别人看不到的，它能看到"
+      },
+      {
+        "id": "section-诊断深-不只说-你有病-还告诉你-病根-和-药方",
+        "level": 3,
+        "text": "诊断深：不只说“你有病”，还告诉你“病根”和“药方”"
+      },
+      {
+        "id": "section-经验真-不是纸上谈兵-是百万实例的实战沉淀",
+        "level": 3,
+        "text": "经验真：不是纸上谈兵，是百万实例的实战沉淀"
+      },
+      {
+        "id": "section-三个真实案例-一次巡检-胜过熬夜三天",
+        "level": 2,
+        "text": "三个真实案例：一次巡检，胜过熬夜三天"
+      },
+      {
+        "id": "section-怎么用-像跟同事说话一样简单",
+        "level": 2,
+        "text": "怎么用？像跟同事说话一样简单"
+      },
+      {
+        "id": "section-看一次真实的巡检长什么样",
+        "level": 2,
+        "text": "看一次真实的巡检长什么样"
+      },
+      {
+        "id": "section-你关心的-我们都想到了",
+        "level": 2,
+        "text": "你关心的，我们都想到了"
+      },
+      {
+        "id": "section-别等故障发生-才后悔没早点检查",
+        "level": 2,
+        "text": "别等故障发生，才后悔没早点检查"
+      }
+    ],
+    "textLength": 4371,
+    "readingMinutes": 10,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1753197",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "5271d42b92ce89382cf590b0b3dabc0f8bc4ddcb507360d0cfe833c4c07348b0",
+    "fetchedAt": "2026-11-02T07:09:40.777Z",
+    "checkedAt": "2026-11-02T07:09:40.777Z",
+    "nextRetryAt": "2026-12-02T07:09:40.777Z",
+    "warnings": []
+  }
+}

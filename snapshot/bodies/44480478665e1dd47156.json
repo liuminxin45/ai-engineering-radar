@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "44480478665e1dd47156",
+    "status": "ready",
+    "html": "<p><strong>论坛名称</strong></p><p>Agent 工程化：AgentCore 让企业智能体走进生产</p><p><strong>时间</strong></p><p>9月23日 13:30-17:30</p><p><strong>地点</strong></p><p>杭州国际博览中心一期 四楼大会议室A</p><p><br></p><p>企业正在探索如何让智能体更可靠、更安全、更低成本地完成真实业务任务，以此构建新时代的核心竞争力。</p><p><br></p><p>做一个 Agent 不难，但真要把它接进业务系统，企业各团队的问题挨个冒出来：开发问怎么更快构建和部署？安全问权限怎么管、过程怎么审计？业务问结果是否稳定、价值能否量化？平台团队问当 Agent 从 10 个变成 1000 个，系统还能不能管得住？</p><p><br></p><p><strong>2026 云栖大会“Agent 工程化：AgentCore 让企业智能体走进生产”论坛</strong> <strong>，</strong> 将聚焦企业智能体规模化落地，联合产学研各界专家与先锋企业，全新发布智能体构建和治理平台 Alibaba Cloud AgentCore 及企业级落地白皮书，围绕 Agent 构建、运行、治理、协作、评估、优化全生命周期，为企业将智能体安全、稳定地推向规模化生产提供实践指南，同时结合丰富的客户真实案例，展示阿里云 AgentCore 如何在客户服务、智能研发、自动化运营等场景带来效率提升和业务创新。</p><h2 id=\"section-论坛剧透-不容错过的三大理由\">论坛剧透：不容错过的三大理由<a class=\"heading-anchor\" href=\"#section-论坛剧透-不容错过的三大理由\" aria-label=\"链接到本节：论坛剧透：不容错过的三大理由\">#</a></h2><p>在“让 Agent 进生产”这道题上，过去一年各家企业的答案千差万别，每上一个 Agent 都要重新造一次轮子。在这场论坛，阿里云要给出标准化答案。</p><p><br></p><p><strong>一项全新智能体基础设施——阿里云 AgentCore 重磅发布</strong> <strong>。</strong> 智能体走向生产级系统，企业要解决的问题不是调用大模型的方法，而是一套支撑多智能体规模化运行的工程化体系。AgentCore 是阿里云全新推出的智能体构建和治理平台，以构建与运行、协作与治理、观测与评估三大能力，覆盖 Agent 全生命周期；通过多模式构建入口、统一身份鉴权与 Team 协作编排，将自研、开源 Harness、商业 SaaS Agent 多来源集中统管，让智能体建得快、管得住、协作好。</p><p><br></p><p><strong>一份权威行动指南——《阿里云企业级智能体手册》重磅发布</strong> <strong>。</strong> 白皮书回答一个核心命题：企业级智能体走进生产，应该遵循一套什么样的工程纪律和评估体系。白皮书将给出一张基于阿里云 Agentic Cloud 的技术选型路线图，讲清楚把 Agent 从原型验证推到可被企业信赖的生产系统这条路上，每一步该做什么、该怎么衡量。</p><p><br></p><p><strong>一众先行者的成功实践——多企业真实环境落地案例拆解</strong>。本场论坛汇集运输物流、运动零售、企业服务等各行各业专家，及阿里云自身 Dogfooding 实践，把Agent 落地过程中遇到的难、找到的路、和用阿里云 AgentCore 实现&nbsp;Agent Harness 最佳实践跑通的成果掰开了讲：<strong>满帮</strong>的智能运维数字人协同平台、<strong>滔搏体育</strong>智能体从单点探索到规模化运营的全域实践，<strong>易点天下</strong>在广告业务中的智能体落地过程，<strong>联想百应</strong>探索出的企业 AI 规模化新范式，以及<strong>阿里云云原生</strong>怎么让 15 个智能体组成端到端协作的研发小队，带你看清当“惊艳感”退潮后，真正被企业留下、被业务信任、被规模化使用的智能体，应该长什么样。</p><h2 id=\"section-为-ai-agent-进入企业真实环境拿一张入场券\">为 AI Agent 进入企业真实环境拿一张入场券<a class=\"heading-anchor\" href=\"#section-为-ai-agent-进入企业真实环境拿一张入场券\" aria-label=\"链接到本节：为 AI Agent 进入企业真实环境拿一张入场券\">#</a></h2><p>如果你正在为企业&nbsp;Agent 项目做技术选型；如果你的团队跑通了 Demo，但迟迟推不上核心业务；如果你在思考 2026 下半年把 Agent 真正嵌进业务的那张路线图——</p><p><br></p><p><strong>2026 云栖大会“Agent 工程化：AgentCore 让企业智能体走进生产”论坛</strong>，绝对值得你拿出半天的时间。</p><p><br></p><p>为在这条路上一起同行的你，我们准备了一份 AgentCore 定制门票，希望从这里开始，你会是“企业 Agent 走进生产”这件事最早的见证人之一。</p><p><br></p><p><span><span>为在这条路上一起同行的你，我们准备了一份 AgentCore 定制门票，希望从这里开始，你会是“企业 Agent 走进生产”这件事最早的见证人之一。</span></span></p><p><br></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_054c6947f8824c49aef7e038caafde50.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [
+      {
+        "id": "section-论坛剧透-不容错过的三大理由",
+        "level": 2,
+        "text": "论坛剧透：不容错过的三大理由"
+      },
+      {
+        "id": "section-为-ai-agent-进入企业真实环境拿一张入场券",
+        "level": 2,
+        "text": "为 AI Agent 进入企业真实环境拿一张入场券"
+      }
+    ],
+    "textLength": 1591,
+    "readingMinutes": 4,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1761911",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "92e66913ae7547d2f0be5584b94edbb70a3c7d7b3322f447e92bad920e191fd6",
+    "fetchedAt": "2026-11-02T07:08:58.710Z",
+    "checkedAt": "2026-11-02T07:08:58.710Z",
+    "nextRetryAt": "2026-12-02T07:08:58.710Z",
+    "warnings": []
+  }
+}

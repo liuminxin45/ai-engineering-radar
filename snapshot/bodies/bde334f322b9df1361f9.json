@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "bde334f322b9df1361f9",
+    "status": "ready",
+    "html": "<p>近日，全球权威咨询机构 Gartner 发布 2026&nbsp;年《可观测魔力象限》（Magic Quadrant™ for Observability Platforms）报告，<strong>阿里云成功跻身“挑战者”象限，成为亚太地区唯一入选厂商</strong>。</p><p><br></p><p>在可观测性加速迈入“AI Agent自主运维”（Agentic Ops）的关键拐点，阿里云凭借统一<strong>可观测数据底座&nbsp;CMS 2.0&nbsp;与全域智能运维平台&nbsp;STAROps</strong>，让&nbsp;AI Agent&nbsp;能够&nbsp;7×24&nbsp;自主完成从根因分析到闭环处置的运维全流程，在全球市场展现出强劲的智能运维竞争力。</p><p><br></p><p>随着各种企业级&nbsp;Agent&nbsp;应用规模化落地，可观测性从被动排障工具进化为主动驱动业务韧性的核心基础设施。传统的“烟囱式”监控无法满足多&nbsp;Agent、跨系统、跨域的数据关联需求——企业要的不只是“看得见”，而是能自主“看得懂、定得准”的智能运维底座。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_060ff8c8efb34346933ca25eb03ce43a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>阿里云跻身&nbsp;Gartner&nbsp;可观测“挑战者”象限</em></p><p><em><br></em></p><p><strong>阿里云云监控&nbsp;CMS 2.0</strong> 将此前独立的云监控&nbsp;CMS、日志服务&nbsp;SLS、应用实时监控服务&nbsp;ARMS&nbsp;整合为<strong>一站式统一可观测平台</strong>，以&nbsp;UModel&nbsp;数据模型为核心，打通指标、日志与链路数据，显著降低运维复杂度，也为上层&nbsp;Agent&nbsp;提供了统一、可推理的数据底座。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_8fe89819f6fe413cb76366383a3c591e.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>在&nbsp;CMS 2.0&nbsp;之上，阿里云推出了<strong>全域智能运维平台&nbsp;STAROps</strong>，提供&nbsp;RAM&nbsp;权限控制、高风险操作人工确认、Agent&nbsp;行为审计与端到端加密等企业级保障。基于&nbsp;STAROps&nbsp;，企业可根据需求构建专属&nbsp;SRE Agent，并配置职责、权限与技能，使其自主调度运维操作、独立完成任务；同时，&nbsp;STAROps&nbsp;本身就是一套运行在阿里云基础设施之上的&nbsp;Agent，通过统一编排承接复杂的跨域运维作业。企业既可以通过&nbsp;OpenAPI&nbsp;与&nbsp;MCP&nbsp;将&nbsp;STAROps&nbsp;无缝接入现有工作流、快速获得&nbsp;AI&nbsp;提效，也能以此加速向&nbsp;Agent Native&nbsp;的智能运维模式升级。</p><p><br></p><p>目前，<strong>阿里云可观测性服务已覆盖亚太、欧洲、中东、非洲及拉美等区域</strong>，支持&nbsp;OpenTelemetry&nbsp;数据摄入；STAROps&nbsp;也已上架&nbsp;Qoder Desktop&nbsp;插件市场，将分散的云资源、可观测数据与专家经验深度融合，推动运维体系从“被动救火”走向“主动自治”，让Agentic Ops&nbsp;真正走进生产环境。</p><p><br></p><p><strong><em>数据来源：</em></strong><em>&nbsp;Gartner, Magic Quadrant for Observability Platforms, July 13th 2026</em></p><p><em><br></em></p><p><strong><em>免责声明：</em></strong></p><p><em>Gartner</em> <em>并未在其研究报告中支持任何供应商、产品或服务，也并未建议科技用户只选择该等获最高评分或其它称号的供应商。Gartner&nbsp;的研究报告含有&nbsp;Gartner&nbsp;商业和技术洞察组织的意见，且该意见不应被视作事实陈述。就该研究报告而言，Gartner&nbsp;放弃做出所有明示或默示的保证。该图形由&nbsp;Gartner, Inc.&nbsp;发布，作为更大的研究文档的一部分，应在整个文档的背景下进行评估。Alibaba Cloud 可应要求提供 Gartner 文档。GARTNER 和 MAGIC QUADRANT 是 Gartner, Inc. 和 / 或其关联公司在美国和国际上的商标。</em></p>",
+    "headings": [],
+    "textLength": 1341,
+    "readingMinutes": 3,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1751531",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "ca0ddc19b5d3243bb11c2ac11302752c9410bc88b6b5778f0ec77cfbfe5de07e",
+    "fetchedAt": "2026-11-02T07:09:43.663Z",
+    "checkedAt": "2026-11-02T07:09:43.663Z",
+    "nextRetryAt": "2026-12-02T07:09:43.663Z",
+    "warnings": []
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "79e78fbe21cb44616bc1",
+    "status": "ready",
+    "html": "\n          <p>不赶进度、专注打磨！今天想和大家聊聊我们最新发布的 IndexTTS 2.5，支持中/英/日/西/阿五国语言零样本配音，推理速度翻倍升级，跨语言情绪还原更自然，同时也支持原声的语速控制能力，补齐上代模型短板。在 AI 语音合成领域，B 站自研的 IndexTTS 系列一直以高情绪还原度、可落地性强著称。这次新版 IndexTTS 2.5 并没有快速迭代更新，而是团队进行了长时间、全方位的深度打磨。宁愿推迟发布，也要把速度、音质、多语种适配、情绪自然度全部优化到位，最终给大家带来更成熟、更好用的全新版本。</p> \n<p>👉 仓库地址（记得 Star🌟）：<em><a title=\"​https://github.com/index-tts/index-tts​\" href=\"https://github.com/index-tts/index-tts\" target=\"_blank\" rel=\"noopener noreferrer\">​https://github.com/index-tts/index-tts​</a></em></p> \n<p>👉 官方宣传片（求三连🎉）：<em><a title=\"https://www.bilibili.com/video/BV1uvMk6ZEdK/\" href=\"https://www.bilibili.com/video/BV1uvMk6ZEdK/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.bilibili.com/video/BV1uvMk6ZEdK/</a></em></p> \n<p>👉 论文地址：<em><a title=\"https://arxiv.org/abs/2601.03888\" href=\"https://arxiv.org/abs/2601.03888\" target=\"_blank\" rel=\"noopener noreferrer\">https://arxiv.org/abs/2601.03888</a></em></p> \n<p>👉 Demo 展示地址：<em><a title=\"https://github.com/index-tts/index-tts2-5.github.io\" href=\"https://github.com/index-tts/index-tts2-5.github.io\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/index-tts/index-tts2-5.github.io</a></em></p> \n<p></p> \n<h2 id=\"section-为什么要做-2-5\"><strong>为什么要做 2.5？</strong><a class=\"heading-anchor\" href=\"#section-为什么要做-2-5\" aria-label=\"链接到本节：为什么要做 2.5？\">#</a></h2> \n<p></p> \n<p>去年 IndexTTS 2 发布后，非常受社区小伙伴们喜爱，情感和音色解耦组合的能力，让不少创作者在有声书、视频配音场景里玩出了花。</p> \n<p>但我们也收到了很多真实的反馈，其中最集中的两条是：</p> \n<ul><li><strong>“只会中英双语不够用啊”</strong>——想让自己的声音说日语、说西语；</li><li><strong>“好是好，就是有点慢”</strong>——实时性场景里等得着急。</li></ul> \n<p>这两条反馈，成了 IndexTTS 2.5 的立项初心。经过大半年的打磨，我们交出的答卷是：</p> \n<ul><li>🔥 跨语种情感复刻：进一步打磨情绪韵律表现与音色还原效果，整体稳定性大幅提升；</li><li>🌍 多语言升级：一站式支持中文、英语、日语、西班牙语、阿拉伯语五大语种，满足语种多样化的配音需求；</li><li>⚡ 更快更轻：对推理架构进行轻量化重构，有效提升推理运行效率；</li><li>🎙️ 灵活语速：开放语速控制能力，满足创作需求。</li></ul> \n<p>下面和大家展开聊聊我们是怎么做的。</p> \n<p></p> \n<h2 id=\"section-先站在巨人的肩膀上看看路\"><strong>先站在巨人的肩膀上看看路</strong><a class=\"heading-anchor\" href=\"#section-先站在巨人的肩膀上看看路\" aria-label=\"链接到本节：先站在巨人的肩膀上看看路\">#</a></h2> \n<p></p> \n<p>语音合成这两年发展很快，技术路线也几经分化。我们在报告里梳理了一张主流零样本 TTS 的技术全景图：</p> \n<p><img alt=\"图片\" height=\"711\" src=\"https://i-blog.csdnimg.cn/img_convert/835952acec490e8eb5af7d290ccd298b.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>目前最主流的范式是：语言模型先生成承载发音和韵律的“语义 token”，再由流匹配模块还原声学细节，最后经声码器输出波形。IndexTTS 2.5 沿用了 IndexTTS 2 验证过的这条主干，把火力集中在四个关键升级点上。</p> \n<p></p> \n<h3 id=\"section-升级一-多语言-难在-同一个字两种读法\"><strong>升级一：多语言，难在“同一个字两种读法”</strong><a class=\"heading-anchor\" href=\"#section-升级一-多语言-难在-同一个字两种读法\" aria-label=\"链接到本节：升级一：多语言，难在“同一个字两种读法”\">#</a></h3> \n<p></p> \n<p>做多语言 TTS，最头疼的问题之一是<strong>跨语言共享字符</strong>。举个最典型的例子：日语里大量使用的汉字，模型看到它，到底该按中文读还是按日文读？</p> \n<p>为了系统地回答这个问题，我们设计并公平对比了三种建模策略：</p> \n<p><img alt=\"图片\" height=\"357\" src=\"https://i-blog.csdnimg.cn/img_convert/7160629080c9a986a4f7afff70c3a6ae.png\" width=\"1010\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p><img alt=\"图片\" height=\"123\" src=\"https://i-blog.csdnimg.cn/img_convert/b1ce7b63737eea3fcb26a5d31a1e32d7.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>一个重要的发现是：<strong>没有银弹，三种策略各有擅长且互补</strong>。我们把完整的对比结论写进了报告，希望能给同行们做多语言系统时提供一些可直接参考的设计原则。</p> \n<p>巧妇难为无米之炊。为了喂饱多语言模型，我们还搭了一条自动化数据管线——带事件分类的 VAD 切分（区分语音/歌唱/伴奏/噪声比例）、一体化 ASR（识别 + 说话人日志 + 标点恢复）、选择性音源分离（仅伴奏片段用 Demucs 抽人声，避免音质劣化）、基于说话人一致性与文本连贯性的片段合并（单说话人、≤25s）、音频质量 + 文本质量双重过滤。</p> \n<p><img alt=\"图片\" height=\"512\" src=\"https://i-blog.csdnimg.cn/img_convert/b318ffa09f6dbc0c6434ca9e79d913fc.png\" width=\"1010\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>最终我们攒下了约 <strong>15 万小时</strong> 的多语言语料，外加 135 小时情感语音。</p> \n<p></p> \n<h3 id=\"section-升级二-三-瘦身组合拳-序列砍半-换个更轻的-心脏\"><strong>升级二 &amp; 三：瘦身组合拳——序列砍半 + 换个更轻的“心脏”</strong><a class=\"heading-anchor\" href=\"#section-升级二-三-瘦身组合拳-序列砍半-换个更轻的-心脏\" aria-label=\"链接到本节：升级二 &amp; 三：瘦身组合拳——序列砍半 + 换个更轻的“心脏”\">#</a></h3> \n<p></p> \n<p>提速这块，我们打了套组合拳：</p> \n<p><strong>第一拳：语义 Codec 帧率从 50Hz 压到 25Hz。</strong> 语义 token 序列长度直接减半，训练和推理的计算量、显存占用都大幅下降，而语言信息几乎无损。</p> \n<p><strong>第二拳：S2M 模块主干从 U-DiT 换成 Zipformer。</strong> 参数更少、生成更快。有意思的是，主观盲测里 Zipformer 版本反而以 56% vs 40% 的偏好率赢下了更复杂的 U-DiT——大道至简。</p> \n<p><img alt=\"图片\" height=\"150\" src=\"https://i-blog.csdnimg.cn/img_convert/f6e444f5092dba7e076feaea4aa04b3d.png\" width=\"990\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>两拳叠加，效果直接看数据（相同 A10 硬件环境）：</p> \n<p>T2S 模块 RTF 从 0.232 降到 0.119，S2M 模块从 0.078 降到 0.017，<strong>整体提速约 2.28 倍</strong>，主观听感无可感知下降。对实时交互场景来说，这是从“能用”到“好用”的一步。</p> \n<p></p> \n<h3 id=\"section-升级四-让模型自己-卷-自己-grpo-后训练\"><strong>升级四：让模型自己“卷”自己——GRPO 后训练</strong><a class=\"heading-anchor\" href=\"#section-升级四-让模型自己-卷-自己-grpo-后训练\" aria-label=\"链接到本节：升级四：让模型自己“卷”自己——GRPO 后训练\">#</a></h3> \n<p></p> \n<p>我们把 GRPO 强化学习引入了 T2S 模块的后训练：同一段文本让模型随机生成 4 个候选语音，用 ASR 词错误率和说话人相似度当“裁判”打分，让模型自己朝着“读得对、像本人”的方向进化。</p> \n<p>收获是实打实的：五语言平均 WER 从 6.75% 降到 <strong>6.00%</strong>，平均说话人相似度从 73.18 升到 <strong>73.63</strong>，英、日、阿语的提升尤其明显。</p> \n<p></p> \n<h2 id=\"section-效果怎么样-上数据\"><strong>效果怎么样？上数据</strong><a class=\"heading-anchor\" href=\"#section-效果怎么样-上数据\" aria-label=\"链接到本节：效果怎么样？上数据\">#</a></h2> \n<p></p> \n<p><strong>零样本语音克隆：</strong> 在五种语言的评测中，IndexTTS 2.5 平均说话人相似度最高，但 WER 比 4B 模型 Fish Audio S2 Pro 略差一单，整体处于第一梯队：</p> \n<p><img alt=\"图片\" height=\"368\" src=\"https://i-blog.csdnimg.cn/img_convert/cbdada055895b31c534be6a82f7785a8.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>注：图中仅列入五种语言均有完整结果并报告平均值的模型；带 † 的数据引用自各模型原论文，WER 越低越好，SS 越高越好。</p> \n<p></p> \n<p><strong>跨语言合成：</strong> 用一段中文语音做参考，让同一个音色开口说英、日、西、阿语，IndexTTS 2.5 综合成绩全场最佳：</p> \n<p><img alt=\"图片\" height=\"441\" src=\"https://i-blog.csdnimg.cn/img_convert/ead59f8dc84b542f2fd87613d7025f17.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p><strong>情感迁移：</strong> 情感训练只用了中文和英文数据，但模型把“情绪”带到了所有语言——阿语情感测试（还是用日语 prompt 的极限设定）MOS 达到 4.18/5；在 CV3-Eval 情感零样本基准上，中文情感识别准确率 0.713，比 CosyVoice3 的 0.467 高出一大截。</p> \n<p><strong>多语言情感合成对比</strong>（IndexTTS 2.5 vs CosyVoice3）：</p> \n<p></p> \n<p><img alt=\"图片\" height=\"273\" src=\"https://i-blog.csdnimg.cn/img_convert/9a94d485d5a68a245ff9cd6faf71f07e.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p><strong>情感感知评测</strong>（CV3-Eval Emotion-ZeroShot 基准）：</p> \n<p></p> \n<p><img alt=\"图片\" height=\"287\" src=\"https://i-blog.csdnimg.cn/img_convert/cad4e0593548147efbd5e0118e27e759.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p>简单说：<strong>你给它一段开心的中文，它能让一个西班牙语的声音同样开心。</strong>&nbsp;情感，音色，语种被明显解耦了。</p> \n<p></p> \n<h2 id=\"section-写在最后\"><strong>写在最后</strong><a class=\"heading-anchor\" href=\"#section-写在最后\" aria-label=\"链接到本节：写在最后\">#</a></h2> \n<p></p> \n<p>从 IndexTTS 1 到 2 再到 2.5，这个系列的每一步成长都离不开社区的关注和反馈。这一次，我们希望 IndexTTS 2.5 能让\"用任何声音、说任何语言、带任何情绪\"这件事，离每一位创作者更近一点。也欢迎在评论区聊聊你的使用场景和建议——你们的每一条反馈，都是下一个版本的立项书。</p> \n<p></p> \n<h2 id=\"section-团队介绍\"><strong>团队介绍</strong><a class=\"heading-anchor\" href=\"#section-团队介绍\" aria-label=\"链接到本节：团队介绍\">#</a></h2> \n<p></p> \n<p>本论文主要作者来自哔哩哔哩 Index 语音团队（bilibili Index Speech Team），Index语音团队是一支专注于音频技术创新的研究团队，致力于音频生成、语音合成与音乐技术的前沿探索，重点研究高保真、自然真实、可控性强的语音生成模型。团队通过深度学习与神经网络技术的不断突破，持续为学术界与工业界提供高质量的语音合成技术支持与创新方案，助力创作者用声音打破表达边界。</p> \n<p></p> \n<h3 id=\"section-团队招聘相关\"><strong>团队招聘相关</strong><a class=\"heading-anchor\" href=\"#section-团队招聘相关\" aria-label=\"链接到本节：团队招聘相关\">#</a></h3> \n<ul><li> <p>校招：<em><a title=\"https://jobs.bilibili.com/campus/positions/29916\" href=\"https://jobs.bilibili.com/campus/positions/29916\" target=\"_blank\" rel=\"noopener noreferrer\">https://jobs.bilibili.com/campus/positions/29916</a></em></p> </li></ul> \n<p></p> \n<p><img alt=\"图片\" height=\"400\" src=\"https://i-blog.csdnimg.cn/img_convert/e16766426b1d37decce42d81254d2b1c.png\" width=\"400\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<ul><li> <p>日常实习生：<em><a title=\"https://jobs.bilibili.com/campus/positions/29468\" href=\"https://jobs.bilibili.com/campus/positions/29468\" target=\"_blank\" rel=\"noopener noreferrer\">https://jobs.bilibili.com/campus/positions/29468</a></em></p> </li></ul> \n<p></p> \n<p><img alt=\"图片\" height=\"400\" src=\"https://i-blog.csdnimg.cn/img_convert/6f14503a39bcfeee2c5a8ae7e55f1b34.png\" width=\"400\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p></p> \n<p><strong>工作职责:</strong></p> \n<p>1.负责语音大模型（Speech LLM）及语音生成技术的研发与迭代，聚焦高保真语音合成（TTS）、零样本音色克隆、情感/风格可控语音生成等方向，持续挑战技术边界。</p> \n<p>2.紧密跟踪语音合成领域最新进展（如基于 LLM 的端到端语音生成、扩散/流匹配语音模型等），推动研究成果向业务转化，并在顶级会议/期刊发表高水平论文。</p> \n<p>3.将语音生成技术工程化落地于 B站视频出海、内容创作、虚拟主播等核心场景，解决音色相似度、情感表现力、多语言支持等实际业务痛点，打造行业领先的语音创作工具。</p> \n<p><strong>工作要求:</strong></p> \n<p>1.计算机科学、人工智能、信号处理等相关专业硕士及以上学历，具备扎实的机器学习、深度学习理论基础。</p> \n<p>2.深入理解多模态与生成式模型原理，熟悉大模型底层技术（如 Transformer、Diffusion、Flow Matching、自回归建模等）；在语音生成领域有前沿技术研究及论文发表经验，敢于挑战技术边界。</p> \n<p>3.对主流语音合成架构有深入理解，熟悉 IndexTTS、CosyVoice等开源语音合成模型，具备模型训练、微调、推理优化及工程化部署的实战经验；</p> \n<p>4.有 ACM/ICPC、Kaggle 等编程竞赛获奖经历，或 GitHub 开源项目具有较大影响力者优先。</p> \n<p>5. InterSpeech、ICASSP、NeurIPS、ICML、ACL 等语音或 AI 顶会/顶刊发表过相关论文者优先。</p> \n<p></p> \n<p>-End-</p> \n<p>作者丨Index SpeechTeam</p>\n        ",
+    "headings": [
+      {
+        "id": "section-为什么要做-2-5",
+        "level": 2,
+        "text": "为什么要做 2.5？"
+      },
+      {
+        "id": "section-先站在巨人的肩膀上看看路",
+        "level": 2,
+        "text": "先站在巨人的肩膀上看看路"
+      },
+      {
+        "id": "section-升级一-多语言-难在-同一个字两种读法",
+        "level": 3,
+        "text": "升级一：多语言，难在“同一个字两种读法”"
+      },
+      {
+        "id": "section-升级二-三-瘦身组合拳-序列砍半-换个更轻的-心脏",
+        "level": 3,
+        "text": "升级二 & 三：瘦身组合拳——序列砍半 + 换个更轻的“心脏”"
+      },
+      {
+        "id": "section-升级四-让模型自己-卷-自己-grpo-后训练",
+        "level": 3,
+        "text": "升级四：让模型自己“卷”自己——GRPO 后训练"
+      },
+      {
+        "id": "section-效果怎么样-上数据",
+        "level": 2,
+        "text": "效果怎么样？上数据"
+      },
+      {
+        "id": "section-写在最后",
+        "level": 2,
+        "text": "写在最后"
+      },
+      {
+        "id": "section-团队介绍",
+        "level": 2,
+        "text": "团队介绍"
+      },
+      {
+        "id": "section-团队招聘相关",
+        "level": 3,
+        "text": "团队招聘相关"
+      }
+    ],
+    "textLength": 3586,
+    "readingMinutes": 8,
+    "sourceId": "bilibili-csdn",
+    "sourceUrl": "https://blog.csdn.net/bilibili_TC/article/details/163824713",
+    "ruleId": "csdn",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-1",
+    "contentHash": "ab109aee4f01778a4a71d1325c012f87a79912ad3529c03d5ec9b9e10f4f0d96",
+    "fetchedAt": "2026-11-02T06:25:19.142Z",
+    "checkedAt": "2026-11-02T06:25:19.142Z",
+    "nextRetryAt": "2026-12-02T06:25:19.142Z",
+    "warnings": []
+  }
+}
