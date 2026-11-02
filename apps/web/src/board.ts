@@ -37,7 +37,6 @@ const order = [
   "baidu",
   "ant",
   "ctrip",
-  "xiaomi",
 ];
 export function boardCompanies(companies: Company[]) {
   return [...companies].sort((a, b) => {

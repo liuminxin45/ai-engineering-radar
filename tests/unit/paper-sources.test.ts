@@ -104,6 +104,7 @@ describe("publication affiliation verification", () => {
           },
           { affiliation: [{ name: "Tsinghua University" }] },
           { affiliation: [{ name: "Xiaohongshu / Rednote 小红书" }] },
+          { affiliation: [{ name: "Xiaomi / 小米" }] },
         ],
       }),
       source,

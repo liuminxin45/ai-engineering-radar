@@ -67,13 +67,13 @@ test("search and company history survive refresh while legacy sorting is removed
   await page.goto("./?sort=oldest&company=dewu");
   await expect(page).not.toHaveURL(/sort=/);
   await expect(page).toHaveURL(/company=dewu/);
-  await page.locator("#company-xiaomi").click();
+  await page.locator("#company-jd").click();
   await page.reload();
-  await expect(page.locator("#company-xiaomi")).toHaveAttribute(
+  await expect(page.locator("#company-jd")).toHaveAttribute(
     "aria-current",
     "location",
   );
-  await expect(page).toHaveURL(/company=xiaomi/);
+  await expect(page).toHaveURL(/company=jd/);
   await expectNoDocumentOverflow(page);
 });
 
@@ -273,6 +273,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   const companies = (await (await request.get("data/companies.json")).json())
     .companies;
   expect(companies.length).toBeGreaterThan(0);
+  expect(companies.some((c: { id: string }) => c.id === "xiaomi")).toBe(false);
   expect(companies.some((c: { id: string }) => c.id === "oppo")).toBe(false);
   expect(companies.some((c: { id: string }) => c.id === "xiaohongshu")).toBe(
     false,
@@ -313,7 +314,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   }
   expect(
     sources.filter((s: { contentType?: string }) => s.contentType !== "paper"),
-  ).toHaveLength(14);
+  ).toHaveLength(13);
   expect(
     sources.find((s: { id: string }) => s.id === "bytedance-tech-volcengine")
       .entryUrl,

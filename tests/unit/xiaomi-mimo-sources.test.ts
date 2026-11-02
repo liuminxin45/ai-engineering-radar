@@ -6,10 +6,7 @@ vi.mock("../../packages/crawler/http.js", async (original) => ({
 }));
 import { fetchReviewed } from "../../packages/crawler/http.js";
 import { collect } from "../../packages/crawler/adapters.js";
-import {
-  loadRegistry,
-  validateAccountScope,
-} from "../../packages/source-registry/index.js";
+import { validateAccountScope } from "../../packages/source-registry/index.js";
 import {
   miMoScripts,
   miMoHomeScript,
@@ -18,9 +15,9 @@ import {
   miMoArticleFrame,
 } from "../../packages/crawler/platforms/xiaomi-mimo.js";
 
-const source = (await loadRegistry()).sources.find(
-  (s) => s.id === "xiaomi-tech-site",
-)!;
+const source = JSON.parse(
+  await readFile("tests/fixtures/xiaomi-mimo-source.json", "utf8"),
+);
 const html = await readFile("tests/fixtures/xiaomi-mimo.html", "utf8");
 const script = await readFile("tests/fixtures/xiaomi-mimo-list.txt", "utf8");
 const references =

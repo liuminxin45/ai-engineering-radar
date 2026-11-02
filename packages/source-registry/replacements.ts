@@ -48,26 +48,6 @@ export const sourceReplacements = [
     replacementIds: ["baidu-cloud-csdn-candidate"],
   },
   {
-    sourceId: "xiaomi-team-blog",
-    companyId: "xiaomi",
-    replacementIds: ["xiaomi-tech-site"],
-  },
-  {
-    sourceId: "xiaomi",
-    companyId: "xiaomi",
-    replacementIds: ["xiaomi-tech-site"],
-  },
-  {
-    sourceId: "xiaomi-juejin",
-    companyId: "xiaomi",
-    replacementIds: ["xiaomi-tech-site"],
-  },
-  {
-    sourceId: "xiaomi-csdn-candidate",
-    companyId: "xiaomi",
-    replacementIds: ["xiaomi-tech-site"],
-  },
-  {
     sourceId: "vivo-site",
     companyId: "vivo",
     replacementIds: ["vivo-csdn"],
@@ -164,6 +144,13 @@ export const sourceReplacements = [
 
 // Explicit removals requested by the maintainer; these have no replacement.
 export const sourceWithdrawals = [
+  { sourceId: "xiaomi-tech-site", companyId: "xiaomi" },
+  { sourceId: "xiaomi-papers-crossref", companyId: "xiaomi" },
+  { sourceId: "mimo-hf-papers", companyId: "xiaomi" },
+  { sourceId: "xiaomi-team-blog", companyId: "xiaomi" },
+  { sourceId: "xiaomi", companyId: "xiaomi" },
+  { sourceId: "xiaomi-juejin", companyId: "xiaomi" },
+  { sourceId: "xiaomi-csdn-candidate", companyId: "xiaomi" },
   { sourceId: "xiaohongshu-papers-crossref", companyId: "xiaohongshu" },
   { sourceId: "ctrip-csdn", companyId: "ctrip", sourceOnly: true },
   { sourceId: "xiaohongshu-csdn", companyId: "xiaohongshu" },

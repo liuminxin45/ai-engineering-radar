@@ -43,7 +43,7 @@ describe("registry and identity", () => {
   it("keeps a single working blog source where available, alongside paper-only companies", () =>
     expect(
       registry.sources.filter((s) => s.contentType !== "paper").length,
-    ).toBe(14));
+    ).toBe(13));
   it("rejects verified records without evidence", () =>
     expect(() =>
       sourceSchema.parse({

@@ -57,11 +57,6 @@
       "region": "cn"
     },
     {
-      "id": "xiaomi",
-      "name": "小米",
-      "region": "cn"
-    },
-    {
       "id": "jd",
       "name": "京东",
       "region": "cn"
@@ -132,11 +127,6 @@
       "id": "ant-official",
       "companyId": "ant",
       "name": "蚂蚁集团 技术团队"
-    },
-    {
-      "id": "xiaomi-official",
-      "companyId": "xiaomi",
-      "name": "小米 技术团队"
     },
     {
       "id": "jd-official",
@@ -232,11 +222,6 @@
       "id": "ant-research-papers",
       "companyId": "ant",
       "name": "蚂蚁集团 研究论文署名团队"
-    },
-    {
-      "id": "xiaomi-research-papers",
-      "companyId": "xiaomi",
-      "name": "小米 研究论文署名团队"
     },
     {
       "id": "jd-research-papers",
@@ -511,33 +496,6 @@
         "dateSelector": "#post-date",
         "timezone": "+08:00"
       }
-    },
-    {
-      "id": "xiaomi-tech-site",
-      "publisherId": "xiaomi-official",
-      "name": "小米 MiMo · 官方博客",
-      "entryUrl": "https://mimo.xiaomi.com/",
-      "url": "https://mimo.xiaomi.com/zh/",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "xiaomi-mimo",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://mimo.xiaomi.com/",
-          "https://mimo.xiaomi.com/zh/",
-          "https://mimo.xiaomi.com/zh/blog/mimo-v2-6-tool-call-repetition"
-        ],
-        "note": "用户指定小米自有 MiMo 官网。首页署名 Xiaomi MiMo Team，页脚版权归 Xiaomi。读取中文首页博客列表，从官网同域静态资源解析文章链接，逐篇补充原文日期，必要时读取同域文章 iframe；只保存索引元数据。月份不推算为具体日期。2026-11-02 核验：最新明确发布日期为 2026-09-27，不代表近月更新。",
-        "reviewedAt": "2026-11-02T02:00:00.000Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["xiaomi-mimo"]
     },
     {
       "id": "bytedance-tech-volcengine",
@@ -929,34 +887,6 @@
       "linkHosts": ["doi.org"]
     },
     {
-      "id": "xiaomi-papers-crossref",
-      "publisherId": "xiaomi-research-papers",
-      "contentType": "paper",
-      "name": "小米 · 出版方论文元数据",
-      "entryUrl": "https://search.crossref.org/?q=Xiaomi",
-      "url": "https://api.crossref.org/works?query.affiliation=Xiaomi&sort=published&order=desc&rows=100",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "paper-crossref",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
-          "https://api.crossref.org/works?query.affiliation=Xiaomi&sort=published&order=desc&rows=100"
-        ],
-        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
-        "reviewedAt": "2026-11-02T00:00:00.000Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 30
-      },
-      "authorAllowlist": ["Xiaomi"],
-      "linkHosts": ["doi.org"]
-    },
-    {
       "id": "jd-papers-crossref",
       "publisherId": "jd-research-papers",
       "contentType": "paper",
@@ -1206,34 +1136,6 @@
         "backfillLimit": 5
       },
       "authorAllowlist": ["antgroup"],
-      "linkHosts": ["arxiv.org"]
-    },
-    {
-      "id": "mimo-hf-papers",
-      "publisherId": "xiaomi-research-papers",
-      "contentType": "paper",
-      "name": "小米 · XiaomiMiMo 论文",
-      "entryUrl": "https://huggingface.co/XiaomiMiMo/papers",
-      "url": "https://huggingface.co/XiaomiMiMo/papers",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "paper-huggingface",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://mimo.xiaomi.com/",
-          "https://huggingface.co/XiaomiMiMo/papers"
-        ],
-        "note": "只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。",
-        "reviewedAt": "2026-11-02T00:00:00.000Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 5,
-        "backfillLimit": 5
-      },
-      "authorAllowlist": ["XiaomiMiMo"],
       "linkHosts": ["arxiv.org"]
     },
     {
