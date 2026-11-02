@@ -4,6 +4,10 @@ import type { Article, Snapshot, SourceState } from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
 import { classificationSchema } from "../shared/types.js";
 import { indexOfficialArticle } from "../classifier/index.js";
+import {
+  assessAdvertorial,
+  markAdvertorials,
+} from "../classifier/advertorial.js";
 import { upsert } from "./deduplicate.js";
 import { collect } from "./adapters.js";
 import { CrawlError, fetchReviewed } from "./http.js";
@@ -18,11 +22,21 @@ export async function applyOverrides(articles: Article[]) {
   // Validate every override before applying it; never silently skip stale identifiers.
   if (raw.schemaVersion !== 1 || !raw.articles || !Array.isArray(raw.merges))
     throw new Error("Invalid override schema");
+  for (const article of articles)
+    if (
+      article.advertorial?.method === "manual" &&
+      raw.articles[article.id]?.advertorial === undefined
+    )
+      article.advertorial = assessAdvertorial({
+        ...article,
+        advertorial: undefined,
+      });
   for (const [id, value] of Object.entries(raw.articles)) {
     const o = z
       .object({
         status: z.enum(["accepted", "rejected", "review"]).optional(),
         hidden: z.boolean().optional(),
+        advertorial: z.enum(["suspected", "cleared"]).optional(),
         topics: z
           .array(
             z.enum([
@@ -44,6 +58,24 @@ export async function applyOverrides(articles: Article[]) {
       .parse(value);
     const a = articles.find((a) => a.id === id);
     if (!a) throw new Error(`Override references missing article ${id}`);
+    if (o.advertorial) {
+      a.advertorial = {
+        status: o.advertorial,
+        method: "manual",
+        basis: "manual-review",
+        reason: o.reason,
+        evidence: [],
+        version: "advertorial-manual-1",
+      };
+    }
+    // A label correction must not change collection or publication decisions.
+    if (
+      o.advertorial &&
+      o.status === undefined &&
+      o.hidden === undefined &&
+      o.topics === undefined
+    )
+      continue;
     a.classification = {
       ...a.classification,
       status: o.status ?? a.classification.status,
@@ -236,6 +268,7 @@ export async function ingest(
     article.classification = indexOfficialArticle(article);
     article.publicationStatus = "published";
   }
+  markAdvertorials(articles);
   await applyOverrides(articles);
   return { articles, states, successes, attempted };
 }

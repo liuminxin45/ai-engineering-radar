@@ -25,7 +25,10 @@ for (let i = 0; i < 45; i++) {
   upsert(
     articles,
     {
-      title: `${i % 2 ? "Building reliable AI agents" : "AI Coding 工程实践"} ${i + 1}: context pipeline evaluation`,
+      title:
+        i === 0
+          ? "Visa持卡人请查收！你的专属Token福利来了！"
+          : `${i % 2 ? "Building reliable AI agents" : "AI Coding 工程实践"} ${i + 1}: context pipeline evaluation`,
       url: `${source.entryUrl.replace(/\/$/, "")}/fixture-${i}`,
       externalId: `fixture-${i}`,
       description:

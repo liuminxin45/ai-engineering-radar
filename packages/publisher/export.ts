@@ -4,6 +4,7 @@ import { Feed } from "feed";
 import type { Article, Snapshot } from "../shared/types.js";
 import { compareArticles, effectiveDate, topics } from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
+import { assessAdvertorial } from "../classifier/advertorial.js";
 export function publishedArticles(articles: Article[], registry: Registry) {
   return articles
     .filter(
@@ -65,7 +66,12 @@ export async function exportSite(
   root: string,
   siteUrl: string,
 ) {
-  const articles = publishedArticles(snapshot.articles, registry);
+  const articles = publishedArticles(snapshot.articles, registry).map(
+    (article) => ({
+      ...article,
+      advertorial: assessAdvertorial(article),
+    }),
+  );
   const generatedAt = snapshot.manifest.generatedAt;
   const publicDir = join(root, "apps/web/public");
   const dataDir = join(publicDir, "data");
@@ -126,6 +132,27 @@ export async function exportSite(
     schemaVersion: 1,
     generatedAt,
     articles,
+  });
+  const suspected = articles.filter(
+    (a) => a.advertorial.status === "suspected",
+  );
+  await put(join(dataDir, "advertorial-review.json"), {
+    schemaVersion: 1,
+    generatedAt,
+    mode: "label-only",
+    basis: "title-description",
+    articleCount: articles.length,
+    suspectedCount: suspected.length,
+    insufficientCount: articles.filter(
+      (a) => a.advertorial.status === "insufficient",
+    ).length,
+    articles: suspected.map((a) => ({
+      id: a.id,
+      title: a.title,
+      canonicalUrl: a.canonicalUrl,
+      reviewUrl: `${siteUrl}/articles/${a.id}/#advertorial-review`,
+      advertorial: a.advertorial,
+    })),
   });
   for (const a of articles)
     await put(join(dataDir, "articles", `${a.id}.json`), {

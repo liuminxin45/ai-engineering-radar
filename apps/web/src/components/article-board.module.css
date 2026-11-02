@@ -252,6 +252,7 @@
   gap: 8px;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   font-size: 13px;
   color: var(--muted);
   line-height: 1.5;
@@ -262,6 +263,35 @@
   flex-wrap: wrap;
   gap: 4px 9px;
   min-width: 0;
+  flex: 1 1 130px;
+}
+.advertorialBadge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: auto;
+  align-self: flex-end;
+  min-height: 24px;
+  padding: 2px 6px;
+  border: 1px solid var(--advertorial-border);
+  border-radius: 4px;
+  background: var(--advertorial-bg);
+  color: var(--advertorial-ink);
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.advertorialBadge::after {
+  content: "";
+  position: absolute;
+  inset: -10px 0;
+}
+.advertorialBadge:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
 }
 .storyMeta time {
   font-variant-numeric: tabular-nums;

@@ -8,6 +8,7 @@ for (const path of [
   "/data/articles.json",
   "/data/sources.json",
   "/data/health.json",
+  "/data/advertorial-review.json",
   "/feed.xml",
   "/feed.atom",
 ]) {
@@ -19,6 +20,19 @@ for (const path of [
       throw new Error(`${path}: invalid XML`);
   }
   if (path.endsWith(".json")) JSON.parse(text);
+  if (path === "/data/advertorial-review.json") {
+    const report = JSON.parse(text);
+    if (
+      report.mode !== "label-only" ||
+      report.suspectedCount !== report.articles.length
+    )
+      throw new Error("Live advertorial trial report is invalid");
+    for (const article of report.articles)
+      if (article.advertorial.status !== "suspected")
+        throw new Error(
+          "Live advertorial report contains an unflagged article",
+        );
+  }
   console.log(`${path}: OK`);
   if (path === "/data/articles.json") {
     const data = JSON.parse(text);

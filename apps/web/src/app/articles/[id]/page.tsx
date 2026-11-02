@@ -51,6 +51,25 @@ export default async function Detail({
         <p className="small muted">
           本站仅提供文章索引和简短介绍，完整内容请在原站阅读。
         </p>
+        {a.advertorial?.status === "suspected" && (
+          <section className="detail-section" id="advertorial-review">
+            <h2>疑似软文 · 试运行</h2>
+            <p>{a.advertorial.reason}</p>
+            {a.advertorial.evidence.length > 0 && (
+              <ul>
+                {a.advertorial.evidence.map((e, index) => (
+                  <li key={index}>
+                    {e.field === "title" ? "标题" : "摘要"}：<q>{e.text}</q>
+                  </li>
+                ))}
+              </ul>
+            )}
+            <p className="small muted">
+              此标记仅供人工复核，文章继续展示并保留在搜索和订阅中。
+              如需更正，请在 GitHub Issue 中提供原文地址和说明。
+            </p>
+          </section>
+        )}
         <section className="detail-section">
           <h2>来源与发布信息</h2>
           <dl>

@@ -1,17 +1,18 @@
 import { defineConfig, devices } from "@playwright/test";
+const port = Number(process.env.RADAR_TEST_PORT ?? 4173);
 export default defineConfig({
   testDir: "tests/e2e",
   fullyParallel: true,
   retries: process.env.CI ? 1 : 0,
   reporter: "list",
   use: {
-    baseURL: "http://localhost:4173/ai-engineering-radar/",
+    baseURL: `http://localhost:${port}/ai-engineering-radar/`,
     trace: "retain-on-failure",
   },
   webServer: {
     command: "pnpm exec tsx scripts/serve.ts",
-    port: 4173,
-    reuseExistingServer: !process.env.CI,
+    port,
+    reuseExistingServer: false,
   },
   projects: [
     { name: "desktop", use: { ...devices["Desktop Chrome"] } },

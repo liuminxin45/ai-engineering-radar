@@ -447,6 +447,16 @@ export function ArticleBoard() {
                           {day(time(a))}
                         </time>
                       </div>
+                      {a.advertorial?.status === "suspected" && (
+                        <Link
+                          className={styles.advertorialBadge}
+                          href={`/articles/${a.id}/#advertorial-review`}
+                          prefetch={false}
+                          aria-label="疑似软文：查看标记依据"
+                        >
+                          疑似软文
+                        </Link>
+                      )}
                     </div>
                   </article>
                 ))}

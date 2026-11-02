@@ -54,6 +54,22 @@ export const classificationSchema = z
     "Primary topic must be included",
   );
 export type Classification = z.infer<typeof classificationSchema>;
+export const advertorialSchema = z.object({
+  status: z.enum(["suspected", "unmarked", "insufficient", "cleared"]),
+  method: z.enum(["rules", "manual"]),
+  basis: z.enum(["title-description", "manual-review"]),
+  reason: z.string().min(1).max(1000),
+  evidence: z
+    .array(
+      z.object({
+        field: z.enum(["title", "description"]),
+        text: z.string().min(1).max(160),
+      }),
+    )
+    .max(6),
+  version: z.string(),
+});
+export type Advertorial = z.infer<typeof advertorialSchema>;
 export const locationSchema = z.object({
   sourceId: z.string(),
   externalId: z.string().optional(),
@@ -72,6 +88,7 @@ export const articleSchema = z.object({
   discoveredAt: timestamp,
   updatedAt: timestamp,
   classification: classificationSchema,
+  advertorial: advertorialSchema.optional(),
   publicationStatus: z.enum(["draft", "published", "hidden"]),
   locations: z.array(locationSchema).min(1),
   duplicateCandidates: z.array(z.string()).default([]),

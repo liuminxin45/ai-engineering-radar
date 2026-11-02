@@ -112,6 +112,8 @@ We welcome PRs for official engineering sources at Chinese companies, including 
 
 文章无需经过相关性规则或模型审核。发现归属、链接、日期或重复关系有误时，请提供原文地址与证据。`config/overrides.json` 可用于人工更正或隐藏记录；确定的同一发布主体跨平台重复可在 `merges` 添加 `from`、`into` 和 `reason`。相似标题只提示复核，不自动合并。
 
+目前试运行“疑似软文”标记：依据标题和原站短摘要，识别明确的福利促销、活动报名和集中产品宣传信号。命中条目右下角显示红色标签，点击可查看原因和原文片段。标记不影响展示、排序、搜索和订阅，也不代表已经审查全文。人工复核清单见站点 `/data/advertorial-review.json`；规则边界与更正方法见[软文标记试运行说明](docs/advertorial-trial.md)。
+
 ## 静态接口与订阅
 
 所有路径均相对站点基路径。JSON 为公开快照，不接受服务端搜索或游标参数。

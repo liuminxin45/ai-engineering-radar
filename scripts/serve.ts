@@ -3,6 +3,7 @@ import { readFile, stat } from "node:fs/promises";
 import { resolve, extname, sep } from "node:path";
 const root = resolve("apps/web/out");
 const base = process.env.BASE_PATH ?? "/ai-engineering-radar";
+const port = Number(process.env.RADAR_TEST_PORT ?? 4173);
 const mime: Record<string, string> = {
   ".html": "text/html; charset=utf-8",
   ".js": "application/javascript",
@@ -37,6 +38,6 @@ createServer(async (req, res) => {
   } catch {
     res.writeHead(404).end("Not found");
   }
-}).listen(4173, () =>
-  console.log(`Serving static export on http://localhost:4173${base}/`),
+}).listen(port, () =>
+  console.log(`Serving static export on http://localhost:${port}${base}/`),
 );
