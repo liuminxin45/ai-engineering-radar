@@ -2,17 +2,75 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "987a2a6d43efc66fa201",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "<h2 id=\"section-一-为什么我们需要一套能-读懂群聊-的-ai\"><strong>一、为什么我们需要一套能“读懂群聊”的 AI？</strong><a class=\"heading-anchor\" href=\"#section-一-为什么我们需要一套能-读懂群聊-的-ai\" aria-label=\"链接到本节：一、为什么我们需要一套能“读懂群聊”的 AI？\">#</a></h2>\n\n<p></p>\n\n<p>在 B 站，我们运营团队需要管理着数量庞大的UP主交流群，如：品类扶持、成长训练营、专项交流、答疑沟通群等。覆盖许许多多的创作者，每天会产生大量的消息。如果完全依赖人工逐条统计，不仅效率低下，而且容易遗漏关键问题。早期运营尝试过简单的关键字分析和人工汇总的方式，但这种传统方案存在明显局限：只能捕捉预先设定的词汇，无法理解上下文和隐含含义，对新出现的话题无法及时捕获。同时人工整理出的反馈多为自由文本，缺乏结构化信息，难以及时深入分析。</p>\n\n<p></p>\n\n<p><strong>于是我们做了一件事：</strong></p>\n\n<ul><li>\n\t<p>让 AI 自动阅读社群会话内容</p>\n\t</li><li>\n\t<p>理解创作者的真实声音</p>\n\t</li><li>\n\t<p>并生成结构化洞察、预警、日报、周报。</p>\n\t</li></ul>\n\n<p></p>\n\n<h2 id=\"section-二-整体架构-一套由-llm-驱动的社群-ai-中台\"><strong>二、整体架构：一套由 LLM 驱动的社群 “AI 中台”</strong><a class=\"heading-anchor\" href=\"#section-二-整体架构-一套由-llm-驱动的社群-ai-中台\" aria-label=\"链接到本节：二、整体架构：一套由 LLM 驱动的社群 “AI 中台”\">#</a></h2>\n\n<p></p>\n\n<p>整个系统的生命周期可以分为 四层：</p>\n\n<p><strong>数据采集层 → AI 结构化层 → 群体分析层 → 运营洞察层</strong></p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"203\" src=\"https://i-blog.csdnimg.cn/img_convert/88812e70f53d21097a33f33fa54ab74a.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p>在大量真实业务场景中落地群聊智能分析，我们不仅构建了由多个大模型驱动的 Agent Pipeline，更形成了一套 可治理、可复用、可演化的 Prompt Engineering 与语义分析架构。</p>\n\n<p>系统的关键点如下：</p>\n\n<p></p>\n\n<h3 id=\"section-1-分层-prompt-engineering-体系-高召回-高精度的协同设计\"><strong>1.分层 Prompt Engineering 体系：高召回 × 高精度的协同设计</strong><a class=\"heading-anchor\" href=\"#section-1-分层-prompt-engineering-体系-高召回-高精度的协同设计\" aria-label=\"链接到本节：1.分层 Prompt Engineering 体系：高召回 × 高精度的协同设计\">#</a></h3>\n\n<p></p>\n\n<p>我们将整条 LLM 链路拆分为四层 Prompt：</p>\n\n<p>1. &nbsp;信息挖掘层</p>\n\n<ul><li>\n\t<p>用于高召回地提取所有可能的用户反馈</p>\n\t</li><li>\n\t<p>固定 Schema 输出，保障结构化稳定性</p>\n\t</li><li>\n\t<p>内置业务语义空间（反馈类型、标签体系、情绪体系）</p>\n\t</li></ul>\n\n<p>2. &nbsp;内容治理层</p>\n\n<ul><li>\n\t<p>用于高精度校验、去幻觉、去噪</p>\n\t</li><li>\n\t<p>引入“模糊语句过滤 + 情绪 × 意图双因子校验”</p>\n\t</li><li>\n\t<p>合并同用户重复反馈、剔除弱反馈、剔除运营/测试信息</p>\n\t</li></ul>\n\n<p>3. &nbsp;语义聚类层</p>\n\n<ul><li>\n\t<p>基于大模型语义理解自动构建话题簇</p>\n\t</li><li>\n\t<p>统一标签命名，避免相似标签分裂</p>\n\t</li><li>\n\t<p>当出现语义相近但不属于既有标签的反馈时，模型能够基于语义自动归并或生成新标签</p>\n\t</li></ul>\n\n<p>4. &nbsp;洞察生成层</p>\n\n<p>a. &nbsp;自动生成 100 字社区热点摘要</p>\n\n<p>b. &nbsp;基于结构化数据生成日报/周报，包含环比变化与风险事件</p>\n\n<p>通过分层 Prompt，我们实现了&nbsp;<strong>可控、高可用、全链路可解释</strong>&nbsp;的模型输出体系。</p>\n\n<p></p>\n\n<h3 id=\"section-2-双模型协作-精准性与成本之间的动态平衡\"><strong>2.双模型协作：精准性与成本之间的动态平衡</strong><a class=\"heading-anchor\" href=\"#section-2-双模型协作-精准性与成本之间的动态平衡\" aria-label=\"链接到本节：2.双模型协作：精准性与成本之间的动态平衡\">#</a></h3>\n\n<p></p>\n\n<p>社群消息本质是&nbsp;<strong>非结构化、口语化、强上下文依赖</strong>&nbsp;的文本，针对每日大量群聊，我们采用“轻模型做召回 → 强模型做校验”的方法：</p>\n\n<ul><li>\n\t<p>LLM A：擅长高召回、信息挖掘</p>\n\t</li><li>\n\t<p>LLM B：擅长严谨判断、减少幻觉</p>\n\t</li></ul>\n\n<blockquote>\n<p>出于业务安全，本次分享中我们对实际使用的大语言模型进行了匿名化处理，仅以其能力特征进行描述。</p>\n</blockquote>\n\n<p>这种 多模型协同校验 的设计，让我们在成本、召回率、准确率之间达成最佳平衡。</p>\n\n<p></p>\n\n<h4><strong>真实样例：模型幻觉导致的严重误判</strong></h4>\n\n<p></p>\n\n<p>在项目初期，我们仅使用单模型直接解析群聊内容。当遇到某些“非结构化、短句、无明确反馈意图”的消息时，模型会为了满足结构化输出要求，<strong>主动补充一些并不存在的反馈信息</strong>。</p>\n\n<p></p>\n\n<p>下面是一次典型的错误样本：</p>\n\n<blockquote>\n<p>真实情况：该群当天没有 UP 主提出任何有效反馈内容。</p>\n\n<p>模型输出：却“凭空生成”了数十条反馈结构，包括需求、负向反馈、标签分类等。</p>\n</blockquote>\n\n<p>截图如下：</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"384\" src=\"https://i-blog.csdnimg.cn/img_convert/476bf83ba7d02c5e4fd468ae9c32c9c2.png\" width=\"672\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p>然而经过人工复查可以确认：</p>\n\n<blockquote>\n<p>以上所有反馈均为模型“自动脑补”，群聊原文中完全不存在。</p>\n</blockquote>\n\n<p>这不是简单的技术 Bug，而是足以影响业务判断的&nbsp;<strong>严重幻觉风险</strong>。</p>\n\n<p></p>\n\n<h4><strong>因此，我们必须引入第二阶段严格复核节点</strong></h4>\n\n<p></p>\n\n<p>为了避免这类“凭空生成反馈”的问题，我们设计了 LLM A（高召回） → LLM B（高精度） 的双模型协作机制。</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"324\" src=\"https://i-blog.csdnimg.cn/img_convert/afbf2703f2a118f6bf27ea78e206211f.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p>在复核节点中我们做了几类专门的<strong>“反幻觉策略”</strong>：</p>\n\n<ul><li>\n\t<p>严格禁止模型补充不存在的用户原话</p>\n\t</li><li>\n\t<p>无原话时 → 必须输出「无反馈」</p>\n\t</li><li>\n\t<p>结构化数据必须与原文一一对应</p>\n\t</li><li>\n\t<p>模糊语气（似乎、可能） → 自动判定为高风险 → 进入复核</p>\n\t</li><li>\n\t<p>字段缺失、标签不符 → Must Fix</p>\n\t</li></ul>\n\n<p></p>\n\n<p><strong>经过增强后：</strong></p>\n\n<ul><li>\n\t<p>幻觉率从 早期的 8–12% → 降为 &lt;1%</p>\n\t</li><li>\n\t<p>假反馈基本完全消失</p>\n\t</li><li>\n\t<p>所有反馈均带可追溯原话，形成“证据链”</p>\n\t</li></ul>\n\n<p></p>\n\n<h3 id=\"section-3-基于-few-shot-的结构化输出稳定机制\"><strong>3.基于 Few-shot 的结构化输出稳定机制</strong><a class=\"heading-anchor\" href=\"#section-3-基于-few-shot-的结构化输出稳定机制\" aria-label=\"链接到本节：3.基于 Few-shot 的结构化输出稳定机制\">#</a></h3>\n\n<p></p>\n\n<p>在实际使用大模型时，结构化输出（尤其是表格字段）容易随着上下文或模型版本发生“格式漂移”。</p>\n\n<p>为此，我们采用了一种 轻量级 Few-shot Prompting 方法，让模型在正式解析业务数据前，通过少量示例快速“记住”目标格式，从而保持输出稳定。</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"238\" src=\"https://i-blog.csdnimg.cn/img_convert/8eda8fd5c7f5f3788d7e4dcd6b868507.png\" width=\"845\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p><strong>方案原理：</strong></p>\n\n<p>通过给模型连续提供 2～3 个标准表格示例（Few-shot），并让模型在后续回答中沿用同样的格式，来显著降低结构漂移概率。</p>\n\n<p>无须额外的校验器，无须复杂自愈机制，成本极低，但对稳定性提升非常明显。</p>\n\n<p></p>\n\n<p><strong>技术流程：</strong></p>\n\n<p>1. &nbsp;在 Prompt 中加入 1–2 个“标准表格示例”（Few-shot Examples）</p>\n\n<p>a. &nbsp;示例内容来自真实数据或我们构造的理想格式。</p>\n\n<p>2. &nbsp;要求模型：下一轮回答必须完全沿用示例格式</p>\n\n<p>3. &nbsp;如果模型偶尔偏移，少量的“格式纠正提示”即可修正</p>\n\n<p></p>\n\n<p>在某些场景下，这种 few-shot 技巧甚至比复杂的结构化约束更实用。</p>\n\n<p></p>\n\n<h3 id=\"section-4-llm-语义聚类-适应社区语言变化的轻量级-topic-分组\"><strong>4.LLM 语义聚类：适应社区语言变化的轻量级 Topic 分组</strong><a class=\"heading-anchor\" href=\"#section-4-llm-语义聚类-适应社区语言变化的轻量级-topic-分组\" aria-label=\"链接到本节：4.LLM 语义聚类：适应社区语言变化的轻量级 Topic 分组\">#</a></h3>\n\n<p></p>\n\n<p>用户在群聊中的用词高度自由，包含大量细微表达差异：</p>\n\n<ul><li>\n\t<p>多种说法表达同一个问题（如“审核慢”“卡审核”）</p>\n\t</li><li>\n\t<p>多种术语、别名并存（“流量波动”“推流不稳”）</p>\n\t</li><li>\n\t<p>不断出现新的词汇或表述</p>\n\t</li></ul>\n\n<p></p>\n\n<p>为避免关键词维护负担，我们采用：</p>\n\n<ul><li>\n\t<p>LLM 自主判断语义相似度（不是关键词匹配）</p>\n\t</li><li>\n\t<p>让模型生成统一标签（避免同类话题被拆分）</p>\n\t</li><li>\n\t<p>当模型识别到“完全不属于现有主题”的内容时，自动生成新主题</p>\n\t</li></ul>\n\n<p></p>\n\n<p>这是一种轻量但非常实用的 Topic 聚类方式，可以让系统在不依赖复杂算法的前提下，自动跟上业务与社区语境的变化，<strong>效果足以支撑每日热点、话题趋势分析</strong>。</p>\n\n<p>以下Prompt隐去了一些我们业务标签注入的内容，但仍可供大家参考</p>\n\n<pre><code>你是社区运营团队的一员。你即将阅读到一批用户反馈内容，每条反馈都有唯一的“反馈ID”。\n\n你的工作如下：\n主题聚类\n- 对所有反馈进行语义聚类，将语义相近的反馈归为同一主题（如“系统卡顿”和“服务器崩溃”应归为同类）。\n- 相同主题只保留一个统一标签，不要生成相似但不同的标签名称。\n标签命名\n- 参考微博热搜命名方式，生成简洁有冲击力的标签（2~8字），避免冗长描述。\n- 标签需覆盖多种类型（满意度、咨询、问题等），不可只聚焦问题反馈。\n事件提炼\n- 为每个标签用一句话概括用户关注的焦点，事件化描述，不要罗列类别。\n热度统计\n- 统计该标签下的反馈数量，作为热度值。\n反馈ID标注\n- 列出与该标签相关的最多5个反馈ID，用英文逗号分隔。\n排序输出\n- 按热度从高到低，输出前10个标签的信息。\n\n输出表格格式如下，请勿返回多余的注解：\n| 标签 | 热议事件 | 热度 | 反馈ID |</code></pre>\n\n<ul></ul>\n\n<h3 id=\"section-5-语义驱动的风控预警体系-从趋势中提前发现风险\"><strong>5.语义驱动的风控预警体系：从趋势中提前发现风险</strong><a class=\"heading-anchor\" href=\"#section-5-语义驱动的风控预警体系-从趋势中提前发现风险\" aria-label=\"链接到本节：5.语义驱动的风控预警体系：从趋势中提前发现风险\">#</a></h3>\n\n<p></p>\n\n<p>我们结合语义聚类结果与反馈指标，形成了轻量级的预警判断逻辑：</p>\n\n<ul><li>\n\t<p>量级分析</p>\n\t</li><li>\n\t<p>增速分析</p>\n\t</li><li>\n\t<p>负向占比</p>\n\t</li><li>\n\t<p>情绪突发检测</p>\n\t</li><li>\n\t<p>跨群体一致性判断</p>\n\t</li></ul>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"430\" src=\"https://i-blog.csdnimg.cn/img_convert/55c0ce6fade58caca4695699dc46e931.png\" width=\"388\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p>当某个话题出现：</p>\n\n<ul><li>\n\t<p>负向情绪短时间急增</p>\n\t</li><li>\n\t<p>环比快速上涨</p>\n\t</li><li>\n\t<p>多个群同时出现类似反馈</p>\n\t</li></ul>\n\n<p></p>\n\n<p>系统会自动判定为&nbsp;<strong>突发事件</strong>，并标注风险等级。</p>\n\n<p>相比传统人工轮询，这种能力可以：</p>\n\n<p></p>\n\n<h4><strong>全链路流程图</strong></h4>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"770\" src=\"https://i-blog.csdnimg.cn/img_convert/2de29230db1f71215060cef82903748c.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<h2 id=\"section-三-实际效果与业务收益\"><strong>三、实际效果与业务收益</strong><a class=\"heading-anchor\" href=\"#section-三-实际效果与业务收益\" aria-label=\"链接到本节：三、实际效果与业务收益\">#</a></h2>\n\n<p></p>\n\n<p>引入 AI 智能分析系统后，我们在反馈洞察的效率、覆盖、准确性上都取得了显著提升。</p>\n\n<p>过去依赖人工筛查时，在有限人力下日均只能回收约 50 条有效反馈；如今系统能够每天自动回收近 600 条，覆盖范围扩大十倍以上，大量被忽略的“弱信号”得以被及时捕捉和记录。</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"289\" src=\"https://i-blog.csdnimg.cn/img_convert/78112b53c1fcfe5b72d53a3c6f1b9784.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p>AI 带来的价值不仅体现在规模化处理，更重要的是对关键事件的提前洞察能力。系统能够识别短时间内出现的异常聚集信号，如创作流程、审核体验、版权申诉等领域的情绪波动。当某一话题的负面表达突然增多时，系统会自动聚合并提升为重点关注事件，让团队能在问题形成大范围扩散前就提前介入，在早期苗头阶段就进行响应与处理。</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"296\" src=\"https://i-blog.csdnimg.cn/img_convert/463b2e86e6bbddfe815354a18f84b61e.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p>此外，结构化处理后的海量群聊信息，也成为了团队的重要知识资产。这些数据会进一步被用于：</p>\n\n<ul><li>\n\t<p>生成每日/每周的事件简报，为运营与产品提供准确的用户温度计</p>\n\t</li><li>\n\t<p>输出典型案例与话题热度，辅助判断优先级</p>\n\t</li><li>\n\t<p>自动生成 TAPD 需求，推动问题闭环处理</p>\n\t</li><li>\n\t<p>为产品团队提供真实用户的“原声证据”，减少沟通成本</p>\n\t</li></ul>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"452\" src=\"https://i-blog.csdnimg.cn/img_convert/a4c420305953b1312c22afc30e890948.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p>在 BI 看板上，这些沉淀的数据以更直观的方式呈现：情绪趋势、话题聚类、反馈规模、风险事件等核心指标一目了然，让业务团队可以随时掌握用户的关注点和变化趋势，做到“数据驱动运营决策”。</p>\n\n<p></p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"466\" src=\"https://i-blog.csdnimg.cn/img_convert/ff70744a8fce646e2a2b3323fae18639.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p></p>\n\n<p>整体而言，这套社群信息 AI 分析体系让我们从被动响应走向了主动洞察——</p>\n\n<p>不再是等用户大量投诉后再处理，而是能够利用 AI 的语义理解能力，及时捕捉到群聊中不断浮现的细微变化，并将分散的用户声音转化为推动产品迭代的动力。</p>\n\n<p></p>\n\n<h2 id=\"section-四-ai应用优势总结\"><strong>四、AI应用优势总结</strong><a class=\"heading-anchor\" href=\"#section-四-ai应用优势总结\" aria-label=\"链接到本节：四、AI应用优势总结\">#</a></h2>\n\n<p></p>\n\n<p>这套社群信息 AI 分析体系的落地，让我们在反馈获取、问题识别和运营决策三个层面都获得了实质性的提升：</p>\n\n<ul><li>\n\t<p>效率跃升：大量重复、零散的群聊分析工作被自动化取代，团队能把更多精力投入到关键问题的判断与沟通上。</p>\n\t</li><li>\n\t<p>全面覆盖：大模型的语义理解能力让“隐晦表达、弱信号、新话题”都能被及时捕捉，显著降低反馈遗漏率。</p>\n\t</li><li>\n\t<p>情绪量化：用户情绪从主观判断变成可观测指标，趋势变化也能通过数据直接呈现，为运营提供更及时的风险提示。</p>\n\t</li><li>\n\t<p>话题聚合能力：语义聚类让重复表达的意见被合并、长尾问题被显性化，帮助我们更准确地把握 UP 主的关注点。</p>\n\t</li><li>\n\t<p>推动闭环：结构化数据沉淀后，反馈能自然进入日报、周报和需求流转体系，问题从被发现到被解决的路径更加顺畅。</p>\n\t</li></ul>\n\n<p></p>\n\n<p>AI 让我们从“人工盯岗”进入“主动洞察”时代。</p>\n\n<p>我们真正实现了将创作者的声音得到规模化记录、分析与反馈，这在过去几乎是不可能完成的任务。</p>\n\n<p>未来，我们也会继续加强模型在风险识别、创作支持与社区生态等方向的能力建设，为平台持续提供更智能的基础设施。</p>\n\n<p></p>\n\n<p>-End-</p>\n\n<p>作者丨Zerooo、蓝莓派</p>",
+    "headings": [
+      {
+        "id": "section-一-为什么我们需要一套能-读懂群聊-的-ai",
+        "level": 2,
+        "text": "一、为什么我们需要一套能“读懂群聊”的 AI？"
+      },
+      {
+        "id": "section-二-整体架构-一套由-llm-驱动的社群-ai-中台",
+        "level": 2,
+        "text": "二、整体架构：一套由 LLM 驱动的社群 “AI 中台”"
+      },
+      {
+        "id": "section-1-分层-prompt-engineering-体系-高召回-高精度的协同设计",
+        "level": 3,
+        "text": "1.分层 Prompt Engineering 体系：高召回 × 高精度的协同设计"
+      },
+      {
+        "id": "section-2-双模型协作-精准性与成本之间的动态平衡",
+        "level": 3,
+        "text": "2.双模型协作：精准性与成本之间的动态平衡"
+      },
+      {
+        "id": "section-3-基于-few-shot-的结构化输出稳定机制",
+        "level": 3,
+        "text": "3.基于 Few-shot 的结构化输出稳定机制"
+      },
+      {
+        "id": "section-4-llm-语义聚类-适应社区语言变化的轻量级-topic-分组",
+        "level": 3,
+        "text": "4.LLM 语义聚类：适应社区语言变化的轻量级 Topic 分组"
+      },
+      {
+        "id": "section-5-语义驱动的风控预警体系-从趋势中提前发现风险",
+        "level": 3,
+        "text": "5.语义驱动的风控预警体系：从趋势中提前发现风险"
+      },
+      {
+        "id": "section-三-实际效果与业务收益",
+        "level": 2,
+        "text": "三、实际效果与业务收益"
+      },
+      {
+        "id": "section-四-ai应用优势总结",
+        "level": 2,
+        "text": "四、AI应用优势总结"
+      }
+    ],
+    "textLength": 4040,
+    "readingMinutes": 9,
     "sourceId": "bilibili-csdn",
     "sourceUrl": "https://blog.csdn.net/bilibili_TC/article/details/155320541",
+    "ruleId": "csdn",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-02T11:44:47.263Z",
-    "nextRetryAt": "2026-11-09T11:44:47.263Z",
-    "error": "正文获取失败：rsshub-http、camoufox 均未取得可用正文。",
-    "warnings": []
+    "contentHash": "beab2ad7aac10199bd91b04024fd7debe1c7687963a358e20ebf9ba4d63535c6",
+    "fetchedAt": "2026-11-02T11:50:54.556Z",
+    "checkedAt": "2026-11-02T11:50:54.556Z",
+    "nextRetryAt": "2026-12-02T11:50:54.557Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
   }
 }

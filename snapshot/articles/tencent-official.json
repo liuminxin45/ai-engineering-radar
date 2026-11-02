@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -100,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -180,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -260,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -300,7 +300,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -340,7 +340,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -380,7 +380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -420,7 +420,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -461,7 +461,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.597Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -472,15 +480,7 @@
           "listingHash": "f14a076de19fe44752cf8c4ac3d9b171af2f21f7aae113ec99484ef7d8deaf61"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "8acf5a5c024f699351d7",
@@ -501,7 +501,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -541,7 +541,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -581,7 +581,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -621,7 +621,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -661,7 +661,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -701,7 +701,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -741,7 +741,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -781,7 +781,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -821,7 +821,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T11:39:04.596Z"
+        "classifiedAt": "2026-11-02T11:50:51.443Z"
       },
       "advertorial": {
         "status": "unmarked",
