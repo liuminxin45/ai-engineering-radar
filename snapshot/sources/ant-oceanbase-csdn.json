@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "ant-oceanbase-csdn",
+    "lastCheckedAt": "2026-11-02T00:52:30.778Z",
+    "lastSuccessAt": "2026-11-02T00:52:30.778Z",
+    "nextRunAt": "2026-11-03T00:52:30.778Z",
+    "consecutiveFailures": 0,
+    "status": "success",
+    "discovered": 20,
+    "httpStatus": 200
+  }
+}

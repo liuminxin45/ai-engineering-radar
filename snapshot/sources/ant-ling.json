@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "ant-ling",
+    "lastCheckedAt": "2026-11-02T00:52:25.991Z",
+    "lastSuccessAt": "2026-11-02T00:52:25.991Z",
+    "nextRunAt": "2026-11-03T00:52:25.991Z",
+    "consecutiveFailures": 0,
+    "etag": "W/\"19852-v6e3Pm6d+7onZOJ63qLWo1YqpHM\"",
+    "status": "success",
+    "discovered": 23,
+    "httpStatus": 200
+  }
+}

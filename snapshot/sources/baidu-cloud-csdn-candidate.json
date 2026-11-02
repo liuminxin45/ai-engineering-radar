@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "baidu-cloud-csdn-candidate",
+    "lastCheckedAt": "2026-11-02T00:55:46.120Z",
+    "nextRunAt": "2026-11-03T00:55:46.120Z",
+    "consecutiveFailures": 0,
+    "status": "pending",
+    "error": "找到近期技术站账号，公开RSS实测20条，近月8篇，最新2026-10-29。与百度自有社区和掘金长期同题、多个CSDN发布日期早于百度社区数分钟；但未找到此具体账号的企业认证、官方渠道声明或可核验机构字段，不能把同题同步当作账号归属证明，暂不启用。",
+    "discovered": 0,
+    "httpStatus": 200
+  }
+}
