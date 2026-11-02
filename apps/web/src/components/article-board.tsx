@@ -2,8 +2,6 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
-  Button,
-  IconButton,
   Input,
   InputGroup,
   MagnifyingGlass,
@@ -11,6 +9,7 @@ import {
 } from "chatgpt-desktop-kit";
 import { site } from "../lib";
 import { BoardActions } from "./board-actions";
+import { Button, IconButton } from "./action-button";
 import { BrandMark } from "./brand-mark";
 import {
   BOARD_BATCH_SIZE,
@@ -291,12 +290,7 @@ export function ArticleBoard() {
           </div>
           <span className={styles.sync}>
             <span>更新于</span>
-            <time
-              dateTime={site.generatedAt}
-              title={new Date(site.generatedAt).toLocaleString("zh-CN", {
-                timeZone: "Asia/Shanghai",
-              })}
-            >
+            <time dateTime={site.generatedAt}>
               <span className={styles.fullTime}>
                 {new Date(site.generatedAt).toLocaleString("zh-CN", {
                   month: "2-digit",
@@ -431,11 +425,6 @@ export function ArticleBoard() {
                     <div className={styles.storyMeta}>
                       <time
                         dateTime={time(a)}
-                        title={
-                          a.publishedAt
-                            ? "发布时间"
-                            : "发现时间：来源未提供发布日期"
-                        }
                         aria-label={`${a.publishedAt ? "发布时间" : "发现时间"} ${day(time(a))}`}
                       >
                         {day(time(a))}

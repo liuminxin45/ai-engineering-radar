@@ -2,14 +2,13 @@
 
 import { useEffect, useId, useState } from "react";
 import {
-  Button,
-  IconButton,
   Popover,
   PopoverTrigger,
   PopoverContent,
   CloseIcon,
 } from "chatgpt-desktop-kit";
 import { asset } from "../lib";
+import { Button, IconButton } from "./action-button";
 import { ThemeToggle } from "./theme-toggle";
 import styles from "./board-actions.module.css";
 
@@ -48,7 +47,7 @@ export function BoardActions() {
         }}
       >
         <PopoverTrigger asChild>
-          <IconButton aria-label="ATOM/RSS" title="RSS / Atom 订阅">
+          <IconButton aria-label="ATOM/RSS">
             <svg
               width="18"
               height="18"
@@ -117,7 +116,6 @@ export function BoardActions() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub 项目"
-        title="GitHub 项目"
       >
         <svg
           width="19"

@@ -27,9 +27,5 @@ export function LocalTime({
       ),
     [value, dateOnly],
   );
-  return (
-    <time dateTime={value} title={value}>
-      {label}
-    </time>
-  );
+  return <time dateTime={value}>{label}</time>;
 }
