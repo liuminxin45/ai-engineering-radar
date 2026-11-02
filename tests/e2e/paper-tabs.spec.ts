@@ -42,15 +42,19 @@ test("content tabs retain company and search, reset batches and restore URL hist
   if (!(await search.isVisible()))
     await page.getByRole("button", { name: "搜索论文", exact: true }).click();
   await search.fill("no-such-joint-paper");
+  await page.getByRole("button", { name: "关闭搜索", exact: true }).click();
   await expect(
     page.locator("#panel-tencent").getByText("没有匹配的论文", { exact: true }),
   ).toBeVisible();
-  const close = page.getByRole("button", { name: "关闭搜索", exact: true });
-  if (await close.isVisible()) await close.click();
+  await expect(
+    page.getByRole("dialog", { name: "搜索论文", exact: true }),
+  ).toBeHidden();
   await blog.click();
+  await page.getByRole("button", { name: "搜索文章", exact: true }).click();
   await expect(
     page.getByLabel("搜索所有面板的文章", { exact: true }),
   ).toHaveValue("no-such-joint-paper");
+  await page.getByRole("button", { name: "关闭搜索", exact: true }).click();
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= innerWidth,

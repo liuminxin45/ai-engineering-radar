@@ -70,7 +70,7 @@ for (const theme of ["light", "dark"] as const) {
     await close.click();
     await expect(dialog).toHaveCount(0);
 
-    if (isMobile) {
+    {
       const search = page.getByRole("button", {
         name: "搜索文章",
         exact: true,
@@ -81,8 +81,10 @@ for (const theme of ["light", "dark"] as const) {
         name: "关闭搜索",
         exact: true,
       });
-      // An expanded search control keeps the highlighted foreground.
+      // The dialog close control keeps the reference hover-only highlight.
       await page.mouse.move(1, 1);
+      await expect(closeSearch).toHaveCSS("color", muted);
+      await closeSearch.hover();
       await expect(closeSearch).toHaveCSS("color", highlighted);
       await closeSearch.hover();
       await expect(closeSearch).toHaveCSS(

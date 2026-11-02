@@ -1,15 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import {
-  Input,
-  InputGroup,
-  MagnifyingGlass,
-  CloseIcon,
-} from "chatgpt-desktop-kit";
 import { site } from "../lib";
 import { BoardActions } from "./board-actions";
-import { Button, IconButton } from "./action-button";
+import { Button } from "./action-button";
+import SearchLauncher from "./search-launcher";
 import { BrandMark } from "./brand-mark";
 import { useBoardWheel } from "./use-board-wheel";
 import {
@@ -54,13 +49,11 @@ export function ArticleBoard() {
   const queryRef = useRef(query);
   const [pages, setPages] = useState<Record<string, number>>({});
   const pagesRef = useRef(pages);
-  const [searching, setSearching] = useState(false);
   const viewport = useRef<HTMLElement>(null);
   const companyNav = useRef<HTMLElement>(null);
   const panels = useRef<Record<string, HTMLElement | null>>({});
   const lists = useRef<Record<string, HTMLDivElement | null>>({});
   const scrollTops = useRef<Record<string, number>>({});
-  const search = useRef<HTMLInputElement>(null);
   const navigation = useRef(false);
   const navigationTarget = useRef(0);
   const scrollFrame = useRef<number | null>(null);
@@ -219,24 +212,12 @@ export function ArticleBoard() {
         cancelAnimationFrame(scrollFrame.current);
     };
   }, []);
-  useEffect(() => {
-    if (searching) search.current?.focus();
-  }, [searching]);
-  function closeSearch() {
-    setSearching(false);
-    requestAnimationFrame(() =>
-      document.getElementById("mobile-search")?.focus(),
-    );
-  }
-
   return (
     <div className={`board-layout ${styles.reader}`}>
       <h1 className={styles.srOnly}>
         AI Engineering Radar 国内技术{contentName}看板
       </h1>
-      <header
-        className={`${styles.toolbar} ${searching ? styles.searching : ""}`}
-      >
+      <header className={styles.toolbar}>
         <Link
           className={`brand ${styles.brand}`}
           prefetch={false}
@@ -294,40 +275,13 @@ export function ArticleBoard() {
             </Button>
           ))}
         </div>
-        <div className={styles.searchWrap}>
-          <InputGroup>
-            <MagnifyingGlass size={18} aria-hidden="true" />
-            <Input
-              ref={search}
-              aria-label={`搜索所有面板的${contentName}`}
-              type="search"
-              placeholder={`搜索${contentName}、关键词…`}
-              value={query.q}
-              onChange={(event) =>
-                changeGlobal({ q: event.target.value }, true)
-              }
-              onKeyDown={(event) => {
-                if (event.key === "Escape" && searching) closeSearch();
-              }}
-            />
-          </InputGroup>
-        </div>
         <div className={styles.actions}>
-          <div className={styles.mobileSearch}>
-            <IconButton
-              id="mobile-search"
-              aria-label={searching ? "关闭搜索" : `搜索${contentName}`}
-              aria-expanded={searching}
-              onClick={() => (searching ? closeSearch() : setSearching(true))}
-            >
-              {searching ? (
-                <CloseIcon size={18} aria-hidden="true" />
-              ) : (
-                <MagnifyingGlass size={18} aria-hidden="true" />
-              )}
-            </IconButton>
-          </div>
           <div className={styles.utilities}>
+            <SearchLauncher
+              query={query.q}
+              type={query.type}
+              onQueryChange={(q) => changeGlobal({ q }, true)}
+            />
             <BoardActions />
           </div>
           <span className={styles.sync}>

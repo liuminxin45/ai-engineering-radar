@@ -44,7 +44,7 @@ test("controls and dates have no hover hints and retain accessible names", async
   await page.keyboard.press("Escape");
   await expect(dialog).toHaveCount(0);
   await expect(feed).toBeFocused();
-  if (isMobile) {
+  {
     await page.getByRole("button", { name: "搜索文章", exact: true }).click();
     const close = page.getByRole("button", { name: "关闭搜索", exact: true });
     await close.hover();

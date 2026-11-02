@@ -33,6 +33,7 @@ test("search and company history survive refresh while legacy sorting is removed
   await expect(board(page)).toBeVisible();
   expect((await board(page).boundingBox())!.y).toBeLessThanOrEqual(132);
   await (await revealSearch(page)).fill("no-such-radar-article");
+  await page.getByRole("button", { name: "关闭搜索", exact: true }).click();
   await expect(latestList(page).locator("article")).toHaveCount(0);
   await expect(
     latestList(page)
@@ -262,7 +263,9 @@ test("scrolling appends one batch per bottom encounter and article titles open t
   await expect(
     page.getByRole("link", { name: "跳转到主要内容" }),
   ).toBeFocused();
-  expect(await page.getByLabel(searchName, { exact: true }).count()).toBe(1);
+  await expect(
+    page.getByRole("button", { name: "搜索文章", exact: true }),
+  ).toBeVisible();
 });
 
 test("domestic provenance stays public while the interface exposes only whole-project feeds", async ({

@@ -3,6 +3,7 @@ import type {
   Company,
   ContentType,
 } from "../../../packages/shared/types.js";
+import { articleSearchTerms, matchesArticleSearch } from "./article-search.ts";
 import {
   articleCompanyIds,
   articleContentType,
@@ -68,15 +69,11 @@ export function boardSearch(query: BoardQuery) {
   return p.size ? `?${p}` : "";
 }
 export function boardArticles(articles: Article[], query: BoardQuery) {
-  const q = query.q.trim().toLocaleLowerCase();
+  const terms = articleSearchTerms(query.q);
   return articles
     .filter(
       (a) =>
-        articleContentType(a) === query.type &&
-        (!q ||
-          `${a.title} ${a.description ?? ""} ${a.author ?? ""}`
-            .toLocaleLowerCase()
-            .includes(q)),
+        articleContentType(a) === query.type && matchesArticleSearch(a, terms),
     )
     .sort((a, b) => {
       return (
