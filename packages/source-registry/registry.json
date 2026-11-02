@@ -62,11 +62,6 @@
       "region": "cn"
     },
     {
-      "id": "oppo",
-      "name": "OPPO",
-      "region": "cn"
-    },
-    {
       "id": "jd",
       "name": "京东",
       "region": "cn"
@@ -147,11 +142,6 @@
       "id": "xiaomi-official",
       "companyId": "xiaomi",
       "name": "小米 技术团队"
-    },
-    {
-      "id": "oppo-official",
-      "companyId": "oppo",
-      "name": "OPPO 技术团队"
     },
     {
       "id": "jd-official",
@@ -474,33 +464,6 @@
       },
       "authorAllowlist": ["8QMZ23lf74UYuTs="],
       "linkHosts": ["news.qq.com"]
-    },
-    {
-      "id": "oppo-segmentfault",
-      "publisherId": "oppo-official",
-      "name": "OPPO数智技术 · 思否",
-      "entryUrl": "https://segmentfault.com/blog/oppotech",
-      "url": "https://segmentfault.com/feeds/blog/oppotech",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "segmentfault-feed",
-      "verification": {
-        "status": "suspended",
-        "evidenceUrls": [
-          "https://segmentfault.com/blog/oppotech",
-          "https://segmentfault.com/blog/oppotech/about"
-        ],
-        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2022-04-06，超过一个月未更新，不能承担当前更新追踪。 原核验说明：人工核验：公开专栏简介明确OPPO 前沿互联网技术分享和公众号 OPPO_tech，账号作者与长期工程文章一致。账号 RSS 允许访问且解析成功；全文型 Feed 的正文不会保存，仅提取元数据。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["OPPO数智技术"],
-      "linkPattern": "^/a/[0-9]+/?$"
     },
     {
       "id": "jd-cnblogs",

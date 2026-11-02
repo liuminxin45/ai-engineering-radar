@@ -2,6 +2,7 @@ import type { Article, SourceState } from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
 import {
   sourceReplacements,
+  sourceWithdrawals,
   validateSourceReplacements,
 } from "../source-registry/replacements.js";
 
@@ -11,7 +12,9 @@ export function retireReplacedSources(
   registry: Registry,
 ) {
   validateSourceReplacements(registry);
-  const retired = new Set<string>(sourceReplacements.map((r) => r.sourceId));
+  const retired = new Set<string>(
+    [...sourceReplacements, ...sourceWithdrawals].map((r) => r.sourceId),
+  );
   for (const rule of sourceReplacements) {
     const present =
       states.some((s) => s.sourceId === rule.sourceId) ||

@@ -116,12 +116,6 @@ export const sourceReplacements = [
     referenceOnly: true,
   },
   {
-    sourceId: "oppo",
-    companyId: "oppo",
-    replacementIds: ["oppo-segmentfault"],
-    referenceOnly: true,
-  },
-  {
     sourceId: "jd",
     companyId: "jd",
     replacementIds: ["jd-cnblogs"],
@@ -197,7 +191,22 @@ export const sourceReplacements = [
   },
 ] as const;
 
+// Explicit removals requested by the maintainer; these have no replacement.
+export const sourceWithdrawals = [
+  { sourceId: "oppo", companyId: "oppo" },
+  { sourceId: "oppo-segmentfault", companyId: "oppo" },
+] as const;
+
 export function validateSourceReplacements(registry: Registry) {
+  for (const rule of sourceWithdrawals) {
+    if (
+      registry.companies.some((c) => c.id === rule.companyId) ||
+      registry.sources.some((s) => s.id === rule.sourceId)
+    )
+      throw new Error(
+        `Withdrawn company or source still registered: ${rule.sourceId}`,
+      );
+  }
   for (const rule of sourceReplacements) {
     if (registry.sources.some((s) => s.id === rule.sourceId))
       throw new Error(`Retired source still registered: ${rule.sourceId}`);

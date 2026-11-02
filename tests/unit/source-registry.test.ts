@@ -36,7 +36,7 @@ describe("official community account scope", () => {
     ).toThrow("found 0");
     expect(
       registry.sources.filter((s) => s.verification.status === "suspended"),
-    ).toHaveLength(3);
+    ).toHaveLength(2);
   });
   it("accepts the retained Aliyun and Volcengine accounts", async () => {
     const registry = await loadRegistry();

@@ -19,9 +19,14 @@ await withSnapshotLock(dir, async () => {
   const snapshot = await readSnapshot(dir);
   const companies = new Set(registry.companies.map((c) => c.id));
   const sources = new Map(registry.sources.map((s) => [s.id, s]));
-  const domestic = snapshot.articles.filter((a) => companies.has(a.companyId));
-  const retirement = retireReplacedSources(domestic, snapshot.states, registry);
-  const articles = retirement.articles;
+  const retirement = retireReplacedSources(
+    snapshot.articles,
+    snapshot.states,
+    registry,
+  );
+  const articles = retirement.articles.filter((a) =>
+    companies.has(a.companyId),
+  );
   let changed =
     articles.length !== snapshot.articles.length ||
     retirement.removedLocations > 0 ||
@@ -59,6 +64,6 @@ await withSnapshotLock(dir, async () => {
   if (states.length !== snapshot.states.length) changed = true;
   if (changed) await saveSnapshot(dir, articles, states, registry);
   console.log(
-    `Domestic snapshot: ${articles.length} articles; removed ${snapshot.articles.length - domestic.length} overseas articles, ${retirement.removedArticles} replaced-source articles, ${retirement.removedLocations} retired locations and ${snapshot.states.length - states.length} retired source states; ${changed ? "migration applied" : "already current"}.`,
+    `Domestic snapshot: ${articles.length} articles; removed ${retirement.articles.length - articles.length} outside-registry articles, ${retirement.removedArticles} retired-source articles, ${retirement.removedLocations} retired locations and ${snapshot.states.length - states.length} retired source states; ${changed ? "migration applied" : "already current"}.`,
   );
 });

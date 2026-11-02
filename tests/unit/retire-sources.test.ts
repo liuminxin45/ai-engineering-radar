@@ -47,21 +47,65 @@ function fixture() {
   return { articles: [...articles, old], states };
 }
 describe("explicit source retirement", () => {
+  it("withdraws OPPO articles and states without a replacement and preserves other companies", () => {
+    const data = fixture();
+    const current = structuredClone(data.articles[0]);
+    const withdrawn = structuredClone(current);
+    withdrawn.id = "00000000000000000005";
+    withdrawn.companyId = "oppo";
+    withdrawn.publisherId = "oppo-official";
+    withdrawn.locations = [
+      {
+        sourceId: "oppo-segmentfault",
+        url: "https://segmentfault.com/a/1190000040000001",
+      },
+    ];
+    current.duplicateCandidates = [withdrawn.id];
+    const articles = [current, withdrawn];
+    const states: SourceState[] = [
+      data.states[1],
+      {
+        sourceId: "oppo",
+        status: "reference",
+        discovered: 0,
+        consecutiveFailures: 0,
+      },
+      {
+        sourceId: "oppo-segmentfault",
+        status: "suspended",
+        discovered: 50,
+        consecutiveFailures: 0,
+      },
+    ];
+    const before = structuredClone({ articles, states });
+    const result = retireReplacedSources(articles, states, registry);
+    expect(result.articles.map((a) => a.id)).toEqual([current.id]);
+    expect(result.articles[0].duplicateCandidates).toEqual([]);
+    expect(result.removedArticles).toBe(1);
+    expect(result.removedStates).toBe(2);
+    expect(registry.companies.some((c) => c.id === "oppo")).toBe(false);
+    expect({ articles, states }).toEqual(before);
+    validateRelations(result.articles, result.states, registry);
+    expect(
+      retireReplacedSources(result.articles, result.states, registry)
+        .removedArticles,
+    ).toBe(0);
+  });
   it("removes empty reference states while preserving the company's suspended historical source", () => {
-    const source = registry.sources.find((s) => s.id === "oppo-segmentfault")!;
+    const source = registry.sources.find((s) => s.id === "ctrip-csdn")!;
     const articles: Article[] = [];
     upsert(
       articles,
       {
         title: "Historical engineering article",
-        url: "https://segmentfault.com/a/1190000040000001",
+        url: "https://blog.csdn.net/ctrip_tech/article/details/123",
       },
       source,
       registry,
     );
     const states: SourceState[] = [
       {
-        sourceId: "oppo",
+        sourceId: "ctrip",
         status: "reference",
         discovered: 0,
         consecutiveFailures: 0,
@@ -78,7 +122,7 @@ describe("explicit source retirement", () => {
     expect(result.states.map((s) => s.sourceId)).toEqual([source.id]);
     const unexpected = structuredClone(articles[0]);
     unexpected.locations = [
-      { sourceId: "oppo", url: "https://open.oppomobile.com/article/1" },
+      { sourceId: "ctrip", url: "https://www.ctrip.com/article/1" },
     ];
     expect(() => retireReplacedSources([unexpected], states, registry)).toThrow(
       "Reference-only retirement contains article history",
@@ -192,12 +236,12 @@ describe("explicit source retirement", () => {
     const data = fixture();
     const history = structuredClone(data.articles[0]);
     history.id = "00000000000000000002";
-    history.publisherId = "oppo-official";
-    history.companyId = "oppo";
+    history.publisherId = "ctrip-official";
+    history.companyId = "ctrip";
     history.locations = [
       {
-        sourceId: "oppo-segmentfault",
-        url: "https://segmentfault.com/a/1190000040000001",
+        sourceId: "ctrip-csdn",
+        url: "https://blog.csdn.net/ctrip_tech/article/details/123",
       },
     ];
     data.articles.push(history);

@@ -26,7 +26,6 @@ const order = [
   "jd",
   "baidu",
   "ant",
-  "oppo",
   "ctrip",
   "xiaohongshu",
   "xiaomi",

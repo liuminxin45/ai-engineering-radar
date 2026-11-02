@@ -1,5 +1,8 @@
 import { test, expect, type Page } from "@playwright/test";
-import { sourceReplacements } from "../../packages/source-registry/replacements.js";
+import {
+  sourceReplacements,
+  sourceWithdrawals,
+} from "../../packages/source-registry/replacements.js";
 
 const searchName = "搜索所有面板的文章";
 const board = (page: Page) =>
@@ -268,6 +271,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   const companies = (await (await request.get("data/companies.json")).json())
     .companies;
   expect(companies.length).toBeGreaterThan(0);
+  expect(companies.some((c: { id: string }) => c.id === "oppo")).toBe(false);
   expect(companies.every((c: { region: string }) => c.region === "cn")).toBe(
     true,
   );
@@ -291,7 +295,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
       (s: { verification: { status: string } }) =>
         s.verification.status === "suspended",
     ).length,
-  ).toBe(3);
+  ).toBe(2);
   for (const rule of sourceReplacements) {
     const { sourceId, replacementIds } = rule;
     expect(sources.some((s: { id: string }) => s.id === sourceId)).toBe(false);
@@ -310,7 +314,9 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   ).toBe("https://developer.volcengine.com/user/2772312065061673");
   const articles = (await (await request.get("data/articles.json")).json())
     .articles;
-  const retiredIds = new Set<string>(sourceReplacements.map((s) => s.sourceId));
+  const retiredIds = new Set<string>(
+    [...sourceReplacements, ...sourceWithdrawals].map((s) => s.sourceId),
+  );
   expect(
     articles.every((a: { locations: { sourceId: string }[] }) =>
       a.locations.every((l) => !retiredIds.has(l.sourceId)),
