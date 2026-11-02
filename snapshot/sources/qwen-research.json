@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "qwen-research",
-    "lastCheckedAt": "2026-11-02T03:41:27.647Z",
-    "lastSuccessAt": "2026-11-02T03:41:27.647Z",
-    "nextRunAt": "2026-11-03T03:41:27.647Z",
+    "lastCheckedAt": "2026-11-02T07:41:21.104Z",
+    "lastSuccessAt": "2026-11-02T07:41:21.104Z",
+    "nextRunAt": "2026-11-03T07:41:21.104Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 92,

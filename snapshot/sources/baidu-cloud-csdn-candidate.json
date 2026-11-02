@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "baidu-cloud-csdn-candidate",
-    "lastCheckedAt": "2026-11-02T02:28:23.590Z",
-    "lastSuccessAt": "2026-11-02T02:28:23.590Z",
-    "nextRunAt": "2026-11-03T02:28:23.590Z",
+    "lastCheckedAt": "2026-11-02T07:41:20.434Z",
+    "lastSuccessAt": "2026-11-02T07:41:20.434Z",
+    "nextRunAt": "2026-11-03T07:41:20.434Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

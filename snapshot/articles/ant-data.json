@@ -21,7 +21,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.966Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -31,7 +31,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/158068105"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "059fdc00d9c983fd2972",
@@ -53,7 +61,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.973Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -63,7 +71,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/149347243"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "155377fc2b7bdf1c81d3",
@@ -85,7 +101,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.967Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -95,7 +111,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/156419937"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3500f797c6b2b70aa83c",
@@ -117,7 +141,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.966Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -127,7 +151,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/159690256"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "37d6bf11580a2eb9b843",
@@ -149,7 +181,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.966Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -159,7 +191,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/159762663"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3d3ff7894423c23b6ec5",
@@ -181,7 +221,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.970Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -191,7 +231,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/152330243"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3f2346e337c1a8afe0c8",
@@ -213,7 +261,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.964Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -223,7 +271,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/161927854"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "4f29b80b7369507cb372",
@@ -245,7 +301,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.969Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -255,7 +311,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/154009157"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "52cc85bcacc0476c1ea1",
@@ -277,7 +341,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.972Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -287,7 +351,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/150952195"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "5f6fe01c083d6dc36d0b",
@@ -309,7 +381,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.970Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -319,7 +391,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/151176189"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "61828ed3e11705e39c8f",
@@ -341,7 +421,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.968Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -351,7 +431,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/154191879"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "7288af1c5c6ff5d38f9a",
@@ -373,7 +461,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.963Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -383,7 +471,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/161928001"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "74ac319b2196a54f7c72",
@@ -405,7 +501,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.968Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -415,7 +511,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/154189495"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "831159c0bba76356c18b",
@@ -437,7 +541,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.972Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -447,7 +551,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/151068588"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "907b7c19f9e17650482e",
@@ -469,7 +581,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.965Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -479,7 +591,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/159798128"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "934103068573039a0ea8",
@@ -501,7 +621,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.967Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -511,7 +631,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/155600888"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "986b70feb0d56a6a0fc9",
@@ -533,7 +661,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.971Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -543,7 +671,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/151148490"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "a130ea9c629d60409a06",
@@ -565,7 +701,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.969Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -575,7 +711,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/153962262"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "b02f12fd97cd472b0145",
@@ -597,7 +741,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.967Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -607,7 +751,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/155948411"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "f9bdabe8886db237a773",
@@ -629,7 +781,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T04:43:53.969Z"
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -639,7 +791,15 @@
           "url": "https://blog.csdn.net/DB_GPT/article/details/154125614"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     }
   ]
 }

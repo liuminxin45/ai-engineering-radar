@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "seed-hf-papers",
-    "lastCheckedAt": "2026-11-02T03:29:38.979Z",
-    "lastSuccessAt": "2026-11-02T03:29:38.979Z",
-    "nextRunAt": "2026-11-03T03:29:38.979Z",
+    "lastCheckedAt": "2026-11-02T07:41:57.134Z",
+    "lastSuccessAt": "2026-11-02T07:41:57.134Z",
+    "nextRunAt": "2026-11-03T07:41:57.134Z",
     "consecutiveFailures": 0,
-    "etag": "W/\"583ed-IRXvCJaYqp99GggROWsl0ybqOaE\"",
+    "etag": "W/\"58546-bt6YWWmz2l/fNmyZ406y4giAxDg\"",
     "status": "success",
-    "error": "部分论文候选缺少可核验机构信息，已跳过。",
+    "error": "4 条论文候选未取得可用归属证据，已跳过。",
     "discovered": 1,
     "httpStatus": 200
   }

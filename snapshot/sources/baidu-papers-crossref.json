@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "baidu-papers-crossref",
-    "lastCheckedAt": "2026-11-02T03:24:00.220Z",
-    "lastSuccessAt": "2026-11-02T03:24:00.220Z",
-    "nextRunAt": "2026-11-03T03:24:00.220Z",
+    "lastCheckedAt": "2026-11-02T07:41:30.018Z",
+    "lastSuccessAt": "2026-11-02T07:41:30.018Z",
+    "nextRunAt": "2026-11-03T07:41:30.018Z",
     "consecutiveFailures": 0,
     "status": "success",
-    "discovered": 30,
+    "discovered": 20,
     "httpStatus": 200
   }
 }

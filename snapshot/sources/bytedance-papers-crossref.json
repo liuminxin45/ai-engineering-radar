@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "bytedance-papers-crossref",
-    "lastCheckedAt": "2026-11-02T03:23:55.176Z",
-    "lastSuccessAt": "2026-11-02T03:23:55.176Z",
-    "nextRunAt": "2026-11-03T03:23:55.176Z",
+    "lastCheckedAt": "2026-11-02T07:41:26.682Z",
+    "lastSuccessAt": "2026-11-02T07:41:26.682Z",
+    "nextRunAt": "2026-11-03T07:41:26.682Z",
     "consecutiveFailures": 0,
     "status": "success",
-    "discovered": 30,
+    "discovered": 20,
     "httpStatus": 200
   }
 }

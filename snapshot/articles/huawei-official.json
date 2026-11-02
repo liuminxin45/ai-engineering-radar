@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -59,7 +59,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -98,7 +98,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -137,7 +137,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -176,7 +176,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -215,7 +215,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -254,7 +254,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -293,7 +293,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -332,7 +332,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -371,7 +371,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -392,6 +392,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "84a0158ab91880b7b015",
+      "publisherId": "huawei-official",
+      "companyId": "huawei",
+      "contentType": "blog",
+      "title": "LakeAgent：DWS数据仓库的第二大脑，告别 “翻译式运维”，迈入智能自治时代",
+      "canonicalUrl": "https://blog.csdn.net/devcloud/article/details/169842070",
+      "author": "devcloud",
+      "description": "和普通 SQL 改写工具不同，LakeAgent 自动做多方案代价对比，主动规避负优化陷阱：补充分区键过滤实现剪枝，扫描分区由 37 收敛至 1，执行代价从 758.28 降至 113.74；未来的数据仓库，将不止能算、能存，更能看懂自己、诊断自己、理解自己。长久以来，数仓的智能都依附于人：信号需要人解读，瓶颈需要人研判，经验困在个体里，无法随底座永续生长。CPU 高、CPU 告警、CPU 诊断、CPU 使用率过高、CPU 满。语法、错误码、计费、性能调优、最佳实践、故障处置等全场景内容。",
+      "language": "zh-cn",
+      "publishedAt": "2026-11-02T07:08:29.000Z",
+      "discoveredAt": "2026-11-02T07:41:15.065Z",
+      "updatedAt": "2026-11-02T07:41:15.065Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T07:44:59.762Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "huawei-csdn",
+          "externalId": "https://blog.csdn.net/devcloud/article/details/169842070",
+          "url": "https://blog.csdn.net/devcloud/article/details/169842070"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "a62404d35134cba374cd",
       "publisherId": "huawei-official",
       "companyId": "huawei",
@@ -410,7 +450,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -449,7 +489,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -488,7 +528,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -527,7 +567,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -566,7 +606,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -605,7 +645,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -644,7 +684,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -683,7 +723,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -722,7 +762,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -761,7 +801,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T03:56:10.946Z"
+        "classifiedAt": "2026-11-02T07:44:59.761Z"
       },
       "advertorial": {
         "status": "unmarked",

@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "huawei-papers-crossref",
-    "lastCheckedAt": "2026-11-02T03:24:02.482Z",
-    "lastSuccessAt": "2026-11-02T03:24:02.482Z",
-    "nextRunAt": "2026-11-03T03:24:02.482Z",
+    "lastCheckedAt": "2026-11-02T07:41:32.344Z",
+    "lastSuccessAt": "2026-11-02T07:41:32.344Z",
+    "nextRunAt": "2026-11-03T07:41:32.344Z",
     "consecutiveFailures": 0,
     "status": "success",
-    "discovered": 30,
+    "discovered": 20,
     "httpStatus": 200
   }
 }

@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "seed-official-papers",
-    "lastCheckedAt": "2026-11-02T03:47:25.960Z",
-    "lastSuccessAt": "2026-11-02T03:47:25.960Z",
-    "nextRunAt": "2026-11-03T03:47:25.960Z",
+    "lastCheckedAt": "2026-11-02T07:43:44.048Z",
+    "lastSuccessAt": "2026-11-02T07:43:44.048Z",
+    "nextRunAt": "2026-11-03T07:43:44.048Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 17,

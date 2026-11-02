@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "ant-data-csdn",
-    "lastCheckedAt": "2026-11-02T04:10:25.973Z",
-    "lastSuccessAt": "2026-11-02T04:10:25.973Z",
-    "nextRunAt": "2026-11-03T04:10:25.973Z",
+    "lastCheckedAt": "2026-11-02T07:41:20.245Z",
+    "lastSuccessAt": "2026-11-02T07:41:20.245Z",
+    "nextRunAt": "2026-11-03T07:41:20.245Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

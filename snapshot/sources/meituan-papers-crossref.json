@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "meituan-papers-crossref",
-    "lastCheckedAt": "2026-11-02T03:23:51.374Z",
-    "lastSuccessAt": "2026-11-02T03:23:51.374Z",
-    "nextRunAt": "2026-11-03T03:23:51.374Z",
+    "lastCheckedAt": "2026-11-02T07:41:21.957Z",
+    "lastSuccessAt": "2026-11-02T07:41:21.957Z",
+    "nextRunAt": "2026-11-03T07:41:21.957Z",
     "consecutiveFailures": 0,
     "status": "success",
-    "discovered": 30,
+    "discovered": 20,
     "httpStatus": 200
   }
 }

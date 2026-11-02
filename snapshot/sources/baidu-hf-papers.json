@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "baidu-hf-papers",
-    "lastCheckedAt": "2026-11-02T03:29:38.985Z",
-    "lastSuccessAt": "2026-11-02T03:29:38.985Z",
-    "nextRunAt": "2026-11-03T03:29:38.985Z",
+    "lastCheckedAt": "2026-11-02T07:42:05.781Z",
+    "lastSuccessAt": "2026-11-02T07:42:05.781Z",
+    "nextRunAt": "2026-11-03T07:42:05.781Z",
     "consecutiveFailures": 0,
-    "etag": "W/\"44521-/XgX3QJasKfX8vAThosNZ7XxjLw\"",
+    "etag": "W/\"4453f-oF+EP8mTGnqt0jvdKFwG0YIfAWo\"",
     "status": "success",
-    "error": "2 条候选未通过严格作者机构复核，已隐藏；仅发布证据完整条目。",
-    "discovered": 5,
+    "error": "2 条论文候选未取得可用归属证据，已跳过。",
+    "discovered": 3,
     "httpStatus": 200
   }
 }
