@@ -3,12 +3,12 @@
   "state": {
     "sourceId": "xiaomi-tech-site",
     "lastCheckedAt": "2026-11-02T02:28:18.457Z",
+    "lastSuccessAt": "2026-11-02T02:28:18.457Z",
     "nextRunAt": "2026-11-03T02:28:18.457Z",
     "consecutiveFailures": 0,
+    "etag": "W/\"09513b22fc366f06c8a612e10519e7a65e144b03\"",
     "status": "success",
     "discovered": 15,
-    "httpStatus": 200,
-    "lastSuccessAt": "2026-11-02T02:28:18.457Z",
-    "etag": "W/\"09513b22fc366f06c8a612e10519e7a65e144b03\""
+    "httpStatus": 200
   }
 }
