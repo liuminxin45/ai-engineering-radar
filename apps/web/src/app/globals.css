@@ -40,6 +40,12 @@
 * {
   box-sizing: border-box;
 }
+/* Keep the arrow cursor across pages, shared controls, and portaled overlays. */
+*,
+*::before,
+*::after {
+  cursor: default !important;
+}
 html {
   scrollbar-gutter: stable;
 }
