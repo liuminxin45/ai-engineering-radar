@@ -1,5 +1,6 @@
 import { z } from "zod";
 import type { ArticleBody } from "./article-body.js";
+import { readingScoreSchema } from "./reading-score.js";
 
 export const topics = [
   { id: "agent", name: "Agent" },
@@ -115,6 +116,7 @@ export const articleSchema = z
     updatedAt: timestamp,
     classification: classificationSchema,
     advertorial: advertorialSchema.optional(),
+    readingScore: readingScoreSchema.optional(),
     publicationStatus: z.enum(["draft", "published", "hidden"]),
     locations: z.array(locationSchema).min(1),
     duplicateCandidates: z.array(z.string()).default([]),

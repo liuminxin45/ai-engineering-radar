@@ -61,7 +61,7 @@ export default function About() {
           <p>
             本批收录国内公司的团队博文和研究论文，暂不扩展到海外公司。
             已核验且启用的官方来源文章直接建立索引，保留身份核验、去重与数据校验，
-            不做内容相关性筛选、模型审核或自动主题分类。
+            不按评分筛选内容，也不做自动主题分类。
           </p>
           <p>
             发现文章归属、链接、日期或重复关系有误时， 欢迎在
@@ -69,6 +69,21 @@ export default function About() {
               仓库 Issue
             </a>
             中提供原文地址和更正依据。
+          </p>
+        </section>
+
+        <section className="detail-section" aria-labelledby="about-scores">
+          <h2 id="about-scores">标题评分作为阅读参考</h2>
+          <p>
+            部分博文右下角显示 Jev 等评分服务给出的 0–100 分。
+            分数只根据标题评估 AI 相关性、真实工程应用和技术实践深度，
+            不代表正文质量已经验证，也不影响文章展示、排序或订阅。
+            标题含糊时保守评分，热门模型名和公司知名度不加分。
+          </p>
+          <p>
+            “疑似软文”标记优先，命中后不参与评分。
+            评分服务不可用或尚未完成评分时，不显示分数，文章仍可正常阅读。
+            论文不参与这项评分。
           </p>
         </section>
 
@@ -109,16 +124,18 @@ export default function About() {
           <p>
             Articles from verified, enabled official sources enter the index
             directly, with identity verification, deduplication, and data
-            validation. There is no content relevance screening, model review,
-            or automatic topic classification. Search the index or browse
-            company columns; blog titles open a local reading page with a link
-            to the original publication. Each column loads another batch at its
-            bottom, and the update time appears at the top right. Follow
-            project-wide updates through the site-wide RSS / Atom feeds.
-            Articles keep their original language. Available blog text is saved
-            and rendered with consistent typography, a table of contents and
-            image previews. Missing or potentially incomplete text is clearly
-            marked. Papers continue to open on the publishing site.
+            validation. Optional title scores estimate relevance to practical AI
+            engineering; they do not verify full-text quality or filter
+            articles. Suspected advertorials take precedence and are not scored.
+            Papers are not scored. There is no automatic topic classification.
+            Search the index or browse company columns; blog titles open a local
+            reading page with a link to the original publication. Each column
+            loads another batch at its bottom, and the update time appears at
+            the top right. Follow project-wide updates through the site-wide RSS
+            / Atom feeds. Articles keep their original language. Available blog
+            text is saved and rendered with consistent typography, a table of
+            contents and image previews. Missing or potentially incomplete text
+            is clearly marked. Papers continue to open on the publishing site.
           </p>
           <p>
             We welcome PRs that add or repair sources for Chinese companies,

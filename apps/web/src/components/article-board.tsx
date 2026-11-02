@@ -468,7 +468,7 @@ export function ArticleBoard() {
                         >
                           {day(time(a))}
                         </time>
-                        {a.advertorial?.status === "suspected" && (
+                        {a.advertorial?.status === "suspected" ? (
                           <Link
                             className={styles.advertorialBadge}
                             data-no-underline
@@ -478,7 +478,19 @@ export function ArticleBoard() {
                           >
                             疑似软文
                           </Link>
-                        )}
+                        ) : a.contentType !== "paper" && a.readingScore ? (
+                          <span
+                            className={styles.readingScoreBadge}
+                            data-reading-score
+                            role="meter"
+                            aria-label={`${a.readingScore.displayName} 标题工程相关性评分`}
+                            aria-valuemin={0}
+                            aria-valuemax={100}
+                            aria-valuenow={a.readingScore.score}
+                          >
+                            {a.readingScore.displayName} {a.readingScore.score}
+                          </span>
+                        ) : null}
                       </div>
                     </article>
                   ))}

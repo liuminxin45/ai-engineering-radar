@@ -8,16 +8,48 @@ on:
         description: Collect sources before publishing
         type: boolean
         default: true
+      validate_scoring:
+        description: Only verify one real 128-title Jev request; do not publish
+        type: boolean
+        default: false
   push:
     branches: [main]
 concurrency:
-  group: radar-data-and-pages
+  group: ${{ inputs.validate_scoring && format('radar-scoring-validation-{0}', github.ref) || 'radar-data-and-pages' }}
   cancel-in-progress: false
 permissions:
   contents: read
 jobs:
+  validate-scoring:
+    if: github.repository == 'liuminxin45/ai-engineering-radar' && github.event_name == 'workflow_dispatch' && inputs.validate_scoring
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      RADAR_DATA_DIR: .radar/state/snapshot
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: data
+          path: .radar/state
+      - uses: pnpm/action-setup@v4
+      - name: Place package preparation outside node_modules
+        run: pnpm config set store-dir "$RUNNER_TEMP/pnpm-store"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24.19.0"
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Verify a single real 128-title batch
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+        run: pnpm score:verify-live
+      - uses: actions/upload-artifact@v4
+        with:
+          name: scoring-validation
+          path: work/scoring-validation.json
   build:
-    if: github.repository == 'liuminxin45/ai-engineering-radar'
+    if: github.repository == 'liuminxin45/ai-engineering-radar' && github.ref == 'refs/heads/main' && !inputs.validate_scoring
     runs-on: ubuntu-latest
     timeout-minutes: 60
     permissions:
@@ -60,6 +92,10 @@ jobs:
         env:
           RSSHUB_URL: http://127.0.0.1:1200
         run: pnpm ingest --daily
+      - name: Score blog titles with optional free providers
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+        run: pnpm score:titles
       - run: pnpm data:check && pnpm build && pnpm typecheck && pnpm check:public
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm test:e2e

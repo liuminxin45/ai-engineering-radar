@@ -12,6 +12,7 @@ README 面向产品读者，优先介绍产品目标、核心功能、界面与�
 - [运行维护](docs/operations.md)：采集调度、数据分支、来源迁移、恢复与发布。
 - [贡献指南](CONTRIBUTING.md)：来源材料、适配器与测试要求。
 - [软文标记试运行](docs/advertorial-trial.md)：标记范围、人工复核与更正方法。
+- [标题评分](docs/title-scoring.md)：可选评分、免费 provider 池、密钥与回退。
 - [来源验收](docs/source-acceptance.md)、[来源调查](docs/source-research.md)和[第二轮调查](docs/source-research-round2.md)：接入证据与实测结果。
 - 修改 Web 应用时，遵循 [Web 应用指引](apps/web/AGENTS.md)。
 

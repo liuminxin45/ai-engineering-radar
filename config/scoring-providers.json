@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "batchSize": 128,
+  "requestTimeoutMs": 20000,
+  "budgetMs": 120000,
+  "providers": [
+    {
+      "id": "opencode-jev-free",
+      "adapter": "opencode-jev",
+      "displayName": "Jev",
+      "enabled": true,
+      "priority": 10,
+      "model": "jev-1.13-free",
+      "apiKeyEnv": "OPENCODE_API_KEY"
+    }
+  ]
+}

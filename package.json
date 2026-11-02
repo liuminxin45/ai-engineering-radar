@@ -15,6 +15,8 @@
     "ingest:papers": "tsx scripts/cli.ts ingest --papers",
     "bodies:backfill": "tsx scripts/cli.ts bodies",
     "rsshub:check": "tsx scripts/check-rsshub.ts",
+    "score:titles": "tsx scripts/cli.ts score",
+    "score:verify-live": "tsx scripts/verify-scoring.ts",
     "data:init": "tsx scripts/cli.ts init",
     "data:check": "tsx scripts/cli.ts validate",
     "export": "tsx scripts/cli.ts export",

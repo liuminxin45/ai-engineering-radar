@@ -9,6 +9,8 @@ import {
 } from "../packages/article-parser/index.js";
 import { articleBodySchema } from "../packages/shared/article-body.js";
 import { digest } from "../packages/database/snapshot.js";
+import { titleHash } from "../packages/scoring/cache.js";
+import { READING_RUBRIC } from "../packages/scoring/rubric.js";
 const registry = await loadRegistry();
 if (
   !process.env.CI &&
@@ -48,6 +50,19 @@ for (let i = 0; i < 45; i++) {
   articles.at(-1)!.classification.status = "accepted";
   articles.at(-1)!.publicationStatus = "published";
   articles.at(-1)!.duplicateCandidates = [];
+}
+// Synthetic cached scores exercise export and badges without any provider requests.
+// The first title is intentionally suspected: its score must disappear on export.
+for (const article of articles.slice(0, 3)) {
+  article.readingScore = {
+    score: article === articles[2] ? 50 : 83,
+    titleHash: titleHash(article.title),
+    rubricVersion: READING_RUBRIC.version,
+    provider: "fixture-jev",
+    displayName: "Jev",
+    model: "synthetic-test-model",
+    scoredAt: "2026-11-02T00:00:00.000Z",
+  };
 }
 for (let i = 0; i < 25; i++) {
   const source = registry.sources.find((s) => s.id === "meituan")!;

@@ -12,6 +12,8 @@ import { ingest, applyOverrides } from "../packages/crawler/ingest.js";
 import { exportSite } from "../packages/publisher/export.js";
 import { resolveSiteUrl } from "../packages/shared/site.js";
 import { collectBodies } from "../packages/crawler/bodies.js";
+import { loadScoringConfig } from "../packages/scoring/config.js";
+import { scoreArticles } from "../packages/scoring/job.js";
 const root = resolve(import.meta.dirname, "..");
 const dir = resolve(process.env.RADAR_DATA_DIR ?? ".radar/data");
 const registry = await loadRegistry();
@@ -136,6 +138,24 @@ async function run() {
       console.log(
         `Body backfill: ${result.attempted} attempted; ${counts.ready} ready, ${counts.partial} partial, ${counts.unavailable} unavailable`,
       );
+    } else if (command === "score") {
+      const config = await loadScoringConfig();
+      const result = await scoreArticles(snapshot.articles, registry, config);
+      await saveSnapshot(
+        dir,
+        snapshot.articles,
+        snapshot.states,
+        registry,
+        snapshot.bodies,
+      );
+      for (const event of result.events)
+        console.log(
+          `Scoring provider ${event.provider}: ${event.kind}, ${event.count} titles`,
+        );
+      const summary = `## Optional title scoring\n\n${result.scored} scored, ${result.cached} cached, ${result.skipped} skipped.\n`;
+      console.log(summary);
+      if (process.env.GITHUB_STEP_SUMMARY)
+        await appendFile(process.env.GITHUB_STEP_SUMMARY, summary);
     } else if (command === "export") {
       await applyOverrides(snapshot.articles);
       validateRelations(

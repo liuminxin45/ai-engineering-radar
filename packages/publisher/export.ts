@@ -10,6 +10,7 @@ import {
 } from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
 import { assessAdvertorial } from "../classifier/advertorial.js";
+import { clearInvalidReadingScore } from "../scoring/cache.js";
 export function publishedArticles(articles: Article[], registry: Registry) {
   return articles
     .filter(
@@ -78,10 +79,11 @@ export async function exportSite(
   siteUrl: string,
 ) {
   const articles = publishedArticles(snapshot.articles, registry).map(
-    (article) => ({
-      ...article,
-      advertorial: assessAdvertorial(article),
-    }),
+    (article) => {
+      const exported = { ...article, advertorial: assessAdvertorial(article) };
+      clearInvalidReadingScore(exported);
+      return exported;
+    },
   );
   const generatedAt = snapshot.manifest.generatedAt;
   const publicDir = join(root, "apps/web/public");
