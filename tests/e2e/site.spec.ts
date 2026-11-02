@@ -26,24 +26,27 @@ async function expectNoDocumentOverflow(page: Page) {
   ).toBe(true);
 }
 
-test("search and company history survive refresh while legacy sorting is removed", async ({
+test("search stays temporary while company history survives refresh and legacy sorting is removed", async ({
   page,
 }) => {
   await page.goto("./");
   await expect(board(page)).toBeVisible();
   expect((await board(page).boundingBox())!.y).toBeLessThanOrEqual(132);
+  const articlesBefore = await latestList(page)
+    .locator("article")
+    .allTextContents();
   await (await revealSearch(page)).fill("no-such-radar-article");
+  await expect(page.getByRole("dialog").getByText(/没有找到/)).toBeVisible();
+  expect(await latestList(page).locator("article").allTextContents()).toEqual(
+    articlesBefore,
+  );
   await page.getByRole("button", { name: "关闭搜索", exact: true }).click();
-  await expect(latestList(page).locator("article")).toHaveCount(0);
-  await expect(
-    latestList(page)
-      .getByText(/没有匹配|暂时没有/)
-      .first(),
-  ).toBeVisible();
-  await expect(page).toHaveURL(/q=no-such-radar-article/);
+  expect(await latestList(page).locator("article").allTextContents()).toEqual(
+    articlesBefore,
+  );
+  await expect(page).not.toHaveURL(/q=/);
   await page.reload();
-  await expect(await revealSearch(page)).toHaveValue("no-such-radar-article");
-  await (await revealSearch(page)).fill("");
+  await expect(await revealSearch(page)).toHaveValue("");
   const closeSearch = page.getByRole("button", {
     name: "关闭搜索",
     exact: true,
