@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, type RefObject } from "react";
-import { boardWheelDelta } from "../board-wheel";
+import { boardWheelDelta, boardWheelProgress } from "../board-wheel";
 
 /** Translate wheel input over the board chrome; article bodies keep native scrolling. */
 export function useBoardWheel(
@@ -15,10 +15,33 @@ export function useBoardWheel(
     if (!board || !nav) return;
     let frame: number | null = null;
     let destination: number | null = null;
+    let origin = 0;
+    let startedAt = 0;
+    const motion = matchMedia("(prefers-reduced-motion: reduce)");
+    const clamp = (left: number) =>
+      Math.max(0, Math.min(board.scrollWidth - board.clientWidth, left));
     const cancelQueued = () => {
       if (frame !== null) cancelAnimationFrame(frame);
       frame = null;
       destination = null;
+    };
+    const animate = (now: number) => {
+      frame = null;
+      if (destination === null) return;
+      const target = clamp(destination);
+      const progress = boardWheelProgress(now - startedAt);
+      board.scrollTo({
+        left: clamp(origin + (target - origin) * progress),
+        behavior: "instant",
+      });
+      if (progress < 1) frame = requestAnimationFrame(animate);
+      else destination = null;
+    };
+    const reduceMotion = () => {
+      if (!motion.matches || destination === null) return;
+      const target = destination;
+      cancelQueued();
+      board.scrollTo({ left: clamp(target), behavior: "instant" });
     };
     const interruptNavigation = () => {
       if (navigation.current) {
@@ -55,47 +78,54 @@ export function useBoardWheel(
         cancelQueued();
         return;
       }
-      const start = destination ?? board.scrollLeft;
-      const next = Math.max(
-        0,
-        Math.min(board.scrollWidth - board.clientWidth, start + delta),
-      );
+      const current = board.scrollLeft;
+      // Reversing cancels the unfinished tail instead of waiting for it to finish.
+      const reversing =
+        destination !== null && (destination - current) * delta < 0;
+      const start = reversing ? current : (destination ?? current);
+      const next = clamp(start + delta);
+      if (reversing) cancelQueued();
       if (Math.abs(next - start) < 0.001) return;
       event.preventDefault();
       board.dataset.wheelScroll = "true";
+      cancelQueued();
+      if (motion.matches) {
+        board.scrollTo({ left: next, behavior: "instant" });
+        return;
+      }
+      origin = current;
+      startedAt = performance.now();
       destination = next;
-      if (frame === null)
-        frame = requestAnimationFrame(() => {
-          frame = null;
-          const left = destination;
-          destination = null;
-          if (left !== null)
-            board.scrollTo({
-              left: Math.max(
-                0,
-                Math.min(board.scrollWidth - board.clientWidth, left),
-              ),
-              behavior: "instant",
-            });
-        });
+      frame = requestAnimationFrame(animate);
     };
     // Non-passive listeners allow cancellation only when a horizontal move is consumed.
     for (const element of [board, nav]) {
       element.addEventListener("wheel", wheel, { passive: false });
-      element.addEventListener("touchstart", touch, { passive: true });
-      element.addEventListener("pointerdown", reset, { passive: true });
-      element.addEventListener("keydown", reset);
     }
+    // Capture outside interactions too: toolbar tabs/search/history can reposition the board.
+    window.addEventListener("touchstart", touch, {
+      passive: true,
+      capture: true,
+    });
+    window.addEventListener("pointerdown", reset, {
+      passive: true,
+      capture: true,
+    });
+    window.addEventListener("keydown", reset, true);
+    window.addEventListener("popstate", reset);
     window.addEventListener("resize", reset);
+    motion.addEventListener("change", reduceMotion);
     return () => {
       cancelQueued();
       for (const element of [board, nav]) {
         element.removeEventListener("wheel", wheel);
-        element.removeEventListener("touchstart", touch);
-        element.removeEventListener("pointerdown", reset);
-        element.removeEventListener("keydown", reset);
       }
+      window.removeEventListener("touchstart", touch, true);
+      window.removeEventListener("pointerdown", reset, true);
+      window.removeEventListener("keydown", reset, true);
+      window.removeEventListener("popstate", reset);
       window.removeEventListener("resize", reset);
+      motion.removeEventListener("change", reduceMotion);
       delete board.dataset.wheelScroll;
     };
   }, [viewport, companyNav, navigation]);

@@ -50,9 +50,9 @@ test("navigation, titles and gutters wheel horizontally without double movement 
   await page.mouse.move(box.x + 90, box.y + box.height / 2);
   await page.mouse.wheel(0, 100);
   await expectLeft(page, 100);
-  // A burst before the next animation frame must retain all three increments.
+  // A same-direction burst before the next animation frame retains both increments.
   await nav(page).evaluate((e) => {
-    for (const deltaY of [100, 100, -50])
+    for (const deltaY of [100, 50])
       e.dispatchEvent(
         new WheelEvent("wheel", { deltaY, bubbles: true, cancelable: true }),
       );
@@ -94,6 +94,68 @@ test("navigation, titles and gutters wheel horizontally without double movement 
     "location",
   );
   expect(errors).toEqual([]);
+});
+
+test("wheel motion starts quickly, settles, retargets and can be interrupted", async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.clock.install({ time: new Date("2026-11-02T00:00:00Z") });
+  await page.goto("./");
+  await expect(latest(page).locator("article").first()).toBeVisible();
+  // Let hydration and the initial URL restoration finish before freezing frames.
+  await page.getByRole("button", { name: "最新", exact: true }).click();
+  await expectLeft(page, 0);
+  await page.clock.pauseAt(new Date("2026-11-02T01:00:00Z"));
+  expect(await wheelEvent(page, { deltaY: 240 })).toBe(true);
+  await expectLeft(page, 0);
+  await page.clock.runFor(48);
+  const first = await left(page);
+  expect(first).toBeGreaterThan(110);
+  expect(first).toBeLessThan(180);
+  await page.clock.runFor(48);
+  const second = await left(page);
+  expect(second).toBeGreaterThan(first);
+  expect(second - first).toBeLessThan(first);
+  await page.clock.runFor(96);
+  await expectLeft(page, 240);
+
+  await wheelEvent(page, { deltaY: 400 });
+  await page.clock.runFor(48);
+  const continued = await left(page);
+  await wheelEvent(page, { deltaY: 100 });
+  await expectLeft(page, continued);
+  await page.clock.runFor(192);
+  await expectLeft(page, 740);
+
+  await wheelEvent(page, { deltaY: 400 });
+  await page.clock.runFor(48);
+  const turning = await left(page);
+  await wheelEvent(page, { deltaY: -120 });
+  await expectLeft(page, turning);
+  await page.clock.runFor(48);
+  expect(await left(page)).toBeLessThan(turning);
+  await page.clock.runFor(144);
+  await expectLeft(page, turning - 120);
+
+  await wheelEvent(page, { deltaY: 400 });
+  await page.clock.runFor(48);
+  await page
+    .getByRole("tab", { name: "论文", exact: true })
+    .dispatchEvent("pointerdown");
+  const interrupted = await left(page);
+  await page.clock.runFor(240);
+  await expectLeft(page, interrupted);
+
+  await wheelEvent(page, { deltaY: 240 });
+  await page.clock.runFor(48);
+  expect(await left(page)).toBeLessThan(interrupted + 240);
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await expectLeft(page, interrupted + 240);
+  await wheelEvent(page, { deltaY: 100 });
+  await expectLeft(page, interrupted + 340);
+  await page.clock.runFor(240);
+  await expectLeft(page, interrupted + 340);
 });
 
 test("article scrolling stays vertical even at the end and horizontal trackpad input stays native", async ({

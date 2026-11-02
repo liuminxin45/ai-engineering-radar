@@ -6,6 +6,14 @@ export type BoardWheelInput = {
   metaKey: boolean;
 };
 
+export const BOARD_WHEEL_DURATION_MS = 180;
+
+/** Cover most of the distance early, then settle without overshooting. */
+export function boardWheelProgress(elapsed: number) {
+  const progress = Math.max(0, Math.min(1, elapsed / BOARD_WHEEL_DURATION_MS));
+  return 1 - (1 - progress) ** 3;
+}
+
 /** Keep the dominant gesture axis and normalize line/page units into pixels. */
 export function boardWheelDelta(
   event: BoardWheelInput,
