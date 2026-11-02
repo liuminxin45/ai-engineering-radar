@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -30,7 +30,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/156462674"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "170496a8238a929ced8c",
@@ -51,7 +59,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -61,7 +69,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/161900033"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "2f9973dfddb6bc6bd649",
@@ -82,7 +98,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -92,7 +108,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/157438741"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "32038f9aeb0132c5eb80",
@@ -113,7 +137,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -123,7 +147,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/156061794"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3686952fb359052f76bd",
@@ -144,7 +176,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -154,7 +186,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/167393564"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3ea67cb7bd5c1ff0e28a",
@@ -175,7 +215,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -185,7 +225,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/160596994"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "5222290d9f421bcbb5df",
@@ -206,7 +254,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -216,7 +264,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/155826363"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "55ef62989954f7453b0a",
@@ -237,7 +293,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -247,7 +303,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/162044465"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "625e46e724c36818a153",
@@ -268,7 +332,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -278,7 +342,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/158929047"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "65c1548a030e0d9c48a3",
@@ -299,7 +371,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -309,7 +381,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/158703008"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "6c5bf21446bfd926dbec",
@@ -330,7 +410,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -340,7 +420,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/161119720"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "6fec96700c2100587676",
@@ -361,7 +449,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -371,7 +459,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/168453213"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "79e78fbe21cb44616bc1",
@@ -392,7 +488,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -402,7 +498,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/163824713"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "91a702dff58b56a32cec",
@@ -423,7 +527,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -433,7 +537,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/163141057"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "94baafee1495b217fa3e",
@@ -454,7 +566,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -464,7 +576,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/158010439"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "987a2a6d43efc66fa201",
@@ -485,7 +605,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -495,7 +615,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/155320541"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "bfef71755142a9a725cc",
@@ -516,7 +644,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -526,7 +654,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/159652065"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "c44b3eb7d0bad04b8192",
@@ -547,7 +683,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -557,7 +693,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/159769265"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "e15d48145bd1860b1b74",
@@ -578,7 +722,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -588,7 +732,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/160121283"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "e8c6d72b88fde2d5a786",
@@ -609,7 +761,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -619,7 +771,15 @@
           "url": "https://blog.csdn.net/bilibili_TC/article/details/161427969"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     }
   ]
 }

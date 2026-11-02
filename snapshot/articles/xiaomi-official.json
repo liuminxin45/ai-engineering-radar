@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -30,7 +30,15 @@
           "url": "https://mimo.xiaomi.com/zh/blog/mimo-v2-5-inference"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "36799e755cc03210bc63",
@@ -51,7 +59,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -61,7 +69,15 @@
           "url": "https://mimo.xiaomi.com/zh/blog/mimo-v2-6-material-research"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3a6da9d3b32149e6e81e",
@@ -82,7 +98,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -92,7 +108,15 @@
           "url": "https://mimo.xiaomi.com/mimo-v2-flash/index.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "413d091e0f0b231704d1",
@@ -113,7 +137,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -123,7 +147,15 @@
           "url": "https://mimo.xiaomi.com/zh/blog/mimo-v2-flash-hss"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "44cede39e984588ae91f",
@@ -144,7 +176,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -154,7 +186,15 @@
           "url": "https://mimo.xiaomi.com/zh/blog/mimo-tilert-1000tps"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "5e36975fe435609cc365",
@@ -175,7 +215,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -185,7 +225,15 @@
           "url": "https://mimo.xiaomi.com/mimo-v2-5-pro/index.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "60d65fbb8d21aba2b624",
@@ -206,7 +254,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -216,7 +264,15 @@
           "url": "https://mimo.xiaomi.com/mimo-v2-6"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "611239970d2a3a1e9ed6",
@@ -237,7 +293,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -247,7 +303,15 @@
           "url": "https://mimo.xiaomi.com/mimo-v2-tts/index.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "61a463d44cc72b9e7ee9",
@@ -268,7 +332,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -280,7 +344,15 @@
       ],
       "duplicateCandidates": [
         "5e36975fe435609cc365"
-      ]
+      ],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "8dfa9e8264c6c8af3d4a",
@@ -301,7 +373,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -314,7 +386,15 @@
       "duplicateCandidates": [
         "c941f7e1eb8320195aa3",
         "5e36975fe435609cc365"
-      ]
+      ],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "c941f7e1eb8320195aa3",
@@ -334,7 +414,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -344,7 +424,15 @@
           "url": "https://mimo.xiaomi.com/mimo-v2-5-asr/index.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "ca1549827e8b2a7a4553",
@@ -365,7 +453,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -375,7 +463,15 @@
           "url": "https://mimo.xiaomi.com/zh/blog/mimo-v2-6-tool-call-repetition"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "e20b5ee617912e33e693",
@@ -396,7 +492,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -406,7 +502,15 @@
           "url": "https://mimo.xiaomi.com/zh/blog/mimo-code-long-horizon"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "edec9468888e7bdb2ec8",
@@ -426,7 +530,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -436,7 +540,15 @@
           "url": "https://mimo.xiaomi.com/mimo-v2-5-tts/index-zh.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "fa85ad6801bd59994518",
@@ -457,7 +569,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -467,7 +579,15 @@
           "url": "https://mimo.xiaomi.com/mimo-v2-omni/index.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     }
   ]
 }

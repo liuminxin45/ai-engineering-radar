@@ -19,7 +19,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -29,7 +29,15 @@
           "url": "https://tech.meituan.com/2026/08/27/ACL-Outstanding-Paper-GeoRA.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "1129de0a5ca551966065",
@@ -49,7 +57,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -59,7 +67,15 @@
           "url": "https://tech.meituan.com/2026/08/07/Agent-Evaluation.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "188809277551f37f6c07",
@@ -79,7 +95,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -89,7 +105,15 @@
           "url": "https://tech.meituan.com/2026/08/20/01-meituan-Query-3.0.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "1dcd3e40116db2739683",
@@ -109,7 +133,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -119,7 +143,15 @@
           "url": "https://tech.meituan.com/2026/09/22/Meituan-Foundation-Model-for-Recommendation.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "4065906b9056ddb2e87e",
@@ -139,7 +171,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -149,7 +181,15 @@
           "url": "https://tech.meituan.com/2026/08/13/KDD-2026-meituan-papers.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "77c6dd92d2ca601c6799",
@@ -169,7 +209,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -179,7 +219,15 @@
           "url": "https://tech.meituan.com/2026/09/10/Agent-Evaluation-White-Paper-01.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "b08f5483cf471e3bda76",
@@ -199,7 +247,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -209,7 +257,15 @@
           "url": "https://tech.meituan.com/2026/10/29/AI-Coding-IN-Distributed-Storage-System.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "dd3bc2f78abce9a2cddc",
@@ -229,7 +285,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -239,7 +295,15 @@
           "url": "https://tech.meituan.com/2026/09/03/meituan-Digital-Human-practice.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "e09f7e0a0a57f44be218",
@@ -259,7 +323,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -269,7 +333,15 @@
           "url": "https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "e7cce306861f27d09386",
@@ -289,7 +361,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -299,7 +371,15 @@
           "url": "https://tech.meituan.com/2026/10/15/Small-Language-Model-in-meituan.html"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     }
   ]
 }

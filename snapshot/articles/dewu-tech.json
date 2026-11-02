@@ -2,327 +2,17 @@
   "schemaVersion": 1,
   "articles": [
     {
-      "id": "0414edb04d490c02e142",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "实战从零开始构建一个Coding Agent：Violin ｜得物技术",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/163526117",
-      "author": "SmartCodeTech",
-      "description": "理解了 coding agent 的构建原理，也就掌握了理解其他 agent 的一把钥匙。笔者对每天都在使用的 agent 原理很感兴趣，于是决定自己写一个：violin。",
-      "language": "zh-cn",
-      "publishedAt": "2026-08-06T02:54:44.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/163526117",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/163526117"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "05b267cff2c484f825f8",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "AI Native 交易核心系统的研发范式｜得物技术",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/163298462",
-      "author": "SmartCodeTech",
-      "description": "如何改造旧研发流程适配 AI 编码？本文提出五道标准化关口治理思路，依托 Claude Code Spec-Driven 插件打通需求澄清、方案设计、TDD 落地、门禁管控与埋点监控，构建带人工确认门控的完整工作流，以五层自底向上架构实现 AI 编码规范化落地。",
-      "language": "zh-cn",
-      "publishedAt": "2026-07-30T02:34:28.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/163298462",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/163298462"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "0c7ef6a8a9660dae5e9d",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "得物推荐系统诊断 Agent：从 “调接口” 到 “会思考”｜AICon 演讲整理",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/162846634",
-      "author": "SmartCodeTech",
-      "description": "本文是得物技术专家在 AICon 上海演讲整理的技术实录。AICon上海2026_全球人工智能开发与应用大会暨大模型应用生态展_InfoQ技术大会 「得物推荐 AI Harness 工程化实践系列」的中篇内容，本系列共三篇连载。本篇（中篇）进一步详解得物推荐复杂业务场景下，AI代码从生成、防护校验到安全上线的完整技术体系、自研AI Harness整体架构框架、全流程安全防护机制、混合智能体核心算法实现，以及工业级工程落地的实战细节。",
-      "language": "zh-cn",
-      "publishedAt": "2026-07-14T02:16:32.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/162846634",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/162846634"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "16c1965d32da6b11121c",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "AI UITester：AI Native 的 UI 自动化测试新范式｜得物技术",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/162510609",
-      "author": "SmartCodeTech",
-      "description": "ai_uitester 代表了 AI Native 的 UI 自动化测试新范式：这不仅是工具的升级，而是测试范式的转变 ------ 从 \"代码驱动\" 转向 \"视觉驱动\"，从 \"人工调试\" 转向 \"AI 自愈\"，从 \"三端分离\" 转向 \"统一抽象\"。",
-      "language": "zh-cn",
-      "publishedAt": "2026-07-02T02:46:24.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/162510609",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/162510609"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "17316f2e0e453fe1b521",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "EP-Harness：从个人 AI Coding 到团队级 Agent 工作流｜得物技术",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/163913700",
-      "author": "SmartCodeTech",
-      "description": "AI Coding 个人用得爽，一到团队就崩。EP-Harness 把 Agent 从聊天工具变成团队协作成员——可管理、可追溯、可闭环。落地后高频异常从 2400+/4h 收敛到个位数。",
-      "language": "zh-cn",
-      "publishedAt": "2026-08-20T05:57:18.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/163913700",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/163913700"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "2453bcf0a312b9e7bca3",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "别再只卷向量检索了，得物交易搜索如何用“生成式”实现召回范式跃迁？",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/166487134",
-      "author": "SmartCodeTech",
-      "description": "你搜\"af1\"，它得给你\"空军一号\"。这一年，得物交易搜索把召回从\"做选择题\"改成了\"写答案\"——不再从商品池里\"找\"最像的，而是让模型自己\"生成\"你真正想要的。从 LLM 语义索引到 HLLM、语义 ID，搜索是怎么从\"检索\"走向\"生成\"的？",
-      "language": "zh-cn",
-      "publishedAt": "2026-09-24T01:54:01.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/166487134",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/166487134"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "3e5e27f70dc6a590d4e9",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "动态规则的 Agent 实践：用确定性工程驾驭 LLM 的资产智能验收",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/168000476",
-      "author": "SmartCodeTech",
-      "description": "面对财务验收中规则多变、材料非结构化、核对复杂等痛点，传统规则引擎难以应对。系统采用“规则即配置”思路，由大语言模型（LLM）负责理解合同、扫描件等非结构化材料并执行语义比对，工程系统则保障流程编排与可追溯性。通过异步处理、幂等设计、三类流量隔离及双通道（文本/图像）处理，实现高效稳定运行。结合用户反馈构建自动标准答案，辅以试跑、回测与发布门禁机制，形成闭环质量体系。底层采用确定性工作流架构，确保行为可预期、可测试，真正实现灵活规则的快速迭代与安全上线。",
-      "language": "zh-cn",
-      "publishedAt": "2026-10-15T03:24:04.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/168000476",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/168000476"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "46dcdd6dec7b4a5c4cac",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "企业级 MultiAgent 落地：Plan 模式与主子 Agent 协作｜得物技术",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/164811946",
-      "author": "SmartCodeTech",
-      "description": "基于 AgentScope Java 的企业级 MultiAgent 平台，为研发、数据分析和知识问答等场景提供统一的模型调用、工具接入、任务编排、流式输出与运行追踪能力。",
-      "language": "zh-cn",
-      "publishedAt": "2026-09-10T02:50:37.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/164811946",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/164811946"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "5002a1722c286fa76a05",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "得物知识问答：复合检索 Agent 的系统设计实践",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/163700922",
-      "author": "SmartCodeTech",
-      "description": "从\"搜到什么用什么\"到\"搜→筛→挖→验\"自主决策闭环——我们造了一个有判断力的 RAG Agent，不是套壳。",
-      "language": "zh-cn",
-      "publishedAt": "2026-08-13T02:51:54.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/163700922",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/163700922"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "511267c6e07bfc7bc05a",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "得物小摊 AI Native 演进实录：用 Harness 构建可控 AI 交付",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/164326893",
-      "author": "SmartCodeTech",
-      "description": "AI Coding 一个人用很顺手，进了团队就漏：指令没人审、经验难沉淀、过程看不见、链路不闭环。作者团队基于 Multica 做了 EP-Harness，把 Agent 当成员管，给它套一层可执行、可观察、可治理的 Harness，并让反馈闭环。成果：可追溯决策、多 Agent 协作，高频异常从每 4 小时 2400 多条降到个位数，对得物技术补上团队级 AI 协作关键一环。",
-      "language": "zh-cn",
-      "publishedAt": "2026-09-03T03:09:18.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/164326893",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/164326893"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "5f31a2cbf3a571928066",
+      "id": "05b89ce7ebcb490bfc43",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
       "title": "推荐系统体验的数字化突破：得物自动化评测平台的技术实践｜AICon 文章整理",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/163249990",
-      "author": "SmartCodeTech",
-      "description": "「得物推荐 AI Harness 工程化实践系列」的末篇内容，本系列共三篇连载。本篇（末篇）详解得物推荐评测平台的完整技术体系：从主观体验量化到大模型自动化评测流水线，涵盖多维度指标设计、人机协作提示词校验闭环、分布式任务调度与成本精控等核心工程实现，以及单周百万级审计需求下实现 91% 资源成本优化的工业级落地实战细节。",
-      "language": "zh-cn",
-      "publishedAt": "2026-07-28T01:58:54.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2716812",
+      "author": "得物技术",
+      "description": "在推荐系统中，CTR 和 CVR 等硬性指标往往容易通过实时数据进行观测，但新颖性、相关性等评价维度由于主观性强、反馈周期长，长期处于量化黑盒状态。本文将介绍得...",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-28T02:03:52.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -330,61 +20,38 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/163249990",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/163249990"
+          "sourceId": "dewu-tencent",
+          "externalId": "2716812",
+          "url": "https://developer.cloud.tencent.com/article/2716812"
         }
       ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "79341f2274bbc6eefa39",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "指标平台：从语义底座到智能消费的实践路径|得物技术",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/165741543",
-      "author": "SmartCodeTech",
-      "description": "这篇文章想做的，不是在本体化的宏大叙事上再叠加一层理论，而是把我们在真实落地中验证过的路径讲清楚：语义底座怎么从零建立起来、怎么保证质量不失控、怎么支撑 Text2SQL 和 AI Coding 两条消费主线，以及沿着这条路径往前走，下一步该往哪个方向发力。",
-      "language": "zh-cn",
-      "publishedAt": "2026-09-17T06:05:42.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
         "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/165741543",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/165741543"
-        }
-      ],
-      "duplicateCandidates": []
+        "version": "advertorial-trial-1"
+      }
     },
     {
-      "id": "812fac584491cb3d82eb",
+      "id": "080f599d4b5911d64845",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
       "title": "RAG 核心概念与原理：Chunking、Embedding、相似度、HNSW 与多路召回｜得物技术",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/163110738",
-      "author": "SmartCodeTech",
-      "description": "决定 RAG 效果的关键不在大模型，而是文本切块、查询改写、多路召回与精排。合理切块存好知识库内容，向量匹配抓语义、BM25 匹配关键词互补。先优化用户提问，快速召回一批相关文档，再用精排模型精细筛选，整套检索流程配合到位，问答准确度才会明显提升。",
-      "language": "zh-cn",
-      "publishedAt": "2026-07-23T02:00:41.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2714290",
+      "author": "得物技术",
+      "description": "向 ChatGPT 询问企业内部系统相关问题，常会出现这样的情况：它给出一段看似逻辑通顺、实则完全错误的回答，不少人都遇到过类似状况。",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-23T02:00:32.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -392,30 +59,38 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/163110738",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/163110738"
+          "sourceId": "dewu-tencent",
+          "externalId": "2714290",
+          "url": "https://developer.cloud.tencent.com/article/2714290"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
-      "id": "8235e229eba4ff9c84fc",
+      "id": "148eb52d0678735c5926",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
       "title": "国产算力·昇腾 910C 大模型推理优化（上）：镜像更新与参数调优，提速 40%｜得物技术",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/168554194",
-      "author": "SmartCodeTech",
-      "description": "文中详细给出每一项优化的动机、实现（含具体源码改动路径与关键代码片段）、验证数据与踩坑记录（包括十余项实测无效或负向的尝试），希望为同样在国产算力上做推理优化的团队提供一份可直接复用的工程参考。",
-      "language": "zh-cn",
-      "publishedAt": "2026-10-22T02:12:38.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2766437",
+      "author": "得物技术",
+      "description": "本文系统性地总结了我们以华为昇腾 910C 为国产算力底座，在大模型在线推理场景下完成国产化适配与性能优化工作。项目从建立 Qwen3.5-35B-A3B 在 ...",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-22T02:15:04.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -423,30 +98,38 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/168554194",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/168554194"
+          "sourceId": "dewu-tencent",
+          "externalId": "2766437",
+          "url": "https://developer.cloud.tencent.com/article/2766437"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
-      "id": "930ae92ba09dbb8157a0",
+      "id": "1a18389e75816ce3a20e",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
-      "title": "Jev 实战：为AI工作流引入轻量决策层 x10倍提速｜得物技术",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/169365516",
-      "author": "SmartCodeTech",
-      "description": "完成这三个场景后，我对适用边界有了更明确的认识：它们都可以先定义答案范围，再根据判断结果驱动下一步操作。接入时，我会优先明确输入、选项、采纳条件和兜底路径，再评估Jev是否适合承担这一环节。结合这些实践，我更容易理解Jev（TypeSafe System One）作为专用结构化决策模型不生成自然语言，而是返回带概率的判断结果。后续接入时，我会继续从脚本中边界明确的判断任务开始，分别验证准确性、耗时和费用，再决定是否扩大使用范围。下面整理了相关能力、限制和接入要点，便于查阅。",
-      "language": "zh-cn",
-      "publishedAt": "2026-10-29T02:43:05.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
+      "title": "EP-Harness：从个人 AI Coding 到团队级 Agent 工作流｜得物技术",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2729366",
+      "author": "得物技术",
+      "description": "直接在本地使用 AI Coding 工具，短期看，很方便，但团队化之后会暴露出几个缺口。",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-20T06:02:02.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -454,30 +137,38 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/169365516",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/169365516"
+          "sourceId": "dewu-tencent",
+          "externalId": "2729366",
+          "url": "https://developer.cloud.tencent.com/article/2729366"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
-      "id": "939d803e490f768b1c8d",
+      "id": "25392e6fa991722ad64c",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
-      "title": "企业级 MultiAgent 的记忆系统：短期上下文与四层记忆架构实现｜得物技术",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/164113235",
-      "author": "SmartCodeTech",
-      "description": "在 MultiAgent 平台中，Agent 的\"记忆\"能力是实现智能对话和个性化服务的核心资产。本文深入剖析 Agent 记忆系统的设计理念与实现细节，重点解析长期记忆架构的写入与加载流程，涵盖 LLM 智能判断、语义检索、Token 预算控制、冲突处理等关键技术，为开发者提供完整的技术实现参考。",
-      "language": "zh-cn",
-      "publishedAt": "2026-09-01T05:39:27.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
+      "title": "从\"机械应答\"到\"服务伙伴\"：得物高可控智能客服的 Agent 工程实践｜AICon 演讲整理",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2710241",
+      "author": "得物技术",
+      "description": "听不懂人话、自作聪明： 无法准确理解用户意图，频繁答非所问。人工成本高、排队严重： 高并发场景下人力无法覆盖。问题解决能力弱： 只能处理简单 FAQ，复杂多轮问...",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-16T02:22:27.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -485,30 +176,38 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/164113235",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/164113235"
+          "sourceId": "dewu-tencent",
+          "externalId": "2710241",
+          "url": "https://developer.cloud.tencent.com/article/2710241"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
-      "id": "b7fb0f9dfa2a80e03ced",
+      "id": "2f6016b5d91e0c278b04",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
-      "title": "国产算力·昇腾 910C 大模型推理优化（下）：源码修改与算子优化，提速30%｜得物技术",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/169158940",
-      "author": "SmartCodeTech",
-      "description": "本文延续上篇，深入vllm-ascend源码优化：通过多流重叠实现MoE共享专家并行计算，消除冗余事件开销，并解除与FUSED_MC2的互斥限制，实现c=1下TPOT从8.2ms降至8.0ms；优化decode阶段host侧开销，引入状态跟踪跳过冗余拷贝；设计Block Table CPU快路径，规避小batch下NPU kernel启动延迟；针对GDN层融合L2Norm至recurrent kernel，减少算子调用与内存往返。综合优化后推理性能显著提升，形成可复用的昇腾910C大模型推理优化方法论。",
-      "language": "zh-cn",
-      "publishedAt": "2026-10-27T02:39:26.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
+      "title": "AI UITester：AI Native 的 UI 自动化测试新范式｜得物技术",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2701896",
+      "author": "得物技术",
+      "description": "测试用例平台积累了大量描述性用例，但不可直接执行。QA 需要逐条手动翻译：理解业务逻辑、编写元素定位、调试执行路径。一个中等规模的模块，转化成本可能需要数人天。",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-02T02:36:15.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -516,92 +215,38 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/169158940",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/169158940"
+          "sourceId": "dewu-tencent",
+          "externalId": "2701896",
+          "url": "https://developer.cloud.tencent.com/article/2701896"
         }
       ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "e4a9638d0fad3885bb73",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "发一张图，它居然“跃“出屏幕了？一文读懂得物 3D 空间图片技术实践",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/166897876",
-      "author": "SmartCodeTech",
-      "description": "3D 空间图片功能的落地，涉及模型生成、内容分发、客户端渲染之间的一系列取舍。本文重点分享如何生产出高质量、小体积的模型，以及如何在手机上流畅运行。",
-      "language": "zh-cn",
-      "publishedAt": "2026-10-08T02:14:42.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
         "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/166897876",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/166897876"
-        }
-      ],
-      "duplicateCandidates": []
+        "version": "advertorial-trial-1"
+      }
     },
     {
-      "id": "f391709e2e87667983db",
-      "publisherId": "dewu-tech",
-      "companyId": "dewu",
-      "title": "从“机械应答“到“服务伙伴“：得物高可控智能客服的 Agent 工程实践｜AICon 演讲整理",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/162906423",
-      "author": "SmartCodeTech",
-      "description": "本次分享围绕以下核心技术展开：客服 Agent 挑战与架构设计（Single-Agent→Multi-Agent→Harness）；高可控性数据飞轮（PE 自动化 + DPO 训练）；RL 策略训练和人工经验对齐；多轮半双工消息流控制。",
-      "language": "zh-cn",
-      "publishedAt": "2026-07-16T02:19:49.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/162906423",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/162906423"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "f9578cf4f9379f564505",
+      "id": "46c6ae22898d571e7cb2",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
       "title": "得物 OceanBase 落地实践",
-      "canonicalUrl": "https://blog.csdn.net/SmartCodeTech/article/details/162720264",
-      "author": "SmartCodeTech",
-      "description": "得物选型OceanBase多模数据库应对业务挑战，通过验证其高可用架构、存储压缩技术及混合负载处理能力。测试显示OceanBase在复杂查询场景性能较MySQL提升130-200倍，在高并发TP/AP混合场景表现优异，存储成本降低40%+。通过DBA内部报表业务试点验证其稳定性后，逐步推广至核心业务场景，优化数据库技术栈，实现性能与成本的双重收益。",
-      "language": "zh-cn",
-      "publishedAt": "2026-07-09T02:45:04.000Z",
-      "discoveredAt": "2026-11-01T12:06:20.983Z",
-      "updatedAt": "2026-11-01T12:06:20.983Z",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2705644",
+      "author": "得物技术",
+      "description": "得物是全球领先的集正品潮流电商和潮流生活社区于一体的新一代潮流生活方式平台。复杂的业务场景和极致的用户体验追求，对数据库运维和选型提出了更高要求。",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-09T02:38:30.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -609,17 +254,532 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "dewu-csdn",
-          "externalId": "https://blog.csdn.net/SmartCodeTech/article/details/162720264",
-          "url": "https://blog.csdn.net/SmartCodeTech/article/details/162720264"
+          "sourceId": "dewu-tencent",
+          "externalId": "2705644",
+          "url": "https://developer.cloud.tencent.com/article/2705644"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "4cd6e267d7ca360e944e",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "Jev 实战：为AI工作流引入轻量决策层 x10倍提速｜得物技术",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2771331",
+      "author": "得物技术",
+      "description": "前段时间Jev挺火。我一开始也以为它是又一个新模型，实践之后才发现它的与众不同！它是一个可以在AI工作流中，工程化地实现轻量决策层的工具，帮助流程降本提效！",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-29T02:45:34.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2771331",
+          "url": "https://developer.cloud.tencent.com/article/2771331"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "6d19abd5e1c95b36f6ce",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "动态规则的 Agent 实践：用确定性工程驾驭 LLM 的资产智能验收",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2761592",
+      "author": "得物技术",
+      "description": "先看一个真实的验收场景：财务同学收到一张验收单，点开附件是一份25页的PDF合同、几份扫描件，要核对合同里的约定数量、甲方主体、落款公章、费用发生期间——每一单...",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-15T03:22:23.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2761592",
+          "url": "https://developer.cloud.tencent.com/article/2761592"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "6f87d932053f74126fb2",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "国产算力·昇腾 910C 大模型推理优化（下）：源码修改与算子优化，提速30%｜得物技术",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2769661",
+      "author": "得物技术",
+      "description": "本文为《昇腾 910C 大模型推理优化实践》下篇。上篇已覆盖昇腾 910C 的软硬件环境、性能基线与瓶颈分析，以及无需改动源码的镜像升级与参数调优。本篇承接上篇...",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-27T02:43:58.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2769661",
+          "url": "https://developer.cloud.tencent.com/article/2769661"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "76c707f1c8367adaf8c6",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "别再只卷向量检索了，得物交易搜索如何用“生成式”实现召回范式跃迁？",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2750363",
+      "author": "得物技术",
+      "description": "在电商搜索的演进历程中，“召回”始终是连接用户意图与海量商品的基石。长期以来，业界普遍采用“判别式检索”范式：无论是基于倒排索引的关键词匹配，还是基于ANN近邻...",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-24T01:49:53.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2750363",
+          "url": "https://developer.cloud.tencent.com/article/2750363"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "79cab0350ed515d870d1",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "企业级 MultiAgent 的记忆系统：短期上下文与四层记忆架构实现｜得物技术",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2732876",
+      "author": "得物技术",
+      "description": "在 MultiAgent 平台中，Agent 一次请求可能同时经过模型、MCP/A2A 工具、RAG、Workflow 和 Sandbox，还要在多轮对话和跨会...",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-27T03:44:02.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2732876",
+          "url": "https://developer.cloud.tencent.com/article/2732876"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "891ad452ddda296629ff",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "发一张图，它居然\"跃\"出屏幕了？一文读懂得物 3D 空间图片技术实践",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2756439",
+      "author": "得物技术",
+      "description": "iOS 26，苹果推出空间照片（Spatial Scene），轻轻转动手机，照片里的主体和背景随视角产生不同的位移，一张普通图片便有了可以探索的空间层次。",
+      "language": "zh-CN",
+      "publishedAt": "2026-10-08T02:17:57.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2756439",
+          "url": "https://developer.cloud.tencent.com/article/2756439"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "9a39370eba1c0a77b3e5",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "得物知识问答：复合检索 Agent 的系统设计实践",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2725371",
+      "author": "得物技术",
+      "description": "知识问答的核心挑战是准确率和质量。一个回答要准确，需要：查得全（召回率），查得准（精准度），理解得对（多模态），看得对（权限隔离）。这些能力不是堆功能就能实现的...",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-13T02:51:45.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2725371",
+          "url": "https://developer.cloud.tencent.com/article/2725371"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "b3948f46af28567de5c7",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "指标平台：从语义底座到智能消费的实践路径|得物技术",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2745514",
+      "author": "得物技术",
+      "description": "指标平台的演进史，本质上是一部\"意义\"从人脑迁移到机器的历史。第一代把指标固化进 OLAP 立方体的物理结构，灵活性极差；第二代用语义层把业务名词和 SQL 表...",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-17T06:12:47.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2745514",
+          "url": "https://developer.cloud.tencent.com/article/2745514"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "c3607a6314aa7411075e",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "AI Native 交易核心系统的研发范式｜得物技术",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2718272",
+      "author": "得物技术",
+      "description": "订单系统是交易链路的核心命脉，直接承载用户所有下单与支付行为，其稳定性直接决定业务盈亏。为此，我们耗时一年多，完成了订单系统由外而内的三阶段改造。",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-30T02:25:17.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2718272",
+          "url": "https://developer.cloud.tencent.com/article/2718272"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "ccb3da436978f43e7fbd",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "实战从零开始构建一个Coding Agent：Violin ｜得物技术",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2721691",
+      "author": "得物技术",
+      "description": "从 24 年冬天开始，各类 coding agent 层出不穷——从 Gemini CLI 的起步，到 Claude Code 的尝试，再到如今 Codex、O...",
+      "language": "zh-CN",
+      "publishedAt": "2026-08-06T03:01:10.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2721691",
+          "url": "https://developer.cloud.tencent.com/article/2721691"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "d22bc01e648d0d844c19",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "企业级 MultiAgent 落地：Plan 模式与主子 Agent 协作｜得物技术",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2740678",
+      "author": "得物技术",
+      "description": "我们正在建设一个基于 AgentScope Java 的企业级 MultiAgent 平台，为研发、数据分析和知识问答等场景提供统一的模型调用、工具接入、任务编...",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-10T02:49:08.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2740678",
+          "url": "https://developer.cloud.tencent.com/article/2740678"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "d304d4b786045b318c08",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "得物小摊 AI Native 演进实录：用 Harness 构建可控 AI 交付",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2736684",
+      "author": "得物技术",
+      "description": "得物小摊是一个从 0 到 1 孵化的创新业务。在一段时间里，我需要同时负责 H5、运营后台、Node 网关和 Go 服务的设计、实现、联调和交付。",
+      "language": "zh-CN",
+      "publishedAt": "2026-09-03T09:54:49.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2736684",
+          "url": "https://developer.cloud.tencent.com/article/2736684"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "dbe05bfbf58ea8c4632b",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "title": "得物推荐系统诊断 Agent：从 “调接口” 到 “会思考”｜AICon 演讲整理",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2708833",
+      "author": "得物技术",
+      "description": "「得物推荐 AI Harness 工程化实践系列」的中篇内容，本系列共三篇连载。本篇（中篇）进一步详解得物推荐复杂业务场景下，AI代码从生成、防护校验到安全上线...",
+      "language": "zh-CN",
+      "publishedAt": "2026-07-14T02:10:00.000Z",
+      "discoveredAt": "2026-11-02T03:14:35.381Z",
+      "updatedAt": "2026-11-02T03:14:35.381Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2708833",
+          "url": "https://developer.cloud.tencent.com/article/2708833"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     }
   ]
 }

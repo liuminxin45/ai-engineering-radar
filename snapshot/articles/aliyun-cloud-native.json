@@ -19,7 +19,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -29,7 +29,15 @@
           "url": "https://developer.aliyun.com/article/1755378"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "02bbdd062a7ed6ecf0fd",
@@ -49,7 +57,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -59,7 +67,15 @@
           "url": "https://developer.aliyun.com/article/1762204"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "04a0c4c405d3de1c7bc9",
@@ -79,7 +95,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -89,7 +105,15 @@
           "url": "https://developer.aliyun.com/article/1750833"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "0766db56268f9a54c5b8",
@@ -109,7 +133,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -119,7 +143,15 @@
           "url": "https://developer.aliyun.com/article/1764749"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "08560ced7d3f1ffdd67d",
@@ -139,7 +171,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -149,7 +181,15 @@
           "url": "https://developer.aliyun.com/article/1755287"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "0c41cdae999fdd77e450",
@@ -169,7 +209,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -179,7 +219,15 @@
           "url": "https://developer.aliyun.com/article/1760457"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "0ec15a913ea51fb23b10",
@@ -199,7 +247,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -209,7 +257,15 @@
           "url": "https://developer.aliyun.com/article/1755288"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "103c3e5fbb177c5f4f9f",
@@ -229,7 +285,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -239,7 +295,15 @@
           "url": "https://developer.aliyun.com/article/1753141"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "131a7f2faf46d676b725",
@@ -259,7 +323,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -269,7 +333,15 @@
           "url": "https://developer.aliyun.com/article/1756599"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "1327e897871831b13f92",
@@ -289,7 +361,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -299,7 +371,15 @@
           "url": "https://developer.aliyun.com/article/1751530"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "13b65c801170795e2f23",
@@ -319,7 +399,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -329,7 +409,15 @@
           "url": "https://developer.aliyun.com/article/1761922"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "13ccbb0b884b458eba65",
@@ -349,7 +437,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -359,7 +447,15 @@
           "url": "https://developer.aliyun.com/article/1763133"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "16347df2690c7c182f3c",
@@ -379,7 +475,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -389,7 +485,15 @@
           "url": "https://developer.aliyun.com/article/1774447"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "1634892356750ed80073",
@@ -409,7 +513,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -419,7 +523,15 @@
           "url": "https://developer.aliyun.com/article/1751516"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "1a0f2ecb69573840fc2a",
@@ -439,7 +551,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -449,7 +561,15 @@
           "url": "https://developer.aliyun.com/article/1764793"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "1eb11a0d0d05a0790966",
@@ -469,7 +589,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -479,7 +599,15 @@
           "url": "https://developer.aliyun.com/article/1758462"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "1eec84b9c906678940ed",
@@ -499,7 +627,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -509,7 +637,15 @@
           "url": "https://developer.aliyun.com/article/1764747"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "21b6c7dff4fab1761231",
@@ -529,7 +665,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -539,7 +675,15 @@
           "url": "https://developer.aliyun.com/article/1761365"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "23fd1e301b62ec764f18",
@@ -559,7 +703,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -569,7 +713,15 @@
           "url": "https://developer.aliyun.com/article/1764752"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "25540a45f9b71776e94b",
@@ -589,7 +741,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -599,7 +751,15 @@
           "url": "https://developer.aliyun.com/article/1761370"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "2774ff21e7ad1b245c3f",
@@ -619,7 +779,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -629,7 +789,15 @@
           "url": "https://developer.aliyun.com/article/1753207"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "277f42bceebff4488a6c",
@@ -649,7 +817,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -659,7 +827,15 @@
           "url": "https://developer.aliyun.com/article/1750824"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "290d122fad3a08b0de65",
@@ -679,7 +855,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -689,7 +865,15 @@
           "url": "https://developer.aliyun.com/article/1776498"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "29dae1e0c21c0b4adbf3",
@@ -709,7 +893,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -719,7 +903,15 @@
           "url": "https://developer.aliyun.com/article/1750820"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "2f432bbf2613421e2272",
@@ -739,7 +931,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -749,7 +941,15 @@
           "url": "https://developer.aliyun.com/article/1758157"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "2f57eb04a0f5c86152b1",
@@ -769,7 +969,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -779,7 +979,15 @@
           "url": "https://developer.aliyun.com/article/1758156"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "30245b9c66127907b975",
@@ -799,7 +1007,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -809,7 +1017,15 @@
           "url": "https://developer.aliyun.com/article/1761910"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "320869d5320562b0368a",
@@ -829,7 +1045,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -839,7 +1055,20 @@
           "url": "https://developer.aliyun.com/article/1756571"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "suspected",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题以活动报名或招募为主。仅依据标题和短摘要提示疑似软文，待人工复核；未判断全文质量。",
+        "evidence": [
+          {
+            "field": "title",
+            "text": "8.28 上海见丨AI 实时数据沙龙报名中"
+          }
+        ],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3721273ee0e51faa98f2",
@@ -859,7 +1088,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -869,7 +1098,15 @@
           "url": "https://developer.aliyun.com/article/1758174"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "37b1ef531373373d8018",
@@ -889,7 +1126,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -899,7 +1136,15 @@
           "url": "https://developer.aliyun.com/article/1750826"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "381b08b7a95092268a88",
@@ -919,7 +1164,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -929,7 +1174,15 @@
           "url": "https://developer.aliyun.com/article/1755280"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3e39cdf46299dfd3c509",
@@ -949,7 +1202,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -959,7 +1212,15 @@
           "url": "https://developer.aliyun.com/article/1753197"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3ebd36510aed861e43cf",
@@ -979,7 +1240,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -989,7 +1250,15 @@
           "url": "https://developer.aliyun.com/article/1761386"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "425171e09693d3b81950",
@@ -1009,7 +1278,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1019,7 +1288,15 @@
           "url": "https://developer.aliyun.com/article/1751506"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "44480478665e1dd47156",
@@ -1039,7 +1316,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1049,7 +1326,15 @@
           "url": "https://developer.aliyun.com/article/1761911"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "4602eb23a6f547fec68e",
@@ -1069,7 +1354,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1079,7 +1364,15 @@
           "url": "https://developer.aliyun.com/article/1761385"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "46fe092df68c192b9e1a",
@@ -1099,7 +1392,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1109,7 +1402,15 @@
           "url": "https://developer.aliyun.com/article/1748659"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "4913857ab214eb4d225f",
@@ -1129,7 +1430,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1139,7 +1440,15 @@
           "url": "https://developer.aliyun.com/article/1763100"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "5050c1a3d1e819ad37db",
@@ -1159,7 +1468,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1169,7 +1478,15 @@
           "url": "https://developer.aliyun.com/article/1761387"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "54255962e06db4c00151",
@@ -1189,7 +1506,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1199,7 +1516,15 @@
           "url": "https://developer.aliyun.com/article/1774221"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "57864237fd52739da6a7",
@@ -1219,7 +1544,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1229,7 +1554,15 @@
           "url": "https://developer.aliyun.com/article/1756597"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "59895ccc29adf65d2fe1",
@@ -1249,7 +1582,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1259,7 +1592,15 @@
           "url": "https://developer.aliyun.com/article/1753147"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "5fc711e7bdcb6a5c0ad8",
@@ -1279,7 +1620,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1291,7 +1632,15 @@
       ],
       "duplicateCandidates": [
         "a0be76ae6ea13acf26d1"
-      ]
+      ],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "6033fee4ae337372aab8",
@@ -1311,7 +1660,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1321,7 +1670,15 @@
           "url": "https://developer.aliyun.com/article/1761353"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "644d199d13fdded600b1",
@@ -1341,7 +1698,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1351,7 +1708,15 @@
           "url": "https://developer.aliyun.com/article/1761914"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "68da7d7767aa16b770c5",
@@ -1371,7 +1736,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1381,7 +1746,15 @@
           "url": "https://developer.aliyun.com/article/1775359"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "6b5da5f5368617085632",
@@ -1401,7 +1774,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1411,7 +1784,15 @@
           "url": "https://developer.aliyun.com/article/1758142"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "6bc8d268f4eaeec90775",
@@ -1431,7 +1812,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1441,7 +1822,15 @@
           "url": "https://developer.aliyun.com/article/1758148"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "6c7329b9ace3fe16ee5c",
@@ -1461,7 +1850,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1471,7 +1860,15 @@
           "url": "https://developer.aliyun.com/article/1761346"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "6ed854fedfc1abf98ea5",
@@ -1491,7 +1888,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1501,7 +1898,15 @@
           "url": "https://developer.aliyun.com/article/1753204"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "6ef1a042907d7a4c9aa5",
@@ -1521,7 +1926,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1531,7 +1936,15 @@
           "url": "https://developer.aliyun.com/article/1773435"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "70dcaba52c4fdd9ebe75",
@@ -1551,7 +1964,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1561,7 +1974,15 @@
           "url": "https://developer.aliyun.com/article/1775335"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "76e55bcad35339932d92",
@@ -1581,7 +2002,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1591,7 +2012,15 @@
           "url": "https://developer.aliyun.com/article/1760437"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "7a4daa68b878ae05d426",
@@ -1611,7 +2040,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1621,7 +2050,15 @@
           "url": "https://developer.aliyun.com/article/1752126"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "7f995d1c7011c6c63203",
@@ -1641,7 +2078,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1651,7 +2088,15 @@
           "url": "https://developer.aliyun.com/article/1761364"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "8116855e292abd2883f6",
@@ -1671,7 +2116,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1681,7 +2126,15 @@
           "url": "https://developer.aliyun.com/article/1761369"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "853a2bec303778cc1280",
@@ -1701,7 +2154,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1711,7 +2164,15 @@
           "url": "https://developer.aliyun.com/article/1761367"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "85c34452946059efc8ec",
@@ -1731,7 +2192,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1741,7 +2202,15 @@
           "url": "https://developer.aliyun.com/article/1758162"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "87e8d8f039ae177dc45a",
@@ -1761,7 +2230,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1771,7 +2240,15 @@
           "url": "https://developer.aliyun.com/article/1776525"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "8965d8070c465724205a",
@@ -1791,7 +2268,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1801,7 +2278,15 @@
           "url": "https://developer.aliyun.com/article/1774435"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "8c0770545ad965a822ac",
@@ -1821,7 +2306,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1831,7 +2316,15 @@
           "url": "https://developer.aliyun.com/article/1760416"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "95ef3957235105633ed1",
@@ -1851,7 +2344,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1861,7 +2354,15 @@
           "url": "https://developer.aliyun.com/article/1761357"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "97fa55aa69d886ba2e2a",
@@ -1881,7 +2382,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1891,7 +2392,15 @@
           "url": "https://developer.aliyun.com/article/1768666"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "9838a3bf3da5ba7485c1",
@@ -1911,7 +2420,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1921,7 +2430,15 @@
           "url": "https://developer.aliyun.com/article/1753195"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "9bbdbb757364e6bb4d0f",
@@ -1941,7 +2458,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1951,7 +2468,15 @@
           "url": "https://developer.aliyun.com/article/1761376"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "a05f1c039372ab036924",
@@ -1971,7 +2496,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1981,7 +2506,15 @@
           "url": "https://developer.aliyun.com/article/1773443"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "a0be76ae6ea13acf26d1",
@@ -2001,7 +2534,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2011,7 +2544,15 @@
           "url": "https://developer.aliyun.com/article/1760418"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "a5284c887e4166b49101",
@@ -2031,7 +2572,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2041,7 +2582,15 @@
           "url": "https://developer.aliyun.com/article/1761359"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "aafd7d6895bccd374f3c",
@@ -2061,7 +2610,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2071,7 +2620,15 @@
           "url": "https://developer.aliyun.com/article/1755376"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "ab57c0f3b1186bbbc43f",
@@ -2091,7 +2648,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2101,7 +2658,15 @@
           "url": "https://developer.aliyun.com/article/1768655"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "abcdb858a39a3174c491",
@@ -2121,7 +2686,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2131,7 +2696,15 @@
           "url": "https://developer.aliyun.com/article/1753134"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "acb5d0791666de0fbd39",
@@ -2151,7 +2724,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2161,7 +2734,15 @@
           "url": "https://developer.aliyun.com/article/1761350"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "ae1fbff8519a658325eb",
@@ -2181,7 +2762,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2191,7 +2772,15 @@
           "url": "https://developer.aliyun.com/article/1764753"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "bcc5e3a3f360bce9a02e",
@@ -2211,7 +2800,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2221,7 +2810,15 @@
           "url": "https://developer.aliyun.com/article/1761936"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "bd3c06ac2ec58e4f13f2",
@@ -2241,7 +2838,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2251,7 +2848,15 @@
           "url": "https://developer.aliyun.com/article/1749475"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "bde334f322b9df1361f9",
@@ -2271,7 +2876,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2281,7 +2886,15 @@
           "url": "https://developer.aliyun.com/article/1751531"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "be4c8f2510e1f1475492",
@@ -2301,7 +2914,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2311,7 +2924,15 @@
           "url": "https://developer.aliyun.com/article/1758143"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "bf2f6a1b00aa6adc7844",
@@ -2331,7 +2952,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2341,7 +2962,15 @@
           "url": "https://developer.aliyun.com/article/1763144"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "c0dd8dacc177ed18c081",
@@ -2361,7 +2990,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2371,7 +3000,15 @@
           "url": "https://developer.aliyun.com/article/1758180"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "c1c6e36b8ac6ef6df731",
@@ -2391,7 +3028,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2401,7 +3038,15 @@
           "url": "https://developer.aliyun.com/article/1755514"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "c5473b77647b436db63e",
@@ -2421,7 +3066,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2433,7 +3078,15 @@
       ],
       "duplicateCandidates": [
         "6c7329b9ace3fe16ee5c"
-      ]
+      ],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "cb7ec9dece5a5bab60e6",
@@ -2453,7 +3106,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2463,7 +3116,15 @@
           "url": "https://developer.aliyun.com/article/1755286"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "cc4052b84d8663a907b8",
@@ -2483,7 +3144,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2493,7 +3154,15 @@
           "url": "https://developer.aliyun.com/article/1755368"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "d19f5346573fc9043863",
@@ -2513,7 +3182,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2523,7 +3192,15 @@
           "url": "https://developer.aliyun.com/article/1774000"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "d247101c65585c5bdfe6",
@@ -2543,7 +3220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2553,7 +3230,15 @@
           "url": "https://developer.aliyun.com/article/1773425"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "d6b443dee801e5119ccd",
@@ -2573,7 +3258,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2583,7 +3268,15 @@
           "url": "https://developer.aliyun.com/article/1755281"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "db6bca5952f19255bfb7",
@@ -2603,7 +3296,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2613,7 +3306,15 @@
           "url": "https://developer.aliyun.com/article/1760411"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "dc175102d419c8544048",
@@ -2633,7 +3334,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2643,7 +3344,15 @@
           "url": "https://developer.aliyun.com/article/1753193"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "ddfc641a520d9c9f1fcc",
@@ -2663,7 +3372,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2673,7 +3382,15 @@
           "url": "https://developer.aliyun.com/article/1755525"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "deafbbeec83c19e45dea",
@@ -2693,7 +3410,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2703,7 +3420,15 @@
           "url": "https://developer.aliyun.com/article/1758455"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "e197de1e3be115084395",
@@ -2723,7 +3448,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2733,7 +3458,15 @@
           "url": "https://developer.aliyun.com/article/1773428"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "e770d5d7782f60215d01",
@@ -2753,7 +3486,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2763,7 +3496,15 @@
           "url": "https://developer.aliyun.com/article/1756573"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "e99a19763c0bf7f21940",
@@ -2783,7 +3524,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2793,7 +3534,15 @@
           "url": "https://developer.aliyun.com/article/1758161"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "ec9485ea3e9895312e0d",
@@ -2813,7 +3562,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2823,7 +3572,15 @@
           "url": "https://developer.aliyun.com/article/1755279"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "f4f8dbbb88697ce8a3c7",
@@ -2843,7 +3600,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2853,7 +3610,15 @@
           "url": "https://developer.aliyun.com/article/1753136"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "f62ad4ff0a483db6f7e7",
@@ -2873,7 +3638,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2883,7 +3648,15 @@
           "url": "https://developer.aliyun.com/article/1768656"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "f62dc53a407ad182de0f",
@@ -2903,7 +3676,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2913,7 +3686,15 @@
           "url": "https://developer.aliyun.com/article/1755391"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "f844a85f69ed35eb419d",
@@ -2933,7 +3714,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2943,7 +3724,15 @@
           "url": "https://developer.aliyun.com/article/1756570"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "fc17104807466c1eec6d",
@@ -2963,7 +3752,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2973,7 +3762,15 @@
           "url": "https://developer.aliyun.com/article/1774482"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "fdd58f1f2cac414a3108",
@@ -2993,7 +3790,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3003,7 +3800,15 @@
           "url": "https://developer.aliyun.com/article/1758465"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     }
   ]
 }

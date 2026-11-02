@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -30,7 +30,15 @@
           "url": "https://developer.volcengine.com/articles/7361240155513946149"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "1da07e2b462ea5c42949",
@@ -51,7 +59,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -61,7 +69,15 @@
           "url": "https://developer.volcengine.com/articles/7389112559451766796"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "232d53b68ebcaa7d69e5",
@@ -82,7 +98,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -92,7 +108,15 @@
           "url": "https://developer.volcengine.com/articles/7680871851639521334"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "381646ae6849bb749ea1",
@@ -113,7 +137,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -123,7 +147,15 @@
           "url": "https://developer.volcengine.com/articles/7698691370294181915"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3b66012a0aff73160d33",
@@ -144,7 +176,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -154,7 +186,15 @@
           "url": "https://developer.volcengine.com/articles/7389112559384657939"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3e68157ca8e9e7f5bc15",
@@ -175,7 +215,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -185,7 +225,20 @@
           "url": "https://developer.volcengine.com/articles/7389112559527755830"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "suspected",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题以活动报名或招募为主。仅依据标题和短摘要提示疑似软文，待人工复核；未判断全文质量。",
+        "evidence": [
+          {
+            "field": "title",
+            "text": "2024 开源之夏｜字节跳动开源议题邀你报名"
+          }
+        ],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "43c877ad2d0e70f003b3",
@@ -206,7 +259,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -216,7 +269,15 @@
           "url": "https://developer.volcengine.com/articles/7389112572001124364"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "4b959a33f41ca6a002b9",
@@ -237,7 +298,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -247,7 +308,15 @@
           "url": "https://developer.volcengine.com/articles/7357978518103441459"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "62d29422e7c17c101d94",
@@ -268,7 +337,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -278,7 +347,15 @@
           "url": "https://developer.volcengine.com/articles/7389112559485648937"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "66cc55390495d404c13f",
@@ -299,7 +376,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -309,7 +386,20 @@
           "url": "https://developer.volcengine.com/articles/7389112572064399401"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "suspected",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题以活动报名或招募为主。仅依据标题和短摘要提示疑似软文，待人工复核；未判断全文质量。",
+        "evidence": [
+          {
+            "field": "title",
+            "text": "活动报名 ｜ByConity⼀周年：云原⽣数仓创新之路"
+          }
+        ],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "74409ce85bc4a4d6c69a",
@@ -330,7 +420,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -340,7 +430,15 @@
           "url": "https://developer.volcengine.com/articles/7389112559388852263"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "84612de58eb3793a8b07",
@@ -361,7 +459,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -371,7 +469,15 @@
           "url": "https://developer.volcengine.com/articles/7389112557635633215"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "a2df73e29c404a11e5bf",
@@ -392,7 +498,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -402,7 +508,15 @@
           "url": "https://developer.volcengine.com/articles/7389112559418212391"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "a73b3ba3a1987716324c",
@@ -423,7 +537,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -433,7 +547,15 @@
           "url": "https://developer.volcengine.com/articles/7389112555626561555"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "aedb8cdf1a684a67d1f4",
@@ -454,7 +576,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -464,7 +586,15 @@
           "url": "https://developer.volcengine.com/articles/7667161751409917994"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "c15105e9d91ddd1f9c3d",
@@ -485,7 +615,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -495,7 +625,20 @@
           "url": "https://developer.volcengine.com/articles/7389112253687005238"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "suspected",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题以活动报名或招募为主。仅依据标题和短摘要提示疑似软文，待人工复核；未判断全文质量。",
+        "evidence": [
+          {
+            "field": "title",
+            "text": "活动报名｜字节跳动开源三场 Meetup 即将落地狮城"
+          }
+        ],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "c9e8a9849176f86ec824",
@@ -516,7 +659,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -526,7 +669,15 @@
           "url": "https://developer.volcengine.com/articles/7359237650131845147"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "cacec31499c4775c768a",
@@ -547,7 +698,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -557,7 +708,20 @@
           "url": "https://developer.volcengine.com/articles/7389112572051456063"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "suspected",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题以活动报名或招募为主。仅依据标题和短摘要提示疑似软文，待人工复核；未判断全文质量。",
+        "evidence": [
+          {
+            "field": "title",
+            "text": "活动报名｜CloudWeGo 技术沙龙 · 上海站，共议云原生 x AI 时代的微服务架构最佳实践"
+          }
+        ],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "e081a8a75f2313f88b50",
@@ -578,7 +742,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -588,7 +752,15 @@
           "url": "https://developer.volcengine.com/articles/7389112553802039315"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "f97477da6d945f96a91e",
@@ -609,7 +781,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.540Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -619,7 +791,20 @@
           "url": "https://developer.volcengine.com/articles/7389112558273183798"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "suspected",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题以活动报名或招募为主。仅依据标题和短摘要提示疑似软文，待人工复核；未判断全文质量。",
+        "evidence": [
+          {
+            "field": "title",
+            "text": "赛暨第二届 Bio-OS 开源开放大赛酷燃来袭！持续报名中！"
+          }
+        ],
+        "version": "advertorial-trial-1"
+      }
     }
   ]
 }

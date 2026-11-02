@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -30,7 +30,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/152609271"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "256ca8162e31ef750b9c",
@@ -51,7 +59,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -61,7 +69,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/163570574"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "31ccf3cefb978b37eae6",
@@ -82,7 +98,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -92,7 +108,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/151766393"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3407014b2326e5e349fc",
@@ -113,7 +137,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -123,7 +147,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/153473063"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3aaad404bdaf7fac66ee",
@@ -144,7 +176,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -154,7 +186,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/152668238"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "434fdc5542f837dc97fb",
@@ -175,7 +215,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -185,7 +225,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/167491044"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "5a119bfce979f698acef",
@@ -206,7 +254,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -216,7 +264,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/150549568"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "7339aaf38ac7604cf6e9",
@@ -237,7 +293,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -247,7 +303,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/169349055"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "7b0f066f0ad9399059c2",
@@ -268,7 +332,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -278,7 +342,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/163374166"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "7e6a749612681a382ac6",
@@ -299,7 +371,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -309,7 +381,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/167899161"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "9587aea3f6afc259907d",
@@ -330,7 +410,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -340,7 +420,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/153208899"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "9f7b44577e3e32976c55",
@@ -361,7 +449,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -371,7 +459,24 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/164809491"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "suspected",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "产品升级宣传与效果口号集中出现，标题摘要未见具体工程细节。仅依据标题和短摘要提示疑似软文，待人工复核；未判断全文质量。",
+        "evidence": [
+          {
+            "field": "title",
+            "text": "网易知数DataAgent 重磅升级：从“问一个数”到“交一份答卷”，六大能力全解析"
+          },
+          {
+            "field": "title",
+            "text": "nt 重磅升级：从“问一个数”到“交一份答卷”，六大能力全解析"
+          }
+        ],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "9fc03cb0c9fdb93b8603",
@@ -392,7 +497,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -402,7 +507,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/166571371"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "c154a6a9c0f325a94345",
@@ -423,7 +536,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -433,7 +546,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/164369017"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "c3bdb3ea818208a3850e",
@@ -454,7 +575,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -464,7 +585,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/153624806"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "d885fe348d05a30336b5",
@@ -485,7 +614,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -495,7 +624,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/153780533"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "dc86ea39b63d1710f9e1",
@@ -516,7 +653,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -526,7 +663,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/165742753"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "de34210474c60dff8a55",
@@ -547,7 +692,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -557,7 +702,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/168434623"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "e12a86add109ce0a9154",
@@ -578,7 +731,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -588,7 +741,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/168130867"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "e8490a75f8e8181c36f9",
@@ -609,7 +770,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -619,7 +780,15 @@
           "url": "https://blog.csdn.net/wangyiyungw/article/details/169364353"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     }
   ]
 }

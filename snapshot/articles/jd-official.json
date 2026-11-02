@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -30,7 +30,15 @@
           "url": "https://www.cnblogs.com/Jcloud/p/22824796"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "34d623bd3e49efa28693",
@@ -51,7 +59,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -61,7 +69,15 @@
           "url": "https://www.cnblogs.com/Jcloud/p/23367542"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "3ce0d853e1e08ea2d93f",
@@ -82,7 +98,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -92,7 +108,15 @@
           "url": "https://www.cnblogs.com/Jcloud/p/23059071"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "61bc1feab997f2291120",
@@ -113,7 +137,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -123,7 +147,15 @@
           "url": "https://www.cnblogs.com/Jcloud/p/17942507"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "766b04863a4b81bdbf81",
@@ -144,7 +176,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -154,7 +186,15 @@
           "url": "https://www.cnblogs.com/Jcloud/p/22787431"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "9a21da0ada544ac6032e",
@@ -175,7 +215,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -185,7 +225,15 @@
           "url": "https://www.cnblogs.com/Jcloud/p/23093316"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "aa8a35284b4992716a21",
@@ -206,7 +254,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.836Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -216,7 +264,15 @@
           "url": "https://www.cnblogs.com/Jcloud/p/23467127"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "bad4ff318c4ecf0580c6",
@@ -237,7 +293,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -247,7 +303,15 @@
           "url": "https://www.cnblogs.com/Jcloud/p/22722919"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "c73162414f5e31fabbc7",
@@ -268,7 +332,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -278,7 +342,15 @@
           "url": "https://www.cnblogs.com/Jcloud/p/23083883"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "f188799d8dab1b75b036",
@@ -299,7 +371,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -309,7 +381,15 @@
           "url": "https://www.cnblogs.com/Jcloud/p/23002534"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     },
     {
       "id": "fc2b37a024b570d99436",
@@ -330,7 +410,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T02:28:52.541Z"
+        "classifiedAt": "2026-11-02T03:14:36.837Z"
       },
       "publicationStatus": "published",
       "locations": [
@@ -340,7 +420,15 @@
           "url": "https://www.cnblogs.com/Jcloud/p/22679409"
         }
       ],
-      "duplicateCandidates": []
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
     }
   ]
 }
