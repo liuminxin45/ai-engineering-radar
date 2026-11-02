@@ -3,10 +3,11 @@
 import { useEffect, useId, useState } from "react";
 import {
   Popover,
+  PopoverAnchor,
   PopoverTrigger,
   PopoverContent,
-  CloseIcon,
-} from "chatgpt-desktop-kit";
+} from "chatgpt-desktop-kit/compat/popover";
+import { CloseIcon } from "chatgpt-desktop-kit";
 import { asset } from "../lib";
 import { Button, IconButton } from "./action-button";
 import { ThemeToggle } from "./theme-toggle";
@@ -46,23 +47,33 @@ export function BoardActions() {
           setError("");
         }}
       >
-        <PopoverTrigger asChild>
-          <IconButton aria-label="ATOM/RSS">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              aria-hidden="true"
-            >
-              <path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9" />
-              <circle cx="5" cy="19" r="2" fill="currentColor" stroke="none" />
-            </svg>
-          </IconButton>
-        </PopoverTrigger>
+        <PopoverAnchor asChild>
+          <span className={styles.subscriptionAnchor}>
+            <PopoverTrigger asChild>
+              <IconButton aria-label="ATOM/RSS">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9" />
+                  <circle
+                    cx="5"
+                    cy="19"
+                    r="2"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </IconButton>
+            </PopoverTrigger>
+          </span>
+        </PopoverAnchor>
         <PopoverContent
           className={styles.subscription}
           align="end"

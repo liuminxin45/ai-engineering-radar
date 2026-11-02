@@ -1,3 +1,8 @@
+.subscriptionAnchor {
+  /* Keep popover positioning independent of the button's press transform. */
+  display: inline-flex;
+  flex-shrink: 0;
+}
 .subscription {
   --ink: var(--desktop-color-text);
   --muted: var(--desktop-color-text-muted);
