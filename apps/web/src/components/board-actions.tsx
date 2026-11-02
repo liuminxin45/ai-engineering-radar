@@ -2,37 +2,27 @@
 
 import { useEffect, useId, useState } from "react";
 import {
-  Button,
-  IconButton,
   Popover,
+  PopoverAnchor,
   PopoverTrigger,
   PopoverContent,
-  Moon,
-  Sun,
-  CloseIcon,
-  useDesktopTheme,
-} from "chatgpt-desktop-kit";
+} from "chatgpt-desktop-kit/compat/popover";
+import { CloseIcon } from "chatgpt-desktop-kit";
 import { asset } from "../lib";
+import { Button, IconButton } from "./action-button";
+import { ThemeToggle } from "./theme-toggle";
 import styles from "./board-actions.module.css";
 
 const repository = "https://github.com/liuminxin45/ai-engineering-radar";
 
 export function BoardActions() {
-  const { theme, setTheme } = useDesktopTheme();
-  const [systemDark, setSystemDark] = useState(false);
   const [origin, setOrigin] = useState("");
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState("");
   const [error, setError] = useState("");
   const headingId = useId();
-  const dark = theme === "dark" || (theme === "system" && systemDark);
   useEffect(() => {
     setOrigin(location.origin);
-    const media = matchMedia("(prefers-color-scheme: dark)");
-    const update = () => setSystemDark(media.matches);
-    update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
   }, []);
   async function copy(kind: string, path: string) {
     setCopied("");
@@ -46,21 +36,9 @@ export function BoardActions() {
       setError("无法自动复制，请选中链接手动复制。");
     }
   }
-  const themeLabel = dark ? "切换到浅色外观" : "切换到深色外观";
   return (
     <>
-      <IconButton
-        className={styles.flatButton}
-        aria-label={themeLabel}
-        title={themeLabel}
-        onClick={() => setTheme(dark ? "light" : "dark")}
-      >
-        {dark ? (
-          <Sun size={18} aria-hidden="true" />
-        ) : (
-          <Moon size={18} aria-hidden="true" />
-        )}
-      </IconButton>
+      <ThemeToggle />
       <Popover
         open={open}
         onOpenChange={(next) => {
@@ -69,14 +47,33 @@ export function BoardActions() {
           setError("");
         }}
       >
-        <PopoverTrigger asChild>
-          <Button
-            className={`${styles.flatButton} ${styles.feedTrigger}`}
-            variant="ghost"
-          >
-            <span className="link-label">ATOM/RSS</span>
-          </Button>
-        </PopoverTrigger>
+        <PopoverAnchor asChild>
+          <span className={styles.subscriptionAnchor}>
+            <PopoverTrigger asChild>
+              <IconButton aria-label="ATOM/RSS">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9" />
+                  <circle
+                    cx="5"
+                    cy="19"
+                    r="2"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </IconButton>
+            </PopoverTrigger>
+          </span>
+        </PopoverAnchor>
         <PopoverContent
           className={styles.subscription}
           align="end"
@@ -88,7 +85,7 @@ export function BoardActions() {
             <h2 id={headingId}>订阅整个项目</h2>
             <button
               type="button"
-              className={styles.flatButton}
+              className="icon-action"
               aria-label="关闭订阅窗口"
               onClick={() => setOpen(false)}
             >
@@ -125,12 +122,11 @@ export function BoardActions() {
         </PopoverContent>
       </Popover>
       <a
-        className={`${styles.flatButton} ${styles.github}`}
+        className="icon-action"
         href={repository}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub 项目"
-        title="GitHub 项目"
       >
         <svg
           width="19"

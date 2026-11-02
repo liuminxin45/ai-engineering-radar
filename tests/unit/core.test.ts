@@ -41,7 +41,7 @@ const candidate = {
 };
 describe("registry and identity", () => {
   it("keeps domestic sources only and preserves original domestic entries", () =>
-    expect(registry.sources.length).toBeGreaterThanOrEqual(19));
+    expect(registry.sources.length).toBe(registry.companies.length));
   it("rejects verified records without evidence", () =>
     expect(() =>
       sourceSchema.parse({

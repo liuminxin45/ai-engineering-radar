@@ -1,45 +1,7 @@
-.flatButton {
+.subscriptionAnchor {
+  /* Keep popover positioning independent of the button's press transform. */
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
   flex-shrink: 0;
-  min-width: 44px;
-  min-height: 44px;
-  padding: 0;
-  border: 0;
-  border-radius: 6px;
-  color: var(--muted);
-  background: transparent;
-  cursor: pointer;
-  transition:
-    color 180ms ease,
-    transform 180ms ease;
-}
-.flatButton:hover {
-  color: var(--ink);
-  background: transparent;
-}
-.flatButton:active {
-  transform: scale(0.94);
-}
-.flatButton:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: -2px;
-}
-.feedTrigger {
-  padding-inline: 6px;
-  font-size: 13px;
-  font-weight: 400;
-}
-.feedTrigger:is(:hover, :focus-visible) :global(.link-label) {
-  background-size: 100% 1px;
-}
-.feedTrigger[aria-expanded="true"] {
-  background: transparent;
-  color: var(--ink);
-}
-.github {
-  background-image: none !important;
 }
 .subscription {
   --ink: var(--desktop-color-text);
@@ -114,7 +76,6 @@
   line-height: 1.65;
 }
 @media (prefers-reduced-motion: reduce) {
-  .flatButton,
   .subscription {
     transition: none;
     animation: none;

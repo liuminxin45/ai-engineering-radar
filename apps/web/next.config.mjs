@@ -1,4 +1,7 @@
-const basePath = (process.env.BASE_PATH ?? "").replace(/\/$/, "");
+const basePath = (process.env.BASE_PATH ?? "/ai-engineering-radar").replace(
+  /\/$/,
+  "",
+);
 /** @type {import('next').NextConfig} */
 export default {
   output: "export",

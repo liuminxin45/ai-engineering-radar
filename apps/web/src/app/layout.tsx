@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
+import { resolveSiteUrl } from "../../../../packages/shared/site";
 import { SiteUiProvider } from "../components/site-ui-provider";
 import "chatgpt-desktop-kit/components.css";
 import "./globals.css";
-const origin =
-  (process.env.SITE_URL ?? "http://localhost:3000") +
-  (process.env.BASE_PATH ?? "");
+const origin = resolveSiteUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(origin + "/"),
   title: {
     default: "AI Engineering Radar · 国内技术文章索引",
     template: "%s · AI Engineering Radar",
   },
-  description: "按公司与时间浏览国内官方技术团队的文章，回到原文阅读。",
+  description:
+    "按公司与时间浏览国内官方技术团队的文章，在统一阅读页学习并随时查看原文。",
   alternates: {
     types: {
       "application/rss+xml": origin + "/feed.xml",

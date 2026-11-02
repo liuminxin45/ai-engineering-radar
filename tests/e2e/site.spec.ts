@@ -30,6 +30,7 @@ test("search and company history survive refresh while legacy sorting is removed
   await expect(board(page)).toBeVisible();
   expect((await board(page).boundingBox())!.y).toBeLessThanOrEqual(132);
   await (await revealSearch(page)).fill("no-such-radar-article");
+  await page.getByRole("button", { name: "关闭搜索", exact: true }).click();
   await expect(latestList(page).locator("article")).toHaveCount(0);
   await expect(
     latestList(page)
@@ -64,13 +65,13 @@ test("search and company history survive refresh while legacy sorting is removed
   await page.goto("./?sort=oldest&company=dewu");
   await expect(page).not.toHaveURL(/sort=/);
   await expect(page).toHaveURL(/company=dewu/);
-  await page.locator("#company-xiaomi").click();
+  await page.locator("#company-jd").click();
   await page.reload();
-  await expect(page.locator("#company-xiaomi")).toHaveAttribute(
+  await expect(page.locator("#company-jd")).toHaveAttribute(
     "aria-current",
     "location",
   );
-  await expect(page).toHaveURL(/company=xiaomi/);
+  await expect(page).toHaveURL(/company=jd/);
   await expectNoDocumentOverflow(page);
 });
 
@@ -156,7 +157,7 @@ test("compact panels retain independent scrolling, keyboard and touch navigation
   await expectNoDocumentOverflow(page);
 });
 
-test("scrolling appends one batch per bottom encounter and article titles open the publisher", async ({
+test("scrolling appends one batch per bottom encounter and blog titles open the local reader", async ({
   page,
   request,
 }) => {
@@ -178,7 +179,9 @@ test("scrolling appends one batch per bottom encounter and article titles open t
   const data = (await (await request.get("data/articles.json")).json())
     .articles;
   const counts = new Map<string, number>();
-  for (const article of data as { companyId: string }[])
+  for (const article of data.filter(
+    (a: { contentType?: string }) => a.contentType !== "paper",
+  ) as { companyId: string }[])
     counts.set(article.companyId, (counts.get(article.companyId) ?? 0) + 1);
   const selected = [...counts.entries()].find(([, count]) => count > 20);
   expect(
@@ -213,41 +216,28 @@ test("scrolling appends one batch per bottom encounter and article titles open t
     Math.min(40, companyCount),
   );
   const original = selectedList.locator("article h3 a").first();
-  const canonical = await original.getAttribute("href");
-  expect(canonical).toMatch(/^https?:\/\//);
-  await expect(original).toHaveAttribute("target", "_blank");
-  await expect(original).toHaveAttribute("rel", /noopener/);
+  const href = await original.getAttribute("href");
+  expect(href).toMatch(/^\/ai-engineering-radar\/articles\/[a-f0-9]{20}\/$/);
+  expect(await original.getAttribute("target")).toBeNull();
   await expect(original.locator(".link-label")).toHaveCount(1);
-  const intercepted = new URL(canonical!).href;
-  await page.context().route(
-    (url) => url.href === intercepted,
-    (route) =>
-      route.fulfill({
-        contentType: "text/html",
-        body: "<title>Publisher article</title>",
-      }),
-  );
-  const popupPromise = page.waitForEvent("popup");
   await original.click();
-  const popup = await popupPromise;
-  await popup.waitForURL(intercepted);
-  await popup.close();
-  const article = data.find(
-    (a: { canonicalUrl: string }) => a.canonicalUrl === canonical,
+  await expect(page).toHaveURL(new URL(href!, page.url()).href);
+  const article = data.find((a: { id: string }) =>
+    href!.includes(`/articles/${a.id}/`),
   );
   expect(article).toBeTruthy();
   await page.goto(`./articles/${article.id}/`);
   await expect(page).toHaveURL(/\/ai-engineering-radar\/articles\/[^/?]+\/?$/);
+  await expect(page.locator("h1")).toHaveText(article.title);
   await expect(
-    page.getByRole("heading", { name: "来源与发布信息" }),
-  ).toBeVisible();
-  await expect(page.locator("h1 a")).toHaveAttribute("href", canonical!);
+    page.locator(".reader-actions").getByRole("link", { name: "阅读原文" }),
+  ).toHaveAttribute("href", article.canonicalUrl);
   await expect(
-    page.getByRole("link", { name: /阅读原文|订阅这家公司|来源目录/ }),
-  ).toHaveCount(0);
+    page.locator(".reader-actions").getByRole("link", { name: "阅读原文" }),
+  ).toHaveAttribute("target", "_blank");
   await page.reload();
   await expect(
-    page.getByRole("heading", { name: "来源与发布信息" }),
+    page.locator(".reader-actions").getByRole("link", { name: "阅读原文" }),
   ).toBeVisible();
   await expectNoDocumentOverflow(page);
   for (const path of ["feed.xml", "feed.atom", "data/articles.json"])
@@ -257,7 +247,9 @@ test("scrolling appends one batch per bottom encounter and article titles open t
   await expect(
     page.getByRole("link", { name: "跳转到主要内容" }),
   ).toBeFocused();
-  expect(await page.getByLabel(searchName, { exact: true }).count()).toBe(1);
+  await expect(
+    page.getByRole("button", { name: "搜索文章", exact: true }),
+  ).toBeVisible();
 });
 
 test("domestic provenance stays public while the interface exposes only whole-project feeds", async ({
@@ -268,18 +260,17 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   const companies = (await (await request.get("data/companies.json")).json())
     .companies;
   expect(companies.length).toBeGreaterThan(0);
+  expect(companies.some((c: { id: string }) => c.id === "xiaomi")).toBe(false);
   expect(companies.every((c: { region: string }) => c.region === "cn")).toBe(
     true,
   );
   const sources = (await (await request.get("data/sources.json")).json())
     .sources;
   for (const id of [
-    "dewu-csdn",
-    "aliyun-cloud-native",
-    "aliyun-dataphin",
-    "bytedance-volcengine",
-    "ant-ling",
-    "ant-oceanbase-csdn",
+    "dewu-tencent",
+    "aliyun-apphub",
+    "bytedance-tech-volcengine",
+    "ant-data-csdn",
     "baidu-cloud-csdn-candidate",
   ]) {
     const source = sources.find((s: { id: string }) => s.id === id);
@@ -292,14 +283,19 @@ test("domestic provenance stays public while the interface exposes only whole-pr
       (s: { verification: { status: string } }) =>
         s.verification.status === "suspended",
     ).length,
-  ).toBe(3);
-  for (const { sourceId, replacementIds } of sourceReplacements) {
+  ).toBe(0);
+  for (const rule of sourceReplacements) {
+    const { sourceId, replacementIds } = rule;
     expect(sources.some((s: { id: string }) => s.id === sourceId)).toBe(false);
-    for (const id of replacementIds)
+    for (const id of replacementIds) {
+      expect(sources.some((s: { id: string }) => s.id === id)).toBe(true);
+      if ("referenceOnly" in rule && rule.referenceOnly) continue;
       expect(
         sources.find((s: { id: string }) => s.id === id).crawl.enabled,
       ).toBe(true);
+    }
   }
+  expect(sources).toHaveLength(companies.length);
   const articles = (await (await request.get("data/articles.json")).json())
     .articles;
   const retiredIds = new Set<string>(sourceReplacements.map((s) => s.sourceId));

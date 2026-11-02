@@ -29,7 +29,7 @@
 
 在 `packages/source-registry/registry.json` 中复用或新增公司与发布主体，再添加来源。字段定义以 `packages/shared/types.ts` 的 `sourceSchema` 为准，关联和 ID 唯一性由 `packages/source-registry/index.ts` 校验。
 
-- ID 使用稳定的小写字母、数字与连字符。同一发布主体可以有多个来源，各来源保留自己的入口和采集状态。
+- ID 使用稳定的小写字母、数字与连字符。每家公司恰好登记一个来源，约束包含该公司的所有发布主体、内容类型和禁用参考入口。已有公司的新入口应替换原源，身份参考材料只保存在证据链接中。
 - 本批新增公司使用 `region: "cn"`。请核验国内公司及发布主体归属，不将海外来源改标为国内来源。
 - `entryUrl` 是读者识别来源的页面，`url` 是实际采集地址。明确列出需要访问的域名；跨域入口需要单独核验。
 - RSS / Atom 优先。HTML 使用站点专用选择器，排除导航、活动和非文章链接。公开 API 若需新适配器，请同时实现并测试，当前 `adapter` 枚举没有通用 API 类型。
@@ -46,9 +46,21 @@
 
 阿里云官方栏目使用 `aliyun-group`，按每篇的作者 profile ID 校验；不同官方团队分别关联发布主体。火山引擎账号使用 `volcengine-account`，目录中的稳定账号 ID 必须与每篇作者 ID 一致。两个平台均只解析审核过的目录，不能因托管域名属于公司而接纳其他投稿者。
 
+## 博文与论文
+
+来源可设置 `contentType: "blog"` 或 `"paper"`，省略时按博文处理。混合目录由适配器逐条返回 `Candidate.contentType`，不要根据标题中的“论文”二字判断类型。论文解读仍属于博文。
+
+论文使用 `companyIds` 数组记录已核实的公司归属。数组中的 ID 必须来自公司注册表，至少有一项，不能重复。同一条论文会展示在这些公司的列中，“最新”列只展示一次。`companyId` 与 `publisherId` 继续记录来源所属公司和发布主体，与合作公司的署名归属分别保存。
+
+适配器未提供 `companyIds` 时，论文来源默认归属于来源公司；只有确认目录中的论文均属于该公司，才可启用这种来源。联合论文应根据原文署名逐条补充合作公司。这里仅记录已注册的公司，高校署名不转换为公司 ID。
+
+已有记录可在 `config/overrides.json` 中使用 `contentType` 和 `companyIds` 更正类型与归属，并填写核验依据 `reason`。改为论文时须同时提供归属；改回博文会清除论文归属数组。后续采集缺少类型或归属字段时保留已有值，人工更正会在采集和导出时重新应用。
+
+当前来源注册表仍以博文为主。增加类型字段和论文入口不代表已完成真实论文源接入；新来源仍需身份材料、解析器、fixture 和实采验证。
+
 ## Fixture 与测试
 
-Fixture 使用最小、可公开的 Feed、HTML 或结构化数据片段。保留解析所需的标题、链接、账号标识、日期和短介绍；删去全文、个人资料、Cookie、令牌与无关内容。开发 fixture 不得发布为真实文章。
+Fixture 使用最小、可公开的 Feed、HTML 或结构化数据片段。保留解析所需的标题、链接、账号标识、日期和短介绍；正文规则测试只保留足以覆盖段落、代码、表格或图片的小片段，删去个人资料、Cookie、令牌与无关内容。开发 fixture 不得发布为真实文章。正文解析扩展见[阅读页维护说明](docs/article-reader.md)。
 
 按本次适配选择测试场景：
 
@@ -56,7 +68,7 @@ Fixture 使用最小、可公开的 Feed、HTML 或结构化数据片段。保�
 - 官方账号条目被保留，第三方作者、同名账号、导航与不允许域名被排除。
 - 选择器失效、登录页、验证码、无效 Feed 或空目录能被识别，不把解析失败报告为采集成功。
 - 正文不进入存储或公开导出；只保留必要元数据和原站提供的短介绍。
-- 涉及多个发布渠道时，覆盖重复识别并保留来源关系，避免误并不同发布主体。
+- 替换发布渠道时，覆盖旧源清理、剩余有效位置和稳定 ID 的保留，避免误并不同发布主体。
 
 现有解析器测试见 `tests/unit/core.test.ts`，采集与故障状态测试见 `tests/unit/ingest.test.ts`。在对应测试中补充案例，或新建同目录测试文件。
 
@@ -75,7 +87,7 @@ PR 中记录实际运行的命令、结果和未验证事项。实测采集只�
 
 使用 [PR 模板](.github/PULL_REQUEST_TEMPLATE.md)描述新增入口或具体故障，附上身份材料、fixture、测试结果与已知限制。将注册表、适配器和相应测试放在同一 PR，便于检查完整行为。
 
-不要提交本地快照、生成的文章数据、全文、凭据或个人资料。文章数量和来源数量是采集快照的结果，不能作为固定覆盖承诺。合并后仍需核对实际采集状态，才能确认新来源正常工作。
+不要向代码分支提交本地快照、生成的文章数据、整篇原文、凭据或个人资料。清洗后的正文随合法快照保存在数据分支。文章数量和来源数量是采集快照的结果，不能作为固定覆盖承诺。合并后仍需核对实际采集状态，才能确认新来源正常工作。
 
 ## English quick start
 
@@ -84,6 +96,8 @@ This initial release covers official engineering teams at Chinese companies. We 
 Articles from verified, enabled official sources enter the index directly, with identity verification, deduplication, and data validation. There is no content relevance screening or automatic topic classification.
 
 For a source PR, include its company, publisher, account URL and stable ID, public evidence of official ownership with a review date, and permitted collection endpoints. Prefer RSS / Atom. Respect robots.txt and public access conditions; include only essential metadata and short descriptions supplied by the source.
+
+Blog body extraction is a separate layer. See the [reader maintenance guide](docs/article-reader.md) for declarative rules, structured extractors, approved body hosts, sanitization and fixtures.
 
 Register the company, publisher, and source in `packages/source-registry/registry.json`. Follow the schema in `packages/shared/types.ts`. Leave incomplete verification as `pending` with collection disabled. For mixed-author communities, implement and test per-item publisher filtering. The generic Feed parser matches author text; the Tencent column parser matches UID. The generic HTML parser does not verify each item's author, so an allowlist alone is insufficient.
 

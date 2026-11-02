@@ -3,19 +3,29 @@ import type { Registry } from "./index.js";
 // Explicit retirements: do not infer deletion from publication age.
 export const sourceReplacements = [
   {
+    sourceId: "ant-ling",
+    companyId: "ant",
+    replacementIds: ["ant-data-csdn"],
+  },
+  {
     sourceId: "dewu-official",
     companyId: "dewu",
-    replacementIds: ["dewu-csdn"],
+    replacementIds: ["dewu-tencent"],
+  },
+  {
+    sourceId: "dewu-csdn",
+    companyId: "dewu",
+    replacementIds: ["dewu-tencent"],
   },
   {
     sourceId: "alibaba-csdn",
     companyId: "alibaba",
-    replacementIds: ["aliyun-cloud-native", "aliyun-dataphin"],
+    replacementIds: ["aliyun-apphub"],
   },
   {
     sourceId: "bytedance-csdn",
     companyId: "bytedance",
-    replacementIds: ["bytedance-volcengine"],
+    replacementIds: ["bytedance-tech-volcengine"],
   },
   {
     sourceId: "tencent-csdn",
@@ -35,7 +45,7 @@ export const sourceReplacements = [
   {
     sourceId: "ant-segmentfault",
     companyId: "ant",
-    replacementIds: ["ant-ling", "ant-oceanbase-csdn"],
+    replacementIds: ["ant-data-csdn"],
   },
   {
     sourceId: "baidu-csdn",
@@ -43,13 +53,143 @@ export const sourceReplacements = [
     replacementIds: ["baidu-cloud-csdn-candidate"],
   },
   {
-    sourceId: "xiaomi-team-blog",
-    companyId: "xiaomi",
-    replacementIds: ["xiaomi-tech-site"],
+    sourceId: "vivo-site",
+    companyId: "vivo",
+    replacementIds: ["vivo-csdn"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "tencent",
+    companyId: "tencent",
+    replacementIds: ["tencent-qqnews"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "alibaba",
+    companyId: "alibaba",
+    replacementIds: ["aliyun-apphub"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "bytedance",
+    companyId: "bytedance",
+    replacementIds: ["bytedance-tech-volcengine"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "baidu",
+    companyId: "baidu",
+    replacementIds: ["baidu-cloud-csdn-candidate"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "huawei",
+    companyId: "huawei",
+    replacementIds: ["huawei-csdn"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "kuaishou",
+    companyId: "kuaishou",
+    replacementIds: ["kuaishou-csdn"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "ant",
+    companyId: "ant",
+    replacementIds: ["ant-data-csdn"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "jd",
+    companyId: "jd",
+    replacementIds: ["jd-cnblogs"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "netease",
+    companyId: "netease",
+    replacementIds: ["netease-csdn"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "bilibili",
+    companyId: "bilibili",
+    replacementIds: ["bilibili-csdn"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "ant-csdn",
+    companyId: "ant",
+    replacementIds: ["ant-data-csdn"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "tencent-cloud-official",
+    companyId: "tencent",
+    replacementIds: ["tencent-qqnews"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "vivo-cnblogs",
+    companyId: "vivo",
+    replacementIds: ["vivo-csdn"],
+  },
+  {
+    sourceId: "aliyun-dataphin",
+    companyId: "alibaba",
+    replacementIds: ["aliyun-apphub"],
+  },
+  {
+    sourceId: "ant-oceanbase-csdn",
+    companyId: "ant",
+    replacementIds: ["ant-data-csdn"],
+  },
+  {
+    sourceId: "kuaishou-infoq",
+    companyId: "kuaishou",
+    replacementIds: ["kuaishou-csdn"],
+    referenceOnly: true,
+  },
+  {
+    sourceId: "bytedance-volcengine",
+    companyId: "bytedance",
+    replacementIds: ["bytedance-tech-volcengine"],
   },
 ] as const;
 
+export const sourceWithdrawals = [
+  { sourceId: "aliyun-cloud-native", companyId: "alibaba", sourceOnly: true },
+  { sourceId: "ctrip", companyId: "ctrip" },
+  { sourceId: "ctrip-csdn", companyId: "ctrip" },
+  { sourceId: "ctrip-cnblogs", companyId: "ctrip" },
+  { sourceId: "ctrip-papers-crossref", companyId: "ctrip" },
+  { sourceId: "tripscore-paper-papers", companyId: "ctrip" },
+  { sourceId: "xiaomi-tech-site", companyId: "xiaomi" },
+  { sourceId: "xiaomi-papers-crossref", companyId: "xiaomi" },
+  { sourceId: "mimo-hf-papers", companyId: "xiaomi" },
+  { sourceId: "xiaomi-team-blog", companyId: "xiaomi" },
+  { sourceId: "xiaomi", companyId: "xiaomi" },
+  { sourceId: "xiaomi-juejin", companyId: "xiaomi" },
+  { sourceId: "xiaomi-csdn-candidate", companyId: "xiaomi" },
+  { sourceId: "xiaohongshu-papers-crossref", companyId: "xiaohongshu" },
+  { sourceId: "xiaohongshu", companyId: "xiaohongshu" },
+  { sourceId: "xiaohongshu-csdn", companyId: "xiaohongshu" },
+  { sourceId: "oppo", companyId: "oppo" },
+  { sourceId: "oppo-segmentfault", companyId: "oppo" },
+] as const;
+
 export function validateSourceReplacements(registry: Registry) {
+  for (const rule of sourceWithdrawals) {
+    if (
+      (!("sourceOnly" in rule && rule.sourceOnly) &&
+        registry.companies.some((c) => c.id === rule.companyId)) ||
+      registry.sources.some((s) => s.id === rule.sourceId)
+    )
+      throw new Error(
+        `Withdrawn company or source still registered: ${rule.sourceId}`,
+      );
+  }
   for (const rule of sourceReplacements) {
     if (registry.sources.some((s) => s.id === rule.sourceId))
       throw new Error(`Retired source still registered: ${rule.sourceId}`);

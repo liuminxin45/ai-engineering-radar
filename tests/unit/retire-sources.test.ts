@@ -12,12 +12,12 @@ import type { Article, SourceState } from "../../packages/shared/types.js";
 const registry = await loadRegistry();
 function fixture() {
   const articles: Article[] = [];
-  const replacement = registry.sources.find((s) => s.id === "dewu-csdn")!;
+  const replacement = registry.sources.find((s) => s.id === "dewu-tencent")!;
   upsert(
     articles,
     {
       title: "Current engineering practice",
-      url: "https://blog.csdn.net/SmartCodeTech/article/details/123",
+      url: "https://developer.cloud.tencent.com/article/123",
       externalId: "123",
     },
     replacement,
@@ -47,70 +47,145 @@ function fixture() {
   return { articles: [...articles, old], states };
 }
 describe("explicit source retirement", () => {
-  it("retires Xiaomi's old blog without removing MiMo articles or their stable IDs", () => {
-    const source = registry.sources.find((s) => s.id === "xiaomi-tech-site")!;
-    const articles: Article[] = [];
-    for (let i = 0; i < 15; i++)
-      upsert(
-        articles,
+  it.each([
+    {
+      companyId: "ctrip",
+      sourceId: "ctrip-csdn",
+      publisherId: "ctrip-official",
+    },
+    {
+      companyId: "xiaomi",
+      sourceId: "xiaomi-tech-site",
+      publisherId: "xiaomi-official",
+    },
+    {
+      companyId: "xiaomi",
+      sourceId: "xiaomi-papers-crossref",
+      publisherId: "xiaomi-research-papers",
+    },
+    {
+      companyId: "xiaomi",
+      sourceId: "mimo-hf-papers",
+      publisherId: "xiaomi-research-papers",
+    },
+    {
+      companyId: "oppo",
+      sourceId: "oppo-segmentfault",
+      publisherId: "oppo-official",
+    },
+    {
+      companyId: "xiaohongshu",
+      sourceId: "xiaohongshu-csdn",
+      publisherId: "xiaohongshu-official",
+    },
+  ])(
+    "withdraws $companyId articles and states without a replacement and preserves other companies",
+    ({ companyId, sourceId, publisherId }) => {
+      const data = fixture();
+      const current = structuredClone(data.articles[0]);
+      const withdrawn = structuredClone(current);
+      withdrawn.id = "00000000000000000005";
+      withdrawn.companyId = companyId;
+      withdrawn.publisherId = publisherId;
+      withdrawn.locations = [
         {
-          title: `MiMo official blog ${i}`,
-          url: `https://mimo.xiaomi.com/zh/blog/mimo-test-${i}`,
-          externalId: `mimo-test-${i}`,
+          sourceId,
+          url: "https://segmentfault.com/a/1190000040000001",
         },
-        source,
-        registry,
-      );
+      ];
+      current.duplicateCandidates = [withdrawn.id];
+      const articles = [current, withdrawn];
+      const states: SourceState[] = [
+        data.states[1],
+        {
+          sourceId: companyId,
+          status: "reference",
+          discovered: 0,
+          consecutiveFailures: 0,
+        },
+        {
+          sourceId,
+          status: "suspended",
+          discovered: 50,
+          consecutiveFailures: 0,
+        },
+      ];
+      const before = structuredClone({ articles, states });
+      const result = retireReplacedSources(articles, states, registry);
+      expect(result.articles.map((a) => a.id)).toEqual([current.id]);
+      expect(result.articles[0].duplicateCandidates).toEqual([]);
+      expect(result.removedArticles).toBe(1);
+      expect(result.removedStates).toBe(2);
+      expect(registry.companies.some((c) => c.id === companyId)).toBe(false);
+      expect({ articles, states }).toEqual(before);
+      validateRelations(result.articles, result.states, registry);
+      expect(
+        retireReplacedSources(result.articles, result.states, registry)
+          .removedArticles,
+      ).toBe(0);
+    },
+  );
+
+  it("requires collected evidence before removing the other active team source", () => {
+    const source = registry.sources.find((s) => s.id === "ant-data-csdn")!;
+    const articles: Article[] = [];
+    upsert(
+      articles,
+      {
+        title: "AntData engineering article",
+        url: "https://blog.csdn.net/DB_GPT/article/details/123",
+      },
+      source,
+      registry,
+    );
     const old = structuredClone(articles[0]);
-    old.id = "00000000000000000003";
+    old.id = "00000000000000000004";
+    old.publisherId = "ant-oceanbase";
     old.locations = [
       {
-        sourceId: "xiaomi-team-blog",
-        url: "https://xiaomi-info.github.io/2020/05/24/post/",
+        sourceId: "ant-oceanbase-csdn",
+        url: "https://blog.csdn.net/OceanBaseGFBK/article/details/1",
       },
     ];
-    articles[0].locations.push(old.locations[0]);
-    const states: SourceState[] = [
+    const ling = structuredClone(old);
+    ling.id = "00000000000000000005";
+    ling.publisherId = "ant-ling";
+    ling.locations = [
       {
-        sourceId: "xiaomi-team-blog",
-        status: "suspended",
-        discovered: 20,
-        consecutiveFailures: 0,
+        sourceId: "ant-ling",
+        url: "https://developer.ant-ling.com/zh-CN/blogs/example",
       },
+    ];
+    const states: SourceState[] = [
       {
         sourceId: source.id,
         status: "success",
-        discovered: 15,
+        discovered: 1,
         consecutiveFailures: 0,
-        lastSuccessAt: "2026-11-02T02:28:18.457Z",
+        lastSuccessAt: "2026-11-02T00:52:25Z",
       },
     ];
-    const ids = articles.map((a) => a.id);
-    const result = retireReplacedSources([...articles, old], states, registry);
-    expect(result.articles.map((a) => a.id)).toEqual(ids);
-    expect(result.removedArticles).toBe(1);
-    expect(result.removedStates).toBe(1);
-    expect(
-      result.articles.every((a) =>
-        a.locations.every((l) => l.sourceId === source.id),
-      ),
-    ).toBe(true);
-    expect(result.states.map((s) => s.sourceId)).toEqual([source.id]);
-    validateRelations(result.articles, result.states, registry);
     expect(() =>
-      retireReplacedSources([...articles, old], states.slice(0, 1), registry),
+      retireReplacedSources([...articles, old, ling], [], registry),
     ).toThrow("successful collected article");
+    const result = retireReplacedSources(
+      [...articles, old, ling],
+      states,
+      registry,
+    );
+    expect(result.articles.map((a) => a.id)).toEqual([articles[0].id]);
+    expect(result.removedArticles).toBe(2);
   });
   it("removes only retired-source articles and states, preserving IDs and other history", () => {
     const data = fixture();
     const history = structuredClone(data.articles[0]);
     history.id = "00000000000000000002";
-    history.publisherId = "oppo-official";
-    history.companyId = "oppo";
+    history.publisherId = "vivo-tech";
+    history.companyId = "vivo";
     history.locations = [
       {
-        sourceId: "oppo-segmentfault",
-        url: "https://segmentfault.com/a/1190000040000001",
+        sourceId: "vivo-csdn",
+        url: "https://blog.csdn.net/vivo_tech/article/details/123",
       },
     ];
     data.articles.push(history);
@@ -154,7 +229,7 @@ describe("explicit source retirement", () => {
     expect(() =>
       retireReplacedSources(
         data.articles,
-        data.states.filter((s) => s.sourceId !== "dewu-csdn"),
+        data.states.filter((s) => s.sourceId !== "dewu-tencent"),
         registry,
       ),
     ).toThrow("successful collected article");
@@ -162,7 +237,8 @@ describe("explicit source retirement", () => {
       retireReplacedSources(data.articles.slice(1), data.states, registry),
     ).toThrow("successful collected article");
     const disabled = structuredClone(registry);
-    disabled.sources.find((s) => s.id === "dewu-csdn")!.crawl.enabled = false;
+    disabled.sources.find((s) => s.id === "dewu-tencent")!.crawl.enabled =
+      false;
     expect(() =>
       retireReplacedSources(data.articles, data.states, disabled),
     ).toThrow("verified and enabled");
@@ -172,13 +248,13 @@ describe("explicit source retirement", () => {
     for (const rule of sourceReplacements)
       expect(registry.sources.some((s) => s.id === rule.sourceId)).toBe(false);
     const wrong = structuredClone(registry);
-    wrong.sources.find((s) => s.id === "dewu-csdn")!.publisherId =
+    wrong.sources.find((s) => s.id === "dewu-tencent")!.publisherId =
       "tencent-official";
     expect(() => validateSourceReplacements(wrong)).toThrow("same company");
     expect(() =>
       validateSourceReplacements({
         ...registry,
-        sources: registry.sources.filter((s) => s.id !== "dewu-csdn"),
+        sources: registry.sources.filter((s) => s.id !== "dewu-tencent"),
       }),
     ).toThrow("same company");
   });

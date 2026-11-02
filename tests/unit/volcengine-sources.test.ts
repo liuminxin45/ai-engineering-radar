@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { readFile } from "node:fs/promises";
 import type { Source } from "../../packages/shared/types.js";
 import { parseVolcengineAccount } from "../../packages/crawler/platforms/volcengine.js";
+import { loadRegistry } from "../../packages/source-registry/index.js";
 
 const source: Source = {
   id: "bytedance-volcengine",
@@ -37,6 +38,24 @@ const html = (data: unknown) =>
   `<script>window._ROUTER_DATA = ${JSON.stringify(data)};</script>`;
 
 describe("Volcengine account ownership", () => {
+  it("registers only the requested new ByteDance account and excludes the retired account", async () => {
+    const registry = await loadRegistry();
+    const active = registry.sources.filter(
+      (s) => s.publisherId === "bytedance-official",
+    );
+    expect(active).toHaveLength(1);
+    expect(active[0].entryUrl).toBe(
+      "https://developer.volcengine.com/user/2772312065061673",
+    );
+    expect(active[0].authorAllowlist).toEqual(["2772312065061673"]);
+    expect(() => parseVolcengineAccount(fixture, active[0])).toThrow(
+      "another account",
+    );
+    const updated = fixture
+      .replaceAll("1333053764416295", "2772312065061673")
+      .replaceAll("字节跳动开源", "字节跳动技术团队");
+    expect(parseVolcengineAccount(updated, active[0])).toHaveLength(2);
+  });
   it("extracts only official metadata using string IDs and publication time", () => {
     const items = parseVolcengineAccount(fixture, source);
     expect(items).toHaveLength(2);

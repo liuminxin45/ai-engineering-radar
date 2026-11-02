@@ -1,5 +1,10 @@
 import { createHash } from "node:crypto";
 import type { Article, Candidate, Source } from "../shared/types.js";
+import {
+  articleContentType,
+  contentTypeSchema,
+  companyIdsSchema,
+} from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
 import { indexOfficialArticle } from "../classifier/index.js";
 export function normalizeUrl(input: string) {
@@ -43,6 +48,14 @@ export function upsert(
   const publisher = registry.publishers.find(
     (p) => p.id === source.publisherId,
   )!;
+  const suppliedType = item.contentType ?? source.contentType;
+  if (suppliedType !== undefined) contentTypeSchema.parse(suppliedType);
+  const affiliations =
+    item.companyIds && companyIdsSchema.parse(item.companyIds);
+  if (affiliations?.some((id) => !registry.companies.some((c) => c.id === id)))
+    throw new Error("Unknown paper company affiliation");
+  if (affiliations && suppliedType === "blog")
+    throw new Error("Blog posts cannot have multiple company affiliations");
   const existing = articles.find(
     (a) =>
       a.publisherId === source.publisherId &&
@@ -56,6 +69,19 @@ export function upsert(
         )),
   );
   if (existing) {
+    const contentType = suppliedType ?? articleContentType(existing);
+    if (affiliations && contentType !== "paper")
+      throw new Error("Company affiliations require paper content type");
+    const companyIds =
+      contentType === "paper"
+        ? (affiliations ?? existing.companyIds ?? [publisher.companyId])
+        : undefined;
+    const attributionChanged =
+      articleContentType(existing) !== contentType ||
+      JSON.stringify(existing.companyIds) !== JSON.stringify(companyIds);
+    if (suppliedType) existing.contentType = contentType;
+    existing.companyIds = companyIds;
+    if (attributionChanged) existing.updatedAt = now;
     const location = existing.locations.find(
       (l) =>
         l.sourceId === source.id &&
@@ -67,12 +93,18 @@ export function upsert(
         sourceId: source.id,
         externalId: item.externalId,
         url,
+        listingHash: item.listingHash,
+        metadataPending: item.metadataPending || undefined,
       });
     else if (location.url !== url) {
       if (existing.canonicalUrl === normalizeUrl(location.url))
         existing.canonicalUrl = canonical;
       location.url = url;
       existing.updatedAt = now;
+    }
+    if (location && item.listingHash) {
+      location.listingHash = item.listingHash;
+      location.metadataPending = item.metadataPending || undefined;
     }
     const metadataChanged =
       existing.title !== item.title ||
@@ -93,6 +125,9 @@ export function upsert(
     return existing;
   }
   const classification = indexOfficialArticle(item);
+  const contentType = suppliedType ?? "blog";
+  if (affiliations && contentType !== "paper")
+    throw new Error("Company affiliations require paper content type");
   const id = createHash("sha256")
     .update(`${source.publisherId}\n${canonical}`)
     .digest("hex")
@@ -100,13 +135,20 @@ export function upsert(
   const duplicates = articles
     .filter(
       (a) =>
-        a.publisherId === source.publisherId && similar(a.title, item.title),
+        a.publisherId === source.publisherId &&
+        articleContentType(a) === contentType &&
+        similar(a.title, item.title),
     )
     .map((a) => a.id);
   const article: Article = {
     id,
     publisherId: source.publisherId,
     companyId: publisher.companyId,
+    contentType,
+    companyIds:
+      contentType === "paper"
+        ? (affiliations ?? [publisher.companyId])
+        : undefined,
     title: item.title,
     canonicalUrl: canonical,
     author: item.author,
@@ -118,7 +160,15 @@ export function upsert(
     classification,
     publicationStatus:
       classification.status === "accepted" ? "published" : "draft",
-    locations: [{ sourceId: source.id, externalId: item.externalId, url }],
+    locations: [
+      {
+        sourceId: source.id,
+        externalId: item.externalId,
+        url,
+        listingHash: item.listingHash,
+        metadataPending: item.metadataPending || undefined,
+      },
+    ],
     duplicateCandidates: duplicates,
   };
   articles.push(article);

@@ -7,7 +7,7 @@ import { DocumentFrame } from "../../components/document-frame";
 export const metadata: Metadata = {
   title: "关于 / About",
   description:
-    "首批收录国内公司官方团队的工程文章，保留来源证据、去重与数据校验，提供 RSS / Atom 订阅，全文回到原站阅读。",
+    "收录国内公司官方团队的工程文章，保留来源证据、去重与数据校验，提供博文统一阅读与 RSS / Atom 订阅。",
 };
 
 export default function About() {
@@ -15,10 +15,10 @@ export default function About() {
     <DocumentFrame>
       <article className="detail">
         <header className="intro">
-          <h1>发现工程实践，回到原文阅读</h1>
+          <h1>发现工程实践，持续阅读与学习</h1>
           <p className="lede">
             一个开放的工程文章索引。首批追踪国内公司官方技术团队，
-            帮你发现团队实践，回到原文阅读。
+            帮你发现团队实践，在统一的阅读页面中学习，并随时查看原文。
           </p>
         </header>
 
@@ -57,10 +57,10 @@ export default function About() {
         <section className="detail-section" aria-labelledby="about-reading">
           <h2 id="about-reading">按需阅读与订阅</h2>
           <p>
-            你可以按公司分列浏览、搜索文章。点击文章标题直接打开发布网站，
+            你可以按公司分列浏览、搜索文章。点击博文标题进入本站阅读页，顶部提供原文入口，
             每列触底时自动追加文章，右上角显示数据更新时间。 全站 RSS / Atom
             订阅统一追踪整个项目的更新。
-            文章保留原始语言，全文在原站阅读。项目不复制、存储或分发文章全文。
+            博文保留原始语言，统一排版并提供目录、阅读进度和图片预览。正文不可用或可能不完整时会明确提示，论文保留原站阅读方式。
           </p>
           <p>
             <Link href="/">浏览文章</Link>
@@ -93,12 +93,14 @@ export default function About() {
             directly, with identity verification, deduplication, and data
             validation. There is no content relevance screening, model review,
             or automatic topic classification. Search the index or browse
-            company columns; titles open the publishing site directly. Each
-            column loads another batch at its bottom, and the update time
-            appears at the top right. Follow project-wide updates through the
-            site-wide RSS / Atom feeds. Articles keep their original language.
-            Full text stays on the original site; this project does not copy,
-            store, or redistribute it.
+            company columns; blog titles open a local reading page with a link
+            to the original publication. Each column loads another batch at its
+            bottom, and the update time appears at the top right. Follow
+            project-wide updates through the site-wide RSS / Atom feeds.
+            Articles keep their original language. Available blog text is saved
+            and rendered with consistent typography, a table of contents and
+            image previews. Missing or potentially incomplete text is clearly
+            marked. Papers continue to open on the publishing site.
           </p>
           <p>
             We welcome PRs that add or repair sources for Chinese companies,

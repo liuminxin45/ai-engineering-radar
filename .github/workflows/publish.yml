@@ -43,8 +43,22 @@ jobs:
       - name: Restore durable snapshot
         run: cp -a .radar/state/snapshot .radar/data
       - run: pnpm registry:check && pnpm data:migrate-domestic && pnpm data:check && pnpm test
-      - name: Collect reviewed sources
+      - name: Start isolated RSSHub for CSDN
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect)
+        run: |
+          pnpm --dir services/rsshub install --ignore-workspace --ignore-scripts --frozen-lockfile
+          pnpm --dir services/rsshub test
+          mkdir -p work
+          node services/rsshub/server.mjs > work/rsshub-service.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:1200/healthz; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Collect new or changed articles and retry failures
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect)
+        env:
+          RSSHUB_URL: http://127.0.0.1:1200
         run: pnpm ingest --daily
       - run: pnpm data:check && pnpm build && pnpm typecheck && pnpm check:public
       - run: pnpm exec playwright install --with-deps chromium

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import type { ArticleBody } from "./article-body.js";
 
 export const topics = [
   { id: "agent", name: "Agent" },
@@ -12,6 +13,15 @@ export const topics = [
 ] as const;
 export const topicIds = topics.map((t) => t.id);
 const timestamp = z.string().datetime({ offset: true });
+export const contentTypeSchema = z.enum(["blog", "paper"]);
+export type ContentType = z.infer<typeof contentTypeSchema>;
+export const companyIdsSchema = z
+  .array(z.string().regex(/^[a-z0-9-]+$/))
+  .min(1)
+  .refine(
+    (ids) => new Set(ids).size === ids.length,
+    "Duplicate company affiliation",
+  );
 export const classificationSchema = z
   .object({
     status: z.enum(["pending", "accepted", "rejected", "review"]),
@@ -58,25 +68,48 @@ export const locationSchema = z.object({
   sourceId: z.string(),
   externalId: z.string().optional(),
   url: z.string().url(),
+  listingHash: z
+    .string()
+    .regex(/^[a-f0-9]{64}$/)
+    .optional(),
+  metadataPending: z.boolean().optional(),
 });
-export const articleSchema = z.object({
-  id: z.string().regex(/^[a-f0-9]{20}$/),
-  publisherId: z.string(),
-  companyId: z.string(),
-  title: z.string().min(1).max(600),
-  canonicalUrl: z.string().url(),
-  author: z.string().max(300).optional(),
-  description: z.string().max(800).optional(),
-  language: z.string().optional(),
-  publishedAt: timestamp.optional(),
-  discoveredAt: timestamp,
-  updatedAt: timestamp,
-  classification: classificationSchema,
-  publicationStatus: z.enum(["draft", "published", "hidden"]),
-  locations: z.array(locationSchema).min(1),
-  duplicateCandidates: z.array(z.string()).default([]),
-});
+export const articleSchema = z
+  .object({
+    id: z.string().regex(/^[a-f0-9]{20}$/),
+    publisherId: z.string(),
+    companyId: z.string(),
+    contentType: contentTypeSchema.optional(),
+    companyIds: companyIdsSchema.optional(),
+    title: z.string().min(1).max(600),
+    canonicalUrl: z.string().url(),
+    author: z.string().max(300).optional(),
+    description: z.string().max(800).optional(),
+    language: z.string().optional(),
+    publishedAt: timestamp.optional(),
+    discoveredAt: timestamp,
+    updatedAt: timestamp,
+    classification: classificationSchema,
+    publicationStatus: z.enum(["draft", "published", "hidden"]),
+    locations: z.array(locationSchema).min(1),
+    duplicateCandidates: z.array(z.string()).default([]),
+  })
+  .superRefine((a, ctx) => {
+    if (a.contentType === "paper" && !a.companyIds)
+      ctx.addIssue({
+        code: "custom",
+        path: ["companyIds"],
+        message: "Papers require company affiliations",
+      });
+    if (a.contentType !== "paper" && a.companyIds)
+      ctx.addIssue({
+        code: "custom",
+        path: ["companyIds"],
+        message: "Company affiliations are only supported for papers",
+      });
+  });
 export type Article = z.infer<typeof articleSchema>;
+export { articleContentType, articleCompanyIds } from "./content.js";
 export interface Company {
   id: string;
   name: string;
@@ -91,6 +124,7 @@ export const sourceSchema = z
   .object({
     id: z.string().regex(/^[a-z0-9-]+$/),
     publisherId: z.string(),
+    contentType: contentTypeSchema.optional(),
     name: z.string(),
     entryUrl: z.string().url(),
     url: z.string().url(),
@@ -113,6 +147,7 @@ export const sourceSchema = z
     linkPattern: z.string().optional(),
     authorAllowlist: z.array(z.string()).optional(),
     linkHosts: z.array(z.string()).optional(),
+    bodyHosts: z.array(z.string().regex(/^[a-z0-9.-]+$/)).optional(),
     metadata: z
       .object({
         dateSelector: z.string().optional(),
@@ -152,6 +187,12 @@ export const sourceSchema = z
   });
 export type Source = z.infer<typeof sourceSchema>;
 export interface Candidate {
+  // Internal collection state; only the hash/pending flag persist on locations.
+  listingHash?: string;
+  metadataPending?: boolean;
+  unchanged?: boolean;
+  contentType?: ContentType;
+  companyIds?: string[];
   title: string;
   url: string;
   externalId?: string;
@@ -185,10 +226,11 @@ export const sourceStateSchema = z.object({
 });
 export type SourceState = z.infer<typeof sourceStateSchema>;
 export const manifestSchema = z.object({
-  schemaVersion: z.literal(1),
+  schemaVersion: z.union([z.literal(1), z.literal(2)]),
   generatedAt: timestamp,
   articleCount: z.number().int().nonnegative(),
   sourceCount: z.number().int().nonnegative(),
+  bodyCount: z.number().int().nonnegative().optional(),
   files: z.record(z.string(), z.string().regex(/^[a-f0-9]{64}$/)),
 });
 export type Manifest = z.infer<typeof manifestSchema>;
@@ -196,6 +238,7 @@ export interface Snapshot {
   manifest: Manifest;
   articles: Article[];
   states: SourceState[];
+  bodies?: ArticleBody[];
 }
 export const effectiveDate = (a: Article) => a.publishedAt ?? a.discoveredAt;
 export const compareArticles = (a: Article, b: Article) =>

@@ -26,7 +26,7 @@
 .toolbar {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 24px;
   min-height: 56px;
   flex-shrink: 0;
   padding: 0 24px;
@@ -70,21 +70,44 @@
   display: none;
   font-weight: 600;
 }
-.searchWrap {
-  width: min(380px, 35vw);
-  min-width: 0;
-}
-.searchWrap :global(.desktop-input-group) {
-  background: var(--soft);
-  border-color: transparent;
-  min-height: 36px;
-}
-.searchWrap input {
-  font-size: 14px;
-}
-.searchWrap svg {
-  color: var(--muted);
+.typeTabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   flex-shrink: 0;
+}
+.typeTab {
+  position: relative;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  padding: 0 10px !important;
+  border-radius: 6px !important;
+  background: transparent !important;
+  color: var(--muted) !important;
+  font-size: 14px !important;
+}
+.typeTab[aria-selected="true"] {
+  color: var(--ink) !important;
+  font-weight: 600 !important;
+}
+.typeTab[aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  border-radius: 1px;
+  background: currentColor;
+}
+.typeTab:is(:hover, :focus-visible) :global(.link-label) {
+  background-size: 100% 1px;
+}
+.contentBoard {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
 }
 .actions {
   margin-left: auto;
@@ -98,25 +121,6 @@
   align-items: center;
 }
 .shortTime {
-  display: none;
-}
-.actions :global(.desktop-icon-button) {
-  min-width: 44px;
-  min-height: 44px;
-  color: var(--muted);
-  background: transparent;
-  transition:
-    color 180ms ease,
-    transform 180ms ease;
-}
-.actions :global(.desktop-icon-button):hover {
-  color: var(--ink);
-  background: transparent;
-}
-.actions :global(.desktop-icon-button):active {
-  transform: scale(0.94);
-}
-.mobileSearch {
   display: none;
 }
 .companyNav {
@@ -297,30 +301,41 @@
     flex-basis: 340px;
   }
 }
-@media (max-width: 760px) {
-  .toolbar {
-    min-height: 52px;
-    padding: 0 16px;
-    gap: 12px;
-  }
+@media (min-width: 761px) and (max-width: 1100px) {
   .desktopBrand {
     display: none;
   }
   .mobileBrand {
     display: inline;
   }
-  .brand {
-    font-size: 17px;
-    gap: 8px;
+  .toolbar {
+    gap: 16px;
   }
-  .searchWrap {
+}
+@media (max-width: 760px) {
+  .toolbar {
+    min-height: 52px;
+    padding: 0 12px;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .desktopBrand {
     display: none;
+  }
+  .mobileBrand {
+    display: none;
+  }
+  .brand {
+    display: none;
+  }
+  .typeTabs {
+    gap: 0;
+  }
+  .typeTab {
+    padding-inline: 8px !important;
   }
   .actions {
     gap: 0;
-  }
-  .mobileSearch {
-    display: block;
   }
   .companyNav {
     height: 44px;
@@ -370,25 +385,6 @@
   .shortTime {
     display: inline;
   }
-  .searching .brand {
-    display: none;
-  }
-  .searching .searchWrap {
-    display: block;
-    flex: 1;
-    width: auto;
-    min-width: 0;
-  }
-  .searchWrap input {
-    font-size: 16px;
-  }
-  .searching .actions {
-    margin-left: 0;
-  }
-  .searching .sync,
-  .searching .utilities {
-    display: none;
-  }
 }
 @media (max-width: 360px) {
   .mobileBrand {
@@ -396,7 +392,7 @@
   }
   .toolbar {
     padding-inline: 12px;
-    gap: 6px;
+    gap: 0;
   }
 }
 @media (prefers-reduced-motion: reduce) {

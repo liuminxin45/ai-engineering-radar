@@ -2,7 +2,12 @@ import { mkdir, writeFile, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { Feed } from "feed";
 import type { Article, Snapshot } from "../shared/types.js";
-import { compareArticles, effectiveDate, topics } from "../shared/types.js";
+import {
+  articleCompanyIds,
+  compareArticles,
+  effectiveDate,
+  topics,
+} from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
 export function publishedArticles(articles: Article[], registry: Registry) {
   return articles
@@ -10,6 +15,9 @@ export function publishedArticles(articles: Article[], registry: Registry) {
       (a) =>
         registry.companies.some(
           (c) => c.id === a.companyId && c.region === "cn",
+        ) &&
+        articleCompanyIds(a).every((id) =>
+          registry.companies.some((c) => c.id === id && c.region === "cn"),
         ) &&
         a.publicationStatus === "published" &&
         a.classification.status === "accepted" &&
@@ -44,11 +52,14 @@ export function makeFeed(
   });
   for (const a of articles.slice(0, 50)) {
     const company = registry.companies.find((c) => c.id === a.companyId)!;
+    const affiliations = articleCompanyIds(a)
+      .map((id) => registry.companies.find((c) => c.id === id)?.name ?? id)
+      .join("、");
     feed.addItem({
       id: `urn:ai-engineering-radar:article:${a.id}`,
       title: a.title,
       link: `${url}/articles/${a.id}/`,
-      description: `${a.description ?? a.classification.reason}\n\n来源：${company.name} · 原文：${a.canonicalUrl}`,
+      description: `${a.description ?? a.classification.reason}\n\n${a.contentType === "paper" ? "公司归属" : "来源"}：${affiliations} · 原文：${a.canonicalUrl}`,
       date: new Date(effectiveDate(a)),
       author: [{ name: a.author ?? company.name, link: a.canonicalUrl }],
       category: a.classification.topics.map((id) => ({
@@ -73,6 +84,10 @@ export async function exportSite(
   await rm(join(publicDir, "feed"), { recursive: true, force: true });
   await mkdir(join(dataDir, "articles"), { recursive: true });
   await mkdir(join(root, "apps/web/src/generated"), { recursive: true });
+  const generatedBodies = join(root, "apps/web/src/generated/bodies");
+  await rm(generatedBodies, { recursive: true, force: true });
+  await mkdir(generatedBodies, { recursive: true });
+  await mkdir(join(dataDir, "bodies"), { recursive: true });
   const sources = registry.sources.map((s) => ({
     ...s,
     latestPublishedAt:
@@ -94,6 +109,14 @@ export async function exportSite(
     generatedAt,
     articleCount: articles.length,
     sourceCount: sources.length,
+    bodyCount: (snapshot.bodies ?? []).filter((body) =>
+      articles.some((a) => a.id === body.articleId),
+    ).length,
+    readableBodyCount: (snapshot.bodies ?? []).filter(
+      (body) =>
+        body.status !== "unavailable" &&
+        articles.some((a) => a.id === body.articleId),
+    ).length,
     enabledSources: sources.filter((s) => s.crawl.enabled).length,
     successfulSources: sources.filter(
       (s) =>
@@ -132,6 +155,28 @@ export async function exportSite(
       schemaVersion: 1,
       article: a,
     });
+  for (const body of snapshot.bodies ?? []) {
+    if (!articles.some((article) => article.id === body.articleId)) continue;
+    const payload = { schemaVersion: 1, body };
+    await put(join(generatedBodies, `${body.articleId}.json`), payload);
+    await put(join(dataDir, "bodies", `${body.articleId}.json`), payload);
+  }
+  await put(join(dataDir, "bodies.json"), {
+    schemaVersion: 1,
+    generatedAt,
+    bodies: (snapshot.bodies ?? [])
+      .filter((body) =>
+        articles.some((article) => article.id === body.articleId),
+      )
+      .map((body) => ({
+        articleId: body.articleId,
+        status: body.status,
+        readingMinutes: body.readingMinutes,
+        headingCount: body.headings.length,
+        imageCount: (body.html.match(/<img\b/g) || []).length,
+        fetchedAt: body.fetchedAt,
+      })),
+  });
   for (const [name, data] of Object.entries({
     companies: registry.companies,
     topics: [],

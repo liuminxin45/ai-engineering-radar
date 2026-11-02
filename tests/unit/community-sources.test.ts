@@ -35,8 +35,16 @@ describe("domestic community registry", () => {
       expect(s.verification.status).toBe("verified");
     }
     expect(source("bilibili-csdn").authorAllowlist).toEqual(["bilibili_TC"]);
-    expect(source("xiaomi-csdn-candidate").crawl.enabled).toBe(false);
-    expect(source("tencent").adapter).toBe("reference");
+    expect(source("tencent")).toBeUndefined();
+  });
+  it("excludes withdrawn Xiaomi sources and ownership", () => {
+    expect(registry.companies.some((c) => c.id === "xiaomi")).toBe(false);
+    expect(registry.publishers.some((p) => p.companyId === "xiaomi")).toBe(
+      false,
+    );
+    expect(
+      registry.sources.some((s) => s.publisherId.startsWith("xiaomi-")),
+    ).toBe(false);
   });
 });
 

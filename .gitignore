@@ -5,6 +5,7 @@ out/
 !.env.example
 .radar/
 work/
+logs/
 playwright-report/
 test-results/
 apps/web/public/data/
