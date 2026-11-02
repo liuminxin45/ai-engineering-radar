@@ -85,22 +85,6 @@
 .shortTime {
   display: none;
 }
-.actions :global(.desktop-icon-button) {
-  min-width: 44px;
-  min-height: 44px;
-  color: var(--muted);
-  background: transparent;
-  transition:
-    color 180ms ease,
-    transform 180ms ease;
-}
-.actions :global(.desktop-icon-button):hover {
-  color: var(--ink);
-  background: transparent;
-}
-.actions :global(.desktop-icon-button):active {
-  transform: scale(0.94);
-}
 .mobileSearch {
   display: none;
 }

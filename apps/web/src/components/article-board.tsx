@@ -290,9 +290,9 @@ export function ArticleBoard() {
               onClick={() => (searching ? closeSearch() : setSearching(true))}
             >
               {searching ? (
-                <CloseIcon size={19} />
+                <CloseIcon size={18} aria-hidden="true" />
               ) : (
-                <MagnifyingGlass size={20} />
+                <MagnifyingGlass size={18} aria-hidden="true" />
               )}
             </IconButton>
           </div>

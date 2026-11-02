@@ -50,7 +50,6 @@ export function BoardActions() {
   return (
     <>
       <IconButton
-        className={styles.flatButton}
         aria-label={themeLabel}
         title={themeLabel}
         onClick={() => setTheme(dark ? "light" : "dark")}
@@ -70,12 +69,21 @@ export function BoardActions() {
         }}
       >
         <PopoverTrigger asChild>
-          <Button
-            className={`${styles.flatButton} ${styles.feedTrigger}`}
-            variant="ghost"
-          >
-            <span className="link-label">ATOM/RSS</span>
-          </Button>
+          <IconButton aria-label="ATOM/RSS" title="RSS / Atom 订阅">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              aria-hidden="true"
+            >
+              <path d="M4 4a16 16 0 0 1 16 16M4 11a9 9 0 0 1 9 9" />
+              <circle cx="5" cy="19" r="2" fill="currentColor" stroke="none" />
+            </svg>
+          </IconButton>
         </PopoverTrigger>
         <PopoverContent
           className={styles.subscription}
@@ -88,7 +96,7 @@ export function BoardActions() {
             <h2 id={headingId}>订阅整个项目</h2>
             <button
               type="button"
-              className={styles.flatButton}
+              className="icon-action"
               aria-label="关闭订阅窗口"
               onClick={() => setOpen(false)}
             >
@@ -125,7 +133,7 @@ export function BoardActions() {
         </PopoverContent>
       </Popover>
       <a
-        className={`${styles.flatButton} ${styles.github}`}
+        className="icon-action"
         href={repository}
         target="_blank"
         rel="noopener noreferrer"

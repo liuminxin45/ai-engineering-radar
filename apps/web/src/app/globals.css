@@ -147,6 +147,54 @@ button:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 4px;
 }
+/* Include portaled controls and override the kit's hover/focus surface fills. */
+:is(.radar-ui, .desktop-ui-portal) :is(.desktop-icon-control, .icon-action) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  color: var(--desktop-color-text-muted);
+  background: transparent !important;
+  cursor: default;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+:is(.radar-ui, .desktop-ui-portal)
+  :is(.desktop-icon-control, .icon-action):is(
+    :hover,
+    :focus-visible,
+    [aria-expanded="true"]
+  ) {
+  color: var(--desktop-color-text);
+}
+:is(.radar-ui, .desktop-ui-portal)
+  :is(.desktop-icon-control, .icon-action):active {
+  transform: scale(0.94);
+}
+:is(.radar-ui, .desktop-ui-portal)
+  :is(.desktop-icon-control, .icon-action):focus-visible {
+  outline: 2px solid var(--desktop-color-text);
+  outline-offset: -2px;
+}
+:is(.radar-ui, .desktop-ui-portal)
+  :is(.desktop-icon-control, .icon-action)
+  > svg {
+  width: 18px;
+  height: 18px;
+}
+@media (prefers-reduced-motion: reduce) {
+  :is(.radar-ui, .desktop-ui-portal) :is(.desktop-icon-control, .icon-action) {
+    transition: none;
+  }
+}
 .shell {
   width: min(calc(100% - 40px), 800px);
   margin: auto;
