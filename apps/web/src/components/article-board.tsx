@@ -1,20 +1,16 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
 import {
   Button,
   IconButton,
   Input,
   InputGroup,
-  MenuButton,
   MagnifyingGlass,
-  DotsThree,
   CloseIcon,
-  CheckIcon,
-  useDesktopTheme,
 } from "chatgpt-desktop-kit";
-import { site, asset } from "../lib";
+import { site } from "../lib";
+import { BoardActions } from "./board-actions";
 import {
   BOARD_BATCH_SIZE,
   boardArticles,
@@ -63,8 +59,6 @@ const activeCompanies = new Set(
 );
 
 export function ArticleBoard() {
-  const router = useRouter();
-  const { theme, setTheme } = useDesktopTheme();
   const [query, setQuery] = useState<BoardQuery>(initialBoardQuery);
   const queryRef = useRef(query);
   const [pages, setPages] = useState<Record<string, number>>({});
@@ -76,13 +70,13 @@ export function ArticleBoard() {
   const scrollTops = useRef<Record<string, number>>({});
   const search = useRef<HTMLInputElement>(null);
   const navigation = useRef(false);
-  const navTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const navigationTarget = useRef(0);
   const scrollFrame = useRef<number | null>(null);
   const active = query.company || "latest";
   const activeIndex = ids.indexOf(active);
   const articles = useMemo(
     () => boardArticles(site.articles, query),
-    [query.q, query.sort],
+    [query.q],
   );
 
   function writeQuery(next: BoardQuery, replace = false) {
@@ -102,17 +96,22 @@ export function ArticleBoard() {
       first = panels.current.latest;
     if (!board || !panel || !first) return;
     navigation.current = true;
-    if (navTimer.current) clearTimeout(navTimer.current);
-    navTimer.current = setTimeout(() => {
-      navigation.current = false;
-    }, 500);
+    navigationTarget.current = Math.max(
+      0,
+      Math.min(
+        panel.offsetLeft - first.offsetLeft,
+        board.scrollWidth - board.clientWidth,
+      ),
+    );
     board.scrollTo({
-      left: panel.offsetLeft - first.offsetLeft,
+      left: navigationTarget.current,
       behavior:
         smooth && !matchMedia("(prefers-reduced-motion: reduce)").matches
           ? "smooth"
           : "instant",
     });
+    if (Math.abs(board.scrollLeft - navigationTarget.current) <= 2)
+      navigation.current = false;
     document
       .getElementById(`company-${id}`)
       ?.scrollIntoView({ block: "nearest", inline: "nearest" });
@@ -151,7 +150,15 @@ export function ArticleBoard() {
       loadMore(id);
   }
   function handleScroll() {
-    if (navigation.current || scrollFrame.current !== null) return;
+    if (navigation.current) {
+      if (
+        viewport.current &&
+        Math.abs(viewport.current.scrollLeft - navigationTarget.current) <= 2
+      )
+        navigation.current = false;
+      return;
+    }
+    if (scrollFrame.current !== null) return;
     scrollFrame.current = requestAnimationFrame(() => {
       scrollFrame.current = null;
       if (navigation.current) return;
@@ -161,6 +168,16 @@ export function ArticleBoard() {
       if (!board || !first || !second) return;
       const step = second.offsetLeft - first.offsetLeft;
       if (step <= 0) return;
+      const selected = panels.current[queryRef.current.company || "latest"];
+      if (selected) {
+        // The final desktop columns share the same clamped scroll position.
+        // Keep the explicitly focused column when it cannot align to the left.
+        const destination = Math.min(
+          selected.offsetLeft - first.offsetLeft,
+          board.scrollWidth - board.clientWidth,
+        );
+        if (Math.abs(board.scrollLeft - destination) <= 2) return;
+      }
       const id =
         ids[
           Math.min(
@@ -187,7 +204,7 @@ export function ArticleBoard() {
       const next = readBoardQuery(location.search, companyIds),
         id = next.company || "latest";
       queryRef.current = next;
-      setQuery(next);
+      writeQuery(next, true);
       writePages({ [id]: next.page });
       scrollTops.current = {};
       for (const list of Object.values(lists.current))
@@ -201,7 +218,6 @@ export function ArticleBoard() {
     return () => {
       window.removeEventListener("popstate", restore);
       window.removeEventListener("resize", resized);
-      if (navTimer.current) clearTimeout(navTimer.current);
       if (scrollFrame.current !== null)
         cancelAnimationFrame(scrollFrame.current);
     };
@@ -214,12 +230,6 @@ export function ArticleBoard() {
     requestAnimationFrame(() =>
       document.getElementById("mobile-search")?.focus(),
     );
-  }
-  function feed(atom = false) {
-    return asset(`/feed.${atom ? "atom" : "xml"}`);
-  }
-  function openFeed(atom = false) {
-    window.open(feed(atom), "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -285,84 +295,35 @@ export function ArticleBoard() {
               )}
             </IconButton>
           </div>
-          <a className={styles.rss} href={feed()} aria-label="全站 RSS 订阅">
-            <span className="link-label">RSS</span>
-          </a>
-          <div className={styles.globalMenu}>
-            <MenuButton
-              actionId="board-options"
-              label="更多选项"
-              icon={<DotsThree size={23} />}
-              iconOnly
-              items={[
-                {
-                  label: "最新优先",
-                  icon:
-                    query.sort === "newest" ? (
-                      <CheckIcon size={16} />
-                    ) : undefined,
-                  actionId: "sort-newest",
-                  onSelect: () => changeGlobal({ sort: "newest" }),
-                },
-                {
-                  label: "最早优先",
-                  icon:
-                    query.sort === "oldest" ? (
-                      <CheckIcon size={16} />
-                    ) : undefined,
-                  actionId: "sort-oldest",
-                  onSelect: () => changeGlobal({ sort: "oldest" }),
-                },
-                {
-                  label: "清空搜索与排序",
-                  actionId: "clear",
-                  disabled: !query.q && query.sort === "newest",
-                  onSelect: () => changeGlobal({ q: "", sort: "newest" }),
-                },
-                {
-                  label: "关于项目",
-                  actionId: "about",
-                  onSelect: () => router.push("/about/"),
-                },
-                {
-                  label: "全站 Atom 订阅",
-                  actionId: "atom",
-                  onSelect: () => openFeed(true),
-                },
-                {
-                  label: "GitHub / 贡献来源",
-                  actionId: "github",
-                  onSelect: () =>
-                    window.open(
-                      "https://github.com/liuminxin45/ai-engineering-radar",
-                      "_blank",
-                      "noopener,noreferrer",
-                    ),
-                },
-                ...(["system", "light", "dark"] as const).map((value) => ({
-                  label: {
-                    system: "跟随系统外观",
-                    light: "浅色外观",
-                    dark: "深色外观",
-                  }[value],
-                  icon: theme === value ? <CheckIcon size={16} /> : undefined,
-                  actionId: `theme-${value}`,
-                  onSelect: () => setTheme(value),
-                })),
-              ]}
-            />
+          <div className={styles.utilities}>
+            <BoardActions />
           </div>
           <span className={styles.sync}>
             <span>更新于</span>
-            <time dateTime={site.generatedAt}>
-              {new Date(site.generatedAt).toLocaleString("zh-CN", {
-                month: "2-digit",
-                day: "2-digit",
-                hour: "2-digit",
-                minute: "2-digit",
-                hour12: false,
+            <time
+              dateTime={site.generatedAt}
+              title={new Date(site.generatedAt).toLocaleString("zh-CN", {
                 timeZone: "Asia/Shanghai",
               })}
+            >
+              <span className={styles.fullTime}>
+                {new Date(site.generatedAt).toLocaleString("zh-CN", {
+                  month: "2-digit",
+                  day: "2-digit",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  hour12: false,
+                  timeZone: "Asia/Shanghai",
+                })}
+              </span>
+              <span className={styles.shortTime}>
+                {new Date(site.generatedAt).toLocaleTimeString("zh-CN", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  hour12: false,
+                  timeZone: "Asia/Shanghai",
+                })}
+              </span>
             </time>
           </span>
         </div>
@@ -393,6 +354,9 @@ export function ArticleBoard() {
           navigation.current = false;
         }}
         onTouchStart={() => {
+          navigation.current = false;
+        }}
+        onPointerDown={() => {
           navigation.current = false;
         }}
         onScroll={(event) => {

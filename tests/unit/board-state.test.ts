@@ -7,11 +7,10 @@ import {
 } from "../../apps/web/src/board.js";
 import type { Article } from "../../packages/shared/types.js";
 describe("board shareable state", () => {
-  it("roundtrips Chinese search, focused company, sort and loaded batches", () => {
+  it("roundtrips Chinese search, focused company and loaded batches", () => {
     const state = {
       q: "模型 + Agent",
       company: "dewu",
-      sort: "oldest" as const,
       page: 3,
     };
     expect(readBoardQuery(boardSearch(state), ["dewu"])).toEqual(state);
@@ -19,7 +18,10 @@ describe("board shareable state", () => {
   it("recovers invalid links without hiding all panels or allocating unbounded batches", () => {
     expect(
       readBoardQuery("?company=unknown&sort=wat&page=1.5", ["dewu"]),
-    ).toEqual({ q: "", company: "", sort: "newest", page: 1 });
+    ).toEqual({ q: "", company: "", page: 1 });
+    expect(
+      boardSearch(readBoardQuery("?sort=oldest&company=dewu", ["dewu"])),
+    ).toBe("?company=dewu");
     expect(readBoardQuery("?page=999999", []).page).toBe(1000);
     expect(readBoardQuery("?page=NaN", []).page).toBe(1);
   });
@@ -49,7 +51,6 @@ describe("board shareable state", () => {
       boardArticles(articles, {
         q: "MEMORY",
         company: "dewu",
-        sort: "newest",
         page: 1,
       }).map((a) => a.id),
     ).toEqual(["b", "a"]);
@@ -57,10 +58,9 @@ describe("board shareable state", () => {
       boardArticles(articles, {
         q: "模型",
         company: "dewu",
-        sort: "oldest",
         page: 1,
       }).map((a) => a.id),
-    ).toEqual(["a", "b"]);
+    ).toEqual(["b", "a"]);
   });
   it("keeps known panel order and includes a newly contributed company without mutating the registry", () => {
     const companies = [

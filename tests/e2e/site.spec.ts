@@ -23,7 +23,7 @@ async function expectNoDocumentOverflow(page: Page) {
   ).toBe(true);
 }
 
-test("search, company focus, sorting and URL history survive refresh", async ({
+test("search and company history survive refresh while legacy sorting is removed", async ({
   page,
 }) => {
   await page.goto("./");
@@ -51,18 +51,26 @@ test("search, company focus, sorting and URL history survive refresh", async ({
     page.getByRole("button", { name: "得物", exact: true }),
   ).toHaveAttribute("aria-current", "location");
   await expect(companyList(page, "得物")).toBeVisible();
-  await page.getByRole("button", { name: "更多选项", exact: true }).click();
-  await page.getByRole("menuitem", { name: /最早优先/ }).click();
-  await expect(page).toHaveURL(/sort=oldest/);
+  await page.getByRole("button", { name: "腾讯", exact: true }).click();
+  await expect(page).toHaveURL(/company=tencent/);
   await page.goBack();
   await expect(page).toHaveURL(/company=dewu/);
-  await expect(page).not.toHaveURL(/sort=oldest/);
   await page.goForward();
-  await expect(page).toHaveURL(/sort=oldest/);
+  await expect(page).toHaveURL(/company=tencent/);
   await page.reload();
   await expect(
-    page.getByRole("button", { name: "得物", exact: true }),
+    page.getByRole("button", { name: "腾讯", exact: true }),
   ).toHaveAttribute("aria-current", "location");
+  await page.goto("./?sort=oldest&company=dewu");
+  await expect(page).not.toHaveURL(/sort=/);
+  await expect(page).toHaveURL(/company=dewu/);
+  await page.locator("#company-xiaomi").click();
+  await page.reload();
+  await expect(page.locator("#company-xiaomi")).toHaveAttribute(
+    "aria-current",
+    "location",
+  );
+  await expect(page).toHaveURL(/company=xiaomi/);
   await expectNoDocumentOverflow(page);
 });
 
@@ -313,8 +321,8 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   await page.goto("./");
   await expect(page.locator('a[href*="/sources/"]')).toHaveCount(0);
   await expect(
-    page.getByRole("link", { name: "全站 RSS 订阅", exact: true }),
-  ).toHaveAttribute("href", "/ai-engineering-radar/feed.xml");
+    page.getByRole("button", { name: "ATOM/RSS", exact: true }),
+  ).toBeVisible();
   const title = latestList(page).locator("article h3 a").first();
   const underline = title.locator(".link-label");
   const normalSize = await underline.evaluate(
@@ -337,12 +345,11 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   await expect(
     page.getByRole("combobox", { name: "主题", exact: true }),
   ).toHaveCount(0);
-  await page.getByRole("button", { name: "更多选项", exact: true }).click();
-  await expect(page.getByRole("menuitem", { name: /来源目录/ })).toHaveCount(0);
   await expect(
-    page.getByRole("menuitem", { name: "全站 Atom 订阅", exact: true }),
-  ).toBeVisible();
-  await page.getByRole("menuitem", { name: /关于项目/ }).click();
+    page.getByRole("button", { name: "更多选项", exact: true }),
+  ).toHaveCount(0);
+  await expect(page.getByRole("menuitem")).toHaveCount(0);
+  await page.goto("./about/");
   await expect(
     page.getByRole("heading", { name: "About this project", exact: true }),
   ).toBeVisible();
@@ -357,5 +364,89 @@ test("domestic provenance stays public while the interface exposes only whole-pr
       'a[href*="/sources/"], a[href*="/feed/company/"], a[href*="/feed/topic/"]',
     ),
   ).toHaveCount(0);
+  await expectNoDocumentOverflow(page);
+});
+
+test("flat toolbar switches appearance and exposes copyable project-wide feeds", async ({
+  page,
+  context,
+}) => {
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  await page.goto("./");
+  const root = page.locator(".radar-ui");
+  const systemDark = await page.evaluate(
+    () => matchMedia("(prefers-color-scheme: dark)").matches,
+  );
+  await page
+    .getByRole("button", {
+      name: systemDark ? "切换到浅色外观" : "切换到深色外观",
+      exact: true,
+    })
+    .click();
+  await expect(root).toHaveAttribute(
+    "data-preference",
+    systemDark ? "light" : "dark",
+  );
+  if (systemDark)
+    await page
+      .getByRole("button", { name: "切换到深色外观", exact: true })
+      .click();
+  await expect(root).toHaveAttribute("data-preference", "dark");
+  await page.reload();
+  await expect(root).toHaveAttribute("data-preference", "dark");
+  await page
+    .getByRole("button", { name: "切换到浅色外观", exact: true })
+    .click();
+  await expect(root).toHaveAttribute("data-preference", "light");
+  const trigger = page.getByRole("button", { name: "ATOM/RSS", exact: true });
+  await trigger.click();
+  const dialog = page.getByRole("dialog", { name: "订阅整个项目" });
+  await expect(dialog).toBeVisible();
+  for (const [name, file] of [
+    ["RSS", "feed.xml"],
+    ["ATOM", "feed.atom"],
+  ]) {
+    const url = new URL(file, page.url()).href;
+    await expect(
+      dialog.getByRole("link", { name: url, exact: true }),
+    ).toHaveAttribute("href", `/ai-engineering-radar/${file}`);
+    await dialog
+      .getByRole("button", { name: `复制 ${name} 链接`, exact: true })
+      .click();
+    await expect(dialog.getByRole("status")).toHaveText(`${name} 链接已复制`);
+    expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(url);
+  }
+  await page.keyboard.press("Escape");
+  await expect(dialog).toHaveCount(0);
+  await expect(trigger).toBeFocused();
+  await trigger.click();
+  await dialog.getByRole("button", { name: "关闭订阅窗口" }).click();
+  await expect(dialog).toHaveCount(0);
+  await expect(trigger).toBeFocused();
+  await trigger.click();
+  await page.locator("header time").click();
+  await expect(dialog).toHaveCount(0);
+  // A denied clipboard must remain recoverable by selecting the visible URL.
+  await page.evaluate(() =>
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: { writeText: () => Promise.reject(new Error("denied")) },
+    }),
+  );
+  await trigger.click();
+  await dialog
+    .getByRole("button", { name: "复制 RSS 链接", exact: true })
+    .click();
+  await expect(dialog.getByRole("status")).toHaveText(
+    "无法自动复制，请选中链接手动复制。",
+  );
+  await page.keyboard.press("Escape");
+  const github = page.getByRole("link", { name: "GitHub 项目", exact: true });
+  await expect(github).toHaveAttribute(
+    "href",
+    "https://github.com/liuminxin45/ai-engineering-radar",
+  );
+  await expect(github).toHaveAttribute("target", "_blank");
+  await expect(github.locator("svg")).toHaveCount(1);
   await expectNoDocumentOverflow(page);
 });
