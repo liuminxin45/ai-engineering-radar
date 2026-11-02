@@ -48,23 +48,8 @@
 .logo {
   width: 22px;
   height: 22px;
-  border: 1.25px solid var(--accent);
-  border-radius: 50%;
-  position: relative;
-  background: linear-gradient(
-    45deg,
-    transparent 48%,
-    var(--accent) 49%,
-    var(--accent) 51%,
-    transparent 52%
-  );
-}
-.logo:after {
-  content: "";
-  position: absolute;
-  inset: 5px;
-  border: 1px solid var(--accent);
-  border-radius: 50%;
+  flex-shrink: 0;
+  color: var(--accent);
 }
 .mobileBrand {
   display: none;

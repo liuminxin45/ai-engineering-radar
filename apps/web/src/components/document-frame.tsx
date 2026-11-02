@@ -1,12 +1,13 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { BrandMark } from "./brand-mark";
 
 export function DocumentFrame({ children }: { children: ReactNode }) {
   return (
     <div className="shell">
       <header className="header">
         <Link className="brand" prefetch={false} href="/">
-          <span className="radar-mark" aria-hidden="true" />
+          <BrandMark className="radar-mark" />
           <span>
             AI Engineering <strong>Radar</strong>
           </span>

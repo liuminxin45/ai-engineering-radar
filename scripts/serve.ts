@@ -12,6 +12,7 @@ const mime: Record<string, string> = {
   ".xml": "application/rss+xml; charset=utf-8",
   ".atom": "application/atom+xml; charset=utf-8",
   ".svg": "image/svg+xml",
+  ".png": "image/png",
   ".ico": "image/x-icon",
   ".woff2": "font/woff2",
 };

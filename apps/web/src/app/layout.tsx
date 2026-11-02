@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { SiteUiProvider } from "../components/site-ui-provider";
 import "chatgpt-desktop-kit/components.css";
 import "./globals.css";
-const origin =
-  (process.env.SITE_URL ?? "http://localhost:3000") +
-  (process.env.BASE_PATH ?? "");
+const basePath = process.env.BASE_PATH ?? "";
+const origin = (process.env.SITE_URL ?? "http://localhost:3000") + basePath;
 export const metadata: Metadata = {
   metadataBase: new URL(origin + "/"),
   title: {
@@ -12,6 +11,19 @@ export const metadata: Metadata = {
     template: "%s · AI Engineering Radar",
   },
   description: "按公司与时间浏览国内官方技术团队的文章，回到原文阅读。",
+  icons: {
+    icon: [
+      { url: `${basePath}/favicon.ico`, sizes: "16x16 32x32 48x48" },
+      { url: `${basePath}/favicon.svg`, type: "image/svg+xml", sizes: "any" },
+    ],
+    apple: [
+      {
+        url: `${basePath}/apple-touch-icon.png`,
+        type: "image/png",
+        sizes: "180x180",
+      },
+    ],
+  },
   alternates: {
     types: {
       "application/rss+xml": origin + "/feed.xml",

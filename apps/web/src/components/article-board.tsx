@@ -11,6 +11,7 @@ import {
 } from "chatgpt-desktop-kit";
 import { site } from "../lib";
 import { BoardActions } from "./board-actions";
+import { BrandMark } from "./brand-mark";
 import {
   BOARD_BATCH_SIZE,
   boardArticles,
@@ -256,7 +257,7 @@ export function ArticleBoard() {
             moveTo("latest");
           }}
         >
-          <span className={styles.logo} aria-hidden="true" />
+          <BrandMark className={styles.logo} />
           <span className={styles.desktopBrand}>
             AI Engineering <strong>Radar</strong>
           </span>
