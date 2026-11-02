@@ -29,7 +29,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -77,7 +77,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -126,7 +126,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -141,7 +141,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1109/ijcnn64981.2025.11228770",
-          "url": "https://doi.org/10.1109/ijcnn64981.2025.11228770"
+          "url": "https://doi.org/10.1109/ijcnn64981.2025.11228770",
+          "listingHash": "1e793d63ae285448c7a5bfee42af050c192ac00c7d33dd3349a8836b9d2bc8bc"
         }
       ],
       "duplicateCandidates": []
@@ -175,7 +176,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -224,7 +225,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -239,7 +240,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1109/itsc60802.2025.11423551",
-          "url": "https://doi.org/10.1109/itsc60802.2025.11423551"
+          "url": "https://doi.org/10.1109/itsc60802.2025.11423551",
+          "listingHash": "b730d63298274033fe572373a8e520e61d65b58693e6341a0cfc53517b5f2a3c"
         }
       ],
       "duplicateCandidates": []
@@ -273,7 +275,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -288,7 +290,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1145/3664647.3680981",
-          "url": "https://doi.org/10.1145/3664647.3680981"
+          "url": "https://doi.org/10.1145/3664647.3680981",
+          "listingHash": "2e60723291d6098399fe8e531e38ad0b663584a6699180ba13aeb6f3762be920"
         }
       ],
       "duplicateCandidates": []
@@ -323,7 +326,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -338,7 +341,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.21203/rs.3.rs-7651404/v1",
-          "url": "https://doi.org/10.21203/rs.3.rs-7651404/v1"
+          "url": "https://doi.org/10.21203/rs.3.rs-7651404/v1",
+          "listingHash": "765d123f864d639c063d8fe9ba91982c38cf3fabc3b56b2f1b6c51a2bf410c29"
         }
       ],
       "duplicateCandidates": []
@@ -371,7 +375,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -420,7 +424,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -469,7 +473,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -484,7 +488,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1145/3627673.3680034",
-          "url": "https://doi.org/10.1145/3627673.3680034"
+          "url": "https://doi.org/10.1145/3627673.3680034",
+          "listingHash": "21845bee59b9db356ad42accb2944b4015d67a243842920566018dc9ea01aec2"
         }
       ],
       "duplicateCandidates": []
@@ -518,7 +523,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -567,7 +572,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -582,7 +587,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1145/3701716.3715220",
-          "url": "https://doi.org/10.1145/3701716.3715220"
+          "url": "https://doi.org/10.1145/3701716.3715220",
+          "listingHash": "547655d84f5f6c432e47880ef049329b64e0628b14b708f97b5e2dd354e4017f"
         }
       ],
       "duplicateCandidates": []
@@ -616,7 +622,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -631,7 +637,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1145/3581783.3612417",
-          "url": "https://doi.org/10.1145/3581783.3612417"
+          "url": "https://doi.org/10.1145/3581783.3612417",
+          "listingHash": "840bf19794972f1bece9d7dbad5c296451d0f494fcc4884b703568395271a66f"
         }
       ],
       "duplicateCandidates": []
@@ -665,7 +672,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -680,7 +687,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1145/3646547.3689025",
-          "url": "https://doi.org/10.1145/3646547.3689025"
+          "url": "https://doi.org/10.1145/3646547.3689025",
+          "listingHash": "41559949f24b3d7e1d2f36ae6f8c8249ca2780471f906719d92ed4a342f17879"
         }
       ],
       "duplicateCandidates": []
@@ -714,7 +722,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -729,7 +737,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1109/iccv51701.2025.01022",
-          "url": "https://doi.org/10.1109/iccv51701.2025.01022"
+          "url": "https://doi.org/10.1109/iccv51701.2025.01022",
+          "listingHash": "2ca1f28ca705cb07f2df4dbc275d939bf0187c09451a95b77f2d226f247a650c"
         }
       ],
       "duplicateCandidates": []
@@ -763,7 +772,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -778,7 +787,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1109/icassp48485.2024.10448187",
-          "url": "https://doi.org/10.1109/icassp48485.2024.10448187"
+          "url": "https://doi.org/10.1109/icassp48485.2024.10448187",
+          "listingHash": "8ab786ca2a48139c2866bc516e030d56351d9900488a1bff9c8dea25e0c46250"
         }
       ],
       "duplicateCandidates": []
@@ -812,7 +822,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -861,7 +871,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -876,7 +886,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1109/cvpr52734.2025.00305",
-          "url": "https://doi.org/10.1109/cvpr52734.2025.00305"
+          "url": "https://doi.org/10.1109/cvpr52734.2025.00305",
+          "listingHash": "6589d1876905c62ecd31a35bfb25a1fb8742916e10661cd454ddcfbadd3b5372"
         }
       ],
       "duplicateCandidates": []
@@ -910,7 +921,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -925,7 +936,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1145/3743093.3771038",
-          "url": "https://doi.org/10.1145/3743093.3771038"
+          "url": "https://doi.org/10.1145/3743093.3771038",
+          "listingHash": "5ad8a3ab95c61bc2143812216265b74775ec5adb57b2413eabfd00e4a1255864"
         }
       ],
       "duplicateCandidates": []
@@ -959,7 +971,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1007,7 +1019,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1056,7 +1068,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1071,7 +1083,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1109/icassp55912.2026.11460549",
-          "url": "https://doi.org/10.1109/icassp55912.2026.11460549"
+          "url": "https://doi.org/10.1109/icassp55912.2026.11460549",
+          "listingHash": "2f1e05c8f4cf85c8e1a71bb20555494c8aaa1dfbb8bbafde7f468e6164f933ce"
         }
       ],
       "duplicateCandidates": []
@@ -1105,7 +1118,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1120,7 +1133,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1109/icme59968.2025.11210081",
-          "url": "https://doi.org/10.1109/icme59968.2025.11210081"
+          "url": "https://doi.org/10.1109/icme59968.2025.11210081",
+          "listingHash": "e816df1ec0ca73f6bb858ad3feb861d7fc46de3e3f077be480fa15f0a6682ba0"
         }
       ],
       "duplicateCandidates": []
@@ -1154,7 +1168,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1203,7 +1217,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1218,7 +1232,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1145/3757374.3771455",
-          "url": "https://doi.org/10.1145/3757374.3771455"
+          "url": "https://doi.org/10.1145/3757374.3771455",
+          "listingHash": "446f12f32e25607910574a2336a41053921a14a7c219f953c935927bdc231d1a"
         }
       ],
       "duplicateCandidates": []
@@ -1254,7 +1269,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1269,7 +1284,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1111/cgf.70342",
-          "url": "https://doi.org/10.1111/cgf.70342"
+          "url": "https://doi.org/10.1111/cgf.70342",
+          "listingHash": "b425e0f23ae17016d22a4c9710afb3a21df2dcfa584d8d2311a4f21a5e244ef6"
         }
       ],
       "duplicateCandidates": []
@@ -1305,7 +1321,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1320,7 +1336,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1145/3768978",
-          "url": "https://doi.org/10.1145/3768978"
+          "url": "https://doi.org/10.1145/3768978",
+          "listingHash": "37e1e44cfad7c98d8b12a2c3e8f7710a0d1c1eaf289539b8246c18cf97475944"
         }
       ],
       "duplicateCandidates": []
@@ -1354,7 +1371,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1369,7 +1386,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1109/icassp49660.2025.10888465",
-          "url": "https://doi.org/10.1109/icassp49660.2025.10888465"
+          "url": "https://doi.org/10.1109/icassp49660.2025.10888465",
+          "listingHash": "2cef55ee3ef6f31fe0d90f978e1b6dff189818b195fdb7dfef83bf6be21801e0"
         }
       ],
       "duplicateCandidates": []
@@ -1417,7 +1435,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1432,7 +1450,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1109/iccvw69036.2025.00407",
-          "url": "https://doi.org/10.1109/iccvw69036.2025.00407"
+          "url": "https://doi.org/10.1109/iccvw69036.2025.00407",
+          "listingHash": "ee4737d672517fd37588f87b253709dd5bab81c90c09bf559a1141cff44e87b9"
         }
       ],
       "duplicateCandidates": []
@@ -1467,7 +1486,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1482,7 +1501,8 @@
         {
           "sourceId": "bilibili-papers-crossref",
           "externalId": "10.1080/03610926.2023.2209680",
-          "url": "https://doi.org/10.1080/03610926.2023.2209680"
+          "url": "https://doi.org/10.1080/03610926.2023.2209680",
+          "listingHash": "5d4f80c045933943d9729f6774259ad017510251c2f994152140ae665a635e0d"
         }
       ],
       "duplicateCandidates": []

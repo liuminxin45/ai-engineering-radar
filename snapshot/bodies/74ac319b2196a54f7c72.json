@@ -2,17 +2,20 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "74ac319b2196a54f7c72",
-    "status": "unavailable",
-    "html": "",
+    "status": "ready",
+    "html": "<p id=\"article-anchor-1\">2025 年，当多模态大模型的感知能力突破物理世界边界，当自主智能体（Agent）开始具备协同决策能力，人工智能正站在通用化爆发的临界点。而支撑这场技术革命的核心底座 —— 分布式计算，正迎来前所未有的价值释放期。在此背景下，由蚂蚁集团发起的 Ray 中文社区与蚂蚁开源联合主办的 Ray Forward 2025，将于 12 月 20 日在北京蚂蚁 T 空间正式启幕，以 “拥抱 AI，Ray 向未来” 为主题，邀您共探下一代智能计算架构的进化方向。</p> \n<p></p> \n<p><strong><strong>活动亮点抢先看：从技术实践到生态蓝图</strong></strong></p> \n<ul><li> <p>顶级阵容深度对话：拟邀头部科技公司、知名 AI 实验室及开源社区的技术领袖与专家，围绕 AGI 时代分布式计算的核心挑战、最新实践与生态应用等关键议题展开交流，分享前沿洞察与实践沉淀。</p> </li><li> <p>全场景案例实战拆解：聚焦 Ray 在实际场景中的落地应用，通过多维度案例解析，呈现从技术选型、架构设计到性能优化的完整实践逻辑，覆盖多行业典型应用场景。</p> </li><li> <p>生态协同里程碑活动：作为 Ray 加入 PyTorch 基金会后，国内首次大型开发者活动，拟邀项目核心开发者解析 Ray 未来生态发展蓝图，力争让每一位参与者都能触摸到智能计算的未来脉搏。</p> </li></ul> \n<p></p> \n<p><img alt=\"图片\" height=\"355\" src=\"https://i-blog.csdnimg.cn/img_convert/f38ed283258460c10d2650cf9a183bc1.jpeg\" width=\"356\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>扫描二维码或复制链接到浏览器注册参会</p> \n<p><a title=\"http://bagevent.com/event/ray-forward-2025\" href=\"http://bagevent.com/event/ray-forward-2025\" target=\"_blank\" rel=\"noopener noreferrer\">http://bagevent.com/event/ray-forward-2025</a></p> \n<p></p> \n<p><strong><strong>议题征集启动：你的洞见，定义下一代计算架构</strong></strong></p> \n<p>大会现正式开启议题征集通道（即日起至 11 月 9 日），诚邀社区伙伴围绕以下方向分享实践与思考（不限于）：</p> \n<ul></ul> \n<ul><li> <p>Ray 在大规模生产实践中的应用案例；</p> </li><li> <p>对 Ray 内核层面的改造与创新；</p> </li><li> <p>Ray Data 的应用实践，比如多模态数据处理，模型推理等；</p> </li><li> <p>Ray 相关上下游开源项目的介绍和使用；</p> </li></ul> \n<p></p> \n<p><img alt=\"1_1054820444_171_85_2_48017838_be5417d541ccd7f2009dc1e88dff2e75.png\" height=\"400\" src=\"https://i-blog.csdnimg.cn/img_convert/373094b87462b15be475b0fb712452f1.jpeg\" width=\"400\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：1_1054820444_171_85_2_48017838_be5417d541ccd7f2009dc1e88dff2e75.png\"></p> \n<p>扫描二维码或复制链接到浏览器提交议题</p> \n<p><a title=\"https://www.bagevent.com/event/speechApply/9103210\" href=\"https://www.bagevent.com/event/speechApply/9103210\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.bagevent.com/event/speechApply/9103210</a></p> \n<p>从日常 AI 交互服务到专业领域智能应用，从复杂数据处理系统到高效推荐引擎，Ray 正在重塑我们与数字世界交互的方式。2025 年 12 月的北京，让我们带着技术思考与实践成果，共同书写智能计算的下一篇章。</p> \n<p>更多参会指南、嘉宾阵容及议程细节，将通过 Ray 中文社区和蚂蚁开源微信公众号陆续释放。关注我们，第一时间获取更新！北京见，一起拥抱 AI，Ray 向未来！</p> \n<p></p>",
     "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "textLength": 993,
+    "readingMinutes": 3,
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/154189495",
+    "ruleId": "rsshub-csdn",
+    "ruleVersion": "1",
     "engineVersion": "radar-reader-1",
-    "checkedAt": "2026-11-02T07:56:00.323Z",
-    "nextRetryAt": "2026-11-09T07:56:00.323Z",
-    "error": "RSSHub 未取得 CSDN 正文，仅返回摘要（原站可能仍受 521 限制）。",
+    "contentHash": "4ed58e8d2837b7f1f460da8e845bafd396fe6502bba16d48f92e373227aa2eb5",
+    "fetchedAt": "2026-11-02T09:08:10.597Z",
+    "checkedAt": "2026-11-02T09:08:10.597Z",
+    "nextRetryAt": "2026-12-02T09:08:10.597Z",
     "warnings": []
   }
 }

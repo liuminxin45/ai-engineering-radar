@@ -31,7 +31,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -46,7 +46,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.36227/techrxiv.176107519.98547757/v1",
-          "url": "https://doi.org/10.36227/techrxiv.176107519.98547757/v1"
+          "url": "https://doi.org/10.36227/techrxiv.176107519.98547757/v1",
+          "listingHash": "08fe52d5b72aa31b93c4cab11998190cc653976201c527c9f3cac6ee336a6dbb"
         }
       ],
       "duplicateCandidates": []
@@ -81,7 +82,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -130,7 +131,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -145,7 +146,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/icmsp68723.2025.11407854",
-          "url": "https://doi.org/10.1109/icmsp68723.2025.11407854"
+          "url": "https://doi.org/10.1109/icmsp68723.2025.11407854",
+          "listingHash": "fed90e829668d41febef65b9b2026c3ae52c419b4cb31947f5d8cd825e64d31f"
         }
       ],
       "duplicateCandidates": []
@@ -179,7 +181,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -228,7 +230,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -277,7 +279,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -326,7 +328,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -341,7 +343,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/iccv51701.2025.00887",
-          "url": "https://doi.org/10.1109/iccv51701.2025.00887"
+          "url": "https://doi.org/10.1109/iccv51701.2025.00887",
+          "listingHash": "e83f9d7f4aa1c459c81fb0c45095355d6da96ef85fc31439777afad297a060a4"
         }
       ],
       "duplicateCandidates": []
@@ -375,7 +378,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -390,7 +393,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/iccv51701.2025.02273",
-          "url": "https://doi.org/10.1109/iccv51701.2025.02273"
+          "url": "https://doi.org/10.1109/iccv51701.2025.02273",
+          "listingHash": "5d03828eb8e6978d48cac0a07bf0062b89a0d7bcbf9907604191a51d3c9d9f15"
         }
       ],
       "duplicateCandidates": []
@@ -424,7 +428,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -439,7 +443,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/sensors59705.2025.11330403",
-          "url": "https://doi.org/10.1109/sensors59705.2025.11330403"
+          "url": "https://doi.org/10.1109/sensors59705.2025.11330403",
+          "listingHash": "6cbcb0f7895df12de68d12453968f6219987e74a9d7a63183f894dac3271bf2d"
         }
       ],
       "duplicateCandidates": []
@@ -480,7 +485,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -495,7 +500,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1145/3746027.3755165",
-          "url": "https://doi.org/10.1145/3746027.3755165"
+          "url": "https://doi.org/10.1145/3746027.3755165",
+          "listingHash": "041548c4ba1ac06cb5f3fb9afa66aedfcdf93d2796f413be7bc30b1dbcc50074"
         }
       ],
       "duplicateCandidates": []
@@ -529,7 +535,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -544,7 +550,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/iccv51701.2025.01413",
-          "url": "https://doi.org/10.1109/iccv51701.2025.01413"
+          "url": "https://doi.org/10.1109/iccv51701.2025.01413",
+          "listingHash": "240f12987d9be8763e1436b28711d11de2f8914f2698a861b431c9424088a43f"
         }
       ],
       "duplicateCandidates": []
@@ -578,7 +585,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -627,7 +634,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -642,7 +649,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1145/3799902.3811065",
-          "url": "https://doi.org/10.1145/3799902.3811065"
+          "url": "https://doi.org/10.1145/3799902.3811065",
+          "listingHash": "04ed7272fdd45e781a79889043ff51e866d26796fe9820b89ce1581a3c9b1df1"
         }
       ],
       "duplicateCandidates": []
@@ -676,7 +684,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -725,7 +733,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -740,7 +748,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/ap-s/cnc-usnc-ursi55537.2025.11266511",
-          "url": "https://doi.org/10.1109/ap-s/cnc-usnc-ursi55537.2025.11266511"
+          "url": "https://doi.org/10.1109/ap-s/cnc-usnc-ursi55537.2025.11266511",
+          "listingHash": "4d4b3e8429190f800dbc8a4e25b769c8195710ae6840eda021fb7c14fa17716e"
         }
       ],
       "duplicateCandidates": []
@@ -781,7 +790,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -796,7 +805,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1145/3746027.3754698",
-          "url": "https://doi.org/10.1145/3746027.3754698"
+          "url": "https://doi.org/10.1145/3746027.3754698",
+          "listingHash": "763fa4e19e98ef9d4dd0e2a27f56089e4d597557d240977fd63fec8fe7b96e4f"
         }
       ],
       "duplicateCandidates": []
@@ -830,7 +840,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -845,7 +855,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/ap-s/cnc-usnc-ursi55537.2025.11266426",
-          "url": "https://doi.org/10.1109/ap-s/cnc-usnc-ursi55537.2025.11266426"
+          "url": "https://doi.org/10.1109/ap-s/cnc-usnc-ursi55537.2025.11266426",
+          "listingHash": "e43c603397a201a2cb010a2418ec93fe583d073e77666cd5614af85decd5fc23"
         }
       ],
       "duplicateCandidates": []
@@ -879,7 +890,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -894,7 +905,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/iccv51701.2025.01291",
-          "url": "https://doi.org/10.1109/iccv51701.2025.01291"
+          "url": "https://doi.org/10.1109/iccv51701.2025.01291",
+          "listingHash": "05c9e87c38d7f48b685ac252f443cfcfef5a2afe9190efaa4d5ce2f5b60f9084"
         }
       ],
       "duplicateCandidates": []
@@ -929,7 +941,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -978,7 +990,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -993,7 +1005,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/icsps66615.2025.11347986",
-          "url": "https://doi.org/10.1109/icsps66615.2025.11347986"
+          "url": "https://doi.org/10.1109/icsps66615.2025.11347986",
+          "listingHash": "f067dd820a8748d267f3b4f5d07dc552725f14f80d6f9993cfb4719bd436f2a1"
         }
       ],
       "duplicateCandidates": []
@@ -1027,7 +1040,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1042,7 +1055,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/asp-dac66049.2026.11420794",
-          "url": "https://doi.org/10.1109/asp-dac66049.2026.11420794"
+          "url": "https://doi.org/10.1109/asp-dac66049.2026.11420794",
+          "listingHash": "38c7859e5eecdd1295c90531e8cd0392da3347304c60153fd3a89723d1c7d456"
         }
       ],
       "duplicateCandidates": []
@@ -1076,7 +1090,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1091,7 +1105,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/iccv51701.2025.01269",
-          "url": "https://doi.org/10.1109/iccv51701.2025.01269"
+          "url": "https://doi.org/10.1109/iccv51701.2025.01269",
+          "listingHash": "8e196e33f3a59a8b0fe384cdd85cce3a368c548d9652f7a1ea1224caf1ea3cb5"
         }
       ],
       "duplicateCandidates": []
@@ -1125,7 +1140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1140,7 +1155,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/aixvr67263.2026.00033",
-          "url": "https://doi.org/10.1109/aixvr67263.2026.00033"
+          "url": "https://doi.org/10.1109/aixvr67263.2026.00033",
+          "listingHash": "6898b4f2a0b60d7598af052b5ac153540c950456374a90d16e329fc8cb1bf8a1"
         }
       ],
       "duplicateCandidates": []
@@ -1174,7 +1190,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1189,7 +1205,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/jiot.2025.3580803",
-          "url": "https://doi.org/10.1109/jiot.2025.3580803"
+          "url": "https://doi.org/10.1109/jiot.2025.3580803",
+          "listingHash": "218e58ea441b9287855fa973ef57a9fd7caff6fc49f0f201df14bf75d858ee06"
         }
       ],
       "duplicateCandidates": []
@@ -1223,7 +1240,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1238,7 +1255,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/jiot.2026.3686456",
-          "url": "https://doi.org/10.1109/jiot.2026.3686456"
+          "url": "https://doi.org/10.1109/jiot.2026.3686456",
+          "listingHash": "fb57d95bf5e1b9ef51fe6187a89c608991ac349751fa381b3e619f48a0d7d82a"
         }
       ],
       "duplicateCandidates": []
@@ -1272,7 +1290,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1321,7 +1339,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1336,7 +1354,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/icce67443.2026.11449624",
-          "url": "https://doi.org/10.1109/icce67443.2026.11449624"
+          "url": "https://doi.org/10.1109/icce67443.2026.11449624",
+          "listingHash": "95e696145b7da5f5849a9878941b0d65ca05af64da67a02a93b9444c4155c02f"
         }
       ],
       "duplicateCandidates": []
@@ -1370,7 +1389,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1385,7 +1404,8 @@
         {
           "sourceId": "vivo-papers-crossref",
           "externalId": "10.1109/iccv51701.2025.02201",
-          "url": "https://doi.org/10.1109/iccv51701.2025.02201"
+          "url": "https://doi.org/10.1109/iccv51701.2025.02201",
+          "listingHash": "6928eacfc6f959798a76b5fb03a4f21413475a4ea520b6ed81aa5aec74910dde"
         }
       ],
       "duplicateCandidates": []
@@ -1419,7 +1439,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1468,7 +1488,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",

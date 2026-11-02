@@ -30,7 +30,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -45,7 +45,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3773078.3831930",
-          "url": "https://doi.org/10.1145/3773078.3831930"
+          "url": "https://doi.org/10.1145/3773078.3831930",
+          "listingHash": "17aacf504a8fb97677fbb19c416189813d5a84b78df7b28932f5d26bb3d6c7e8"
         }
       ],
       "duplicateCandidates": []
@@ -79,7 +80,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -94,7 +95,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3773078.3831769",
-          "url": "https://doi.org/10.1145/3773078.3831769"
+          "url": "https://doi.org/10.1145/3773078.3831769",
+          "listingHash": "ea1289e5ef8084844928fc8ca04f2d6aac166835b1519fc8eea272a67875bdbe"
         }
       ],
       "duplicateCandidates": []
@@ -130,7 +132,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -145,7 +147,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3832182",
-          "url": "https://doi.org/10.1145/3832182"
+          "url": "https://doi.org/10.1145/3832182",
+          "listingHash": "20d47d2280b01bf40be9e56c89a5d1977f7948a030f1ef247a263035aed12ad9"
         }
       ],
       "duplicateCandidates": []
@@ -179,7 +182,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -194,7 +197,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3832783.3834462",
-          "url": "https://doi.org/10.1145/3832783.3834462"
+          "url": "https://doi.org/10.1145/3832783.3834462",
+          "listingHash": "ae5de5e8a28b57a9cbd07324320141cfbc4b97e2525992010921631d6f1395e2"
         }
       ],
       "duplicateCandidates": []
@@ -228,7 +232,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -243,7 +247,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3832783.3834457",
-          "url": "https://doi.org/10.1145/3832783.3834457"
+          "url": "https://doi.org/10.1145/3832783.3834457",
+          "listingHash": "8647a9b141ccfc4f93be3224ee3a656a578e5e41e262004f976b937379a66b32"
         }
       ],
       "duplicateCandidates": []
@@ -279,7 +284,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -294,7 +299,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3839836",
-          "url": "https://doi.org/10.1145/3839836"
+          "url": "https://doi.org/10.1145/3839836",
+          "listingHash": "35c1e38236af6fdd1bf20a29208434a610e82267df583fb44ed81c343d1ce51b"
         }
       ],
       "duplicateCandidates": []
@@ -328,7 +334,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -377,7 +383,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -392,7 +398,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3773078.3831741",
-          "url": "https://doi.org/10.1145/3773078.3831741"
+          "url": "https://doi.org/10.1145/3773078.3831741",
+          "listingHash": "d4901cf290b94b3f0450c145d9e159a91c459c6f1b1824e9194bab226b87dc49"
         }
       ],
       "duplicateCandidates": []
@@ -426,7 +433,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -441,7 +448,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3773078.3831909",
-          "url": "https://doi.org/10.1145/3773078.3831909"
+          "url": "https://doi.org/10.1145/3773078.3831909",
+          "listingHash": "a8083d6415bbf03bfad36eaed18a49d49c05188feaa4b3c2c26ce4dfc48434fa"
         }
       ],
       "duplicateCandidates": []
@@ -475,7 +483,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -524,7 +532,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -539,7 +547,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3773078.3831873",
-          "url": "https://doi.org/10.1145/3773078.3831873"
+          "url": "https://doi.org/10.1145/3773078.3831873",
+          "listingHash": "e67e54594da9218bd13b7ccd95f7096ebd22c966106cf82c4000b032bc8026fe"
         }
       ],
       "duplicateCandidates": []
@@ -573,7 +582,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -588,7 +597,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3773078.3831884",
-          "url": "https://doi.org/10.1145/3773078.3831884"
+          "url": "https://doi.org/10.1145/3773078.3831884",
+          "listingHash": "1e00d6fc371ade847e4f90c053f8af19d42b1680a56a6e23aa3689610ea25dba"
         }
       ],
       "duplicateCandidates": []
@@ -622,7 +632,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -671,7 +681,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -686,7 +696,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3773078.3831872",
-          "url": "https://doi.org/10.1145/3773078.3831872"
+          "url": "https://doi.org/10.1145/3773078.3831872",
+          "listingHash": "9f1c0e8bee786fe9ff1c0a905e61d8955a3e5750884f06c493e2b56782522fe3"
         }
       ],
       "duplicateCandidates": []
@@ -720,7 +731,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -769,7 +780,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -818,7 +829,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -833,7 +844,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3832783.3834468",
-          "url": "https://doi.org/10.1145/3832783.3834468"
+          "url": "https://doi.org/10.1145/3832783.3834468",
+          "listingHash": "a19d9e42d51ccf04e80809e859a1d21629ad79bba646cf0eba96e22307a93b96"
         }
       ],
       "duplicateCandidates": []
@@ -867,7 +879,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -916,7 +928,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -931,7 +943,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3773078.3831883",
-          "url": "https://doi.org/10.1145/3773078.3831883"
+          "url": "https://doi.org/10.1145/3773078.3831883",
+          "listingHash": "8907179a8dbd4eeb99da0a03ec241ec8b44a49ab5ebda9843e59980ae12324ff"
         }
       ],
       "duplicateCandidates": []
@@ -965,7 +978,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1014,7 +1027,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1063,7 +1076,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1078,7 +1091,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3773078.3831889",
-          "url": "https://doi.org/10.1145/3773078.3831889"
+          "url": "https://doi.org/10.1145/3773078.3831889",
+          "listingHash": "cca6b00188de4b69993747d89011ee3df79f65dd3706d1c0d3156b2ea7ea65b1"
         }
       ],
       "duplicateCandidates": []
@@ -1112,7 +1126,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1127,7 +1141,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3832783.3834487",
-          "url": "https://doi.org/10.1145/3832783.3834487"
+          "url": "https://doi.org/10.1145/3832783.3834487",
+          "listingHash": "aae3560f42eee8b785182a743d8e6e1e70df98191cbb7d8d20f23abb3a4c8e2c"
         }
       ],
       "duplicateCandidates": []
@@ -1163,7 +1178,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1178,7 +1193,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3849695",
-          "url": "https://doi.org/10.1145/3849695"
+          "url": "https://doi.org/10.1145/3849695",
+          "listingHash": "f5a1a37b2f433cf2b31d443792717deffd4d35820457869c3e2f7baed0dfa5a1"
         }
       ],
       "duplicateCandidates": []
@@ -1212,7 +1228,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1227,7 +1243,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3773078.3831736",
-          "url": "https://doi.org/10.1145/3773078.3831736"
+          "url": "https://doi.org/10.1145/3773078.3831736",
+          "listingHash": "0d362d8144aebfa3b5cf2be703be5762d849c45402cc624b955bb15efbb3d1bd"
         }
       ],
       "duplicateCandidates": []
@@ -1261,7 +1278,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1276,7 +1293,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3773078.3831902",
-          "url": "https://doi.org/10.1145/3773078.3831902"
+          "url": "https://doi.org/10.1145/3773078.3831902",
+          "listingHash": "c8ccc514b17abaa5314bbeb8179a346431d4def4eaaf31518da893faf4d4d4d2"
         }
       ],
       "duplicateCandidates": []
@@ -1310,7 +1328,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1361,7 +1379,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1376,7 +1394,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3849805",
-          "url": "https://doi.org/10.1145/3849805"
+          "url": "https://doi.org/10.1145/3849805",
+          "listingHash": "bf5e3d8e9d850b7f9f81682b10d5b63d5b2d5a18eaa20941b7ed1fe1565bb84b"
         }
       ],
       "duplicateCandidates": []
@@ -1410,7 +1429,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1425,7 +1444,8 @@
         {
           "sourceId": "kuaishou-papers-crossref",
           "externalId": "10.1145/3773078.3831886",
-          "url": "https://doi.org/10.1145/3773078.3831886"
+          "url": "https://doi.org/10.1145/3773078.3831886",
+          "listingHash": "9834ddc76c8b392cdba7ebfa19e4a6c0ee4da73d390159b06044aad3471b1aa9"
         }
       ],
       "duplicateCandidates": []
@@ -1459,7 +1479,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",

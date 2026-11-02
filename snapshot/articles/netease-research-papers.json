@@ -30,7 +30,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -79,7 +79,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -130,7 +130,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -179,7 +179,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -194,7 +194,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1145/3773078.3831935",
-          "url": "https://doi.org/10.1145/3773078.3831935"
+          "url": "https://doi.org/10.1145/3773078.3831935",
+          "listingHash": "b925d0e032a544b4ec7821013fec6a0a6c785f0512819d7cd2498b3f96c4a261"
         }
       ],
       "duplicateCandidates": []
@@ -229,7 +230,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -244,7 +245,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1080/19475705.2026.2731702",
-          "url": "https://doi.org/10.1080/19475705.2026.2731702"
+          "url": "https://doi.org/10.1080/19475705.2026.2731702",
+          "listingHash": "7220fc9776cc32a5c33678fa0f1ee08becb0aa060555b30bf5854ae0c402d95a"
         }
       ],
       "duplicateCandidates": []
@@ -279,7 +281,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -294,7 +296,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1212/wnl.0000000000215333",
-          "url": "https://doi.org/10.1212/wnl.0000000000215333"
+          "url": "https://doi.org/10.1212/wnl.0000000000215333",
+          "listingHash": "9326f2581704e578bbe162c0f7ba5cf1b2a688b509ee9526c8224bde5f82d9bf"
         }
       ],
       "duplicateCandidates": []
@@ -328,7 +331,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -343,7 +346,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1145/3770855.3818430",
-          "url": "https://doi.org/10.1145/3770855.3818430"
+          "url": "https://doi.org/10.1145/3770855.3818430",
+          "listingHash": "5e63d671ffcea92119bf369e44316b882a483f72e7cb0ddd72da7f9f78018f63"
         }
       ],
       "duplicateCandidates": []
@@ -377,7 +381,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -392,7 +396,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1109/icassp55912.2026.11460444",
-          "url": "https://doi.org/10.1109/icassp55912.2026.11460444"
+          "url": "https://doi.org/10.1109/icassp55912.2026.11460444",
+          "listingHash": "27dcbe455614475ebeff6879a189a6aeebb6baf15508003e169149ba4d725402"
         }
       ],
       "duplicateCandidates": []
@@ -426,7 +431,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -477,7 +482,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -492,7 +497,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1002/epi.70194",
-          "url": "https://doi.org/10.1002/epi.70194"
+          "url": "https://doi.org/10.1002/epi.70194",
+          "listingHash": "a62580819b117346c64ae99d9b065428c0922015d41ab48f0d4e8f55eda7d889"
         }
       ],
       "duplicateCandidates": []
@@ -526,7 +532,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -576,7 +582,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -591,7 +597,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1108/ijmpb-07-2025-0264",
-          "url": "https://doi.org/10.1108/ijmpb-07-2025-0264"
+          "url": "https://doi.org/10.1108/ijmpb-07-2025-0264",
+          "listingHash": "b032014fc83e6f382d9c8a933c28b27336ce9b86c84b8859c86d01c7f4f32d30"
         }
       ],
       "duplicateCandidates": []
@@ -625,7 +632,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -640,7 +647,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1145/3770855.3818340",
-          "url": "https://doi.org/10.1145/3770855.3818340"
+          "url": "https://doi.org/10.1145/3770855.3818340",
+          "listingHash": "b28757341f25e08d8c75f3ac9f6c8bb7368d9febe224cc7dd498979e5b8048fe"
         }
       ],
       "duplicateCandidates": []
@@ -674,7 +682,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -723,7 +731,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -774,7 +782,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -823,7 +831,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -838,7 +846,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1145/3805622.3810672",
-          "url": "https://doi.org/10.1145/3805622.3810672"
+          "url": "https://doi.org/10.1145/3805622.3810672",
+          "listingHash": "704771aaaaa1bea825ef416dc8b13d765b169b9b172b7f475f48b92a8fcd6f1c"
         }
       ],
       "duplicateCandidates": []
@@ -874,7 +883,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -925,7 +934,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -940,7 +949,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1093/bioinformatics/btag547",
-          "url": "https://doi.org/10.1093/bioinformatics/btag547"
+          "url": "https://doi.org/10.1093/bioinformatics/btag547",
+          "listingHash": "14c86159a8b3f654db5396899242affbe19b4744bc01fdd4ec2b33c1243c19c6"
         }
       ],
       "duplicateCandidates": []
@@ -974,7 +984,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1024,7 +1034,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1039,7 +1049,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.21203/rs.3.rs-8217137/v1",
-          "url": "https://doi.org/10.21203/rs.3.rs-8217137/v1"
+          "url": "https://doi.org/10.21203/rs.3.rs-8217137/v1",
+          "listingHash": "86f4b6db257d34bcf3352946f64246c2e5266f8bd46a977b8c7708b8e6b04db5"
         }
       ],
       "duplicateCandidates": []
@@ -1074,7 +1085,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1089,7 +1100,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1212/wnl.0000000000215336",
-          "url": "https://doi.org/10.1212/wnl.0000000000215336"
+          "url": "https://doi.org/10.1212/wnl.0000000000215336",
+          "listingHash": "6dbaa15ea3b3471980476cdc98e71cdb9d9bc055295c2ad7abb42bf1405d2e83"
         }
       ],
       "duplicateCandidates": []
@@ -1123,7 +1135,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1138,7 +1150,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1145/3805712.3809943",
-          "url": "https://doi.org/10.1145/3805712.3809943"
+          "url": "https://doi.org/10.1145/3805712.3809943",
+          "listingHash": "26f223deb4a185a85cf73bfa05479a7870d0739a52a4193a4094b3bf8badb9bf"
         }
       ],
       "duplicateCandidates": []
@@ -1172,7 +1185,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1187,7 +1200,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1145/3773966.3777937",
-          "url": "https://doi.org/10.1145/3773966.3777937"
+          "url": "https://doi.org/10.1145/3773966.3777937",
+          "listingHash": "4406b8688f2092a196d9137ca3833c54b1e95d7d7eadc22895a34fbbc0360f15"
         }
       ],
       "duplicateCandidates": []
@@ -1221,7 +1235,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1236,7 +1250,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1145/3774904.3792170",
-          "url": "https://doi.org/10.1145/3774904.3792170"
+          "url": "https://doi.org/10.1145/3774904.3792170",
+          "listingHash": "d86e430fbeeb8e6b3cae021c54c1c0d556e62f4e1e61f325b6e0b8f8c682ba70"
         }
       ],
       "duplicateCandidates": []
@@ -1270,7 +1285,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1285,7 +1300,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1109/icassp55912.2026.11462408",
-          "url": "https://doi.org/10.1109/icassp55912.2026.11462408"
+          "url": "https://doi.org/10.1109/icassp55912.2026.11462408",
+          "listingHash": "032791105609de9d558892784d3a2ad9ec5bfb4ad95aec67de6fa122e3dff4ef"
         }
       ],
       "duplicateCandidates": []
@@ -1321,7 +1337,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1336,7 +1352,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1177/14695405261436266",
-          "url": "https://doi.org/10.1177/14695405261436266"
+          "url": "https://doi.org/10.1177/14695405261436266",
+          "listingHash": "cc59eeffd723b36b184a097748cb0888d72fc721478097a563a0bae5573ae5cc"
         }
       ],
       "duplicateCandidates": []
@@ -1372,7 +1389,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1387,7 +1404,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1177/03019233261471738",
-          "url": "https://doi.org/10.1177/03019233261471738"
+          "url": "https://doi.org/10.1177/03019233261471738",
+          "listingHash": "4cdca6a71ee4a876d763d8815047d811958f189056dae685cb6ede7480a077a2"
         }
       ],
       "duplicateCandidates": []
@@ -1422,7 +1440,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1437,7 +1455,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1212/wnl.0000000000215369",
-          "url": "https://doi.org/10.1212/wnl.0000000000215369"
+          "url": "https://doi.org/10.1212/wnl.0000000000215369",
+          "listingHash": "df6f994d375da7459f52f5b0194e798c66e5eb1f36ba15a0afdf1acfca5fffcb"
         }
       ],
       "duplicateCandidates": []
@@ -1473,7 +1492,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1523,7 +1542,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.762Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1538,7 +1557,8 @@
         {
           "sourceId": "netease-papers-crossref",
           "externalId": "10.1212/wnl.0000000000215582",
-          "url": "https://doi.org/10.1212/wnl.0000000000215582"
+          "url": "https://doi.org/10.1212/wnl.0000000000215582",
+          "listingHash": "e3f41e19b37c68d9c278710fb02ea9fbca5ca021d951267bf6d377152f22c3ed"
         }
       ],
       "duplicateCandidates": []

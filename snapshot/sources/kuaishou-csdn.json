@@ -2,12 +2,13 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "kuaishou-csdn",
-    "lastCheckedAt": "2026-11-02T07:41:15.065Z",
-    "lastSuccessAt": "2026-11-02T07:41:15.065Z",
-    "nextRunAt": "2026-11-03T07:41:15.065Z",
+    "lastCheckedAt": "2026-11-02T09:03:45.473Z",
+    "lastSuccessAt": "2026-11-02T09:03:45.473Z",
+    "nextRunAt": "2026-11-03T09:03:45.473Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,
-    "httpStatus": 200
+    "httpStatus": 200,
+    "etag": "\"46bc018ce23c351a353713c0621753a5c70a15b20c9def620be8ef3d79cbad69\""
   }
 }

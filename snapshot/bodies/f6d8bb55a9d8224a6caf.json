@@ -10,9 +10,9 @@
     "sourceId": "huawei-csdn",
     "sourceUrl": "https://blog.csdn.net/devcloud/article/details/164336413",
     "engineVersion": "radar-reader-1",
-    "checkedAt": "2026-11-02T07:55:47.213Z",
-    "nextRetryAt": "2026-11-09T07:55:47.213Z",
-    "error": "RSSHub 当前账号订阅中没有这篇历史文章。",
+    "checkedAt": "2026-11-02T09:07:46.553Z",
+    "nextRetryAt": "2026-11-09T09:07:46.553Z",
+    "error": "RSSHub HTTP 502",
     "warnings": []
   }
 }

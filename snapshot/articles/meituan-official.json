@@ -19,7 +19,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -34,7 +34,8 @@
         {
           "sourceId": "meituan",
           "externalId": "https://tech.meituan.com/2026/08/27/ACL-Outstanding-Paper-GeoRA.html",
-          "url": "https://tech.meituan.com/2026/08/27/ACL-Outstanding-Paper-GeoRA.html"
+          "url": "https://tech.meituan.com/2026/08/27/ACL-Outstanding-Paper-GeoRA.html",
+          "listingHash": "5228a0d657d2476fa2cdee31d3d97576d16c2a41fb1ba8f19766f36d898c3b24"
         }
       ],
       "duplicateCandidates": []
@@ -57,7 +58,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -72,7 +73,8 @@
         {
           "sourceId": "meituan",
           "externalId": "https://tech.meituan.com/2026/08/07/Agent-Evaluation.html",
-          "url": "https://tech.meituan.com/2026/08/07/Agent-Evaluation.html"
+          "url": "https://tech.meituan.com/2026/08/07/Agent-Evaluation.html",
+          "listingHash": "d89dbbfda20ac44ba566498ea0730780bc42600292f7c5c0894700909a30587c"
         }
       ],
       "duplicateCandidates": []
@@ -95,7 +97,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -110,7 +112,8 @@
         {
           "sourceId": "meituan",
           "externalId": "https://tech.meituan.com/2026/08/20/01-meituan-Query-3.0.html",
-          "url": "https://tech.meituan.com/2026/08/20/01-meituan-Query-3.0.html"
+          "url": "https://tech.meituan.com/2026/08/20/01-meituan-Query-3.0.html",
+          "listingHash": "0e7c938bf5c6c178d296638eb2cd1ee25d53cf7bc8447c281d00a7a0cb349d9b"
         }
       ],
       "duplicateCandidates": []
@@ -133,7 +136,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -148,7 +151,8 @@
         {
           "sourceId": "meituan",
           "externalId": "https://tech.meituan.com/2026/09/22/Meituan-Foundation-Model-for-Recommendation.html",
-          "url": "https://tech.meituan.com/2026/09/22/Meituan-Foundation-Model-for-Recommendation.html"
+          "url": "https://tech.meituan.com/2026/09/22/Meituan-Foundation-Model-for-Recommendation.html",
+          "listingHash": "c082cd782434d8e64c678d068e713368b8f99ebef99c625bbc839e4296002868"
         }
       ],
       "duplicateCandidates": []
@@ -171,7 +175,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -186,7 +190,8 @@
         {
           "sourceId": "meituan",
           "externalId": "https://tech.meituan.com/2026/08/13/KDD-2026-meituan-papers.html",
-          "url": "https://tech.meituan.com/2026/08/13/KDD-2026-meituan-papers.html"
+          "url": "https://tech.meituan.com/2026/08/13/KDD-2026-meituan-papers.html",
+          "listingHash": "edd3d27062d02d3906b6dc05769425609b48b1f061f165288a212ddf20d183bc"
         }
       ],
       "duplicateCandidates": []
@@ -209,7 +214,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -224,7 +229,8 @@
         {
           "sourceId": "meituan",
           "externalId": "https://tech.meituan.com/2026/09/10/Agent-Evaluation-White-Paper-01.html",
-          "url": "https://tech.meituan.com/2026/09/10/Agent-Evaluation-White-Paper-01.html"
+          "url": "https://tech.meituan.com/2026/09/10/Agent-Evaluation-White-Paper-01.html",
+          "listingHash": "b0cf7e12ac29f9bbba5a9ddc88f9618fc5009174b0a72b48ce019779bdaa2053"
         }
       ],
       "duplicateCandidates": []
@@ -247,7 +253,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -262,7 +268,8 @@
         {
           "sourceId": "meituan",
           "externalId": "https://tech.meituan.com/2026/10/29/AI-Coding-IN-Distributed-Storage-System.html",
-          "url": "https://tech.meituan.com/2026/10/29/AI-Coding-IN-Distributed-Storage-System.html"
+          "url": "https://tech.meituan.com/2026/10/29/AI-Coding-IN-Distributed-Storage-System.html",
+          "listingHash": "04819781cd727b576e909fc63196048f75eb6a0421f1cbd475f3d2c8cd1ab33a"
         }
       ],
       "duplicateCandidates": []
@@ -285,7 +292,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -300,7 +307,8 @@
         {
           "sourceId": "meituan",
           "externalId": "https://tech.meituan.com/2026/09/03/meituan-Digital-Human-practice.html",
-          "url": "https://tech.meituan.com/2026/09/03/meituan-Digital-Human-practice.html"
+          "url": "https://tech.meituan.com/2026/09/03/meituan-Digital-Human-practice.html",
+          "listingHash": "bcb14535f633e9856afa843c345279e8f0caf15b9a83a6ceffa8ab7cb542b3b8"
         }
       ],
       "duplicateCandidates": []
@@ -323,7 +331,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -338,7 +346,8 @@
         {
           "sourceId": "meituan",
           "externalId": "https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html",
-          "url": "https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html"
+          "url": "https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html",
+          "listingHash": "04319b7524a0e700e3f9463a9d7a15808cf83b656dcb6c67bb79d96a35fb8222"
         }
       ],
       "duplicateCandidates": []
@@ -361,7 +370,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -376,7 +385,8 @@
         {
           "sourceId": "meituan",
           "externalId": "https://tech.meituan.com/2026/10/15/Small-Language-Model-in-meituan.html",
-          "url": "https://tech.meituan.com/2026/10/15/Small-Language-Model-in-meituan.html"
+          "url": "https://tech.meituan.com/2026/10/15/Small-Language-Model-in-meituan.html",
+          "listingHash": "198101fd37dc39830d956dc328df4ff4d7be7cb46b72726ce52e008eda97f935"
         }
       ],
       "duplicateCandidates": []

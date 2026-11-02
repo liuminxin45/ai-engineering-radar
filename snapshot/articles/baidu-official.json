@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -35,7 +35,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/168876569",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/168876569"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/168876569",
+          "listingHash": "0e07e27d381f0988e624f2186fdadf108f968f77ae8f539e6327baae30c899e9"
         }
       ],
       "duplicateCandidates": []
@@ -59,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -74,7 +75,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/164122718",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/164122718"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/164122718",
+          "listingHash": "bd784335289db255c32b2022b447af5119a4f2cf13af21828f707e21d6ca50a4"
         }
       ],
       "duplicateCandidates": [
@@ -100,7 +102,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -115,7 +117,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/163830727",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/163830727"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/163830727",
+          "listingHash": "3042b5b37b75048ae626ef1930bf62db6027bfafc402bfd0350cfe9ede994ca0"
         }
       ],
       "duplicateCandidates": []
@@ -139,7 +142,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -154,7 +157,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/168028229",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/168028229"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/168028229",
+          "listingHash": "41e7c90261f24fc3aa5d562af36f3c43a5d259ca5cbafdde6e8309f7faadc470"
         }
       ],
       "duplicateCandidates": []
@@ -178,7 +182,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -193,7 +197,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/168653897",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/168653897"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/168653897",
+          "listingHash": "fd0a8158beebfb6603c55180404177378e62e7f3b289e0af75f754c1dd49e45f"
         }
       ],
       "duplicateCandidates": []
@@ -217,7 +222,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -232,7 +237,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/166842692",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/166842692"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/166842692",
+          "listingHash": "6bf46a3d3b2467171a7a37826e9235cbe3509a547f9fa291a8a9c76a26bf0844"
         }
       ],
       "duplicateCandidates": []
@@ -256,7 +262,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -271,7 +277,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/163946123",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/163946123"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/163946123",
+          "listingHash": "392646ead64c22ed9987f281a6fc59b648fe75f7000adb301bf777e56fd98f7c"
         }
       ],
       "duplicateCandidates": []
@@ -295,7 +302,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -310,7 +317,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/166483674",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/166483674"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/166483674",
+          "listingHash": "6be57924354d16de4c3276023e01365d06c19c2664472fb448b5f319507ed6ab"
         }
       ],
       "duplicateCandidates": []
@@ -334,7 +342,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -349,7 +357,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/166571249",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/166571249"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/166571249",
+          "listingHash": "5e1a54415a068507e1e14597ee5b4d4700d4ce2634ca674cd2563423b00dfdbc"
         }
       ],
       "duplicateCandidates": []
@@ -373,7 +382,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -388,7 +397,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/166340799",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/166340799"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/166340799",
+          "listingHash": "ccccbb96bbe4187349e87e6451266322c3af668e75dc71f4b4ee30f7e737762d"
         }
       ],
       "duplicateCandidates": []
@@ -412,7 +422,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -427,7 +437,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/166787432",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/166787432"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/166787432",
+          "listingHash": "5094bfa278d8740748753caf98c98b50b8507578159e137aeead640b4631f2fb"
         }
       ],
       "duplicateCandidates": []
@@ -451,7 +462,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -466,7 +477,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/168112191",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/168112191"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/168112191",
+          "listingHash": "b3a23fbac023cc6d4e9f9c2ef0d2512f2f5a271e702bce662909ae23d1e7915f"
         }
       ],
       "duplicateCandidates": []
@@ -489,7 +501,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "suspected",
@@ -509,7 +521,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/169465827",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/169465827"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/169465827",
+          "listingHash": "bc144ee77035b6b05b846be11ee78804ca978019e4d2657179f8f724fc3cd3a7"
         }
       ],
       "duplicateCandidates": []
@@ -533,7 +546,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -548,7 +561,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/165852941",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/165852941"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/165852941",
+          "listingHash": "78900200bb894c874dab92c71c80e4831ef698d3bbd0ec94fae847ab5d861f69"
         }
       ],
       "duplicateCandidates": []
@@ -572,7 +586,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -587,7 +601,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/168653681",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/168653681"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/168653681",
+          "listingHash": "db98a1fd8fcc6011b867542ee97c33501e981d9a3c783b9bfd9a2ed9d7fdd070"
         }
       ],
       "duplicateCandidates": []
@@ -611,7 +626,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -626,7 +641,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/166590240",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/166590240"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/166590240",
+          "listingHash": "915fe7bdacf640b17125039d4daef5dad6fe296751d080bed07d51769c5fa739"
         }
       ],
       "duplicateCandidates": []
@@ -650,7 +666,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -665,7 +681,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/164339137",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/164339137"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/164339137",
+          "listingHash": "e5efb11abbf2d989e0e40f59370f056cc6ccdd481ca9edeeabecccac1b841c0d"
         }
       ],
       "duplicateCandidates": []
@@ -689,7 +706,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -704,7 +721,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/168028257",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/168028257"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/168028257",
+          "listingHash": "0fc2ed5f95f4092b5b780d2fa86bb87a3cbf3fcd62225e34719a204a395fb6c3"
         }
       ],
       "duplicateCandidates": []
@@ -728,7 +746,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -743,7 +761,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/166787790",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/166787790"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/166787790",
+          "listingHash": "52dfe1d7de535699085da27d24de7ba0fcca6237a798cb0c36b7e475dcf18c74"
         }
       ],
       "duplicateCandidates": []
@@ -767,7 +786,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -782,7 +801,8 @@
         {
           "sourceId": "baidu-cloud-csdn-candidate",
           "externalId": "https://blog.csdn.net/2301_82040283/article/details/169146732",
-          "url": "https://blog.csdn.net/2301_82040283/article/details/169146732"
+          "url": "https://blog.csdn.net/2301_82040283/article/details/169146732",
+          "listingHash": "3ed05cd68defe6907b409521951548ff5e138e631a6ab780c8351322f809854e"
         }
       ],
       "duplicateCandidates": []

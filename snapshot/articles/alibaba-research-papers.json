@@ -30,7 +30,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -45,7 +45,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3830418.3843877",
-          "url": "https://doi.org/10.1145/3830418.3843877"
+          "url": "https://doi.org/10.1145/3830418.3843877",
+          "listingHash": "6ed99907584158d7b4477890b86de5bf3898db4cc71e87f3866960ef9780fda3"
         }
       ],
       "duplicateCandidates": []
@@ -79,7 +80,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -129,7 +130,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -178,7 +179,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -193,7 +194,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3832783.3834466",
-          "url": "https://doi.org/10.1145/3832783.3834466"
+          "url": "https://doi.org/10.1145/3832783.3834466",
+          "listingHash": "eb7be5dd99460aebafefabdc3624b8b9f15f60b78d5c42397c4d769e4428d22c"
         }
       ],
       "duplicateCandidates": []
@@ -227,7 +229,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -242,7 +244,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3832783.3834357",
-          "url": "https://doi.org/10.1145/3832783.3834357"
+          "url": "https://doi.org/10.1145/3832783.3834357",
+          "listingHash": "863e92b4f763f829c0c0660353244155d5af187066448f9e1411a26a9f6f4430"
         }
       ],
       "duplicateCandidates": []
@@ -278,7 +281,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -328,7 +331,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -343,7 +346,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.21203/rs.3.rs-10734118/v1",
-          "url": "https://doi.org/10.21203/rs.3.rs-10734118/v1"
+          "url": "https://doi.org/10.21203/rs.3.rs-10734118/v1",
+          "listingHash": "e907171319e3c15133f497fd64dd16fded9a4a13bbfa652d52a5bbbcb8813241"
         }
       ],
       "duplicateCandidates": []
@@ -377,7 +381,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -428,7 +432,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -443,7 +447,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3849815",
-          "url": "https://doi.org/10.1145/3849815"
+          "url": "https://doi.org/10.1145/3849815",
+          "listingHash": "f096a0be72589c2c64054ca38b4b07e397b2371343772bd55c8cb2a0221a92f6"
         }
       ],
       "duplicateCandidates": []
@@ -477,7 +482,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -492,7 +497,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3830418.3843852",
-          "url": "https://doi.org/10.1145/3830418.3843852"
+          "url": "https://doi.org/10.1145/3830418.3843852",
+          "listingHash": "31b608d1a894a3a3708ae3edc0f7b0843f6234704d797dc568bbd6421231ef95"
         }
       ],
       "duplicateCandidates": []
@@ -528,7 +534,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -543,7 +549,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1108/apjml-03-2026-0656",
-          "url": "https://doi.org/10.1108/apjml-03-2026-0656"
+          "url": "https://doi.org/10.1108/apjml-03-2026-0656",
+          "listingHash": "d3ff54dda7a8ba99aec7e0b293e4d1d270ffbbebc7f109bc60a2dcfb58d4059e"
         }
       ],
       "duplicateCandidates": []
@@ -577,7 +584,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -626,7 +633,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -675,7 +682,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -724,7 +731,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -773,7 +780,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -788,7 +795,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3832783.3834479",
-          "url": "https://doi.org/10.1145/3832783.3834479"
+          "url": "https://doi.org/10.1145/3832783.3834479",
+          "listingHash": "e09856d6628ad37caf97c50b5c1ef4783fbafa1b2f76c45110a6cb0526234b92"
         }
       ],
       "duplicateCandidates": []
@@ -822,7 +830,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -837,7 +845,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3773078.3831766",
-          "url": "https://doi.org/10.1145/3773078.3831766"
+          "url": "https://doi.org/10.1145/3773078.3831766",
+          "listingHash": "9ed35893dde65a6bd46fcf808307834862949eefde73e47792005f5d98d4bc90"
         }
       ],
       "duplicateCandidates": []
@@ -871,7 +880,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -922,7 +931,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -937,7 +946,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.3390/systems14101279",
-          "url": "https://doi.org/10.3390/systems14101279"
+          "url": "https://doi.org/10.3390/systems14101279",
+          "listingHash": "13b6e423c72a367ed91b00699e504db087f36b2cd41eb0a0733958bbaea97388"
         }
       ],
       "duplicateCandidates": []
@@ -972,7 +982,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -987,7 +997,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1088/1361-6501/aea87f",
-          "url": "https://doi.org/10.1088/1361-6501/aea87f"
+          "url": "https://doi.org/10.1088/1361-6501/aea87f",
+          "listingHash": "63aee4e32271a3020948ba740b97c1a6eab33aff384187ac84e68399f10c413c"
         }
       ],
       "duplicateCandidates": []
@@ -1021,7 +1032,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1072,7 +1083,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1087,7 +1098,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3846382",
-          "url": "https://doi.org/10.1145/3846382"
+          "url": "https://doi.org/10.1145/3846382",
+          "listingHash": "4ee19ed6602ac585d0f009f3cdcefc6d615ab4346c4e743104751c631b705564"
         }
       ],
       "duplicateCandidates": []
@@ -1121,7 +1133,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1136,7 +1148,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3832783.3834530",
-          "url": "https://doi.org/10.1145/3832783.3834530"
+          "url": "https://doi.org/10.1145/3832783.3834530",
+          "listingHash": "b13ad222e1b81dc2c56204e894d9ee8cf14e024472eee4a71be349d01cd12902"
         }
       ],
       "duplicateCandidates": []
@@ -1172,7 +1185,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1187,7 +1200,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.59275/j.melba.2026-d29c",
-          "url": "https://doi.org/10.59275/j.melba.2026-d29c"
+          "url": "https://doi.org/10.59275/j.melba.2026-d29c",
+          "listingHash": "7384e7b64713159452af4b4adf5ce9e86febb1ccc4c7d7c6a1396d28715c9233"
         }
       ],
       "duplicateCandidates": []
@@ -1221,7 +1235,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1236,7 +1250,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3843282.3844438",
-          "url": "https://doi.org/10.1145/3843282.3844438"
+          "url": "https://doi.org/10.1145/3843282.3844438",
+          "listingHash": "cbd757d105ade99713e0af9f44ecf73223c826f60b8cbec0a421d9c5eae0bee9"
         }
       ],
       "duplicateCandidates": []
@@ -1270,7 +1285,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1285,7 +1300,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3832783.3834433",
-          "url": "https://doi.org/10.1145/3832783.3834433"
+          "url": "https://doi.org/10.1145/3832783.3834433",
+          "listingHash": "3eabe78bacbce1a9ae20fa9e6d190bb19c4d7560d9d59bf2f1f4fad3742203e7"
         }
       ],
       "duplicateCandidates": []
@@ -1321,7 +1337,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1336,7 +1352,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3856803",
-          "url": "https://doi.org/10.1145/3856803"
+          "url": "https://doi.org/10.1145/3856803",
+          "listingHash": "d88b411dcd39d0c66782fe1f1bd5a553764e970f478e2d254f80bc93548101c5"
         }
       ],
       "duplicateCandidates": []
@@ -1370,7 +1387,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1385,7 +1402,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3830418.3843895",
-          "url": "https://doi.org/10.1145/3830418.3843895"
+          "url": "https://doi.org/10.1145/3830418.3843895",
+          "listingHash": "bf56a87dcd3fc9b190b5eda5d81ca9d337438dcbdf07a39bcb902e8baffeb34c"
         }
       ],
       "duplicateCandidates": []
@@ -1420,7 +1438,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1435,7 +1453,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.64898/2026.10.22.760871",
-          "url": "https://doi.org/10.64898/2026.10.22.760871"
+          "url": "https://doi.org/10.64898/2026.10.22.760871",
+          "listingHash": "b70e59222ef5fa71e1166f0af19baa84141696064803260485e49048275133f4"
         }
       ],
       "duplicateCandidates": []
@@ -1469,7 +1488,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1484,7 +1503,8 @@
         {
           "sourceId": "alibaba-papers-crossref",
           "externalId": "10.1145/3830418.3843880",
-          "url": "https://doi.org/10.1145/3830418.3843880"
+          "url": "https://doi.org/10.1145/3830418.3843880",
+          "listingHash": "9d80e38d006ab0e8c95c3d81b0e8f001a6ebbcfc49b2ec45c56507609fa7f862"
         }
       ],
       "duplicateCandidates": []
@@ -1519,7 +1539,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",

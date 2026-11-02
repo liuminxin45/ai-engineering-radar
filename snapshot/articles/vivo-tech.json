@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -35,7 +35,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/164818128",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/164818128"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/164818128",
+          "listingHash": "7fcbbca074bd047214df7c04d93fd02bb7bd23064e86f59f09b02a4ac1962771"
         }
       ],
       "duplicateCandidates": []
@@ -59,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -74,7 +75,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/164113486",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/164113486"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/164113486",
+          "listingHash": "a07c15a298dd80439c0d6a426e7afdf3a6317d014f4466977aba42354d973106"
         }
       ],
       "duplicateCandidates": []
@@ -98,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -113,7 +115,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/169448596",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/169448596"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/169448596",
+          "listingHash": "e1ca122199d4bde67831eb730c6b55e48633f2fd06ca36d2e83af3cbc54eca72"
         }
       ],
       "duplicateCandidates": []
@@ -137,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -152,7 +155,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/165729154",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/165729154"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/165729154",
+          "listingHash": "31425deabb7113230f063c7c99ebab9abc3d74301ce304c38ed5034ede4c6a1c"
         }
       ],
       "duplicateCandidates": []
@@ -176,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -191,7 +195,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/164329320",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/164329320"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/164329320",
+          "listingHash": "0a36dca51b97d867d908ce1a340d2cd32de626ed12fa298aab1d50bb56ffd7e0"
         }
       ],
       "duplicateCandidates": []
@@ -215,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -230,7 +235,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/166595874",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/166595874"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/166595874",
+          "listingHash": "0bb16741385446af10fdb5b06484f4473abbc0260737beed8d2dc7f92dab492b"
         }
       ],
       "duplicateCandidates": []
@@ -254,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -269,7 +275,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/168752131",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/168752131"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/168752131",
+          "listingHash": "5c290b7e276562fef71b6750820ca682ce5c97be7851ccab473d9067dfa8dcb1"
         }
       ],
       "duplicateCandidates": []
@@ -293,7 +300,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -308,7 +315,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/168008408",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/168008408"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/168008408",
+          "listingHash": "8d783c830af20794487a105bdb23d99ea00514298eeaff37d8c9890a97626538"
         }
       ],
       "duplicateCandidates": []
@@ -332,7 +340,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -347,7 +355,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/163719331",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/163719331"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/163719331",
+          "listingHash": "a7736498951c19367e997a92b33f989eab6c14fa72a07d49361423c03f5fa1c0"
         }
       ],
       "duplicateCandidates": []
@@ -371,7 +380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -386,7 +395,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/164114672",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/164114672"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/164114672",
+          "listingHash": "2918af665ae9bef78ed28b136d5eca6d227dd2ad60d8cd0774e4aec4d3154970"
         }
       ],
       "duplicateCandidates": []
@@ -410,7 +420,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -425,7 +435,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/168002943",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/168002943"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/168002943",
+          "listingHash": "2901dfb042dcc47614268cf2c43c7364d72d2562fb23aa1ed5b8a9d9c653abd7"
         }
       ],
       "duplicateCandidates": []
@@ -449,7 +460,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -464,7 +475,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/164330112",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/164330112"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/164330112",
+          "listingHash": "98b16c23c8f67de494ab74a271f30ca14f1219cade63cf524801d28a8cf41f9b"
         }
       ],
       "duplicateCandidates": []
@@ -488,7 +500,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -503,7 +515,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/166594581",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/166594581"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/166594581",
+          "listingHash": "d791c2253e47c9d327f2831c419447a280c474a98456e9de86be652144a9a3c1"
         }
       ],
       "duplicateCandidates": []
@@ -527,7 +540,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -542,7 +555,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/169441251",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/169441251"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/169441251",
+          "listingHash": "48aad214f5c3d36e1e06db61f40f916e2284764fb3c8ad91ce991de227c902df"
         }
       ],
       "duplicateCandidates": []
@@ -566,7 +580,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -581,7 +595,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/168746978",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/168746978"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/168746978",
+          "listingHash": "87b3a402197f294ae2f2f6f9e237798164ef6d54f257068b704abee7c94262bc"
         }
       ],
       "duplicateCandidates": []
@@ -605,7 +620,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -620,7 +635,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/163720779",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/163720779"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/163720779",
+          "listingHash": "965c70b8277588796d2ff302fb1bf805a2f2078a0bd7c43df1465e360bd56415"
         }
       ],
       "duplicateCandidates": []
@@ -644,7 +660,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -659,7 +675,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/163910496",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/163910496"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/163910496",
+          "listingHash": "3a45677e1b64c78c72650fbc9bb1f17912ec2aa4d49e533e2e1392e53cc4a835"
         }
       ],
       "duplicateCandidates": []
@@ -683,7 +700,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -698,7 +715,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/163912378",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/163912378"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/163912378",
+          "listingHash": "fdc722366aa7e49d00cb67473711772bed7ec65d4b59b225e4da034602099c10"
         }
       ],
       "duplicateCandidates": []
@@ -722,7 +740,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -737,7 +755,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/164814736",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/164814736"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/164814736",
+          "listingHash": "c3846b8aa48edc761cc1b9b1654375e6895d5027cd4efd6cbd8d25dee2e69e2c"
         }
       ],
       "duplicateCandidates": []
@@ -761,7 +780,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -776,7 +795,8 @@
         {
           "sourceId": "vivo-csdn",
           "externalId": "https://blog.csdn.net/vivo_tech/article/details/163531909",
-          "url": "https://blog.csdn.net/vivo_tech/article/details/163531909"
+          "url": "https://blog.csdn.net/vivo_tech/article/details/163531909",
+          "listingHash": "eb8a9a2101a0dd1e1886e4a842002880ec4b580e9e65670ef00cf72a7db4ac1d"
         }
       ],
       "duplicateCandidates": []

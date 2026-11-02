@@ -10,9 +10,9 @@
     "sourceId": "netease-csdn",
     "sourceUrl": "https://blog.csdn.net/wangyiyungw/article/details/152609271",
     "engineVersion": "radar-reader-1",
-    "checkedAt": "2026-11-02T07:56:00.326Z",
-    "nextRetryAt": "2026-11-09T07:56:00.326Z",
-    "error": "RSSHub 未取得 CSDN 正文，仅返回摘要（原站可能仍受 521 限制）。",
+    "checkedAt": "2026-11-02T09:08:15.229Z",
+    "nextRetryAt": "2026-11-09T09:08:15.229Z",
+    "error": "RSSHub HTTP 502",
     "warnings": []
   }
 }

@@ -2,12 +2,13 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "baidu-cloud-csdn-candidate",
-    "lastCheckedAt": "2026-11-02T07:41:20.434Z",
-    "lastSuccessAt": "2026-11-02T07:41:20.434Z",
-    "nextRunAt": "2026-11-03T07:41:20.434Z",
+    "lastCheckedAt": "2026-11-02T09:03:49.171Z",
+    "lastSuccessAt": "2026-11-02T09:03:49.171Z",
+    "nextRunAt": "2026-11-03T09:03:49.171Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,
-    "httpStatus": 200
+    "httpStatus": 200,
+    "etag": "\"9c3501d7205ef2c4a1f4d79a7d3cf44089d9856bdf5907857a8aa0198ee37ca4\""
   }
 }

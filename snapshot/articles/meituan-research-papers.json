@@ -30,7 +30,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -79,7 +79,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -94,7 +94,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3770855.3817466",
-          "url": "https://doi.org/10.1145/3770855.3817466"
+          "url": "https://doi.org/10.1145/3770855.3817466",
+          "listingHash": "1eb09de2f90d3882d8469810e195720e282e1853b247d883c1f0419d0320c54f"
         }
       ],
       "duplicateCandidates": []
@@ -128,7 +129,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -143,7 +144,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3805712.3809636",
-          "url": "https://doi.org/10.1145/3805712.3809636"
+          "url": "https://doi.org/10.1145/3805712.3809636",
+          "listingHash": "da5b156092138ebfa7d0690a1286605c3c3159d15931d3fed1876170a75ca3b8"
         }
       ],
       "duplicateCandidates": []
@@ -177,7 +179,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -192,7 +194,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3770855.3817703",
-          "url": "https://doi.org/10.1145/3770855.3817703"
+          "url": "https://doi.org/10.1145/3770855.3817703",
+          "listingHash": "85a444331e04354e2040fcd133f704b63df51233ead4b67431318f5873a952b4"
         }
       ],
       "duplicateCandidates": []
@@ -226,7 +229,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -284,7 +287,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -299,7 +302,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3819238",
-          "url": "https://doi.org/10.1145/3819238"
+          "url": "https://doi.org/10.1145/3819238",
+          "listingHash": "7a27ce22dbeef46e561aa693bda87aa6fe255aeabadcda036c2acc6bb8e72cce"
         }
       ],
       "duplicateCandidates": []
@@ -333,7 +337,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -348,7 +352,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3773078.3831742",
-          "url": "https://doi.org/10.1145/3773078.3831742"
+          "url": "https://doi.org/10.1145/3773078.3831742",
+          "listingHash": "1a8570e1fded112db5feba246ad57d87a9cf1b45776b5d0acb1283bd291940a9"
         }
       ],
       "duplicateCandidates": []
@@ -431,7 +436,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -446,7 +451,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3770855.3818434",
-          "url": "https://doi.org/10.1145/3770855.3818434"
+          "url": "https://doi.org/10.1145/3770855.3818434",
+          "listingHash": "94842102cfa3a8d0d0fe1ff5295f095e92c332f5b0771279f89399278faa84b9"
         }
       ],
       "duplicateCandidates": []
@@ -480,7 +486,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -495,7 +501,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3773078.3831746",
-          "url": "https://doi.org/10.1145/3773078.3831746"
+          "url": "https://doi.org/10.1145/3773078.3831746",
+          "listingHash": "6cffd2475d2b595cd66255e56cad9878ca4d4afbbd667e1b4f7f412c73ed2bcb"
         }
       ],
       "duplicateCandidates": []
@@ -530,7 +537,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -579,7 +586,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -594,7 +601,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3770855.3818500",
-          "url": "https://doi.org/10.1145/3770855.3818500"
+          "url": "https://doi.org/10.1145/3770855.3818500",
+          "listingHash": "5606184d5bd2dc06bc80b72e1c521f6ac3b64e7d2a9f043d3cd63391206b885f"
         }
       ],
       "duplicateCandidates": []
@@ -628,7 +636,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -643,7 +651,8 @@
         {
           "sourceId": "longcat-hf-papers",
           "externalId": "2610.37662",
-          "url": "https://arxiv.org/abs/2610.37662"
+          "url": "https://arxiv.org/abs/2610.37662",
+          "listingHash": "3d3bb3216bd95768427b715d3cd72aaf1f322ff10f4cd24a93a70c0e62d16e82"
         }
       ],
       "duplicateCandidates": []
@@ -677,7 +686,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -692,7 +701,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3770855.3818452",
-          "url": "https://doi.org/10.1145/3770855.3818452"
+          "url": "https://doi.org/10.1145/3770855.3818452",
+          "listingHash": "4ee94183dbf539c5eb88e69a7109a383190fab4ae4d4d71de1b00d34d42f20cc"
         }
       ],
       "duplicateCandidates": []
@@ -726,7 +736,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -741,7 +751,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3773078.3831759",
-          "url": "https://doi.org/10.1145/3773078.3831759"
+          "url": "https://doi.org/10.1145/3773078.3831759",
+          "listingHash": "bac32dffdf0b9ae44c187af84961b4711583d1fb063878d0a6379683a3be868d"
         }
       ],
       "duplicateCandidates": []
@@ -782,7 +793,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -797,7 +808,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3770855.3817663",
-          "url": "https://doi.org/10.1145/3770855.3817663"
+          "url": "https://doi.org/10.1145/3770855.3817663",
+          "listingHash": "45694138d444012d7de60197fadcbe1bfcb6244fccc65de8a598c7b3f7c6e8f8"
         }
       ],
       "duplicateCandidates": []
@@ -833,7 +845,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -848,7 +860,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1287/mnsc.2025.02458",
-          "url": "https://doi.org/10.1287/mnsc.2025.02458"
+          "url": "https://doi.org/10.1287/mnsc.2025.02458",
+          "listingHash": "aa40a43960facbe3343ade051e8090ce9d9b015ba527ca063845efef15b77c80"
         }
       ],
       "duplicateCandidates": []
@@ -882,7 +895,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -897,7 +910,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3770855.3818894",
-          "url": "https://doi.org/10.1145/3770855.3818894"
+          "url": "https://doi.org/10.1145/3770855.3818894",
+          "listingHash": "d5c7f24676e3a4e1961265043e41801b2d78629bf9615ef68a2d0db73206b333"
         }
       ],
       "duplicateCandidates": []
@@ -931,7 +945,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -980,7 +994,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1029,7 +1043,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1092,7 +1106,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1141,7 +1155,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1156,7 +1170,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3770855.3818997",
-          "url": "https://doi.org/10.1145/3770855.3818997"
+          "url": "https://doi.org/10.1145/3770855.3818997",
+          "listingHash": "db6880d7b239911cc402a97ae62bb1816fea237205abb8f2ddd75c338ea6f01f"
         }
       ],
       "duplicateCandidates": []
@@ -1239,7 +1254,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1254,7 +1269,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3770855.3817641",
-          "url": "https://doi.org/10.1145/3770855.3817641"
+          "url": "https://doi.org/10.1145/3770855.3817641",
+          "listingHash": "0e0fd81cc61fd0110bcaf4a75c4f9daf1d1bec0205837b16594a290cc952d67d"
         }
       ],
       "duplicateCandidates": []
@@ -1290,7 +1306,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1305,7 +1321,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1287/mnsc.2023.02419",
-          "url": "https://doi.org/10.1287/mnsc.2023.02419"
+          "url": "https://doi.org/10.1287/mnsc.2023.02419",
+          "listingHash": "a877d63c8a8c4adfbb720291c057ca2a477208dd5278381b736d9918b1ed7774"
         }
       ],
       "duplicateCandidates": []
@@ -1339,7 +1356,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1354,7 +1371,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3805712.3809845",
-          "url": "https://doi.org/10.1145/3805712.3809845"
+          "url": "https://doi.org/10.1145/3805712.3809845",
+          "listingHash": "66f7be4b9fb4738df449c644e7a40116b310849f7621421a796868295bd47ec2"
         }
       ],
       "duplicateCandidates": []
@@ -1388,7 +1406,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1403,7 +1421,8 @@
         {
           "sourceId": "longcat-hf-papers",
           "externalId": "2610.21656",
-          "url": "https://arxiv.org/abs/2610.21656"
+          "url": "https://arxiv.org/abs/2610.21656",
+          "listingHash": "28ff4e9c8540978395f5a95949c3b819f04ea65e87de87d08e753e8e908102b1"
         }
       ],
       "duplicateCandidates": []
@@ -1437,7 +1456,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1452,7 +1471,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3770855.3818370",
-          "url": "https://doi.org/10.1145/3770855.3818370"
+          "url": "https://doi.org/10.1145/3770855.3818370",
+          "listingHash": "1381f74d67d1562299bbfd97805371c382fcd7272c2a9a792c50bb1587ad7f11"
         }
       ],
       "duplicateCandidates": []
@@ -1486,7 +1506,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1501,7 +1521,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3805712.3808398",
-          "url": "https://doi.org/10.1145/3805712.3808398"
+          "url": "https://doi.org/10.1145/3805712.3808398",
+          "listingHash": "b426822d22e2313ddc791788fdf14ed6f0b8c89b443d4d3548287fbdd5f5633c"
         }
       ],
       "duplicateCandidates": []
@@ -1537,7 +1558,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1552,7 +1573,8 @@
         {
           "sourceId": "meituan-papers-crossref",
           "externalId": "10.1145/3828652",
-          "url": "https://doi.org/10.1145/3828652"
+          "url": "https://doi.org/10.1145/3828652",
+          "listingHash": "0232e0f0a45192d6d7298b9686123b53f8500e00f023c28d0a2b7764346b41cd"
         }
       ],
       "duplicateCandidates": []
@@ -1586,7 +1608,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1635,7 +1657,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1686,7 +1708,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",

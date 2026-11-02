@@ -19,7 +19,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -34,7 +34,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "sapo",
-          "url": "https://qwen.ai/blog?id=sapo"
+          "url": "https://qwen.ai/blog?id=sapo",
+          "listingHash": "ae2e5115f5904473b6e742b90fc50ea3c586a415cdba3009d630c5b1a996b26d"
         }
       ],
       "duplicateCandidates": []
@@ -57,7 +58,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -72,7 +73,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-robotsuite",
-          "url": "https://qwen.ai/blog?id=qwen-robotsuite"
+          "url": "https://qwen.ai/blog?id=qwen-robotsuite",
+          "listingHash": "93f7fd34f7c43078180da355e6c5eae3be6f73882a77834b4ec87552bc2c9347"
         }
       ],
       "duplicateCandidates": []
@@ -95,7 +97,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -110,7 +112,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2.5-math-prm",
-          "url": "https://qwen.ai/blog?id=qwen2.5-math-prm"
+          "url": "https://qwen.ai/blog?id=qwen2.5-math-prm",
+          "listingHash": "20c99288d15a2d89f0a401b2eb24fb7b82861e883e5cfcdd6346b711ac299a02"
         }
       ],
       "duplicateCandidates": []
@@ -133,7 +136,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -148,7 +151,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "ofa",
-          "url": "https://qwen.ai/blog?id=ofa"
+          "url": "https://qwen.ai/blog?id=ofa",
+          "listingHash": "6f9e198190f85ee80f1195aa37cbc4f8951f286796d88075cd690b90e0230fa1"
         }
       ],
       "duplicateCandidates": []
@@ -171,7 +175,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -186,7 +190,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.6-max-preview",
-          "url": "https://qwen.ai/blog?id=qwen3.6-max-preview"
+          "url": "https://qwen.ai/blog?id=qwen3.6-max-preview",
+          "listingHash": "3b18acb7f3058641ae1b96c63f0f709ef2acc796c601fbd566134df96cd7b0bd"
         }
       ],
       "duplicateCandidates": []
@@ -209,7 +214,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -224,7 +229,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2.5-omni",
-          "url": "https://qwen.ai/blog?id=qwen2.5-omni"
+          "url": "https://qwen.ai/blog?id=qwen2.5-omni",
+          "listingHash": "e00806899ede772116dc4d1d763710d8d35596cb6252686868f0973e47330545"
         }
       ],
       "duplicateCandidates": []
@@ -247,7 +253,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -262,7 +268,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-coder",
-          "url": "https://qwen.ai/blog?id=qwen3-coder"
+          "url": "https://qwen.ai/blog?id=qwen3-coder",
+          "listingHash": "a7590df86dc24b38365fe2f1561eac8501fa1952a88e026e9b42fd3652e995d4"
         }
       ],
       "duplicateCandidates": []
@@ -285,7 +292,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -300,7 +307,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2.5-coder",
-          "url": "https://qwen.ai/blog?id=qwen2.5-coder"
+          "url": "https://qwen.ai/blog?id=qwen2.5-coder",
+          "listingHash": "edde72cbd25efde663e95855f4f5c00ce454188fb8f89a7bde9672c54e279a37"
         }
       ],
       "duplicateCandidates": []
@@ -323,7 +331,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -338,7 +346,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2.5-max",
-          "url": "https://qwen.ai/blog?id=qwen2.5-max"
+          "url": "https://qwen.ai/blog?id=qwen2.5-max",
+          "listingHash": "1615ca34764065f318caa4f2c6aeb5f1d3c4e9b0fbcaf78eaa213ea21a000de6"
         }
       ],
       "duplicateCandidates": []
@@ -361,7 +370,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -376,7 +385,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "chinese-clip",
-          "url": "https://qwen.ai/blog?id=chinese-clip"
+          "url": "https://qwen.ai/blog?id=chinese-clip",
+          "listingHash": "79e9a162dc752374e1f62fe5ff20959a624452f9a3136f336c0231fb553ee96c"
         }
       ],
       "duplicateCandidates": []
@@ -399,7 +409,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -414,7 +424,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "e-commerce-bench",
-          "url": "https://qwen.ai/blog?id=e-commerce-bench"
+          "url": "https://qwen.ai/blog?id=e-commerce-bench",
+          "listingHash": "de5777dd59c5a51d8c88f6447d1c7262f8ffd28c8305b1114dd62cb2f3221ea3"
         }
       ],
       "duplicateCandidates": []
@@ -437,7 +448,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -452,7 +463,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen1.5-32b",
-          "url": "https://qwen.ai/blog?id=qwen1.5-32b"
+          "url": "https://qwen.ai/blog?id=qwen1.5-32b",
+          "listingHash": "8d99da59bb71bd9e67d49a9b686db79bda66e38caeb62424c0cd6dc06f20bbdf"
         }
       ],
       "duplicateCandidates": []
@@ -475,7 +487,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -490,7 +502,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen",
-          "url": "https://qwen.ai/blog?id=qwen"
+          "url": "https://qwen.ai/blog?id=qwen",
+          "listingHash": "b46ac743857cc829af7362e23913f2d49a76851d885ac1ea9b579ccdecf143a5"
         }
       ],
       "duplicateCandidates": [
@@ -516,7 +529,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -531,7 +544,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.5-omni",
-          "url": "https://qwen.ai/blog?id=qwen3.5-omni"
+          "url": "https://qwen.ai/blog?id=qwen3.5-omni",
+          "listingHash": "ebe7a4c6b5195a077d8fbf89ed1f696298d2d5a1a83ed8433c3bd11649e8b5da"
         }
       ],
       "duplicateCandidates": []
@@ -554,7 +568,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -569,7 +583,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.6-35b-a3b",
-          "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b"
+          "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+          "listingHash": "0b2fe99e2f13cd2f795f3e7acdd632e3a2dc631cbfe2f6d0301a4d16a05c9cc4"
         }
       ],
       "duplicateCandidates": []
@@ -592,7 +607,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -607,7 +622,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-agent-2405",
-          "url": "https://qwen.ai/blog?id=qwen-agent-2405"
+          "url": "https://qwen.ai/blog?id=qwen-agent-2405",
+          "listingHash": "641b321d44f8498d0d59e5dc3e4e82d1df030c32e850ad6745bc881a7f6238a2"
         }
       ],
       "duplicateCandidates": []
@@ -630,7 +646,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -645,7 +661,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-image-2.0",
-          "url": "https://qwen.ai/blog?id=qwen-image-2.0"
+          "url": "https://qwen.ai/blog?id=qwen-image-2.0",
+          "listingHash": "6956092ee5600af6bc85bf516516b15d7944efebfe216fc56938aff7816fb0dc"
         }
       ],
       "duplicateCandidates": []
@@ -668,7 +685,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -683,7 +700,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-max",
-          "url": "https://qwen.ai/blog?id=qwen3-max"
+          "url": "https://qwen.ai/blog?id=qwen3-max",
+          "listingHash": "007e73bc43aeea7cb35c47021fc6a86e096e3542445fe377d3df70dd0bcdc992"
         }
       ],
       "duplicateCandidates": []
@@ -706,7 +724,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -721,7 +739,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3tts-0115",
-          "url": "https://qwen.ai/blog?id=qwen3tts-0115"
+          "url": "https://qwen.ai/blog?id=qwen3tts-0115",
+          "listingHash": "9508ceaa4334e5985fda17cfafdbae742fc1e45e9c783342d7faac6cfb0ef8e8"
         }
       ],
       "duplicateCandidates": []
@@ -744,7 +763,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -759,7 +778,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-tts-vc-voicedesign",
-          "url": "https://qwen.ai/blog?id=qwen3-tts-vc-voicedesign"
+          "url": "https://qwen.ai/blog?id=qwen3-tts-vc-voicedesign",
+          "listingHash": "be83ade814faec81e33bf6f960ed63e5421824d1a087caaf5a14351f810c4ffc"
         }
       ],
       "duplicateCandidates": []
@@ -782,7 +802,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -797,7 +817,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwq-max-preview",
-          "url": "https://qwen.ai/blog?id=qwq-max-preview"
+          "url": "https://qwen.ai/blog?id=qwq-max-preview",
+          "listingHash": "5a9136f7c685ac3f86fef49f9f65db5063b2ae3569385fd1b6bec48e85ae94f8"
         }
       ],
       "duplicateCandidates": []
@@ -820,7 +841,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -835,7 +856,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.8",
-          "url": "https://qwen.ai/blog?id=qwen3.8"
+          "url": "https://qwen.ai/blog?id=qwen3.8",
+          "listingHash": "137694c18d290ec44c8045682a29c651cf1d80c8dd236fdb84bedb2d036e639e"
         }
       ],
       "duplicateCandidates": []
@@ -858,7 +880,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -873,7 +895,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "gspo",
-          "url": "https://qwen.ai/blog?id=gspo"
+          "url": "https://qwen.ai/blog?id=gspo",
+          "listingHash": "bca2bf7a549d10ae56d0d6dd07fa11ff08841851158fdd786baaec749e0025bc"
         }
       ],
       "duplicateCandidates": []
@@ -896,7 +919,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -911,7 +934,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2.5-llm",
-          "url": "https://qwen.ai/blog?id=qwen2.5-llm"
+          "url": "https://qwen.ai/blog?id=qwen2.5-llm",
+          "listingHash": "8f9b14d309bc31317864ce3fd62891f500d44278cbc61e3431dcac0bb41777cd"
         }
       ],
       "duplicateCandidates": []
@@ -934,7 +958,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -949,7 +973,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "flashqla",
-          "url": "https://qwen.ai/blog?id=flashqla"
+          "url": "https://qwen.ai/blog?id=flashqla",
+          "listingHash": "9f2d4427d1dd601f016d4ca93f27e434ba97e30e03818b6294a57717e08bd239"
         }
       ],
       "duplicateCandidates": []
@@ -972,7 +997,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -987,7 +1012,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-image-edit-2511",
-          "url": "https://qwen.ai/blog?id=qwen-image-edit-2511"
+          "url": "https://qwen.ai/blog?id=qwen-image-edit-2511",
+          "listingHash": "84de9f2d27b41355c22aa0c66a214cad3bde8760367a10da2e13be585c8b64f3"
         }
       ],
       "duplicateCandidates": []
@@ -1010,7 +1036,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1025,7 +1051,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-omni-flash-20251201",
-          "url": "https://qwen.ai/blog?id=qwen3-omni-flash-20251201"
+          "url": "https://qwen.ai/blog?id=qwen3-omni-flash-20251201",
+          "listingHash": "ebef0f37d7ddeaecbe57dcd1bf380aa45482f43c99c1c3fbb97ed88a1128bb6a"
         }
       ],
       "duplicateCandidates": []
@@ -1048,7 +1075,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1063,7 +1090,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-max-thinking",
-          "url": "https://qwen.ai/blog?id=qwen3-max-thinking"
+          "url": "https://qwen.ai/blog?id=qwen3-max-thinking",
+          "listingHash": "f221a867111c87501c067f41fcb1748d92a332a780543701ea6e63ad15211abb"
         }
       ],
       "duplicateCandidates": []
@@ -1086,7 +1114,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1101,7 +1129,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-vl",
-          "url": "https://qwen.ai/blog?id=qwen-vl"
+          "url": "https://qwen.ai/blog?id=qwen-vl",
+          "listingHash": "89a7cfe1822fe437ea3d374cfb5cf06f44781062c67ff9c9d2c10bbb43f036cf"
         }
       ],
       "duplicateCandidates": [
@@ -1126,7 +1155,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1141,7 +1170,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-scope",
-          "url": "https://qwen.ai/blog?id=qwen-scope"
+          "url": "https://qwen.ai/blog?id=qwen-scope",
+          "listingHash": "b21764c3192f81a098ac3e77262cc887cea637435c64309ffde8056c4a612891"
         }
       ],
       "duplicateCandidates": []
@@ -1164,7 +1194,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1179,7 +1209,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen1.5",
-          "url": "https://qwen.ai/blog?id=qwen1.5"
+          "url": "https://qwen.ai/blog?id=qwen1.5",
+          "listingHash": "de86ea3635432e4fff2be09ef0c4021187a07e1db64a7b62add067efe5b28b80"
         }
       ],
       "duplicateCandidates": []
@@ -1202,7 +1233,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1217,7 +1248,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "ofasys",
-          "url": "https://qwen.ai/blog?id=ofasys"
+          "url": "https://qwen.ai/blog?id=ofasys",
+          "listingHash": "be5ca061525c9e7769c3495901f3f3bae8816dee8d897e01380f9fd7f223bd8f"
         }
       ],
       "duplicateCandidates": []
@@ -1240,7 +1272,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1255,7 +1287,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-image-layered",
-          "url": "https://qwen.ai/blog?id=qwen-image-layered"
+          "url": "https://qwen.ai/blog?id=qwen-image-layered",
+          "listingHash": "9fbaf73dd539e20b3d6ee520b9f1a7c303f23e4ed7acbed34a24f581f66a094b"
         }
       ],
       "duplicateCandidates": []
@@ -1278,7 +1311,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1293,7 +1326,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwenvla",
-          "url": "https://qwen.ai/blog?id=qwenvla"
+          "url": "https://qwen.ai/blog?id=qwenvla",
+          "listingHash": "f514180ced89d21522188dd91acdc3cb13cd54c3a52f8563939b12adb2b877e8"
         }
       ],
       "duplicateCandidates": []
@@ -1316,7 +1350,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1331,7 +1365,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-robotnav",
-          "url": "https://qwen.ai/blog?id=qwen-robotnav"
+          "url": "https://qwen.ai/blog?id=qwen-robotnav",
+          "listingHash": "f4d241215fd83d0825d7c2ec686c5ae07bd30a613b58872608d69abea7eaeb12"
         }
       ],
       "duplicateCandidates": []
@@ -1354,7 +1389,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1369,7 +1404,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-vlo",
-          "url": "https://qwen.ai/blog?id=qwen-vlo"
+          "url": "https://qwen.ai/blog?id=qwen-vlo",
+          "listingHash": "779191b670ac0f617c8f5a7d6de549da789bf40d764a7f51732d39cf29032862"
         }
       ],
       "duplicateCandidates": [
@@ -1394,7 +1430,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1409,7 +1445,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2.5-vl",
-          "url": "https://qwen.ai/blog?id=qwen2.5-vl"
+          "url": "https://qwen.ai/blog?id=qwen2.5-vl",
+          "listingHash": "59db62f0a3fb9936cc4820a098032ef7d7b8253a1ecec651e784db5dd34caa4c"
         }
       ],
       "duplicateCandidates": []
@@ -1432,7 +1469,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1447,7 +1484,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.6-27b",
-          "url": "https://qwen.ai/blog?id=qwen3.6-27b"
+          "url": "https://qwen.ai/blog?id=qwen3.6-27b",
+          "listingHash": "03df403e3fdd283f3806884a26bf327ee8c4f7734da3fc1901c821fe3e36db33"
         }
       ],
       "duplicateCandidates": []
@@ -1470,7 +1508,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1485,7 +1523,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-drive-1.0",
-          "url": "https://qwen.ai/blog?id=qwen-drive-1.0"
+          "url": "https://qwen.ai/blog?id=qwen-drive-1.0",
+          "listingHash": "cf3aa4bce562b53a3cb10a983c7c6189c9a2ca7f5b4529363fe603945eadcce0"
         }
       ],
       "duplicateCandidates": []
@@ -1508,7 +1547,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1523,7 +1562,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-image-3.0",
-          "url": "https://qwen.ai/blog?id=qwen-image-3.0"
+          "url": "https://qwen.ai/blog?id=qwen-image-3.0",
+          "listingHash": "66b8b9058aa44dbb95ba67288779d8282d25b58d5f8ca82974642669f1adb329"
         }
       ],
       "duplicateCandidates": []
@@ -1546,7 +1586,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1561,7 +1601,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-next",
-          "url": "https://qwen.ai/blog?id=qwen3-next"
+          "url": "https://qwen.ai/blog?id=qwen3-next",
+          "listingHash": "d58b705ebaa87c3805924bd551b4f860734d0325897782ca185a448014ee9fca"
         }
       ],
       "duplicateCandidates": []
@@ -1584,7 +1625,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1599,7 +1640,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-tts",
-          "url": "https://qwen.ai/blog?id=qwen-tts"
+          "url": "https://qwen.ai/blog?id=qwen-tts",
+          "listingHash": "1e4a6ffa3ba93f69781c727d879fb7cad56fd1b7c64a805e7821e08d55a7d040"
         }
       ],
       "duplicateCandidates": []
@@ -1622,7 +1664,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1637,7 +1679,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "agent",
-          "url": "https://qwen.ai/blog?id=agent"
+          "url": "https://qwen.ai/blog?id=agent",
+          "listingHash": "07e9fc3ef6aaf41a7b381c8bae1d78b3968eb373f4572977fa393d07dd29a69a"
         }
       ],
       "duplicateCandidates": []
@@ -1660,7 +1703,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1675,7 +1718,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2.5-1m",
-          "url": "https://qwen.ai/blog?id=qwen2.5-1m"
+          "url": "https://qwen.ai/blog?id=qwen2.5-1m",
+          "listingHash": "999805c65b4abac129d6189f57a5ef9ce09b16a53dbaaceadeed27a3c5f9f7c8"
         }
       ],
       "duplicateCandidates": []
@@ -1698,7 +1742,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1713,7 +1757,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-deepresearch",
-          "url": "https://qwen.ai/blog?id=qwen-deepresearch"
+          "url": "https://qwen.ai/blog?id=qwen-deepresearch",
+          "listingHash": "22825b642bd12e638ca702e4a75eaad611ea921f088bf5f1f298ca221f81e18b"
         }
       ],
       "duplicateCandidates": []
@@ -1736,7 +1781,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1751,7 +1796,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2.5",
-          "url": "https://qwen.ai/blog?id=qwen2.5"
+          "url": "https://qwen.ai/blog?id=qwen2.5",
+          "listingHash": "c066b8cb61f9d7311666bee9c5856cdfabfd935da2c1beab9b84a99173bd3367"
         }
       ],
       "duplicateCandidates": []
@@ -1774,7 +1820,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1789,7 +1835,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2",
-          "url": "https://qwen.ai/blog?id=qwen2"
+          "url": "https://qwen.ai/blog?id=qwen2",
+          "listingHash": "de8b7a68eab12c7170aa7157283846c5853d603478ad552fa70cc315d2e689f4"
         }
       ],
       "duplicateCandidates": []
@@ -1812,7 +1859,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1827,7 +1874,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-image-2.1",
-          "url": "https://qwen.ai/blog?id=qwen-image-2.1"
+          "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+          "listingHash": "f9d0be06181b8645288c0a9b2668686fef8342a3d3a16b689f315c469d71d138"
         }
       ],
       "duplicateCandidates": []
@@ -1850,7 +1898,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1865,7 +1913,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2.5-turbo",
-          "url": "https://qwen.ai/blog?id=qwen2.5-turbo"
+          "url": "https://qwen.ai/blog?id=qwen2.5-turbo",
+          "listingHash": "b5f5a5d09e209a59020bfe73f6f11afb6fbc9c7e66db1bca9390c1576b17b92a"
         }
       ],
       "duplicateCandidates": []
@@ -1888,7 +1937,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1903,7 +1952,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwq-32b",
-          "url": "https://qwen.ai/blog?id=qwq-32b"
+          "url": "https://qwen.ai/blog?id=qwq-32b",
+          "listingHash": "c746efcbbbdf7ad848a2a692bf1eb54c7969f9a5cb472e852510dc5a9e99cb4d"
         }
       ],
       "duplicateCandidates": []
@@ -1926,7 +1976,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1941,7 +1991,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "codeqwen1.5",
-          "url": "https://qwen.ai/blog?id=codeqwen1.5"
+          "url": "https://qwen.ai/blog?id=codeqwen1.5",
+          "listingHash": "6723046ef900f362908981c29316f85571f445ac23b38ceddbd23f10755ae157"
         }
       ],
       "duplicateCandidates": []
@@ -1964,7 +2015,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1979,7 +2030,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-max-0428",
-          "url": "https://qwen.ai/blog?id=qwen-max-0428"
+          "url": "https://qwen.ai/blog?id=qwen-max-0428",
+          "listingHash": "7ac894452205e332c2d23b49aea20fd818409245b50e9bd96ea03bd3ec69c230"
         }
       ],
       "duplicateCandidates": []
@@ -2002,7 +2054,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2017,7 +2069,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3guard",
-          "url": "https://qwen.ai/blog?id=qwen3guard"
+          "url": "https://qwen.ai/blog?id=qwen3guard",
+          "listingHash": "ab4e23010b76c0d8fd6a142dffe978c41173912751bf7a31cb01e7610c2fa650"
         }
       ],
       "duplicateCandidates": []
@@ -2040,7 +2093,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2055,7 +2108,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-vl-embedding",
-          "url": "https://qwen.ai/blog?id=qwen3-vl-embedding"
+          "url": "https://qwen.ai/blog?id=qwen3-vl-embedding",
+          "listingHash": "937bbfab20bbb63f18900b5c140c1abb69c037959efe662a38c2db47cbf4ddd2"
         }
       ],
       "duplicateCandidates": []
@@ -2078,7 +2132,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2093,7 +2147,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-image-edit-2509",
-          "url": "https://qwen.ai/blog?id=qwen-image-edit-2509"
+          "url": "https://qwen.ai/blog?id=qwen-image-edit-2509",
+          "listingHash": "6f2923c8ac5835970003a0827016e30cb786507d7e5862877003b4b4d80558dd"
         }
       ],
       "duplicateCandidates": []
@@ -2116,7 +2171,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2131,7 +2186,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "global-load-balance",
-          "url": "https://qwen.ai/blog?id=global-load-balance"
+          "url": "https://qwen.ai/blog?id=global-load-balance",
+          "listingHash": "c0ba6827cae9caaa0fc0646a769a3b26d9caddb527d35afef00cd4fe934adc66"
         }
       ],
       "duplicateCandidates": []
@@ -2154,7 +2210,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2169,7 +2225,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qvq-72b-preview",
-          "url": "https://qwen.ai/blog?id=qvq-72b-preview"
+          "url": "https://qwen.ai/blog?id=qvq-72b-preview",
+          "listingHash": "574fc37c8e4b52b403349c51208bccfe0e86e441a75b98975b2b6ffc4293b9f7"
         }
       ],
       "duplicateCandidates": []
@@ -2192,7 +2249,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2207,7 +2264,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.5-max-preview",
-          "url": "https://qwen.ai/blog?id=qwen3.5-max-preview"
+          "url": "https://qwen.ai/blog?id=qwen3.5-max-preview",
+          "listingHash": "921413efbc51896a4e0111cd534ce64a6acead7f0e228dec5fb371ec11760118"
         }
       ],
       "duplicateCandidates": []
@@ -2230,7 +2288,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2245,7 +2303,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2-vl",
-          "url": "https://qwen.ai/blog?id=qwen2-vl"
+          "url": "https://qwen.ai/blog?id=qwen2-vl",
+          "listingHash": "d81f494acdf7c73aaed857df7e07fea4e3c138d4e43cb06436cd70d86f145c09"
         }
       ],
       "duplicateCandidates": []
@@ -2268,7 +2327,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2283,7 +2342,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-embedding",
-          "url": "https://qwen.ai/blog?id=qwen3-embedding"
+          "url": "https://qwen.ai/blog?id=qwen3-embedding",
+          "listingHash": "8dfe11c40a9b787b73ac75b149d8e48f4c00fec6f3a3be5bf0dfc1aa833593a0"
         }
       ],
       "duplicateCandidates": []
@@ -2306,7 +2366,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2321,7 +2381,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.8-livetranslate",
-          "url": "https://qwen.ai/blog?id=qwen3.8-livetranslate"
+          "url": "https://qwen.ai/blog?id=qwen3.8-livetranslate",
+          "listingHash": "bd839263564891d5621023d29becf817e46603bcfc7eb344e4041ce429fb4703"
         }
       ],
       "duplicateCandidates": []
@@ -2344,7 +2405,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2359,7 +2420,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-coder-next",
-          "url": "https://qwen.ai/blog?id=qwen3-coder-next"
+          "url": "https://qwen.ai/blog?id=qwen3-coder-next",
+          "listingHash": "76140def8c49bf4015f6681307af626d168d4f86ef3442c25c4cc9e599ff0d8c"
         }
       ],
       "duplicateCandidates": []
@@ -2382,7 +2444,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2397,7 +2459,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2.5-vl-32b",
-          "url": "https://qwen.ai/blog?id=qwen2.5-vl-32b"
+          "url": "https://qwen.ai/blog?id=qwen2.5-vl-32b",
+          "listingHash": "af340c97ddfd79bb6fdb9beaf9c92ba0f334da9e6833afeebf943ee439e14b84"
         }
       ],
       "duplicateCandidates": []
@@ -2420,7 +2483,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2435,7 +2498,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2.5-coder-family",
-          "url": "https://qwen.ai/blog?id=qwen2.5-coder-family"
+          "url": "https://qwen.ai/blog?id=qwen2.5-coder-family",
+          "listingHash": "6873fc288e10bea847aa982561af22df1186f8718e179230fabdae8d20ba10d5"
         }
       ],
       "duplicateCandidates": []
@@ -2458,7 +2522,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2473,7 +2537,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwq-32b-preview",
-          "url": "https://qwen.ai/blog?id=qwq-32b-preview"
+          "url": "https://qwen.ai/blog?id=qwq-32b-preview",
+          "listingHash": "89259e3ce15a0e3601f6f79d5ad0454d7300feae20224da8c6f8c8e4d9b2f9f4"
         }
       ],
       "duplicateCandidates": []
@@ -2496,7 +2561,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2511,7 +2576,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.7-plus",
-          "url": "https://qwen.ai/blog?id=qwen3.7-plus"
+          "url": "https://qwen.ai/blog?id=qwen3.7-plus",
+          "listingHash": "ea506b9879cdde46c05da4b05744700eab6034dcb2753db78371af8df96626ff"
         }
       ],
       "duplicateCandidates": []
@@ -2534,7 +2600,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2549,7 +2615,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.8-flash-next",
-          "url": "https://qwen.ai/blog?id=qwen3.8-flash-next"
+          "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+          "listingHash": "0fbb1a57d2f49e3216f076e48bd21060a2b49a03e53c02597110fe316046a5d8"
         }
       ],
       "duplicateCandidates": []
@@ -2572,7 +2639,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2587,7 +2654,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-image",
-          "url": "https://qwen.ai/blog?id=qwen-image"
+          "url": "https://qwen.ai/blog?id=qwen-image",
+          "listingHash": "6c517469085bc15c2b1b40f6328c6d83d031d394373b005b9bc4a0bfea85e1ec"
         }
       ],
       "duplicateCandidates": []
@@ -2610,7 +2678,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2625,7 +2693,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-agentworld",
-          "url": "https://qwen.ai/blog?id=qwen-agentworld"
+          "url": "https://qwen.ai/blog?id=qwen-agentworld",
+          "listingHash": "462463783d3674febd353e357a48853a97ce8a8e1eaa7123e1d66d18af2ba19f"
         }
       ],
       "duplicateCandidates": []
@@ -2648,7 +2717,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2663,7 +2732,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-robotworld",
-          "url": "https://qwen.ai/blog?id=qwen-robotworld"
+          "url": "https://qwen.ai/blog?id=qwen-robotworld",
+          "listingHash": "f33522d7cfa031bb7d051ecf90c356aa722351e51bd0633ca730983e30a391b5"
         }
       ],
       "duplicateCandidates": []
@@ -2686,7 +2756,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2701,7 +2771,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-image-edit",
-          "url": "https://qwen.ai/blog?id=qwen-image-edit"
+          "url": "https://qwen.ai/blog?id=qwen-image-edit",
+          "listingHash": "0774282b4c2370c2dab0b5cfbb854e4b20f2787717ab5f26f552b298ad16be00"
         }
       ],
       "duplicateCandidates": []
@@ -2724,7 +2795,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2739,7 +2810,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-image-2512",
-          "url": "https://qwen.ai/blog?id=qwen-image-2512"
+          "url": "https://qwen.ai/blog?id=qwen-image-2512",
+          "listingHash": "e94fc9377dabcf622f605ce7bce7ef69d75d7b994949680558c2b6da08ba5eb6"
         }
       ],
       "duplicateCandidates": []
@@ -2762,7 +2834,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2777,7 +2849,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2.5-math",
-          "url": "https://qwen.ai/blog?id=qwen2.5-math"
+          "url": "https://qwen.ai/blog?id=qwen2.5-math",
+          "listingHash": "b3c0630db89f4052619ca7bf995503566b787ab8937ec01a7dbec6b0ebe9c572"
         }
       ],
       "duplicateCandidates": []
@@ -2800,7 +2873,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2815,7 +2888,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-tts",
-          "url": "https://qwen.ai/blog?id=qwen3-tts"
+          "url": "https://qwen.ai/blog?id=qwen3-tts",
+          "listingHash": "84047536b352254716b16ca6ecb7f6044249befc3b47c9457ddc921ff90051ed"
         }
       ],
       "duplicateCandidates": []
@@ -2838,7 +2912,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2853,7 +2927,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen1.5-110b",
-          "url": "https://qwen.ai/blog?id=qwen1.5-110b"
+          "url": "https://qwen.ai/blog?id=qwen1.5-110b",
+          "listingHash": "60e0b2078a0d8653c3a6f2e3fa78daa96db386335766424512410a79266d3a33"
         }
       ],
       "duplicateCandidates": []
@@ -2876,7 +2951,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2891,7 +2966,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-omni",
-          "url": "https://qwen.ai/blog?id=qwen3-omni"
+          "url": "https://qwen.ai/blog?id=qwen3-omni",
+          "listingHash": "65b8d08a702f8316715127c02bcb9649d1e7ef071fe8211e25601b08281c06e6"
         }
       ],
       "duplicateCandidates": []
@@ -2914,7 +2990,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2929,7 +3005,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.7",
-          "url": "https://qwen.ai/blog?id=qwen3.7"
+          "url": "https://qwen.ai/blog?id=qwen3.7",
+          "listingHash": "b947c29205c4ce2f7d95317c9540f852254f6000e94a34ef2f9786680ac2014c"
         }
       ],
       "duplicateCandidates": []
@@ -2952,7 +3029,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2967,7 +3044,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-vl",
-          "url": "https://qwen.ai/blog?id=qwen3-vl"
+          "url": "https://qwen.ai/blog?id=qwen3-vl",
+          "listingHash": "5338dd663136715e25bac5c7fe1e80af88bae448bd169f12b70fbafa864d69e0"
         }
       ],
       "duplicateCandidates": []
@@ -2990,7 +3068,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3005,7 +3083,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.8-omni-flash",
-          "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+          "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+          "listingHash": "7a18184f8209791581b54b72e2842fa25c3b30826200a36b84b49faec4ef5d8b"
         }
       ],
       "duplicateCandidates": []
@@ -3028,7 +3107,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3043,7 +3122,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2-audio",
-          "url": "https://qwen.ai/blog?id=qwen2-audio"
+          "url": "https://qwen.ai/blog?id=qwen2-audio",
+          "listingHash": "d9455e1eb96fead373900803db8fefbac4c96617c5c62c6cf26e6102ae5ba301"
         }
       ],
       "duplicateCandidates": []
@@ -3066,7 +3146,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3081,7 +3161,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qvq-max-preview",
-          "url": "https://qwen.ai/blog?id=qvq-max-preview"
+          "url": "https://qwen.ai/blog?id=qvq-max-preview",
+          "listingHash": "6df259ae177abc882c468dfe87436e2d33fabe0a5eb235bfd84177bee1cd9182"
         }
       ],
       "duplicateCandidates": []
@@ -3104,7 +3185,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3119,7 +3200,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-moe",
-          "url": "https://qwen.ai/blog?id=qwen-moe"
+          "url": "https://qwen.ai/blog?id=qwen-moe",
+          "listingHash": "cd8a02679d6cbc94dcd0958c120a99380bae9c5f70b7f6d03ebd9f761aa88d19"
         }
       ],
       "duplicateCandidates": []
@@ -3142,7 +3224,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3157,7 +3239,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.5-livetranslate",
-          "url": "https://qwen.ai/blog?id=qwen3.5-livetranslate"
+          "url": "https://qwen.ai/blog?id=qwen3.5-livetranslate",
+          "listingHash": "e5592dbc87157631e1a1da9fd36dc32cafd34a90af886a5cc467684861527403"
         }
       ],
       "duplicateCandidates": []
@@ -3180,7 +3263,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3195,7 +3278,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-tts-1128",
-          "url": "https://qwen.ai/blog?id=qwen3-tts-1128"
+          "url": "https://qwen.ai/blog?id=qwen3-tts-1128",
+          "listingHash": "7b224bf452e8d5447bde93003d7d45ad1c05cd81c955713020aa1844cb5608e6"
         }
       ],
       "duplicateCandidates": []
@@ -3218,7 +3302,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3233,7 +3317,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-mt",
-          "url": "https://qwen.ai/blog?id=qwen-mt"
+          "url": "https://qwen.ai/blog?id=qwen-mt",
+          "listingHash": "502215e376c0918781a04a24e23e1db6ceacfa957963450e89cc40eed20d00db"
         }
       ],
       "duplicateCandidates": []
@@ -3256,7 +3341,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3271,7 +3356,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.5",
-          "url": "https://qwen.ai/blog?id=qwen3.5"
+          "url": "https://qwen.ai/blog?id=qwen3.5",
+          "listingHash": "d1ddbbebbfbcb579803a50c17a1cc62b8360032fef0f0b89f00fbc80b0ee99fa"
         }
       ],
       "duplicateCandidates": []
@@ -3294,7 +3380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3309,7 +3395,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen-robotmanip",
-          "url": "https://qwen.ai/blog?id=qwen-robotmanip"
+          "url": "https://qwen.ai/blog?id=qwen-robotmanip",
+          "listingHash": "2a461026d382c061514765291187e7cf1fd3a59755dff1525702c6399a2e6adf"
         }
       ],
       "duplicateCandidates": []
@@ -3332,7 +3419,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3347,7 +3434,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3",
-          "url": "https://qwen.ai/blog?id=qwen3"
+          "url": "https://qwen.ai/blog?id=qwen3",
+          "listingHash": "155e370d6ed333d7ecf31aab7479844cae4b2cda4f040b35c3fa4397064aeabe"
         }
       ],
       "duplicateCandidates": []
@@ -3370,7 +3458,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3385,7 +3473,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3-livetranslate",
-          "url": "https://qwen.ai/blog?id=qwen3-livetranslate"
+          "url": "https://qwen.ai/blog?id=qwen3-livetranslate",
+          "listingHash": "3245f7f93f2ab39ee098f03b65854beebf2daa0b76adbbbeddc0fd50bb9a6ed8"
         }
       ],
       "duplicateCandidates": []
@@ -3408,7 +3497,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3423,7 +3512,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen2-math",
-          "url": "https://qwen.ai/blog?id=qwen2-math"
+          "url": "https://qwen.ai/blog?id=qwen2-math",
+          "listingHash": "965dc1049f71de84b58684f08c4c22f7803079a070d27c730eac833b12cdcc36"
         }
       ],
       "duplicateCandidates": []
@@ -3446,7 +3536,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3461,7 +3551,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3asr",
-          "url": "https://qwen.ai/blog?id=qwen3asr"
+          "url": "https://qwen.ai/blog?id=qwen3asr",
+          "listingHash": "c858cfea9ae4bb4a3c2f98c431ef941a7633963eec882be6e69bcbb1aadf7adb"
         }
       ],
       "duplicateCandidates": []
@@ -3484,7 +3575,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3499,7 +3590,8 @@
         {
           "sourceId": "qwen-research",
           "externalId": "qwen3.6",
-          "url": "https://qwen.ai/blog?id=qwen3.6"
+          "url": "https://qwen.ai/blog?id=qwen3.6",
+          "listingHash": "2849be1149b4a483179e413f5ee84ecbdc0426f841a30279579bad63835fd423"
         }
       ],
       "duplicateCandidates": []

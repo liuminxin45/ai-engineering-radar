@@ -2,17 +2,31 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "f9bdabe8886db237a773",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "<p>在商业智能与 AI/ML 技术深度融合的今天，数据处理效率已成为企业突破增长瓶颈的核心竞争力。而 Velox 作为一款开源统一执行引擎，正以革命性的技术架构改写数据处理的游戏规则 —— 它凭借先进的向量化技术、编码感知的自适应执行方式，以及对现代硬件性能的极致挖掘，让 Presto、Spark 等主流数据平台与 AI/ML 工作负载的运行效率实现质的飞跃。</p> \n<p></p> \n<p><img alt=\"图片\" height=\"608\" src=\"https://i-blog.csdnimg.cn/img_convert/7ec99da4e9c0ac8d3a548b2770a881d5.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p>现在，中国数据领域的从业者们迎来了与 Velox 深度对话的绝佳契机：Velox 首届中国大会（VeloxCon China 2025）将于&nbsp;<strong>2025 年 12 月 13 日</strong>在北京举办！这场由蚂蚁开源、Meta、IBM 联合主办的技术盛会，将汇聚全球顶尖工程师与社区爱好者，用一天时间解锁数据处理的前沿密码。</p> \n<p>活动时间：</p> \n<p>2025 年 12 月 13 日 09:30-17:30</p> \n<p>活动地点：</p> \n<p>北京 · 海淀区丽金智地中心-东塔</p> \n<p>蚂蚁 T 空间 3 楼报告厅</p> \n<p></p> \n<h2 id=\"section-veloxcon-china-2025-三大亮点抢先看\">VeloxCon China 2025 三大亮点抢先看<a class=\"heading-anchor\" href=\"#section-veloxcon-china-2025-三大亮点抢先看\" aria-label=\"链接到本节：VeloxCon China 2025 三大亮点抢先看\">#</a></h2> \n<p></p> \n<p>作为 Velox 技术生态在国内的首次正式亮相，大会将呈现三大核心亮点：</p> \n<ul><li> <p><strong>顶级阵容倾囊相授：</strong>项目核心工程师将亲临现场，回溯 Velox 从 Meta 内部实践走向开源生态的发展历程，揭秘其在向量化执行、内存管理等核心模块的优化哲学。</p> </li><li> <p>关键技术深度拆解：围绕 Velox、Presto C++、Gluten、GPU 加速等主题展开的深入探讨，无论是批处理场景的 ETL 优化，还是流处理场景的实时分析，都能找到答案。</p> </li><li> <p>中国实践首次集结：聚焦 Velox 在国内的落地案例，邀请国内知名厂商一线工程师和社区开发者分享技术实践。</p> </li></ul> \n<p></p> \n<p><img alt=\"图片\" height=\"325\" src=\"https://i-blog.csdnimg.cn/img_convert/55b219e6adfecd9555fb8cb442979172.png\" width=\"325\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p><strong>扫描二维码</strong>或<strong>复制链接到浏览器</strong>注册参会</p> \n<p><a title=\"http://bagevent.com/event/veloxcon-china-2025\" href=\"http://bagevent.com/event/veloxcon-china-2025\" target=\"_blank\" rel=\"noopener noreferrer\">http://bagevent.com/event/veloxcon-china-2025</a></p> \n<h4>议题征集通道正式开启</h4> \n<p>大会现面向全球社区公开征集议题，无论你是深耕 Velox 源码的核心开发者，还是将其落地于生产环境的实践者，亦或是探索其未来潜力的研究者，我们都期待你的分享。</p> \n<p></p> \n<p><img alt=\"图片\" height=\"325\" src=\"https://i-blog.csdnimg.cn/img_convert/32353be859085ca683c90ab1819be4d8.png\" width=\"325\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p><strong>扫描二维码</strong>或<strong>复制链接到浏览器</strong>提交议题</p> \n<p><a title=\"https://sessionize.com/veloxcon-china-2025/\" href=\"https://sessionize.com/veloxcon-china-2025/\" target=\"_blank\" rel=\"noopener noreferrer\">https://sessionize.com/veloxcon-china-2025/</a></p> \n<p>注：投稿时请使用英文，演讲时中/英文皆可</p> \n<h4>活动组织者</h4> \n<p>本次活动由蚂蚁开源、Meta、IBM&nbsp;联合主办。</p> \n<p>VeloxCon Progam Committee 将作为会议组织者推动会议进程，并制定议程以突出 Velox 生态系统中的最新创新成果、用例及进展。&nbsp;</p> \n<p></p> \n<h3 id=\"section-program-committee\">Program Committee<a class=\"heading-anchor\" href=\"#section-program-committee\" aria-label=\"链接到本节：Program Committee\">#</a></h3> \n<p></p> \n<p></p> \n<p><img alt=\"图片\" height=\"325\" src=\"https://i-blog.csdnimg.cn/img_convert/43dcf998e41c55d4155acc401f001780.png\" width=\"325\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p><strong>Ali LeClerc</strong></p> \n<p>IBM 开源战略负责人</p> \n<p></p> \n<p><img alt=\"图片\" height=\"325\" src=\"https://i-blog.csdnimg.cn/img_convert/e9e84758d3c69cc2731b2b035e4bd78e.jpeg\" width=\"325\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p><strong>Pedro Pedreira</strong></p> \n<p>Meta 软件工程师 / Velox Lead</p> \n<p></p> \n<p><img alt=\"图片\" height=\"325\" src=\"https://i-blog.csdnimg.cn/img_convert/dd200473b2ab90d055b445e07c5c0aaf.jpeg\" width=\"325\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p><strong>Xiaoxuan Meng</strong></p> \n<p>Meta 软件工程师</p> \n<p></p> \n<p><img alt=\"图片\" height=\"325\" src=\"https://i-blog.csdnimg.cn/img_convert/e4df7065723fcef732418d9773390291.jpeg\" width=\"325\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p><strong>尧远</strong></p> \n<p>蚂蚁集团湖仓引擎技术负责人</p> \n<p></p> \n<p><img alt=\"图片\" height=\"325\" src=\"https://i-blog.csdnimg.cn/img_convert/cc241118fd847457b4fff3bb46c80cfa.jpeg\" width=\"325\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<p><strong>江波</strong></p> \n<p>蚂蚁集团开源技术增长负责人</p> \n<p>从 Meta 内部的 “大一统” 执行引擎到服务全球的开源生态，Velox 的每一步成长都离不开社区的智慧碰撞。2025 年 12 月，让我们相聚北京，用思想的碰撞点燃数据技术的新可能。</p> \n<p>更多嘉宾阵容、议程安排将陆续公布，敬请关注大会后续动态。</p> \n<p></p> \n<p>点击「<a title=\"https://sessionize.com/veloxcon-china-2025/\" href=\"https://sessionize.com/veloxcon-china-2025/\" target=\"_blank\" rel=\"noopener noreferrer\">https://sessionize.com/veloxcon-china-2025/</a>」，立即提交议题！</p>",
+    "headings": [
+      {
+        "id": "section-veloxcon-china-2025-三大亮点抢先看",
+        "level": 2,
+        "text": "VeloxCon China 2025 三大亮点抢先看"
+      },
+      {
+        "id": "section-program-committee",
+        "level": 3,
+        "text": "Program Committee"
+      }
+    ],
+    "textLength": 1366,
+    "readingMinutes": 4,
     "sourceId": "ant-data-csdn",
     "sourceUrl": "https://blog.csdn.net/DB_GPT/article/details/154125614",
+    "ruleId": "rsshub-csdn",
+    "ruleVersion": "1",
     "engineVersion": "radar-reader-1",
-    "checkedAt": "2026-11-02T07:56:00.323Z",
-    "nextRetryAt": "2026-11-09T07:56:00.323Z",
-    "error": "RSSHub 未取得 CSDN 正文，仅返回摘要（原站可能仍受 521 限制）。",
+    "contentHash": "9f703e03d0bc7e07888b5d8db31926464ddbdd6a9024e4f91ceb08cae132471b",
+    "fetchedAt": "2026-11-02T09:08:11.573Z",
+    "checkedAt": "2026-11-02T09:08:11.573Z",
+    "nextRetryAt": "2026-12-02T09:08:11.573Z",
     "warnings": []
   }
 }

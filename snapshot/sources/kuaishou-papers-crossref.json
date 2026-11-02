@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "kuaishou-papers-crossref",
-    "lastCheckedAt": "2026-11-02T07:41:35.669Z",
-    "lastSuccessAt": "2026-11-02T07:41:35.669Z",
-    "nextRunAt": "2026-11-03T07:41:35.669Z",
+    "lastCheckedAt": "2026-11-02T09:04:05.520Z",
+    "lastSuccessAt": "2026-11-02T09:04:05.520Z",
+    "nextRunAt": "2026-11-03T09:04:05.520Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

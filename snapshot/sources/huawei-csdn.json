@@ -2,12 +2,13 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "huawei-csdn",
-    "lastCheckedAt": "2026-11-02T07:41:15.065Z",
-    "lastSuccessAt": "2026-11-02T07:41:15.065Z",
-    "nextRunAt": "2026-11-03T07:41:15.065Z",
+    "lastCheckedAt": "2026-11-02T09:03:45.473Z",
+    "lastSuccessAt": "2026-11-02T09:03:45.473Z",
+    "nextRunAt": "2026-11-03T09:03:45.473Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,
-    "httpStatus": 200
+    "httpStatus": 200,
+    "etag": "\"6998e9a11fbc19cf1d3b8da91ee66d9a8424f58272f22a88d804a4f72cb0f9eb\""
   }
 }

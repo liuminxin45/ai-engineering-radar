@@ -30,7 +30,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -45,7 +45,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1789028268607",
-          "url": "https://arxiv.org/abs/2606.21002"
+          "url": "https://arxiv.org/abs/2606.21002",
+          "listingHash": "5567b47bd7b35cd389cef0cb0d09008cb4060bc99407218f530d9b5a7b249590"
         }
       ],
       "duplicateCandidates": []
@@ -79,7 +80,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -94,7 +95,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1088/3050-287x/ae9e52",
-          "url": "https://doi.org/10.1088/3050-287x/ae9e52"
+          "url": "https://doi.org/10.1088/3050-287x/ae9e52",
+          "listingHash": "d04f62cd737834f5ea6664cb263c06cefec40a24e7667ca35efa6d0e27ff5a31"
         }
       ],
       "duplicateCandidates": []
@@ -128,7 +130,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -143,7 +145,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1788945878515",
-          "url": "https://arxiv.org/abs/2608.18027"
+          "url": "https://arxiv.org/abs/2608.18027",
+          "listingHash": "a926c901c0c6279dc4e51add327b906af770b69396b001b5fc285e3d921cb8aa"
         }
       ],
       "duplicateCandidates": []
@@ -177,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -192,7 +195,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3816891.3834848",
-          "url": "https://doi.org/10.1145/3816891.3834848"
+          "url": "https://doi.org/10.1145/3816891.3834848",
+          "listingHash": "ff6438e833d48f1aafa0690b5c53b23fb14c43a4cfbb01d6fcc38fb82881a7f5"
         }
       ],
       "duplicateCandidates": []
@@ -226,7 +230,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -241,7 +245,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1788945719301",
-          "url": "https://arxiv.org/abs/2607.21051"
+          "url": "https://arxiv.org/abs/2607.21051",
+          "listingHash": "11b54cff1cb794253f21105cb6039fe3dc34a867cb53da5ff9e35ce1cff03a76"
         }
       ],
       "duplicateCandidates": []
@@ -277,7 +282,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -326,7 +331,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -341,7 +346,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1791900842117",
-          "url": "https://arxiv.org/abs/2609.01437"
+          "url": "https://arxiv.org/abs/2609.01437",
+          "listingHash": "61d098a87add317010c55959e459f08a454b75cc7e6693b9cb90e61abcf70fea"
         }
       ],
       "duplicateCandidates": []
@@ -375,7 +381,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -390,7 +396,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1780985303142",
-          "url": "https://arxiv.org/abs/2605.31075"
+          "url": "https://arxiv.org/abs/2605.31075",
+          "listingHash": "0ac1683908431b371f931f61e15a8ad1925fbb0dbe0903e1c81ec58cb0ffbbd4"
         }
       ],
       "duplicateCandidates": []
@@ -424,7 +431,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -439,7 +446,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1782903797665",
-          "url": "https://arxiv.org/abs/2605.26647"
+          "url": "https://arxiv.org/abs/2605.26647",
+          "listingHash": "b4352bba2a88b79843cf608657761c6b5818e59921b0659e2759fde64207a17f"
         }
       ],
       "duplicateCandidates": []
@@ -473,7 +481,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -488,7 +496,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1791900694457",
-          "url": "https://arxiv.org/abs/2608.31111"
+          "url": "https://arxiv.org/abs/2608.31111",
+          "listingHash": "efd4e5f6ed1d5cc8f6fc22f21ddaa37e9e342f464ab282307421ad148a3fc106"
         }
       ],
       "duplicateCandidates": []
@@ -522,7 +531,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -537,7 +546,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3773078.3831864",
-          "url": "https://doi.org/10.1145/3773078.3831864"
+          "url": "https://doi.org/10.1145/3773078.3831864",
+          "listingHash": "408b870acabecbcf2d8316c0938d6d3a7e4833f65a099e1938730d108bf000a2"
         }
       ],
       "duplicateCandidates": []
@@ -571,7 +581,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -586,7 +596,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1788945623078",
-          "url": "https://arxiv.org/abs/2608.05747"
+          "url": "https://arxiv.org/abs/2608.05747",
+          "listingHash": "32b3894c8ef4aa87039e9adcf1ccc1407f1e1c6334236c75fec8d2ddd6d897b1"
         }
       ],
       "duplicateCandidates": []
@@ -620,7 +631,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -635,7 +646,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1782904147094",
-          "url": "https://arxiv.org/abs/2606.05031"
+          "url": "https://arxiv.org/abs/2606.05031",
+          "listingHash": "3aba58f926fdbe5d2012bf2ce12c4270380589296837e4c11ff2015668daae0a"
         }
       ],
       "duplicateCandidates": []
@@ -669,7 +681,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -684,7 +696,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1788945813291",
-          "url": "https://arxiv.org/abs/2608.11727"
+          "url": "https://arxiv.org/abs/2608.11727",
+          "listingHash": "20f3c76ccca1d857ba194fc48bdece491850f75c612850888a9eeaa1f7e62715"
         }
       ],
       "duplicateCandidates": []
@@ -720,7 +733,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -735,7 +748,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3844618",
-          "url": "https://doi.org/10.1145/3844618"
+          "url": "https://doi.org/10.1145/3844618",
+          "listingHash": "6bc5f94f331a58adb8ebd46c1ff202a75511d320adcf039a1fc4516117f2b748"
         }
       ],
       "duplicateCandidates": []
@@ -769,7 +783,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -784,7 +798,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1789045117354",
-          "url": "https://arxiv.org/abs/2607.00248"
+          "url": "https://arxiv.org/abs/2607.00248",
+          "listingHash": "9f56743457a61fbf822ec5c99a9dc6f1036aa8d71bfd288260a1597d0b5eb46a"
         }
       ],
       "duplicateCandidates": []
@@ -820,7 +835,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -835,7 +850,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3832099",
-          "url": "https://doi.org/10.1145/3832099"
+          "url": "https://doi.org/10.1145/3832099",
+          "listingHash": "64d37e387e0d6148a50302378a56cc679c7029392929774cba1963f3fb4b129c"
         }
       ],
       "duplicateCandidates": []
@@ -871,7 +887,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -886,7 +902,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1021/acs.jctc.6c00947",
-          "url": "https://doi.org/10.1021/acs.jctc.6c00947"
+          "url": "https://doi.org/10.1021/acs.jctc.6c00947",
+          "listingHash": "de485f17ad5dc481795c9c34b857563e3a2c8166e88c71f687716a4edcdae4f2"
         }
       ],
       "duplicateCandidates": []
@@ -922,7 +939,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -972,7 +989,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1021,7 +1038,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1036,7 +1053,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3832783.3834474",
-          "url": "https://doi.org/10.1145/3832783.3834474"
+          "url": "https://doi.org/10.1145/3832783.3834474",
+          "listingHash": "cee0c2f5b07c9eb8ac091c5faf25845a29026e7e27f57471fa19a392cc762c2b"
         }
       ],
       "duplicateCandidates": []
@@ -1070,7 +1088,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1119,7 +1137,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1134,7 +1152,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1788945520724",
-          "url": "https://arxiv.org/abs/2607.00724"
+          "url": "https://arxiv.org/abs/2607.00724",
+          "listingHash": "c90ac6f25f1a01ad89c92983503b66d4cc5c55262ccdf0d2cf9c7a15e223e639"
         }
       ],
       "duplicateCandidates": []
@@ -1168,7 +1187,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1219,7 +1238,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1268,7 +1287,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1283,7 +1302,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3830418.3843859",
-          "url": "https://doi.org/10.1145/3830418.3843859"
+          "url": "https://doi.org/10.1145/3830418.3843859",
+          "listingHash": "459398ea2a908c1e9a125bad1a1edb9a04ebfb30e408bfda55d901ad8afec9b8"
         }
       ],
       "duplicateCandidates": []
@@ -1319,7 +1339,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1334,7 +1354,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1002/aepp.70135",
-          "url": "https://doi.org/10.1002/aepp.70135"
+          "url": "https://doi.org/10.1002/aepp.70135",
+          "listingHash": "d396784d4878da1a95569325f1cdf39758e338ea4280a62476eccc29175c3f2a"
         }
       ],
       "duplicateCandidates": []
@@ -1370,7 +1391,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1385,7 +1406,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3820774",
-          "url": "https://doi.org/10.1145/3820774"
+          "url": "https://doi.org/10.1145/3820774",
+          "listingHash": "d7566aa89dab1898904ac687b3e5e66e3db1764d872299f3867b5ac34f7f1a1a"
         }
       ],
       "duplicateCandidates": []
@@ -1419,7 +1441,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1434,7 +1456,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1783396707305",
-          "url": "https://arxiv.org/abs/2607.05155"
+          "url": "https://arxiv.org/abs/2607.05155",
+          "listingHash": "1aa764ac24a2b9066420128c62cbeceba640728d12b77b2e4944adadb1c711f0"
         }
       ],
       "duplicateCandidates": []
@@ -1468,7 +1491,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1483,7 +1506,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3773078.3831777",
-          "url": "https://doi.org/10.1145/3773078.3831777"
+          "url": "https://doi.org/10.1145/3773078.3831777",
+          "listingHash": "94b632ba6ca6467c8db493d548269d8d36a2d2d4ebfda9130d386fd27eae07d6"
         }
       ],
       "duplicateCandidates": []
@@ -1517,7 +1541,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1566,7 +1590,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1581,7 +1605,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1782904028245",
-          "url": "https://arxiv.org/abs/2606.05850"
+          "url": "https://arxiv.org/abs/2606.05850",
+          "listingHash": "9d51193721e97349cb555a273a86acc679a56c0741f8495a3af9e2e057388ef9"
         }
       ],
       "duplicateCandidates": []
@@ -1615,7 +1640,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1666,7 +1691,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1681,7 +1706,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3829086",
-          "url": "https://doi.org/10.1145/3829086"
+          "url": "https://doi.org/10.1145/3829086",
+          "listingHash": "e17eb807c6b8b3ba075a6f7ab7c20e85cf607224685131e86a5560223667eddc"
         }
       ],
       "duplicateCandidates": []
@@ -1715,7 +1741,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1766,7 +1792,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1781,7 +1807,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3830084",
-          "url": "https://doi.org/10.1145/3830084"
+          "url": "https://doi.org/10.1145/3830084",
+          "listingHash": "29ffff591d199adeb295b831ff724d5f154a8332d34052b4c013b2a73f344b9d"
         }
       ],
       "duplicateCandidates": []
@@ -1815,7 +1842,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1830,7 +1857,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1792932657675",
-          "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/hyvsmeh7uhobf/recycler_arxiv%20(2).pdf"
+          "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/hyvsmeh7uhobf/recycler_arxiv%20(2).pdf",
+          "listingHash": "20e4944e994f2eac9bae8830175afb798d1ad2b9b32d73c4c31f36898540695f"
         }
       ],
       "duplicateCandidates": []
@@ -1864,7 +1892,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1915,7 +1943,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1930,7 +1958,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3832185",
-          "url": "https://doi.org/10.1145/3832185"
+          "url": "https://doi.org/10.1145/3832185",
+          "listingHash": "1cf0615d8d5302ad3aae5fe8dd1fdf7c1d30965a1085a50dec4ceabc282a614d"
         }
       ],
       "duplicateCandidates": []
@@ -1966,7 +1995,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1981,7 +2010,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1021/jacsau.6c00832",
-          "url": "https://doi.org/10.1021/jacsau.6c00832"
+          "url": "https://doi.org/10.1021/jacsau.6c00832",
+          "listingHash": "f5eca2b0659990da10e3b0428c97f4fe64a96ee32e366fcf3d9a92098e879eb6"
         }
       ],
       "duplicateCandidates": []
@@ -2017,7 +2047,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -2032,7 +2062,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1063/5.0337441",
-          "url": "https://doi.org/10.1063/5.0337441"
+          "url": "https://doi.org/10.1063/5.0337441",
+          "listingHash": "796e9d1ddc1cf872d1dc650add1d85c29b02d7372061667a0f40957db1bf4e1f"
         }
       ],
       "duplicateCandidates": []
@@ -2066,7 +2097,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2081,7 +2112,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3773078.3831932",
-          "url": "https://doi.org/10.1145/3773078.3831932"
+          "url": "https://doi.org/10.1145/3773078.3831932",
+          "listingHash": "e7467743ab10444d93d2d56e9d8099b5a3507d2fba60b2d2e5f9cee71fedf08c"
         }
       ],
       "duplicateCandidates": []
@@ -2115,7 +2147,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -2130,7 +2162,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1791900774400",
-          "url": "https://arxiv.org/abs/2608.31100"
+          "url": "https://arxiv.org/abs/2608.31100",
+          "listingHash": "33955b5e49b067e47935d4fb19f9210bfe8ba32a47286511c3ff070622638d79"
         }
       ],
       "duplicateCandidates": []
@@ -2164,7 +2197,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2179,7 +2212,8 @@
         {
           "sourceId": "seed-hf-papers",
           "externalId": "2610.12102",
-          "url": "https://arxiv.org/abs/2610.12102"
+          "url": "https://arxiv.org/abs/2610.12102",
+          "listingHash": "8b545e80b3b811ce17678acd9bf6e446c646aecbd45dfa2506b1db71b0268e36"
         }
       ],
       "duplicateCandidates": []
@@ -2215,7 +2249,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -2230,7 +2264,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1103/2kq2-5g5q",
-          "url": "https://doi.org/10.1103/2kq2-5g5q"
+          "url": "https://doi.org/10.1103/2kq2-5g5q",
+          "listingHash": "1eaa5e7015981119cd855e5fd08c260be3d61bdd0b7fae4c152949d84b46f272"
         }
       ],
       "duplicateCandidates": []
@@ -2264,7 +2299,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -2279,7 +2314,8 @@
         {
           "sourceId": "seed-official-papers",
           "externalId": "1791871731369",
-          "url": "https://arxiv.org/abs/2609.36322"
+          "url": "https://arxiv.org/abs/2609.36322",
+          "listingHash": "a2870bcb5a236337581d7055f463a5bd19156d1f56849020d558c36c1d3bc629"
         }
       ],
       "duplicateCandidates": []
@@ -2313,7 +2349,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2328,7 +2364,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3832783.3834524",
-          "url": "https://doi.org/10.1145/3832783.3834524"
+          "url": "https://doi.org/10.1145/3832783.3834524",
+          "listingHash": "9e3041f0c497bfe03d3a0445e9165e180d0ea860f6c9b683d19e7bfe6d7b5e7e"
         }
       ],
       "duplicateCandidates": []
@@ -2362,7 +2399,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2377,7 +2414,8 @@
         {
           "sourceId": "bytedance-papers-crossref",
           "externalId": "10.1145/3773078.3831918",
-          "url": "https://doi.org/10.1145/3773078.3831918"
+          "url": "https://doi.org/10.1145/3773078.3831918",
+          "listingHash": "df83314a0810b80af58671e4305e5a8f6d5eda3b1218fa0e5b7d6d42c9bb7b58"
         }
       ],
       "duplicateCandidates": []

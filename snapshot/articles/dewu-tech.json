@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -35,7 +35,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2716812",
-          "url": "https://developer.cloud.tencent.com/article/2716812"
+          "url": "https://developer.cloud.tencent.com/article/2716812",
+          "listingHash": "a81ae7bda46a833e86b10c21c1c53891a24dd6ecbdb9220b195cfc06187f98fc"
         }
       ],
       "duplicateCandidates": []
@@ -59,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -74,7 +75,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2714290",
-          "url": "https://developer.cloud.tencent.com/article/2714290"
+          "url": "https://developer.cloud.tencent.com/article/2714290",
+          "listingHash": "b3c09c6c4a8c0037f91184bd48f9bde6be49b56755fbf6522a5159db3695a78c"
         }
       ],
       "duplicateCandidates": []
@@ -98,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -113,7 +115,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2766437",
-          "url": "https://developer.cloud.tencent.com/article/2766437"
+          "url": "https://developer.cloud.tencent.com/article/2766437",
+          "listingHash": "a62c3b5e8f8307bc2fb291664631d31f92edb9f0ee4b7f29c00b613eda4f1fb8"
         }
       ],
       "duplicateCandidates": []
@@ -137,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -152,7 +155,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2729366",
-          "url": "https://developer.cloud.tencent.com/article/2729366"
+          "url": "https://developer.cloud.tencent.com/article/2729366",
+          "listingHash": "e4c75945147d72eb78ced887346d9d217eeae29a27e477fd3ed629a3da3a1c13"
         }
       ],
       "duplicateCandidates": []
@@ -176,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -191,7 +195,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2710241",
-          "url": "https://developer.cloud.tencent.com/article/2710241"
+          "url": "https://developer.cloud.tencent.com/article/2710241",
+          "listingHash": "4ca75c13714f9ac556e056d2317e96a99b2c009874ce02f0caecb22b96cad1c0"
         }
       ],
       "duplicateCandidates": []
@@ -215,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -230,7 +235,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2701896",
-          "url": "https://developer.cloud.tencent.com/article/2701896"
+          "url": "https://developer.cloud.tencent.com/article/2701896",
+          "listingHash": "f724ef49bf983ca6d1fd57e6f20a8e37d768e7bffc16fc29ee138a5580d01c43"
         }
       ],
       "duplicateCandidates": []
@@ -254,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -269,7 +275,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2705644",
-          "url": "https://developer.cloud.tencent.com/article/2705644"
+          "url": "https://developer.cloud.tencent.com/article/2705644",
+          "listingHash": "0c0cecf6eb09f211f09527783bdc4bb4d9517d3eb014980827ff91c618ee1f91"
         }
       ],
       "duplicateCandidates": []
@@ -293,7 +300,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -308,7 +315,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2771331",
-          "url": "https://developer.cloud.tencent.com/article/2771331"
+          "url": "https://developer.cloud.tencent.com/article/2771331",
+          "listingHash": "e166279fe21233201814ab9c3c81e67a2e0b15297227f654b43f4707e5f1f664"
         }
       ],
       "duplicateCandidates": []
@@ -332,7 +340,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -347,7 +355,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2761592",
-          "url": "https://developer.cloud.tencent.com/article/2761592"
+          "url": "https://developer.cloud.tencent.com/article/2761592",
+          "listingHash": "45a7597eb4a67e7c640a0f731779dc2a0e9e3abfd9fb622f17ddf32688bab8c1"
         }
       ],
       "duplicateCandidates": []
@@ -371,7 +380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -386,7 +395,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2769661",
-          "url": "https://developer.cloud.tencent.com/article/2769661"
+          "url": "https://developer.cloud.tencent.com/article/2769661",
+          "listingHash": "c5fbcd613f739cd79a86f0ec1dbd3cd79eb73c63ee3e77bdebcec52c2da814b5"
         }
       ],
       "duplicateCandidates": []
@@ -410,7 +420,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -425,7 +435,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2750363",
-          "url": "https://developer.cloud.tencent.com/article/2750363"
+          "url": "https://developer.cloud.tencent.com/article/2750363",
+          "listingHash": "a85e17d772c86765de6a458eac5236e798cee61be54c4ece715b71e0e2040a71"
         }
       ],
       "duplicateCandidates": []
@@ -449,7 +460,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -464,7 +475,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2732876",
-          "url": "https://developer.cloud.tencent.com/article/2732876"
+          "url": "https://developer.cloud.tencent.com/article/2732876",
+          "listingHash": "5256f06012c56be308d9a666347074fe2c18cbb2f1ce419051c104e754ffb089"
         }
       ],
       "duplicateCandidates": []
@@ -488,7 +500,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -503,7 +515,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2756439",
-          "url": "https://developer.cloud.tencent.com/article/2756439"
+          "url": "https://developer.cloud.tencent.com/article/2756439",
+          "listingHash": "a1ead128b62362b41eca360c31695dc0dab2995593ea1c478c0c6e7e487a4405"
         }
       ],
       "duplicateCandidates": []
@@ -527,7 +540,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -542,7 +555,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2725371",
-          "url": "https://developer.cloud.tencent.com/article/2725371"
+          "url": "https://developer.cloud.tencent.com/article/2725371",
+          "listingHash": "2fcbeea787eef7649765ac3105adf0b5cd665c3363804b5db989bbb9cee8f3e7"
         }
       ],
       "duplicateCandidates": []
@@ -566,7 +580,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -581,7 +595,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2745514",
-          "url": "https://developer.cloud.tencent.com/article/2745514"
+          "url": "https://developer.cloud.tencent.com/article/2745514",
+          "listingHash": "befed4a795d2f6e15845c6ef567bed8f598842f23182d44c8ce64f3244396e1a"
         }
       ],
       "duplicateCandidates": []
@@ -605,7 +620,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -620,7 +635,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2718272",
-          "url": "https://developer.cloud.tencent.com/article/2718272"
+          "url": "https://developer.cloud.tencent.com/article/2718272",
+          "listingHash": "f5035a5091f7987df309230e709236712729309a67db4eb38a52a44500de16bd"
         }
       ],
       "duplicateCandidates": []
@@ -644,7 +660,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -659,7 +675,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2721691",
-          "url": "https://developer.cloud.tencent.com/article/2721691"
+          "url": "https://developer.cloud.tencent.com/article/2721691",
+          "listingHash": "3a9570f54f7501e75e6a20325f0dc2e35844656fc0a8456ba03f46be828e30be"
         }
       ],
       "duplicateCandidates": []
@@ -683,7 +700,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -698,7 +715,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2740678",
-          "url": "https://developer.cloud.tencent.com/article/2740678"
+          "url": "https://developer.cloud.tencent.com/article/2740678",
+          "listingHash": "62e5f6435e1ed7b79ec9113f4d9091271971db034671c236684eeabd24c06d6a"
         }
       ],
       "duplicateCandidates": []
@@ -722,7 +740,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -737,7 +755,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2736684",
-          "url": "https://developer.cloud.tencent.com/article/2736684"
+          "url": "https://developer.cloud.tencent.com/article/2736684",
+          "listingHash": "a642cfdfa4173445b6dbd8c6eec0edecfac9e1bbecaba2423b7f07906ecd7a43"
         }
       ],
       "duplicateCandidates": []
@@ -761,7 +780,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -776,7 +795,8 @@
         {
           "sourceId": "dewu-tencent",
           "externalId": "2708833",
-          "url": "https://developer.cloud.tencent.com/article/2708833"
+          "url": "https://developer.cloud.tencent.com/article/2708833",
+          "listingHash": "f62027bbff5564d1f97bbf497239ba2ff2c9fee6dbdb5cc242e74139f0a3dd43"
         }
       ],
       "duplicateCandidates": []

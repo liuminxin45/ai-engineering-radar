@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -35,7 +35,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20261016A0AYDU00",
-          "url": "https://news.qq.com/rain/a/20261016A0AYDU00"
+          "url": "https://news.qq.com/rain/a/20261016A0AYDU00",
+          "listingHash": "cde7719f00c266d6cbdb11d79ffb5e18e59e594e47822148b2d218fb550c614e"
         }
       ],
       "duplicateCandidates": []
@@ -59,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -74,7 +75,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20261012A0994S00",
-          "url": "https://news.qq.com/rain/a/20261012A0994S00"
+          "url": "https://news.qq.com/rain/a/20261012A0994S00",
+          "listingHash": "ce9d6ee6652cbd36c452c44c1ec50c9a5e510e1f1410e29022d1d1af99157155"
         }
       ],
       "duplicateCandidates": []
@@ -98,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -113,7 +115,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20261023A0BDI100",
-          "url": "https://news.qq.com/rain/a/20261023A0BDI100"
+          "url": "https://news.qq.com/rain/a/20261023A0BDI100",
+          "listingHash": "f9a5dd31414ec356d6e63ecc59535f025d7edbe6b10ee08b51fb582453d7407c"
         }
       ],
       "duplicateCandidates": []
@@ -137,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -152,7 +155,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20261020A0BVMG00",
-          "url": "https://news.qq.com/rain/a/20261020A0BVMG00"
+          "url": "https://news.qq.com/rain/a/20261020A0BVMG00",
+          "listingHash": "0b6a20b51f15dff63cb0f92f68cad635c575bc340b4a4d8765759ae98c188f63"
         }
       ],
       "duplicateCandidates": []
@@ -176,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -191,7 +195,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20260917A0C6YR00",
-          "url": "https://news.qq.com/rain/a/20260917A0C6YR00"
+          "url": "https://news.qq.com/rain/a/20260917A0C6YR00",
+          "listingHash": "ee7e61504d1f554238a689124d3bcec92301c8102f3b55b67de913727fc532cd"
         }
       ],
       "duplicateCandidates": []
@@ -215,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -230,7 +235,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20260914A0B89Z00",
-          "url": "https://news.qq.com/rain/a/20260914A0B89Z00"
+          "url": "https://news.qq.com/rain/a/20260914A0B89Z00",
+          "listingHash": "3c34fd025e8f88ab9653d582b0acc80e250579759f9da8339d190f616dfdec9b"
         }
       ],
       "duplicateCandidates": []
@@ -254,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -269,7 +275,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20261030A0B2KI00",
-          "url": "https://news.qq.com/rain/a/20261030A0B2KI00"
+          "url": "https://news.qq.com/rain/a/20261030A0B2KI00",
+          "listingHash": "38ce75aa77fcad94cca46ccbedaee024f11ac98f9e6b43d0870dc4d8fa8dbeed"
         }
       ],
       "duplicateCandidates": []
@@ -293,7 +300,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -308,7 +315,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20260909A0CS6700",
-          "url": "https://news.qq.com/rain/a/20260909A0CS6700"
+          "url": "https://news.qq.com/rain/a/20260909A0CS6700",
+          "listingHash": "e56241d0421b32cc4cd1c373ff2892d8bd2d9ff232203f1ee5ebbfb8272ade07"
         }
       ],
       "duplicateCandidates": []
@@ -332,7 +340,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -347,7 +355,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20261009A0A0JA00",
-          "url": "https://news.qq.com/rain/a/20261009A0A0JA00"
+          "url": "https://news.qq.com/rain/a/20261009A0A0JA00",
+          "listingHash": "66d992a98fdd2e5b820284adf0475a664020beddc6ee35cca82f1f2909c659c8"
         }
       ],
       "duplicateCandidates": []
@@ -371,7 +380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -386,7 +395,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20260916A0BUHJ00",
-          "url": "https://news.qq.com/rain/a/20260916A0BUHJ00"
+          "url": "https://news.qq.com/rain/a/20260916A0BUHJ00",
+          "listingHash": "313f4443dd31846503f7a241cd734729aee141d0e20d13619dd1782943fa796c"
         }
       ],
       "duplicateCandidates": []
@@ -410,7 +420,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -425,7 +435,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20260923A0A8W700",
-          "url": "https://news.qq.com/rain/a/20260923A0A8W700"
+          "url": "https://news.qq.com/rain/a/20260923A0A8W700",
+          "listingHash": "184d2ae7ed57207cb450732e4d99176e1e594cdcd9fc326ce535c02de841671f"
         }
       ],
       "duplicateCandidates": []
@@ -449,7 +460,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -464,7 +475,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20261028A0B11F00",
-          "url": "https://news.qq.com/rain/a/20261028A0B11F00"
+          "url": "https://news.qq.com/rain/a/20261028A0B11F00",
+          "listingHash": "5a517e0b882a0a2f5f8351ade51ee985f08236686295cb4b8ede149ad859f7a1"
         }
       ],
       "duplicateCandidates": []
@@ -488,7 +500,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -503,7 +515,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20260924A0CGM800",
-          "url": "https://news.qq.com/rain/a/20260924A0CGM800"
+          "url": "https://news.qq.com/rain/a/20260924A0CGM800",
+          "listingHash": "9fef25d49c1bd2f697d5e7b0a66f0e55e49ef845aa590e79e389c112fa48c84c"
         }
       ],
       "duplicateCandidates": []
@@ -527,7 +540,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -542,7 +555,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20261019A0AZ0Y00",
-          "url": "https://news.qq.com/rain/a/20261019A0AZ0Y00"
+          "url": "https://news.qq.com/rain/a/20261019A0AZ0Y00",
+          "listingHash": "fa2b821101c898a66f1cb419e3a5d24edade120489f03780d1e1335380aa0ee3"
         }
       ],
       "duplicateCandidates": []
@@ -566,7 +580,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -581,7 +595,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20261015A0AWM800",
-          "url": "https://news.qq.com/rain/a/20261015A0AWM800"
+          "url": "https://news.qq.com/rain/a/20261015A0AWM800",
+          "listingHash": "3e4a0d81ff8b69be629c1ee2001f8ae2c2ccac03eb1ce470a5d06da7504c90a9"
         }
       ],
       "duplicateCandidates": []
@@ -605,7 +620,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -620,7 +635,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20261026A0B67200",
-          "url": "https://news.qq.com/rain/a/20261026A0B67200"
+          "url": "https://news.qq.com/rain/a/20261026A0B67200",
+          "listingHash": "1035b185e60f8cd869396f0e69d3ffb8f6b9236ddd0e9998bb2350765aea04fb"
         }
       ],
       "duplicateCandidates": []
@@ -644,7 +660,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -659,7 +675,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20260922A09MB000",
-          "url": "https://news.qq.com/rain/a/20260922A09MB000"
+          "url": "https://news.qq.com/rain/a/20260922A09MB000",
+          "listingHash": "70dd015aff5be6d88c6360a095715a5adaa12270090a2130af66a8e358523b4f"
         }
       ],
       "duplicateCandidates": []
@@ -683,7 +700,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -698,7 +715,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20260921A03YKX00",
-          "url": "https://news.qq.com/rain/a/20260921A03YKX00"
+          "url": "https://news.qq.com/rain/a/20260921A03YKX00",
+          "listingHash": "93c30bdf38d5b91b66b801ead7228eabd3d8715b09dfb2d79903063ce0887612"
         }
       ],
       "duplicateCandidates": []
@@ -722,7 +740,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -737,7 +755,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20261013A0AYGU00",
-          "url": "https://news.qq.com/rain/a/20261013A0AYGU00"
+          "url": "https://news.qq.com/rain/a/20261013A0AYGU00",
+          "listingHash": "0c8dc6dc4ddf035b0a9b7bd2d24f129eef560fb75906caa78a8d99e6d0fb2004"
         }
       ],
       "duplicateCandidates": []
@@ -761,7 +780,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -776,7 +795,8 @@
         {
           "sourceId": "tencent-qqnews",
           "externalId": "20260910A060HQ00",
-          "url": "https://news.qq.com/rain/a/20260910A060HQ00"
+          "url": "https://news.qq.com/rain/a/20260910A060HQ00",
+          "listingHash": "45a19bbc5344a65353beabf88a3d218e883a418b151d0837725ab85ab99953f7"
         }
       ],
       "duplicateCandidates": []

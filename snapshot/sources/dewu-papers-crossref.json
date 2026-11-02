@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "dewu-papers-crossref",
-    "lastCheckedAt": "2026-11-02T07:41:23.823Z",
-    "lastSuccessAt": "2026-11-02T07:41:23.823Z",
-    "nextRunAt": "2026-11-03T07:41:23.823Z",
+    "lastCheckedAt": "2026-11-02T09:03:52.039Z",
+    "lastSuccessAt": "2026-11-02T09:03:52.039Z",
+    "nextRunAt": "2026-11-03T09:03:52.039Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 2,

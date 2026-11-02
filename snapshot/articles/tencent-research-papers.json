@@ -30,7 +30,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -45,7 +45,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3773078.3831924",
-          "url": "https://doi.org/10.1145/3773078.3831924"
+          "url": "https://doi.org/10.1145/3773078.3831924",
+          "listingHash": "bcffe5d632390f7591a9f91ff5ee2d34f45082ad1c07c3da76f1c5c1d6334ece"
         }
       ],
       "duplicateCandidates": []
@@ -81,7 +82,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -96,7 +97,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1049/cit2.70185",
-          "url": "https://doi.org/10.1049/cit2.70185"
+          "url": "https://doi.org/10.1049/cit2.70185",
+          "listingHash": "08ac1bc396c458d1bd8c1113494ac4672cd473a4fda325e339cb19d57797d4c7"
         }
       ],
       "duplicateCandidates": []
@@ -132,7 +134,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -147,7 +149,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1093/bioinformatics/btag732",
-          "url": "https://doi.org/10.1093/bioinformatics/btag732"
+          "url": "https://doi.org/10.1093/bioinformatics/btag732",
+          "listingHash": "98b5833b06a6d075fff347ddffc3c52984eb2b375e2c2a2cacb0b3b8833654bb"
         }
       ],
       "duplicateCandidates": []
@@ -181,7 +184,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -196,7 +199,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3832783.3834537",
-          "url": "https://doi.org/10.1145/3832783.3834537"
+          "url": "https://doi.org/10.1145/3832783.3834537",
+          "listingHash": "be08d038f2d36022a985b89640b5f0f8723af5cd3bd25b9b7af9fbc111a5387b"
         }
       ],
       "duplicateCandidates": []
@@ -232,7 +236,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -247,7 +251,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3847194",
-          "url": "https://doi.org/10.1145/3847194"
+          "url": "https://doi.org/10.1145/3847194",
+          "listingHash": "26fcdc810c2428adc6bf852fd543bf7f7d702fb55570ce6b674db55603ef37f2"
         }
       ],
       "duplicateCandidates": []
@@ -281,7 +286,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -296,7 +301,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3832783.3837461",
-          "url": "https://doi.org/10.1145/3832783.3837461"
+          "url": "https://doi.org/10.1145/3832783.3837461",
+          "listingHash": "64d71a0500e929ede8828d0402e414bfc778f13cfb5415a61651765cca9fd02f"
         }
       ],
       "duplicateCandidates": []
@@ -330,7 +336,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -345,7 +351,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3832783.3834498",
-          "url": "https://doi.org/10.1145/3832783.3834498"
+          "url": "https://doi.org/10.1145/3832783.3834498",
+          "listingHash": "297dbaf708283ecf12185eea1d8dda6eedd3c04536ce119e26c3287a8e1dbe1f"
         }
       ],
       "duplicateCandidates": []
@@ -379,7 +386,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -428,7 +435,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -443,7 +450,8 @@
         {
           "sourceId": "hunyuan-hf-papers",
           "externalId": "2610.12458",
-          "url": "https://arxiv.org/abs/2610.12458"
+          "url": "https://arxiv.org/abs/2610.12458",
+          "listingHash": "6eba65238284a1aa1dafcf8757d51fa301e60eeaf225cfbf29304a3241c46d30"
         }
       ],
       "duplicateCandidates": []
@@ -479,7 +487,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -529,7 +537,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -579,7 +587,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -630,7 +638,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -680,7 +688,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -695,7 +703,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.3389/fneur.2026.1938737",
-          "url": "https://doi.org/10.3389/fneur.2026.1938737"
+          "url": "https://doi.org/10.3389/fneur.2026.1938737",
+          "listingHash": "1333f72b03d730b6437ba91505ed8c3be5d44561156595ca7ab515c642fc8999"
         }
       ],
       "duplicateCandidates": []
@@ -731,7 +740,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -782,7 +791,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -831,7 +840,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -846,7 +855,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3832783.3837452",
-          "url": "https://doi.org/10.1145/3832783.3837452"
+          "url": "https://doi.org/10.1145/3832783.3837452",
+          "listingHash": "777bbf9716a05529d5dd01610bb812a74a1a8ccf3b38e45dbf3bd41cbc236f06"
         }
       ],
       "duplicateCandidates": []
@@ -880,7 +890,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -895,7 +905,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3832810.3832816",
-          "url": "https://doi.org/10.1145/3832810.3832816"
+          "url": "https://doi.org/10.1145/3832810.3832816",
+          "listingHash": "a4185c76336a6ed074f9d25b77a105203ea76e5f5e5a3a633313e0a4addc428b"
         }
       ],
       "duplicateCandidates": []
@@ -930,7 +941,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -945,7 +956,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.64898/2026.10.10.757278",
-          "url": "https://doi.org/10.64898/2026.10.10.757278"
+          "url": "https://doi.org/10.64898/2026.10.10.757278",
+          "listingHash": "a63a4b0229ffb64229ebfcbf96c5fa004625241640e0adc71b4c3bb71faa6d29"
         }
       ],
       "duplicateCandidates": []
@@ -981,7 +993,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -996,7 +1008,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3857281",
-          "url": "https://doi.org/10.1145/3857281"
+          "url": "https://doi.org/10.1145/3857281",
+          "listingHash": "b2d52892493a9ffc0631ce46992efbfb9891caa004c57fbc06b2318d0e4c9ada"
         }
       ],
       "duplicateCandidates": []
@@ -1032,7 +1045,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1047,7 +1060,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3856818",
-          "url": "https://doi.org/10.1145/3856818"
+          "url": "https://doi.org/10.1145/3856818",
+          "listingHash": "357cde3c4d70161f291bcd5898867b8a52ba82a6a71d2a0fb3207fd765a13626"
         }
       ],
       "duplicateCandidates": []
@@ -1083,7 +1097,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1098,7 +1112,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3832308",
-          "url": "https://doi.org/10.1145/3832308"
+          "url": "https://doi.org/10.1145/3832308",
+          "listingHash": "ace35c86168c2128a58a51aa354e5c781000382e592d6e4f2952611b192a377b"
         }
       ],
       "duplicateCandidates": []
@@ -1134,7 +1149,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1183,7 +1198,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1198,7 +1213,8 @@
         {
           "sourceId": "hunyuan-hf-papers",
           "externalId": "2610.36729",
-          "url": "https://arxiv.org/abs/2610.36729"
+          "url": "https://arxiv.org/abs/2610.36729",
+          "listingHash": "02dead84b8580dec80a1fc514e388af96a222b124451356ccf9889e9d21d0988"
         }
       ],
       "duplicateCandidates": []
@@ -1234,7 +1250,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1285,7 +1301,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1334,7 +1350,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1349,7 +1365,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3773078.3831825",
-          "url": "https://doi.org/10.1145/3773078.3831825"
+          "url": "https://doi.org/10.1145/3773078.3831825",
+          "listingHash": "85d45db58b93e12c8ac697df30e40f45dede8cfeeeaeb0e835c6bef39349d59f"
         }
       ],
       "duplicateCandidates": []
@@ -1384,7 +1401,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1399,7 +1416,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.64898/2026.09.22.753654",
-          "url": "https://doi.org/10.64898/2026.09.22.753654"
+          "url": "https://doi.org/10.64898/2026.09.22.753654",
+          "listingHash": "1c2e0c60b68f80b9e11ee1145857d81f95edbd608ff0adecac63c5d81089d785"
         }
       ],
       "duplicateCandidates": []
@@ -1435,7 +1453,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1450,7 +1468,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1177/10711813261485907",
-          "url": "https://doi.org/10.1177/10711813261485907"
+          "url": "https://doi.org/10.1177/10711813261485907",
+          "listingHash": "474328030155673dce59ab7f2b7a31680e5c87e09bd021eb6c6088f63aaab04e"
         }
       ],
       "duplicateCandidates": []
@@ -1484,7 +1503,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1499,7 +1518,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3832783.3834459",
-          "url": "https://doi.org/10.1145/3832783.3834459"
+          "url": "https://doi.org/10.1145/3832783.3834459",
+          "listingHash": "908412b91d7022d42a27b208b7b9ee5a5ad352dff6abe61172ed9ded43558750"
         }
       ],
       "duplicateCandidates": []
@@ -1533,7 +1553,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1548,7 +1568,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1145/3832783.3837509",
-          "url": "https://doi.org/10.1145/3832783.3837509"
+          "url": "https://doi.org/10.1145/3832783.3837509",
+          "listingHash": "6110433ab1d554f9ee4a36d8ef3c1e7d154e25e540e9fd3a11677018e9924d1a"
         }
       ],
       "duplicateCandidates": []
@@ -1584,7 +1605,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1599,7 +1620,8 @@
         {
           "sourceId": "tencent-papers-crossref",
           "externalId": "10.1108/jedt-05-2026-0291",
-          "url": "https://doi.org/10.1108/jedt-05-2026-0291"
+          "url": "https://doi.org/10.1108/jedt-05-2026-0291",
+          "listingHash": "353dd6a005ec74583dadb239fe0b9d4f7ba8948c7d998a180f4f5a1d1aaefe7d"
         }
       ],
       "duplicateCandidates": []
@@ -1633,7 +1655,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1648,7 +1670,8 @@
         {
           "sourceId": "hunyuan-hf-papers",
           "externalId": "2610.18092",
-          "url": "https://arxiv.org/abs/2610.18092"
+          "url": "https://arxiv.org/abs/2610.18092",
+          "listingHash": "f4636e41ae4b87a0e718b1c2ce41f2e2bd9b31fb7fb86075ea7a8bbaf757c1b0"
         }
       ],
       "duplicateCandidates": []

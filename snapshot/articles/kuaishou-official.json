@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -35,7 +35,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/155934028",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/155934028"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/155934028",
+          "listingHash": "8310c03f121b502646fd9c14aa780172e86a8f9169aba86893fbcfc89cb15537"
         }
       ],
       "duplicateCandidates": []
@@ -59,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -74,7 +75,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/162030209",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/162030209"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/162030209",
+          "listingHash": "f4b882a4c9820a49e72555fec49ed930e112da1de83ac17ff8235f317a97d22c"
         }
       ],
       "duplicateCandidates": []
@@ -98,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -113,7 +115,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/159547871",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/159547871"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/159547871",
+          "listingHash": "ac86510508980ef7fa6a66382fa3ab019535e5fa11bf919b1ef5df3b4f7fd2c4"
         }
       ],
       "duplicateCandidates": []
@@ -137,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "suspected",
@@ -157,7 +160,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/164336081",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/164336081"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/164336081",
+          "listingHash": "83b871c1f1ed1d7bc31fa6b5601e0e49f431787030cd42391c0150c05c0d6ecd"
         }
       ],
       "duplicateCandidates": []
@@ -181,7 +185,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -196,7 +200,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/155771505",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/155771505"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/155771505",
+          "listingHash": "0b75deae49dd4b486955d8842da7a4bc0e7cf38a4d36cf58ae89e05af5e34e1e"
         }
       ],
       "duplicateCandidates": []
@@ -220,7 +225,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "suspected",
@@ -240,7 +245,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/161568438",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/161568438"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/161568438",
+          "listingHash": "f4e692f4319aacb91f76176ab2569da6baa4bc104e1741775122a7710537cc5e"
         }
       ],
       "duplicateCandidates": []
@@ -264,7 +270,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -279,7 +285,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/155741743",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/155741743"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/155741743",
+          "listingHash": "66dc6af737b57736b8fdd81abc22f2a0d37257906f04f41b705b20cd14201a35"
         }
       ],
       "duplicateCandidates": []
@@ -303,7 +310,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -318,7 +325,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/157505623",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/157505623"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/157505623",
+          "listingHash": "9ea438f32f0f106f8878f0a357c77d1d9105163216e39a946959a5de1714c2a3"
         }
       ],
       "duplicateCandidates": []
@@ -342,7 +350,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -357,7 +365,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/157252993",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/157252993"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/157252993",
+          "listingHash": "1c8f0548d4069a971c94acbe82b1829e0ecc4d4d216e47c9678514c506f3021e"
         }
       ],
       "duplicateCandidates": []
@@ -381,7 +390,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -396,7 +405,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/155612185",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/155612185"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/155612185",
+          "listingHash": "08907104eb9fe5bce4b671e3ddc82b8b6149dfe71a9d692d1611eb4132a6edad"
         }
       ],
       "duplicateCandidates": []
@@ -420,7 +430,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -435,7 +445,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/161431079",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/161431079"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/161431079",
+          "listingHash": "22647cbba5f577391bb611d498276c72298aff0ff1b23f16d9776d2636c4b06d"
         }
       ],
       "duplicateCandidates": []
@@ -459,7 +470,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -474,7 +485,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/156891830",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/156891830"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/156891830",
+          "listingHash": "7baaa488157378d18dc3a392f2bf77790160907e021b89889317ba3f5dc79b54"
         }
       ],
       "duplicateCandidates": []
@@ -498,7 +510,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -513,7 +525,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/155808576",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/155808576"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/155808576",
+          "listingHash": "d4db36f310dda7cf9a5b322dad8698b4afe717ac137f4b5cb1728b5822339f41"
         }
       ],
       "duplicateCandidates": []
@@ -537,7 +550,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -552,7 +565,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/155556876",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/155556876"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/155556876",
+          "listingHash": "875843cee1be02568788cde14918fb64daa21ab76d47053c838b51525b0209a0"
         }
       ],
       "duplicateCandidates": []
@@ -576,7 +590,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -591,7 +605,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/156980824",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/156980824"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/156980824",
+          "listingHash": "6420e3dc0f349d083209335e330a34324cc0dd1335ac679b8c7888f49cb33d2c"
         }
       ],
       "duplicateCandidates": []
@@ -615,7 +630,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -630,7 +645,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/156853656",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/156853656"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/156853656",
+          "listingHash": "8b28718931006b15931c37ebc7ee87fe6865811ea3ceb3cc6933f9c65ffdced7"
         }
       ],
       "duplicateCandidates": []
@@ -654,7 +670,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "suspected",
@@ -674,7 +690,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/168025489",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/168025489"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/168025489",
+          "listingHash": "bb72b51046ac1f199611f8fc0fe22740732168975fb49e75e539f77afe3a3bfc"
         }
       ],
       "duplicateCandidates": []
@@ -698,7 +715,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -713,7 +730,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/159923655",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/159923655"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/159923655",
+          "listingHash": "35e4c2d5faf66d7808e731d026a880464690a061b9ef3d74ba3fa91233d5bf42"
         }
       ],
       "duplicateCandidates": []
@@ -737,7 +755,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -752,7 +770,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/157214582",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/157214582"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/157214582",
+          "listingHash": "34a499226dfa71744c271004401f41370ce533fe9c1703a3f427583602d5220c"
         }
       ],
       "duplicateCandidates": []
@@ -776,7 +795,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.747Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -791,7 +810,8 @@
         {
           "sourceId": "kuaishou-csdn",
           "externalId": "https://blog.csdn.net/kuaishoutech/article/details/155968692",
-          "url": "https://blog.csdn.net/kuaishoutech/article/details/155968692"
+          "url": "https://blog.csdn.net/kuaishoutech/article/details/155968692",
+          "listingHash": "ccd05af8657f4950883909507006a9bc644d52cf96dcad6887061a5e425e7ddf"
         }
       ],
       "duplicateCandidates": []

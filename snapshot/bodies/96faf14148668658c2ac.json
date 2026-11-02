@@ -14,8 +14,8 @@
     "engineVersion": "radar-reader-1",
     "contentHash": "a45b8dc2806d4e09ced107d3584eac597aeb0c6b5e9f08fc75b5ec1d1f171fa1",
     "fetchedAt": "2026-11-02T06:24:04.715Z",
-    "checkedAt": "2026-11-02T06:24:04.715Z",
-    "nextRetryAt": "2026-11-09T06:24:04.715Z",
+    "checkedAt": "2026-11-02T09:07:28.833Z",
+    "nextRetryAt": "2026-11-09T09:07:28.833Z",
     "warnings": [
       "取得的正文较短，可能不完整。"
     ]

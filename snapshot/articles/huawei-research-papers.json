@@ -30,7 +30,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -45,7 +45,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1109/lpt.2026.3706142",
-          "url": "https://doi.org/10.1109/lpt.2026.3706142"
+          "url": "https://doi.org/10.1109/lpt.2026.3706142",
+          "listingHash": "48db0b4233268ee6a866a4c9d4d80d085275dfad1130b47d9b8da26795b6fbbb"
         }
       ],
       "duplicateCandidates": []
@@ -77,7 +78,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -92,7 +93,8 @@
         {
           "sourceId": "noah-official-papers",
           "externalId": "156",
-          "url": "https://arxiv.org/abs/2406.10327"
+          "url": "https://arxiv.org/abs/2406.10327",
+          "listingHash": "774077fca16a7916e001ec3680d2f021d5a83fc32dbb9ba8d4c0dd60ad62152a"
         }
       ],
       "duplicateCandidates": []
@@ -128,7 +130,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -143,7 +145,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1137/24m1684025",
-          "url": "https://doi.org/10.1137/24m1684025"
+          "url": "https://doi.org/10.1137/24m1684025",
+          "listingHash": "66f76c151db160e25506e389bc920e050ac3d725bb39127ce9cddeaf996d7af4"
         }
       ],
       "duplicateCandidates": []
@@ -179,7 +182,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -194,7 +197,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1145/3848123",
-          "url": "https://doi.org/10.1145/3848123"
+          "url": "https://doi.org/10.1145/3848123",
+          "listingHash": "0d0da93d0e0128acbdb704fb534771728454f64f478bd0e2a1a61878395a2a84"
         }
       ],
       "duplicateCandidates": []
@@ -229,7 +233,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -244,7 +248,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1080/09500340.2026.2746743",
-          "url": "https://doi.org/10.1080/09500340.2026.2746743"
+          "url": "https://doi.org/10.1080/09500340.2026.2746743",
+          "listingHash": "1bbc9990a56b91d890a273743a95e197ee5c67cee907f1f87de90ab2860466d0"
         }
       ],
       "duplicateCandidates": []
@@ -278,7 +283,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -329,7 +334,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -376,7 +381,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -391,7 +396,8 @@
         {
           "sourceId": "noah-official-papers",
           "externalId": "157",
-          "url": "https://www.ijcai.org/proceedings/2024/489"
+          "url": "https://www.ijcai.org/proceedings/2024/489",
+          "listingHash": "df3820a7df6fe11d20db263555ec86388b61441cb1f632cd3b4b6de29aadb3c9"
         }
       ],
       "duplicateCandidates": []
@@ -423,7 +429,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -438,7 +444,8 @@
         {
           "sourceId": "noah-official-papers",
           "externalId": "141",
-          "url": "https://arxiv.org/abs/2506.06005"
+          "url": "https://arxiv.org/abs/2506.06005",
+          "listingHash": "25d51eec17f81cb4c23b9e29582102bfba773d523beb1435f7774892374c834c"
         }
       ],
       "duplicateCandidates": []
@@ -470,7 +477,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -485,7 +492,8 @@
         {
           "sourceId": "noah-official-papers",
           "externalId": "158",
-          "url": "https://www.ijcai.org/proceedings/2024/424"
+          "url": "https://www.ijcai.org/proceedings/2024/424",
+          "listingHash": "b711be6e6447369366732aef5d185bda2376ce93311b3d1f24dd8f8cd282755b"
         }
       ],
       "duplicateCandidates": []
@@ -520,7 +528,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -535,7 +543,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1145/3843848",
-          "url": "https://doi.org/10.1145/3843848"
+          "url": "https://doi.org/10.1145/3843848",
+          "listingHash": "3c9e0f85726444c15f011252eae37648b83cf67fd01a651d6bcbabc3d330be90"
         }
       ],
       "duplicateCandidates": []
@@ -571,7 +580,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -586,7 +595,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1145/3857278",
-          "url": "https://doi.org/10.1145/3857278"
+          "url": "https://doi.org/10.1145/3857278",
+          "listingHash": "1110739d934560ba7e8d1a3c1b1c0d2f50016bf89e660722b7d5e7eabab6a1de"
         }
       ],
       "duplicateCandidates": []
@@ -620,7 +630,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -635,7 +645,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1109/lpt.2026.3666271",
-          "url": "https://doi.org/10.1109/lpt.2026.3666271"
+          "url": "https://doi.org/10.1109/lpt.2026.3666271",
+          "listingHash": "c378956dedd6d0209d06e0c313be17c3b1bad81d32854e804b753f8f1eebe212"
         }
       ],
       "duplicateCandidates": []
@@ -671,7 +682,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -686,7 +697,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1177/10519815261493103",
-          "url": "https://doi.org/10.1177/10519815261493103"
+          "url": "https://doi.org/10.1177/10519815261493103",
+          "listingHash": "b6097af9106db6b7a308da40e820505eb456bb9290fdebc6ad94206dc005f184"
         }
       ],
       "duplicateCandidates": []
@@ -718,7 +730,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -733,7 +745,8 @@
         {
           "sourceId": "noah-official-papers",
           "externalId": "145",
-          "url": "https://ieeexplore.ieee.org/document/11260951"
+          "url": "https://ieeexplore.ieee.org/document/11260951",
+          "listingHash": "3e97f7a503d5b632050e9e380aa9a11b30125d16aaac0b8035c09d7a49008597"
         }
       ],
       "duplicateCandidates": []
@@ -769,7 +782,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -784,7 +797,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1145/3847659",
-          "url": "https://doi.org/10.1145/3847659"
+          "url": "https://doi.org/10.1145/3847659",
+          "listingHash": "29cf762afe30a7bf4e73a89261d7afabfed3326c379b21570e9285bf911b7f8e"
         }
       ],
       "duplicateCandidates": []
@@ -820,7 +834,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -835,7 +849,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1145/3846376",
-          "url": "https://doi.org/10.1145/3846376"
+          "url": "https://doi.org/10.1145/3846376",
+          "listingHash": "fdd14a93d905b55df07605f60294d6fece81b9cbea7f256e6faeab0a0000300b"
         }
       ],
       "duplicateCandidates": []
@@ -871,7 +886,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -886,7 +901,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1017/aer.2026.10252",
-          "url": "https://doi.org/10.1017/aer.2026.10252"
+          "url": "https://doi.org/10.1017/aer.2026.10252",
+          "listingHash": "93a7674bd6c1e9081ed3199e85f6b7d2c2262e38e925443f88d82e2771a8d169"
         }
       ],
       "duplicateCandidates": []
@@ -920,7 +936,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -971,7 +987,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -986,7 +1002,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1364/oe.611451",
-          "url": "https://doi.org/10.1364/oe.611451"
+          "url": "https://doi.org/10.1364/oe.611451",
+          "listingHash": "5499d8dc314fc98df6a69d7b2a5bb4ce4c0b239b2e01231d292470c9258e4d00"
         }
       ],
       "duplicateCandidates": []
@@ -1018,7 +1035,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1033,7 +1050,8 @@
         {
           "sourceId": "noah-official-papers",
           "externalId": "155",
-          "url": "https://doi.org/10.5555/3692070.3694268"
+          "url": "https://doi.org/10.5555/3692070.3694268",
+          "listingHash": "3e47e57955ec4af1669ab24933132207cc1d6d0fe6e681a05adb387af6d8c88b"
         }
       ],
       "duplicateCandidates": []
@@ -1067,7 +1085,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1114,7 +1132,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1129,7 +1147,8 @@
         {
           "sourceId": "noah-official-papers",
           "externalId": "159",
-          "url": "https://openreview.net/forum?id=FIWHRSuoos"
+          "url": "https://openreview.net/forum?id=FIWHRSuoos",
+          "listingHash": "0bc809d811dd21e6440b7cf7d50b2aec0baa872185a52140bb0a7db827880d46"
         }
       ],
       "duplicateCandidates": []
@@ -1165,7 +1184,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1214,7 +1233,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1264,7 +1283,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1311,7 +1330,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1326,7 +1345,8 @@
         {
           "sourceId": "noah-official-papers",
           "externalId": "144",
-          "url": "https://www.nature.com/articles/s44387-025-00055-1"
+          "url": "https://www.nature.com/articles/s44387-025-00055-1",
+          "listingHash": "6623f60d5f31b9e7a430ac9098748c35ae2dd7305b7e753ea5ef5f6bbfb63440"
         }
       ],
       "duplicateCandidates": []
@@ -1360,7 +1380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1375,7 +1395,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1145/3795866.3844455",
-          "url": "https://doi.org/10.1145/3795866.3844455"
+          "url": "https://doi.org/10.1145/3795866.3844455",
+          "listingHash": "9a2a7e77366eeaf3b49a6e0399bc701b95a185e55b9a604aa6ba3acad518a872"
         }
       ],
       "duplicateCandidates": []
@@ -1411,7 +1432,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1426,7 +1447,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1145/3860054",
-          "url": "https://doi.org/10.1145/3860054"
+          "url": "https://doi.org/10.1145/3860054",
+          "listingHash": "3c1823de9f52a57805781ecebca5e1c0bf9ec80a6d42c938d5f7bcbb897eee21"
         }
       ],
       "duplicateCandidates": []
@@ -1458,7 +1480,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1473,7 +1495,8 @@
         {
           "sourceId": "noah-official-papers",
           "externalId": "154",
-          "url": "https://arxiv.org/abs/2402.10198"
+          "url": "https://arxiv.org/abs/2402.10198",
+          "listingHash": "8a556f745734dda9a14370a53953c1dfdd83e79f5ef3d140cbfc893f44b5175c"
         }
       ],
       "duplicateCandidates": []
@@ -1509,7 +1532,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1524,7 +1547,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1097/rd9.0000000000000201",
-          "url": "https://doi.org/10.1097/rd9.0000000000000201"
+          "url": "https://doi.org/10.1097/rd9.0000000000000201",
+          "listingHash": "bb4b6bfa0ce2eca5bc3899da081bc9ddde950ea971f43a37f21d3cdfdedb603b"
         }
       ],
       "duplicateCandidates": []
@@ -1560,7 +1584,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1575,7 +1599,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1021/prechem.6c00099",
-          "url": "https://doi.org/10.1021/prechem.6c00099"
+          "url": "https://doi.org/10.1021/prechem.6c00099",
+          "listingHash": "ab39aa31d463bb708583b4f60337be507a1eee0093d4f978c6e2ac1310a1e5fc"
         }
       ],
       "duplicateCandidates": []
@@ -1611,7 +1636,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1626,7 +1651,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1093/nsr/nwag597",
-          "url": "https://doi.org/10.1093/nsr/nwag597"
+          "url": "https://doi.org/10.1093/nsr/nwag597",
+          "listingHash": "3f613517b5cd95327b8556a1831032b6d3c17379c884ed3a71699bf55dac1e9f"
         }
       ],
       "duplicateCandidates": []
@@ -1660,7 +1686,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1711,7 +1737,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1726,7 +1752,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1145/3821417",
-          "url": "https://doi.org/10.1145/3821417"
+          "url": "https://doi.org/10.1145/3821417",
+          "listingHash": "c724c7b1d8eef3361766fbb2da9b7c45c21d0fc9c0841b095a37d8be507cfab7"
         }
       ],
       "duplicateCandidates": []
@@ -1760,7 +1787,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1811,7 +1838,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1860,7 +1887,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1875,7 +1902,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1145/3837358.3837360",
-          "url": "https://doi.org/10.1145/3837358.3837360"
+          "url": "https://doi.org/10.1145/3837358.3837360",
+          "listingHash": "a189abc5c375bf736933b51d9228c4a36e98f789b409290b390b25f331c6429f"
         }
       ],
       "duplicateCandidates": []
@@ -1907,7 +1935,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1922,7 +1950,8 @@
         {
           "sourceId": "noah-official-papers",
           "externalId": "205",
-          "url": "https://openreview.net/forum?id=VbvXjs5f72"
+          "url": "https://openreview.net/forum?id=VbvXjs5f72",
+          "listingHash": "c74f76de1f21be985ffc3808b6d825a70e0e2a310d1ab570f82553fd54a44ba9"
         }
       ],
       "duplicateCandidates": []
@@ -1958,7 +1987,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T07:44:59.761Z"
+        "classifiedAt": "2026-11-02T09:07:26.748Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -1973,7 +2002,8 @@
         {
           "sourceId": "huawei-papers-crossref",
           "externalId": "10.1364/prj.605375",
-          "url": "https://doi.org/10.1364/prj.605375"
+          "url": "https://doi.org/10.1364/prj.605375",
+          "listingHash": "cb39b32892a73d185703c5914b6c3cdde18b6b806019b8d7036a4a27eed3d7c9"
         }
       ],
       "duplicateCandidates": []

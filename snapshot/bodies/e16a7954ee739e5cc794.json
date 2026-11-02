@@ -2,17 +2,36 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "e16a7954ee739e5cc794",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "<p><strong>摘要：</strong><br>\n1. 开源Apache Flink 已成为业界流计算事实标准，但在极端重负载场景下存在性能瓶颈。<br>\n2. 华为大数据Flink通过多项自研深度优化，在执行计划、算子执行、状态存储三个层面构建协同的优化体系。<br>\n3. Nexmark Benchmark 测试结果：整体性能提升 5.74 倍，极端重负载场景性能领先最高 18.3 倍。<br>\n4. 100% 兼容 Apache Flink 1.20，业务代码零改造，无缝迁移。</p>\n\n<h2 id=\"section-01-背景与挑战\">01 背景与挑战<a class=\"heading-anchor\" href=\"#section-01-背景与挑战\" aria-label=\"链接到本节：01 背景与挑战\">#</a></h2>\n\n<p>Apache Flink 是业界流计算事实标准，原生支持低延迟流处理与有状态计算，已广泛应用于电商、金融、物流、车联网等行业的实时数据场景。 然而，<strong>开源Apache Flink 在极端重负载场景下存在显著性能瓶颈</strong>：双流 Join 状态访问 IO 放大、TopN 算子全 Key 范围扫描、链式 Join 状态几何级数膨胀、 算子间对象拷贝导致 GC 抖动——这些瓶颈使企业不得不通过堆叠计算资源来应对高吞吐场景，成本居高不下。</p>\n\n<p>华为大数据Flink 团队基于多年生产实践，围绕 Flink 流处理的性能瓶颈展开多项自研深度优化， 从根源上提升引擎的执行效率与状态访问能力。本次测试以业界通用的&nbsp;<strong>Nexmark Benchmark</strong>&nbsp;为标尺， 在同等计算资源下对比华为大数据Flink 1.20 与开源Apache Flink 1.20 的性能表现，验证优化效果。</p>\n\n<h2 id=\"section-02-核心技术-多项自研深度优化\">02 核心技术：多项自研深度优化<a class=\"heading-anchor\" href=\"#section-02-核心技术-多项自研深度优化\" aria-label=\"链接到本节：02 核心技术：多项自研深度优化\">#</a></h2>\n\n<p>开源Apache Flink 的性能瓶颈并非孤立存在，而是从执行计划、算子执行到状态存储层层传导： 链式 Join 使中间状态几何级数膨胀、算子间反复新建对象触发 GC 抖动、状态读写放大成倍增加磁盘 IO…… 单点优化只能缓解某一环节的瓶颈，瓶颈很快会在另一环节重新显现。</p>\n\n<p>华为大数据Flink 不走零散修补的路线，而是回到 Flink 引擎的层次化架构本身，沿着三条主线做优化：&nbsp;<strong>执行计划层减少中间状态</strong>，通过多路关联合并、剪枝无结果分支，从源头把状态规模压小；&nbsp;<strong>算子执行层消除冗余计算</strong>，通过对象复用、函数结果共享，去掉重复分配与重复解析；&nbsp;<strong>状态存储层加速状态访问</strong>，通过增量合并写入、前缀索引定位，把读写 IO 降下来。 三条主线相互衔接、层层递进：状态规模的缩减同步降低了算子执行层与状态存储层的处理负担，状态读写性能的提升又进一步释放了算子执行的瓶颈。 所有优化都在引擎内部完成，对外 API 与语义 100% 兼容开源，业务代码零改造。 这套体系最终使整体性能达到开源的&nbsp;<strong>5.74 倍</strong>，极端重负载场景领先最高&nbsp;<strong>18.3 倍</strong>。</p>\n\n<p><img alt=\"\" height=\"524\" src=\"https://i-blog.csdnimg.cn/direct/f738640e9b9448808e33ef98cf7500ad.png\" width=\"729\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>执行计划层：大幅压缩状态规模</strong></p>\n\n<p>多表关联场景下，开源实现将一条 SQL 拆解为多个串联的两两关联算子，每经过一层关联都要落地一份中间结果， 状态规模随表数量成倍放大，是高负载场景下内存与磁盘 IO 压力的根源。 华为大数据Flink 在执行计划层合并多路关联、剪枝无结果分支，<strong>减少中间状态</strong>， 让后续算子执行层和状态存储层都从更小的状态上起步。</p>\n\n<p><strong>算子执行层：消除冗余计算</strong></p>\n\n<p>开源实现中，算子之间逐条记录传递数据，每条记录都伴随新建对象与序列化开销， 高频函数的重复解析进一步加剧 CPU 浪费，引发频繁 GC 抖动。 华为大数据Flink 在算子执行层复用传递对象、共享函数计算结果，<strong>消除冗余计算与重复分配</strong>， 让 CPU 与内存资源更高效地服务于业务逻辑本身，而非框架开销。</p>\n\n<p><strong>状态存储层：加速状态读写</strong></p>\n\n<p>有状态流计算的性能高度依赖状态读写效率。开源实现的状态更新走\"读改写\"循环，每次更新访问两次磁盘； 状态查询要扫描全部底层文件，无效 IO 占用大量带宽。 华为大数据Flink 在状态存储层将更新改为增量合并写入、查询按前缀索引快速定位，<strong>状态读写 IO 减半、无效 IO 大幅降低</strong>， 节省的带宽反哺算子执行，形成正向循环。</p>\n\n<h2 id=\"section-03-性能测试结论\">03 性能测试结论<a class=\"heading-anchor\" href=\"#section-03-性能测试结论\" aria-label=\"链接到本节：03 性能测试结论\">#</a></h2>\n\n<p>测试结果显示：<strong>华为大数据Flink1.20 全部 Query 总耗时仅 12,854 秒，而开源Apache Flink1.20 需要 73,738 秒</strong>， 整体性能提升&nbsp;<strong>5.74 倍</strong>。下方为Nexmark各 Query 耗时对比。</p>\n\n<p><img alt=\"\" height=\"772\" src=\"https://i-blog.csdnimg.cn/direct/bc14f9c59cfe4493b61b3510b839e488.png\" width=\"957\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>",
+    "headings": [
+      {
+        "id": "section-01-背景与挑战",
+        "level": 2,
+        "text": "01 背景与挑战"
+      },
+      {
+        "id": "section-02-核心技术-多项自研深度优化",
+        "level": 2,
+        "text": "02 核心技术：多项自研深度优化"
+      },
+      {
+        "id": "section-03-性能测试结论",
+        "level": 2,
+        "text": "03 性能测试结论"
+      }
+    ],
+    "textLength": 1724,
+    "readingMinutes": 4,
     "sourceId": "huawei-csdn",
     "sourceUrl": "https://blog.csdn.net/devcloud/article/details/169360329",
+    "ruleId": "rsshub-csdn",
+    "ruleVersion": "1",
     "engineVersion": "radar-reader-1",
-    "checkedAt": "2026-11-02T07:55:47.060Z",
-    "nextRetryAt": "2026-11-09T07:55:47.060Z",
-    "error": "RSSHub 未取得 CSDN 正文，仅返回摘要（原站可能仍受 521 限制）。",
+    "contentHash": "8dbf3eb96c92921d236c8509340c17d143bb21734f10d0f0f8f2f9642342c374",
+    "fetchedAt": "2026-11-02T09:07:30.586Z",
+    "checkedAt": "2026-11-02T09:07:30.586Z",
+    "nextRetryAt": "2026-12-02T09:07:30.586Z",
     "warnings": []
   }
 }
