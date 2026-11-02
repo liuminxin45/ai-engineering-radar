@@ -70,7 +70,7 @@ export function createArticleSearchEngine(
   type: ContentType,
 ): SearchEngine {
   const index = articles
-    .filter((article) => (article.contentType ?? "blog") === type)
+    .filter((article) => (article.contentType ?? "blog") === "blog")
     .map((article) => ({
       article,
       title: normalize(article.title),
@@ -98,9 +98,9 @@ export function createArticleSearchEngine(
             excerpt: searchExcerpt(article.description ?? "", terms),
             meta: {
               title: article.title,
-              type: type === "paper" ? "论文" : "博文",
+              type: "博文",
               date: article.publishedAt ?? article.discoveredAt,
-              external: type === "paper" ? "true" : "false",
+              external: "false",
             },
           }),
         })),

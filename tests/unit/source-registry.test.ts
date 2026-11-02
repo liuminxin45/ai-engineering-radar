@@ -7,7 +7,7 @@ import {
 } from "../../packages/source-registry/index.js";
 
 describe("official community account scope", () => {
-  it("keeps only enabled verified collectors and allows paper-only companies", async () => {
+  it("keeps only enabled verified collectors and requires a blog for every company", async () => {
     const registry = await loadRegistry();
     expect(registry.companies.some((c) => c.id === "xiaohongshu")).toBe(false);
     expect(() => validateCompanySources(registry)).not.toThrow();
@@ -36,7 +36,9 @@ describe("official community account scope", () => {
         ...registry,
         sources: registry.sources.filter((s) => s.id !== "aliyun-apphub"),
       };
-      expect(() => validateCompanySources(paperOnly)).not.toThrow();
+      expect(() => validateCompanySources(paperOnly)).toThrow(
+        "Company must have a collectable source",
+      );
     }
     const source = registry.sources.find((s) => s.id === "meituan")!;
     const duplicate = structuredClone(registry);

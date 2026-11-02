@@ -33,7 +33,7 @@ pnpm export
 pnpm dev
 ```
 
-`pnpm ingest --force` 检查全部启用来源，内容按增量策略处理。每日任务使用 `pnpm ingest --daily`，重试失败文章并跳过未变化的成功正文。主动全量刷新使用 `pnpm ingest --full`。只更新论文可运行 `pnpm ingest:papers --force`；只诊断单个来源可运行 `pnpm ingest --force --source=来源ID`。
+`pnpm ingest --force` 检查全部启用来源，内容按增量策略处理。每日任务使用 `pnpm ingest --daily`，重试失败文章并跳过未变化的成功正文。主动全量刷新使用 `pnpm ingest --full`。只诊断单个来源可运行 `pnpm ingest --force --source=来源ID`。
 
 已有快照时跳过初始化。初始化命令会拒绝覆盖已有数据。默认数据目录为 `.radar/data`，可以通过 `RADAR_DATA_DIR` 指定其他目录。
 
@@ -71,39 +71,38 @@ pnpm test:e2e
 
 ## 收录与来源维护
 
-收录国内公司的官方团队博文与署名研究论文，当前不扩展到海外公司。博文核验官方发布账号，论文核验作者机构或官方研究目录。保留来源证据、去重和数据校验，不按关键词筛选内容，也不做自动主题分类。
+收录国内公司的官方团队博文，当前不扩展到海外公司。博文核验官方发布账号。保留来源证据、去重和数据校验，不按关键词筛选内容，也不做自动主题分类。
 
 来源包括公司自有技术站，以及博客园、腾讯云开发者社区、阿里云开发者社区等平台中的官方团队账号。公司归属依据具体发布主体核验，不按托管平台域名推断。采集范围以具体团队和可核验的论文归属为准，各入口不代表覆盖集团全部内容。
 
-[来源注册表](packages/source-registry/registry.json)保存当前配置，字段和约束分别见[类型定义](packages/shared/types.ts)与[注册表校验](packages/source-registry/index.ts)。每家公司至少有一个可采集来源，最多登记一个博文源，论文源单独核验；混合目录由适配器逐条区分博文和论文。修改时以实际校验与测试为准。
+[来源注册表](packages/source-registry/registry.json)保存当前配置，字段和约束分别见[类型定义](packages/shared/types.ts)与[注册表校验](packages/source-registry/index.ts)。每家公司至少有一个可采集来源，最多登记一个博文源。修改时以实际校验与测试为准。
 
 - A/B/C 为接入优先级，不等于身份已认证。
 - 当前注册表只接受已核验且启用的采集源。`verified` 必须附带官方域名、官网反向链接或平台企业认证等证据、核验说明及日期。
 - `pending`、`suspended` 和 `reference` 仅用于历史快照兼容。待核验线索保留在提议与调查文档中。
 - RSS / Atom 优先；公开 API 及 HTML 解析使用经审核的入口和站点专用适配器。
 - 社区来源设置 `authorAllowlist`，适配器须实际校验稳定的发布主体标识，不能只填写配置。
-- 论文记录保存归属证据，联合论文用 `companyIds` 保留已核实的多家公司归属，在“最新”列只展示一次。
 
 来源变更以注册表为准。替换或移除来源时，同步清理退出来源的状态和独占记录，保留其他有效来源支持的文章与稳定 ID。迁移先检查替代渠道的官方身份与实际采集记录，具体流程见[运行维护](docs/operations.md)。README 来源表的顺序与阅读看板一致。
 
 `config/overrides.json` 用于人工更正或隐藏记录。确定的同一发布主体跨平台重复可在 `merges` 添加 `from`、`into` 和 `reason`。相似标题只提示复核，不自动合并。
 
-博文正文单独保存在快照并静态渲染，保留原始语言、作者及原文入口。原始页面不落库，摘要不能当作全文。正文失败保留已有内容；论文保持原有阅读方式。不提供登录、收藏、推荐榜单和评论。
+博文正文单独保存在快照并静态渲染，保留原始语言、作者及原文入口。原始页面不落库，摘要不能当作全文。正文失败保留已有内容。不提供登录、收藏、推荐榜单和评论。
 
 ## 静态接口与订阅
 
 所有路径均相对站点基路径。JSON 为公开快照，不接受服务端搜索或游标参数。
 
-| 路径                       | 内容                 |
-| -------------------------- | -------------------- |
-| `/data/articles.json`      | 已发布博文与论文索引 |
-| `/data/articles/{id}.json` | 单篇元数据           |
-| `/data/bodies.json`        | 博文正文状态         |
-| `/data/bodies/{id}.json`   | 单篇清洗后的正文     |
-| `/data/companies.json`     | 公司目录             |
-| `/data/sources.json`       | 来源及检测状态       |
-| `/data/health.json`        | 最近采集快照         |
-| `/feed.xml`、`/feed.atom`  | 全站最近 50 篇       |
+| 路径                       | 内容             |
+| -------------------------- | ---------------- |
+| `/data/articles.json`      | 已发布博文索引   |
+| `/data/articles/{id}.json` | 单篇元数据       |
+| `/data/bodies.json`        | 博文正文状态     |
+| `/data/bodies/{id}.json`   | 单篇清洗后的正文 |
+| `/data/companies.json`     | 公司目录         |
+| `/data/sources.json`       | 来源及检测状态   |
+| `/data/health.json`        | 最近采集快照     |
+| `/feed.xml`、`/feed.atom`  | 全站最近 50 篇   |
 
 网站统一提供全站订阅。订阅 ID 不随标题、URL 修改或站点域名变化。原文没有发布时间时使用发现时间，详情页明确说明。缓存及响应头由 GitHub Pages 管理。
 

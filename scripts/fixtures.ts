@@ -49,32 +49,6 @@ for (let i = 0; i < 45; i++) {
   articles.at(-1)!.publicationStatus = "published";
   articles.at(-1)!.duplicateCandidates = [];
 }
-for (let i = 0; i < 25; i++) {
-  const source = registry.sources.find((s) => s.id === "meituan")!;
-  const paper = upsert(
-    articles,
-    {
-      contentType: "paper",
-      companyIds: ["meituan", "tencent"],
-      paperAffiliations: ["meituan", "tencent"].map((companyId) => ({
-        companyId,
-        evidenceUrl: `https://example.org/fixture-paper-${i}`,
-        method: "paper-authors" as const,
-        excerpt: `${companyId}: synthetic author affiliation for local tests only`,
-      })),
-      title: `Joint AI systems research ${i + 1}: reliable agent evaluation`,
-      author: "Fixture Research Team",
-      url: `${source.entryUrl.replace(/\/$/, "")}/fixture-paper-${i}`,
-      externalId: `fixture-paper-${i}`,
-      description:
-        "Synthetic joint research metadata for local browser verification only.",
-      publishedAt: new Date(Date.UTC(2026, 9, 30 - i)).toISOString(),
-    },
-    source,
-    registry,
-  );
-  paper.duplicateCandidates = [];
-}
 const bodyFixtures = articles
   .filter((article) => article.contentType !== "paper")
   .map((article, index) => {

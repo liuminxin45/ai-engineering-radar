@@ -145,7 +145,7 @@ export default function SearchDialog({
       }}
     >
       <h2 className="sr-only" id="search-title">
-        搜索{type === "paper" ? "论文" : "文章"}
+        搜索文章
       </h2>
       <div className="site-search-input">
         <Search size={20} strokeWidth={1.6} aria-hidden="true" />
@@ -155,10 +155,8 @@ export default function SearchDialog({
           value={query}
           autoComplete="off"
           spellCheck={false}
-          placeholder={
-            type === "paper" ? "搜索论文、关键词…" : "搜索文章、关键词…"
-          }
-          aria-label={`搜索所有面板的${type === "paper" ? "论文" : "文章"}`}
+          placeholder="搜索文章、关键词…"
+          aria-label="搜索所有面板的文章"
           role="combobox"
           aria-autocomplete="list"
           aria-expanded={selection.count > 0}

@@ -128,7 +128,7 @@ describe("paper metadata and provenance", () => {
       articleSchema.parse({ ...paper, contentType: "blog" }),
     ).toThrow();
   });
-  it("exports paper affiliations in the project feed and excludes unresolved company IDs", () => {
+  it("excludes legacy papers from published articles and feeds", () => {
     const paper = upsert([], candidate, source, registry);
     const feed = makeFeed(
       [paper],
@@ -138,8 +138,8 @@ describe("paper metadata and provenance", () => {
       registry,
       paper.updatedAt,
     ).rss2();
-    expect(feed).toContain("美团、腾讯");
-    expect(publishedArticles([paper], registry)).toHaveLength(1);
+    expect(feed).not.toContain(candidate.title);
+    expect(publishedArticles([paper], registry)).toHaveLength(0);
     expect(
       publishedArticles([{ ...paper, companyIds: ["unknown"] }], registry),
     ).toHaveLength(0);

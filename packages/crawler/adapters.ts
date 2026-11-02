@@ -22,7 +22,7 @@ import { collectQwen } from "./platforms/qwen.js";
 import { parseVolcengineAccount } from "./platforms/volcengine.js";
 import { parseAntLingBlog } from "./platforms/ant-ling.js";
 import { collectMiMo } from "./platforms/xiaomi-mimo.js";
-import { collectPapers, type PaperContext } from "./platforms/papers.js";
+import { type PaperContext } from "./platforms/papers.js";
 import { createRssHubClient, rssHubCandidates } from "./rsshub.js";
 import {
   prepareCandidate,
@@ -284,20 +284,8 @@ export async function collect(
   limit: number,
   options: CollectionOptions & Partial<PaperContext> = {},
 ): Promise<{ items: Candidate[]; response: HttpResult; warnings: string[] }> {
-  if (source.platform.startsWith("paper-")) {
-    if (!options.companyId || !options.articles)
-      throw new CrawlError(
-        "Paper collection requires publisher and prior evidence context",
-      );
-    const result = await collectPapers(
-      source,
-      state,
-      limit,
-      options as PaperContext,
-    );
-    for (const item of result.items) prepareCandidate(item, source, options);
-    return result;
-  }
+  if (source.contentType === "paper" || source.platform.startsWith("paper-"))
+    throw new CrawlError("Paper collection has been removed");
   const pendingMetadata = options.knownArticles?.some((article) =>
     article.locations.some(
       (location) => location.sourceId === source.id && location.metadataPending,

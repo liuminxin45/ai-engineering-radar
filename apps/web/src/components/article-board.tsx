@@ -42,10 +42,6 @@ const calendar = new Intl.DateTimeFormat("zh-CN", {
   timeZone: "Asia/Shanghai",
 });
 const day = (value: string) => calendar.format(new Date(value));
-const contentTypes = [
-  { id: "blog", name: "博文" },
-  { id: "paper", name: "论文" },
-] as const;
 
 export function ArticleBoard() {
   const [query, setQuery] = useState<BoardQuery>(initialBoardQuery);
@@ -63,7 +59,7 @@ export function ArticleBoard() {
   useBoardWheel(viewport, companyNav, navigation);
   const restoring = useRef(false);
   const active = query.company || "latest";
-  const contentName = query.type === "paper" ? "论文" : "文章";
+  const contentName = "文章";
   const activeIndex = ids.indexOf(active);
   const articles = useMemo(
     () => boardArticles(site.articles, query),
@@ -121,9 +117,6 @@ export function ArticleBoard() {
     writeQuery({ ...queryRef.current, ...patch, page: 1 }, replace);
     for (const list of Object.values(lists.current))
       if (list) list.scrollTop = 0;
-  }
-  function switchType(type: BoardQuery["type"]) {
-    if (type !== queryRef.current.type) changeGlobal({ type });
   }
   function loadMore(id: string) {
     const next = (pagesRef.current[id] ?? 1) + 1;
@@ -293,39 +286,7 @@ export function ArticleBoard() {
           </span>
           <span className={styles.mobileBrand}>Radar</span>
         </Link>
-        <div className={styles.typeTabs} role="tablist" aria-label="内容类型">
-          {contentTypes.map(({ id, name }, index) => (
-            <Button
-              key={id}
-              id={`content-${id}`}
-              variant="ghost"
-              role="tab"
-              aria-selected={query.type === id}
-              aria-controls="content-board"
-              tabIndex={query.type === id ? 0 : -1}
-              className={styles.typeTab}
-              onClick={() => switchType(id)}
-              onKeyDown={(event) => {
-                let next: number;
-                if (event.key === "ArrowRight")
-                  next = (index + 1) % contentTypes.length;
-                else if (event.key === "ArrowLeft")
-                  next =
-                    (index + contentTypes.length - 1) % contentTypes.length;
-                else if (event.key === "Home") next = 0;
-                else if (event.key === "End") next = contentTypes.length - 1;
-                else return;
-                event.preventDefault();
-                switchType(contentTypes[next].id);
-                document
-                  .getElementById(`content-${contentTypes[next].id}`)
-                  ?.focus();
-              }}
-            >
-              <span className="link-label">{name}</span>
-            </Button>
-          ))}
-        </div>
+
         <div className={styles.actions}>
           <div className={styles.utilities}>
             <SearchLauncher type={query.type} />
@@ -378,8 +339,8 @@ export function ArticleBoard() {
       </nav>
       <div
         id="content-board"
-        role="tabpanel"
-        aria-labelledby={`content-${query.type}`}
+        role="region"
+        aria-label="博文"
         className={styles.contentBoard}
       >
         <main

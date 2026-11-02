@@ -241,6 +241,12 @@ export async function loadRegistry() {
       );
   }
   const registry = { sources, companies, publishers };
+  if (
+    sources.some(
+      (s) => s.contentType === "paper" || s.platform.startsWith("paper-"),
+    )
+  )
+    throw new Error("Only blog sources are supported");
   validateCompanySources(registry);
   validateSourceReplacements(registry);
   return registry;

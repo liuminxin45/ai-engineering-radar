@@ -1,3 +1,4 @@
+import legacyRegistry from "../fixtures/legacy-paper-registry.json" with { type: "json" };
 import { describe, expect, it } from "vitest";
 import { loadRegistry } from "../../packages/source-registry/index.js";
 import { articleSchema, type Article } from "../../packages/shared/types.js";
@@ -15,7 +16,9 @@ import {
   validatePaperSource,
 } from "../../packages/crawler/platforms/papers.js";
 
-const registry = await loadRegistry();
+const registry = legacyRegistry as unknown as Awaited<
+  ReturnType<typeof loadRegistry>
+>;
 const source = registry.sources.find((s) => s.id === "dewu-papers-crossref")!;
 const work = {
   DOI: "10.1145/3701716.3715218",

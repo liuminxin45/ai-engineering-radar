@@ -53,7 +53,7 @@ export function readBoardQuery(
     company = p.get("company") ?? "";
   const page = Number(p.get("page"));
   return {
-    type: p.get("type") === "paper" ? "paper" : "blog",
+    type: "blog",
     q: p.get("q") ?? "",
     company: companies.includes(company) ? company : "",
     page: Number.isSafeInteger(page) && page > 0 ? Math.min(page, 1000) : 1,
@@ -61,7 +61,6 @@ export function readBoardQuery(
 }
 export function boardSearch(query: BoardQuery) {
   const p = new URLSearchParams();
-  if (query.type === "paper") p.set("type", "paper");
   if (query.q) p.set("q", query.q);
   if (query.company) p.set("company", query.company);
   if (query.page > 1) p.set("page", String(query.page));
@@ -71,8 +70,7 @@ export function boardArticles(articles: Article[], query: BoardQuery) {
   const terms = articleSearchTerms(query.q);
   return articles
     .filter(
-      (a) =>
-        articleContentType(a) === query.type && matchesArticleSearch(a, terms),
+      (a) => articleContentType(a) === "blog" && matchesArticleSearch(a, terms),
     )
     .sort((a, b) => {
       return (

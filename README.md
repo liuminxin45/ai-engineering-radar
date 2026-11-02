@@ -4,23 +4,23 @@
 
 [阅读看板](https://liuminxin45.github.io/ai-engineering-radar/) · [关于](https://liuminxin45.github.io/ai-engineering-radar/about/) · [RSS](https://liuminxin45.github.io/ai-engineering-radar/feed.xml) · [Atom](https://liuminxin45.github.io/ai-engineering-radar/feed.atom)
 
-AI Engineering Radar indexes official engineering blogs and attributed research papers from Chinese companies, with company columns, search, source evidence, and RSS / Atom feeds.
+AI Engineering Radar indexes official engineering blogs from Chinese companies, with company columns, search, source evidence, and RSS / Atom feeds.
 
 ## 适合怎样的阅读需求
 
-想持续跟踪国内公司的工程实践，可以按公司浏览博文或论文，也可以订阅全站更新。这里保留原文入口和发布主体证据，方便从索引回到原始材料。
+想持续跟踪国内公司的工程实践，可以按公司浏览博文，也可以订阅全站更新。这里保留原文入口和发布主体证据，方便从索引回到原始材料。
 
-收录范围以注册表中的具体团队和论文归属为准，不代表覆盖集团全部内容。采集计划可能延迟，缺失记录也不代表原团队没有更新。
+收录范围以注册表中的具体团队为准，不代表覆盖集团全部内容。采集计划可能延迟，缺失记录也不代表原团队没有更新。
 
 ## 为什么做这个项目
 
-一线团队的技术博客与研究论文，记录了 AI 走进真实业务的探索、架构取舍和实践经验。这些内容分散在公司官网、开发者社区和团队账号里，持续跟进费时，有价值的文章也容易被错过。
+一线团队的技术博客，记录了 AI 走进真实业务的探索、架构取舍和实践经验。这些内容分散在公司官网、开发者社区和团队账号里，持续跟进费时，有价值的文章也容易被错过。
 
 AI Engineering Radar 将这些发布渠道聚集起来，帮助开发者发现新实践、追踪团队更新，并从中找到解决具体工程问题的思路。
 
 ## 核心功能
 
-- 博文与论文分开浏览，按公司分列，集中查看最新内容。
+- 博文按公司分列，集中查看最新内容。
 - 多列并排阅读，支持公司导航和滚动加载。
 - 搜索标题、摘要和作者，快速查找相关经验。
 - 支持全站 RSS / Atom 订阅，持续追踪更新。
@@ -53,24 +53,6 @@ AI Engineering Radar 将这些发布渠道聚集起来，帮助开发者发现�
 | 京东              | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/)                                  |
 | 百度              | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283)                            |
 | 蚂蚁集团          | [蚂蚁数据 AntData · CSDN](https://devpress.csdn.net/user/DB_GPT)                          |
-
-### 论文
-
-| 公司              | 来源入口                                                                                                                                                                                                   |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 腾讯              | [Crossref 出版方元数据](https://search.crossref.org/?q=Tencent)、[Tencent-Hunyuan 论文](https://huggingface.co/Tencent-Hunyuan/papers)                                                                     |
-| 得物              | [Crossref 出版方元数据](https://search.crossref.org/?q=Dewu)                                                                                                                                               |
-| 阿里巴巴 / 阿里云 | [Crossref 出版方元数据](https://search.crossref.org/?q=Alibaba)                                                                                                                                            |
-| 字节跳动          | [Crossref 出版方元数据](https://search.crossref.org/?q=ByteDance)、[ByteDance-Seed 论文](https://huggingface.co/ByteDance-Seed/papers)、[ByteDance Seed 论文](https://seed.bytedance.com/en/public_papers) |
-| 美团              | [Crossref 出版方元数据](https://search.crossref.org/?q=Meituan)、[meituan-longcat 论文](https://huggingface.co/meituan-longcat/papers)                                                                     |
-| vivo              | [Crossref 出版方元数据](https://search.crossref.org/?q=vivo%20Mobile%20Communication)                                                                                                                      |
-| 华为              | [Crossref 出版方元数据](https://search.crossref.org/?q=Huawei)、[Huawei Noah 论文](https://www.noahlab.com.hk/en/research_paper)                                                                           |
-| 快手              | [Crossref 出版方元数据](https://search.crossref.org/?q=Kuaishou)                                                                                                                                           |
-| 网易              | [Crossref 出版方元数据](https://search.crossref.org/?q=NetEase)、[AAAI 联合论文](https://ojs.aaai.org/index.php/AAAI/article/view/26509)                                                                   |
-| B站               | [Crossref 出版方元数据](https://search.crossref.org/?q=Bilibili)                                                                                                                                           |
-| 京东              | [Crossref 出版方元数据](https://search.crossref.org/?q=JD.com)                                                                                                                                             |
-| 百度              | [Crossref 出版方元数据](https://search.crossref.org/?q=Baidu)、[baidu 论文](https://huggingface.co/baidu/papers)                                                                                           |
-| 蚂蚁集团          | [Crossref 出版方元数据](https://search.crossref.org/?q=Ant%20Group)、[antgroup 论文](https://huggingface.co/antgroup/papers)                                                                               |
 
 欢迎[提议新来源](https://github.com/liuminxin45/ai-engineering-radar/issues/new?template=source.yml)或[提交贡献](CONTRIBUTING.md)。
 

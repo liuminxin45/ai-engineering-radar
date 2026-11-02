@@ -1,0 +1,1241 @@
+{
+  "schemaVersion": 1,
+  "companies": [
+    {
+      "id": "meituan",
+      "name": "美团",
+      "region": "cn"
+    },
+    {
+      "id": "vivo",
+      "name": "vivo",
+      "region": "cn"
+    },
+    {
+      "id": "dewu",
+      "name": "得物",
+      "region": "cn"
+    },
+    {
+      "id": "tencent",
+      "name": "腾讯",
+      "region": "cn"
+    },
+    {
+      "id": "alibaba",
+      "name": "阿里巴巴 / 阿里云",
+      "region": "cn"
+    },
+    {
+      "id": "qwen",
+      "name": "千问",
+      "region": "cn"
+    },
+    {
+      "id": "bytedance",
+      "name": "字节跳动",
+      "region": "cn"
+    },
+    {
+      "id": "baidu",
+      "name": "百度",
+      "region": "cn"
+    },
+    {
+      "id": "huawei",
+      "name": "华为",
+      "region": "cn"
+    },
+    {
+      "id": "kuaishou",
+      "name": "快手",
+      "region": "cn"
+    },
+    {
+      "id": "ant",
+      "name": "蚂蚁集团",
+      "region": "cn"
+    },
+    {
+      "id": "jd",
+      "name": "京东",
+      "region": "cn"
+    },
+    {
+      "id": "netease",
+      "name": "网易",
+      "region": "cn"
+    },
+    {
+      "id": "bilibili",
+      "name": "B站",
+      "region": "cn"
+    }
+  ],
+  "publishers": [
+    {
+      "id": "meituan-official",
+      "companyId": "meituan",
+      "name": "美团 技术团队"
+    },
+    {
+      "id": "vivo-tech",
+      "companyId": "vivo",
+      "name": "vivo 技术团队"
+    },
+    {
+      "id": "dewu-tech",
+      "companyId": "dewu",
+      "name": "得物 技术团队"
+    },
+    {
+      "id": "tencent-official",
+      "companyId": "tencent",
+      "name": "腾讯 技术团队"
+    },
+    {
+      "id": "alibaba-official",
+      "companyId": "alibaba",
+      "name": "阿里巴巴 / 阿里云 技术团队"
+    },
+    {
+      "id": "bytedance-official",
+      "companyId": "bytedance",
+      "name": "字节跳动 技术团队"
+    },
+    {
+      "id": "baidu-official",
+      "companyId": "baidu",
+      "name": "百度 技术团队"
+    },
+    {
+      "id": "huawei-official",
+      "companyId": "huawei",
+      "name": "华为 技术团队"
+    },
+    {
+      "id": "kuaishou-official",
+      "companyId": "kuaishou",
+      "name": "快手 技术团队"
+    },
+    {
+      "id": "ant-official",
+      "companyId": "ant",
+      "name": "蚂蚁集团 技术团队"
+    },
+    {
+      "id": "jd-official",
+      "companyId": "jd",
+      "name": "京东 技术团队"
+    },
+    {
+      "id": "netease-official",
+      "companyId": "netease",
+      "name": "网易 技术团队"
+    },
+    {
+      "id": "bilibili-official",
+      "companyId": "bilibili",
+      "name": "B站 技术团队"
+    },
+    {
+      "id": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "name": "阿里云云原生"
+    },
+    {
+      "id": "aliyun-dataphin",
+      "companyId": "alibaba",
+      "name": "瓴羊 Dataphin"
+    },
+    {
+      "id": "ant-ling",
+      "companyId": "ant",
+      "name": "蚂蚁百灵"
+    },
+    {
+      "id": "ant-oceanbase",
+      "companyId": "ant",
+      "name": "OceanBase 数据库团队"
+    },
+    {
+      "id": "qwen-team",
+      "companyId": "qwen",
+      "name": "千问 Qwen Team"
+    },
+    {
+      "id": "meituan-research-papers",
+      "companyId": "meituan",
+      "name": "美团 研究论文署名团队"
+    },
+    {
+      "id": "vivo-research-papers",
+      "companyId": "vivo",
+      "name": "vivo 研究论文署名团队"
+    },
+    {
+      "id": "dewu-research-papers",
+      "companyId": "dewu",
+      "name": "得物 研究论文署名团队"
+    },
+    {
+      "id": "tencent-research-papers",
+      "companyId": "tencent",
+      "name": "腾讯 研究论文署名团队"
+    },
+    {
+      "id": "alibaba-research-papers",
+      "companyId": "alibaba",
+      "name": "阿里巴巴 / 阿里云 研究论文署名团队"
+    },
+    {
+      "id": "bytedance-research-papers",
+      "companyId": "bytedance",
+      "name": "字节跳动 研究论文署名团队"
+    },
+    {
+      "id": "baidu-research-papers",
+      "companyId": "baidu",
+      "name": "百度 研究论文署名团队"
+    },
+    {
+      "id": "huawei-research-papers",
+      "companyId": "huawei",
+      "name": "华为 研究论文署名团队"
+    },
+    {
+      "id": "kuaishou-research-papers",
+      "companyId": "kuaishou",
+      "name": "快手 研究论文署名团队"
+    },
+    {
+      "id": "ant-research-papers",
+      "companyId": "ant",
+      "name": "蚂蚁集团 研究论文署名团队"
+    },
+    {
+      "id": "jd-research-papers",
+      "companyId": "jd",
+      "name": "京东 研究论文署名团队"
+    },
+    {
+      "id": "netease-research-papers",
+      "companyId": "netease",
+      "name": "网易 研究论文署名团队"
+    },
+    {
+      "id": "bilibili-research-papers",
+      "companyId": "bilibili",
+      "name": "B站 研究论文署名团队"
+    },
+    {
+      "id": "ant-data",
+      "companyId": "ant",
+      "name": "蚂蚁数据 AntData"
+    }
+  ],
+  "sources": [
+    {
+      "id": "meituan",
+      "publisherId": "meituan-official",
+      "name": "美团 · meituan",
+      "entryUrl": "https://tech.meituan.com/",
+      "url": "https://tech.meituan.com/feed/",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "official-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://tech.meituan.com/"],
+        "note": "公司自有官方域名及技术栏目，来源 URL 公开展示发布主体；仅收录本栏目的官方文章。",
+        "reviewedAt": "2026-11-01T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "metadata": {
+        "dateSelector": ".vp-post-date",
+        "timezone": "+08:00"
+      }
+    },
+    {
+      "id": "dewu-tencent",
+      "publisherId": "dewu-tech",
+      "name": "得物技术 · 腾讯云",
+      "entryUrl": "https://developer.cloud.tencent.com/user/9927536/articles",
+      "url": "https://developer.cloud.tencent.com/user/9927536/articles",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "tencent-user",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://developer.cloud.tencent.com/user/9927536/articles"
+        ],
+        "note": "用户指定得物技术账号，稳定 UID 9927536。公开主页列出得物App及公众号得物技术，持续发布得物团队文章；此依据不代表平台职业认证。只读取该用户文章目录，逐篇核对作者 UID，仅保存索引元数据。",
+        "reviewedAt": "2026-11-02T02:52:20Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "authorAllowlist": ["9927536"],
+      "linkPattern": "^/article/[0-9]+/?$"
+    },
+    {
+      "id": "vivo-csdn",
+      "publisherId": "vivo-tech",
+      "name": "vivo互联网技术 · CSDN",
+      "entryUrl": "https://blog.csdn.net/vivo_tech",
+      "url": "https://rss.csdn.net/vivo_tech/rss/map",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "csdn-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://blog.csdn.net/vivo_tech"],
+        "note": "用户指定账号。公开主页显示企业官方账号认证；稳定用户名 vivo_tech，2019 年以来持续发布 vivo 工程文章。公开账号 RSS 已通过 robots 与真实文章解析验证。",
+        "reviewedAt": "2026-11-01T09:39:54.440Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 50
+      },
+      "authorAllowlist": ["vivo_tech"],
+      "linkPattern": "^/vivo_tech/article/details/[0-9]+/?$"
+    },
+    {
+      "id": "huawei-csdn",
+      "publisherId": "huawei-official",
+      "name": "华为云开发者联盟 · CSDN",
+      "entryUrl": "https://blog.csdn.net/devcloud",
+      "url": "https://rss.csdn.net/devcloud/rss/map",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "csdn-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://blog.csdn.net/devcloud",
+          "https://devstation.developer.huaweicloud.com/",
+          "https://weibo.com/esdk"
+        ],
+        "note": "维护者指定的华为云 CSDN 账号。公开主页标注华为云官方博客，并链接华为云 AI 开发者空间；华为云开发者联盟企业微博列出 CSDN 渠道。去掉 utm_source 追踪参数，限定稳定作者 devcloud 与同账号文章路径，通过公开 RSS 采集元数据。",
+        "reviewedAt": "2026-11-02T04:06:02.288Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 50
+      },
+      "authorAllowlist": ["devcloud"],
+      "linkPattern": "^/devcloud/article/details/[0-9]+/?$"
+    },
+    {
+      "id": "kuaishou-csdn",
+      "publisherId": "kuaishou-official",
+      "name": "快手技术 · CSDN",
+      "entryUrl": "https://blog.csdn.net/kuaishoutech",
+      "url": "https://rss.csdn.net/kuaishoutech/rss/map",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "csdn-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://blog.csdn.net/kuaishoutech",
+          "https://segmentfault.com/blog/kuaishoujishu/about"
+        ],
+        "note": "人工核验：快手技术思否资料明确快手官方技术号，CSDN 与该号持续发布相同快手团队实践和活动。限定稳定用户名 kuaishoutech；HTML 请求返回 521，公开账号 RSS 允许访问并解析成功。",
+        "reviewedAt": "2026-11-01T09:39:54.440Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 50
+      },
+      "authorAllowlist": ["kuaishoutech"],
+      "linkPattern": "^/kuaishoutech/article/details/[0-9]+/?$"
+    },
+    {
+      "id": "netease-csdn",
+      "publisherId": "netease-official",
+      "name": "网易数帆大数据 · CSDN",
+      "entryUrl": "https://blog.csdn.net/wangyiyungw",
+      "url": "https://rss.csdn.net/wangyiyungw/rss/map",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "csdn-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://blog.csdn.net/wangyiyungw",
+          "https://sf.163.com/",
+          "https://www.cnblogs.com/163yun/"
+        ],
+        "note": "人工核验：公开账号资料列出目前就职网易、网易数智旗下产品介绍；长期文章自署网易云社区，与数帆官方产品和博客园同名团队历史相互印证。限定用户名 wangyiyungw，公开 RSS 解析成功。",
+        "reviewedAt": "2026-11-01T09:39:54.440Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 50
+      },
+      "authorAllowlist": ["wangyiyungw"],
+      "linkPattern": "^/wangyiyungw/article/details/[0-9]+/?$"
+    },
+    {
+      "id": "bilibili-csdn",
+      "publisherId": "bilibili-official",
+      "name": "哔哩哔哩技术 · CSDN",
+      "entryUrl": "https://blog.csdn.net/bilibili_TC",
+      "url": "https://rss.csdn.net/bilibili_TC/rss/map",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "csdn-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://blog.csdn.net/bilibili_TC",
+          "https://juejin.cn/user/3030701626893405",
+          "https://blog.csdn.net/bilibili_tc/article/details/148906060"
+        ],
+        "note": "人工核验：掘金资料列出上海哔哩哔哩科技有限公司，两个账号的年度技术合集与持续原创历史一致。RSS 返回稳定作者 bilibili_TC（注意大小写），公开账号 RSS 解析成功。",
+        "reviewedAt": "2026-11-01T09:39:54.440Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 50
+      },
+      "authorAllowlist": ["bilibili_TC"],
+      "linkPattern": "^/bilibili_TC/article/details/[0-9]+/?$"
+    },
+    {
+      "id": "tencent-qqnews",
+      "publisherId": "tencent-official",
+      "name": "腾讯技术工程 · 腾讯新闻",
+      "entryUrl": "https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D",
+      "url": "https://i.news.qq.com/getSubNewsMixedList?guestSuid=8QMZ23lf74UYuTs%3D&tabId=om_article&caller=1",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "tencent-news",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D",
+          "https://i.news.qq.com/i/getUserHomepageInfo?apptype=web&guestSuid=8QMZ23lf74UYuTs%3D&isInGuest=1"
+        ],
+        "note": "用户指定入口。公开用户资料接口显示腾讯技术工程官方账号认证；稳定 SUID 8QMZ23lf74UYuTs=、mediaid 6093642。公开作者列表 API 无需登录，robots 允许；逐条校验 card.suid，仅保存元数据和短摘要。",
+        "reviewedAt": "2026-11-01T09:39:54.440Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 50
+      },
+      "authorAllowlist": ["8QMZ23lf74UYuTs="],
+      "linkHosts": ["news.qq.com"]
+    },
+    {
+      "id": "jd-cnblogs",
+      "publisherId": "jd-official",
+      "name": "京东云开发者 · 博客园",
+      "entryUrl": "https://www.cnblogs.com/Jcloud/",
+      "url": "https://www.cnblogs.com/Jcloud/",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "cnblogs-account",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.cnblogs.com/Jcloud/",
+          "https://developer.jdcloud.com/",
+          "https://www.cnblogs.com/Jcloud/rss"
+        ],
+        "note": "人工核验：账号名称、京东云技术团队长期署名文章，与京东云开发者社区及同名公众号的持续历史一致。稳定账号路径 Jcloud；RSS 目标 robots 禁止，改用允许访问的账号 HTML 目录。",
+        "reviewedAt": "2026-11-01T09:39:54.440Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 50
+      },
+      "authorAllowlist": ["Jcloud"],
+      "linkPattern": "^/Jcloud/p/[0-9]+(?:\\.html)?/?$",
+      "selector": ".postTitle a",
+      "metadata": {
+        "dateSelector": "#post-date",
+        "timezone": "+08:00"
+      }
+    },
+    {
+      "id": "bytedance-tech-volcengine",
+      "publisherId": "bytedance-official",
+      "name": "字节跳动技术团队 · 火山引擎",
+      "entryUrl": "https://developer.volcengine.com/user/2772312065061673",
+      "url": "https://developer.volcengine.com/user/2772312065061673",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "volcengine-account",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://developer.volcengine.com/user/2772312065061673"
+        ],
+        "note": "用户指定字节跳动技术团队账号，稳定用户 ID 2772312065061673。公开账号 SSR 与逐篇 content.user_id、user.user_id 均匹配，仅采集该账号发布的文章元数据。普通公开请求实采 20 篇，最新北京时间 2026-06-25；按用户指定继续追踪，不代表近月活跃。原字节跳动开源账号已移除。",
+        "reviewedAt": "2026-11-02T03:55:15.410Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "authorAllowlist": ["2772312065061673"],
+      "linkHosts": ["developer.volcengine.com"],
+      "linkPattern": "^/articles/[0-9]+/?$"
+    },
+    {
+      "id": "ant-data-csdn",
+      "publisherId": "ant-data",
+      "name": "蚂蚁数据 AntData · CSDN",
+      "entryUrl": "https://devpress.csdn.net/user/DB_GPT",
+      "url": "https://rss.csdn.net/DB_GPT/rss/map",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "csdn-feed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://devpress.csdn.net/user/DB_GPT",
+          "https://blog.csdn.net/DB_GPT"
+        ],
+        "note": "维护者指定的蚂蚁数据团队账号。DevPress 显示蚂蚁数据 AntData、稳定用户名 DB_GPT，CSDN 同名账号为蚂蚁数据智能技术，持续发布蚂蚁数据团队实践、DB-GPT、VSAG 与 ASystem 工程文章。依据账号连续性、团队自述和维护者指定核验，不表述为平台企业认证。去掉 utm_source 参数，通过同账号公开 RSS 采集，仅接受作者 DB_GPT 与同账号文章路径。",
+        "reviewedAt": "2026-11-02T04:10:24.587Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 50
+      },
+      "linkPattern": "^/DB_GPT/article/details/[0-9]+/?$",
+      "authorAllowlist": ["DB_GPT"],
+      "linkHosts": ["blog.csdn.net"]
+    },
+    {
+      "id": "baidu-cloud-csdn-candidate",
+      "publisherId": "baidu-official",
+      "name": "百度智能云技术站 · CSDN",
+      "entryUrl": "https://blog.csdn.net/2301_82040283",
+      "url": "https://rss.csdn.net/2301_82040283/rss/map",
+      "priority": "A",
+      "adapter": "feed",
+      "platform": "csdn-feed",
+      "authorAllowlist": ["2301_82040283"],
+      "linkPattern": "^/2301_82040283/article/details/[0-9]+/?$",
+      "verification": {
+        "status": "verified",
+        "reviewedAt": "2026-11-02T01:30:59.711Z",
+        "evidenceUrls": [
+          "https://blog.csdn.net/2301_82040283",
+          "https://blog.csdn.net/2301_82040283/article/details/168876569",
+          "https://blog.csdn.net/2301_82040283/article/details/168653897",
+          "https://juejin.cn/user/3472695814005120",
+          "https://cloud.baidu.cn/article/9266017",
+          "https://cloud.baidu.cn/article/9259348"
+        ],
+        "note": "经维护者按现有交叉证据人工确认，为百度智能云技术团队发布渠道。账号持续发表团队原创工程文章，与同品牌掘金及百度自有社区长期近同步；RLinf、KVCache 等多篇 CSDN 原始发文先于百度社区数分钟。依据上述团队内容、账号连续性和自有社区对应关系核验，不以企业认证徽标为前提。限定稳定用户名2301_82040283及同账号文章路径，公开RSS实测可采集。"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      }
+    },
+    {
+      "id": "aliyun-apphub",
+      "publisherId": "aliyun-cloud-native",
+      "name": "阿里云云原生 · 云原生应用开发与管理",
+      "entryUrl": "https://developer.aliyun.com/group/apphub/article/",
+      "url": "https://developer.aliyun.com/group/apphub/article/",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "aliyun-group",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://developer.aliyun.com/group/apphub/article/",
+          "https://developer.aliyun.com/profile/pawmkwdq37c7s"
+        ],
+        "note": "维护者指定的阿里云官方博客目录。仅收录文章行中稳定作者 profile ID 为 pawmkwdq37c7s 的阿里云云原生文章，使用目录原始发表日期；排除其他作者和页面推荐链接，不请求受限账号主页，不保存正文。",
+        "reviewedAt": "2026-11-02T05:54:36.242Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "authorAllowlist": ["pawmkwdq37c7s"],
+      "linkPattern": "^/article/[0-9]+/?$"
+    },
+    {
+      "id": "qwen-research",
+      "publisherId": "qwen-team",
+      "name": "千问 · Research",
+      "entryUrl": "https://qwen.ai/research",
+      "url": "https://qwen.ai/research",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "qwen-research",
+      "bodyHosts": ["docs.qwenlm.ai"],
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": ["https://qwen.ai/research"],
+        "note": "用户指定的 Qwen 官方研究目录，官网署名 Qwen 并标明 Powered by Alibaba Cloud。按用户要求作为千问独立栏目。读取研究页面使用的同域公开 JSON 接口；限定 QwenTeam、研究目录历史 ID 与新发布类型 qwen_ai。只保存标题、原始日期、作者与原文链接，不保存正文或接口内部字段。",
+        "reviewedAt": "2026-11-02T03:37:09.016Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 100,
+        "backfillLimit": 100
+      },
+      "authorAllowlist": ["QwenTeam"]
+    },
+    {
+      "id": "meituan-papers-crossref",
+      "publisherId": "meituan-research-papers",
+      "contentType": "paper",
+      "name": "美团 · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=Meituan",
+      "url": "https://api.crossref.org/works?query.affiliation=Meituan&sort=published&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=Meituan&sort=published&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["Meituan"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "vivo-papers-crossref",
+      "publisherId": "vivo-research-papers",
+      "contentType": "paper",
+      "name": "vivo · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=vivo%20Mobile%20Communication",
+      "url": "https://api.crossref.org/works?query.affiliation=vivo+Mobile+Communication&sort=score&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=vivo+Mobile+Communication&sort=score&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["vivo Mobile Communication"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "dewu-papers-crossref",
+      "publisherId": "dewu-research-papers",
+      "contentType": "paper",
+      "name": "得物 · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=Dewu",
+      "url": "https://api.crossref.org/works?query.affiliation=Dewu&sort=published&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=Dewu&sort=published&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["Dewu"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "tencent-papers-crossref",
+      "publisherId": "tencent-research-papers",
+      "contentType": "paper",
+      "name": "腾讯 · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=Tencent",
+      "url": "https://api.crossref.org/works?query.affiliation=Tencent&sort=published&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=Tencent&sort=published&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["Tencent"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "alibaba-papers-crossref",
+      "publisherId": "alibaba-research-papers",
+      "contentType": "paper",
+      "name": "阿里巴巴 / 阿里云 · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=Alibaba",
+      "url": "https://api.crossref.org/works?query.affiliation=Alibaba&sort=published&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=Alibaba&sort=published&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["Alibaba"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "bytedance-papers-crossref",
+      "publisherId": "bytedance-research-papers",
+      "contentType": "paper",
+      "name": "字节跳动 · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=ByteDance",
+      "url": "https://api.crossref.org/works?query.affiliation=ByteDance&sort=published&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=ByteDance&sort=published&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["ByteDance"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "baidu-papers-crossref",
+      "publisherId": "baidu-research-papers",
+      "contentType": "paper",
+      "name": "百度 · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=Baidu",
+      "url": "https://api.crossref.org/works?query.affiliation=Baidu&sort=published&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=Baidu&sort=published&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["Baidu"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "huawei-papers-crossref",
+      "publisherId": "huawei-research-papers",
+      "contentType": "paper",
+      "name": "华为 · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=Huawei",
+      "url": "https://api.crossref.org/works?query.affiliation=Huawei&sort=published&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=Huawei&sort=published&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["Huawei"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "kuaishou-papers-crossref",
+      "publisherId": "kuaishou-research-papers",
+      "contentType": "paper",
+      "name": "快手 · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=Kuaishou",
+      "url": "https://api.crossref.org/works?query.affiliation=Kuaishou&sort=published&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=Kuaishou&sort=published&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["Kuaishou"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "ant-papers-crossref",
+      "publisherId": "ant-research-papers",
+      "contentType": "paper",
+      "name": "蚂蚁集团 · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=Ant%20Group",
+      "url": "https://api.crossref.org/works?query.affiliation=Ant+Group&sort=score&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=Ant+Group&sort=score&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["Ant Group"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "jd-papers-crossref",
+      "publisherId": "jd-research-papers",
+      "contentType": "paper",
+      "name": "京东 · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=JD.com",
+      "url": "https://api.crossref.org/works?query.affiliation=JD.com&sort=score&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=JD.com&sort=score&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["JD.com"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "netease-papers-crossref",
+      "publisherId": "netease-research-papers",
+      "contentType": "paper",
+      "name": "网易 · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=NetEase",
+      "url": "https://api.crossref.org/works?query.affiliation=NetEase&sort=published&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=NetEase&sort=published&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["NetEase"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "bilibili-papers-crossref",
+      "publisherId": "bilibili-research-papers",
+      "contentType": "paper",
+      "name": "B站 · 出版方论文元数据",
+      "entryUrl": "https://search.crossref.org/?q=Bilibili",
+      "url": "https://api.crossref.org/works?query.affiliation=Bilibili&sort=published&order=desc&rows=100",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-crossref",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+          "https://api.crossref.org/works?query.affiliation=Bilibili&sort=published&order=desc&rows=100"
+        ],
+        "note": "正式出版方提交至 Crossref 的论文元数据渠道，非企业账号。仅接受作者机构字段明确匹配本公司的论文，拒绝标题或摘要提及、无机构信息及模糊同名结果；保留逐篇 DOI 记录和作者机构摘录。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 30
+      },
+      "authorAllowlist": ["Bilibili"],
+      "linkHosts": ["doi.org"]
+    },
+    {
+      "id": "seed-hf-papers",
+      "publisherId": "bytedance-research-papers",
+      "contentType": "paper",
+      "name": "字节跳动 · ByteDance-Seed 论文",
+      "entryUrl": "https://huggingface.co/ByteDance-Seed/papers",
+      "url": "https://huggingface.co/ByteDance-Seed/papers",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-huggingface",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://seed.bytedance.com/en/public_papers",
+          "https://huggingface.co/ByteDance-Seed/papers"
+        ],
+        "note": "只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 5,
+        "backfillLimit": 5
+      },
+      "authorAllowlist": ["ByteDance-Seed"],
+      "linkHosts": ["arxiv.org"]
+    },
+    {
+      "id": "hunyuan-hf-papers",
+      "publisherId": "tencent-research-papers",
+      "contentType": "paper",
+      "name": "腾讯 · Tencent-Hunyuan 论文",
+      "entryUrl": "https://huggingface.co/Tencent-Hunyuan/papers",
+      "url": "https://huggingface.co/Tencent-Hunyuan/papers",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-huggingface",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://github.com/Tencent-Hunyuan",
+          "https://huggingface.co/Tencent-Hunyuan/papers"
+        ],
+        "note": "只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 5,
+        "backfillLimit": 5
+      },
+      "authorAllowlist": ["Tencent-Hunyuan"],
+      "linkHosts": ["arxiv.org"]
+    },
+    {
+      "id": "baidu-hf-papers",
+      "publisherId": "baidu-research-papers",
+      "contentType": "paper",
+      "name": "百度 · baidu 论文",
+      "entryUrl": "https://huggingface.co/baidu/papers",
+      "url": "https://huggingface.co/baidu/papers",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-huggingface",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://github.com/PaddlePaddle/ERNIE",
+          "https://huggingface.co/baidu/papers"
+        ],
+        "note": "只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 5,
+        "backfillLimit": 5
+      },
+      "authorAllowlist": ["baidu"],
+      "linkHosts": ["arxiv.org"]
+    },
+    {
+      "id": "longcat-hf-papers",
+      "publisherId": "meituan-research-papers",
+      "contentType": "paper",
+      "name": "美团 · meituan-longcat 论文",
+      "entryUrl": "https://huggingface.co/meituan-longcat/papers",
+      "url": "https://huggingface.co/meituan-longcat/papers",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-huggingface",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://longcat.ai/",
+          "https://huggingface.co/meituan-longcat/papers"
+        ],
+        "note": "只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 5,
+        "backfillLimit": 5
+      },
+      "authorAllowlist": ["meituan-longcat"],
+      "linkHosts": ["arxiv.org"]
+    },
+    {
+      "id": "ant-hf-papers",
+      "publisherId": "ant-research-papers",
+      "contentType": "paper",
+      "name": "蚂蚁集团 · antgroup 论文",
+      "entryUrl": "https://huggingface.co/antgroup/papers",
+      "url": "https://huggingface.co/antgroup/papers",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-huggingface",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.antresearch.com/",
+          "https://huggingface.co/antgroup/papers"
+        ],
+        "note": "只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 5,
+        "backfillLimit": 5
+      },
+      "authorAllowlist": ["antgroup"],
+      "linkHosts": ["arxiv.org"]
+    },
+    {
+      "id": "seed-official-papers",
+      "publisherId": "bytedance-research-papers",
+      "contentType": "paper",
+      "name": "字节跳动 · ByteDance Seed 论文",
+      "entryUrl": "https://seed.bytedance.com/en/public_papers",
+      "url": "https://seed.bytedance.com/en/public_papers",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-seed",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://seed.bytedance.com/",
+          "https://seed.bytedance.com/en/public_papers"
+        ],
+        "note": "官方研究目录逐篇列出的研究成果；保留目录归属依据。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 20
+      },
+      "authorAllowlist": ["ByteDance Seed"],
+      "linkHosts": [
+        "arxiv.org",
+        "doi.org",
+        "openreview.net",
+        "api.crossref.org",
+        "lf3-static.bytednsdoc.com",
+        "www.ijcai.org",
+        "dl.acm.org",
+        "ieeexplore.ieee.org",
+        "www.nature.com"
+      ]
+    },
+    {
+      "id": "noah-official-papers",
+      "publisherId": "huawei-research-papers",
+      "contentType": "paper",
+      "name": "华为 · Huawei Noah 论文",
+      "entryUrl": "https://www.noahlab.com.hk/en/research_paper",
+      "url": "https://www.noahlab.com.hk/en/research_paper",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-noah",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://www.noahlab.com.hk/",
+          "https://www.noahlab.com.hk/en/research_paper"
+        ],
+        "note": "官方研究目录逐篇列出的研究成果；保留目录归属依据。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 20
+      },
+      "authorAllowlist": ["Huawei Noah"],
+      "linkHosts": [
+        "arxiv.org",
+        "doi.org",
+        "openreview.net",
+        "api.crossref.org",
+        "lf3-static.bytednsdoc.com",
+        "www.ijcai.org",
+        "dl.acm.org",
+        "ieeexplore.ieee.org",
+        "www.nature.com"
+      ]
+    },
+    {
+      "id": "aaai-joint-paper-papers",
+      "publisherId": "netease-research-papers",
+      "contentType": "paper",
+      "name": "网易 · NetEase 论文",
+      "entryUrl": "https://ojs.aaai.org/index.php/AAAI/article/view/26509",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/26509",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "paper-metadata",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://ojs.aaai.org/index.php/AAAI/article/view/26509",
+          "https://ojs.aaai.org/index.php/AAAI/article/view/26509"
+        ],
+        "note": "只收录作者机构署名可验证的论文；不以组织昵称、提交人、正文提及或引用关系推断公司归属。 2026-11-02核验，官方机构目录或论文出版记录与公司身份交叉验证。",
+        "reviewedAt": "2026-11-02T00:00:00.000Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 20,
+        "backfillLimit": 20
+      },
+      "authorAllowlist": ["NetEase"],
+      "linkHosts": [
+        "arxiv.org",
+        "doi.org",
+        "openreview.net",
+        "api.crossref.org",
+        "lf3-static.bytednsdoc.com",
+        "www.ijcai.org",
+        "dl.acm.org",
+        "ieeexplore.ieee.org",
+        "www.nature.com"
+      ]
+    }
+  ]
+}

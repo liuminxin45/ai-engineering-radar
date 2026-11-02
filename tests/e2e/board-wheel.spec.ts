@@ -141,7 +141,7 @@ test("wheel motion starts quickly, settles, retargets and can be interrupted", a
   await wheelEvent(page, { deltaY: 400 });
   await page.clock.runFor(48);
   await page
-    .getByRole("tab", { name: "论文", exact: true })
+    .getByRole("button", { name: "搜索文章", exact: true })
     .dispatchEvent("pointerdown");
   const interrupted = await left(page);
   await page.clock.runFor(240);
@@ -249,35 +249,4 @@ test("edges, zoom modifiers and touch mode are preserved", async ({
       await board(page).evaluate((e) => getComputedStyle(e).scrollSnapType),
     ).toBe("x mandatory");
   }
-});
-
-test("paper tab keeps horizontal wheel handling and native list scrolling", async ({
-  page,
-}) => {
-  await page.goto("./");
-  await page.getByRole("tab", { name: "论文", exact: true }).click();
-  await expect(page.locator("#panel-latest h2")).toHaveText("最新论文");
-  const box = (await nav(page).boundingBox())!;
-  await page.mouse.move(box.x + 90, box.y + box.height / 2);
-  await page.mouse.wheel(0, 100);
-  await expectLeft(page, 100);
-  await pointAtHeader(page);
-  await page.mouse.wheel(0, 260);
-  await expectLeft(page, 360);
-  await expect(page).toHaveURL(/company=tencent/);
-  await expect(page).toHaveURL(/type=paper/);
-  await page.getByRole("button", { name: "最新", exact: true }).click();
-  await expectLeft(page, 0);
-  const list = latest(page);
-  const bounds = (await list.boundingBox())!;
-  await page.mouse.move(bounds.x + 100, bounds.y + 100);
-  await page.mouse.wheel(0, 240);
-  await expect
-    .poll(() => list.evaluate((e) => e.scrollTop))
-    .toBeGreaterThan(100);
-  await expectLeft(page, 0);
-  await page.reload();
-  await expect(
-    page.getByRole("tab", { name: "论文", exact: true }),
-  ).toHaveAttribute("aria-selected", "true");
 });

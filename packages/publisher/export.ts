@@ -14,6 +14,7 @@ export function publishedArticles(articles: Article[], registry: Registry) {
   return articles
     .filter(
       (a) =>
+        a.contentType !== "paper" &&
         registry.companies.some(
           (c) => c.id === a.companyId && c.region === "cn",
         ) &&
@@ -40,7 +41,7 @@ export function makeFeed(
   const url = siteUrl.replace(/\/$/, "");
   const feed = new Feed({
     title,
-    description: "国内公司技术博文与研究论文索引",
+    description: "国内公司技术博文索引",
     id: `${url}/${path.replace(/\.(xml|atom)$/, "")}`,
     link: url,
     language: "zh-CN",
@@ -51,7 +52,9 @@ export function makeFeed(
       atom: `${url}/${path.replace(/\.xml$/, ".atom")}`,
     },
   });
-  for (const a of articles.slice(0, 50)) {
+  for (const a of articles
+    .filter((a) => a.contentType !== "paper")
+    .slice(0, 50)) {
     const company = registry.companies.find((c) => c.id === a.companyId)!;
     const affiliations = articleCompanyIds(a)
       .map((id) => registry.companies.find((c) => c.id === id)?.name ?? id)

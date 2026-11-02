@@ -1,3 +1,4 @@
+import legacyRegistry from "../fixtures/legacy-paper-registry.json" with { type: "json" };
 import { describe, expect, it } from "vitest";
 import { loadRegistry } from "../../packages/source-registry/index.js";
 import {
@@ -10,7 +11,9 @@ import { validateRelations } from "../../packages/database/snapshot.js";
 import { parseCrossref } from "../../packages/crawler/platforms/papers.js";
 import type { Article, SourceState } from "../../packages/shared/types.js";
 
-const registry = await loadRegistry();
+const registry = legacyRegistry as unknown as Awaited<
+  ReturnType<typeof loadRegistry>
+>;
 function fixture() {
   const articles: Article[] = [];
   const replacement = registry.sources.find((s) => s.id === "dewu-tencent")!;

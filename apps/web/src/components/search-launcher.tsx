@@ -44,7 +44,7 @@ export default function SearchLauncher({ type }: { type: "blog" | "paper" }) {
         type="button"
         ref={trigger}
         className="icon-action"
-        aria-label={type === "paper" ? "搜索论文" : "搜索文章"}
+        aria-label="搜索文章"
         aria-haspopup="dialog"
         aria-expanded={open}
         onClick={show}

@@ -124,7 +124,7 @@ export default function SearchResults({
       ) : !query.trim() ? (
         <div className="site-search-state">
           <Search size={40} strokeWidth={1.25} aria-hidden="true" />
-          <p>输入关键词搜索{type === "paper" ? "论文" : "文章"}</p>
+          <p>输入关键词搜索文章</p>
         </div>
       ) : results.length === 0 ? (
         <div className="site-search-state">

@@ -12,10 +12,6 @@ test("search lives beside utility icons, opens immediately, traps focus and rest
   expect((await trigger.boundingBox())!.x).toBeLessThan(
     (await github.boundingBox())!.x,
   );
-  expect((await trigger.boundingBox())!.x).toBeGreaterThan(
-    (await page.getByRole("tab", { name: "论文", exact: true }).boundingBox())!
-      .x,
-  );
   await trigger.click();
   const dialog = page.getByRole("dialog", { name: "搜索文章", exact: true });
   const input = page.getByRole("combobox", { name: inputName });
@@ -127,35 +123,7 @@ test("results paginate, highlight and open the local reader with keyboard activa
   ).toBeVisible();
   await page.locator(".reader-back").click();
   await expect(page).not.toHaveURL(/q=/);
-  await expect(
-    page.getByRole("tab", { name: "博文", exact: true }),
-  ).toHaveAttribute("aria-selected", "true");
-  await page.getByRole("tab", { name: "论文", exact: true }).click();
-  await page.getByRole("button", { name: "搜索论文", exact: true }).click();
-  await expect(
-    page.getByRole("combobox", { name: "搜索所有面板的论文" }),
-  ).toHaveValue("");
-  const { articles } = await (await request.get("data/articles.json")).json();
-  const paper = articles.find(
-    (article: { contentType?: string }) => article.contentType === "paper",
-  );
-  if (paper) {
-    await page
-      .getByRole("combobox", { name: "搜索所有面板的论文" })
-      .fill(paper.title);
-    await expect(
-      page.getByRole("option").first().locator(".search-result-meta"),
-    ).toContainText("论文");
-  }
-  await page
-    .getByRole("combobox", { name: "搜索所有面板的论文" })
-    .fill("no-such-radar-paper");
-  await expect(
-    page.getByText("没有找到与“no-such-radar-paper”匹配的内容", {
-      exact: true,
-    }),
-  ).toBeVisible();
-  await expect(options).toHaveCount(0);
+  await expect(page.getByRole("tablist", { name: "内容类型" })).toHaveCount(0);
 });
 
 test("reference motion is retained and reduced motion disables it; backdrop clicks dismiss desktop dialogs", async ({

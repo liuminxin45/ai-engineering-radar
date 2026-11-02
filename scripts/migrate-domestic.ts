@@ -20,12 +20,12 @@ await withSnapshotLock(dir, async () => {
   const companies = new Set(registry.companies.map((c) => c.id));
   const sources = new Map(registry.sources.map((s) => [s.id, s]));
   const retirement = retireReplacedSources(
-    snapshot.articles,
+    snapshot.articles.filter((a) => a.contentType !== "paper"),
     snapshot.states,
     registry,
   );
-  const articles = retirement.articles.filter((a) =>
-    companies.has(a.companyId),
+  const articles = retirement.articles.filter(
+    (a) => a.contentType !== "paper" && companies.has(a.companyId),
   );
   let changed =
     articles.length !== snapshot.articles.length ||
@@ -71,6 +71,12 @@ await withSnapshotLock(dir, async () => {
       article.publicationStatus = "published";
       changed = true;
     }
+  }
+  const ids = new Set(articles.map((a) => a.id));
+  for (const a of articles) {
+    const d = a.duplicateCandidates.filter((id) => ids.has(id));
+    if (d.length !== a.duplicateCandidates.length) changed = true;
+    a.duplicateCandidates = d;
   }
   const states = retirement.states.filter((s) => sources.has(s.sourceId));
   if (states.length !== snapshot.states.length) changed = true;

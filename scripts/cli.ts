@@ -18,6 +18,8 @@ const dir = resolve(process.env.RADAR_DATA_DIR ?? ".radar/data");
 const registry = await loadRegistry();
 const command = process.argv[2];
 async function run() {
+  if (process.argv.includes("--papers"))
+    throw new Error("Paper collection has been removed");
   if (command === "registry") {
     console.log(
       `Registry valid: ${registry.sources.length} sources, ${registry.companies.length} companies`,
@@ -41,7 +43,7 @@ async function run() {
         daily: process.argv.includes("--daily"),
         probe: true,
         sourceId: process.argv.find((a) => a.startsWith("--source="))?.slice(9),
-        contentType: process.argv.includes("--papers") ? "paper" : undefined,
+        contentType: "blog",
       });
       const bodyResult = await collectBodies(
         result.articles,
@@ -51,7 +53,6 @@ async function run() {
           incremental: !process.argv.includes("--full"),
           force: process.argv.includes("--full"),
           changedArticleIds: result.changedArticleIds,
-          limit: process.argv.includes("--papers") ? 0 : undefined,
           sourceId: process.argv
             .find((a) => a.startsWith("--source="))
             ?.slice(9),

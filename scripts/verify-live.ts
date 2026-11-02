@@ -37,29 +37,12 @@ for (const path of [
   if (path === "/data/articles.json") {
     const data = JSON.parse(text);
     if (!data.articles.length) throw new Error("Live article index is empty");
-    const papers = data.articles.filter(
-      (a: { contentType?: string }) => a.contentType === "paper",
-    );
-    if (!papers.length) throw new Error("Live paper index is empty");
     if (
-      new Set(papers.map((a: { canonicalUrl: string }) => a.canonicalUrl))
-        .size !== papers.length
-    )
-      throw new Error("Duplicate live paper identities");
-    for (const paper of papers) {
-      if (
-        !paper.companyIds?.length ||
-        !paper.paperAffiliations?.length ||
-        paper.companyIds.some(
-          (id: string) =>
-            !paper.paperAffiliations.some(
-              (p: { companyId: string }) => p.companyId === id,
-            ),
-        )
+      data.articles.some(
+        (a: { contentType?: string }) => a.contentType === "paper",
       )
-        throw new Error(`Unverified live paper affiliation: ${paper.id}`);
-    }
-    console.log(`Verified ${papers.length} live papers with company evidence`);
+    )
+      throw new Error("Live index still contains papers");
     const r = await fetch(`${base}/articles/${data.articles[0].id}/`);
     if (!r.ok) throw new Error("Live article detail failed");
   }

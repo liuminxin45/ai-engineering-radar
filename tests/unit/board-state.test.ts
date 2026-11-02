@@ -15,7 +15,10 @@ describe("board shareable state", () => {
       company: "dewu",
       page: 3,
     };
-    expect(readBoardQuery(boardSearch(state), ["dewu"])).toEqual(state);
+    expect(readBoardQuery(boardSearch(state), ["dewu"])).toEqual({
+      ...state,
+      type: "blog",
+    });
   });
   it("recovers invalid links without hiding all panels or allocating unbounded batches", () => {
     expect(
@@ -77,17 +80,20 @@ describe("board shareable state", () => {
     ]);
     expect(companies[0].id).toBe("new-team");
   });
-  it("roundtrips paper tabs and falls back to blogs for unknown types", () => {
+  it("restores legacy paper and unknown links as blogs", () => {
     const state = {
       type: "paper" as const,
       q: "联合研究",
       company: "tencent",
       page: 2,
     };
-    expect(readBoardQuery(boardSearch(state), ["tencent"])).toEqual(state);
+    expect(readBoardQuery(boardSearch(state), ["tencent"])).toEqual({
+      ...state,
+      type: "blog",
+    });
     expect(boardSearch(readBoardQuery("?type=unknown", []))).toBe("");
   });
-  it("separates legacy blogs and papers and lists a joint paper in each company without multiplying latest", () => {
+  it("shows only blogs even when given a legacy paper query", () => {
     const articles = [
       {
         id: "blog",
@@ -110,11 +116,11 @@ describe("board shareable state", () => {
       company: "",
       page: 1,
     });
-    expect(papers.map((a) => a.id)).toEqual(["paper"]);
+    expect(papers.map((a) => a.id)).toEqual(["blog"]);
     expect(companyArticles(papers, "latest")).toHaveLength(1);
-    expect(companyArticles(papers, "tencent")).toHaveLength(1);
-    expect(companyArticles(papers, "meituan")).toHaveLength(1);
-    expect(companyArticles(papers, "dewu")).toHaveLength(0);
+    expect(companyArticles(papers, "tencent")).toHaveLength(0);
+    expect(companyArticles(papers, "meituan")).toHaveLength(0);
+    expect(companyArticles(papers, "dewu")).toHaveLength(1);
     expect(
       boardArticles(articles, {
         type: "blog",
