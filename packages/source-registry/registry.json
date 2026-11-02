@@ -604,30 +604,6 @@
       "linkPattern": "^/vivo_tech/article/details/[0-9]+/?$"
     },
     {
-      "id": "baidu-csdn",
-      "publisherId": "baidu-official",
-      "name": "百度大脑 · CSDN",
-      "entryUrl": "https://blog.csdn.net/weixin_45449540",
-      "url": "https://rss.csdn.net/weixin_45449540/rss/map",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "csdn-feed",
-      "verification": {
-        "status": "suspended",
-        "evidenceUrls": ["https://blog.csdn.net/weixin_45449540"],
-        "note": "已核验的历史渠道，暂停新增，保留已有文章与身份依据。2026-11-01复查：最新入库文章为2026-05-28，超过一个月未更新，不能承担当前更新追踪。 原核验说明：账号公开资料标注百度大脑官方内容输出平台及企业官方账号；稳定用户名 weixin_45449540，持续发布飞桨与文心工程内容。HTML 请求返回 521，公开账号 RSS 允许访问并解析成功。",
-        "reviewedAt": "2026-11-01T12:05:01.533Z"
-      },
-      "crawl": {
-        "enabled": false,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["weixin_45449540"],
-      "linkPattern": "^/weixin_45449540/article/details/[0-9]+/?$"
-    },
-    {
       "id": "huawei-csdn",
       "publisherId": "huawei-official",
       "name": "华为云开发者联盟 · CSDN",
@@ -1270,26 +1246,29 @@
     {
       "id": "baidu-cloud-csdn-candidate",
       "publisherId": "baidu-official",
-      "name": "百度智能云技术站 · CSDN（待核验）",
+      "name": "百度智能云技术站 · CSDN",
       "entryUrl": "https://blog.csdn.net/2301_82040283",
       "url": "https://rss.csdn.net/2301_82040283/rss/map",
-      "priority": "B",
+      "priority": "A",
       "adapter": "feed",
       "platform": "csdn-feed",
       "authorAllowlist": ["2301_82040283"],
       "linkPattern": "^/2301_82040283/article/details/[0-9]+/?$",
       "verification": {
-        "status": "pending",
+        "status": "verified",
+        "reviewedAt": "2026-11-02T01:30:59.711Z",
         "evidenceUrls": [
           "https://blog.csdn.net/2301_82040283",
+          "https://blog.csdn.net/2301_82040283/article/details/168876569",
+          "https://blog.csdn.net/2301_82040283/article/details/168653897",
           "https://juejin.cn/user/3472695814005120",
-          "https://cloud.baidu.cn/article/9266017"
+          "https://cloud.baidu.cn/article/9266017",
+          "https://cloud.baidu.cn/article/9259348"
         ],
-        "note": "找到近期技术站账号，公开RSS实测20条，近月8篇，最新2026-10-29。与百度自有社区和掘金长期同题、多个CSDN发布日期早于百度社区数分钟；但未找到此具体账号的企业认证、官方渠道声明或可核验机构字段，不能把同题同步当作账号归属证明，暂不启用。",
-        "reviewedAt": "2026-11-02T00:52:17.187Z"
+        "note": "经维护者按现有交叉证据人工确认，为百度智能云技术团队发布渠道。账号持续发表团队原创工程文章，与同品牌掘金及百度自有社区长期近同步；RLinf、KVCache 等多篇 CSDN 原始发文先于百度社区数分钟。依据上述团队内容、账号连续性和自有社区对应关系核验，不以企业认证徽标为前提。限定稳定用户名2301_82040283及同账号文章路径，公开RSS实测可采集。"
       },
       "crawl": {
-        "enabled": false,
+        "enabled": true,
         "intervalMinutes": 1440,
         "maxItems": 50,
         "backfillLimit": 100

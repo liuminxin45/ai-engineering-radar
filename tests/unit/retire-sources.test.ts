@@ -51,12 +51,12 @@ describe("explicit source retirement", () => {
     const data = fixture();
     const history = structuredClone(data.articles[0]);
     history.id = "00000000000000000002";
-    history.publisherId = "baidu-official";
-    history.companyId = "baidu";
+    history.publisherId = "oppo-official";
+    history.companyId = "oppo";
     history.locations = [
       {
-        sourceId: "baidu-csdn",
-        url: "https://blog.csdn.net/weixin_45449540/article/details/1",
+        sourceId: "oppo-segmentfault",
+        url: "https://segmentfault.com/a/1190000040000001",
       },
     ];
     data.articles.push(history);

@@ -36,12 +36,21 @@ it("accepts the actual case-sensitive OceanBase RSS identity and excludes unrela
     title: "并发查询预测 & 工程实践",
   });
 });
-it("keeps the unconfirmed Baidu account and inaccessible Kuaishou account out of collection", async () => {
-  const r = await loadRegistry();
-  const baidu = r.sources.find((s) => s.id === "baidu-cloud-csdn-candidate")!;
-  expect(baidu.verification.status).toBe("pending");
-  expect(baidu.crawl.enabled).toBe(false);
-  const kuaishou = r.sources.find((s) => s.id === "kuaishou-infoq")!;
+it("collects the reviewed Baidu account while rejecting unrelated authors and account paths", async () => {
+  const baidu = (await loadRegistry()).sources.find(
+    (s) => s.id === "baidu-cloud-csdn-candidate",
+  )!;
+  expect(baidu.verification.status).toBe("verified");
+  expect(baidu.crawl.enabled).toBe(true);
+  const item = (author: string, account: string, id: string) =>
+    `<item><title>KVCache 工程实践</title><link>https://blog.csdn.net/${account}/article/details/${id}</link><author>${author}</author><guid>${id}</guid></item>`;
+  const rss = `<rss version="2.0"><channel>${item("2301_82040283", "2301_82040283", "168653897")}${item("other-author", "2301_82040283", "2")}${item("2301_82040283", "other-account", "3")}</channel></rss>`;
+  expect(parseFeed(rss, baidu).map((a) => a.externalId)).toEqual(["168653897"]);
+});
+it("keeps the inaccessible Kuaishou account out of collection", async () => {
+  const kuaishou = (await loadRegistry()).sources.find(
+    (s) => s.id === "kuaishou-infoq",
+  )!;
   expect(kuaishou.crawl.enabled).toBe(false);
   expect(kuaishou.adapter).toBe("reference");
 });
