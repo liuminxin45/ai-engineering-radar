@@ -18,6 +18,7 @@ from camoufox.async_api import AsyncCamoufox
 from magicmd.platforms.csdn import parse_csdn_html
 
 MAGICMD_COMMIT = "78aa27f2ffb7d541a8f65508cf5e5bde43a636e4"
+BROWSER_VERSION = "158.0.1-beta.41"
 
 
 def compact(value):
@@ -118,9 +119,26 @@ async def fetch_one(browser, case, args, output):
     context = await browser.new_context()
     page = await context.new_page()
     statuses = []
-    page.on("response", lambda r: statuses.append(r.status) if r.request.is_navigation_request() and r.frame == page.main_frame else None)
+    responses = []
+    def navigation(response):
+        if response.request.is_navigation_request() and response.frame == page.main_frame:
+            statuses.append(response.status)
+            responses.append(response)
+    page.on("response", navigation)
     try:
-        await page.goto(case["url"], wait_until="domcontentloaded", timeout=30000)
+        response_html = None
+        try:
+            await page.goto(case["url"], wait_until="domcontentloaded", timeout=30000)
+        except Exception:
+            # Third-party scripts can stall DOMContentLoaded after the final
+            # article response is complete. Preserve that response, not a
+            # half-parsed DOM or the original 521 challenge.
+            if not responses or responses[-1].status != 200:
+                raise
+            response_html = await responses[-1].text()
+            if not BeautifulSoup(response_html, "html.parser").select_one("#content_views"):
+                raise
+            row["navigationWarning"] = "dom_timeout_complete_article_response_preserved"
         try:
             await page.wait_for_selector("#content_views", timeout=args.wait_ms)
         except Exception:
@@ -133,7 +151,8 @@ async def fetch_one(browser, case, args, output):
           restrictionVisible: [...document.querySelectorAll('.hide-article-box,.readall_box,.article-pay-box')].some(x =>
             x.getBoundingClientRect().height > 0 && /购买|付费|VIP专享|订阅后|登录后查看/.test(x.textContent))
         })""")
-        html = await page.content()
+        html = response_html if response_html is not None else await page.content()
+        row["captureMethod"] = "complete_browser_response" if response_html is not None else "rendered_dom"
         assessment, article = assess(html, case, info)
         row.update(assessment)
         row.update(info)
@@ -184,6 +203,18 @@ async def main(args):
         "shards": args.shards, "proxyConfigured": bool(args.proxy_env),
         "method": "MagicMD CSDN parser with default headless Camoufox; browser process reused, fresh context per article",
         "waitMs": args.wait_ms, "results": []}
+    if args.resume and (output / "report.json").exists():
+        previous = json.loads((output / "report.json").read_text(encoding="utf-8"))
+        assert previous["inputSha256"] == report["inputSha256"] and previous["environment"] == report["environment"]
+        report["results"] = previous["results"]
+        if args.retry_failed:
+            report["previousFailures"] = previous.get("previousFailures", []) + [row for row in previous["results"] if not row.get("accessSuccess")]
+            report["results"] = [row for row in previous["results"] if row.get("accessSuccess")]
+        report["startedAt"] = previous["startedAt"]
+        report["resumedAt"] = datetime.now(timezone.utc).isoformat()
+        done = {row["id"] for row in report["results"]}
+        cases = [case for case in cases if case["id"] not in done]
+    report["workers"] = args.workers
     options = {"headless": True}
     if args.executable_path:
         options["executable_path"] = args.executable_path
@@ -198,18 +229,23 @@ async def main(args):
             options["proxy"].update(username=proxy.username, password=proxy.password or "")
     async with AsyncCamoufox(**options) as browser:
         report["browserVersion"] = browser.version
-        for case in cases:
-            row = await fetch_one(browser, case, args, output)
-            attempts = [{k: row.get(k) for k in ["accessSuccess", "reason", "error", "navigationStatuses"]}]
-            if not row.get("accessSuccess"):
-                await asyncio.sleep(5)
+        assert report["browserVersion"] == BROWSER_VERSION, "Browser version differs from the fixed experiment"
+        queue = list(cases)
+        async def worker():
+            while queue:
+                case = queue.pop(0)
                 row = await fetch_one(browser, case, args, output)
-                attempts.append({k: row.get(k) for k in ["accessSuccess", "reason", "error", "navigationStatuses"]})
-            row["attempts"] = attempts
-            report["results"].append(row)
-            save_report(output / "report.json", report)
-            print(json.dumps({"completed": len(report["results"]), "total": len(cases), **{k: row.get(k) for k in ["id", "quality", "reason", "navigationStatuses"]}}, ensure_ascii=False), flush=True)
-            await asyncio.sleep(2)
+                attempts = [{k: row.get(k) for k in ["accessSuccess", "reason", "error", "navigationStatuses"]}]
+                if not row.get("accessSuccess"):
+                    await asyncio.sleep(5)
+                    row = await fetch_one(browser, case, args, output)
+                    attempts.append({k: row.get(k) for k in ["accessSuccess", "reason", "error", "navigationStatuses"]})
+                row["attempts"] = attempts
+                report["results"].append(row)
+                save_report(output / "report.json", report)
+                print(json.dumps({"completed": len(report["results"]), "inputTotal": 114, **{k: row.get(k) for k in ["id", "quality", "reason", "navigationStatuses"]}}, ensure_ascii=False), flush=True)
+                await asyncio.sleep(2)
+        await asyncio.gather(*(worker() for _ in range(args.workers)))
     report["completedAt"] = datetime.now(timezone.utc).isoformat()
     save_report(output / "report.json", report)
     print(json.dumps(report["summary"], ensure_ascii=False), flush=True)
@@ -228,5 +264,8 @@ if __name__ == "__main__":
     p.add_argument("--proxy-env")
     p.add_argument("--executable-path")
     p.add_argument("--native-os", action="store_true")
+    p.add_argument("--workers", type=int, choices=[1, 2], default=1)
+    p.add_argument("--resume", action="store_true")
+    p.add_argument("--retry-failed", action="store_true")
     p.add_argument("--screenshots", action="store_true")
     asyncio.run(main(p.parse_args()))
