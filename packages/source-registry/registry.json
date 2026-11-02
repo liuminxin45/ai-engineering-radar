@@ -604,6 +604,7 @@
       "priority": "A",
       "adapter": "html",
       "platform": "qwen-research",
+      "bodyHosts": ["docs.qwenlm.ai"],
       "verification": {
         "status": "verified",
         "evidenceUrls": ["https://qwen.ai/research"],

@@ -1,6 +1,7 @@
 import { load } from "cheerio";
 import type { Candidate, Source } from "../../shared/types.js";
 import { CrawlError, fetchReviewed, type HttpResult } from "../http.js";
+import { prepareCandidate } from "../incremental.js";
 
 const ORIGIN = "https://mimo.xiaomi.com";
 const CDN_ASSETS =
@@ -209,6 +210,7 @@ export async function collectMiMo(
   source: Source,
   response: HttpResult,
   limit: number,
+  options: import("../incremental.js").CollectionOptions = {},
 ) {
   validateMiMoSource(source);
   const scripts = miMoScripts(response.text);
@@ -224,6 +226,8 @@ export async function collectMiMo(
   );
   const warnings: string[] = [];
   for (const item of items) {
+    prepareCandidate(item, source, options);
+    if (item.unchanged) continue;
     try {
       const page = await fetchReviewed(item.url, source);
       const frame = miMoArticleFrame(page.text, item.url);
@@ -234,6 +238,7 @@ export async function collectMiMo(
         throw new CrawlError("MiMo article metadata unavailable");
       Object.assign(item, parseMiMoMetadata(html));
     } catch (error) {
+      item.metadataPending = true;
       warnings.push(
         error instanceof CrawlError
           ? error.message

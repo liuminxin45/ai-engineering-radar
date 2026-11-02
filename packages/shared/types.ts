@@ -1,4 +1,5 @@
 import { z } from "zod";
+import type { ArticleBody } from "./article-body.js";
 
 export const topics = [
   { id: "agent", name: "Agent" },
@@ -90,6 +91,11 @@ export const locationSchema = z.object({
   sourceId: z.string(),
   externalId: z.string().optional(),
   url: z.string().url(),
+  listingHash: z
+    .string()
+    .regex(/^[a-f0-9]{64}$/)
+    .optional(),
+  metadataPending: z.boolean().optional(),
 });
 export const articleSchema = z
   .object({
@@ -185,6 +191,7 @@ export const sourceSchema = z
     linkPattern: z.string().optional(),
     authorAllowlist: z.array(z.string()).optional(),
     linkHosts: z.array(z.string()).optional(),
+    bodyHosts: z.array(z.string().regex(/^[a-z0-9.-]+$/)).optional(),
     metadata: z
       .object({
         dateSelector: z.string().optional(),
@@ -224,6 +231,10 @@ export const sourceSchema = z
   });
 export type Source = z.infer<typeof sourceSchema>;
 export interface Candidate {
+  // Internal collection state persists on article locations.
+  listingHash?: string;
+  metadataPending?: boolean;
+  unchanged?: boolean;
   contentType?: ContentType;
   companyIds?: string[];
   paperAffiliations?: PaperAffiliation[];
@@ -260,10 +271,11 @@ export const sourceStateSchema = z.object({
 });
 export type SourceState = z.infer<typeof sourceStateSchema>;
 export const manifestSchema = z.object({
-  schemaVersion: z.literal(1),
+  schemaVersion: z.union([z.literal(1), z.literal(2)]),
   generatedAt: timestamp,
   articleCount: z.number().int().nonnegative(),
   sourceCount: z.number().int().nonnegative(),
+  bodyCount: z.number().int().nonnegative().optional(),
   files: z.record(z.string(), z.string().regex(/^[a-f0-9]{64}$/)),
 });
 export type Manifest = z.infer<typeof manifestSchema>;
@@ -271,6 +283,7 @@ export interface Snapshot {
   manifest: Manifest;
   articles: Article[];
   states: SourceState[];
+  bodies?: ArticleBody[];
 }
 export const effectiveDate = (a: Article) => a.publishedAt ?? a.discoveredAt;
 export const compareArticles = (a: Article, b: Article) =>

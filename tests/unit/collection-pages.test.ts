@@ -9,6 +9,9 @@ vi.mock("../../packages/crawler/http.js", async (importOriginal) => {
 import { collect } from "../../packages/crawler/adapters.js";
 import { fetchReviewed } from "../../packages/crawler/http.js";
 import { loadRegistry } from "../../packages/source-registry/index.js";
+import { upsert } from "../../packages/crawler/deduplicate.js";
+import { parseListing } from "../../packages/crawler/adapters.js";
+import type { Article } from "../../packages/shared/types.js";
 const registry = await loadRegistry();
 const source = {
   ...aliyunFixture,
@@ -74,4 +77,21 @@ it("fails the whole source batch when a required later page cannot be read", asy
   await expect(collect(source, state, 100)).rejects.toThrow(
     "second page failed",
   );
+});
+it("stops daily pagination on a fully known page while full mode still scans older pages", async () => {
+  const articles: Article[] = [];
+  for (const item of parseListing(first, source))
+    upsert(articles, item, source, registry);
+  vi.mocked(fetchReviewed).mockResolvedValue({
+    status: 200,
+    text: first,
+    url: source.url,
+  });
+  const daily = await collect(source, state, 100, {
+    incremental: true,
+    knownArticles: articles,
+  });
+  expect(daily.items).toHaveLength(2);
+  expect(daily.items.every((i) => i.unchanged)).toBe(true);
+  expect(fetchReviewed).toHaveBeenCalledTimes(1);
 });

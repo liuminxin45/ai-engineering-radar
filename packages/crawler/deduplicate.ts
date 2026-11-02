@@ -122,12 +122,18 @@ export function upsert(
         sourceId: source.id,
         externalId: item.externalId,
         url,
+        listingHash: item.listingHash,
+        metadataPending: item.metadataPending || undefined,
       });
     else if (location.url !== url) {
       if (existing.canonicalUrl === normalizeUrl(location.url))
         existing.canonicalUrl = canonical;
       location.url = url;
       existing.updatedAt = now;
+    }
+    if (location && item.listingHash) {
+      location.listingHash = item.listingHash;
+      location.metadataPending = item.metadataPending || undefined;
     }
     const metadataChanged =
       existing.title !== item.title ||
@@ -187,7 +193,15 @@ export function upsert(
     classification,
     publicationStatus:
       classification.status === "accepted" ? "published" : "draft",
-    locations: [{ sourceId: source.id, externalId: item.externalId, url }],
+    locations: [
+      {
+        sourceId: source.id,
+        externalId: item.externalId,
+        url,
+        listingHash: item.listingHash,
+        metadataPending: item.metadataPending || undefined,
+      },
+    ],
     duplicateCandidates: duplicates,
   };
   if (contentType === "paper") articleSchema.parse(article);

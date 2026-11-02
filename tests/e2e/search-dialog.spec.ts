@@ -89,7 +89,7 @@ test("lazy search keeps the input available while modules are stalled and preser
   await expect(page.getByRole("option").first()).toBeVisible();
 });
 
-test("results paginate, highlight and support keyboard activation without changing the reading tab", async ({
+test("results paginate, highlight and open the local reader with keyboard activation", async ({
   page,
   context,
 }, info) => {
@@ -116,20 +116,12 @@ test("results paginate, highlight and support keyboard activation without changi
   ).toHaveCSS("background-size", "100% 1px");
   await page.screenshot({ path: info.outputPath("search-results.png") });
   const href = await first.getAttribute("href");
-  await context.route(href!, (route) =>
-    route.fulfill({ body: "Publisher", contentType: "text/html" }),
-  );
-  const popupPromise = page.waitForEvent("popup");
   await page.keyboard.press("Enter");
-  const popup = await popupPromise;
-  await popup.waitForURL(href!);
-  await popup.close();
+  await expect(page).toHaveURL(new RegExp(href!));
   await expect(
-    page.getByRole("dialog", { name: "搜索文章", exact: true }),
-  ).toBeHidden();
-  await expect(
-    page.getByRole("button", { name: "搜索文章", exact: true }),
-  ).toBeFocused();
+    page.locator(".reader-actions").getByRole("link", { name: "阅读原文" }),
+  ).toBeVisible();
+  await page.locator(".reader-back").click();
   await expect(page).toHaveURL(/q=a/);
   await expect(
     page.getByRole("tab", { name: "博文", exact: true }),

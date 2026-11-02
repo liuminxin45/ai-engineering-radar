@@ -1,5 +1,15 @@
 import { readdir, readFile } from "node:fs/promises";
 import { join, extname } from "node:path";
+import { loadSnapshot } from "../packages/database/snapshot.js";
+import { loadRegistry } from "../packages/source-registry/index.js";
+import { maskPublisherBody } from "../packages/publisher/public-check.js";
+const snapshot = await loadSnapshot(
+  process.env.RADAR_DATA_DIR ?? ".radar/data",
+  await loadRegistry(),
+);
+const bodies = new Map(
+  (snapshot.bodies ?? []).map((body) => [body.articleId, body.html]),
+);
 const roots = [
   "packages",
   "scripts",
@@ -37,6 +47,7 @@ async function scan(dir: string) {
         ".atom",
         ".yml",
         ".yaml",
+        ".txt",
       ].includes(extname(file))
     ) {
       if (["check-public.ts", "serve.ts", "verify-live.ts"].includes(e.name))
@@ -45,7 +56,16 @@ async function scan(dir: string) {
       const patterns = file.split(/[\\/]/).includes("out")
         ? forbidden
         : forbidden.slice(0, 4);
-      if (patterns.some((p) => p.test(text)))
+      const id = /\/(?:articles|bodies)\/([a-f0-9]{20})(?:\/|\.json$)/.exec(
+        "/" + file.replaceAll("\\", "/"),
+      )?.[1];
+      const siteText =
+        id && bodies.has(id) ? maskPublisherBody(text, bodies.get(id)!) : text;
+      if (
+        patterns.some((pattern, index) =>
+          pattern.test(index < 3 ? text : siteText),
+        )
+      )
         throw new Error(`Public content check failed: ${file}`);
       if (
         !process.env.RADAR_ALLOW_FIXTURES &&

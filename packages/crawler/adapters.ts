@@ -23,6 +23,12 @@ import { parseVolcengineAccount } from "./platforms/volcengine.js";
 import { parseAntLingBlog } from "./platforms/ant-ling.js";
 import { collectMiMo } from "./platforms/xiaomi-mimo.js";
 import { collectPapers, type PaperContext } from "./platforms/papers.js";
+import { createRssHubClient, rssHubCandidates } from "./rsshub.js";
+import {
+  prepareCandidate,
+  knownArticle,
+  type CollectionOptions,
+} from "./incremental.js";
 export const plain = (s: unknown, max = 800) =>
   cheerio
     .load(`<body>${String(s ?? "")}</body>`)
@@ -276,26 +282,63 @@ export async function collect(
   source: Source,
   state: SourceState,
   limit: number,
-  paperContext?: PaperContext,
+  options: CollectionOptions & Partial<PaperContext> = {},
 ): Promise<{ items: Candidate[]; response: HttpResult; warnings: string[] }> {
   if (source.platform.startsWith("paper-")) {
-    if (!paperContext)
+    if (!options.companyId || !options.articles)
       throw new CrawlError(
         "Paper collection requires publisher and prior evidence context",
       );
-    return collectPapers(source, state, limit, paperContext);
+    const result = await collectPapers(
+      source,
+      state,
+      limit,
+      options as PaperContext,
+    );
+    for (const item of result.items) prepareCandidate(item, source, options);
+    return result;
+  }
+  const pendingMetadata = options.knownArticles?.some((article) =>
+    article.locations.some(
+      (location) => location.sourceId === source.id && location.metadataPending,
+    ),
+  );
+  if (source.platform === "csdn-feed" && process.env.RSSHUB_URL) {
+    const discovered = await createRssHubClient()!.discover(
+      source,
+      pendingMetadata ? undefined : state.etag,
+    );
+    const items = rssHubCandidates(discovered.items).slice(0, limit);
+    for (const item of items) prepareCandidate(item, source, options);
+    return {
+      items,
+      response: {
+        status: discovered.status,
+        text: "",
+        url: source.url,
+        etag: discovered.etag,
+      },
+      warnings: [],
+    };
   }
   const headers: Record<string, string> = {};
-  if (state.etag && source.platform !== "qwen-research")
+  if (state.etag && !pendingMetadata && source.platform !== "qwen-research")
     headers["If-None-Match"] = state.etag;
-  if (state.lastModified && source.platform !== "qwen-research")
+  if (
+    state.lastModified &&
+    !pendingMetadata &&
+    source.platform !== "qwen-research"
+  )
     headers["If-Modified-Since"] = state.lastModified;
   const response = await fetchReviewed(source.url, source, headers);
   if (response.status === 304) return { items: [], response, warnings: [] };
-  if (source.platform === "qwen-research")
-    return collectQwen(source, response, limit);
+  if (source.platform === "qwen-research") {
+    const result = await collectQwen(source, response, limit);
+    for (const item of result.items) prepareCandidate(item, source, options);
+    return result;
+  }
   if (source.platform === "xiaomi-mimo")
-    return collectMiMo(source, response, limit);
+    return collectMiMo(source, response, limit, options);
   const items = (
     source.adapter === "feed"
       ? parseFeed(response.text, source)
@@ -313,13 +356,23 @@ export async function collect(
     const unique = new Map(items.map((item) => [item.url, item]));
     const visited = new Set([source.url]);
     let current = response;
+    let pageItems = items;
     while (unique.size < limit && visited.size < 10) {
+      // Read every entry on a page before stopping; pinned/edited or backdated
+      // new entries must not be dropped merely because an older item is known.
+      if (
+        options.incremental &&
+        pageItems.every((item) =>
+          knownArticle(item, source, options.knownArticles ?? []),
+        )
+      )
+        break;
       const pageSource = { ...source, url: current.url };
       const next = nextPage(current.text, pageSource);
       if (!next || visited.has(next)) break;
       visited.add(next);
       current = await fetchReviewed(next, source);
-      const pageItems = parse(current.text, {
+      pageItems = parse(current.text, {
         ...source,
         url: next,
       });
@@ -349,8 +402,10 @@ export async function collect(
     "tencent-user",
   ].includes(source.platform);
   for (const item of items) {
+    prepareCandidate(item, source, options);
     // Only retrieve metadata when a listing/feed lacks a useful excerpt or date.
     if (
+      item.unchanged ||
       (item.description && item.publishedAt) ||
       !allowedHost(source, item.url) ||
       skipArticleMetadata
@@ -371,6 +426,7 @@ export async function collect(
       if (metadata.title && source.adapter === "html")
         item.title = metadata.title;
     } catch (e) {
+      item.metadataPending = true;
       warnings.push(
         e instanceof CrawlError ? e.message : "Article metadata request failed",
       );

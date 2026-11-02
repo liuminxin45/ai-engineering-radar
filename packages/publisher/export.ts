@@ -90,6 +90,10 @@ export async function exportSite(
   await rm(join(publicDir, "feed"), { recursive: true, force: true });
   await mkdir(join(dataDir, "articles"), { recursive: true });
   await mkdir(join(root, "apps/web/src/generated"), { recursive: true });
+  const generatedBodies = join(root, "apps/web/src/generated/bodies");
+  await rm(generatedBodies, { recursive: true, force: true });
+  await mkdir(generatedBodies, { recursive: true });
+  await mkdir(join(dataDir, "bodies"), { recursive: true });
   const sources = registry.sources.map((s) => ({
     ...s,
     latestPublishedAt:
@@ -111,6 +115,14 @@ export async function exportSite(
     generatedAt,
     articleCount: articles.length,
     sourceCount: sources.length,
+    bodyCount: (snapshot.bodies ?? []).filter((body) =>
+      articles.some((a) => a.id === body.articleId),
+    ).length,
+    readableBodyCount: (snapshot.bodies ?? []).filter(
+      (body) =>
+        body.status !== "unavailable" &&
+        articles.some((a) => a.id === body.articleId),
+    ).length,
     enabledSources: sources.filter((s) => s.crawl.enabled).length,
     successfulSources: sources.filter(
       (s) =>
@@ -170,6 +182,28 @@ export async function exportSite(
       schemaVersion: 1,
       article: a,
     });
+  for (const body of snapshot.bodies ?? []) {
+    if (!articles.some((article) => article.id === body.articleId)) continue;
+    const payload = { schemaVersion: 1, body };
+    await put(join(generatedBodies, `${body.articleId}.json`), payload);
+    await put(join(dataDir, "bodies", `${body.articleId}.json`), payload);
+  }
+  await put(join(dataDir, "bodies.json"), {
+    schemaVersion: 1,
+    generatedAt,
+    bodies: (snapshot.bodies ?? [])
+      .filter((body) =>
+        articles.some((article) => article.id === body.articleId),
+      )
+      .map((body) => ({
+        articleId: body.articleId,
+        status: body.status,
+        readingMinutes: body.readingMinutes,
+        headingCount: body.headings.length,
+        imageCount: (body.html.match(/<img\b/g) || []).length,
+        fetchedAt: body.fetchedAt,
+      })),
+  });
   for (const [name, data] of Object.entries({
     companies: registry.companies,
     topics: [],

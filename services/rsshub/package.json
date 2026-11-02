@@ -1,0 +1,18 @@
+{
+  "name": "radar-rsshub-service",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "packageManager": "pnpm@10.20.0",
+  "engines": {
+    "node": "24.19.0"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test incremental.test.mjs"
+  },
+  "dependencies": {
+    "cheerio": "1.2.0",
+    "rsshub": "1.0.0-master.23f13e4"
+  }
+}

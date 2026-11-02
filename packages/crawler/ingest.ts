@@ -14,9 +14,10 @@ import {
   assessAdvertorial,
   markAdvertorials,
 } from "../classifier/advertorial.js";
-import { upsert } from "./deduplicate.js";
+import { upsert, normalizeUrl } from "./deduplicate.js";
 import { collect } from "./adapters.js";
 import { CrawlError, fetchReviewed } from "./http.js";
+import { knownArticle } from "./incremental.js";
 
 export async function applyOverrides(articles: Article[]) {
   const raw = JSON.parse(
@@ -186,12 +187,17 @@ export async function ingest(
     sourceId?: string;
     probe?: boolean;
     contentType?: "blog" | "paper";
+    full?: boolean;
   } = {},
 ) {
   const articles = structuredClone(snapshot.articles);
   const states = structuredClone(snapshot.states);
   let successes = 0,
     attempted = 0;
+  let added = 0,
+    updated = 0,
+    unchanged = 0;
+  const changedArticleIds = new Set<string>();
   const sources = registry.sources.filter(
     (s) =>
       (!options.sourceId || s.id === options.sourceId) &&
@@ -222,6 +228,8 @@ export async function ingest(
         }
         if (
           !options.force &&
+          !options.full &&
+          !(options.daily && ["failed", "blocked"].includes(state.status)) &&
           !(options.daily && source.crawl.intervalMinutes <= 1440) &&
           state.nextRunAt &&
           state.nextRunAt > new Date().toISOString()
@@ -260,13 +268,15 @@ export async function ingest(
         try {
           const result = await collect(
             source,
-            options.force
+            options.force || options.full
               ? { ...state, etag: undefined, lastModified: undefined }
               : state,
-            state.lastSuccessAt
-              ? source.crawl.maxItems
-              : source.crawl.backfillLimit,
+            options.full || !state.lastSuccessAt
+              ? source.crawl.backfillLimit
+              : source.crawl.maxItems,
             {
+              incremental: !options.full,
+              knownArticles: snapshot.articles,
               companyId: registry.publishers.find(
                 (p) => p.id === source.publisherId,
               )!.companyId,
@@ -275,9 +285,31 @@ export async function ingest(
           );
           // Each source batch commits atomically; a malformed item cannot partially publish a failed run.
           const staged = structuredClone(articles);
-          for (const item of result.items)
-            upsert(staged, item, source, registry, now);
+          const changes: { id: string; added: boolean }[] = [];
+          let skipped = 0;
+          for (const item of result.items) {
+            const previous = knownArticle(item, source, staged);
+            if (item.unchanged && previous && !options.full) {
+              const location = previous.locations.find(
+                (l) =>
+                  l.sourceId === source.id &&
+                  ((item.externalId && l.externalId === item.externalId) ||
+                    normalizeUrl(l.url) === normalizeUrl(item.url)),
+              );
+              if (location) location.listingHash = item.listingHash;
+              skipped++;
+              continue;
+            }
+            const article = upsert(staged, item, source, registry, now);
+            changes.push({ id: article.id, added: !previous });
+          }
           articles.splice(0, articles.length, ...staged);
+          for (const change of changes) {
+            changedArticleIds.add(change.id);
+            if (change.added) added++;
+            else updated++;
+          }
+          unchanged += skipped;
           state.status =
             result.response.status === 304 ? "not-modified" : "success";
           state.httpStatus = result.response.status;
@@ -328,5 +360,14 @@ export async function ingest(
   }
   markAdvertorials(articles);
   await applyOverrides(articles);
-  return { articles, states, successes, attempted };
+  return {
+    articles,
+    states,
+    successes,
+    attempted,
+    added,
+    updated,
+    unchanged,
+    changedArticleIds: [...changedArticleIds],
+  };
 }

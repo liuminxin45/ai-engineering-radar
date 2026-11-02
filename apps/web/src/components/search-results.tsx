@@ -10,6 +10,7 @@ import {
 } from "react";
 import { Search, SearchX, LoaderCircle } from "./search-icons";
 import { SearchSession } from "../site-search";
+import { ArticleLink } from "./article-link";
 const formatBlogDate = (date: string) =>
   new Date(date).toLocaleDateString("zh-CN", { timeZone: "Asia/Shanghai" });
 
@@ -154,14 +155,9 @@ export default function SearchResults({
               role="option"
               aria-selected={index === activeIndex}
             >
-              <a
-                href={result.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={onClose}
-              >
+              <ArticleLink href={result.url} onClick={onClose}>
                 {content}
-              </a>
+              </ArticleLink>
             </li>
           );
         })}

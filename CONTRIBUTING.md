@@ -97,8 +97,10 @@ This initial release covers official engineering teams at Chinese companies. We 
 
 Articles from verified, enabled official sources enter the index directly, with identity verification, deduplication, and data validation. There is no content relevance screening or automatic topic classification.
 
-For a source PR, include its company, publisher, account URL and stable ID, public evidence of official ownership with a review date, and permitted collection endpoints. Prefer RSS / Atom. Respect robots.txt and public access conditions; include only essential metadata and short descriptions supplied by the source.
+For a source PR, include its company, publisher, account URL and stable ID, public evidence of official ownership with a review date, and permitted collection endpoints. Prefer RSS / Atom. Respect robots.txt and public access conditions. Keep index metadata and short descriptions separate from sanitized blog bodies; retain author attribution and the original link. Never publish a summary as a full article.
 
 Register the company, publisher, and source in `packages/source-registry/registry.json`. Follow the schema in `packages/shared/types.ts`. Leave incomplete verification as `pending` with collection disabled. For mixed-author communities, implement and test per-item publisher filtering. The generic Feed parser matches author text; the Tencent column parser matches UID. The generic HTML parser does not verify each item's author, so an allowlist alone is insufficient.
 
 Add small, public fixtures and tests for valid entries, unrelated or impersonating authors, missing metadata, and parser failures. Run the relevant commands above and report what remains unverified. Use the PR template; an incomplete lead can start as a source issue. A merged change is not proof that live collection has succeeded.
+
+正文解析与渲染扩展遵循[阅读页维护](docs/article-reader.md)。新增规则须保存来源与版本，并验证图片、代码、表格、目录及访问失败。RSSHub 服务的改动按其独立 AGPL-3.0 许可维护，见 [RSSHub 说明](docs/rsshub.md)。

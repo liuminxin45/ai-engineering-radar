@@ -1,12 +1,14 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { site } from "../lib";
+import { site, asset } from "../lib";
 import { BoardActions } from "./board-actions";
 import { Button } from "./action-button";
 import SearchLauncher from "./search-launcher";
 import { BrandMark } from "./brand-mark";
 import { useBoardWheel } from "./use-board-wheel";
+import { articleHref } from "../article-url";
+import { ArticleLink } from "./article-link";
 import {
   BOARD_BATCH_SIZE,
   boardArticles,
@@ -18,6 +20,7 @@ import {
   type BoardQuery,
 } from "../board";
 import type { Article } from "../../../../packages/shared/types";
+import { articleCompanyIds } from "../../../../packages/shared/content.ts";
 import styles from "./article-board.module.css";
 
 const companies = boardCompanies(site.companies);
@@ -58,6 +61,7 @@ export function ArticleBoard() {
   const navigationTarget = useRef(0);
   const scrollFrame = useRef<number | null>(null);
   useBoardWheel(viewport, companyNav, navigation);
+  const restoring = useRef(false);
   const active = query.company || "latest";
   const contentName = query.type === "paper" ? "论文" : "文章";
   const activeIndex = ids.indexOf(active);
@@ -130,6 +134,7 @@ export function ArticleBoard() {
   function scrollList(id: string, list: HTMLDivElement, total: number) {
     const previous = scrollTops.current[id] ?? 0;
     scrollTops.current[id] = list.scrollTop;
+    if (restoring.current) return;
     // Load once on approaching the bottom; appending keeps the reading position.
     // Another batch requires scrolling down through the newly appended articles.
     if (
@@ -190,23 +195,69 @@ export function ArticleBoard() {
     });
   }
   useEffect(() => {
+    const save = () => {
+      if (location.pathname !== asset("/")) return;
+      const positions = Object.fromEntries(
+        Object.entries(lists.current).map(([id, list]) => [
+          id,
+          list?.scrollTop || 0,
+        ]),
+      );
+      history.replaceState(
+        {
+          ...history.state,
+          radarBoard: {
+            url: location.pathname + location.search,
+            pages: pagesRef.current,
+            positions,
+            left: viewport.current?.scrollLeft || 0,
+          },
+        },
+        "",
+      );
+    };
     const restore = () => {
+      try {
+        sessionStorage.removeItem("radar:reader-origin");
+      } catch {}
       const next = readBoardQuery(location.search, companyIds),
         id = next.company || "latest";
       queryRef.current = next;
       writeQuery(next, true);
-      writePages({ [id]: next.page });
-      scrollTops.current = {};
+      const saved = history.state?.radarBoard;
+      const matching = saved?.url === location.pathname + location.search;
+      writePages(
+        matching ? { ...saved.pages, [id]: next.page } : { [id]: next.page },
+      );
+      scrollTops.current = matching ? { ...saved.positions } : {};
+      restoring.current = true;
       for (const list of Object.values(lists.current))
         if (list) list.scrollTop = 0;
-      requestAnimationFrame(() => moveTo(id, false));
+      requestAnimationFrame(() => {
+        moveTo(id, false);
+        if (matching) {
+          for (const [key, list] of Object.entries(lists.current))
+            if (list) list.scrollTop = saved.positions[key] || 0;
+          if (viewport.current) {
+            viewport.current.scrollLeft = saved.left;
+            navigationTarget.current = saved.left;
+          }
+        }
+        requestAnimationFrame(() => {
+          restoring.current = false;
+        });
+      });
     };
     restore();
     window.addEventListener("popstate", restore);
+    window.addEventListener("radar:save-board", save);
+    window.addEventListener("pagehide", save);
     const resized = () => moveTo(queryRef.current.company || "latest", false);
     window.addEventListener("resize", resized);
     return () => {
       window.removeEventListener("popstate", restore);
+      window.removeEventListener("radar:save-board", save);
+      window.removeEventListener("pagehide", save);
       window.removeEventListener("resize", resized);
       if (scrollFrame.current !== null)
         cancelAnimationFrame(scrollFrame.current);
@@ -406,13 +457,9 @@ export function ArticleBoard() {
                       key={a.id}
                     >
                       <h3>
-                        <a
-                          href={a.canonicalUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                        <ArticleLink href={articleHref(a)}>
                           <span className="link-label">{a.title}</span>
-                        </a>
+                        </ArticleLink>
                       </h3>
                       <div className={styles.storyMeta}>
                         <time

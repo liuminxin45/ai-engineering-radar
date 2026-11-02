@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "reference": "https://github.com/Kenshin/simpread/blob/d6534a7d67ab606e0390ff7172360fac88af4422/src/website_list.json",
+  "rules": [
+    {
+      "id": "meituan",
+      "version": "1",
+      "hosts": ["tech.meituan.com"],
+      "title": ["h1.post-title", "h1"],
+      "include": [".post-content", "article .content", "article"],
+      "exclude": [
+        ".post-copyright",
+        ".post-nav",
+        ".post-share",
+        ".related-posts"
+      ]
+    },
+    {
+      "id": "csdn",
+      "version": "1",
+      "hosts": ["blog.csdn.net", "devpress.csdn.net"],
+      "pathPattern": "/article/(details/)?|/article$",
+      "title": ["#articleContentId", "h1"],
+      "include": ["#content_views", "#article_content"],
+      "exclude": [
+        ".hljs-button",
+        ".hide-article-box",
+        ".more-toolbox",
+        ".person-messagebox",
+        ".meau-gotop-box"
+      ],
+      "reference": "https://github.com/Kenshin/simpread/blob/d6534a7d67ab606e0390ff7172360fac88af4422/src/website_list.json"
+    },
+    {
+      "id": "cnblogs",
+      "version": "1",
+      "hosts": ["www.cnblogs.com", "cnblogs.com"],
+      "title": ["#cb_post_title_url", "h1"],
+      "include": ["#cnblogs_post_body"],
+      "exclude": ["#MySignature", ".postDesc", ".blogpost-actions"],
+      "reference": "https://github.com/Kenshin/simpread/blob/d6534a7d67ab606e0390ff7172360fac88af4422/src/website_list.json"
+    },
+    {
+      "id": "tencent-cloud",
+      "version": "1",
+      "hosts": ["developer.cloud.tencent.com", "cloud.tencent.com"],
+      "pathPattern": "/(developer/)?article/",
+      "title": ["h1"],
+      "include": [
+        ".J-articleContent",
+        ".mod-content__markdown",
+        ".com-markdown-collpase-main",
+        ".com-markdown"
+      ],
+      "exclude": [
+        ".com-markdown-collpase-tip",
+        ".article-copyright",
+        ".recommend",
+        ".copy-code-btn"
+      ]
+    },
+    {
+      "id": "tencent-news",
+      "version": "1",
+      "hosts": ["news.qq.com", "new.qq.com", "view.inews.qq.com"],
+      "title": ["h1"],
+      "include": [
+        ".rich_media_content",
+        "#articleContent",
+        "#article-content",
+        ".content-article",
+        "#content"
+      ],
+      "exclude": [".recommend", ".share", ".qqcom-copyright"]
+    },
+    {
+      "id": "aliyun",
+      "version": "1",
+      "hosts": ["developer.aliyun.com"],
+      "pathPattern": "/article/",
+      "title": ["h1"],
+      "include": [
+        "#article-content",
+        ".article-content",
+        ".article-detail-content",
+        ".markdown-body"
+      ],
+      "exclude": [".article-copyright", ".recommend", ".copy-btn"]
+    },
+    {
+      "id": "volcengine",
+      "version": "1",
+      "hosts": ["developer.volcengine.com"],
+      "pathPattern": "/articles/",
+      "title": ["h1"],
+      "include": [
+        ".article-content",
+        ".markdown-body",
+        ".bytemd-preview .markdown-body",
+        "article"
+      ],
+      "exclude": [".copy-code-btn", ".article-copyright", ".recommend"]
+    },
+    {
+      "id": "qwen",
+      "version": "1",
+      "hosts": ["qwen.ai", "docs.qwenlm.ai"],
+      "title": ["h1"],
+      "include": [
+        ".post-content",
+        ".markdown-body",
+        ".markdown",
+        ".article-content",
+        "article"
+      ],
+      "exclude": [".post-header", ".post-footer", ".post-nav", ".breadcrumbs"]
+    }
+  ]
+}

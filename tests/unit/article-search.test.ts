@@ -60,7 +60,7 @@ describe("Radar search adapter", () => {
       await Promise.all(
         hits.results.map(async (hit) => (await hit.data()).url),
       ),
-    ).toEqual(["https://example.org/a"]);
+    ).toEqual(["/articles/blog-a/"]);
     expect(
       boardArticles(articles, { ...initialBoardQuery, q: "ＡＩ latency" }).map(
         (a) => a.id,

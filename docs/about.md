@@ -8,7 +8,7 @@ AI Engineering Radar 是一个开放的工程文章索引。首批仅追踪国�
 
 项目从允许采集的入口提取必要元数据和原站提供的短介绍。已核验且启用的官方来源文章直接建立索引，保留身份核验、去重与数据校验，不做内容相关性筛选、模型审核或自动主题分类。
 
-网站提供搜索和公司分列浏览。点击文章标题直接打开发布网站，每列触底时自动追加文章，右上角显示数据更新时间。你也可以使用全站 RSS / Atom 订阅，持续追踪整个项目的更新。文章保留原始语言，全文在原站阅读。项目不复制、存储或分发文章全文；代码的 MIT 许可不改变原文、摘要、名称和商标的权利归属。
+网站提供搜索和公司分列浏览。点击博文标题进入本站阅读页，顶部可打开原文；每列触底时自动追加文章，右上角显示数据更新时间。你也可以使用全站 RSS / Atom 订阅，持续追踪整个项目的更新。博文保留原始语言，统一排版并提供目录、阅读进度和图片预览，正文不可用或可能不完整时明确提示。论文保留原站阅读方式。代码的 MIT 许可不改变原文、图片、摘要、名称和商标的权利归属。
 
 顶部“博文 / 论文”切换共用公司分列看板。博文每家公司保留一个发布渠道，论文渠道按作者机构或公司自有研究目录另行核验。正式出版物使用出版方提交的机构记录，预印本核对论文作者区；联合论文可归属多家公司。详情页和公开 JSON 保留逐公司证据，归属反映论文发表时的机构信息。当前覆盖及未启用渠道见[论文来源核验](paper-sources.md)。
 
@@ -24,7 +24,7 @@ Each article keeps its company, publisher, original URL, and source relationship
 
 The project collects essential metadata and short descriptions supplied by the original site from permitted endpoints. Articles from verified, enabled official sources enter the index directly, with identity verification, deduplication, and data validation. There is no content relevance screening, model review, or automatic topic classification.
 
-Readers can search the index and browse company columns. Article titles open the publishing site directly, and each column loads another batch as readers reach its bottom. The update time appears at the top right. Subscribe to the site-wide RSS / Atom feeds to follow updates across the project. Articles keep their original language. Full articles remain on their original sites: this project does not copy, store, or redistribute their full text. The code's MIT license does not relicense source content, descriptions, names, or trademarks.
+Readers can search the index and browse company columns. Blog titles open a local reader with a link to the original publication, and each column loads another batch at its bottom. The update time appears at the top right. Subscribe to the site-wide RSS / Atom feeds to follow project updates. Articles keep their original language. Available blog text is saved and rendered with consistent typography, a table of contents and image previews. Missing or potentially incomplete text is clearly marked; papers continue to open on the publishing site. The code's MIT license does not relicense source content, images, descriptions, names, or trademarks.
 
 The Blog and Papers tabs share the company board. Paper affiliations come from publisher-deposited author institutions, paper author blocks, or official research directories. A joint paper may belong to multiple companies while keeping one index record. Per-company evidence links and short institution excerpts remain available in detail pages and public JSON. They describe institutions at publication time, not authors' current employment. See the [paper source audit](paper-sources.md) for coverage and unresolved channels.
 

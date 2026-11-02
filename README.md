@@ -26,6 +26,7 @@ AI Engineering Radar 将这些发布渠道聚集起来，帮助开发者发现�
 - 支持全站 RSS / Atom 订阅，持续追踪更新。
 - GitHub Actions 每日定时采集并发布，计划于北京时间 09:17 运行。
 - 阅读状态保存在链接中，支持刷新恢复与分享。
+- 博文在本站统一排版阅读，支持目录、阅读进度和图片放大，顶部可打开原文。
 - 支持深浅色切换，点击文章标题直达原文。
 
 ## 阅读界面
@@ -75,4 +76,8 @@ AI Engineering Radar 将这些发布渠道聚集起来，帮助开发者发现�
 
 ## 许可与内容版权
 
-代码采用 [MIT](LICENSE)。来源文章、摘要、名称和商标归相应权利人所有，不因本项目开源而重新授权。本站仅保存必要元数据及原站提供的短介绍，完整内容请访问原站。权利人可通过仓库 Issue 请求更正或移除。
+主应用代码采用 [MIT](LICENSE)，独立的 [RSSHub 服务](services/rsshub/)采用 [AGPL-3.0](services/rsshub/LICENSE)。来源文章、图片、摘要、名称和商标归相应权利人所有，不因本项目开源而重新授权。阅读页保留作者、发布主体和原文入口；正文不可用或可能不完整时明确提示，内容更新以原文为准。权利人可通过仓库 Issue 请求更正或移除。
+
+博文正文解析参考了 [简悦 SimpRead](https://github.com/Kenshin/simpread) 的[站点解析规则](https://github.com/Kenshin/simpread/blob/d6534a7d67ab606e0390ff7172360fac88af4422/src/website_list.json)，感谢 Kenshin 与项目贡献者。解析引擎、扩展方法和参考版本见[阅读页维护说明](docs/article-reader.md)。
+
+CSDN 账号的文章发现与可用正文获取接入了 [RSSHub](https://github.com/DIYgod/RSSHub)，感谢 DIYgod 与项目贡献者。接入范围和正文限制见[RSSHub 维护说明](docs/rsshub.md)。

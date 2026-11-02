@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: "AI Engineering Radar · 国内技术文章索引",
     template: "%s · AI Engineering Radar",
   },
-  description: "按公司与时间浏览国内官方技术团队的文章，回到原文阅读。",
+  description: "按公司与时间浏览国内官方技术团队的文章，在统一阅读页学习并随时查看原文。",
   icons: {
     icon: [
       { url: `${basePath}/favicon.ico`, sizes: "16x16 32x32 48x48" },

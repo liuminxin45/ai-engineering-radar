@@ -13,6 +13,8 @@
     "registry:check": "tsx scripts/cli.ts registry",
     "ingest": "tsx scripts/cli.ts ingest",
     "ingest:papers": "tsx scripts/cli.ts ingest --papers",
+    "bodies:backfill": "tsx scripts/cli.ts bodies",
+    "rsshub:check": "tsx scripts/check-rsshub.ts",
     "data:init": "tsx scripts/cli.ts init",
     "data:check": "tsx scripts/cli.ts validate",
     "export": "tsx scripts/cli.ts export",
@@ -26,14 +28,20 @@
     "data:migrate-domestic": "tsx scripts/migrate-domestic.ts"
   },
   "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "acorn": "^8.19.0",
     "cheerio": "^1.1.2",
+    "dompurify": "^3.4.17",
     "fast-xml-parser": "^5.3.0",
     "feed": "^5.1.0",
+    "jsdom": "^30.1.3",
+    "marked": "^18.1.2",
     "robots-parser": "^3.0.1",
     "zod": "^4.1.12"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",
+    "@types/jsdom": "^30.0.0",
     "@types/node": "^22.18.0",
     "prettier": "3.6.2",
     "tsx": "^4.20.6",

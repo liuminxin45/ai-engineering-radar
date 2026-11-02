@@ -219,42 +219,22 @@ test("scrolling appends one batch per bottom encounter and article titles open t
     Math.min(40, companyCount),
   );
   const original = selectedList.locator("article h3 a").first();
-  const canonical = await original.getAttribute("href");
-  expect(canonical).toMatch(/^https?:\/\//);
-  await expect(original).toHaveAttribute("target", "_blank");
-  await expect(original).toHaveAttribute("rel", /noopener/);
-  await expect(original.locator(".link-label")).toHaveCount(1);
-  const intercepted = new URL(canonical!).href;
-  await page.context().route(
-    (url) => url.href === intercepted,
-    (route) =>
-      route.fulfill({
-        contentType: "text/html",
-        body: "<title>Publisher article</title>",
-      }),
-  );
-  const popupPromise = page.waitForEvent("popup");
-  await original.click();
-  const popup = await popupPromise;
-  await popup.waitForURL(intercepted);
-  await popup.close();
-  const article = data.find(
-    (a: { canonicalUrl: string }) => a.canonicalUrl === canonical,
+  const href = await original.getAttribute("href");
+  expect(href).toMatch(/\/articles\/[^/]+\/$/);
+  const article = data.find((a: { id: string }) =>
+    href?.includes(`/articles/${a.id}/`),
   );
   expect(article).toBeTruthy();
-  await page.goto(`./articles/${article.id}/`);
+  const canonical = article.canonicalUrl;
+  await expect(original.locator(".link-label")).toHaveCount(1);
+  await original.click();
   await expect(page).toHaveURL(/\/ai-engineering-radar\/articles\/[^/?]+\/?$/);
+  await expect(page.locator("h1")).toHaveText(article.title);
   await expect(
-    page.getByRole("heading", { name: "来源与发布信息" }),
-  ).toBeVisible();
-  await expect(page.locator("h1 a")).toHaveAttribute("href", canonical!);
-  await expect(
-    page.getByRole("link", { name: /阅读原文|订阅这家公司|来源目录/ }),
-  ).toHaveCount(0);
+    page.locator(".reader-actions").getByRole("link", { name: "阅读原文" }),
+  ).toHaveAttribute("href", canonical);
   await page.reload();
-  await expect(
-    page.getByRole("heading", { name: "来源与发布信息" }),
-  ).toBeVisible();
+  await expect(page.locator("h1")).toHaveText(article.title);
   await expectNoDocumentOverflow(page);
   for (const path of ["feed.xml", "feed.atom", "data/articles.json"])
     expect((await request.get(path)).ok()).toBe(true);

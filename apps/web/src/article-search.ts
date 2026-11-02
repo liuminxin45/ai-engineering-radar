@@ -1,5 +1,6 @@
 import type { Article, ContentType } from "../../../packages/shared/types.js";
 import type { SearchEngine } from "./site-search.js";
+import { articleHref } from "./article-url.ts";
 
 const normalize = (text: string) => text.normalize("NFKC").toLocaleLowerCase();
 const termPattern = (term: string) =>
@@ -93,13 +94,13 @@ export function createArticleSearchEngine(
       return {
         results: matches.map(({ article }) => ({
           data: async () => ({
-            url: article.canonicalUrl,
+            url: articleHref(article),
             excerpt: searchExcerpt(article.description ?? "", terms),
             meta: {
               title: article.title,
               type: type === "paper" ? "论文" : "博文",
               date: article.publishedAt ?? article.discoveredAt,
-              external: "true",
+              external: type === "paper" ? "true" : "false",
             },
           }),
         })),

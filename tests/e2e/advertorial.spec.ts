@@ -25,8 +25,10 @@ test("trial labels remain visible, fit the bottom right, and link to review evid
     })
     .first();
   const title = article.getByRole("link", { name: sample.title, exact: true });
-  await expect(title).toHaveAttribute("href", sample.canonicalUrl);
-  await expect(title).toHaveAttribute("target", "_blank");
+  await expect(title).toHaveAttribute(
+    "href",
+    `/ai-engineering-radar/articles/${sample.id}/`,
+  );
   const badge = article.getByRole("link", {
     name: "疑似软文：查看标记依据",
     exact: true,

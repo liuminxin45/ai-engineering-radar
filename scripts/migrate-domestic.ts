@@ -74,7 +74,20 @@ await withSnapshotLock(dir, async () => {
   }
   const states = retirement.states.filter((s) => sources.has(s.sourceId));
   if (states.length !== snapshot.states.length) changed = true;
-  if (changed) await saveSnapshot(dir, articles, states, registry);
+  if (changed)
+    await saveSnapshot(
+      dir,
+      articles,
+      states,
+      registry,
+      snapshot.bodies?.filter((body) =>
+        articles.some(
+          (a) =>
+            a.id === body.articleId &&
+            a.locations.some((l) => l.sourceId === body.sourceId),
+        ),
+      ),
+    );
   console.log(
     `Domestic snapshot: ${articles.length} articles; removed ${retirement.articles.length - articles.length} outside-registry articles, ${retirement.removedArticles} retired-source articles, ${retirement.removedLocations} retired locations and ${snapshot.states.length - states.length} retired source states; ${changed ? "migration applied" : "already current"}.`,
   );

@@ -7,6 +7,8 @@ README 面向产品读者，优先介绍产品目标、核心功能、界面与�
 按任务阅读相关文档：
 
 - [技术设计](docs/design.md)：数据流、实体、去重、页面行为和 URL 状态。
+- [阅读页维护](docs/article-reader.md)：解析引擎、正文补抓及重试。
+- [RSSHub 维护](docs/rsshub.md)：独立服务与增量正文请求。
 - [运行维护](docs/operations.md)：采集调度、数据分支、来源迁移、恢复与发布。
 - [贡献指南](CONTRIBUTING.md)：来源材料、适配器与测试要求。
 - [软文标记试运行](docs/advertorial-trial.md)：标记范围、人工复核与更正方法。
@@ -31,7 +33,7 @@ pnpm export
 pnpm dev
 ```
 
-`pnpm ingest --force` 采集全部启用来源，包括博文和论文。只更新论文可运行 `pnpm ingest:papers --force`；只诊断单个来源可运行 `pnpm ingest --force --source=来源ID`。
+`pnpm ingest --force` 检查全部启用来源，内容按增量策略处理。每日任务使用 `pnpm ingest --daily`，重试失败文章并跳过未变化的成功正文。主动全量刷新使用 `pnpm ingest --full`。只更新论文可运行 `pnpm ingest:papers --force`；只诊断单个来源可运行 `pnpm ingest --force --source=来源ID`。
 
 已有快照时跳过初始化。初始化命令会拒绝覆盖已有数据。默认数据目录为 `.radar/data`，可以通过 `RADAR_DATA_DIR` 指定其他目录。
 
@@ -86,7 +88,7 @@ pnpm test:e2e
 
 `config/overrides.json` 用于人工更正或隐藏记录。确定的同一发布主体跨平台重复可在 `merges` 添加 `from`、`into` 和 `reason`。相似标题只提示复核，不自动合并。
 
-不保存或提供文章全文。文章保留原始语言，不提供登录、收藏、推荐榜单和评论。发现归属、链接、日期或重复关系有误时，根据原文地址与证据修正。
+博文正文单独保存在快照并静态渲染，保留原始语言、作者及原文入口。原始页面不落库，摘要不能当作全文。正文失败保留已有内容；论文保持原有阅读方式。不提供登录、收藏、推荐榜单和评论。
 
 ## 静态接口与订阅
 
@@ -96,6 +98,8 @@ pnpm test:e2e
 | -------------------------- | -------------------- |
 | `/data/articles.json`      | 已发布博文与论文索引 |
 | `/data/articles/{id}.json` | 单篇元数据           |
+| `/data/bodies.json`        | 博文正文状态         |
+| `/data/bodies/{id}.json`   | 单篇清洗后的正文     |
 | `/data/companies.json`     | 公司目录             |
 | `/data/sources.json`       | 来源及检测状态       |
 | `/data/health.json`        | 最近采集快照         |
@@ -113,4 +117,4 @@ pnpm test:e2e
 
 博文统一阅读页的正文解析方案参考了 [简悦 SimpRead](https://github.com/Kenshin/simpread) 的[站点解析规则](https://github.com/Kenshin/simpread/blob/d6534a7d67ab606e0390ff7172360fac88af4422/src/website_list.json)，包括 URL 匹配、标题与正文容器选择，以及无关节点排除。感谢 Kenshin 与项目贡献者。
 
-统一阅读页目前处于方案阶段，尚未接入正文抓取与渲染。后续实现会记录所参考规则的来源与版本；实际复用的代码或规则按对应许可处理。
+正文解析引擎位于 `packages/article-parser/`，与采集、存储和渲染分离。参考版本与扩展方式见[阅读页维护](docs/article-reader.md)；复用代码或规则按对应许可处理。
