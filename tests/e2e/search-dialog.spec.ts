@@ -55,7 +55,11 @@ test("search lives beside utility icons, opens immediately, traps focus and rest
   await page.keyboard.press("Escape");
   await page.keyboard.press("Meta+k");
   await expect(input).toBeFocused();
+  await input.fill("AI");
   await page.keyboard.press("Escape");
+  await expect(dialog).toBeHidden();
+  await expect(trigger).toBeFocused();
+  await expect(page).toHaveURL(/q=AI/);
 });
 
 test("lazy search keeps the input available while modules are stalled and preserves typed text", async ({

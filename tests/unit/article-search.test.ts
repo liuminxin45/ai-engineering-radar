@@ -36,6 +36,23 @@ const articles = [
 ] as Article[];
 afterEach(() => vi.useRealTimers());
 describe("Radar search adapter", () => {
+  it("keeps numbered full-title queries distinct from longer numbers", async () => {
+    const numbered = [1, 11, 21].map((number) => ({
+      ...articles[0],
+      id: String(number),
+      title: `Joint AI systems research ${number}: reliable agent evaluation`,
+      canonicalUrl: `https://example.org/${number}`,
+    }));
+    const query = numbered[0].title;
+    expect(
+      boardArticles(numbered, { ...initialBoardQuery, q: query }).map(
+        (a) => a.id,
+      ),
+    ).toEqual(["1"]);
+    expect(
+      (await createArticleSearchEngine(numbered, "blog").search(query)).results,
+    ).toHaveLength(1);
+  });
   it("shares multi-term and Unicode matching with the board and keeps content types separate", async () => {
     const engine = createArticleSearchEngine(articles, "blog");
     const hits = await engine.search("ＡＩ latency");

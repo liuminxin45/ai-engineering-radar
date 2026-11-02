@@ -174,6 +174,12 @@ export default function SearchDialog({
           }}
           onKeyDown={(event) => {
             if (event.nativeEvent.isComposing) return;
+            if (event.key === "Escape") {
+              event.preventDefault();
+              event.stopPropagation();
+              onClose();
+              return;
+            }
             if (event.key === "ArrowDown" || event.key === "ArrowUp") {
               event.preventDefault();
               session.current?.selectNext(event.key === "ArrowDown" ? 1 : -1);

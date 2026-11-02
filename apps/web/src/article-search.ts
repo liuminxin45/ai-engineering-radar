@@ -2,6 +2,13 @@ import type { Article, ContentType } from "../../../packages/shared/types.js";
 import type { SearchEngine } from "./site-search.js";
 
 const normalize = (text: string) => text.normalize("NFKC").toLocaleLowerCase();
+const termPattern = (term: string) =>
+  term
+    .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    .replace(/\d+/g, "(?<!\\d)$&(?!\\d)");
+const containsTerm = (text: string, term: string) =>
+  text.includes(term) &&
+  (!/\d/.test(term) || new RegExp(termPattern(term), "u").test(text));
 export const articleSearchTerms = (query: string) => [
   ...new Set(normalize(query).trim().split(/\s+/).filter(Boolean)),
 ];
@@ -13,7 +20,7 @@ export const articleSearchText = (article: Article) =>
   );
 export const matchesArticleSearch = (article: Article, terms: string[]) => {
   const text = articleSearchText(article);
-  return terms.every((term) => text.includes(term));
+  return terms.every((term) => containsTerm(text, term));
 };
 const escape = (text: string) =>
   text.replace(
@@ -35,7 +42,7 @@ export function searchExcerpt(text: string, terms: string[]) {
   const excerpt = text.slice(start, start + 200);
   const pattern = terms
     .filter(Boolean)
-    .map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    .map(termPattern)
     .sort((a, b) => b.length - a.length)
     .join("|");
   if (!pattern) return escape(excerpt);
@@ -74,7 +81,9 @@ export function createArticleSearchEngine(
       const terms = articleSearchTerms(query);
       const matches = terms.length
         ? index
-            .filter((entry) => terms.every((term) => entry.text.includes(term)))
+            .filter((entry) =>
+              terms.every((term) => containsTerm(entry.text, term)),
+            )
             .sort(
               (a, b) =>
                 terms.filter((term) => b.title.includes(term)).length -
