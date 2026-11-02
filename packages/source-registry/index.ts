@@ -10,6 +10,27 @@ import {
 
 export function validateAccountScope(source: Source) {
   if (!source.crawl.enabled) return;
+  if (source.platform === "ant-ling-blog") {
+    const u = new URL(source.url);
+    if (
+      source.adapter !== "html" ||
+      source.entryUrl !== source.url ||
+      u.protocol !== "https:" ||
+      u.hostname !== "developer.ant-ling.com" ||
+      u.port ||
+      u.username ||
+      u.password ||
+      u.search ||
+      u.hash ||
+      !/^\/zh-CN\/blogs\/?$/.test(u.pathname) ||
+      source.authorAllowlist?.length !== 1 ||
+      source.authorAllowlist[0] !== "ant-ling"
+    )
+      throw new Error(
+        `Ant Ling requires the reviewed official blog directory: ${source.id}`,
+      );
+    return;
+  }
   if (!["aliyun-group", "volcengine-account"].includes(source.platform)) return;
   const url = new URL(source.url);
   if (!source.authorAllowlist?.length)

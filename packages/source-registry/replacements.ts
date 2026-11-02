@@ -32,6 +32,11 @@ export const sourceReplacements = [
     companyId: "kuaishou",
     replacementIds: ["kuaishou-csdn"],
   },
+  {
+    sourceId: "ant-segmentfault",
+    companyId: "ant",
+    replacementIds: ["ant-ling", "ant-oceanbase-csdn"],
+  },
 ] as const;
 
 export function validateSourceReplacements(registry: Registry) {

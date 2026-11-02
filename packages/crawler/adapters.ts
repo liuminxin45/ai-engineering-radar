@@ -13,6 +13,7 @@ import {
 } from "./platforms/community.js";
 import { parseAliyunGroup, nextAliyunPage } from "./platforms/aliyun.js";
 import { parseVolcengineAccount } from "./platforms/volcengine.js";
+import { parseAntLingBlog } from "./platforms/ant-ling.js";
 export const plain = (s: unknown, max = 800) =>
   cheerio
     .load(`<body>${String(s ?? "")}</body>`)
@@ -108,6 +109,8 @@ export function parseFeed(xml: string, source: Source): Candidate[] {
   });
 }
 export function parseListing(html: string, source: Source): Candidate[] {
+  if (source.platform === "ant-ling-blog")
+    return parseAntLingBlog(html, source);
   if (source.platform === "aliyun-group") return parseAliyunGroup(html, source);
   if (source.platform === "volcengine-account")
     return parseVolcengineAccount(html, source);
@@ -307,6 +310,7 @@ export async function collect(
     "team-blog-feed",
     "aliyun-group",
     "volcengine-account",
+    "ant-ling-blog",
   ].includes(source.platform);
   for (const item of items) {
     // Only retrieve metadata when a listing/feed lacks a useful excerpt or date.

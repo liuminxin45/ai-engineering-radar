@@ -114,7 +114,7 @@ describe("explicit source retirement", () => {
     ).toThrow("verified and enabled");
     expect(data).toEqual(before);
   });
-  it("rejects missing or wrong-company replacements and confirms all six old channels are absent", () => {
+  it("rejects missing or wrong-company replacements and confirms all retired channels are absent", () => {
     for (const rule of sourceReplacements)
       expect(registry.sources.some((s) => s.id === rule.sourceId)).toBe(false);
     const wrong = structuredClone(registry);

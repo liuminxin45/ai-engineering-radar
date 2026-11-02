@@ -192,6 +192,8 @@ test("domestic provenance, history labels and contribution destinations remain a
     "aliyun-cloud-native",
     "aliyun-dataphin",
     "bytedance-volcengine",
+    "ant-ling",
+    "ant-oceanbase-csdn",
   ]) {
     const source = sources.find((s: { id: string }) => s.id === id);
     expect(source.crawl.enabled).toBe(true);
@@ -203,7 +205,7 @@ test("domestic provenance, history labels and contribution destinations remain a
       (s: { verification: { status: string } }) =>
         s.verification.status === "suspended",
     ).length,
-  ).toBe(6);
+  ).toBe(5);
   for (const { sourceId, replacementIds } of sourceReplacements) {
     expect(sources.some((s: { id: string }) => s.id === sourceId)).toBe(false);
     for (const id of replacementIds)
@@ -228,7 +230,7 @@ test("domestic provenance, history labels and contribution destinations remain a
   ).toBe(true);
   await page.goto("./sources/");
   expect(await page.locator(".source-row").count()).toBeGreaterThanOrEqual(19);
-  expect(await page.getByText("历史渠道", { exact: true }).count()).toBe(6);
+  expect(await page.getByText("历史渠道", { exact: true }).count()).toBe(5);
   await expect(page.getByText(/^最新收录文章/).first()).toBeVisible();
   await expectNoDocumentOverflow(page);
   await page.goto("./");
