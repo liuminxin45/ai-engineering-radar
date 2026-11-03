@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "state": {
+    "sourceId": "tencent-cloud-developer",
+    "lastCheckedAt": "2026-11-03T08:51:21.721Z",
+    "lastSuccessAt": "2026-11-03T08:51:21.721Z",
+    "nextRunAt": "2026-11-04T08:51:21.721Z",
+    "consecutiveFailures": 0,
+    "etag": "W/\"271aa-fZXArEc2KHqgp3mUgqJHJy1QLZo\"",
+    "status": "success",
+    "discovered": 20,
+    "httpStatus": 200
+  }
+}
