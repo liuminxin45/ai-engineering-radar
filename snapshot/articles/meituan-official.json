@@ -256,6 +256,14 @@
         "version": "source-index-1",
         "classifiedAt": "2026-11-03T07:56:12.590Z"
       },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      },
       "publicationStatus": "published",
       "locations": [
         {
@@ -265,15 +273,7 @@
           "listingHash": "4b7ff4b8a0d53a532af3df973c4832d6ef4307a6d173f69356008ba8d975e224"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "b08f5483cf471e3bda76",
