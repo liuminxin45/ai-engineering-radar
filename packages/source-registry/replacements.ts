@@ -28,11 +28,6 @@ export const sourceReplacements = [
     replacementIds: ["tencent-qqnews"],
   },
   {
-    sourceId: "netease-cnblogs",
-    companyId: "netease",
-    replacementIds: ["netease-csdn"],
-  },
-  {
     sourceId: "ant-segmentfault",
     companyId: "ant",
     replacementIds: ["ant-data-csdn"],
@@ -79,12 +74,6 @@ export const sourceReplacements = [
     referenceOnly: true,
   },
   {
-    sourceId: "netease",
-    companyId: "netease",
-    replacementIds: ["netease-csdn"],
-    referenceOnly: true,
-  },
-  {
     sourceId: "bilibili",
     companyId: "bilibili",
     replacementIds: ["bilibili-csdn"],
@@ -121,6 +110,14 @@ export const sourceReplacements = [
 
 // Explicit removals requested by the maintainer; these have no replacement.
 export const sourceWithdrawals = [
+  { sourceId: "netease-csdn", companyId: "netease" },
+  { sourceId: "netease-cnblogs", companyId: "netease" },
+  { sourceId: "netease", companyId: "netease" },
+  {
+    sourceId: "tencent-cloud-developer",
+    companyId: "tencent",
+    sourceOnly: true,
+  },
   { sourceId: "huawei-csdn", companyId: "huawei" },
   { sourceId: "huawei", companyId: "huawei" },
   { sourceId: "kuaishou-csdn", companyId: "kuaishou" },

@@ -15,13 +15,16 @@ const registry = structuredClone(legacyRegistry) as unknown as Awaited<
   ReturnType<typeof loadRegistry>
 >;
 registry.companies = registry.companies.filter(
-  (c) => !["qwen", "huawei", "kuaishou"].includes(c.id),
+  (c) => !["qwen", "huawei", "kuaishou", "netease"].includes(c.id),
 );
 registry.publishers = registry.publishers.filter(
-  (p) => !["qwen", "huawei", "kuaishou"].includes(p.companyId),
+  (p) => !["qwen", "huawei", "kuaishou", "netease"].includes(p.companyId),
 );
 registry.sources = registry.sources.filter(
-  (s) => !["qwen-research", "huawei-csdn", "kuaishou-csdn"].includes(s.id),
+  (s) =>
+    !["qwen-research", "huawei-csdn", "kuaishou-csdn", "netease-csdn"].includes(
+      s.id,
+    ),
 );
 function fixture() {
   const articles: Article[] = [];
@@ -228,6 +231,11 @@ describe("explicit source retirement", () => {
       companyId: "kuaishou",
       sourceId: "kuaishou-csdn",
       publisherId: "kuaishou-official",
+    },
+    {
+      companyId: "netease",
+      sourceId: "netease-csdn",
+      publisherId: "netease-official",
     },
     {
       companyId: "qwen",

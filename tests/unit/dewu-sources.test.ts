@@ -22,30 +22,63 @@ const card = (
     <time datetime="${time}"></time>
   </div>`;
 
-describe("Tencent Cloud Developer source", () => {
-  it("keeps its own identity and accepts only its account's articles", () => {
-    const cloud = registry.sources.find(
-      (s) => s.id === "tencent-cloud-developer",
+describe("Tencent source retirement", () => {
+  it("removes only the withdrawn team's articles and status", () => {
+    const retainedSource = registry.sources.find(
+      (s) => s.id === "tencent-qqnews",
     )!;
-    expect(
-      registry.publishers.find((p) => p.id === cloud.publisherId)?.companyId,
-    ).toBe("tencent");
-    expect(registry.companies.find((c) => c.id === "tencent")?.name).toBe(
-      "腾讯",
+    const articles: Article[] = [];
+    upsert(
+      articles,
+      {
+        title: "Retained Tencent article",
+        url: "https://news.qq.com/rain/a/20261102A0AY0M00",
+      },
+      retainedSource,
+      registry,
     );
-    expect(
-      registry.publishers.find((p) => p.id === "tencent-official")?.name,
-    ).toBe("腾讯技术");
-    expect(
-      registry.publishers.find((p) => p.id === cloud.publisherId)?.name,
-    ).toBe("腾讯云开发者");
-    expect(cloud.authorAllowlist).toEqual(["1422024"]);
-    expect(parseListing(card("1422024") + card("9927536"), cloud)).toHaveLength(
-      1,
+    const retained = articles[0];
+    const withdrawn = structuredClone(retained);
+    withdrawn.id = "00000000000000000005";
+    withdrawn.publisherId = "tencent-cloud-developer";
+    withdrawn.locations = [
+      {
+        sourceId: "tencent-cloud-developer",
+        url: "https://developer.cloud.tencent.com/article/2740990",
+      },
+    ];
+    const states = [
+      {
+        sourceId: "tencent-qqnews",
+        status: "success" as const,
+        discovered: 1,
+        consecutiveFailures: 0,
+      },
+      {
+        sourceId: "tencent-cloud-developer",
+        status: "success" as const,
+        discovered: 1,
+        consecutiveFailures: 0,
+      },
+    ];
+    const result = retireReplacedSources(
+      [retained, withdrawn],
+      states,
+      registry,
     );
-    expect(() =>
-      validateAccountScope({ ...cloud, authorAllowlist: ["9927536"] }),
-    ).toThrow();
+    expect(result.articles.map((a) => a.id)).toEqual([retained.id]);
+    expect(result.states.map((s) => s.sourceId)).toEqual(["tencent-qqnews"]);
+    expect(result.removedArticles).toBe(1);
+  });
+  it("removes Tencent Cloud Developer while retaining Tencent Technology", () => {
+    expect(
+      registry.sources.some((s) => s.id === "tencent-cloud-developer"),
+    ).toBe(false);
+    expect(
+      registry.publishers.some((p) => p.id === "tencent-cloud-developer"),
+    ).toBe(false);
+    expect(registry.companies.some((c) => c.id === "tencent")).toBe(true);
+    expect(registry.sources.some((s) => s.id === "tencent-qqnews")).toBe(true);
   });
 });
 

@@ -278,6 +278,8 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   expect(companies.some((c: { id: string }) => c.id === "xiaomi")).toBe(false);
   expect(companies.some((c: { id: string }) => c.id === "oppo")).toBe(false);
   expect(companies.some((c: { id: string }) => c.id === "qwen")).toBe(false);
+  expect(companies.some((c: { id: string }) => c.id === "netease")).toBe(false);
+  expect(companies.some((c: { id: string }) => c.id === "tencent")).toBe(true);
   expect(companies.some((c: { id: string }) => c.id === "huawei")).toBe(false);
   expect(companies.some((c: { id: string }) => c.id === "kuaishou")).toBe(
     false,
@@ -320,7 +322,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   }
   expect(
     sources.filter((s: { contentType?: string }) => s.contentType !== "paper"),
-  ).toHaveLength(12);
+  ).toHaveLength(10);
   expect(
     sources.find((s: { id: string }) => s.id === "bytedance-tech-volcengine")
       .entryUrl,
@@ -506,7 +508,7 @@ test("withdrawn Qwen stays absent and the Aliyun source URL stays exact", async 
     false,
   );
   await page.goto("./");
-  for (const name of ["千问", "华为", "快手"]) {
+  for (const name of ["千问", "华为", "快手", "网易"]) {
     await expect(page.getByRole("button", { name, exact: true })).toHaveCount(
       0,
     );

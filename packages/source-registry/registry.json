@@ -47,11 +47,6 @@
       "region": "cn"
     },
     {
-      "id": "netease",
-      "name": "网易",
-      "region": "cn"
-    },
-    {
       "id": "bilibili",
       "name": "B站",
       "region": "cn"
@@ -79,11 +74,6 @@
       "name": "腾讯技术"
     },
     {
-      "id": "tencent-cloud-developer",
-      "companyId": "tencent",
-      "name": "腾讯云开发者"
-    },
-    {
       "id": "bytedance-official",
       "companyId": "bytedance",
       "name": "字节跳动技术团队"
@@ -97,11 +87,6 @@
       "id": "jd-official",
       "companyId": "jd",
       "name": "京东云开发者"
-    },
-    {
-      "id": "netease-official",
-      "companyId": "netease",
-      "name": "网易数帆大数据"
     },
     {
       "id": "bilibili-official",
@@ -173,33 +158,6 @@
       "linkPattern": "^/article/[0-9]+/?$"
     },
     {
-      "id": "tencent-cloud-developer",
-      "publisherId": "tencent-cloud-developer",
-      "name": "腾讯云开发者 · 腾讯云",
-      "entryUrl": "https://developer.cloud.tencent.com/user/1422024/articles",
-      "url": "https://developer.cloud.tencent.com/user/1422024/articles",
-      "priority": "A",
-      "adapter": "html",
-      "platform": "tencent-user",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://developer.cloud.tencent.com/user/1422024/articles",
-          "https://developer.cloud.tencent.com/article/2740990"
-        ],
-        "note": "腾讯云开发者账号，稳定 UID 1422024；公开文章及账号资料标明腾讯云开发者、腾讯及公众号。账号包含自媒体同步内容，不将所有文章归为腾讯内部原创；逐篇核对目录作者 UID。",
-        "reviewedAt": "2026-11-03T00:00:00Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 50,
-        "backfillLimit": 100
-      },
-      "authorAllowlist": ["1422024"],
-      "linkPattern": "^/article/[0-9]+/?$"
-    },
-    {
       "id": "vivo-csdn",
       "publisherId": "vivo-tech",
       "name": "vivo互联网技术 · CSDN",
@@ -222,34 +180,6 @@
       },
       "authorAllowlist": ["vivo_tech"],
       "linkPattern": "^/vivo_tech/article/details/[0-9]+/?$"
-    },
-    {
-      "id": "netease-csdn",
-      "publisherId": "netease-official",
-      "name": "网易数帆大数据 · CSDN",
-      "entryUrl": "https://blog.csdn.net/wangyiyungw",
-      "url": "https://rss.csdn.net/wangyiyungw/rss/map",
-      "priority": "A",
-      "adapter": "feed",
-      "platform": "csdn-feed",
-      "verification": {
-        "status": "verified",
-        "evidenceUrls": [
-          "https://blog.csdn.net/wangyiyungw",
-          "https://sf.163.com/",
-          "https://www.cnblogs.com/163yun/"
-        ],
-        "note": "人工核验：公开账号资料列出目前就职网易、网易数智旗下产品介绍；长期文章自署网易云社区，与数帆官方产品和博客园同名团队历史相互印证。限定用户名 wangyiyungw，公开 RSS 解析成功。",
-        "reviewedAt": "2026-11-01T09:39:54.440Z"
-      },
-      "crawl": {
-        "enabled": true,
-        "intervalMinutes": 1440,
-        "maxItems": 20,
-        "backfillLimit": 50
-      },
-      "authorAllowlist": ["wangyiyungw"],
-      "linkPattern": "^/wangyiyungw/article/details/[0-9]+/?$"
     },
     {
       "id": "bilibili-csdn",

@@ -74,13 +74,11 @@ flowchart TD
 | 公司              | 来源入口                                                                                  |
 | ----------------- | ----------------------------------------------------------------------------------------- |
 | 腾讯              | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)              |
-| 腾讯              | [腾讯云开发者 · 腾讯云](https://developer.cloud.tencent.com/user/1422024/articles)        |
 | 得物              | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles)            |
 | 阿里巴巴 / 阿里云 | [阿里云云原生 · 云原生应用开发与管理](https://developer.aliyun.com/group/apphub/article/) |
 | 字节跳动          | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673)     |
 | 美团              | [美团技术团队](https://tech.meituan.com/)                                                 |
 | vivo              | [vivo 互联网技术 · CSDN](https://blog.csdn.net/vivo_tech)                                 |
-| 网易              | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw)                                |
 | B站               | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC)                                  |
 | 京东              | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/)                                  |
 | 百度              | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283)                            |

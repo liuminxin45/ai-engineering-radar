@@ -1,6 +1,6 @@
 # 国内官方账号来源核验
 
-历史核验日期：2026-11-02。当前仅收录博文；腾讯云开发者账号于 2026-11-03 接入腾讯栏目，账号包含自媒体同步文章。未启用、暂停和访问受限的入口不登记。阿里云已重新接入官方博客目录；携程、小红书及小米栏目均已移除。
+历史核验日期：2026-11-02。当前仅收录博文；腾讯云开发者和网易数帆来源于 2026-11-03 按维护者要求移除，腾讯技术工程来源保留。未启用、暂停和访问受限的入口不登记。阿里云已重新接入官方博客目录；携程、小红书及小米栏目均已移除。
 
 ## 每个发布团队最多保留一个可用博文来源
 
@@ -15,12 +15,10 @@
 | 得物         | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles)            | dewu-tencent               | 启用 |
 | 阿里云       | [阿里云云原生 · 云原生应用开发与管理](https://developer.aliyun.com/group/apphub/article/) | aliyun-apphub              | 启用 |
 | 腾讯技术     | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)              | tencent-qqnews             | 启用 |
-| 腾讯云开发者 | [腾讯云开发者 · 腾讯云](https://developer.cloud.tencent.com/user/1422024/articles)        | tencent-cloud-developer    | 启用 |
 | 字节跳动     | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673)     | bytedance-tech-volcengine  | 启用 |
 | 百度         | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283)                            | baidu-cloud-csdn-candidate | 启用 |
 | 蚂蚁集团     | [蚂蚁数据 AntData · CSDN](https://devpress.csdn.net/user/DB_GPT)                          | ant-data-csdn              | 启用 |
 | 京东         | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/)                                  | jd-cnblogs                 | 启用 |
-| 网易         | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw)                                | netease-csdn               | 启用 |
 | B站          | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC)                                  | bilibili-csdn              | 启用 |
 
 ## 身份与采集边界
