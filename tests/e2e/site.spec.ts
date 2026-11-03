@@ -277,6 +277,11 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   expect(companies.some((c: { id: string }) => c.id === "ctrip")).toBe(false);
   expect(companies.some((c: { id: string }) => c.id === "xiaomi")).toBe(false);
   expect(companies.some((c: { id: string }) => c.id === "oppo")).toBe(false);
+  expect(companies.some((c: { id: string }) => c.id === "qwen")).toBe(false);
+  expect(companies.some((c: { id: string }) => c.id === "huawei")).toBe(false);
+  expect(companies.some((c: { id: string }) => c.id === "kuaishou")).toBe(
+    false,
+  );
   expect(companies.some((c: { id: string }) => c.id === "xiaohongshu")).toBe(
     false,
   );
@@ -287,7 +292,6 @@ test("domestic provenance stays public while the interface exposes only whole-pr
     .sources;
   for (const id of [
     "dewu-tencent",
-    "qwen-research",
     "bytedance-tech-volcengine",
     "ant-data-csdn",
     "baidu-cloud-csdn-candidate",
@@ -316,7 +320,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   }
   expect(
     sources.filter((s: { contentType?: string }) => s.contentType !== "paper"),
-  ).toHaveLength(15);
+  ).toHaveLength(12);
   expect(
     sources.find((s: { id: string }) => s.id === "bytedance-tech-volcengine")
       .entryUrl,
@@ -486,7 +490,7 @@ test("flat toolbar switches appearance and exposes copyable project-wide feeds",
   await expectNoDocumentOverflow(page);
 });
 
-test("Qwen has an independent company panel and the requested source URLs stay exact", async ({
+test("withdrawn Qwen stays absent and the Aliyun source URL stays exact", async ({
   page,
   request,
 }) => {
@@ -498,11 +502,13 @@ test("Qwen has an independent company panel and the requested source URLs stay e
   expect(
     sources.find((s: { id: string }) => s.id === "aliyun-apphub").entryUrl,
   ).toBe("https://developer.aliyun.com/group/apphub/article/");
-  expect(
-    sources.find((s: { id: string }) => s.id === "qwen-research").entryUrl,
-  ).toBe("https://qwen.ai/research");
+  expect(sources.some((s: { id: string }) => s.id === "qwen-research")).toBe(
+    false,
+  );
   await page.goto("./");
-  await page.getByRole("button", { name: "千问", exact: true }).click();
-  await expect(page).toHaveURL(/company=qwen/);
-  await expect(companyList(page, "千问")).toBeVisible();
+  for (const name of ["千问", "华为", "快手"]) {
+    await expect(page.getByRole("button", { name, exact: true })).toHaveCount(
+      0,
+    );
+  }
 });

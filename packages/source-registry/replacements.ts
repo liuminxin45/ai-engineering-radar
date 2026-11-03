@@ -33,11 +33,6 @@ export const sourceReplacements = [
     replacementIds: ["netease-csdn"],
   },
   {
-    sourceId: "kuaishou-segmentfault",
-    companyId: "kuaishou",
-    replacementIds: ["kuaishou-csdn"],
-  },
-  {
     sourceId: "ant-segmentfault",
     companyId: "ant",
     replacementIds: ["ant-data-csdn"],
@@ -69,18 +64,6 @@ export const sourceReplacements = [
     sourceId: "baidu",
     companyId: "baidu",
     replacementIds: ["baidu-cloud-csdn-candidate"],
-    referenceOnly: true,
-  },
-  {
-    sourceId: "huawei",
-    companyId: "huawei",
-    replacementIds: ["huawei-csdn"],
-    referenceOnly: true,
-  },
-  {
-    sourceId: "kuaishou",
-    companyId: "kuaishou",
-    replacementIds: ["kuaishou-csdn"],
     referenceOnly: true,
   },
   {
@@ -130,12 +113,6 @@ export const sourceReplacements = [
     replacementIds: ["ant-data-csdn"],
   },
   {
-    sourceId: "kuaishou-infoq",
-    companyId: "kuaishou",
-    replacementIds: ["kuaishou-csdn"],
-    referenceOnly: true,
-  },
-  {
     sourceId: "bytedance-volcengine",
     companyId: "bytedance",
     replacementIds: ["bytedance-tech-volcengine"],
@@ -144,6 +121,13 @@ export const sourceReplacements = [
 
 // Explicit removals requested by the maintainer; these have no replacement.
 export const sourceWithdrawals = [
+  { sourceId: "huawei-csdn", companyId: "huawei" },
+  { sourceId: "huawei", companyId: "huawei" },
+  { sourceId: "kuaishou-csdn", companyId: "kuaishou" },
+  { sourceId: "kuaishou", companyId: "kuaishou" },
+  { sourceId: "kuaishou-segmentfault", companyId: "kuaishou" },
+  { sourceId: "kuaishou-infoq", companyId: "kuaishou" },
+  { sourceId: "qwen-research", companyId: "qwen" },
   { sourceId: "ctrip-papers-crossref", companyId: "ctrip" },
   { sourceId: "tripscore-paper-papers", companyId: "ctrip" },
   { sourceId: "xiaomi-tech-site", companyId: "xiaomi" },

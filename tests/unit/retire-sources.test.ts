@@ -11,9 +11,18 @@ import { validateRelations } from "../../packages/database/snapshot.js";
 import { parseCrossref } from "../../packages/crawler/platforms/papers.js";
 import type { Article, SourceState } from "../../packages/shared/types.js";
 
-const registry = legacyRegistry as unknown as Awaited<
+const registry = structuredClone(legacyRegistry) as unknown as Awaited<
   ReturnType<typeof loadRegistry>
 >;
+registry.companies = registry.companies.filter(
+  (c) => !["qwen", "huawei", "kuaishou"].includes(c.id),
+);
+registry.publishers = registry.publishers.filter(
+  (p) => !["qwen", "huawei", "kuaishou"].includes(p.companyId),
+);
+registry.sources = registry.sources.filter(
+  (s) => !["qwen-research", "huawei-csdn", "kuaishou-csdn"].includes(s.id),
+);
 function fixture() {
   const articles: Article[] = [];
   const replacement = registry.sources.find((s) => s.id === "dewu-tencent")!;
@@ -211,6 +220,21 @@ describe("explicit source retirement", () => {
       publisherId: "xiaomi-research-papers",
     },
     {
+      companyId: "huawei",
+      sourceId: "huawei-csdn",
+      publisherId: "huawei-official",
+    },
+    {
+      companyId: "kuaishou",
+      sourceId: "kuaishou-csdn",
+      publisherId: "kuaishou-official",
+    },
+    {
+      companyId: "qwen",
+      sourceId: "qwen-research",
+      publisherId: "qwen-team",
+    },
+    {
       companyId: "oppo",
       sourceId: "oppo-segmentfault",
       publisherId: "oppo-official",
@@ -252,12 +276,13 @@ describe("explicit source retirement", () => {
           consecutiveFailures: 0,
         },
       ];
+      if (companyId === "qwen") states.splice(1, 1);
       const before = structuredClone({ articles, states });
       const result = retireReplacedSources(articles, states, registry);
       expect(result.articles.map((a) => a.id)).toEqual([current.id]);
       expect(result.articles[0].duplicateCandidates).toEqual([]);
       expect(result.removedArticles).toBe(1);
-      expect(result.removedStates).toBe(2);
+      expect(result.removedStates).toBe(companyId === "qwen" ? 1 : 2);
       expect(registry.companies.some((c) => c.id === companyId)).toBe(false);
       expect({ articles, states }).toEqual(before);
       validateRelations(result.articles, result.states, registry);

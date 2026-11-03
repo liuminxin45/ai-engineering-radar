@@ -16,11 +16,8 @@
 | 阿里云       | [阿里云云原生 · 云原生应用开发与管理](https://developer.aliyun.com/group/apphub/article/) | aliyun-apphub              | 启用 |
 | 腾讯技术     | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)              | tencent-qqnews             | 启用 |
 | 腾讯云开发者 | [腾讯云开发者 · 腾讯云](https://developer.cloud.tencent.com/user/1422024/articles)        | tencent-cloud-developer    | 启用 |
-| 千问         | [千问 · Research](https://qwen.ai/research)                                               | qwen-research              | 启用 |
 | 字节跳动     | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673)     | bytedance-tech-volcengine  | 启用 |
 | 百度         | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283)                            | baidu-cloud-csdn-candidate | 启用 |
-| 华为         | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud)                                 | huawei-csdn                | 启用 |
-| 快手         | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech)                                     | kuaishou-csdn              | 启用 |
 | 蚂蚁集团     | [蚂蚁数据 AntData · CSDN](https://devpress.csdn.net/user/DB_GPT)                          | ant-data-csdn              | 启用 |
 | 京东         | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/)                                  | jd-cnblogs                 | 启用 |
 | 网易         | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw)                                | netease-csdn               | 启用 |
@@ -48,15 +45,17 @@ CSDN RSS 按作者用户名、已审核主机和文章账号路径匹配。腾�
 
 [第二轮调查记录](source-research-round2.md)保留了此前对多个候选渠道的身份、可达性和日期调查，属于历史证据；当前启用状态以本页和注册表为准。Dataphin、OceanBase、快手 InfoQ 及其余参考入口已从当前注册表移除。
 
-携程栏目与全部博文、论文来源已按维护者要求移除。快手当前源最新条目为活动报名，不保证技术长文覆盖完整。完整构建、浏览器验收和部署结果由各自验证记录说明。
+携程栏目与全部博文、论文来源已按维护者要求移除。2026-11-03 按维护者要求移除华为与快手栏目及来源，原因是当前内容的 AI 工程价值较低。完整构建、浏览器验收和部署结果由各自验证记录说明。
 
-## 阿里云账号主页与千问研究目录
+## 阿里云账号主页与千问研究目录（历史）
 
 阿里云按维护者指定改用 `https://developer.aliyun.com/profile/pawmkwdq37c7s`，移除 `utm_source` 追踪参数。沿用来源 ID `aliyun-cloud-native` 和发布主体，保留已有文章 ID。适配器核对页面公开配置中的账号 ID，只收录发表文章的动态；点赞、评论和站外链接均不采集。分页只跟随该账号公开列出的下一页。首次普通请求可读，后续真实采集返回登录跳转页，核验时记录为访问受限，不沿用旧目录的成功时间；随后按维护者要求移除此源及其独占历史文章。
 
 按维护者要求新增“千问”独立栏目，归属阿里品牌的事实不变。该栏目只有 Qwen 官方 Research 一个来源，不给阿里云增加第二个来源。读取页面实际使用的两个同域公开 JSON 接口：历史研究目录 `research.research-list` 和类型为 `qwen_ai` 的英文文章接口。历史记录限定为本轮核验的官网前端研究 ID 清单，新发布记录核对类型、语言和 QwenTeam 作者。剔除草稿标记，合并同一公开文章 ID。
 
-千问实采 92 篇，最早为 2022-11-14，最新为 2026-09-20，不代表近月更新；按维护者指定持续追踪。文章使用官网真实路由 `https://qwen.ai/blog?id=文章ID`。接口可能返回正文和内部仓库字段，采集只保留标题、作者、语言、原始日期和原文链接，不保存正文、长介绍或内部字段。
+千问实采 92 篇，最早为 2022-11-14，最新为 2026-09-20，不代表近月更新；当时按维护者指定持续追踪。文章使用官网真实路由 `https://qwen.ai/blog?id=文章ID`。接口可能返回正文和内部仓库字段，采集只保留标题、作者、语言、原始日期和原文链接，不保存正文、长介绍或内部字段。
+
+2026-11-03 按维护者要求移除千问栏目及 Research 来源，因其不属于项目目标采集范围；旧调查记录保留供审计。
 
 ## 字节跳动技术团队账号切换
 

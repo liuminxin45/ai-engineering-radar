@@ -20,7 +20,7 @@ it("collects only the reviewed AntData author and account article paths", async 
 });
 it("accepts the actual case-sensitive OceanBase RSS identity and excludes unrelated authors", async () => {
   const base = (await loadRegistry()).sources.find(
-    (s) => s.id === "huawei-csdn",
+    (s) => s.id === "vivo-csdn",
   )!;
   // Keep adapter coverage for retired accounts without registering a second source.
   const s = {

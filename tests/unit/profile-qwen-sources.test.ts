@@ -22,7 +22,12 @@ vi.mock("../../packages/crawler/http.js", async (importOriginal) => ({
 }));
 const registry = await loadRegistry();
 const aliyun = aliyunFixture;
-const qwen = registry.sources.find((s) => s.id === "qwen-research")!;
+const legacyRegistry = JSON.parse(
+  await readFile("tests/fixtures/legacy-paper-registry.json", "utf8"),
+);
+const qwen = legacyRegistry.sources.find(
+  (s: { id: string }) => s.id === "qwen-research",
+);
 const profile = await readFile("tests/fixtures/aliyun-profile.html", "utf8");
 const legacy = [
   {
@@ -121,8 +126,9 @@ describe("requested Aliyun profile", () => {
 });
 
 describe("Qwen Research", () => {
-  it("creates a separate requested company with exactly one official source", () => {
-    expect(registry.companies.find((c) => c.id === "qwen")?.name).toBe("千问");
+  it("keeps the retired company and source out of the registry", () => {
+    expect(registry.companies.some((c) => c.id === "qwen")).toBe(false);
+    expect(registry.sources.some((s) => s.id === "qwen-research")).toBe(false);
     expect(qwen.entryUrl).toBe("https://qwen.ai/research");
     expect(() =>
       validateAccountScope({ ...qwen, url: "https://other.example/research" }),

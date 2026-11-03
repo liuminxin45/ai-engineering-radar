@@ -44,7 +44,7 @@
 
 ```sh
 pnpm bodies:backfill
-pnpm bodies:backfill --source=qwen-research
+pnpm bodies:backfill --source=meituan
 pnpm bodies:backfill --retry-unavailable
 pnpm bodies:backfill --force --source=meituan
 pnpm bodies:backfill --limit=20
