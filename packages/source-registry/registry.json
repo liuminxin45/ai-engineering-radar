@@ -76,57 +76,62 @@
     {
       "id": "meituan-official",
       "companyId": "meituan",
-      "name": "美团 技术团队"
+      "name": "美团技术团队"
     },
     {
       "id": "vivo-tech",
       "companyId": "vivo",
-      "name": "vivo 技术团队"
+      "name": "vivo互联网技术"
     },
     {
       "id": "dewu-tech",
       "companyId": "dewu",
-      "name": "得物 技术团队"
+      "name": "得物技术"
     },
     {
       "id": "tencent-official",
       "companyId": "tencent",
-      "name": "腾讯 技术团队"
+      "name": "腾讯技术"
+    },
+    {
+      "id": "tencent-cloud-developer",
+      "companyId": "tencent",
+      "name": "腾讯云开发者"
     },
     {
       "id": "bytedance-official",
       "companyId": "bytedance",
-      "name": "字节跳动 技术团队"
+      "name": "字节跳动技术团队"
     },
     {
       "id": "baidu-official",
       "companyId": "baidu",
-      "name": "百度 技术团队"
+      "name": "百度智能云技术站"
     },
     {
       "id": "huawei-official",
       "companyId": "huawei",
-      "name": "华为 技术团队"
+      "name": "华为云开发者联盟"
     },
     {
       "id": "kuaishou-official",
       "companyId": "kuaishou",
-      "name": "快手 技术团队"
+      "name": "快手技术"
     },
     {
       "id": "jd-official",
       "companyId": "jd",
-      "name": "京东 技术团队"
+      "name": "京东云开发者"
     },
     {
       "id": "netease-official",
       "companyId": "netease",
-      "name": "网易 技术团队"
+      "name": "网易数帆大数据"
     },
     {
       "id": "bilibili-official",
       "companyId": "bilibili",
-      "name": "B站 技术团队"
+      "name": "哔哩哔哩技术"
     },
     {
       "id": "aliyun-cloud-native",
@@ -195,6 +200,33 @@
         "backfillLimit": 100
       },
       "authorAllowlist": ["9927536"],
+      "linkPattern": "^/article/[0-9]+/?$"
+    },
+    {
+      "id": "tencent-cloud-developer",
+      "publisherId": "tencent-cloud-developer",
+      "name": "腾讯云开发者 · 腾讯云",
+      "entryUrl": "https://developer.cloud.tencent.com/user/1422024/articles",
+      "url": "https://developer.cloud.tencent.com/user/1422024/articles",
+      "priority": "A",
+      "adapter": "html",
+      "platform": "tencent-user",
+      "verification": {
+        "status": "verified",
+        "evidenceUrls": [
+          "https://developer.cloud.tencent.com/user/1422024/articles",
+          "https://developer.cloud.tencent.com/article/2740990"
+        ],
+        "note": "腾讯云开发者账号，稳定 UID 1422024；公开文章及账号资料标明腾讯云开发者、腾讯及公众号。账号包含自媒体同步内容，不将所有文章归为腾讯内部原创；逐篇核对目录作者 UID。",
+        "reviewedAt": "2026-11-03T00:00:00Z"
+      },
+      "crawl": {
+        "enabled": true,
+        "intervalMinutes": 1440,
+        "maxItems": 50,
+        "backfillLimit": 100
+      },
+      "authorAllowlist": ["1422024"],
       "linkPattern": "^/article/[0-9]+/?$"
     },
     {

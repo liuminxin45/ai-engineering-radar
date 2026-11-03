@@ -209,6 +209,14 @@
   line-height: 1.5;
   min-height: 24px;
 }
+.storyOrigin {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 .advertorialBadge {
   position: relative;
   display: inline-flex;

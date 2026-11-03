@@ -1,29 +1,30 @@
 # 国内官方账号来源核验
 
-核验日期：2026-11-02。当前注册表覆盖 14 个公司或独立品牌栏目，只保留 35 个已启用且有成功采集记录的来源：14 个博文源、21 个论文源。未启用、暂停和访问受限的入口已移除。阿里云已重新接入官方博客目录；携程、小红书及小米栏目均已移除。
+历史核验日期：2026-11-02。当前仅收录博文；腾讯云开发者账号于 2026-11-03 接入腾讯栏目，账号包含自媒体同步文章。未启用、暂停和访问受限的入口不登记。阿里云已重新接入官方博客目录；携程、小红书及小米栏目均已移除。
 
-## 每家公司最多保留一个可用博文来源
+## 每个发布团队最多保留一个可用博文来源
 
-按维护者要求，唯一来源约束按维护者登记的公司或独立品牌栏目执行，同一栏目不按发布主体拆分名额。当前注册表不登记禁用或身份参考入口；额外证据链接保存在来源的核验说明中，不单独登记为来源。
+按维护者要求，同一公司可包含多个独立发布团队，每个团队最多登记一个博文来源。当前注册表不登记禁用或身份参考入口；额外证据链接保存在来源的核验说明中，不单独登记为来源。
 
 来源选择优先尊重维护者指定，其次考虑身份依据、实际采集结果、近期更新和内容覆盖。得物沿用指定的腾讯云用户文章页。vivo 保留企业 CSDN，已有快照覆盖 20 篇；阿里云云原生使用指定的 apphub 官方博客目录，蚂蚁使用指定的 AntData CSDN 账号。各来源只代表当前选定团队的内容，不承诺覆盖集团全部技术文章。
 
-| 公司     | 唯一来源                                                                              | 来源 ID                    | 状态 |
-| -------- | ------------------------------------------------------------------------------------- | -------------------------- | ---- |
-| 美团     | [美团 · meituan](https://tech.meituan.com/)                                           | meituan                    | 启用 |
-| vivo     | [vivo互联网技术 · CSDN](https://blog.csdn.net/vivo_tech)                              | vivo-csdn                  | 启用 |
-| 得物     | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles)        | dewu-tencent               | 启用 |
-| 阿里云   | [阿里云云原生 · 云原生应用开发与管理](https://developer.aliyun.com/group/apphub/article/) | aliyun-apphub              | 启用 |
-| 腾讯     | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)          | tencent-qqnews             | 启用 |
-| 千问     | [千问 · Research](https://qwen.ai/research)                                           | qwen-research              | 启用 |
-| 字节跳动 | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673) | bytedance-tech-volcengine  | 启用 |
-| 百度     | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283)                        | baidu-cloud-csdn-candidate | 启用 |
-| 华为     | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud)                             | huawei-csdn                | 启用 |
-| 快手     | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech)                                 | kuaishou-csdn              | 启用 |
-| 蚂蚁集团          | [蚂蚁数据 AntData · CSDN](https://devpress.csdn.net/user/DB_GPT)                      | ant-data-csdn              | 启用               |
-| 京东     | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/)                              | jd-cnblogs                 | 启用 |
-| 网易     | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw)                            | netease-csdn               | 启用 |
-| B站      | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC)                              | bilibili-csdn              | 启用 |
+| 发布团队     | 来源                                                                                      | 来源 ID                    | 状态 |
+| ------------ | ----------------------------------------------------------------------------------------- | -------------------------- | ---- |
+| 美团         | [美团 · meituan](https://tech.meituan.com/)                                               | meituan                    | 启用 |
+| vivo         | [vivo互联网技术 · CSDN](https://blog.csdn.net/vivo_tech)                                  | vivo-csdn                  | 启用 |
+| 得物         | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles)            | dewu-tencent               | 启用 |
+| 阿里云       | [阿里云云原生 · 云原生应用开发与管理](https://developer.aliyun.com/group/apphub/article/) | aliyun-apphub              | 启用 |
+| 腾讯技术     | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)              | tencent-qqnews             | 启用 |
+| 腾讯云开发者 | [腾讯云开发者 · 腾讯云](https://developer.cloud.tencent.com/user/1422024/articles)        | tencent-cloud-developer    | 启用 |
+| 千问         | [千问 · Research](https://qwen.ai/research)                                               | qwen-research              | 启用 |
+| 字节跳动     | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673)     | bytedance-tech-volcengine  | 启用 |
+| 百度         | [百度智能云技术站 · CSDN](https://blog.csdn.net/2301_82040283)                            | baidu-cloud-csdn-candidate | 启用 |
+| 华为         | [华为云开发者联盟 · CSDN](https://blog.csdn.net/devcloud)                                 | huawei-csdn                | 启用 |
+| 快手         | [快手技术 · CSDN](https://blog.csdn.net/kuaishoutech)                                     | kuaishou-csdn              | 启用 |
+| 蚂蚁集团     | [蚂蚁数据 AntData · CSDN](https://devpress.csdn.net/user/DB_GPT)                          | ant-data-csdn              | 启用 |
+| 京东         | [京东云开发者 · 博客园](https://www.cnblogs.com/Jcloud/)                                  | jd-cnblogs                 | 启用 |
+| 网易         | [网易数帆大数据 · CSDN](https://blog.csdn.net/wangyiyungw)                                | netease-csdn               | 启用 |
+| B站          | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC)                                  | bilibili-csdn              | 启用 |
 
 ## 身份与采集边界
 

@@ -34,6 +34,7 @@ const labels: Record<string, string> = {
 };
 const label = (id: string) =>
   labels[id] ?? companies.find((c) => c.id === id)?.name ?? id;
+const publisherNames = new Map(site.publishers.map((p) => [p.id, p.name]));
 const time = (a: Article) => a.publishedAt ?? a.discoveredAt;
 const calendar = new Intl.DateTimeFormat("zh-CN", {
   year: "numeric",
@@ -419,12 +420,18 @@ export function ArticleBoard() {
                         </ArticleLink>
                       </h3>
                       <div className={styles.storyMeta}>
-                        <time
-                          dateTime={time(a)}
-                          aria-label={`${a.publishedAt ? "发布时间" : "发现时间"} ${day(time(a))}`}
-                        >
-                          {day(time(a))}
-                        </time>
+                        <span className={styles.storyOrigin}>
+                          <span>
+                            {publisherNames.get(a.publisherId) ??
+                              label(a.companyId)}
+                          </span>
+                          <time
+                            dateTime={time(a)}
+                            aria-label={`${a.publishedAt ? "发布时间" : "发现时间"} ${day(time(a))}`}
+                          >
+                            {day(time(a))}
+                          </time>
+                        </span>
                         {a.advertorial?.status === "suspected" && (
                           <Link
                             className={styles.advertorialBadge}

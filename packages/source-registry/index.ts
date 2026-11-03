@@ -157,10 +157,14 @@ export function validateCompanySources(registry: {
     const sources = companySources.filter(
       (source) => source.contentType !== "paper",
     );
-    if (sources.length > 1)
-      throw new Error(
-        `Company may have at most one blog source: ${company.id} (found ${sources.length})`,
-      );
+    const publishers = new Set<string>();
+    for (const source of sources) {
+      if (publishers.has(source.publisherId))
+        throw new Error(
+          `Publisher may have at most one blog source: ${source.publisherId}`,
+        );
+      publishers.add(source.publisherId);
+    }
   }
 }
 

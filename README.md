@@ -72,6 +72,7 @@ flowchart TD
 | 公司              | 来源入口                                                                                  |
 | ----------------- | ----------------------------------------------------------------------------------------- |
 | 腾讯              | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)              |
+| 腾讯              | [腾讯云开发者 · 腾讯云](https://developer.cloud.tencent.com/user/1422024/articles)        |
 | 得物              | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles)            |
 | 阿里巴巴 / 阿里云 | [阿里云云原生 · 云原生应用开发与管理](https://developer.aliyun.com/group/apphub/article/) |
 | 千问              | [千问 · Research](https://qwen.ai/research)                                               |

@@ -76,7 +76,7 @@ pnpm test:e2e
 
 来源包括公司自有技术站，以及博客园、腾讯云开发者社区、阿里云开发者社区等平台中的官方团队账号。公司归属依据具体发布主体核验，不按托管平台域名推断。采集范围以具体团队和可核验的论文归属为准，各入口不代表覆盖集团全部内容。
 
-[来源注册表](packages/source-registry/registry.json)保存当前配置，字段和约束分别见[类型定义](packages/shared/types.ts)与[注册表校验](packages/source-registry/index.ts)。每家公司至少有一个可采集来源，最多登记一个博文源。修改时以实际校验与测试为准。
+[来源注册表](packages/source-registry/registry.json)保存当前配置，字段和约束分别见[类型定义](packages/shared/types.ts)与[注册表校验](packages/source-registry/index.ts)。每家公司至少有一个可采集来源，每个发布团队最多登记一个博文源。修改时以实际校验与测试为准。
 
 - A/B/C 为接入优先级，不等于身份已认证。
 - 当前注册表只接受已核验且启用的采集源。`verified` 必须附带官方域名、官网反向链接或平台企业认证等证据、核验说明及日期。

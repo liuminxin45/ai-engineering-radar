@@ -22,6 +22,33 @@ const card = (
     <time datetime="${time}"></time>
   </div>`;
 
+describe("Tencent Cloud Developer source", () => {
+  it("keeps its own identity and accepts only its account's articles", () => {
+    const cloud = registry.sources.find(
+      (s) => s.id === "tencent-cloud-developer",
+    )!;
+    expect(
+      registry.publishers.find((p) => p.id === cloud.publisherId)?.companyId,
+    ).toBe("tencent");
+    expect(registry.companies.find((c) => c.id === "tencent")?.name).toBe(
+      "腾讯",
+    );
+    expect(
+      registry.publishers.find((p) => p.id === "tencent-official")?.name,
+    ).toBe("腾讯技术");
+    expect(
+      registry.publishers.find((p) => p.id === cloud.publisherId)?.name,
+    ).toBe("腾讯云开发者");
+    expect(cloud.authorAllowlist).toEqual(["1422024"]);
+    expect(parseListing(card("1422024") + card("9927536"), cloud)).toHaveLength(
+      1,
+    );
+    expect(() =>
+      validateAccountScope({ ...cloud, authorAllowlist: ["9927536"] }),
+    ).toThrow();
+  });
+});
+
 describe("Dewu's single Tencent Cloud source", () => {
   it("keeps only the requested directory and rejects mismatched account scopes", () => {
     const publishers = registry.publishers

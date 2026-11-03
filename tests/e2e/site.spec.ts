@@ -81,6 +81,21 @@ test("search stays temporary while company history survives refresh and legacy s
   await expectNoDocumentOverflow(page);
 });
 
+test("article metadata shows its team before the date", async ({ page }) => {
+  await page.goto("./");
+  const story = latestList(page).locator("article").first();
+  const time = story.locator("time");
+  await expect(time).toBeVisible();
+  const origin = time.locator("..");
+  await expect(origin.locator("span").first()).not.toBeEmpty();
+  expect(
+    await origin.evaluate((el) =>
+      Array.from(el.children).map((child) => child.tagName),
+    ),
+  ).toEqual(["SPAN", "TIME"]);
+  await expectNoDocumentOverflow(page);
+});
+
 test("compact panels retain independent scrolling, keyboard and touch navigation", async ({
   page,
   isMobile,
@@ -301,7 +316,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
   }
   expect(
     sources.filter((s: { contentType?: string }) => s.contentType !== "paper"),
-  ).toHaveLength(14);
+  ).toHaveLength(15);
   expect(
     sources.find((s: { id: string }) => s.id === "bytedance-tech-volcengine")
       .entryUrl,
