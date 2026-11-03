@@ -19,7 +19,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.840Z"
+        "classifiedAt": "2026-11-03T07:56:12.589Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -58,7 +58,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.840Z"
+        "classifiedAt": "2026-11-03T07:56:12.589Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -97,7 +97,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.840Z"
+        "classifiedAt": "2026-11-03T07:56:12.589Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -136,7 +136,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.840Z"
+        "classifiedAt": "2026-11-03T07:56:12.589Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -175,7 +175,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.840Z"
+        "classifiedAt": "2026-11-03T07:56:12.589Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -214,7 +214,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.840Z"
+        "classifiedAt": "2026-11-03T07:56:12.589Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -236,6 +236,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "9fcb388db6d79df0219a",
+      "publisherId": "meituan-official",
+      "companyId": "meituan",
+      "contentType": "blog",
+      "title": "美团正式发布 LongCat-2.5：面向智能体任务的原生多模态模型",
+      "canonicalUrl": "https://tech.meituan.com/2026/11/02/Meituan-LongCat-2.5.html",
+      "description": "美团发布 LongCat-2.5，一个面向长程智能体任务的原生多模态模型。模型总参数量为 1.6 万亿，每个 token 激活约 480 亿参数，在 LongCat-2.0 的基础上进一步强化原生视觉理解与智能体编程能力。",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-01T16:00:00.000Z",
+      "discoveredAt": "2026-11-03T07:56:04.025Z",
+      "updatedAt": "2026-11-03T07:56:04.025Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "meituan",
+          "externalId": "https://tech.meituan.com/2026/11/02/Meituan-LongCat-2.5.html",
+          "url": "https://tech.meituan.com/2026/11/02/Meituan-LongCat-2.5.html",
+          "listingHash": "4b7ff4b8a0d53a532af3df973c4832d6ef4307a6d173f69356008ba8d975e224"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "b08f5483cf471e3bda76",
       "publisherId": "meituan-official",
       "companyId": "meituan",
@@ -253,7 +293,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.840Z"
+        "classifiedAt": "2026-11-03T07:56:12.589Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -292,7 +332,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.840Z"
+        "classifiedAt": "2026-11-03T07:56:12.589Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -331,7 +371,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.840Z"
+        "classifiedAt": "2026-11-03T07:56:12.589Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -370,7 +410,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.840Z"
+        "classifiedAt": "2026-11-03T07:56:12.589Z"
       },
       "advertorial": {
         "status": "unmarked",

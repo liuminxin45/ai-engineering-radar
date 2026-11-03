@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.841Z"
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.841Z"
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -100,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.841Z"
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.841Z"
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -180,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.841Z"
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.841Z"
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -260,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.841Z"
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -282,6 +282,47 @@
       "duplicateCandidates": []
     },
     {
+      "id": "b9fc329e1ac891701ae1",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "contentType": "blog",
+      "title": "AI 会写代码之后，交付为什么还没变快？",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/23532372",
+      "author": "jcloud",
+      "description": "当 AI 已经能替我们写代码，为什么团队整体的交付速度没有想象中那么快？ 答案不在工具里，而在工具之外——在流程、在分工、在组织结构里。 一、现状：AI 加速了局部，却照出了组织的摩擦 近一年，整个产研团队做了大量 AI 编码的实践与推广，AI 代码生成率持续提高，越来越多的需求进入了深度人机协作阶",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-03T02:43:00.000Z",
+      "discoveredAt": "2026-11-03T07:56:06.295Z",
+      "updatedAt": "2026-11-03T07:56:06.295Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "23532372",
+          "url": "https://www.cnblogs.com/Jcloud/p/23532372",
+          "listingHash": "6a3af0deed65d4293833adea1ef0b9deca8409abaa24cd290d5dfa239d21943f"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "bad4ff318c4ecf0580c6",
       "publisherId": "jd-official",
       "companyId": "jd",
@@ -300,7 +341,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.841Z"
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -340,7 +381,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.841Z"
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -380,7 +421,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.841Z"
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -420,7 +461,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-02T12:20:12.841Z"
+        "classifiedAt": "2026-11-03T07:56:12.590Z"
       },
       "advertorial": {
         "status": "unmarked",
