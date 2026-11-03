@@ -366,20 +366,3 @@
     animation: none !important;
   }
 }
-
-.contentFilter {
-  padding: 0 20px;
-  border-bottom: 1px solid var(--hair);
-  font-size: 12px;
-  color: var(--muted);
-}
-.contentFilter label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 24px;
-  cursor: pointer;
-}
-.contentFilter input {
-  accent-color: var(--accent);
-}

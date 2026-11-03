@@ -22,7 +22,6 @@ import {
 import type { Article } from "../../../../packages/shared/types";
 import { articleCompanyIds } from "../../../../packages/shared/content.ts";
 import styles from "./article-board.module.css";
-import { ContentSignalBadge } from "./content-signals";
 
 const companies = boardCompanies(site.companies);
 const ids = ["latest", ...companies.map((c) => c.id)];
@@ -64,7 +63,7 @@ export function ArticleBoard() {
   const activeIndex = ids.indexOf(active);
   const articles = useMemo(
     () => boardArticles(site.articles, query),
-    [query.q, query.type, query.hideActivities],
+    [query.q, query.type],
   );
 
   function writeQuery(next: BoardQuery, replace = false) {
@@ -318,20 +317,6 @@ export function ArticleBoard() {
           </span>
         </div>
       </header>
-      <div className={styles.contentFilter}>
-        <label>
-          <input
-            type="checkbox"
-            checked={!!query.hideActivities}
-            onChange={(event) =>
-              changeGlobal({
-                hideActivities: event.target.checked || undefined,
-              })
-            }
-          />
-          隐藏活动／福利
-        </label>
-      </div>
       <nav
         ref={companyNav}
         className={styles.companyNav}
@@ -440,7 +425,6 @@ export function ArticleBoard() {
                         >
                           {day(time(a))}
                         </time>
-                        <ContentSignalBadge article={a} />
                         {a.advertorial?.status === "suspected" && (
                           <Link
                             className={styles.advertorialBadge}

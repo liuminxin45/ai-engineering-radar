@@ -10,7 +10,6 @@ import {
 } from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
 import { assessAdvertorial } from "../classifier/advertorial.js";
-import { assessContentSignals } from "../classifier/content-signals.js";
 export function publishedArticles(articles: Article[], registry: Registry) {
   return articles
     .filter(
@@ -85,7 +84,6 @@ export async function exportSite(
     (article) => ({
       ...article,
       advertorial: assessAdvertorial(article),
-      contentSignals: assessContentSignals(article),
     }),
   );
   const generatedAt = snapshot.manifest.generatedAt;
