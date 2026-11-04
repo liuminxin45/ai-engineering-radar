@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "a2ebebe33db08a756155",
+    "status": "ready",
+    "html": "<p>越来越多的具身模型开始采用 Muon 优化器进行训练。与 AdamW 相比，Muon 能用更少的训练步数达到相近的效果，从而缩短整体训练时间。但随着训练规模扩大，Muon 每一步多出的计算和通信开销日益突出，在国内常用的、未配置 NVLink 的主流 GPU 实例上尤其明显。</p>\n\n<p>为此，百度百舸构建了 PyTorch 原生的 Muon 加速库 MuonX，并在 hpas.lgn7ib 实例上，分别测试了 FSDP 和 DDP 两种多卡训练组合。</p>\n\n<p>LingBot-VLA 2.0（FSDP）：双机、四机训练步时相比原版 Muon + FSDP 缩短 62.2%～63.7%，相比 Megatron 分布式 Muon 缩短 18.3%～19.3%；四机弱扩展效率从 81.7% 提高到 92.8%。</p>\n\n<p>π0.5（DDP）：在 DDP 多卡训练中，通过降低计算复杂度，MuonX 又将 Muon 的单步耗时降低了 5.4%。</p>\n\n<p></p>\n\n<h2 id=\"section-1-muon-从大语言模型走向具身智能\"><strong><strong>1. &nbsp; &nbsp;Muon 从大语言模型走向具身智能</strong></strong><a class=\"heading-anchor\" href=\"#section-1-muon-从大语言模型走向具身智能\" aria-label=\"链接到本节：1. Muon 从大语言模型走向具身智能\">#</a></h2>\n\n<p>Muon 正在成为大模型训练中 AdamW 之外的主流优化器，并已进入具身智能<strong><strong>。</strong></strong>&nbsp;2025 年，Moonlight 用 Muon 训练了 160 亿参数的 MoE 模型，实验表明，在计算最优配置下，Muon 只需约 52% 的训练计算量即可达到 AdamW 的同等表现。Kimi K2 采用稳定化变体 MuonClip，将 Muon 用到万亿参数规模，完成了 15.5 万亿 tokens 的预训练。</p>\n\n<p>2026 年，Muon 在具身模型训练中也有了多个实践。蚂蚁集团旗下蚂蚁灵波开源的视觉语言动作模型 LingBot-VLA 2.0 在训练中采用了 Muon。π0.5 上已有研究者开展 Muon 及其衍生优化器的真实机器人任务实验。2026 年 8 月发布的 Dyna-2，预训练使用了超过一百万小时的第一人称视频，训练中同样使用 Muon。</p>\n\n<p>不过，训练规模扩大后，Muon 本身的开销会变得突出。Dyna 团队提到，Muon 一度占到训练步时的一半左右，为此他们对优化器做了专门的优化。最初，他们把优化器状态分到作业内的所有卡上，每张卡更新一部分参数后再汇总，在机器数较少时效果很好。机器增多后，跨节点通信拖慢了训练，于是改为只在节点内分片，各节点分别重复计算同样的更新，并根据机器数在两种策略之间自动切换。在触发切换的规模下，优化器单步耗时平均比原来的全局分片方案快约 3 倍。</p>\n\n<p>Dyan 团队的这一方案基于配备 NVLink 的 B200 节点，思路是把通信从节点之间挪到节点内部：节点之间宁可重复计算，也尽量不传数据；节点内的多张卡则依靠 NVLink 高速互联，分担优化器的计算。它的前提是同一台机器内的卡间传输足够快。国内常用的主流 GPU 实例很多没有配置 NVLink，这条路难以直接沿用。</p>\n\n<p>百度百舸的 MuonX 换了一个思路：不依赖高速互联，而是直接减少 Muon 本身的开销，降低单个矩阵的计算量，减少多卡之间的重复计算，并在 FSDP 训练中省去为拼出完整矩阵而进行的数据传输。</p>\n\n<p></p>\n\n<h2 id=\"section-2-muon-为什么步数更少-单步更慢\"><strong><strong>2. &nbsp; &nbsp;Muon 为什么步数更少、单步更慢</strong></strong><a class=\"heading-anchor\" href=\"#section-2-muon-为什么步数更少-单步更慢\" aria-label=\"链接到本节：2. Muon 为什么步数更少、单步更慢\">#</a></h2>\n\n<p>训练总时间大致等于训练步数乘以每步耗时。从 AdamW 换到 Muon，步数会减少，每步耗时会增加，总时间能否缩短，取决于两者相抵之后的结果。这两种变化都来自Muon 更新参数的方式。</p>\n\n<p>AdamW 和 Muon 的主要区别在于如何调整参数更新。AdamW 按元素调整：维护梯度及其平方的滑动平均，据此分别缩放每个参数元素的更新，各元素独立计算。Muon 以整个矩阵为单位：先用动量平滑梯度，再用 Newton-Schulz 迭代（下称 NS 迭代）对更新矩阵做近似正交化，使矩阵中各个方向的更新强度趋于均衡。实际训练中两者配合使用：隐藏层的二维权重矩阵由 Muon 更新，嵌入、偏置等参数仍由 AdamW 负责。</p>\n\n<p>步数减少，是因为每一步的更新更有效<strong><strong>。</strong></strong>&nbsp;Muon 提出者 Keller Jordan 认为，由梯度动量得到的更新矩阵，往往由少数几个方向主导，其他方向的更新幅度很小，但这些方向对学习同样重要。AdamW 按元素缩放，无法改变方向之间的这种不均衡。正交化之后，各个方向的更新幅度处于同一量级，原本较弱的方向也能得到有效更新。每一步学到的更多，达到同样效果所需的步数就更少。Moonlight 的实验中，Muon 只需约 52% 的训练计算量就达到了 AdamW 的水平；本文 π0.5 的对照中，AdamW 训练 3000 步达到的 loss，Muon 约 2300 步就能达到，步数减少约 23%。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"640\" src=\"https://i-blog.csdnimg.cn/img_convert/17608c9eb5e20d2e6e14f9f664c82688.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>单步变慢，一是计算量大，二是多卡训练时多出通信和重复计算。NS 迭代要对整个矩阵做多轮矩阵乘法，AdamW只需逐元素运算，计算量自然更大。</p>\n\n<p>多卡训练的麻烦在于，NS 必须拿完整矩阵来算，只算一部分得不到正确结果。这会带来两种额外开销：一是在卡间传输数据、拼出完整矩阵，二是每张卡重复计算同一个矩阵。</p>\n\n<p>具体会出现哪种开销，取决于多卡训练采用的并行方式。以最常用的 DDP 和 FSDP 为例：</p>\n\n<ul><li>\n\t<p>DDP：重复计算。 DDP 中，各张 GPU 都持有完整的模型参数和梯度。梯度同步完成后，每张卡都可以用同步后的梯度更新完整的动量矩阵，并直接对它执行 NS，Muon 不需要为此额外通信。但代价是，每张卡都要对相同的矩阵重复执行 NS，造成计算资源浪费。</p>\n\t</li><li>\n\t<p>FSDP：额外通信与重复计算。 FSDP 会对模型状态进行分片。由于 NS 需要完整矩阵，在本文对比的原版 Muon + FSDP 实现中，需要通过 AllGather 收集各个分片的动量，重建完整的动量矩阵；随后，各张卡又分别执行 NS，最后保留自己所需的分片。</p>\n\t</li></ul>\n\n<h2 id=\"section-3-muonx-dmuon-调整多卡分工-gram-ns-降低计算量\"><strong><strong>3. &nbsp; &nbsp;MuonX：DMuon 调整多卡分工，Gram NS 降低计算量</strong></strong><a class=\"heading-anchor\" href=\"#section-3-muonx-dmuon-调整多卡分工-gram-ns-降低计算量\" aria-label=\"链接到本节：3. MuonX：DMuon 调整多卡分工，Gram NS 降低计算量\">#</a></h2>\n\n<p>MuonX 是百度百舸构建的 PyTorch 原生 Muon 加速库，目标是降低 Muon 的单步耗时，主要由 DMuon 和 Gram NS 两部分组成。</p>\n\n<p>DMuon 是可选的分布式后端，重新分配多卡之间的矩阵更新任务，减少重复计算和拼出完整矩阵所需的通信，根据训练采用的并行方式决定是否开启。Gram NS 降低单个矩阵做一次 NS 的计算量，与并行方式无关，可以单独使用。两者都已适配反向传播、梯度累积、梯度裁剪和参数更新等训练环节，可以直接接入 PyTorch 训练流程。</p>\n\n<h3 id=\"section-3-1-dmuon-重新分配多卡之间的矩阵更新任务\"><strong><strong>3.1. &nbsp; &nbsp;DMuon：重新分配多卡之间的矩阵更新任务</strong></strong><a class=\"heading-anchor\" href=\"#section-3-1-dmuon-重新分配多卡之间的矩阵更新任务\" aria-label=\"链接到本节：3.1. DMuon：重新分配多卡之间的矩阵更新任务\">#</a></h3>\n\n<p>DMuon 的核心思路是改变多卡之间的矩阵更新分工：不再让每张卡都重复计算同一个矩阵，而是为每个矩阵指定一个Owner，由它负责该矩阵的更新。</p>\n\n<p>具体来说，训练过程中，各张卡把相关梯度汇总到对应的 Owner；Owner 维护该矩阵的完整动量，执行 NS 迭代并完成参数更新，随后将更新后的参数分发给需要它的训练进程。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"687\" src=\"https://i-blog.csdnimg.cn/img_convert/8312b0ce6d7803742425264961d31f76.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>这种方式改变的是矩阵更新任务的分工，并不意味着 FSDP 不再对模型参数进行分片。对于 FSDP，DMuon 可以减少为 NS 重建完整矩阵所需的额外AllGather，同时避免多张卡重复执行相同的 NS 计算，从而降低通信与计算开销。</p>\n\n<p>在 LingBot-VLA 2.0 的 FSDP 双机测试中，相比原版 Muon +FSDP，DMuon 使 NCCL 通信的累计时长降低了 57.6%，通信与计算的重叠比例从 13.7% 提升至 43.6%。</p>\n\n<p>对于 DDP，DMuon 同样能够减少重复的 NS 计算，但新增的参数分发与同步开销会抵消一部分收益。因此，DMuon 在 FSDP 下收益更大，在 DDP 下收益相对有限。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"260\" src=\"https://i-blog.csdnimg.cn/img_convert/154646f094f85cf1084907220c08adfc.png\" width=\"843\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h3 id=\"section-3-2-gram-ns-减少长矩阵乘法-降低-ns-迭代的计算开销\"><strong><strong>3.2. &nbsp; &nbsp;Gram NS：减少长矩阵乘法，降低&nbsp;</strong></strong><strong><strong>NS&nbsp;</strong></strong><strong><strong>迭代的计算开销</strong></strong><a class=\"heading-anchor\" href=\"#section-3-2-gram-ns-减少长矩阵乘法-降低-ns-迭代的计算开销\" aria-label=\"链接到本节：3.2. Gram NS：减少长矩阵乘法，降低 NS 迭代的计算开销\">#</a></h3>\n\n<p>DMuon 解决的是多卡之间的任务分工，Gram NS 则优化单个矩阵内部的计算过程，减少 NS 迭代中的长矩阵乘法。</p>\n\n<p>以一个 2560 × 9728 的动量矩阵 X 为例，直接执行 NS 需要进行多次长矩阵乘法。Gram NS 则先计算 Gram 矩阵 XXᵀ，得到一个 2560 × 2560 的较小方阵。</p>\n\n<p>在后续迭代中，Gram NS 主要围绕这个较小的方阵进行计算，并累积相应的变换。到达设定的分段边界时，再将累积的变换作用于原始长矩阵。为了控制数值误差，算法会分段执行，并在每个分段重新开始累积变换。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"674\" src=\"https://i-blog.csdnimg.cn/img_convert/9cbcf435c5ae6fbc616e7b49fcdc256f.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>例如，MuonX 提供的 Gram NS 将原本的 5 次迭代划分为 2 + 2 + 1 三段。对 LingBot-VLA 2.0 中采集的这一矩阵，单个矩阵做一次 NS 更新的计算量对比如下：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"331\" src=\"https://i-blog.csdnimg.cn/img_convert/31b6c31ed814b7e63f32882b4b1e5f3d.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>长矩阵乘法次数从 10 次减少到 6 次，小方阵乘法次数则从 5 次增加到 11 次。虽然小方阵乘法有所增加，但由于其计算开销相对较低，矩阵乘法的理论计算量仍然从 1.443 TFLOPs 降至 1.134 TFLOPs，降低约 21.4%。</p>\n\n<p>在 Gram NS 的开源实现中默认使用 FP16，将 5 轮迭代划分为&nbsp;<strong><strong>2＋3</strong></strong>&nbsp;两段。MuonX 则面向已有的固定 Muon 系数和 BF16 训练配置，采用&nbsp;<strong><strong>2＋2＋1</strong></strong>&nbsp;分段，在第 2 轮和第 4 轮后重新计算 Gram 矩阵，将每段最长的连续递推从&nbsp;<strong><strong>3 轮缩短到 2 轮</strong></strong>。这一设计的优势是：<strong><strong>保留既有优化器的系数和计算精度，同时采用更保守的递推长度。</strong></strong>更频繁的重建会增加部分计算，但对于上述 2560 × 9728 矩阵。具体的分段方式可在代码中配置，实际最佳选择需要结合模型的矩阵形状、计算精度和训练表现进行评估。</p>\n\n<p>Gram NS 并不是消除长矩阵计算，而是通过调整计算路径，减少长矩阵乘法的次数，以较小方阵上的额外计算换取整体计算开销的下降。实际收益仍会受到矩阵形状、数值精度和具体算子实现等因素影响。</p>\n\n<h3 id=\"section-3-3-百度百舸的接入方式\"><strong><strong>3.3. &nbsp; &nbsp;百度百舸的接入方式</strong></strong><a class=\"heading-anchor\" href=\"#section-3-3-百度百舸的接入方式\" aria-label=\"链接到本节：3.3. 百度百舸的接入方式\">#</a></h3>\n\n<p>在百舸上，MuonX 通过 pip 安装，并需要在训练脚本中显式启用。Gram NS 可以单独启用，DMuon 根据并行方式按需叠加。DDP 场景可以只用 Gram NS，再视情况接入 DMuon。符合接入条件的 FSDP2 模型，通过接口指定参与更新的矩阵并替换优化器即可。用户无需更换训练框架，可以根据自己的模型和硬件选择优化组合。</p>\n\n<h2 id=\"section-4-lingbot-vla-2-0-fsdp-训练步时缩短-62-四机扩展效率-92-8\"><strong><strong>4. &nbsp; &nbsp;LingBot-VLA 2.0</strong></strong><strong><strong>：FSDP 训练步时缩短 62%，四机扩展效率 92.8%</strong></strong><a class=\"heading-anchor\" href=\"#section-4-lingbot-vla-2-0-fsdp-训练步时缩短-62-四机扩展效率-92-8\" aria-label=\"链接到本节：4. LingBot-VLA 2.0：FSDP 训练步时缩短 62%，四机扩展效率 92.8%\">#</a></h2>\n\n<p>本文在 LingBot-VLA 2.0 与 π0.5 上的 Muon 及 MuonX 训练测试，均基于百度百舸平台 hpas.lgn7ib 实例完成。该实例搭载国内主流 GPU 型号，实例内未配置 NVLink，跨卡数据传输和同步对步时的影响比有 NVLink 的环境更大。</p>\n\n<p>LingBot-VLA 2.0 采用 FSDP 训练，以原版 Muon + FSDP 为基线，同时以 Megatron Muon 作为对照。Megatron Muon 来自 Moonlight 提出并开源的基于 Megatron-LM 的分布式 Muon 方案，通过优化器状态分片和更新任务分配，降低大规模训练的显存与通信开销。本次将 MegatronCore 原生的分布式 Muon 实现接入 LingBot-VLA 2.0，在相同硬件和 batch 配置下与另外两种方案比较。</p>\n\n<p>固定每卡 micro batch size 为 16、梯度累积为 3，三种方案的训练步时如下：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"331\" src=\"https://i-blog.csdnimg.cn/img_convert/666bcdf1e10bb2a3322567610b429b0e.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p><strong><strong>MuonX 在三个规模下步时都最短。</strong></strong>双机步时比原版 Muon + FSDP 缩短 62.2%，比 Megatron Muon 缩短 19.3%；四机下分别缩短 63.7% 和 18.3%。</p>\n\n<p>为考察多机扩展能力，另一组测试将每卡 micro batch size 提高到 32，梯度累积仍为 3。这是弱扩展测试：每张 GPU 的工作量不变，机器数增加时全局 batch 同比增大。理想情况下步时不变，双机吞吐是单机的 2 倍，四机是 4 倍。弱扩展效率即实际吞吐与这一理想值的比例。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"347\" src=\"https://i-blog.csdnimg.cn/img_convert/fb8cbd2d9fc6c820490b061242c1dd39.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>以四机为例，MuonX 的吞吐是单机的 3.71 倍，理想值为 4 倍，弱扩展效率为 92.8%；原版 Muon + FSDP 为 3.27 倍，弱扩展效率 81.7%。四机下，MuonX的绝对吞吐是基线的 2.58 倍，增加机器带来的吞吐提升也更接近理想值。</p>\n\n<h2 id=\"section-5-π0-5-ddp-训练步时小幅缩短-muon-以更少步数达到相近-loss\"><strong><strong>5. &nbsp; &nbsp;π0.5：DDP 训练步时小幅缩短，Muon 以更少步数达到相近 loss</strong></strong><a class=\"heading-anchor\" href=\"#section-5-π0-5-ddp-训练步时小幅缩短-muon-以更少步数达到相近-loss\" aria-label=\"链接到本节：5. π0.5：DDP 训练步时小幅缩短，Muon 以更少步数达到相近 loss\">#</a></h2>\n\n<p>π0.5 采用 DDP 训练。如第 2 节所述，DDP 下 Muon 多出的只是计算开销，DMuon 减少重复计算的同时，会增加参数分发和同步的开销。DDP 性能测试中，三种优化器配置的稳态步时如下：</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"268\" src=\"https://i-blog.csdnimg.cn/img_convert/180726e253bd9cbfa91d29c9532b5f3c.png\" width=\"846\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>MuonX 降低了 Muon 的计算开销，但在 DDP 下，DMuon 的任务分配、结果分发和同步抵消了一部分收益，整体只是小幅加速，步时仍比 AdamW 高约 6.1%。换用不同的并行方式，计算和通信优化的收益需要重新评估。</p>\n\n<p>评估训练效率，除了单步耗时，还要看达到目标 loss 需要多少步。在另一组 π0.5 单卡对照中，只比较优化器本身，Muon 配置的 loss 下降更快：训练约 2300 步后，最近 100 步的平均 loss 为 0.02489，已达到 AdamW 训练 3000 步时的 0.02519 水平。两组训练分别耗时约 6.55 小时和 8.48 小时。虽然 Muon 每步稍慢，但步数更少。在这组对照中，Muon 达到相近 loss 所需的训练时间减少约 22.7%。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"528\" src=\"https://i-blog.csdnimg.cn/img_convert/f1dd92dd523fd944b6c31b291324a32c.png\" width=\"960\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>π0.5 的结果说明：Muon 减少了训练步数，MuonX 降低了单步耗时。判断是否换用 Muon，需要把步时和 loss 曲线结合起来看。</p>\n\n<h2 id=\"section-6-结语\"><strong><strong>6. &nbsp; &nbsp;结语</strong></strong><a class=\"heading-anchor\" href=\"#section-6-结语\" aria-label=\"链接到本节：6. 结语\">#</a></h2>\n\n<p>Muon 能减少训练步数，但单步耗时更高。MuonX 用 Gram NS 降低 NS 迭代的计算量，用 DMuon 减少多卡训练中获取完整矩阵的开销，在实例内未配置 NVLink 的百舸 hpas.lgn7ib 实例上，将 LingBot-VLA 2.0 的 FSDP 训练步时缩短六成以上。</p>\n\n<p>百度百舸始终立足国内现有的算力供给格局，通过系统性的 AI Infra 优化与高扩展性集群架构设计，为各类具身智能场景找到高性价比的算力解决方案。</p>",
+    "headings": [
+      {
+        "id": "section-1-muon-从大语言模型走向具身智能",
+        "level": 2,
+        "text": "1. Muon 从大语言模型走向具身智能"
+      },
+      {
+        "id": "section-2-muon-为什么步数更少-单步更慢",
+        "level": 2,
+        "text": "2. Muon 为什么步数更少、单步更慢"
+      },
+      {
+        "id": "section-3-muonx-dmuon-调整多卡分工-gram-ns-降低计算量",
+        "level": 2,
+        "text": "3. MuonX：DMuon 调整多卡分工，Gram NS 降低计算量"
+      },
+      {
+        "id": "section-3-1-dmuon-重新分配多卡之间的矩阵更新任务",
+        "level": 3,
+        "text": "3.1. DMuon：重新分配多卡之间的矩阵更新任务"
+      },
+      {
+        "id": "section-3-2-gram-ns-减少长矩阵乘法-降低-ns-迭代的计算开销",
+        "level": 3,
+        "text": "3.2. Gram NS：减少长矩阵乘法，降低 NS 迭代的计算开销"
+      },
+      {
+        "id": "section-3-3-百度百舸的接入方式",
+        "level": 3,
+        "text": "3.3. 百度百舸的接入方式"
+      },
+      {
+        "id": "section-4-lingbot-vla-2-0-fsdp-训练步时缩短-62-四机扩展效率-92-8",
+        "level": 2,
+        "text": "4. LingBot-VLA 2.0：FSDP 训练步时缩短 62%，四机扩展效率 92.8%"
+      },
+      {
+        "id": "section-5-π0-5-ddp-训练步时小幅缩短-muon-以更少步数达到相近-loss",
+        "level": 2,
+        "text": "5. π0.5：DDP 训练步时小幅缩短，Muon 以更少步数达到相近 loss"
+      },
+      {
+        "id": "section-6-结语",
+        "level": 2,
+        "text": "6. 结语"
+      }
+    ],
+    "textLength": 5837,
+    "readingMinutes": 13,
+    "sourceId": "baidu-cloud-csdn-candidate",
+    "sourceUrl": "https://blog.csdn.net/2301_82040283/article/details/170045240",
+    "ruleId": "csdn",
+    "ruleVersion": "3",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "9bb5cde6ed8f8a0cbcd213d95d811c64dc0c7222f760b6d0f3b4a836dcfaa2a5",
+    "fetchedAt": "2026-11-04T07:30:38.448Z",
+    "checkedAt": "2026-11-04T07:30:38.448Z",
+    "nextRetryAt": "2026-12-04T07:30:38.448Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
+  }
+}

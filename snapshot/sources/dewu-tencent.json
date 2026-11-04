@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "dewu-tencent",
-    "lastCheckedAt": "2026-11-03T07:56:04.029Z",
-    "lastSuccessAt": "2026-11-03T07:56:04.029Z",
-    "nextRunAt": "2026-11-04T07:56:04.029Z",
+    "lastCheckedAt": "2026-11-04T07:30:27.328Z",
+    "lastSuccessAt": "2026-11-04T07:30:27.328Z",
+    "nextRunAt": "2026-11-05T07:30:27.328Z",
     "consecutiveFailures": 0,
-    "etag": "W/\"2270d-kCZ0aay20hMUxBSojTK0SH4xsWE\"",
+    "etag": "W/\"2270f-fXW6+YmXPZBCGg9EfYTVYM+d3rg\"",
     "status": "success",
     "discovered": 20,
     "httpStatus": 200

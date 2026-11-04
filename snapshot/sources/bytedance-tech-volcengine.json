@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "bytedance-tech-volcengine",
-    "lastCheckedAt": "2026-11-03T07:56:06.855Z",
-    "lastSuccessAt": "2026-11-03T07:56:06.855Z",
-    "nextRunAt": "2026-11-04T07:56:06.855Z",
+    "lastCheckedAt": "2026-11-04T07:30:28.934Z",
+    "lastSuccessAt": "2026-11-04T07:30:28.934Z",
+    "nextRunAt": "2026-11-05T07:30:28.934Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,

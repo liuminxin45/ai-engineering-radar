@@ -2,6 +2,46 @@
   "schemaVersion": 1,
   "articles": [
     {
+      "id": "003e55c6e53a54a168e8",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "contentType": "blog",
+      "title": "百度智能云联合哈工大提出 VLDA，机器人操作从预测未来转向学习变化",
+      "canonicalUrl": "https://blog.csdn.net/2301_82040283/article/details/170046216",
+      "author": "2301_82040283",
+      "description": "近日，百度智能云联合哈尔滨工业大学（深圳）提出面向机器人操作（robotic manipulation）的新范式 VLDA（Vision-Language-Delta-Action，视觉-语言-变化-动作），并在百度百舸开源的训练框架 LoongForge 中同步开放了完整训练实现。这项工作针对的是具身智能领域的一个长期痛点：现有模型要么从观察直接映射到动作、把「该改变什么」隐含在动作监督里，要么耗费大量容量去预测整幅未来画面。VLDA 的解法是只学「任务相关的那一点状态变化」（Delta），并让它直接参与",
+      "publishedAt": "2026-11-04T07:11:51.000Z",
+      "discoveredAt": "2026-11-04T07:30:29.623Z",
+      "updatedAt": "2026-11-04T07:30:29.623Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-04T07:30:33.378Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-cloud-csdn-candidate",
+          "externalId": "https://blog.csdn.net/2301_82040283/article/details/170046216",
+          "url": "https://blog.csdn.net/2301_82040283/article/details/170046216",
+          "listingHash": "804d48d26f98bcaf791cddb9576144fa14782367b5b06b6d6770047e1ca6dccf"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "00a8683d9bb25c27803c",
       "publisherId": "baidu-official",
       "companyId": "baidu",
@@ -20,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -102,7 +142,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -142,7 +182,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -182,7 +222,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -222,7 +262,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -262,7 +302,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -302,7 +342,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -342,7 +382,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -382,7 +422,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -422,7 +462,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -462,7 +502,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -501,7 +541,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.377Z"
       },
       "advertorial": {
         "status": "suspected",
@@ -528,6 +568,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "931ebd46710f79b591e8",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "contentType": "blog",
+      "title": "上海交大 × 百度百舸开源 WAVE-0：无需大规模视频预训练，257M 潜空间世界模型让 π₀.₅ 真机平均成功率接近翻倍",
+      "canonicalUrl": "https://blog.csdn.net/2301_82040283/article/details/170046037",
+      "author": "2301_82040283",
+      "description": "近期，工业界的一大批世界模型工作在学术界的具身 benchmark 上不断刷新成绩。但这些性能提升往往伴随着更复杂的结构设计和更多的训练数据，很难分辨能力提升究竟来自哪里。更值得注意的是，一些第三方真机评测显示，这些榜单上成绩领先的模型，在真机性能或数据效率上并不一定超过 π₀.₅。这就引出一个问题：我们该如何更公平地判断一个模型设计是否真正有效？毕竟，我们需要的是能够迁移、泛化性更好的设计，而不仅仅是榜单上的分数。为此，上海交通大学联合百度智能云、Awaken Robotics 的研究团队发布了。",
+      "publishedAt": "2026-11-04T07:09:07.000Z",
+      "discoveredAt": "2026-11-04T07:30:29.623Z",
+      "updatedAt": "2026-11-04T07:30:29.623Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-04T07:30:33.378Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-cloud-csdn-candidate",
+          "externalId": "https://blog.csdn.net/2301_82040283/article/details/170046037",
+          "url": "https://blog.csdn.net/2301_82040283/article/details/170046037",
+          "listingHash": "a6498517464dea639088830451d6ffa120749491c10d5a41d41a1b2362590f95"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "964b12f554ffd3662f44",
       "publisherId": "baidu-official",
       "companyId": "baidu",
@@ -546,7 +626,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.378Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -586,7 +666,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.378Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -626,7 +706,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.378Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -666,7 +746,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.378Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -688,6 +768,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "a2ebebe33db08a756155",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "contentType": "blog",
+      "title": "不用 NVLink，Muon 训练步时缩短 63.7%：百度百舸具身智能场景的优化实践",
+      "canonicalUrl": "https://blog.csdn.net/2301_82040283/article/details/170045240",
+      "author": "2301_82040283",
+      "description": "不过，训练规模扩大后，Muon 本身的开销会变得突出。2025 年，Moonlight 用 Muon 训练了 160 亿参数的 MoE 模型，实验表明，在计算最优配置下，Muon 只需约 52% 的训练计算量即可达到 AdamW 的同等表现。MuonX 用 Gram NS 降低 NS 迭代的计算量，用 DMuon 减少多卡训练中获取完整矩阵的开销，在实例内未配置 NVLink 的百舸 hpas.lgn7ib 实例上，将 LingBot-VLA 2.0 的 FSDP 训练步时缩短六成以上。",
+      "publishedAt": "2026-11-04T07:05:13.000Z",
+      "discoveredAt": "2026-11-04T07:30:29.623Z",
+      "updatedAt": "2026-11-04T07:30:29.623Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-04T07:30:33.378Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-cloud-csdn-candidate",
+          "externalId": "https://blog.csdn.net/2301_82040283/article/details/170045240",
+          "url": "https://blog.csdn.net/2301_82040283/article/details/170045240",
+          "listingHash": "d1bffdff4d88aae170b588732494f678c394357a8b51937320e7b1862d57a966"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "aa3e7ac3e9ec129af2a5",
       "publisherId": "baidu-official",
       "companyId": "baidu",
@@ -706,7 +826,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.378Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -746,7 +866,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.378Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -786,7 +906,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-03T07:56:12.589Z"
+        "classifiedAt": "2026-11-04T07:30:33.378Z"
       },
       "advertorial": {
         "status": "unmarked",
