@@ -2,17 +2,17 @@
   "schemaVersion": 1,
   "articles": [
     {
-      "id": "1767c35fbb991c3a0839",
+      "id": "1720d0d88850c48cbf01",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
-      "title": "OpenViking 实战教程：搭建多仓库代码语义检索系统，赋能 AI 助手 & OpenClaw 记忆插件 2.0 升级",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7622857325355171849",
+      "contentType": "blog",
+      "title": "以电商客服为例，看 AgentKit 技能评测如何让 Skill 敢上生产！",
+      "canonicalUrl": "https://www.toutiao.com/article/7702392524802998813",
       "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-03-30T02:52:20.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
+      "description": "Skill 写好、跑通之后，如果回答不好下面三个问题，也很难大规模应用到生产环境当中： 它到底好不好用？Agent 表面上完成了任务，但得出的结论可能会违反业务规则；出现这类问题，系统不会报错，在抽查时也很难发现。问题出在哪，该怎么改？ 知道分数低，想查问题出在哪儿？",
+      "publishedAt": "2026-10-30T09:36:57.000Z",
+      "discoveredAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-04T09:59:40.990Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
+        "classifiedAt": "2026-11-04T09:59:41.221Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -33,26 +33,26 @@
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7622857325355171849",
-          "url": "https://developer.volcengine.com/articles/7622857325355171849",
-          "listingHash": "a15a7db905eb79e6488c71fcbc0ac170e6766751d9e1bb32959b4af912cc250a"
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7702392524802998813",
+          "url": "https://www.toutiao.com/article/7702392524802998813",
+          "listingHash": "bf0c536306f64a6fcced8631a8a53e34b1ab45dafbcb824a896c8026045477f0"
         }
       ],
       "duplicateCandidates": []
     },
     {
-      "id": "29936caf7d4590f03799",
+      "id": "1e1d7e7582f158b01d20",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
-      "title": "veRL 推出开源 Uni-Agent：为通用 Agent 训练打造统一框架",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7641785271574675502",
+      "contentType": "blog",
+      "title": "豆包手机、AI音乐、3D数字人......这些技术博士在字节都做了什么？",
+      "canonicalUrl": "https://www.toutiao.com/article/7696517105679729192",
       "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-05-20T02:50:20.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
+      "description": "最近几年，字节跳动面向高校同学持续开放前沿技术课题，邀请对科研探索和真实技术挑战感兴趣的同学共同参与。目前，已有 300+ 位博士同学正式加入前沿探索，围绕 30+ 个关键技术方向展开持续研究与探索。而这些很多人眼中可能遥不可及的“前沿技术”，只能存在于论文和实验室中吗？",
+      "publishedAt": "2026-10-14T13:37:22.000Z",
+      "discoveredAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-04T09:59:40.990Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
+        "classifiedAt": "2026-11-04T09:59:41.221Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -73,26 +73,26 @@
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7641785271574675502",
-          "url": "https://developer.volcengine.com/articles/7641785271574675502",
-          "listingHash": "d7b58ec452c43ec30c28feb0c3665409eb0b1048cb014eb70ff7a314f90a5973"
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7696517105679729192",
+          "url": "https://www.toutiao.com/article/7696517105679729192",
+          "listingHash": "4617baaee2a9f8ac660f3bb1be7a93919f8145820abb526039ac1547f878adbb"
         }
       ],
       "duplicateCandidates": []
     },
     {
-      "id": "326f68e001ea4adf4c10",
+      "id": "38c3bbc68094639060e3",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
-      "title": "重构大模型通信架构：火山引擎 RocketMQ For AI 解决方案",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7641785442947006515",
+      "contentType": "blog",
+      "title": "火山引擎云数据库 Lakebase 正式发布：让 Agent 高效访问库、湖数据",
+      "canonicalUrl": "https://www.toutiao.com/article/7699439119776236095",
       "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-05-20T02:50:19.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
+      "description": "数据从哪里来？要到哪里存？怎么快速查？这是大模型用好企业数据最先要过的三道关。",
+      "publishedAt": "2026-10-22T10:36:28.000Z",
+      "discoveredAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-04T09:59:40.990Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -100,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
+        "classifiedAt": "2026-11-04T09:59:41.221Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -113,26 +113,26 @@
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7641785442947006515",
-          "url": "https://developer.volcengine.com/articles/7641785442947006515",
-          "listingHash": "5077e7df5f07337b054da0d46cbe1774b83bedddd8a697ec83a9f375df2907c3"
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7699439119776236095",
+          "url": "https://www.toutiao.com/article/7699439119776236095",
+          "listingHash": "2c72443aaf1b1bfb3005c98d83cc1aa531951db86bcc795f31a71509d89b6202"
         }
       ],
       "duplicateCandidates": []
     },
     {
-      "id": "5379b3847ad83573871a",
+      "id": "38f691724be58ce3bebf",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
-      "title": "OpenClaw 的 “安全卫士”：Jeddak AgentArmor 运行时防护全解析",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7628812879973580838",
+      "contentType": "blog",
+      "title": "OpenViking 网关：让任意客户端用上 Agentic 记忆",
+      "canonicalUrl": "https://www.toutiao.com/article/7699933978874184242",
       "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-04-15T02:50:29.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
+      "description": "一个项目聊到第三天，你希望 AI 接着上次的结论往下做，而不是重新问一遍背景。要做到这一点，它需要在回答时找到之前的信息，也需要把新的进展保存下来。但接入记忆并不总是方便。有的客户端能装插件，有的只能聊天；有的脚本可以调用模型，却没有检索、读取和保存记忆的逻辑。",
+      "publishedAt": "2026-10-23T18:36:50.000Z",
+      "discoveredAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-04T09:59:40.990Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -140,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
+        "classifiedAt": "2026-11-04T09:59:41.221Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -153,26 +153,26 @@
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7628812879973580838",
-          "url": "https://developer.volcengine.com/articles/7628812879973580838",
-          "listingHash": "e2d6106ffb1efa04e49311d512fdcdd1fe47f66d761c3ebd580f7dbb89188133"
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7699933978874184242",
+          "url": "https://www.toutiao.com/article/7699933978874184242",
+          "listingHash": "081576125e4dd5132f92b622c849a7a6d8442fef196b853add6da0159935959e"
         }
       ],
       "duplicateCandidates": []
     },
     {
-      "id": "55bbbc256a8364e8aced",
+      "id": "47d405ac1aba87626817",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
-      "title": "OpenClaw的启示：身份权限管理是AI Agent时代的阿喀琉斯之踵",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7633264906384441386",
+      "contentType": "blog",
+      "title": "连接企业知识、业务系统，让 AI 真正能在企业里工作",
+      "canonicalUrl": "https://www.toutiao.com/article/7696857202494079498",
       "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-04-27T02:48:43.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
+      "description": "你打开 Agent，输入:“帮我整理这次版本更新:上线了哪些能力、解决了哪些客户问题、还有哪些使用限制。”",
+      "publishedAt": "2026-10-15T11:37:12.000Z",
+      "discoveredAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-04T09:59:40.990Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -180,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
+        "classifiedAt": "2026-11-04T09:59:41.221Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -193,26 +193,26 @@
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7633264906384441386",
-          "url": "https://developer.volcengine.com/articles/7633264906384441386",
-          "listingHash": "5bdd700f107a89859d1f9c6d5162bf8d6c708c72b0d0f1f14215ab481e2654e2"
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7696857202494079498",
+          "url": "https://www.toutiao.com/article/7696857202494079498",
+          "listingHash": "d135577b566c25e4055eb07d59b5373ef6f8b8f52b7b970b737c28dc43adf826"
         }
       ],
       "duplicateCandidates": []
     },
     {
-      "id": "55d9e73b5c7a6ea747fe",
+      "id": "7c6ba5f124dcaa6d63da",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
-      "title": "一文读懂：智能体身份权限治理演进实录",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7622598668874809371",
+      "contentType": "blog",
+      "title": "迎战双十一，如何让智能客服 Agent 经得起真实业务考验？",
+      "canonicalUrl": "https://www.toutiao.com/article/7702036768828162575",
       "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-03-30T02:52:21.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
+      "description": "导语面对双十一，智能客服 Agent 既要答得准确，也要服务可靠。如何打通业务数据、规范工具调用，让 Agent 经得起真实业务考验？影腾智联的售后智能客服实践提供了一个参考。",
+      "publishedAt": "2026-10-29T10:36:27.000Z",
+      "discoveredAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-04T09:59:40.990Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -220,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
+        "classifiedAt": "2026-11-04T09:59:41.221Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -233,26 +233,26 @@
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7622598668874809371",
-          "url": "https://developer.volcengine.com/articles/7622598668874809371",
-          "listingHash": "f6385784ccdff8f4eabfc739852ad872566e81d2d2afbab4e848070b8a615b33"
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7702036768828162575",
+          "url": "https://www.toutiao.com/article/7702036768828162575",
+          "listingHash": "9b258ccdbbb42984c99726fecda0f639e44ecc8301b84461ceb747a2184d5bf1"
         }
       ],
       "duplicateCandidates": []
     },
     {
-      "id": "666b1391925ecd6ad6db",
+      "id": "8e5e06b5a0712809d8f4",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
-      "title": "两大成果入选 | 火山引擎AI安全研究亮相Black Hat Asia 2026",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7636966249104801811",
+      "contentType": "blog",
+      "title": "豆包工作进入企业，安全如何跟上每一步？",
+      "canonicalUrl": "https://www.toutiao.com/article/7701309979239727626",
       "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-05-07T02:45:28.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
+      "description": "如今很多企业员工已经在借助豆包工作完成工作任务，企业则需要想清楚:企业敏感数据是否会被个人豆包账号获取?",
+      "publishedAt": "2026-10-27T11:36:21.000Z",
+      "discoveredAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-04T09:59:40.990Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -260,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
+        "classifiedAt": "2026-11-04T09:59:41.221Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -273,26 +273,26 @@
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7636966249104801811",
-          "url": "https://developer.volcengine.com/articles/7636966249104801811",
-          "listingHash": "3249923c706984cfa6e5ef6358efafc09962bcad18907b455367f8009decefed"
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7701309979239727626",
+          "url": "https://www.toutiao.com/article/7701309979239727626",
+          "listingHash": "04ea12da2c9a30cbc652c051b03c79f6b2290aea881e251a6f6c1e4668acdd49"
         }
       ],
       "duplicateCandidates": []
     },
     {
-      "id": "690fe8168baf29b4f173",
+      "id": "a7210a5117e65b35dec5",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
-      "title": "一文了解｜火山引擎 OpenClaw 安全最佳实践",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7618251567426666515",
+      "contentType": "blog",
+      "title": "让改进有迹可循：Storage Agent Family Eval 工程实践",
+      "canonicalUrl": "https://www.toutiao.com/article/7703892274039669290",
       "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-03-18T02:52:31.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
+      "description": "我们在上一篇文章《Storage Agent Family: Agent 时代，重构云存储的“人机交互”》中，介绍了云存储智能助手家族 Storage Agent Family ——一组部署在云端的智能助手，可以帮助用户查询云存储资源配置、估算扩容成本、排查访问故障等。",
+      "publishedAt": "2026-11-03T10:36:42.000Z",
+      "discoveredAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-04T09:59:40.990Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -300,7 +300,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
+        "classifiedAt": "2026-11-04T09:59:41.221Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -313,26 +313,26 @@
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7618251567426666515",
-          "url": "https://developer.volcengine.com/articles/7618251567426666515",
-          "listingHash": "10f8cfab28a6434ef98445de10b51437dacbe9b608c1a1a51359ad8119991298"
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7703892274039669290",
+          "url": "https://www.toutiao.com/article/7703892274039669290",
+          "listingHash": "b45cfe62a32d19334f2dc6b40462039dc7e9dd35ec25e4dcaab4d12ae042e44d"
         }
       ],
       "duplicateCandidates": []
     },
     {
-      "id": "6d05dabc6cf592f33ddd",
+      "id": "ce71e1ffebe7d55cbf22",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
-      "title": "飞连智能体：用 Agent 实现 Agent 办公安全",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7655014258308841518",
+      "contentType": "blog",
+      "title": "一份旅行手册，豆包做完，IGA Pages 一句话就分享出去",
+      "canonicalUrl": "https://www.toutiao.com/article/7701418154530849306",
       "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-06-24T17:24:59.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
+      "description": "你得把 HTML 连同图片文件夹一起发过去，朋友们下载、解压、双击打开 —— 手机上还可能错位。在豆包工作里打开一个新的工作任务说:几分钟后，一份移动端手册就出来了:慕田峪长城秋色封面、五天时间轴、路线示意图、预算表、五条贴士。",
+      "publishedAt": "2026-10-27T18:36:22.000Z",
+      "discoveredAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-04T09:59:40.990Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -340,7 +340,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
+        "classifiedAt": "2026-11-04T09:59:41.221Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -353,26 +353,26 @@
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7655014258308841518",
-          "url": "https://developer.volcengine.com/articles/7655014258308841518",
-          "listingHash": "3f5a2d6bfd07550692ae646e10aee644030e80fe44e322ef251e2679d8116c8e"
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7701418154530849306",
+          "url": "https://www.toutiao.com/article/7701418154530849306",
+          "listingHash": "a0b2c2985b11ae9eddec82766d9d5d6aa073ce2d2ffdfbf850439e27eb452e4f"
         }
       ],
       "duplicateCandidates": []
     },
     {
-      "id": "74d20d62a573bc81bceb",
+      "id": "df466bac9edf71fe52c2",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
-      "title": "让老手机刷抖音也流畅：我们做对了这三件事",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7628812879122137098",
+      "contentType": "blog",
+      "title": "基于火山引擎 Managed Agents 搭建你的第一个主动式个人 Agent",
+      "canonicalUrl": "https://www.toutiao.com/article/7696857508157899307",
       "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-04-15T02:50:29.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
+      "description": "2026 年 9 月，“个人 AI 智能体”产品正式进入大众视野——一个能持续推进目标、关掉 App 后仍在后台干活、做敏感操作前会先征求你同意的智能助手。",
+      "publishedAt": "2026-10-15T11:38:11.000Z",
+      "discoveredAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-04T09:59:40.990Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -380,7 +380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
+        "classifiedAt": "2026-11-04T09:59:41.221Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -393,26 +393,26 @@
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7628812879122137098",
-          "url": "https://developer.volcengine.com/articles/7628812879122137098",
-          "listingHash": "341549b758b6384ae9ab260da4c4b221e567c55b4cb348b30dde011d29662d29"
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7696857508157899307",
+          "url": "https://www.toutiao.com/article/7696857508157899307",
+          "listingHash": "063933b7168a950e12af3e5c422b584ec0a009360c5f93e95d40680b54eb7808"
         }
       ],
       "duplicateCandidates": []
     },
     {
-      "id": "96edb116b839e2015077",
+      "id": "e1387a8bc8aa7d4c5337",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
-      "title": "告别OpenClaw运维盲区：火山引擎日志服务TLS一键开启全景观测",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7633265453780516905",
+      "contentType": "blog",
+      "title": "720P 直升 8K，解密 2026 抖音美好奇妙夜巨幕超分黑科技",
+      "canonicalUrl": "https://www.toutiao.com/article/7698774232104305188",
       "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-04-27T02:48:44.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
+      "description": "2026 年 10 月 11 日晚 19:30，《2026 美好奇妙夜》如约登场。异形主屏融入 “时光之眼” 概念，超 3000 盏数控灯与全场数控荧光棒交相辉映，AIGC 实时渲染将虚拟与现实叠合于同一帧画面 —— 这场被外界称为 “中国室内直播晚会视觉技术新纪录” 的科技盛宴，在国家速滑馆 “冰丝带”拉开了帷幕。",
+      "publishedAt": "2026-10-20T15:36:11.000Z",
+      "discoveredAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-04T09:59:40.990Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -420,7 +420,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
+        "classifiedAt": "2026-11-04T09:59:41.221Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -433,26 +433,26 @@
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7633265453780516905",
-          "url": "https://developer.volcengine.com/articles/7633265453780516905",
-          "listingHash": "225df74081215582006945bfa686cd0bcb2f902022d841e268ab718587194264"
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7698774232104305188",
+          "url": "https://www.toutiao.com/article/7698774232104305188",
+          "listingHash": "e1b3c11033c1a9c72f97a9584a09ba96ed61210be445dd4cc827981aad0a4a6a"
         }
       ],
       "duplicateCandidates": []
     },
     {
-      "id": "ae842edfa6676c0a4142",
+      "id": "fa85a37562576e1c6cea",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
-      "title": "三篇论文入选 SIGMOD 2026：从真实业务深处长出的字节跳动数据库创新",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7655015049954361350",
+      "contentType": "blog",
+      "title": "个性化视频技术：历时七年的算法演进",
+      "canonicalUrl": "https://www.toutiao.com/article/7703536821820539428",
       "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-06-24T17:28:03.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
+      "description": "VLP v3第一次使用超大规模稀疏 DNN 并支持天级更新，稀疏特征经 Embedding 拼接后送入多层前馈网络，用 LHUC 方式依据作者/类目表征生成取值 的逐层缩放向量做个性化调制，以 BIAS 让关键特征直连输出层，同时从「单一价值分」升级为多任务，一个模型同时预测未来 1d/3h 的 vv、完播、播放时长等目标，并用 GradNorm 自适应平衡各任务损失:VLPv8深度实践了 LRM scaling-up 路线，进一步推动了个性化推荐、计算广告与音视频领域的技术交叉，v7 的人工特征交叉结构复杂且天花板低，self-attention 加深后 token 表征趋同，v8 在广泛尝试对比了不同推荐技术进展的效果后，选择字节推荐团队的 TokenMixer 结构堆叠替代特征交叉主干，用 PerTokens AFFN为FFN 引入 token 级自适应门控，剪枝冗余结构后将 dense 参数扩至 1B，可验证视频价值模型同样服从scaling law，其核心结构与规模规律可概括为:",
+      "publishedAt": "2026-11-02T11:37:26.000Z",
+      "discoveredAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-04T09:59:40.990Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -460,7 +460,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
+        "classifiedAt": "2026-11-04T09:59:41.221Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -473,330 +473,10 @@
       "publicationStatus": "published",
       "locations": [
         {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7655015049954361350",
-          "url": "https://developer.volcengine.com/articles/7655015049954361350",
-          "listingHash": "200b5e6759f4847ae42b1f8496d7fbc10e75683ffd8002427241e3fc619a8dd4"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "c506753f76067bad90c2",
-      "publisherId": "bytedance-official",
-      "companyId": "bytedance",
-      "title": "当桌面 Agent 成为常态，飞连 ADR 给出全链路安全答案",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7641784698099728411",
-      "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-05-20T02:50:19.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
-      },
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7641784698099728411",
-          "url": "https://developer.volcengine.com/articles/7641784698099728411",
-          "listingHash": "71dc0dfb61bfa45c4bb5f9d20bf67e2708b01ac1969066c600af9f0c668ccaf0"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "c5fc6390f1ad877a1549",
-      "publisherId": "bytedance-official",
-      "companyId": "bytedance",
-      "title": "抖音动态体验优化实践与思考",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7641783181936132122",
-      "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-05-20T02:50:19.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
-      },
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7641783181936132122",
-          "url": "https://developer.volcengine.com/articles/7641783181936132122",
-          "listingHash": "71cafad3110fd2fc730ceb4cb9a557ee86c4494e46fa43fa181676a2b6d77612"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "d9bb5b5eb62603c5a76a",
-      "publisherId": "bytedance-official",
-      "companyId": "bytedance",
-      "title": "字节跳动首创DisCoGC架构，重塑EB级分布式存储GC范式",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7633264904608858118",
-      "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-04-27T02:48:44.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
-      },
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7633264904608858118",
-          "url": "https://developer.volcengine.com/articles/7633264904608858118",
-          "listingHash": "bb8cd40a4000ad873e228f61db7ed7bc7a86a327c491fed7ba4a019f69ed119b"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "df3c8151c17d70936f43",
-      "publisherId": "bytedance-official",
-      "companyId": "bytedance",
-      "title": "局中局！给 Agent 装上 OpenViking，它们竟然学会了“记仇”和“伪装”？",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7633265509462605867",
-      "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-04-27T02:48:46.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
-      },
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7633265509462605867",
-          "url": "https://developer.volcengine.com/articles/7633265509462605867",
-          "listingHash": "e7bf16f906ae9e51f0e54359690635d2693091f352d53068419d97a0ace66f46"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "e55b573887c27d633418",
-      "publisherId": "bytedance-official",
-      "companyId": "bytedance",
-      "title": "PrivLLM 协变混淆：隐私保护的 LLM 推理高效实现",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7622983420469084206",
-      "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-03-31T02:24:00.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
-      },
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7622983420469084206",
-          "url": "https://developer.volcengine.com/articles/7622983420469084206",
-          "listingHash": "3c999b352daac91a53479d77ad5dfead3e6aa28533efb8f15d24c15d3674bf99"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "ed5c76f9da116c2b9047",
-      "publisherId": "bytedance-official",
-      "companyId": "bytedance",
-      "title": "OpenSearchCon China 2026：字节跳动在 OpenSearch 上的技术实践与前沿探索",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7622848319976407090",
-      "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-03-30T02:52:20.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
-      },
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7622848319976407090",
-          "url": "https://developer.volcengine.com/articles/7622848319976407090",
-          "listingHash": "8726a419d78af29c6a9d5fa50ad1b9c6638660c49f4baca7dc685019d99ef669"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "f117522a657841c30ac7",
-      "publisherId": "bytedance-official",
-      "companyId": "bytedance",
-      "title": "CVPR 2026 | 火山引擎多媒体实验室提出TempR1，显著增强多模态大模型视频时序理解能力",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7628812877469597722",
-      "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-04-15T02:50:29.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
-      },
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7628812877469597722",
-          "url": "https://developer.volcengine.com/articles/7628812877469597722",
-          "listingHash": "47f73b3cc9a8b64f8ae14c6066103f1a9a59bbf80d293e49593a880cb8c2fcf9"
-        }
-      ],
-      "duplicateCandidates": []
-    },
-    {
-      "id": "f1bb4c9f2949973f4e35",
-      "publisherId": "bytedance-official",
-      "companyId": "bytedance",
-      "title": "OpenViking x OpenClaw：开箱即用 解决 Agent 的长期记忆困局",
-      "canonicalUrl": "https://developer.volcengine.com/articles/7617663785737977907",
-      "author": "字节跳动技术团队",
-      "description": "字节跳动的技术实践分享",
-      "language": "zh-CN",
-      "publishedAt": "2026-03-16T02:49:29.000Z",
-      "discoveredAt": "2026-11-02T03:56:07.442Z",
-      "updatedAt": "2026-11-02T03:56:07.442Z",
-      "classification": {
-        "status": "accepted",
-        "topics": [],
-        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
-        "evidence": [],
-        "method": "source",
-        "version": "source-index-1",
-        "classifiedAt": "2026-11-04T07:30:33.377Z"
-      },
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      },
-      "publicationStatus": "published",
-      "locations": [
-        {
-          "sourceId": "bytedance-tech-volcengine",
-          "externalId": "7617663785737977907",
-          "url": "https://developer.volcengine.com/articles/7617663785737977907",
-          "listingHash": "95ff32eeb9e9e76c3361f6597777903f55977ae31839435e7d10ce9c71bcd79d"
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7703536821820539428",
+          "url": "https://www.toutiao.com/article/7703536821820539428",
+          "listingHash": "befb79d1e7d34049190b978efb1dc42a912f91a9984f772d7a76d7e8e0295535"
         }
       ],
       "duplicateCandidates": []

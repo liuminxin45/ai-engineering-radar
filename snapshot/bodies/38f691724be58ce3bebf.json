@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "38f691724be58ce3bebf",
+    "status": "unavailable",
+    "html": "",
+    "headings": [],
+    "textLength": 0,
+    "readingMinutes": 0,
+    "sourceId": "bytedance-tech-toutiao",
+    "sourceUrl": "https://www.toutiao.com/article/7699933978874184242",
+    "engineVersion": "radar-reader-2",
+    "checkedAt": "2026-11-04T10:01:26.621Z",
+    "nextRetryAt": "2026-11-11T10:01:26.621Z",
+    "error": "正文获取失败：camoufox 均未取得可用正文。",
+    "warnings": []
+  }
+}

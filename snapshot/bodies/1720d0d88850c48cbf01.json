@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "1720d0d88850c48cbf01",
+    "status": "ready",
+    "html": "<div><article><p>Skill 写好、跑通之后，如果回答不好下面三个问题，也很难大规模应用到生产环境当中：</p><ul> <li><p><strong>它到底好不好用？</strong>Agent 表面上完成了任务，但得出的结论可能会违反业务规则；出现这类问题，系统不会报错，在抽查时也很难发现。</p></li><li><p><strong>问题出在哪，该怎么改？ </strong>知道分数低，想查问题出在哪儿？需要逐条翻执行轨迹，才能找到是哪条指令出了错。</p></li><li><p><strong>改完是否变好？</strong>修好这一处的同时，可能会改坏另一处；模型升级后，Skill 还有没有用，也缺少参考依据。</p></li></ul><p><strong>火山引擎 AgentKit 技能评测，</strong>不止于 Skill 打分，更能串起判分、洞察调优、对比验证的完整闭环。</p><img src=\"https://p3-sign.toutiaoimg.com/tos-cn-i-axegupay5k/80cb0da9affe4bb482a680c8ea06610d~tplv-tt-origin-web:gif.jpeg?_iz=58558&amp;from=article.pc_detail&amp;lk3s=953192f4&amp;x-expires=1794391209&amp;x-signature=gLyI3FPCMsGNv6WGzd%2BNW8Lh7Qk%3D\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"><ul> <li><p><strong>判分：支持 Agent as a Judge。</strong>裁判 Agent 能查轨迹、读产物、跑脚本，逐项复核结论，不会被 “看起来没问题” 的结果骗过；六个预置维度开箱即用，也支持自定义评估器。</p></li><li><p><strong>洞察调优：从失分根因到一键调优。</strong>它能直接给出要改的文件、行号和改法，一键复制给 Agent 就可以完成修改。</p></li><li><p><strong>对比验证：用 A/B 对照确认效果。</strong>新旧版本、有无 Skill、不同 Skill，都能在同一数据集和评估器下比较质量与成本；改没改好、值不值得用，都用数据说话。</p></li></ul><p>下面以<strong>电商</strong></p></article></div>",
+    "headings": [],
+    "textLength": 494,
+    "readingMinutes": 2,
+    "sourceId": "bytedance-tech-toutiao",
+    "sourceUrl": "https://www.toutiao.com/article/7702392524802998813/",
+    "ruleId": "toutiao",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "431bc5f13eae28c03639c719ce4224058f930998f2fcac5e98b914d854b7c6ec",
+    "fetchedAt": "2026-11-04T10:00:23.457Z",
+    "checkedAt": "2026-11-04T10:00:23.457Z",
+    "nextRetryAt": "2026-12-04T10:00:23.458Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
+  }
+}

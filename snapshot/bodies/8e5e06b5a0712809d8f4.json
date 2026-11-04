@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "8e5e06b5a0712809d8f4",
+    "status": "ready",
+    "html": "<div><article><p>“你好豆包，把项目资料整理一下，给我一份客户复盘。”</p><p>如今很多企业员工已经在借助豆包工作完成工作任务，企业则需要想清楚：<strong>企业敏感数据是否会被个人豆包账号获取？任务过程中 AI 是否会有高风险操作？生成的文档离开豆包工作之后，还受不受保护？</strong></p><p>豆包工作自身提供了丰富原生安全保障。飞连在此基础上，围绕企业办公环境中的 AI 使用和数据流转提供补充防护，帮助企业把安全要求落到日常工作中。</p><img src=\"https://p3-sign.toutiaoimg.com/tos-cn-i-axegupay5k/74d66693f55c4beeabf98b5fdf9509ea~tplv-tt-origin-web:gif.jpeg?_iz=58558&amp;from=article.pc_detail&amp;lk3s=953192f4&amp;x-expires=1794391246&amp;x-signature=FUvEMEqu97rHRLtttw%2Bpfrr%2B7KQ%3D\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"><p><strong>一、同一份资料，换个账号，风险就不同</strong></p><p>销售同事打算用豆包工作整理客户需求，资料选好了正要上传，却没注意到当前登录的不是公司账号，而是自己的个人账号。文件里包含客户联系人、需求明细和报价信息，一旦上传，这些敏感数据就进了个人账号的空间。</p><p>只看电脑上是否安装豆包工作，是发现不了这个隐患的。<strong>飞连可以审计员工是否在用非企业账号登录豆包工作、是否在把企业敏感资料上传到个人账号空间，并按企业策略对这类行为做出限制。</strong></p><p>企业不一定要实现“个人账号一律不能登录”，而是确保<strong>企业的敏感资料不能因为员工切了个账号，就跑出管控范围。</strong>让员工在企业认可的账号体系内用 AI 处理工作，才是安全推广 AI 的前提。</p><img src=\"https://p3-sign.toutiaoimg.com/tos-cn-i-tjoges91tu/fd28620a6f9b1672701f04866846d45e~tplv-tt-origin-web:gif.jpeg?_iz=58558&amp;from=article.pc_detail&amp;lk3s=953192f4&amp;x-expires=1794391246&amp;x-signature=ELYlAqawr25iO4YABt7Bxt%2F%2FW4A%3D\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"><p><strong>二、同一项任务，不能只看最终成果</strong></p><p>员工最初只要求豆包工作整理项目进展，随后又追加“把报价条件也加上”。随着多轮交互，任务范围可能不断变化，Agent 访问和处理的资料也随之改变。如果只看最终生成的文档，企业很难还原任务中途发生了什么、敏感资料是如何被使用的，以及最终结果是否符合企业安全要求。</p><p><strong>飞连可以对豆包工作这类 Agent 的敏感信息处理任务做全链路审计——从任务发起、多轮交互，到执行过程和最终结果，全程记录。</strong>安全团队可以据此还原任务过程，追溯关键指令和操作，为风险核查、事件调查和合规管理提供依据。</p><p><strong>把任务全过程看清楚，企业才能在让 AI 提效的同时，降低其中的风险。</strong></p><img src=\"https://p3-sign.toutiaoimg.com/tos-cn-i-tjoges91tu/0b63f202be9bd5062bacb89e8d4c37fe~tplv-tt-origin-web:gif.jpeg?_iz=58558&amp;from=article.pc_detail&amp;lk3s=953192f4&amp;x-expires=1794391246&amp;x-signature=flhRO4fFXfo0PG2LkDvFyJgT9IM%3D\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"><p><strong>三、同一份成果，下载后仍要保护</strong></p><p>项目结束后，员工用豆包工作整理了复盘总结。客户要一份项目交付材料，他觉得这份现成的复盘就能用，导出到本地准备发过去。但复盘是内部视角写的，里面带着成本、问题分析等敏感信息——适合在企业内部流转，却不适合直接发给客户。</p><p><strong>飞连可以对豆包工作导出的成果文档做流转保护。</strong>文档一旦被识别为敏感，后续的分享、外发等行为就会被持续追踪，并按企业策略审计或限制。而且 AI 普及后，文档导出、分享、外发、拷贝等流转行为大量增加，靠人工盯不过来。以一家千人规模企业为例，每天产生的数据流转日志约一万条。靠安全团队人工逐条分析，全部过一遍至少需要两天；而<strong>飞连数据安全智能体可以实时分析全部日志，单条日志的风险识别只需几分钟。发现风险更快了，响应处置的时间也从原来的\"天\"为单位，缩短到以\"小时\"为单位。</strong></p><img src=\"https://p3-sign.toutiaoimg.com/tos-cn-i-tjoges91tu/13adaa5510135520093823405b6373d6~tplv-tt-origin-web:gif.jpeg?_iz=58558&amp;from=article.pc_detail&amp;lk3s=953192f4&amp;x-expires=1794391246&amp;x-signature=njBmDcvmdKV7rcV0WJgpQxfdhQc%3D\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"><p><strong>四、从“尝试用 AI”，走向“安全用 AI”</strong></p><p>众多企业已完成 AI 工具的部署，员工在日常办公中开始借助 AI 提升效率。但随着使用深入，安全层面的挑战也逐步显现：账号体系如何统一管理？敏感数据如何防护？任务过程如何审计？生成成果如何保护？<strong>对于安全团队而言，AI 的使用场景快速扩大，传统管控手段难以全面覆盖；对于员工而言，在日常工作中使用 AI 时，也往往难以判断哪些资料可以输入、哪些内容可以对外分享。</strong></p><p>AI 的应用场景仍在持续拓展，新的风险点也将不断涌现。飞连并非在传统安全体系之外另行叠加一套独立的 AI 安全方案，而是将 AI 安全能力与传统办公安全深度融合，构建统一的治理底座。企业在推进 AI 落地的过程中，可与已有的传统安全体系同步规划、融合建设，无需从零搭建，即可形成完整的 AI 时代办公安全治理体系。</p><p><strong>办公用AI，安全有飞连</strong></p></article></div>",
+    "headings": [],
+    "textLength": 1491,
+    "readingMinutes": 4,
+    "sourceId": "bytedance-tech-toutiao",
+    "sourceUrl": "https://www.toutiao.com/article/7701309979239727626/",
+    "ruleId": "toutiao",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "64e26ae2754f5959ad45c88dfd905e2db15d13dbb854a4220fdc2513da82f066",
+    "fetchedAt": "2026-11-04T10:01:01.656Z",
+    "checkedAt": "2026-11-04T10:01:01.656Z",
+    "nextRetryAt": "2026-12-04T10:01:01.656Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
+  }
+}
