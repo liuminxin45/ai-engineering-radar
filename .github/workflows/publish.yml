@@ -100,7 +100,11 @@ jobs:
           git add snapshot
           if ! git diff --cached --quiet; then
             git commit -m 'data: update reviewed engineering metadata'
-            git push origin HEAD:data
+            for attempt in 1 2 3; do
+              if git push origin HEAD:data; then break; fi
+              if [ "$attempt" -eq 3 ]; then exit 1; fi
+              sleep $((attempt * 5))
+            done
           fi
       - name: Publish source acceptance summary
         run: cat work/source-acceptance.md >> "$GITHUB_STEP_SUMMARY"
