@@ -3,6 +3,15 @@
   "reference": "https://github.com/Kenshin/simpread/blob/d6534a7d67ab606e0390ff7172360fac88af4422/src/website_list.json",
   "rules": [
     {
+      "id": "toutiao",
+      "version": "1",
+      "hosts": ["www.toutiao.com"],
+      "pathPattern": "^/article/[0-9]+/?$",
+      "title": [".article-content h1", "h1"],
+      "include": [".article-content"],
+      "exclude": [".article-meta", ".article-author", "button"]
+    },
+    {
       "id": "meituan",
       "version": "1",
       "hosts": ["tech.meituan.com"],

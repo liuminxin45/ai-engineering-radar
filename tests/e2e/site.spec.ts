@@ -294,7 +294,7 @@ test("domestic provenance stays public while the interface exposes only whole-pr
     .sources;
   for (const id of [
     "dewu-tencent",
-    "bytedance-tech-volcengine",
+    "bytedance-tech-toutiao",
     "ant-data-csdn",
     "baidu-cloud-csdn-candidate",
   ]) {
@@ -324,9 +324,9 @@ test("domestic provenance stays public while the interface exposes only whole-pr
     sources.filter((s: { contentType?: string }) => s.contentType !== "paper"),
   ).toHaveLength(10);
   expect(
-    sources.find((s: { id: string }) => s.id === "bytedance-tech-volcengine")
+    sources.find((s: { id: string }) => s.id === "bytedance-tech-toutiao")
       .entryUrl,
-  ).toBe("https://developer.volcengine.com/user/2772312065061673");
+  ).toBe("https://www.toutiao.com/c/user/token/MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE/");
   expect(
     sources.every(
       (s: {

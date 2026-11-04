@@ -4,6 +4,7 @@ import { validateSourceReplacements } from "./replacements.js";
 import { validatePaperSource } from "../crawler/platforms/papers.js";
 import { validateMiMoSource } from "../crawler/platforms/xiaomi-mimo.js";
 import { validateQwenSource } from "../crawler/platforms/qwen.js";
+import { toutiaoAccount } from "../crawler/platforms/toutiao.js";
 import {
   sourceSchema,
   type Source,
@@ -13,6 +14,10 @@ import {
 
 export function validateAccountScope(source: Source) {
   if (!source.crawl.enabled) return;
+  if (source.platform === "toutiao-account") {
+    toutiaoAccount(source);
+    return;
+  }
   if (source.contentType === "paper" && !source.platform.startsWith("paper-"))
     throw new Error(
       `Paper sources require an affiliation-verifying adapter: ${source.id}`,
@@ -219,6 +224,7 @@ export async function loadRegistry() {
     if (
       [
         "csdn-feed",
+        "toutiao-account",
         "cnblogs-account",
         "tencent-news",
         "tencent-user",

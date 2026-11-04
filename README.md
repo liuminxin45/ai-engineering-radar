@@ -76,7 +76,7 @@ flowchart TD
 | 腾讯              | [腾讯技术工程 · 腾讯新闻](https://news.qq.com/omn/author/8QMZ23lf74UYuTs%3D)              |
 | 得物              | [得物技术 · 腾讯云](https://developer.cloud.tencent.com/user/9927536/articles)            |
 | 阿里巴巴 / 阿里云 | [阿里云云原生 · 云原生应用开发与管理](https://developer.aliyun.com/group/apphub/article/) |
-| 字节跳动          | [字节跳动技术团队 · 火山引擎](https://developer.volcengine.com/user/2772312065061673)     |
+| 字节跳动          | [字节跳动技术团队 · 今日头条](https://www.toutiao.com/c/user/token/MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE/) |
 | 美团              | [美团技术团队](https://tech.meituan.com/)                                                 |
 | vivo              | [vivo 互联网技术 · CSDN](https://blog.csdn.net/vivo_tech)                                 |
 | B站               | [哔哩哔哩技术 · CSDN](https://blog.csdn.net/bilibili_TC)                                  |

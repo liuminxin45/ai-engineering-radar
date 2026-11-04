@@ -22,9 +22,18 @@ registry.publishers = registry.publishers.filter(
 );
 registry.sources = registry.sources.filter(
   (s) =>
-    !["qwen-research", "huawei-csdn", "kuaishou-csdn", "netease-csdn"].includes(
-      s.id,
-    ),
+    ![
+      "qwen-research",
+      "huawei-csdn",
+      "kuaishou-csdn",
+      "netease-csdn",
+      "bytedance-tech-volcengine",
+    ].includes(s.id),
+);
+registry.sources.push(
+  (await loadRegistry()).sources.find(
+    (s) => s.id === "bytedance-tech-toutiao",
+  )!,
 );
 function fixture() {
   const articles: Article[] = [];

@@ -270,21 +270,21 @@
       }
     },
     {
-      "id": "bytedance-tech-volcengine",
+      "id": "bytedance-tech-toutiao",
       "publisherId": "bytedance-official",
-      "name": "字节跳动技术团队 · 火山引擎",
-      "entryUrl": "https://developer.volcengine.com/user/2772312065061673",
-      "url": "https://developer.volcengine.com/user/2772312065061673",
+      "name": "字节跳动技术团队 · 今日头条",
+      "entryUrl": "https://www.toutiao.com/c/user/token/MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE/",
+      "url": "https://www.toutiao.com/c/user/token/MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE/",
       "priority": "A",
       "adapter": "html",
-      "platform": "volcengine-account",
+      "platform": "toutiao-account",
       "verification": {
         "status": "verified",
         "evidenceUrls": [
-          "https://developer.volcengine.com/user/2772312065061673"
+          "https://www.toutiao.com/c/user/token/MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE/"
         ],
-        "note": "用户指定字节跳动技术团队账号，稳定用户 ID 2772312065061673。公开账号 SSR 与逐篇 content.user_id、user.user_id 均匹配，仅采集该账号发布的文章元数据。普通公开请求实采 20 篇，最新北京时间 2026-06-25；按用户指定继续追踪，不代表近月活跃。原字节跳动开源账号已移除。",
-        "reviewedAt": "2026-11-02T03:55:15.410Z"
+        "note": "账号主页认证为字节跳动技术团队官方账号；使用主页 token 约束账号，逐篇核验来源。",
+        "reviewedAt": "2026-11-04T00:00:00.000Z"
       },
       "crawl": {
         "enabled": true,
@@ -292,9 +292,9 @@
         "maxItems": 50,
         "backfillLimit": 100
       },
-      "authorAllowlist": ["2772312065061673"],
-      "linkHosts": ["developer.volcengine.com"],
-      "linkPattern": "^/articles/[0-9]+/?$"
+      "authorAllowlist": ["MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE"],
+      "linkHosts": ["www.toutiao.com"],
+      "linkPattern": "^/article/[0-9]+/?$"
     },
     {
       "id": "ant-data-csdn",

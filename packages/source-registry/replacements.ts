@@ -20,7 +20,7 @@ export const sourceReplacements = [
   {
     sourceId: "bytedance-csdn",
     companyId: "bytedance",
-    replacementIds: ["bytedance-tech-volcengine"],
+    replacementIds: ["bytedance-tech-toutiao"],
   },
   {
     sourceId: "tencent-csdn",
@@ -52,7 +52,7 @@ export const sourceReplacements = [
   {
     sourceId: "bytedance",
     companyId: "bytedance",
-    replacementIds: ["bytedance-tech-volcengine"],
+    replacementIds: ["bytedance-tech-toutiao"],
     referenceOnly: true,
   },
   {
@@ -104,7 +104,12 @@ export const sourceReplacements = [
   {
     sourceId: "bytedance-volcengine",
     companyId: "bytedance",
-    replacementIds: ["bytedance-tech-volcengine"],
+    replacementIds: ["bytedance-tech-toutiao"],
+  },
+  {
+    sourceId: "bytedance-tech-volcengine",
+    companyId: "bytedance",
+    replacementIds: ["bytedance-tech-toutiao"],
   },
 ] as const;
 

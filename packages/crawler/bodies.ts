@@ -11,6 +11,28 @@ import { createBodyLoader } from "./body-fetchers.js";
 import { compareArticles } from "../shared/types.js";
 import { upgradeBodyPolicy } from "./body-policy.js";
 import type { AcquisitionTrace } from "../shared/acquisition.js";
+import { load } from "cheerio";
+
+function expiringToutiaoImages(body: ArticleBody, now: number) {
+  if (body.ruleId !== "toutiao" || !body.html) return false;
+  const $ = load(body.html);
+  return $("img[src]")
+    .toArray()
+    .some((img) => {
+      try {
+        const url = new URL($(img).attr("src")!);
+        if (!url.hostname.endsWith(".toutiaoimg.com")) return false;
+        const expiry = Number(url.searchParams.get("x-expires"));
+        return (
+          Number.isFinite(expiry) &&
+          expiry > 0 &&
+          expiry * 1000 <= now + 2 * 86400000
+        );
+      } catch {
+        return false;
+      }
+    });
+}
 
 export type BodyLoader = (
   article: Article,
@@ -70,6 +92,7 @@ export async function collectBodies(
         return false;
       const body = bodies.get(article.id);
       if (options.force) return true;
+      if (body && expiringToutiaoImages(body, Date.now())) return true;
       if (body?.ruleId === "readability" && articleParser.match(body.sourceUrl))
         return true;
       if (options.incremental) {

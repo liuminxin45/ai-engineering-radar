@@ -73,19 +73,25 @@ class BrowserDocumentFetcher:
                 if not responses or responses[-1].status != 200:
                     raise
                 html = await asyncio.wait_for(responses[-1].text(), timeout=10)
-                if not document_ready(html):
-                    raise RuntimeError("No complete article response")
+                if not document_ready(html, target):
+                    # Dynamic pages may hydrate after their first 200 response.
+                    html = None
             if html is None:
                 try:
-                    await page.wait_for_selector("#content_views", state="attached", timeout=10_000)
+                    selector = ".article-content" if "www.toutiao.com/" in target else "#content_views"
+                    await page.wait_for_selector(selector, state="attached", timeout=15_000)
                 except Exception:
                     pass
                 await page.wait_for_timeout(1000)
                 html = await page.content()
             final_url = validate_target(page.url, self.accounts, navigation=True)
             if (final_url != target or not responses or responses[-1].status != 200
-                    or not document_ready(html) or len(html.encode("utf-8")) > MAX_DOCUMENT_BYTES):
+                    or not document_ready(html, target) or len(html.encode("utf-8")) > MAX_DOCUMENT_BYTES):
                 raise RuntimeError("Browser returned no usable article document")
+            if target.startswith("https://www.toutiao.com/") and not any(
+                    account.startswith("MS4wLjAB") and f"/c/user/token/{account}/" in html
+                    for account in self.accounts):
+                raise RuntimeError("Article does not identify a reviewed account")
             return {"url": target, "content": html, "format": "html"}
         finally:
             await context.close()

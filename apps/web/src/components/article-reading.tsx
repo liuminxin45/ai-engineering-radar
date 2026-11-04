@@ -120,7 +120,7 @@ export function ArticleReading({
       }
       if (
         scrollY > 0 &&
-        scrollY + innerHeight >= document.documentElement.scrollHeight - 2
+        scrollY + innerHeight >= document.documentElement.scrollHeight - 64
       )
         current = elements.at(-1)!.id;
       setActive(current);

@@ -22,6 +22,7 @@ import { collectQwen } from "./platforms/qwen.js";
 import { parseVolcengineAccount } from "./platforms/volcengine.js";
 import { parseAntLingBlog } from "./platforms/ant-ling.js";
 import { collectMiMo } from "./platforms/xiaomi-mimo.js";
+import { toutiaoAccount, parseToutiaoFeed } from "./platforms/toutiao.js";
 import { type PaperContext } from "./platforms/papers.js";
 import { createRssHubClient, rssHubCandidates } from "./rsshub.js";
 import {
@@ -286,6 +287,42 @@ export async function collect(
 ): Promise<{ items: Candidate[]; response: HttpResult; warnings: string[] }> {
   if (source.contentType === "paper" || source.platform.startsWith("paper-"))
     throw new CrawlError("Paper collection has been removed");
+  if (source.platform === "toutiao-account") {
+    const token = toutiaoAccount(source);
+    const base = process.env.RSSHUB_URL;
+    if (!base) throw new CrawlError("Toutiao requires RSSHUB_URL");
+    const endpoint = new URL(base.endsWith("/") ? base : `${base}/`);
+    if (
+      !["http:", "https:"].includes(endpoint.protocol) ||
+      endpoint.username ||
+      endpoint.password ||
+      endpoint.search ||
+      endpoint.hash ||
+      (endpoint.protocol === "http:" &&
+        !["localhost", "127.0.0.1", "[::1]"].includes(endpoint.hostname))
+    )
+      throw new CrawlError("Invalid RSSHUB_URL");
+    const response = await fetch(
+      new URL(`toutiao/user/token/${token}`, endpoint),
+      {
+        signal: AbortSignal.timeout(180_000),
+        redirect: "error",
+        headers: { Accept: "application/json" },
+      },
+    );
+    if (!response.ok)
+      throw new CrawlError(`RSSHub HTTP ${response.status}`, response.status);
+    const raw = await response.text();
+    if (raw.length > 4 * 1024 * 1024)
+      throw new CrawlError("RSSHub response too large");
+    const items = parseToutiaoFeed(JSON.parse(raw), source).slice(0, limit);
+    for (const item of items) prepareCandidate(item, source, options);
+    return {
+      items,
+      response: { status: response.status, text: "", url: source.url },
+      warnings: [],
+    };
+  }
   const pendingMetadata = options.knownArticles?.some((article) =>
     article.locations.some(
       (location) => location.sourceId === source.id && location.metadataPending,

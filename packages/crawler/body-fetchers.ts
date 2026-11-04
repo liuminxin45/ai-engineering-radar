@@ -10,6 +10,12 @@ import { fetchReviewed } from "./http.js";
 import { normalizeUrl } from "./deduplicate.js";
 import { createCsdnBodyLoader } from "./platforms/csdn-body.js";
 import {
+  verifyToutiaoDocument,
+  reviewedToutiaoUrl,
+} from "./platforms/toutiao.js";
+import { createBrowserDocumentClient } from "./acquisition/browser.js";
+import { acquireWithFallback } from "./acquisition/chain.js";
+import {
   QWEN_CURRENT,
   QWEN_LEGACY,
   validateQwenSource,
@@ -28,6 +34,7 @@ export function createBodyLoader(): (
   url: string,
 ) => Promise<ParsedArticle & { acquisition?: AcquisitionTrace }> {
   const csdn = createCsdnBodyLoader();
+  const browser = createBrowserDocumentClient();
   const feeds = new Map<string, Promise<Map<string, string>>>();
   const qwen = new Map<string, Promise<Map<string, string>>>();
   const archivedQwen = new Map<string, Promise<any[]>>();
@@ -68,6 +75,26 @@ export function createBodyLoader(): (
   }
   return async (article: Article, source: Source, url: string) => {
     if (source.platform === "csdn-feed") return csdn(article, source, url);
+    if (source.platform === "toutiao-account") {
+      const target = reviewedToutiaoUrl(source, url);
+      if (!browser)
+        throw new Error("Toutiao requires the browser acquisition service");
+      return acquireWithFallback(
+        [{ id: "camoufox", fetch: () => browser(source, target) }],
+        (document) => {
+          verifyToutiaoDocument(document.content, source);
+          const parsed = articleParser.parse(document);
+          if (
+            parsed.title.normalize("NFKC").trim() !==
+            article.title.normalize("NFKC").trim()
+          )
+            throw new Error(
+              "Toutiao title does not match the collected article",
+            );
+          return parsed;
+        },
+      );
+    }
     let input: ParseInput = { url, title: article.title, content: "" };
     if (source.platform === "qwen-research") {
       validateQwenSource(source);

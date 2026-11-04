@@ -3,6 +3,7 @@
 import { createServer } from "node:http";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
+import { createRequire } from "node:module";
 import { init, request, ofetch } from "rsshub";
 import { createIncrementalCsdn } from "./incremental.mjs";
 
@@ -23,6 +24,39 @@ const accounts = new Set(
     )
     .flatMap((s) => s.authorAllowlist ?? []),
 );
+const toutiaoAccounts = new Set(
+  registry.sources
+    .filter(
+      (s) =>
+        s.platform === "toutiao-account" &&
+        s.crawl.enabled &&
+        s.verification.status === "verified",
+    )
+    .flatMap((s) => s.authorAllowlist ?? []),
+);
+const requireRssHub = createRequire(import.meta.resolve("rsshub"));
+const { HeaderGenerator } = requireRssHub("header-generator");
+const getHeaders = HeaderGenerator.prototype.getHeaders;
+HeaderGenerator.prototype.getHeaders = function (...args) {
+  try {
+    return getHeaders.apply(this, args);
+  } catch (error) {
+    if (
+      !String(error?.message).includes(
+        "No headers based on this input can be generated",
+      )
+    )
+      throw error;
+    return {
+      "user-agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "sec-ch-ua": '"Chromium";v="139", "Not;A=Brand";v="99"',
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": '"Windows"',
+      accept: "*/*",
+    };
+  }
+};
 await init({
   CACHE_TYPE: "memory",
   CACHE_EXPIRE: "600",
@@ -54,7 +88,7 @@ function feed(path) {
       if (data.error || !Array.isArray(data.item))
         throw new Error("RSSHub upstream feed unavailable");
       // Do not send the duplicate native `items` array across the HTTP boundary.
-      return { title: data.title, item: data.item };
+      return { title: data.title, link: data.link, item: data.item };
     });
   queue = promise;
   const entry = { promise, expires: Date.now() + 600_000 };
@@ -86,6 +120,20 @@ const server = createServer(async (req, res) => {
       service:
         "https://github.com/liuminxin45/ai-engineering-radar/tree/main/services/rsshub",
     });
+  const toutiao = url.pathname.match(
+    /^\/toutiao\/user\/token\/([A-Za-z0-9_-]+)$/,
+  );
+  if (toutiao) {
+    if (!toutiaoAccounts.has(toutiao[1]))
+      return reply(404, { error: "Route is not in the reviewed registry" });
+    try {
+      return reply(200, await feed(url.pathname));
+    } catch {
+      return reply(502, {
+        error: "RSSHub upstream feed unavailable; inspect service logs",
+      });
+    }
+  }
   const route = url.pathname.match(
     /^\/csdn\/(blog|index|body)\/([A-Za-z0-9_]+)(?:\/([0-9]+))?$/,
   );

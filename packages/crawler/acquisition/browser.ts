@@ -1,6 +1,7 @@
 import { z } from "zod";
 import type { Source } from "../../shared/types.js";
 import { reviewedCsdnUrl } from "../platforms/csdn.js";
+import { reviewedToutiaoUrl } from "../platforms/toutiao.js";
 import type { AcquiredDocument } from "./types.js";
 
 const responseSchema = z.object({
@@ -33,7 +34,11 @@ export function createBrowserDocumentClient(
       "BROWSER_FETCH_URL must be HTTPS or a local loopback HTTP service URL",
     );
   return async (source: Source, value: string): Promise<AcquiredDocument> => {
-    const url = reviewedCsdnUrl(source, value);
+    const review =
+      source.platform === "toutiao-account"
+        ? reviewedToutiaoUrl
+        : reviewedCsdnUrl;
+    const url = review(source, value);
     const response = await transport(new URL("fetch", endpoint), {
       method: "POST",
       redirect: "error",
@@ -62,7 +67,7 @@ export function createBrowserDocumentClient(
     const data = responseSchema.parse(
       JSON.parse(Buffer.concat(chunks).toString("utf8")),
     );
-    if (reviewedCsdnUrl(source, data.document.url) !== url)
+    if (review(source, data.document.url) !== url)
       throw new Error("Browser returned a different article");
     return data.document;
   };

@@ -64,11 +64,11 @@ describe("official community account scope", () => {
       "Company must have a collectable source",
     );
   });
-  it("accepts the historical Aliyun parser fixture and retained Volcengine account", async () => {
+  it("accepts the historical Aliyun parser fixture and reviewed Toutiao account", async () => {
     const registry = await loadRegistry();
     const cloud = aliyunFixture;
     const volc = registry.sources.find(
-      (s) => s.id === "bytedance-tech-volcengine",
+      (s) => s.id === "bytedance-tech-toutiao",
     )!;
     for (const source of [cloud, volc])
       expect(() => validateAccountScope(source)).not.toThrow();
@@ -86,9 +86,9 @@ describe("official community account scope", () => {
       expect(() => validateAccountScope({ ...source, ...patch })).toThrow();
   });
 
-  it("rejects a Volcengine account whose stable ID differs from the directory", async () => {
+  it("rejects a Toutiao account whose stable token differs from the directory", async () => {
     const source = (await loadRegistry()).sources.find(
-      (s) => s.id === "bytedance-tech-volcengine",
+      (s) => s.id === "bytedance-tech-toutiao",
     )!;
     expect(() =>
       validateAccountScope({

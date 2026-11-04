@@ -57,6 +57,14 @@ class PolicyTests(unittest.TestCase):
             self.assertFalse(resource_allowed(url))
         self.assertTrue(resource_allowed('https://g.csdnimg.cn/script.js'))
 
+    def test_toutiao_requires_a_reviewed_account_and_exact_article_url(self):
+        target = 'https://www.toutiao.com/article/7703892274039669290/'
+        token = 'MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE'
+        self.assertEqual(validate_target(target, {token}), target)
+        for url, accounts in [(target, {'example'}), (target + '?x=1', {token}),
+                              (target.replace('/article/', '/video/'), {token})]:
+            with self.assertRaises(ValueError): validate_target(url, accounts)
+
 
 class RuntimeTests(unittest.IsolatedAsyncioTestCase):
     async def test_reuses_backend_but_closes_each_context(self):
