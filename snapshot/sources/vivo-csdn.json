@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "vivo-csdn",
-    "lastCheckedAt": "2026-11-06T03:27:06.701Z",
-    "lastSuccessAt": "2026-11-06T03:27:06.701Z",
-    "nextRunAt": "2026-11-07T03:27:06.701Z",
+    "lastCheckedAt": "2026-11-06T07:56:31.699Z",
+    "lastSuccessAt": "2026-11-06T07:56:31.699Z",
+    "nextRunAt": "2026-11-07T07:56:31.699Z",
     "consecutiveFailures": 0,
     "etag": "\"a815364cc99b3ff0636816d87e901805933c048cb993795c4e146015394d3c8d\"",
-    "status": "success",
-    "discovered": 20,
-    "httpStatus": 200
+    "status": "not-modified",
+    "discovered": 0,
+    "httpStatus": 304
   }
 }
