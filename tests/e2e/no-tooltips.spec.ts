@@ -1,13 +1,47 @@
 import { test, expect, type Page } from "@playwright/test";
 
-async function expectNoTooltips(page: Page) {
-  // Checking the kit's trigger wrappers also catches delayed hover hints.
-  await expect(
-    page.locator(
-      '[title], .desktop-action-tooltip, .desktop-tooltip, [role="tooltip"]',
-    ),
-  ).toHaveCount(0);
+function appTooltips(page: Page) {
+  // Publisher titles are retained in sanitized article content. The no-hint
+  // contract covers app UI; kit wrappers and tooltip roles remain global.
+  return page.locator(
+    '[title]:not(.markdown-body, .markdown-body *), .desktop-action-tooltip, .desktop-tooltip, [role="tooltip"]',
+  );
 }
+
+async function expectNoTooltips(page: Page) {
+  await expect(appTooltips(page)).toHaveCount(0);
+}
+
+test("publisher titles do not mask app tooltip regressions", async ({
+  page,
+}) => {
+  await page.setContent(
+    `<main><button aria-label="Action">Action</button><div class="markdown-body">${'<a href="#" title="Publisher reference">Reference</a>'.repeat(
+      24,
+    )}</div></main>`,
+  );
+  await expect(page.locator("[title]")).toHaveCount(24);
+  await expectNoTooltips(page);
+  await page.getByRole("button").evaluate((button) => {
+    button.setAttribute("title", "Unexpected app hint");
+  });
+  await expect(appTooltips(page)).toHaveCount(1);
+  await page.getByRole("button").evaluate((button) => {
+    button.removeAttribute("title");
+  });
+  for (const markup of [
+    '<span class="desktop-action-tooltip"></span>',
+    '<span class="desktop-tooltip"></span>',
+    '<span role="tooltip">Unexpected tooltip</span>',
+  ]) {
+    await page.locator(".markdown-body").evaluate((body, html) => {
+      body.insertAdjacentHTML("beforeend", html);
+    }, markup);
+    await expect(appTooltips(page)).toHaveCount(1);
+    await appTooltips(page).evaluate((element) => element.remove());
+  }
+  await expectNoTooltips(page);
+});
 
 test("controls and dates have no hover hints and retain accessible names", async ({
   page,
