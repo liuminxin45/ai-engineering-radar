@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -100,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -180,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -242,6 +242,47 @@
       "duplicateCandidates": []
     },
     {
+      "id": "48dd1549391e51e57ea7",
+      "publisherId": "tencent-official",
+      "companyId": "tencent",
+      "contentType": "blog",
+      "title": "可直接喂给 WorkBuddy 的实战模板 | 零基础构建策划团队 Skill",
+      "canonicalUrl": "https://news.qq.com/rain/a/20261105A0BMNX00",
+      "author": "腾讯技术工程",
+      "description": "作者：finnxwang丨 导语 不会写代码，也能搭出好用的团队共享 Skill 和知识库。笔者整理了搭建、迭代和团队协作的实战经验，包含完整的起步与迭代流程。把本文交给你的 Agent，再补充自己的业务材料、可用工具和权限，就能按文中的方法，从零开始搭建和完善自己的工作 Skill。一、从口口相传、机械配表，到可以复用的团队经...",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-05T09:33:51.000Z",
+      "discoveredAt": "2026-11-06T03:27:06.709Z",
+      "updatedAt": "2026-11-06T03:27:06.709Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-qqnews",
+          "externalId": "20261105A0BMNX00",
+          "url": "https://news.qq.com/rain/a/20261105A0BMNX00",
+          "listingHash": "03603d6bb225e9da111d67ab4347882b0cfdd42fec2d548ef892f53e8a64af2c"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "597c3a473f867aec1441",
       "publisherId": "tencent-official",
       "companyId": "tencent",
@@ -260,7 +301,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -300,7 +341,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -340,7 +381,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -380,7 +421,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -420,7 +461,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -461,7 +502,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -502,7 +543,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -543,7 +584,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -583,7 +624,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -623,7 +664,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -663,7 +704,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -703,7 +744,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -743,7 +784,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -783,7 +824,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -823,7 +864,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -863,7 +904,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -903,7 +944,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",

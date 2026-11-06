@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -82,6 +82,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "3838acc073bc9b6b6eaf",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "contentType": "blog",
+      "title": "每两家头部手机厂商就有一家选它：火山引擎如何成为 AI 手机助手的\"隐形底座\"？",
+      "canonicalUrl": "https://www.toutiao.com/article/7704665376298107392",
+      "author": "字节跳动技术团队",
+      "description": "对照 IDC 2026 年第二季度中国智能手机出货量榜单，荣耀、vivo、联想、中兴、三星均位列 Top 10，而这五家头部终端厂商，都选择了火山引擎 AI 音视频互动能力作为各自手机助手智能体的技术底座。人与人面对面交流的应答间隙大约在 200—500ms，一旦等待时间明显变长，对话就会出现卡顿感。",
+      "publishedAt": "2026-11-05T12:36:50.000Z",
+      "discoveredAt": "2026-11-06T03:27:08.230Z",
+      "updatedAt": "2026-11-06T03:27:08.230Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7704665376298107392",
+          "url": "https://www.toutiao.com/article/7704665376298107392",
+          "listingHash": "17ab1bdc1c595f699ea33df96cd18453337f737bca8df26ea0e847c28e1f65b3"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "38c3bbc68094639060e3",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
@@ -100,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -180,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -249,10 +289,10 @@
       "title": "豆包工作进入企业，安全如何跟上每一步？",
       "canonicalUrl": "https://www.toutiao.com/article/7701309979239727626",
       "author": "字节跳动技术团队",
-      "description": "如今很多企业员工已经在借助豆包工作完成工作任务，企业则需要想清楚:企业敏感数据是否会被个人豆包账号获取?",
+      "description": "“你好豆包，把项目资料整理一下，给我一份客户复盘。”如今很多企业员工已经在借助豆包工作完成工作任务，企业则需要想清楚：企业敏感数据是否会被个人豆包账号获取？任务过程中 AI 是否会有高风险操作？生成的文档离开豆包工作之后，还受不受保护？豆包工作自身提供了丰富原生安全保障。",
       "publishedAt": "2026-10-27T11:36:21.000Z",
       "discoveredAt": "2026-11-04T09:59:40.990Z",
-      "updatedAt": "2026-11-04T09:59:40.990Z",
+      "updatedAt": "2026-11-06T03:27:08.230Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -260,7 +300,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -276,7 +316,7 @@
           "sourceId": "bytedance-tech-toutiao",
           "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7701309979239727626",
           "url": "https://www.toutiao.com/article/7701309979239727626",
-          "listingHash": "04ea12da2c9a30cbc652c051b03c79f6b2290aea881e251a6f6c1e4668acdd49"
+          "listingHash": "68e4be3189c027e2f0ab4379e989d44cc5818a3841d1e997143843ad7dc8900a"
         }
       ],
       "duplicateCandidates": []
@@ -300,7 +340,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -340,7 +380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -380,7 +420,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -420,7 +460,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -460,7 +500,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",

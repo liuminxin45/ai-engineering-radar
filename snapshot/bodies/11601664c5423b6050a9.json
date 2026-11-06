@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "11601664c5423b6050a9",
+    "status": "ready",
+    "html": "<blockquote>作者：vivo 互联网产品团队- Meng Disheng<br>\n面向产品经理的 Agent Harness 设计指南：把用户目标转化为可执行任务、工具契约、权限策略、结构化结果和可验收的工程系统。 产品经理在设计 Agent 产品时，不仅仅只写 Prompt、页面和最终输出，还要参与定义 Agent 如何执行任务、调用工具、控制权限、处理失败并交付结果。</blockquote>\n\n<p>1分钟看图掌握核心要点👇</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"1526\" src=\"https://i-blog.csdnimg.cn/img_convert/bc225089e19c47242a9339a40167c524.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"608\" src=\"https://i-blog.csdnimg.cn/img_convert/51f015958732ca4b3b8f241fd9a5b6df.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-一-agent-产品为什么需要技术建模\">一、Agent 产品为什么需要技术建模<a class=\"heading-anchor\" href=\"#section-一-agent-产品为什么需要技术建模\" aria-label=\"链接到本节：一、Agent 产品为什么需要技术建模\">#</a></h3>\n\n<p>传统产品需求往往可以用“输入—处理—输出”描述：用户提交信息，系统完成处理，再返回结果。但 Agent 产品通常不是一次同步调用，而是一段可能持续较长时间的工作过程。它可能需要读取多个数据源、调用多个工具、等待用户确认、处理外部系统失败，并在中间生成可复用的结果。</p>\n\n<p>因此，Agent 产品需求不能只描述“用户输入什么、模型回答什么”。它至少要解释任务如何拆分、步骤之间是否存在硬依赖、可调用的工具是否会改动外部系统、何处需要用户确认，以及发生超时、拒绝或服务异常时任务应当停止、降级还是恢复。最终交付也不能只是一段回复，而要明确是结构化数据、可下载产物，还是一个已写入业务系统的资源。</p>\n\n<p>如果一份 Agent 需求只能描述输入和输出，它通常还没有进入工程设计阶段。产品经理设计的不只是交互页面，还包括一套能够被执行、被观察和被验收的任务模型。</p>\n\n<p>本文所说的 <strong>Agent Harness</strong>，不是某个特定框架的名称，而是承接任务定义、步骤调度、工具调用、权限执行、结果校验和运行观测的控制层。业务工作流决定“要完成什么”，工具实现决定“如何访问外部能力”，Harness 则把两者组织成一段可约束、可追溯的运行。本文关注的正是产品经理需要参与定义的这部分系统契约，而不讨论某一种模型或编排框架的具体实现。</p>\n\n<h3 id=\"section-二-从用户目标到-agent-workflow\">二、从用户目标到 Agent Workflow<a class=\"heading-anchor\" href=\"#section-二-从用户目标到-agent-workflow\" aria-label=\"链接到本节：二、从用户目标到 Agent Workflow\">#</a></h3>\n\n<p>产品经理首先需要把用户目标转换成可执行的工作流，而不是直接把目标写成一个 Prompt。</p>\n\n<p>例如，“根据用户反馈生成改进建议，并在确认后提交到目标工作系统”可以拆解为：</p>\n\n<p>读取反馈数据</p>\n\n<pre><code>-&gt; 清洗和去重\n-&gt; 按问题类型聚类\n-&gt; 统计影响范围\n-&gt; 查询历史记录\n-&gt; 生成候选建议\n-&gt; 检查建议冲突\n-&gt; 输出评估报告\n-&gt; 用户确认并提</code></pre>\n\n<p>每一个步骤都需要具备明确的工程属性：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"645\" src=\"https://i-blog.csdnimg.cn/img_convert/5098a5083637b11c5326c77bbbc8aef2.png\" width=\"1026\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>产品经理不一定需要实现聚类算法，但需要判断工作流是否完整：哪些步骤必须串行，哪些步骤可以并行，哪些结果可以被后续步骤消费，哪些环节需要产品经理介入。</p>\n\n<p><strong>为步骤定义执行语义</strong></p>\n\n<p>工作流不能只有顺序，还要定义调度语义。通常可把步骤分成四类：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"342\" src=\"https://i-blog.csdnimg.cn/img_convert/c8d454a30ad1bab7e49b2d32d94eaad7.png\" width=\"1038\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>例如，问题聚类和历史记录匹配可以并行，但建议生成是否必须等待两者完成，取决于历史记录在这项业务中是硬依赖还是增强信息。前者应阻塞后续生成；后者可以记录“历史匹配缺失”并降级继续。两种行为都要由任务定义决定，不能让执行器在运行时猜测。</p>\n\n<p>建议把这种语义写进 Workflow DSL 或 JSON 配置，而不要散落在 Prompt 中。下面的配置将历史匹配视为硬依赖，因此任一步失败都会阻塞建议生成：</p>\n\n<pre><code>  \"id\": \"generate\\_recommendation\",  \n  \"dependsOn\": \\[\"cluster\\_feedback\", \"analyze\\_impact\", \"match\\_history\"\\],  \n  \"mode\": \"serial\",  \n  \"input\": {  \n    \"clusters\": \"$steps.cluster\\_feedback.output\",  \n    \"impact\": \"$steps.analyze\\_impact.output\",  \n    \"history\": \"$steps.match\\_history.output\"  \n  },  \n  \"onFailure\": \"block\",  \n  \"timeoutSeconds\": 90  \n}</code></pre>\n\n<p>这里的 dependsOn 定义依赖图，input 明确数据绑定，onFailure 定义失败传播。示例把影响范围统计也列为前置依赖，避免建议生成在缺少影响信息时继续执行。产品需求写清这些字段后，研发才能稳定实现调度、重试和可视化进度。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"608\" src=\"https://i-blog.csdnimg.cn/img_convert/de19e5fb801ba8de191116d63228cd92.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-三-任务模型-不要只设计一轮对话\">三、任务模型：不要只设计一轮对话<a class=\"heading-anchor\" href=\"#section-三-任务模型-不要只设计一轮对话\" aria-label=\"链接到本节：三、任务模型：不要只设计一轮对话\">#</a></h3>\n\n<p>Agent 产品需要明确任务对象，而不是只围绕会话设计。建议将用户目标、输入、执行过程和结果组织在一个任务模型中：</p>\n\n<pre><code>Task\n├── taskId\n├── userGoal\n├── inputRefs\n├── workflowVersion\n├── owner\n└── runRefs</code></pre>\n\n<p></p>\n\n<pre><code>Run\n├── runId\n├── taskId\n├── currentStep\n├── status\n├── outputs\n├── approvals\n└── errors</code></pre>\n\n<p>产品经理需要区分以下对象：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"471\" src=\"https://i-blog.csdnimg.cn/img_convert/d8e7989c0526aabdced0d423b50676ac.png\" width=\"1026\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>一个任务可以包含多轮对话、多次运行和多个产物。对话是交互载体，任务是业务目标，运行是一次执行实例，产物是可继续使用的交付结果。如果把这些对象混成一个聊天线程，后续很难支持重试、对比、恢复和结果归属。这里的 Task.owner 表示业务归属或责任主体，不等同于发起会话的用户；Run.approvals 保存本次执行实际使用的审批记录引用，而不是把审批内容复制进每条消息。</p>\n\n<p><strong>任务对象需要版本和引用语义</strong></p>\n\n<p>任务对象在工程上至少要支持两个能力：<strong>输入可复现与结构可演进</strong>。前者要求任务保存输入的稳定引用，不是只保存提示词中的长文本；后者要求对象允许字段逐步增加，同时保持历史任务可读。</p>\n\n<pre><code>{  \n  \"taskId\": \"task\\_01J...\",  \n  \"schemaVersion\": 2,  \n  \"goal\": \"基于用户反馈生成需求建议\",  \n  \"inputRefs\": \\[  \n    {\"type\": \"feedback\\_sheet\", \"id\": \"file\\_123\", \"version\": \"v7\"}  \n  \\],  \n  \"workflowVersion\": \"feedback-analysis@1.3.0\",  \n  \"runs\": \\[\"run\\_a1\", \"run\\_a2\"\\],  \n  \"artifactRefs\": \\[\"artifact\\_report\\_01\"\\]  \n}</code></pre>\n\n<p>schemaVersion 解决对象结构演进，workflowVersion 解决同一任务在不同编排版本下的行为差异，inputRefs.version 则避免数据源更新后无法解释历史结论。产品经理至少需要提出“历史任务是否必须复现”“规则更新后旧任务如何展示”这两个问题；它们会直接影响存储模型与审计成本。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"608\" src=\"https://i-blog.csdnimg.cn/img_convert/96e280396994b7c168cc5b67be4e91dc.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-四-工具设计-产品经理要定义工具契约\">四、工具设计：产品经理要定义工具契约<a class=\"heading-anchor\" href=\"#section-四-工具设计-产品经理要定义工具契约\" aria-label=\"链接到本节：四、工具设计：产品经理要定义工具契约\">#</a></h3>\n\n<p>Agent 是否可靠，很大程度取决于工具是否设计清晰。产品经理不一定编写工具实现，但需要参与定义工具契约：</p>\n\n<pre><code>Tool:  \n  name  \n  description  \n  inputSchema  \n  outputSchema  \n  permission  \n  sideEffect  \n  timeout  \n  retryPolicy</code></pre>\n\n<p>以“提交建议到目标工作系统”工具为例：</p>\n\n<pre><code>submitRecommendation:  \n  input:  \n    title  \n    description  \n    priority  \n    targetScope  \n    idempotencyKey  \n  \n  output:  \n    recordId  \n    url  \n    status  \n  \n  permission:  \n    write\\_target\\_system  \n  \n  sideEffect:  \n    create\\_external\\_record</code></pre>\n\n<p>产品经理需要确认：</p>\n\n<ul><li>工具什么时候可以被调用；</li><li>参数是否足够完整；</li><li>返回结果是否足够支持下一步；</li><li>工具是否修改外部系统；</li><li>是否需要审批；</li><li>调用失败后是否可以重试；</li><li>是否允许重复调用；</li><li>是否需要幂等键。</li></ul>\n\n<p>此处注意工具不是“给模型调用的接口列表”，工具是 Agent 工作流中的业务动作协议。一个工具的输入、输出、权限和副作用如果没有明确约定，模型的自由度越高，系统的不确定性也越高。</p>\n\n<h3 id=\"section-4-1-输入校验-输出校验和错误码必须分层\">4.1 输入校验、输出校验和错误码必须分层<a class=\"heading-anchor\" href=\"#section-4-1-输入校验-输出校验和错误码必须分层\" aria-label=\"链接到本节：4.1 输入校验、输出校验和错误码必须分层\">#</a></h3>\n\n<p>工具调用至少需要三层校验：</p>\n\n<ul><li><strong>调用前校验：</strong>使用 JSON Schema、字段枚举和权限策略拒绝非法参数，例如优先级不在允许范围、项目不属于当前授权范围。</li><li><strong>执行后校验：</strong>对工具返回值做 Schema 校验，避免模型把错误响应误当成成功结果继续推理。</li><li><strong>业务结果校验：</strong>验证业务不变量，例如提交成功后必须获得可查询的 recordId</li></ul>\n\n<p>建议让工具返回稳定的结果，不要把异常拼成自然语言：</p>\n\n<pre><code>{  \n  \"ok\": false,  \n  \"requestId\": \"req\\_8f2c\",  \n  \"error\": {  \n    \"code\": \"DUPLICATE\\_RECORD\",  \n    \"retryable\": false,  \n    \"message\": \"同一业务动作已提交记录\",  \n    \"details\": {\"recordId\": \"record\\_1024\"}  \n  }  \n}</code></pre>\n\n<p>其中 retryable 决定执行器是否自动重试，requestId 用于日志关联，details 让后续步骤可以选择跳转已有记录而不是重复提交。这里的 DUPLICATE_RECORD 适用于“业务上不允许重复”的场景；若调用方携带的是同一幂等键，服务端更稳妥的做法是返回首次成功的资源，并在响应中标明 idempotentReplay: true。产品经理在定义工具输出时，应要求区分“未执行”“执行失败”“已执行但结果不满足业务条件”和“幂等重放返回已有结果”。</p>\n\n<h3 id=\"section-4-2-工具描述是约束接口\">4.2 工具描述是约束接口<a class=\"heading-anchor\" href=\"#section-4-2-工具描述是约束接口\" aria-label=\"链接到本节：4.2 工具描述是约束接口\">#</a></h3>\n\n<p>模型看到的工具描述会影响调用决策，但它不能替代机器可校验的 Schema。推荐把人类可读说明、机器可读 Schema 和策略约束分离：</p>\n\n<pre><code>Tool description -&gt; 告诉模型何时使用、何时禁止使用\nJSON Schema       -&gt; 约束参数类型、枚举、必填项\nPolicy           -&gt; 约束主体、资源范围、风险等级\nExecutor         -&gt; 负责超时、重试、幂等与审计</code></pre>\n\n<p>这能避免把“禁止修改其他项目”“标题最长 80 字”之类的硬约束仅写在 Prompt 中。Prompt 可以被误解，Schema 和 Policy 必须能够在执行前强制生效。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"608\" src=\"https://i-blog.csdnimg.cn/img_convert/5e6f7f8937d702203fe3e67c6fc055a0.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-五-权限与副作用-用风险等级设计审批\">五、权限与副作用：用风险等级设计审批<a class=\"heading-anchor\" href=\"#section-五-权限与副作用-用风险等级设计审批\" aria-label=\"链接到本节：五、权限与副作用：用风险等级设计审批\">#</a></h3>\n\n<p>不同工具对系统的影响不同，权限策略不能只采用“允许”或“禁止”两种状态。可以按照副作用和风险将工具分级：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"405\" src=\"https://i-blog.csdnimg.cn/img_convert/781df95f95e9364b787a659db1f338bb.png\" width=\"1031\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>策略可以进一步表达为结构化配置：</p>\n\n<pre><code>Policy:  \n  tool: submitRecommendation  \n  riskLevel: L3  \n  requireApproval: true  \n  allowedScopes: \\[...\\]  \n  allowedFields: \\[...\\]  \n  idempotencyRequired: true</code></pre>\n\n<p>产品经理需要把“需要确认”转化为可执行规则：哪些工具必须确认，哪些参数变化会触发重新确认，确认的有效范围是什么，拒绝之后如何处理，是否允许预授权，以及审批过程如何记录。</p>\n\n<p><strong>授权应绑定主体、资源和动作</strong></p>\n\n<p>审批不仅仅是一个布尔值。有效授权至少应绑定三类上下文：</p>\n\n<ul><li>Subject：谁在授权，例如当前用户或代理服务身份</li><li>Resource：可访问或修改什么，例如 scopeId、documentId、tenantId</li><li>Action：允许做什么，例如 read、create、update、publish</li></ul>\n\n<p>例如“允许提交建议”并不等于“允许向所有目标空间写入记录”。更可执行的授权记录是：</p>\n\n<pre><code>{  \n  \"subject\": \"user\\_12345\",  \n  \"action\": \"recommendation.submit\",  \n  \"resource\": {\"scopeId\": \"workspace\\_1001\"},  \n  \"constraints\": {\"priorityIn\": \\[\"P1\", \"P2\"\\], \"expiresAt\": \"2026-08-22T12:00:00Z\"},  \n  \"approvalId\": \"approval\\_01\"  \n}</code></pre>\n\n<p>当工具参数越过资源范围、修改了受约束字段或审批过期时，执行器必须重新请求授权。这样可以避免一次确认被错误扩展为无限范围的通行证。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"608\" src=\"https://i-blog.csdnimg.cn/img_convert/b981d561a8bf68175772951deba2fde0.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-六-结果协议-从文本回答到结构化交付\">六、结果协议：从文本回答到结构化交付<a class=\"heading-anchor\" href=\"#section-六-结果协议-从文本回答到结构化交付\" aria-label=\"链接到本节：六、结果协议：从文本回答到结构化交付\">#</a></h3>\n\n<p>Agent 的结果不应只有一段 Markdown 文本。不同任务需要定义不同的结果协议，例如：</p>\n\n<pre><code>Result:  \n  summary  \n  evidence  \n  decisions  \n  risks  \n  pendingQuestions  \n  artifactRefs  \n  nextActions</code></pre>\n\n<p>用户反馈分析可以输出：</p>\n\n<pre><code>{  \n  \"summary\": \"...\",  \n  \"clusters\": \\[\\],  \n  \"priorityRecommendations\": \\[\\],  \n  \"matchedRequirements\": \\[\\],  \n  \"evidenceRefs\": \\[\\],  \n  \"uncertainties\": \\[\\],  \n  \"nextActions\": \\[\\]  \n}</code></pre>\n\n<p>产品经理需要区分四类结果，因为它们对应不同的存储、展示和后续消费方式：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"447\" src=\"https://i-blog.csdnimg.cn/img_convert/0693eb1cb1c2495d311419165447e282.png\" width=\"1032\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>结构化结果可以被前端展示，也可以被后续 Agent 消费；产物可以导出为报告；外部系统记录则需要返回稳定的 ID 和访问地址。重要结论还应带有证据引用和不确定性说明，避免把推测包装成事实。</p>\n\n<p><strong>6.1 将证据与结论建成可追溯关系</strong></p>\n\n<p>结果协议中的 evidenceRefs 不应只是 URL 列表，需要能表达“哪条结论依据了哪些来源”。推荐使用可定位引用：</p>\n\n<pre><code>{  \n  \"recommendationId\": \"rec\\_01\",  \n  \"statement\": \"登录失败提示需要覆盖网络异常场景\",  \n  \"confidence\": 0.82,  \n  \"evidence\": \\[  \n    {\"sourceId\": \"feedback\\_328\", \"locator\": \"row:328\", \"role\": \"user\\_feedback\"},  \n    {\"sourceId\": \"metric\\_login\", \"locator\": \"2026-08-01..2026-08-15\", \"role\": \"metric\"}  \n  \\],  \n  \"assumptions\": \\[\"反馈样本已完成去重\"\\]  \n}</code></pre>\n\n<p>confidence 不能替代证据，但可以帮助界面进行排序和提示；assumptions 则把模型推理依赖的前提显式化。对于需要进入外部系统的结果，建议增加 resultVersion、generatedAt、generatorVersion，以便后续比较不同版本的分析差异。</p>\n\n<p><strong>6.2 结果发布前增加确定性校验</strong></p>\n\n<p>LLM 输出具有非确定性，结构化输出也可能字段齐全但业务不正确。因此，发布前应增加确定性校验器，例如：</p>\n\n<pre><code>- 每条建议至少绑定一条 evidence\n- priority 必须属于 P0/P1/P2/P3\n- sourceRef 必须属于本次 Task 的可访问输入\n- externalRecordId 只能在写工具成功后出现\n- 风险等级为高时必须有 nextAction</code></pre>\n\n<p>这些规则更适合由普通代码或规则引擎执行，而不是再次交给模型判断。模型负责生成候选结论，校验器负责守住协议边界。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"608\" src=\"https://i-blog.csdnimg.cn/img_convert/8ee9fb7a0510a49317040ccd1b16ca92.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-七-失败处理-重试-恢复与幂等性设计\">七、失败处理：重试、恢复与幂等性设计<a class=\"heading-anchor\" href=\"#section-七-失败处理-重试-恢复与幂等性设计\" aria-label=\"链接到本节：七、失败处理：重试、恢复与幂等性设计\">#</a></h3>\n\n<p>Agent 任务的失败不能只显示“执行失败，请重试”。至少需要区分：</p>\n\n<pre><code>InputError\nPermissionError\nToolError\nTimeoutError\nModelError\nValidationError\nExternalSystemError</code></pre>\n\n<p>不同错误类型应采用不同策略：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"525\" src=\"https://i-blog.csdnimg.cn/img_convert/819ebabfd046f976362f3a25f3516201.png\" width=\"1026\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>需要特别关注具有副作用的步骤。如果向目标系统提交记录的接口已经成功，但响应在网络传输过程中丢失，简单重试可能造成重复写入。因此，写操作应使用任务 ID、步骤 ID或业务幂等键标识同一业务动作：</p>\n\n<p>同一个 taskId + stepId 不应重复创建相同业务数据</p>\n\n<p>产品经理需要在需求阶段明确：哪些失败可以自动重试，哪些失败必须通知用户，哪些步骤支持从中间位置继续，以及失败时已经产生的产物如何处理。</p>\n\n<h3 id=\"section-7-1-重试策略必须区分读-写与模型生成\">7.1 重试策略必须区分读、写与模型生成<a class=\"heading-anchor\" href=\"#section-7-1-重试策略必须区分读-写与模型生成\" aria-label=\"链接到本节：7.1 重试策略必须区分读、写与模型生成\">#</a></h3>\n\n<p>“最多重试三次”不是通用策略。不同类别的操作需要不同的执行规则：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"335\" src=\"https://i-blog.csdnimg.cn/img_convert/46738581e024882a1ed8b0011905c518.png\" width=\"1028\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>指数退避可以表达为 delay = base * 2^attempt + jitter。jitter 的作用是避免大量任务在同一时刻重试造成二次拥塞。对于 L3/L4 写操作，重试前必须优先检查是否已经落库；这是比“请求是否超时”更可靠的判断。</p>\n\n<h3 id=\"section-7-2-幂等键应表达业务动作\">7.2 幂等键应表达业务动作<a class=\"heading-anchor\" href=\"#section-7-2-幂等键应表达业务动作\" aria-label=\"链接到本节：7.2 幂等键应表达业务动作\">#</a></h3>\n\n<p>一个可用的幂等键通常由业务主键组成：</p>\n\n<pre><code>idempotencyKey = hash(taskId + stepId + targetProjectId + normalizedPayload)</code></pre>\n\n<p>其中 normalizedPayload 应排除时间戳、展示文案等不影响业务语义的字段。服务端收到相同键时，应返回首次创建的资源，而不是再次执行。这样即使执行器重启、网络响应丢失或用户重复点击，也能把同一业务动作折叠为一次结果。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"608\" src=\"https://i-blog.csdnimg.cn/img_convert/636404ab421ca6504c8b74b9df44b2f5.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-八-可观测性与验收-监控不能替代验证\">八、可观测性与验收：监控不能替代验证<a class=\"heading-anchor\" href=\"#section-八-可观测性与验收-监控不能替代验证\" aria-label=\"链接到本节：八、可观测性与验收：监控不能替代验证\">#</a></h3>\n\n<p>Agent 上线后，最容易出现两种误判：一是任务“跑完了”就被视为成功；二是平均耗时下降就被视为体验变好。前者掩盖了结论无依据、写操作重复执行等问题，后者又可能以牺牲结果质量为代价。对 Agent 而言，观测数据的价值不在于堆出一张大盘，而在于帮助团队定位一次失败究竟发生在任务设计、模型决策、工具接口，还是用户确认环节。</p>\n\n<p>以“根据反馈提交改进建议”为例，如果完成率突然下降，先看任务是否停在输入校验或授权环节；如果完成率没有变化、人工返工却明显增加，再回看引用是否缺失、聚类规则是否漂移、工作流版本是否变化。工具超时率只有和具体的步骤、数据源及重试次数放在一起，才有诊断意义。单独统计“工具成功率”通常解决不了问题。</p>\n\n<p>实践中可以把观测字段压缩为一条可关联的执行记录：</p>\n\n<pre><code>traceId, taskId, runId, stepId, toolName,\nworkflowVersion, promptVersion, inputRef, outputRef,\nlatencyMs, retryCount, errorCode, approvalId</code></pre>\n\n<p>taskId 服务于业务检索，traceId 用于跨服务追踪，workflowVersion 和 promptVersion 用来解释“为什么同一类输入这周开始产生不同结果”。如果一条需求建议被用户退回，团队应该可以沿着这条记录还原它使用了哪个输入版本、走过哪些步骤、调用了什么工具、何处发生重试，以及最终依据来自哪里。</p>\n\n<p>验收也不应停留在“看几条回答是否顺眼”。更实用的做法是保留少量高价值样本：空反馈、历史记录服务不可用、重复提交、目标空间越权、用户拒绝审批等。每个样本都写清不可触碰的边界，而不是罗列一长串泛泛指标。下面的用例同时约束工具选择、结果结构和副作用上限：</p>\n\n<pre><code>case: feedback-duplicate-submit  \ninputRef: fixture://feedback/duplicate.csv  \nexpect:  \n  requiredTools: \\[readFeedback, clusterFeedback, submitRecommendation\\]  \n  forbiddenTools: \\[publishAnnouncement\\]  \n  resultSchema: AnalysisResult@v1  \n  assertions:  \n    - path: $.recommendations\\[\\*\\].evidenceRefs.length  \n      operator: greaterThan  \n      value: 0  \n    - path: $.artifactRefs\\[?(@.type == 'target\\_system\\_record')\\].externalId  \n      operator: exists  \n  sideEffects:  \n    maxSubmittedRecords: 1</code></pre>\n\n<p>这类用例更接近契约测试：它不承诺模型必须写出哪一句话，却明确要求不能绕过证据、不能调用无关工具、不能因为重试创建两条需求。把它放进 CI 或灰度回归，比让测试同学反复手工体验更能发现工程回归。</p>\n\n<h3 id=\"section-九-案例-反馈分析-agent-的技术设计\">九、案例：反馈分析 Agent 的技术设计<a class=\"heading-anchor\" href=\"#section-九-案例-反馈分析-agent-的技术设计\" aria-label=\"链接到本节：九、案例：反馈分析 Agent 的技术设计\">#</a></h3>\n\n<h3 id=\"section-9-1-业务目标\">9.1 业务目标<a class=\"heading-anchor\" href=\"#section-9-1-业务目标\" aria-label=\"链接到本节：9.1 业务目标\">#</a></h3>\n\n<p>根据用户反馈，自动生成改进建议，并在用户确认后提交到目标工作系统。</p>\n\n<h3 id=\"section-9-2-任务流程\">9.2 任务流程<a class=\"heading-anchor\" href=\"#section-9-2-任务流程\" aria-label=\"链接到本节：9.2 任务流程\">#</a></h3>\n\n<p>先导入用户反馈并完成格式检查，然后执行数据清洗、问题聚类和影响范围分析，再匹配历史记录并生成候选方案，经过结果校验和用户确认后，才调用提交建议的写入工具。</p>\n\n<p>该流程中的前半段只读取和分析数据，后半段则从“生成建议”转入“改变业务系统”。这条边界决定了提交动作必须放在用户确认之后，并使用可追踪的幂等键执行。</p>\n\n<h3 id=\"section-9-3-工具列表\">9.3 工具列表<a class=\"heading-anchor\" href=\"#section-9-3-工具列表\" aria-label=\"链接到本节：9.3 工具列表\">#</a></h3>\n\n<p></p>\n\n<p><img alt=\"\" height=\"660\" src=\"https://i-blog.csdnimg.cn/img_convert/1e5ad2ab3ace6f82d148a091c5f76e02.png\" width=\"1023\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-9-4-权限-结果与校验如何落到一条链路上\">9.4 权限、结果与校验如何落到一条链路上<a class=\"heading-anchor\" href=\"#section-9-4-权限-结果与校验如何落到一条链路上\" aria-label=\"链接到本节：9.4 权限、结果与校验如何落到一条链路上\">#</a></h3>\n\n<p>这六个工具并不处在同一个风险等级。readFeedback 和 queryHistoricalRecords 会读取业务资料，应在数据源授权范围内以 L1 执行；clusterFeedback 和 validateRecommendation 只处理已获授权的输入，属于 L0；generate-</p>\n\n<p>Recommendation 产生内部分析材料，可按 L2 管理并保留生成版本；submitRecommendation 会向目标工作系统写入记录，必须按 L3 执行，绑定目标空间、用户确认和幂等键。</p>\n\n<p>最终输出的 AnalysisResult 不应只是一段摘要。它至少要包含 clusters、affectedUsers、priority-</p>\n\n<p>Suggestions、matchedRecords、recommen-</p>\n\n<p>dations、risks 和 evidenceRefs。其中每条 recommendations 都应携带证据引用，便于追问“这条 P1 建议对应哪几类反馈”。提交成功后得到的资源不宜混入分析结果，而应作为独立的 SubmitRecommendationResult，或以 artifact-</p>\n\n<p>Refs 中的外部记录引用返回；这样分析输出和写操作结果的生命周期不会混在一起。</p>\n\n<p>提交记录前，校验器要连续确认几件具体的事：标题不能为空；每条建议必须能回指到反馈或历史记录；目标空间必须在当前用户的授权范围内；优先级只能取系统允许的值；相同 taskId + stepId + targetScope 不能已经提交过资源；并且用户必须已经对这一次写操作确认。任何一项不满足，都应该停在提交前，而不是让模型自己补一个默认值继续执行。</p>\n\n<p>验收时建议直接围绕故障场景做判断。空反馈应回到补充输入，而不是生成泛泛的结论；历史记录服务不可用时，可以提示“缺少历史匹配”但不能伪造引用；没有证据的方案不能进入提交步骤；用户拒绝后不得发起写请求；网络超时后必须先按幂等键查询已有结果；成功返回则必须包含记录 ID 和可访问链接。这样的验收描述同时覆盖用户体验和服务端行为，比“任务成功率达到多少”更接近真实风险。</p>\n\n<p>这个案例中，产品经理通过定义任务、工具、权限、结果和验收标准，参与了 Agent 的技术方案设计，而不是只描述一个聊天页面。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"608\" src=\"https://i-blog.csdnimg.cn/img_convert/507d104aac8c4dbc178c4468879728cf.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-十-产品经理的交付物-需要围绕关键业务动作\">十、产品经理的交付物：需要围绕关键业务动作<a class=\"heading-anchor\" href=\"#section-十-产品经理的交付物-需要围绕关键业务动作\" aria-label=\"链接到本节：十、产品经理的交付物：需要围绕关键业务动作\">#</a></h3>\n\n<p>Agent 需求经常失败在一个很朴素的地方：文档里写了用户要什么，却没有写清系统在不确定条件下该怎么做。研发只能把判断塞进 Prompt，测试也只能凭感觉点几轮。更有效的交付不是六张独立的清单，而是一张围绕关键业务动作展开的任务卡。</p>\n\n<p>以“提交建议到目标工作系统”这个动作为例，任务应把以下内容写在同一个上下文中：任务要解决哪类用户问题，哪些输入是可信来源，必须经过哪些前置步骤，读取和写入分别可以访问哪些系统，什么情况下暂停等待人确认，外部接口超时后如何避免重复提交，最终要返回什么资源标识，以及哪些反例必须在测试中覆盖。这样研发看到的是一个可实现的闭环，不是一组被拆散的名词。</p>\n\n<p>可以用下面的模板审查一张任务卡是否足够完整：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"519\" src=\"https://i-blog.csdnimg.cn/img_convert/39f7301ce10188d5f77f5f38144eb8a5.png\" width=\"1032\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>产品经理越早补齐这些问题，研发越容易选择合适的执行模型、工具协议和存储方式，测试也越容易建立稳定的回归样本。这里的目标不是让产品经理承担实现细节，而是避免关键业务判断在实现后期才以补丁形式出现。</p>\n\n<h3 id=\"section-十一-总结-从功能需求到-agent-系统契约\">十一、总结：从功能需求到 Agent 系统契约<a class=\"heading-anchor\" href=\"#section-十一-总结-从功能需求到-agent-系统契约\" aria-label=\"链接到本节：十一、总结：从功能需求到 Agent 系统契约\">#</a></h3>\n\n<p>Agent 产品的技术设计，不能停留在 Prompt、模型和聊天界面。真正需要被设计的是一条业务动作链：任务的输入和完成条件先被固定下来，再拆成带依赖关系的步骤；每个步骤只能通过有 Schema、权限和副作用约束的工具执行；结果以可追溯的结构化协议交付；异常、重试和验证则保证这条链在不确定环境下仍然可控。</p>\n\n<p>这不意味着产品经理要替研发决定存储引擎或调度框架。产品经理要负责的是把那些不能靠模型自由发挥的判断提前说清楚：一条需求建议何时算完成，哪些来源可以作为证据，什么范围内允许写入业务系统，用户拒绝或接口超时后应当发生什么，以及哪些反例必须被测试拦住。研发据此选择实现方式，测试据此建立回归样本，双方都不必在上线前再通过补规则修正业务边界。</p>\n\n<p>最终，Agent 产品的竞争力不只是模型回答得是否自然，还要能把复杂工作稳定地转化为可执行、可追溯、可验证的业务结果。好的 Agent 需求，是先把不能出错的业务边界写进任务、工具和验证规则。</p>\n\n<p><em>注：本文插图和部分代码由ai辅助生成</em></p>",
+    "headings": [
+      {
+        "id": "section-一-agent-产品为什么需要技术建模",
+        "level": 3,
+        "text": "一、Agent 产品为什么需要技术建模"
+      },
+      {
+        "id": "section-二-从用户目标到-agent-workflow",
+        "level": 3,
+        "text": "二、从用户目标到 Agent Workflow"
+      },
+      {
+        "id": "section-三-任务模型-不要只设计一轮对话",
+        "level": 3,
+        "text": "三、任务模型：不要只设计一轮对话"
+      },
+      {
+        "id": "section-四-工具设计-产品经理要定义工具契约",
+        "level": 3,
+        "text": "四、工具设计：产品经理要定义工具契约"
+      },
+      {
+        "id": "section-4-1-输入校验-输出校验和错误码必须分层",
+        "level": 3,
+        "text": "4.1 输入校验、输出校验和错误码必须分层"
+      },
+      {
+        "id": "section-4-2-工具描述是约束接口",
+        "level": 3,
+        "text": "4.2 工具描述是约束接口"
+      },
+      {
+        "id": "section-五-权限与副作用-用风险等级设计审批",
+        "level": 3,
+        "text": "五、权限与副作用：用风险等级设计审批"
+      },
+      {
+        "id": "section-六-结果协议-从文本回答到结构化交付",
+        "level": 3,
+        "text": "六、结果协议：从文本回答到结构化交付"
+      },
+      {
+        "id": "section-七-失败处理-重试-恢复与幂等性设计",
+        "level": 3,
+        "text": "七、失败处理：重试、恢复与幂等性设计"
+      },
+      {
+        "id": "section-7-1-重试策略必须区分读-写与模型生成",
+        "level": 3,
+        "text": "7.1 重试策略必须区分读、写与模型生成"
+      },
+      {
+        "id": "section-7-2-幂等键应表达业务动作",
+        "level": 3,
+        "text": "7.2 幂等键应表达业务动作"
+      },
+      {
+        "id": "section-八-可观测性与验收-监控不能替代验证",
+        "level": 3,
+        "text": "八、可观测性与验收：监控不能替代验证"
+      },
+      {
+        "id": "section-九-案例-反馈分析-agent-的技术设计",
+        "level": 3,
+        "text": "九、案例：反馈分析 Agent 的技术设计"
+      },
+      {
+        "id": "section-9-1-业务目标",
+        "level": 3,
+        "text": "9.1 业务目标"
+      },
+      {
+        "id": "section-9-2-任务流程",
+        "level": 3,
+        "text": "9.2 任务流程"
+      },
+      {
+        "id": "section-9-3-工具列表",
+        "level": 3,
+        "text": "9.3 工具列表"
+      },
+      {
+        "id": "section-9-4-权限-结果与校验如何落到一条链路上",
+        "level": 3,
+        "text": "9.4 权限、结果与校验如何落到一条链路上"
+      },
+      {
+        "id": "section-十-产品经理的交付物-需要围绕关键业务动作",
+        "level": 3,
+        "text": "十、产品经理的交付物：需要围绕关键业务动作"
+      },
+      {
+        "id": "section-十一-总结-从功能需求到-agent-系统契约",
+        "level": 3,
+        "text": "十一、总结：从功能需求到 Agent 系统契约"
+      }
+    ],
+    "textLength": 10438,
+    "readingMinutes": 24,
+    "sourceId": "vivo-csdn",
+    "sourceUrl": "https://blog.csdn.net/vivo_tech/article/details/170139804",
+    "ruleId": "csdn",
+    "ruleVersion": "3",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "313833560645b2fd6721c0dfd7a92b1c490f15ca9ccf029fea6f10791f4ab8e3",
+    "fetchedAt": "2026-11-06T03:27:14.441Z",
+    "checkedAt": "2026-11-06T03:27:14.441Z",
+    "nextRetryAt": "2026-12-06T03:27:14.441Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
+  }
+}

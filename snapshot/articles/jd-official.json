@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -100,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -162,6 +162,47 @@
       "duplicateCandidates": []
     },
     {
+      "id": "671bfa0751fc07524a30",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "contentType": "blog",
+      "title": "从“会生成”到“能生产”：萤火虫 AIGC 平台的 AI Infra 实践",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/23559045",
+      "author": "jcloud",
+      "description": "引言：从一次内容请求到一套生产系统 很多 AIGC 产品最初都从一个聊天窗口开始：用户输入需求，模型返回文本、图片或其他内容。但当生成结果真正进入内容生产，问题就不再是一次模型调用能否成功，而是多种能力能否被稳定地组织起来，持续完成内容生成和交付。 萤火虫是面向内容生产的 AIGC 平台，包含内容",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-05T05:29:00.000Z",
+      "discoveredAt": "2026-11-06T03:27:07.781Z",
+      "updatedAt": "2026-11-06T03:27:07.781Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "23559045",
+          "url": "https://www.cnblogs.com/Jcloud/p/23559045",
+          "listingHash": "9b4603551bf5fb590b16415d55819df07208d8e7f29e4be6746d7ed40bbd75d9"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "766b04863a4b81bdbf81",
       "publisherId": "jd-official",
       "companyId": "jd",
@@ -180,7 +221,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +261,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -260,7 +301,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -301,7 +342,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -341,7 +382,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -381,7 +422,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -421,7 +462,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -461,7 +502,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",

@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "671bfa0751fc07524a30",
+    "status": "ready",
+    "html": "\n<h2 id=\"section-引言-从一次内容请求到一套生产系统\"><span id=\"article-anchor-2\">引言：从一次内容请求到一套生产系统</span><a class=\"heading-anchor\" href=\"#section-引言-从一次内容请求到一套生产系统\" aria-label=\"链接到本节：引言：从一次内容请求到一套生产系统\">#</a></h2>\n<p id=\"article-anchor-3\"><span id=\"article-anchor-4\">很多 AIGC 产品最初都从一个聊天窗口开始：用户输入需求，模型返回文本、图片或其他内容。但当生成结果真正进入内容生产，问题就不再是一次模型调用能否成功，而是多种能力能否被稳定地组织起来，持续完成内容生成和交付。</span></p>\n<p id=\"article-anchor-5\"><span id=\"article-anchor-6\">萤火虫是面向内容生产的 AIGC 平台，包含内容 Agent、Workflow、生产模板、模型能力和浏览器操作等多种使用方式。用户可以通过对话、工作流或模板组织内容生产，也可以结合萤火虫浏览器扩展完成网页操作、内容发布和多平台分发。</span></p>\n<p id=\"article-anchor-7\"><span id=\"article-anchor-8\">对用户来说，一次请求可能只是“帮我生成一篇商品图文内容”；对平台来说，它背后需要完成知识库检索、图片理解、模型推理、文案生成、结果加工和内容交付。不同环节依赖不同的模型、数据和计算资源，还需要被编排成一条可以执行和观察的任务链路。</span></p>\n<p id=\"article-anchor-9\"><span id=\"article-anchor-10\">因此，萤火虫平台的 AI Infra 关注的不只是模型能否生成结果，而是模型、数据、任务和算力如何协同，最终形成一套能够稳定运行的内容生产系统。</span></p>\n<h2 id=\"section-一-为什么内容生产需要-ai-infra\"><span id=\"article-anchor-12\">一、为什么内容生产需要 AI Infra</span><a class=\"heading-anchor\" href=\"#section-一-为什么内容生产需要-ai-infra\" aria-label=\"链接到本节：一、为什么内容生产需要 AI Infra\">#</a></h2>\n<p id=\"article-anchor-13\"><span id=\"article-anchor-14\">AIGC 从单次生成走向规模化内容生产后，系统需要解决四类核心工程问题。</span></p>\n<div id=\"article-anchor-15\"><span>1.<span id=\"article-anchor-16\"><span><span><span>能力如何被组织<span id=\"article-anchor-17\"><span><span>：一次内容生产往往包含知识库检索、商品解析、图片理解、生图、文案生成和结果加工等多个步骤。模型和算法能力如果仍以独立服务或临时脚本存在，很难被统一组合、复用和管理。</span></span></span></span></span></span></span></span></div>\n<div id=\"article-anchor-18\"><span>2.<span id=\"article-anchor-19\"><span><span><span>任务如何被执行<span id=\"article-anchor-20\"><span><span>：在线请求关注响应速度，批量生产关注吞吐，海量素材处理关注资源弹性。CPU 预处理、GPU 推理和高初始化成本模型也具有不同的运行特征，单一执行方式无法同时覆盖这些场景。</span></span></span></span></span></span></span></span></div>\n<div id=\"article-anchor-21\"><span>3.<span id=\"article-anchor-22\"><span><span><span>数据如何支撑模型效果<span id=\"article-anchor-23\"><span><span>：模型输出不仅取决于模型本身，还取决于素材质量、特征是否完整，以及能否检索到合适的多模态素材。原始多模态数据需要先被加工、治理和沉淀，才能成为生产阶段可直接使用的输入。</span></span></span></span></span></span></span></span></div>\n<div id=\"article-anchor-24\"><span>4.<span id=\"article-anchor-25\"><span><span><span>长链路如何被观察<span id=\"article-anchor-26\"><span><span>：一个任务由多个算子组成。发生异常时，平台需要知道任务执行到了哪里、哪个算子失败，以及对应的日志和失败原因。</span></span></span></span></span></span></span></span></div>\n<p id=\"article-anchor-27\"><span id=\"article-anchor-28\">为此，平台需要用统一的方式组织模型和算法能力，根据任务特征选择执行引擎，将原始多模态素材加工为可检索的数据，并建立覆盖工作流的观测能力。这些能力共同构成了面向内容生产的 AI Infra。</span></p>\n<h2 id=\"section-二-整体架构-统一编排-差异化执行\"><span id=\"article-anchor-30\">二、整体架构：统一编排，差异化执行</span><a class=\"heading-anchor\" href=\"#section-二-整体架构-统一编排-差异化执行\" aria-label=\"链接到本节：二、整体架构：统一编排，差异化执行\">#</a></h2>\n<p id=\"article-anchor-31\">&nbsp;</p>\n<div id=\"article-anchor-32\"><img alt=\"\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-08-28-16-55e4xpIAoPU66Q6qh.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></div>\n<span><span><span><span><br></span></span></span></span>\n<p>&nbsp;</p>\n<p id=\"article-anchor-33\"><span id=\"article-anchor-34\">整体架构围绕两条相互协同的链路展开。内容生产链路从萤火虫业务层开始：业务侧通过 Agent、Workflow 和生产模板选择并组合 AIGC 能力，平台层将这些能力解析为可执行的 Pipeline/DAG，再根据任务特征调度到 Ray Serve、Ray Data 或 Spark/Flink 等执行引擎。</span></p>\n<p id=\"article-anchor-35\"><span id=\"article-anchor-36\">另一条是多模态数据处理链路。图片、视频等原始素材进入 Lance 多模态表，由弹性算力完成推理打标、内容理解、特征处理和清洗，推理结果、标签和特征等数据回写并沉淀在湖仓中，经过筛选的合格素材再进入图片 / 视频知识库，为内容生产提供检索能力。</span></p>\n<p id=\"article-anchor-37\"><span id=\"article-anchor-38\">Trace 横向连接平台层和不同执行引擎，通过 DAG、任务标识、算子标识和日志还原任务的实际执行过程。</span></p>\n<h2 id=\"section-三-平台层-从业务-workflow-到可执行-dag\"><span id=\"article-anchor-40\">三、平台层：从业务 Workflow 到可执行 DAG</span><a class=\"heading-anchor\" href=\"#section-三-平台层-从业务-workflow-到可执行-dag\" aria-label=\"链接到本节：三、平台层：从业务 Workflow 到可执行 DAG\">#</a></h2>\n<p id=\"article-anchor-41\"><span id=\"article-anchor-42\">业务侧组合的是面向生产目标的 Workflow，执行引擎需要的则是可以直接调度的算子和依赖关系。平台层位于两者之间，负责把业务能力描述转换成真实的执行计划：</span></p>\n<p id=\"article-anchor-43\">&nbsp;</p>\n<div id=\"article-anchor-44\"><img alt=\"\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-08-28-16-45nyhb6dCyWPCNibD.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></div>\n\n<span><span><span><span><span><span><span><br></span></span></span></span></span></span></span>\n<p>&nbsp;</p>\n<h3 id=\"section-1-算子管理-把算法能力变成平台执行单元\"><span id=\"article-anchor-46\">1. 算子管理：把算法能力变成平台执行单元</span><a class=\"heading-anchor\" href=\"#section-1-算子管理-把算法能力变成平台执行单元\" aria-label=\"链接到本节：1. 算子管理：把算法能力变成平台执行单元\">#</a></h3>\n<p id=\"article-anchor-47\"><span id=\"article-anchor-48\">算子是平台能够识别和调度的最小能力单元。它可以是一段图片处理逻辑、一个模型推理能力，也可以是对外部服务的标准化调用。平台通过算子管理统一约束输入输出、资源声明、版本、业务参数和依赖环境，使上层 Workflow 不需要了解算法内部如何实现。</span></p>\n<p id=\"article-anchor-49\"><span id=\"article-anchor-50\">模型权重、业务参数、运行配置和核心代码彼此解耦后，同一个能力可以独立升级，也可以根据任务类型进入不同运行方式。算子因此不再是某个需求下的一次性脚本，而是具备契约、版本和资源语义的平台执行单元。</span></p>\n<h3 id=\"section-2-pipeline-dag-把能力组合编译成执行计划\"><span id=\"article-anchor-52\">2. Pipeline/DAG：把能力组合编译成执行计划</span><a class=\"heading-anchor\" href=\"#section-2-pipeline-dag-把能力组合编译成执行计划\" aria-label=\"链接到本节：2. Pipeline/DAG：把能力组合编译成执行计划\">#</a></h3>\n<p id=\"article-anchor-53\"><span id=\"article-anchor-54\">平台将 Workflow 中选择的能力解析成 Pipeline/DAG。DAG 描述算子之间的依赖关系、执行顺序和数据流转：依赖上游结果的节点按顺序执行，没有依赖关系的节点可以并行执行。</span></p>\n<p id=\"article-anchor-55\"><span id=\"article-anchor-56\">上下游之间通过输入输出映射传递数据。下游算子只获取自己需要的字段</span></p>\n<p id=\"article-anchor-57\"><span id=\"article-anchor-58\">，算子输出也可以被筛选、重命名和映射到后续节点，避免不同算法实现直接耦合，也避免中间数据在长链路中无边界地传递。</span></p>\n<h3 id=\"section-3-任务管理-从执行计划进入具体运行时\"><span id=\"article-anchor-60\">3. 任务管理：从执行计划进入具体运行时</span><a class=\"heading-anchor\" href=\"#section-3-任务管理-从执行计划进入具体运行时\" aria-label=\"链接到本节：3. 任务管理：从执行计划进入具体运行时\">#</a></h3>\n<p id=\"article-anchor-61\"><span id=\"article-anchor-62\">DAG 生成后，平台创建对应任务，并关联本次运行所使用的 Workflow、算子版本、业务配置和资源要求。任务管理提供任务提交、运行配置和状态查看等入口，统一编排 DSL 则负责描述任务并选择执行后端。</span></p>\n<p id=\"article-anchor-63\"><span id=\"article-anchor-64\">平台统一的是任务、算子和数据流转语义，运行时可以保持差异。在线模型服务、离线批量推理和多模态数据处理分别进入 Ray Serve、Ray Data 和弹性算力。</span></p>\n<h2 id=\"section-四-执行体系-实时-批量与弹性\"><span id=\"article-anchor-66\">四、执行体系：实时、批量与弹性</span><a class=\"heading-anchor\" href=\"#section-四-执行体系-实时-批量与弹性\" aria-label=\"链接到本节：四、执行体系：实时、批量与弹性\">#</a></h2>\n<p id=\"article-anchor-67\"><span id=\"article-anchor-68\">不同 AIGC 任务对延迟、吞吐、模型生命周期和计算资源的要求差异明显。萤火虫没有用一种运行方式承接所有任务，而是在统一任务语义之下，根据任务特征选择实时、批量或弹性执行路径。</span></p>\n<p id=\"article-anchor-69\">&nbsp;</p>\n<div id=\"article-anchor-70\"><img alt=\"\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-08-28-16-45CWhJZRQYUVabE0M.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></div>\n\n<span><span><span><span><span><span><span><span><span><span><br></span></span></span></span></span></span></span></span></span></span>\n<p>&nbsp;</p>\n<h3 id=\"section-1-为什么选择-ray\"><span id=\"article-anchor-72\">1. 为什么选择 Ray</span><a class=\"heading-anchor\" href=\"#section-1-为什么选择-ray\" aria-label=\"链接到本节：1. 为什么选择 Ray\">#</a></h3>\n<p id=\"article-anchor-73\"><span id=\"article-anchor-74\">Ray 同时提供 Task、Actor 和服务化模型实例三种重要抽象。普通无状态计算可以作为 Task 执行，需要保持状态或复用模型实例的计算可以由 Actor 承载，在线模型则可以通过 Ray Serve 以服务副本方式运行。这些抽象能够匹配 AI 任务中模型初始化成本高、运行时间长、资源类型复杂的特点。</span></p>\n<p id=\"article-anchor-75\"><span id=\"article-anchor-76\">对于以 Python 为主的模型和算法算子，Ray 还提供了统一的资源语义。算子可以声明 CPU、GPU、内存、并发度和机器标签等要求，调度时再将图片预处理、文本处理和 GPU 推理放到合适的资源节点。在线与离线任务共享一套分布式执行体系，但分别采用 Ray Serve 和 Ray Data 的运行模型。</span></p>\n<p id=\"article-anchor-77\"><span id=\"article-anchor-78\">Ray 的价值并不只是单点推理性能，而是将模型运行、服务副本、资源调度和分布式数据处理组织在同一套体系中，为上层 Pipeline 提供一致的执行接口。</span></p>\n<h3 id=\"section-2-ray-serve-管理在线模型服务的生命周期\"><span id=\"article-anchor-80\">2. Ray Serve：管理在线模型服务的生命周期</span><a class=\"heading-anchor\" href=\"#section-2-ray-serve-管理在线模型服务的生命周期\" aria-label=\"链接到本节：2. Ray Serve：管理在线模型服务的生命周期\">#</a></h3>\n<p id=\"article-anchor-81\"><span id=\"article-anchor-82\">实时任务由自研调度引擎统一调度，并通过 HTTP 接口调用 Ray Serve 中部署的算子。Serve 主要提供三个方面的能力：</span></p>\n<div id=\"article-anchor-83\"><span>1.<span id=\"article-anchor-84\"><span><span><span>模型常驻与服务副本<span id=\"article-anchor-85\"><span><span>：模型和算子提前加载在常驻实例中，避免每次请求重复初始化。不同服务可以独立配置副本数量、CPU/GPU 资源和并发能力，单个模型的资源变化不需要带动整条 Workflow 一起扩容。</span></span></span></span></span></span></span></span></div>\n<div id=\"article-anchor-86\"><span>2.<span id=\"article-anchor-87\"><span><span><span>滚动部署与自动扩缩容<span id=\"article-anchor-88\"><span><span>：模型或算子发布新版本时，Serve 支持逐步切换服务实例，降低版本切换对在线请求的影响；同时具备根据服务负载调整副本数量的能力，用于适应请求的波峰波谷。</span></span></span></span></span></span></span></span></div>\n<div id=\"article-anchor-89\"><span>3.<span id=\"article-anchor-90\"><span><span><span>平台编排与模型运行解耦<span id=\"article-anchor-91\"><span><span>：自研调度引擎负责任务编排和请求调度，Ray Serve 负责模型加载、服务副本、请求分发和运行资源。两者通过稳定的 HTTP 接口连接，为后续多模型协同和复杂 Workflow 留出扩展空间。</span></span></span></span></span></span></span></span></div>\n<h3 id=\"section-3-ray-data-面向模型推理的离线批处理\"><span id=\"article-anchor-93\">3. Ray Data：面向模型推理的离线批处理</span><a class=\"heading-anchor\" href=\"#section-3-ray-data-面向模型推理的离线批处理\" aria-label=\"链接到本节：3. Ray Data：面向模型推理的离线批处理\">#</a></h3>\n<p id=\"article-anchor-94\"><span id=\"article-anchor-95\">批量内容生产采用 Ray Data 进行离线推理和分布式数据处理。待处理数据以 Dataset 组织，并被分发到不同模型实例上执行；读取、推理和结果写出则被串成连续的数据处理流程。相比逐条调用模型，这种运行方式更适合以 Python 模型为主的大规模批量推理。</span></p>\n<div id=\"article-anchor-96\"><span>1.<span id=\"article-anchor-97\"><span><span><span>模型实例复用<span id=\"article-anchor-98\"><span><span>：模型算子以长生命周期 Actor 运行，模型在 Actor 初始化时加载一次，后续可以持续处理多个数据批次。Actor Pool 负责维护一组可复用的模型实例，降低图片和多模态模型反复初始化的成本。</span></span></span></span></span></span></span></span></div>\n<div id=\"article-anchor-99\"><span>2.<span id=\"article-anchor-100\"><span><span><span>批量推理与资源协同<span id=\"article-anchor-101\"><span><span>：<span id=\"article-anchor-102\"><span><code><span>map_batches</span></code><span id=\"article-anchor-103\"><span><span> 将一批数据交给模型实例集中处理，减少逐条调用产生的调度开销，也更符合 GPU 推理的执行方式。不同算子可以分别配置批大小（batch size）、并发度、CPU/GPU、内存和机器标签，在吞吐、显存占用和资源隔离之间进行调整。</span></span></span></span></span></span></span></span></span></span></span></span></span></div>\n<div id=\"article-anchor-104\"><span>3.<span id=\"article-anchor-105\"><span><span><span>Pipeline 化并行执行<span id=\"article-anchor-106\"><span><span>：数据读取、模型处理和结果写出可以随着数据流动并行推进；长链路中没有依赖关系的图片理解、属性提取等分支也可以并行执行，完成后再合并结果。</span></span></span></span></span></span></span></span></div>\n<blockquote id=\"article-anchor-107\"><span id=\"article-anchor-108\">Ray Data 把离线推理从“循环调用模型”，转变为“面向数据集和模型实例的分布式执行”。</span></blockquote>\n<h3 id=\"section-4-弹性算力\"><span id=\"article-anchor-110\">4. 弹性算力</span><a class=\"heading-anchor\" href=\"#section-4-弹性算力\" aria-label=\"链接到本节：4. 弹性算力\">#</a></h3>\n<p id=\"article-anchor-111\"><span id=\"article-anchor-112\">弹性算力承接多模态数据湖仓中的海量素材处理，包括图片、视频清洗、推理打标、内容理解和特征处理。这类任务通常具有阶段性计算峰值，将其放到独立的弹性资源中，可以减少大规模数据处理对在线内容生成和日常批量生产的资源影响。</span></p>\n<p id=\"article-anchor-113\"><span id=\"article-anchor-114\">这套设计的核心是统一任务语义、差异化运行：平台层统一描述任务，执行引擎分别针对在线延迟、批量吞吐和数据规模优化自己的运行方式。</span></p>\n<h2 id=\"section-五-多模态数据湖仓-从素材治理到数据飞轮\"><span id=\"article-anchor-116\">五、多模态数据湖仓：从素材治理到数据飞轮</span><a class=\"heading-anchor\" href=\"#section-五-多模态数据湖仓-从素材治理到数据飞轮\" aria-label=\"链接到本节：五、多模态数据湖仓：从素材治理到数据飞轮\">#</a></h2>\n<p id=\"article-anchor-117\"><span id=\"article-anchor-118\">模型效果不仅取决于模型本身，还取决于输入数据是否准确、素材是否匹配、上下文是否完整。对于内容生产来说，原始图片和视频需要先经过理解、打标、特征提取和质量清洗，才能成为知识库中可检索、可复用的素材。</span></p>\n<h3 id=\"section-1-为什么选择-lance\"><span id=\"article-anchor-120\">1. 为什么选择 Lance</span><a class=\"heading-anchor\" href=\"#section-1-为什么选择-lance\" aria-label=\"链接到本节：1. 为什么选择 Lance\">#</a></h3>\n<p id=\"article-anchor-121\"><span id=\"article-anchor-122\">多模态数据与传统分析数据具有不同特征。一份素材记录可能同时关联图片或视频、结构化元数据、模型标签、内容理解结果和特征向量；随着算法迭代，同一份数据还会不断增加新的标签、特征和打分列。</span></p>\n<p id=\"article-anchor-123\"><span id=\"article-anchor-124\">Lance 面向 AI 数据访问场景设计，能够用一套表格式统一组织图片、视频、结构化元数据、推理标签、内容理解结果、特征和向量。对我们的多模态素材处理来说，选择 Lance 主要看重三点：</span></p>\n<div id=\"article-anchor-125\"><span>1.<span id=\"article-anchor-126\"><span><span><span>列式组织与按需读取<span id=\"article-anchor-127\"><span><span>：素材元数据、标签、内容理解结果、特征和向量按列组织。处理任务可以只读取需要的字段，适合多模态宽表和持续增加的特征列。</span></span></span></span></span></span></span></span></div>\n<div id=\"article-anchor-128\"><span>2.<span id=\"article-anchor-129\"><span><span><span>素材与推理结果统一关联<span id=\"article-anchor-130\"><span><span>：原始素材、模型推理结果、标签和向量在同一套数据组织中建立关联。算法增加新的特征或处理结果时，可以继续围绕同一份素材数据扩展，减少数据在多个系统之间复制和拼接。</span></span></span></span></span></span></span></span></div>\n<div id=\"article-anchor-131\"><span>3.<span id=\"article-anchor-132\"><span><span><span>向量检索与快速点查<span id=\"article-anchor-133\"><span><span>：既可以根据标签、属性等结构化条件筛选素材，也可以通过向量检索找到语义相近的图片和视频；检索命中后，还可以快速读取对应的素材信息，为可视化筛选和知识库构建提供统一访问路径。</span></span></span></span></span></span></span></span></div>\n<p id=\"article-anchor-134\"><span id=\"article-anchor-135\">因此，Lance 表既是多模态素材的统一承载方式，也是后续批量处理、可视化筛选和知识库构建共用的数据入口。</span></p>\n<h3 id=\"section-2-素材清洗-从素材入湖到知识库构建\"><span id=\"article-anchor-137\">2. 素材清洗：从素材入湖到知识库构建</span><a class=\"heading-anchor\" href=\"#section-2-素材清洗-从素材入湖到知识库构建\" aria-label=\"链接到本节：2. 素材清洗：从素材入湖到知识库构建\">#</a></h3>\n<p id=\"article-anchor-138\"><span id=\"article-anchor-139\">当前多模态数据湖仓围绕素材处理和知识库构建形成一条主链路，同时湖仓可视化平台作为连接 Lance 多模态表的旁路入口，为数据观察和人工操作提供支持：</span></p>\n<p id=\"article-anchor-140\">&nbsp;</p>\n<div id=\"article-anchor-141\"><img alt=\"\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-08-28-16-46uJAuFpyZcLatTkc.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></div>\n\n<span><span><span><span><span><span><span><span><span><span><span><span><span><br></span></span></span></span></span></span></span></span></span></span></span></span></span>\n<p>&nbsp;</p>\n<p id=\"article-anchor-142\"><span id=\"article-anchor-143\">业务、算法和运营人员可以通过可视化平台查看整个湖仓中的素材数据集、推理结果、标签和特征，按照标签、属性和处理结果筛选素材，也可以通过向量检索查找相关数据，用于检查清洗结果、观察数据分布和发现异常样本。经过治理和筛选的合格素材进入图片 / 视频知识库，内容生产任务再从知识库中检索模特、上身图和视频素材。</span></p>\n<p id=\"article-anchor-144\"><span id=\"article-anchor-145\">通过将图片和视频理解、特征提取等高成本处理前置，生产阶段可以直接使用已经治理的多模态素材，减少在线 Workflow 的临时处理压力。</span></p>\n<h3 id=\"section-3-数据飞轮-从数据沉淀到模型与算子迭代\"><span id=\"article-anchor-147\">3. 数据飞轮：从数据沉淀到模型与算子迭代</span><a class=\"heading-anchor\" href=\"#section-3-数据飞轮-从数据沉淀到模型与算子迭代\" aria-label=\"链接到本节：3. 数据飞轮：从数据沉淀到模型与算子迭代\">#</a></h3>\n<p id=\"article-anchor-148\"><span id=\"article-anchor-149\">当前已经建设的能力覆盖素材入湖、弹性处理、结果沉淀、可视化观察和知识库构建。在此基础上，后续希望将内容生产过程中的推理结果和问题样本逐步沉淀下来，形成完整的数据飞轮：</span></p>\n<p id=\"article-anchor-150\">&nbsp;</p>\n<div id=\"article-anchor-151\"><img alt=\"\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-08-28-16-46LtmhBMPs46T6KkFo.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></div>\n\n<span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><br></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>\n<p>&nbsp;</p>\n<p id=\"article-anchor-152\"><span id=\"article-anchor-153\">这条目标链路将数据沉淀、问题分析和模型迭代连接起来，使线上生产过程不再只是消耗模型能力，也能逐步积累下一轮优化所需要的数据。随着这部分能力完善，多模态湖仓可以从当前的素材治理空间，进一步演进为同时服务检索、评测、训练和 Agent 上下文的数据资产空间。</span></p>\n<h2 id=\"section-六-trace-让工作流执行过程可见\"><span id=\"article-anchor-155\">六、Trace：让工作流执行过程可见</span><a class=\"heading-anchor\" href=\"#section-六-trace-让工作流执行过程可见\" aria-label=\"链接到本节：六、Trace：让工作流执行过程可见\">#</a></h2>\n<p id=\"article-anchor-156\"><span id=\"article-anchor-157\">一条内容生产 Pipeline 可能包含多个前后依赖或并行执行的算子。仅依靠分散日志，很难快速判断任务执行到了哪里，以及失败发生在哪个节点。Trace 将 DAG 结构、任务、算子和日志连接起来，形成工作流级的执行视图。</span></p>\n<h3 id=\"section-1-任务-算子与日志的关联机制\"><span id=\"article-anchor-159\">1. 任务、算子与日志的关联机制</span><a class=\"heading-anchor\" href=\"#section-1-任务-算子与日志的关联机制\" aria-label=\"链接到本节：1. 任务、算子与日志的关联机制\">#</a></h3>\n<p id=\"article-anchor-160\"><span id=\"article-anchor-161\">Trace 使用统一标识串联一次任务的执行过程：</span></p>\n<p id=\"article-anchor-162\">&nbsp;</p>\n<div id=\"article-anchor-163\"><img alt=\"\" src=\"https://s3.cn-north-1.jdcloud-oss.com/shendengbucket1/2026-08-28-16-46X46svG0aGRUfdVJ46.png\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></div>\n\n<span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><br></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>\n<p>&nbsp;</p>\n<p id=\"article-anchor-164\"><span id=\"article-anchor-165\"><span><code><span>task_id</span></code><span id=\"article-anchor-166\"> 标识一次完整任务，DAG 提供工作流结构，<span id=\"article-anchor-167\"><span><code><span>operator_id</span></code><span id=\"article-anchor-168\"> 对应流程中的具体算子，<span id=\"article-anchor-169\"><span><code><span>trace_id</span></code><span id=\"article-anchor-170\"> 则将算子与实际运行日志关联。平台可以从任务总览进入 DAG，再从具体节点下钻到相关日志，不需要在多个系统之间手工比对标识。</span></span></span></span></span></span></span></span></span></p>\n<h3 id=\"section-2-可以观察什么\"><span id=\"article-anchor-172\">2. 可以观察什么</span><a class=\"heading-anchor\" href=\"#section-2-可以观察什么\" aria-label=\"链接到本节：2. 可以观察什么\">#</a></h3>\n<p id=\"article-anchor-173\"><span id=\"article-anchor-174\">Trace 可以展示任务和算子是否执行、执行结果是成功还是失败，并在失败时定位具体算子、错误上下文和关联日志。它既服务于业务人员查看任务进度，也帮助算法和平台人员理解长链路任务的实际运行情况。</span></p>\n<p id=\"article-anchor-175\"><span id=\"article-anchor-176\">在现有工作流观测基础上，后续还可以进一步建设任务自动重试、中间结果恢复等运行管理能力。</span></p>\n<h2 id=\"section-结语-让模型-数据和任务在同一套体系中协同\"><span id=\"article-anchor-178\">结语：让模型、数据和任务在同一套体系中协同</span><a class=\"heading-anchor\" href=\"#section-结语-让模型-数据和任务在同一套体系中协同\" aria-label=\"链接到本节：结语：让模型、数据和任务在同一套体系中协同\">#</a></h2>\n<p id=\"article-anchor-179\"><span id=\"article-anchor-180\">萤火虫 AI Infra 围绕多模态内容生产形成了一条清晰的技术链路：平台层将业务 Workflow 转换为可执行 DAG；Ray Serve、Ray Data 和弹性算力让不同任务进入合适的运行方式；Lance 多模态数据湖仓把原始素材加工成知识库可以检索的数据；Trace 则把任务、算子和日志连接成完整的执行视图。</span></p>\n<p id=\"article-anchor-181\"><span id=\"article-anchor-182\">关键不在于堆叠组件，而在于统一编排、差异化执行、数据前置治理和工作流级观测之间形成协作。业务可以持续组合新的 AIGC 能力，平台负责将其转换为标准任务，执行引擎按照任务特征分配资源，多模态数据持续沉淀和演进，任务运行过程也能够被观察和定位。由此，模型能力才能从单点调用走向持续、稳定的内容生产与交付。</span></p>\n<h2 id=\"section-致谢\"><span id=\"article-anchor-184\">致谢</span><a class=\"heading-anchor\" href=\"#section-致谢\" aria-label=\"链接到本节：致谢\">#</a></h2>\n<p id=\"article-anchor-185\"><span id=\"article-anchor-186\">感谢九数团队在 Ray 集群、弹性推理和多模态数据湖仓建设中的大力支持</span></p>\n<p id=\"article-anchor-187\"><span id=\"article-anchor-188\">感谢智流团队，为平台化建设提供强有力的支撑</span></p>\n<h2 id=\"section-写在最后\"><span id=\"article-anchor-190\"><span><span>写在最后</span></span></span><a class=\"heading-anchor\" href=\"#section-写在最后\" aria-label=\"链接到本节：写在最后\">#</a></h2>\n<p id=\"article-anchor-191\"><span id=\"article-anchor-192\">萤火虫平台是面向电商业务的“一站式 AI 内容规模化生产平台”，电商内容生产的基础设施平台，推动商家从单点分散的内容创作，走向平台化、智能化、规模化的协同生产。</span></p>\n<p id=\"article-anchor-193\"><span id=\"article-anchor-194\">平台以商品信息和业务需求为核心，依托创作智能体（Agent）与低代码工作流，打通“商品理解-卖点提炼-批量生成-人工质检-一键发布”全链路。</span></p>\n<p id=\"article-anchor-195\"><span id=\"article-anchor-196\">在内容形态上，平台不仅能高效产出商品主图等标准化素材，更擅长围绕商品构建立体的人物设定、生活场景、故事线及内容风格。通过持续输出真实、多元、极具“活人感”的图文与视频，萤火虫 AI 致力于赋能电商内容生产，推动其从“单次生成”向“一站式、规模化、可持续运营”长效发展。</span></p>\n<p id=\"article-anchor-197\"><span id=\"article-anchor-198\">最后欢迎大家使用萤火虫平台，也欢迎在实际使用过程中多提宝贵意见。无论是产品体验、内容效果，还是工作流和平台能力上的反馈，都会成为我们持续迭代的重要输入。大家的反馈和建议，是我们不断前进、把萤火虫做得更好的最大动力。</span></p>\n<p id=\"article-anchor-199\"><span id=\"article-anchor-200\">平台地址：<a id=\"article-anchor-201\" href=\"https://firefly.jd.com/\" target=\"_blank\" rel=\"noopener noreferrer\">萤火虫AIGC平台</a></span></p>\n\n",
+    "headings": [
+      {
+        "id": "section-引言-从一次内容请求到一套生产系统",
+        "level": 2,
+        "text": "引言：从一次内容请求到一套生产系统"
+      },
+      {
+        "id": "section-一-为什么内容生产需要-ai-infra",
+        "level": 2,
+        "text": "一、为什么内容生产需要 AI Infra"
+      },
+      {
+        "id": "section-二-整体架构-统一编排-差异化执行",
+        "level": 2,
+        "text": "二、整体架构：统一编排，差异化执行"
+      },
+      {
+        "id": "section-三-平台层-从业务-workflow-到可执行-dag",
+        "level": 2,
+        "text": "三、平台层：从业务 Workflow 到可执行 DAG"
+      },
+      {
+        "id": "section-1-算子管理-把算法能力变成平台执行单元",
+        "level": 3,
+        "text": "1. 算子管理：把算法能力变成平台执行单元"
+      },
+      {
+        "id": "section-2-pipeline-dag-把能力组合编译成执行计划",
+        "level": 3,
+        "text": "2. Pipeline/DAG：把能力组合编译成执行计划"
+      },
+      {
+        "id": "section-3-任务管理-从执行计划进入具体运行时",
+        "level": 3,
+        "text": "3. 任务管理：从执行计划进入具体运行时"
+      },
+      {
+        "id": "section-四-执行体系-实时-批量与弹性",
+        "level": 2,
+        "text": "四、执行体系：实时、批量与弹性"
+      },
+      {
+        "id": "section-1-为什么选择-ray",
+        "level": 3,
+        "text": "1. 为什么选择 Ray"
+      },
+      {
+        "id": "section-2-ray-serve-管理在线模型服务的生命周期",
+        "level": 3,
+        "text": "2. Ray Serve：管理在线模型服务的生命周期"
+      },
+      {
+        "id": "section-3-ray-data-面向模型推理的离线批处理",
+        "level": 3,
+        "text": "3. Ray Data：面向模型推理的离线批处理"
+      },
+      {
+        "id": "section-4-弹性算力",
+        "level": 3,
+        "text": "4. 弹性算力"
+      },
+      {
+        "id": "section-五-多模态数据湖仓-从素材治理到数据飞轮",
+        "level": 2,
+        "text": "五、多模态数据湖仓：从素材治理到数据飞轮"
+      },
+      {
+        "id": "section-1-为什么选择-lance",
+        "level": 3,
+        "text": "1. 为什么选择 Lance"
+      },
+      {
+        "id": "section-2-素材清洗-从素材入湖到知识库构建",
+        "level": 3,
+        "text": "2. 素材清洗：从素材入湖到知识库构建"
+      },
+      {
+        "id": "section-3-数据飞轮-从数据沉淀到模型与算子迭代",
+        "level": 3,
+        "text": "3. 数据飞轮：从数据沉淀到模型与算子迭代"
+      },
+      {
+        "id": "section-六-trace-让工作流执行过程可见",
+        "level": 2,
+        "text": "六、Trace：让工作流执行过程可见"
+      },
+      {
+        "id": "section-1-任务-算子与日志的关联机制",
+        "level": 3,
+        "text": "1. 任务、算子与日志的关联机制"
+      },
+      {
+        "id": "section-2-可以观察什么",
+        "level": 3,
+        "text": "2. 可以观察什么"
+      },
+      {
+        "id": "section-结语-让模型-数据和任务在同一套体系中协同",
+        "level": 2,
+        "text": "结语：让模型、数据和任务在同一套体系中协同"
+      },
+      {
+        "id": "section-致谢",
+        "level": 2,
+        "text": "致谢"
+      },
+      {
+        "id": "section-写在最后",
+        "level": 2,
+        "text": "写在最后"
+      }
+    ],
+    "textLength": 6126,
+    "readingMinutes": 14,
+    "sourceId": "jd-cnblogs",
+    "sourceUrl": "https://www.cnblogs.com/Jcloud/p/23559045",
+    "ruleId": "cnblogs",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "0acd28d65e6e04a56252d327ef39f255a1a51e2cd5c70251b8c7ce9724bfe5f9",
+    "fetchedAt": "2026-11-06T03:27:14.404Z",
+    "checkedAt": "2026-11-06T03:27:14.404Z",
+    "nextRetryAt": "2026-12-06T03:27:14.404Z",
+    "warnings": []
+  }
+}

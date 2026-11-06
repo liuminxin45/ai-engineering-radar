@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -82,6 +82,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "11601664c5423b6050a9",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "contentType": "blog",
+      "title": "面向技术产品经理的 Agent Harness 设计：从任务编排到可验证交付",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/170139804",
+      "author": "vivo_tech",
+      "description": "面向产品经理的 Agent Harness 设计指南：把用户目标转化为可执行任务、工具契约、权限策略、结构化结果和可验收的工程系统。 产品经理在设计 Agent 产品时，不仅仅只写 Prompt、页面和最终输出，还要参与定义 Agent 如何执行任务、调用工具、控制权限、处理失败并交付结果。",
+      "publishedAt": "2026-11-05T06:39:04.000Z",
+      "discoveredAt": "2026-11-06T03:27:06.701Z",
+      "updatedAt": "2026-11-06T03:27:06.701Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/170139804",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/170139804",
+          "listingHash": "4fbf60f21bfeb12eee64e76ddc0f8821e04140b924c8a5f3ec9fd5144dc7f22f"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "1a2b8522d993a09cd6b9",
       "publisherId": "vivo-tech",
       "companyId": "vivo",
@@ -100,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -180,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -260,7 +300,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -300,7 +340,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -340,7 +380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -380,7 +420,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -420,7 +460,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -460,7 +500,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -500,7 +540,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -540,7 +580,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -580,7 +620,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -620,7 +660,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -660,7 +700,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -682,6 +722,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "da275c47b4b9587c9770",
+      "publisherId": "vivo-tech",
+      "companyId": "vivo",
+      "contentType": "blog",
+      "title": "把 Agent 的判断与行动变成可恢复的软件事实｜KDC 系列 工程篇",
+      "canonicalUrl": "https://blog.csdn.net/vivo_tech/article/details/170140515",
+      "author": "vivo_tech",
+      "description": "本文区分领域现实、业务判断事实和软件运行事实，提出业务因果链与运行事实链的双链结构；进一步将 Session、Harness 与执行环境解耦，区分 Session、Context、State、Memory 和 Knowledge，并以 Resume Contract、Progress Contract 与 Evaluation Contract 说明一次 Agent 运行如何被恢复、交接、验证和持续演进。",
+      "publishedAt": "2026-11-05T07:04:17.000Z",
+      "discoveredAt": "2026-11-06T03:27:06.701Z",
+      "updatedAt": "2026-11-06T03:27:06.701Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "vivo-csdn",
+          "externalId": "https://blog.csdn.net/vivo_tech/article/details/170140515",
+          "url": "https://blog.csdn.net/vivo_tech/article/details/170140515",
+          "listingHash": "a4b7898e5c08c4baca560b260304ab1582c47a98ee5e14fccafb788e2effade9"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "e02cc544c7bb621f6397",
       "publisherId": "vivo-tech",
       "companyId": "vivo",
@@ -700,7 +780,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -740,7 +820,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -780,7 +860,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-04T10:46:59.960Z"
+        "classifiedAt": "2026-11-06T03:27:11.409Z"
       },
       "advertorial": {
         "status": "unmarked",
