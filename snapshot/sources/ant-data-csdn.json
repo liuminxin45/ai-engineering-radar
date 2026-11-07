@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "ant-data-csdn",
-    "lastCheckedAt": "2026-11-06T07:56:33.848Z",
-    "lastSuccessAt": "2026-11-06T07:56:33.848Z",
-    "nextRunAt": "2026-11-07T07:56:33.848Z",
+    "lastCheckedAt": "2026-11-07T07:10:59.211Z",
+    "lastSuccessAt": "2026-11-07T07:10:59.211Z",
+    "nextRunAt": "2026-11-08T07:10:59.211Z",
     "consecutiveFailures": 0,
     "etag": "\"1df2c92472aa8cd3722ff108a271aaffb225e99f9a9cffc07ddec37225393889\"",
     "status": "not-modified",
