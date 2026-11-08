@@ -43,6 +43,15 @@ const calendar = new Intl.DateTimeFormat("zh-CN", {
   timeZone: "Asia/Shanghai",
 });
 const day = (value: string) => calendar.format(new Date(value));
+const snapshotTime = new Intl.DateTimeFormat("zh-CN", {
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  hourCycle: "h23",
+  timeZone: "Asia/Shanghai",
+}).format(new Date(site.generatedAt));
 
 export function ArticleBoard() {
   const [query, setQuery] = useState<BoardQuery>(initialBoardQuery);
@@ -295,26 +304,7 @@ export function ArticleBoard() {
           </div>
           <span className={styles.sync}>
             <span>更新于</span>
-            <time dateTime={site.generatedAt}>
-              <span className={styles.fullTime}>
-                {new Date(site.generatedAt).toLocaleString("zh-CN", {
-                  month: "2-digit",
-                  day: "2-digit",
-                  hour: "2-digit",
-                  minute: "2-digit",
-                  hour12: false,
-                  timeZone: "Asia/Shanghai",
-                })}
-              </span>
-              <span className={styles.shortTime}>
-                {new Date(site.generatedAt).toLocaleTimeString("zh-CN", {
-                  hour: "2-digit",
-                  minute: "2-digit",
-                  hour12: false,
-                  timeZone: "Asia/Shanghai",
-                })}
-              </span>
-            </time>
+            <time dateTime={site.generatedAt}>{snapshotTime}</time>
           </span>
         </div>
       </header>
