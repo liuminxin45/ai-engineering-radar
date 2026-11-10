@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -59,7 +59,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -99,7 +99,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -120,6 +120,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "073e6318f89775eb9193",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "contentType": "blog",
+      "title": "阿里云发布 AgenticOps 全栈能力，让 Agent 成为运维与研发的第一用户",
+      "canonicalUrl": "https://developer.aliyun.com/article/1781549",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-09T16:00:00.000Z",
+      "discoveredAt": "2026-11-10T08:26:44.803Z",
+      "updatedAt": "2026-11-10T08:26:44.803Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-apphub",
+          "externalId": "1781549",
+          "url": "https://developer.aliyun.com/article/1781549",
+          "listingHash": "7e042aa73117729397d97d35354aaeb1222fecc5f3bbdc8f981a7eef62ea215b"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "0766db56268f9a54c5b8",
       "publisherId": "aliyun-cloud-native",
       "companyId": "alibaba",
@@ -138,7 +178,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -178,7 +218,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -217,7 +257,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -257,7 +297,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -296,7 +336,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -335,7 +375,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -374,7 +414,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -413,7 +453,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -453,7 +493,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -493,7 +533,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -533,7 +573,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -572,7 +612,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -612,7 +652,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -651,7 +691,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -691,7 +731,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -731,7 +771,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -771,7 +811,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -811,7 +851,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -850,7 +890,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -889,7 +929,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -929,7 +969,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -968,7 +1008,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1007,7 +1047,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1046,7 +1086,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1086,7 +1126,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "suspected",
@@ -1130,7 +1170,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1169,7 +1209,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1208,7 +1248,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1247,7 +1287,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1286,7 +1326,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1326,7 +1366,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1365,7 +1405,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1405,7 +1445,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1445,7 +1485,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1484,7 +1524,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1524,7 +1564,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1564,7 +1604,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1604,7 +1644,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1643,7 +1683,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1682,7 +1722,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1723,7 +1763,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1763,7 +1803,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1803,7 +1843,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1843,7 +1883,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1882,7 +1922,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1921,7 +1961,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1961,7 +2001,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2000,7 +2040,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2040,7 +2080,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2080,7 +2120,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2120,7 +2160,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2159,7 +2199,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2199,7 +2239,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2239,7 +2279,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2279,7 +2319,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2318,7 +2358,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2358,7 +2398,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2398,7 +2438,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2438,7 +2478,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2478,7 +2518,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2518,7 +2558,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2557,7 +2597,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2597,7 +2637,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2637,7 +2677,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2677,7 +2717,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2717,7 +2757,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2756,7 +2796,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2796,7 +2836,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2835,7 +2875,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2875,7 +2915,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2915,7 +2955,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2955,7 +2995,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2994,7 +3034,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3033,7 +3073,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3072,7 +3112,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3112,7 +3152,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3151,7 +3191,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3190,7 +3230,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3231,7 +3271,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3270,7 +3310,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3309,7 +3349,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3349,7 +3389,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3389,7 +3429,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3428,7 +3468,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3468,7 +3508,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3507,7 +3547,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3546,7 +3586,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3585,7 +3625,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3625,7 +3665,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3664,7 +3704,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3703,7 +3743,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3742,7 +3782,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3781,7 +3821,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3821,7 +3861,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3860,7 +3900,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3899,7 +3939,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3939,7 +3979,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "insufficient",

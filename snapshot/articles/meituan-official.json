@@ -19,7 +19,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -58,7 +58,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -97,7 +97,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -136,7 +136,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -158,6 +158,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "334657a119fb5bacd6ba",
+      "publisherId": "meituan-official",
+      "companyId": "meituan",
+      "contentType": "blog",
+      "title": "美团 LongCat-2.5 正式开源：从看见，到抵达",
+      "canonicalUrl": "https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html",
+      "description": "美团正式开源 LongCat-2.5，采用MIT协议，支持商用推理部署与二次训练，无需额外授权。",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-09T16:00:00.000Z",
+      "discoveredAt": "2026-11-10T08:26:42.215Z",
+      "updatedAt": "2026-11-10T08:26:42.215Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "meituan",
+          "externalId": "https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html",
+          "url": "https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html",
+          "listingHash": "1f6d473c4cb7f9de15f1ed26517791232dc83b9e8b37ceaddbb057445df7fd07"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "4065906b9056ddb2e87e",
       "publisherId": "meituan-official",
       "companyId": "meituan",
@@ -175,7 +215,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -214,7 +254,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -254,7 +294,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -293,7 +333,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -332,7 +372,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -371,7 +411,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -410,7 +450,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-08T07:19:56.797Z"
+        "classifiedAt": "2026-11-10T08:26:48.270Z"
       },
       "advertorial": {
         "status": "unmarked",
