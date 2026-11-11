@@ -19,7 +19,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -58,7 +58,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -97,7 +97,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -136,7 +136,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -176,7 +176,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -187,15 +195,7 @@
           "listingHash": "1f6d473c4cb7f9de15f1ed26517791232dc83b9e8b37ceaddbb057445df7fd07"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "4065906b9056ddb2e87e",
@@ -215,7 +215,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -254,7 +254,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -294,7 +294,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -333,7 +333,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -372,7 +372,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -411,7 +411,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -450,7 +450,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",

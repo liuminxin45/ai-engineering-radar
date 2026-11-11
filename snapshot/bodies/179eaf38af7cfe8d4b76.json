@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "179eaf38af7cfe8d4b76",
+    "status": "unavailable",
+    "html": "",
+    "headings": [],
+    "textLength": 0,
+    "readingMinutes": 0,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1781640",
+    "engineVersion": "radar-reader-2",
+    "checkedAt": "2026-11-11T07:46:32.111Z",
+    "nextRetryAt": "2026-11-18T07:46:32.111Z",
+    "error": "No body matched parser rule: aliyun",
+    "warnings": []
+  }
+}

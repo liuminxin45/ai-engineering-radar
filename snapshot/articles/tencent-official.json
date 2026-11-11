@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -82,6 +82,47 @@
       "duplicateCandidates": []
     },
     {
+      "id": "08021f2744e32deb527b",
+      "publisherId": "tencent-official",
+      "companyId": "tencent",
+      "contentType": "blog",
+      "title": "AI从Working、Coding到Oncall：腾讯视频如何让知识流动起来？",
+      "canonicalUrl": "https://news.qq.com/rain/a/20261110A0BR4Y00",
+      "author": "腾讯技术工程",
+      "description": "作者：adawswang 共同作者：seasonzhou我们常调侃自己讨厌两类人，一类是不写文档的人，另一类是让我写文档的人。文档是知识的一种，在AI生产力爆炸的今天，有了 AI 似乎就能轻松建知识库、快速写文档，好像「既要又要」唾手可得。但是真的是这样吗？在视频这个复杂业务体系下，我们有 Working、Coding、OnCall 三类常见的...",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-10T09:37:21.000Z",
+      "discoveredAt": "2026-11-11T07:46:20.203Z",
+      "updatedAt": "2026-11-11T07:46:20.203Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "tencent-qqnews",
+          "externalId": "20261110A0BR4Y00",
+          "url": "https://news.qq.com/rain/a/20261110A0BR4Y00",
+          "listingHash": "374acfdf534a25da7d30ac355fb43a57f0e815200312769333c1f106383f8b36"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "19483d4c33c55702ba4a",
       "publisherId": "tencent-official",
       "companyId": "tencent",
@@ -100,7 +141,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +181,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -180,7 +221,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +261,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -261,7 +302,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -301,7 +342,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -341,7 +382,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -381,7 +422,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -421,7 +462,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -461,7 +502,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -502,7 +543,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -543,7 +584,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -584,7 +625,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -624,7 +665,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -664,7 +705,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -704,7 +745,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -744,7 +785,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -784,7 +825,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -824,7 +865,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -864,7 +905,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -904,7 +945,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -945,7 +986,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -985,7 +1026,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",

@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -42,6 +42,47 @@
       "duplicateCandidates": []
     },
     {
+      "id": "11a188682554bad12e35",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "contentType": "blog",
+      "title": "GPT-6凌晨上线智能UI：智能UI时代的技术架构重构与应对之道",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/23624923",
+      "author": "jcloud",
+      "description": "从 \"对话\" 到 \"长出来的界面\" 一、事件回顾：一个信号弹式的产品动作 2026年10月8日凌晨，OpenAI向ChatGPT全部用户推送了新一代模型GPT-6，并同步上线了Intelligent UI（智能界面）能力。从此，ChatGPT的应答不再局限于文字流：询问自行车构造，它会返回一张可以逐",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-11T02:03:00.000Z",
+      "discoveredAt": "2026-11-11T07:46:21.254Z",
+      "updatedAt": "2026-11-11T07:46:21.254Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "23624923",
+          "url": "https://www.cnblogs.com/Jcloud/p/23624923",
+          "listingHash": "8dcd85307ca82d359c240caf92ed389ba37d31248b49809347fa4c0cc4d5af2c"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "34d623bd3e49efa28693",
       "publisherId": "jd-official",
       "companyId": "jd",
@@ -60,7 +101,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -100,7 +141,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +181,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -181,7 +222,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -221,7 +262,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -261,7 +302,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -301,7 +342,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -342,7 +383,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -382,7 +423,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -422,7 +463,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -462,7 +503,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -502,7 +543,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-10T08:26:48.270Z"
+        "classifiedAt": "2026-11-11T07:46:27.423Z"
       },
       "advertorial": {
         "status": "unmarked",

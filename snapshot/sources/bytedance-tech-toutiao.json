@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "bytedance-tech-toutiao",
-    "lastCheckedAt": "2026-11-10T08:26:43.731Z",
-    "lastSuccessAt": "2026-11-10T08:26:43.731Z",
-    "nextRunAt": "2026-11-11T08:26:43.731Z",
+    "lastCheckedAt": "2026-11-11T07:46:21.732Z",
+    "lastSuccessAt": "2026-11-11T07:46:21.732Z",
+    "nextRunAt": "2026-11-12T07:46:21.732Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 12,
