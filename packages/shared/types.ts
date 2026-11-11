@@ -87,6 +87,29 @@ export const advertorialSchema = z.object({
   version: z.string(),
 });
 export type Advertorial = z.infer<typeof advertorialSchema>;
+export const aiScreenAnswerSchema = z.discriminatedUnion("decision", [
+  z.strictObject({
+    decision: z.literal("keep"),
+    reason: z.literal("engineering-practice"),
+    evidence: z.string().min(1).max(160),
+  }),
+  z.strictObject({
+    decision: z.literal("drop"),
+    reason: z.enum([
+      "model",
+      "advertising",
+      "open-source-sharing",
+      "out-of-scope",
+    ]),
+    evidence: z.string().min(1).max(160),
+  }),
+  z.strictObject({
+    decision: z.literal("review"),
+    reason: z.literal("insufficient-evidence"),
+    evidence: z.literal(""),
+  }),
+]);
+export type AiScreenOverride = "keep" | "drop";
 export const locationSchema = z.object({
   sourceId: z.string(),
   externalId: z.string().optional(),
@@ -115,6 +138,13 @@ export const articleSchema = z
     updatedAt: timestamp,
     classification: classificationSchema,
     advertorial: advertorialSchema.optional(),
+    aiScreen: z
+      .object({
+        fingerprint: z.string().regex(/^[a-f0-9]{64}$/),
+        assessedAt: timestamp,
+        answer: aiScreenAnswerSchema,
+      })
+      .optional(),
     publicationStatus: z.enum(["draft", "published", "hidden"]),
     locations: z.array(locationSchema).min(1),
     duplicateCandidates: z.array(z.string()).default([]),

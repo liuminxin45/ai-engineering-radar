@@ -1,6 +1,11 @@
 import { readFile } from "node:fs/promises";
 import { z } from "zod";
-import type { Article, Snapshot, SourceState } from "../shared/types.js";
+import type {
+  AiScreenOverride,
+  Article,
+  Snapshot,
+  SourceState,
+} from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
 import {
   classificationSchema,
@@ -20,6 +25,7 @@ import { CrawlError, fetchReviewed } from "./http.js";
 import { knownArticle } from "./incremental.js";
 
 export async function applyOverrides(articles: Article[]) {
+  const screening = new Map<string, AiScreenOverride>();
   const raw = JSON.parse(
     await readFile(
       new URL("../../config/overrides.json", import.meta.url),
@@ -47,6 +53,7 @@ export async function applyOverrides(articles: Article[]) {
         companyIds: companyIdsSchema.optional(),
         paperAffiliations: z.array(paperAffiliationSchema).min(1).optional(),
         advertorial: z.enum(["suspected", "cleared"]).optional(),
+        aiScreen: z.enum(["keep", "drop"]).optional(),
         topics: z
           .array(
             z.enum([
@@ -68,6 +75,7 @@ export async function applyOverrides(articles: Article[]) {
       .parse(value);
     const a = articles.find((a) => a.id === id);
     if (!a) throw new Error(`Override references missing article ${id}`);
+    if (o.aiScreen) screening.set(id, o.aiScreen);
     if (
       o.contentType !== undefined ||
       o.companyIds !== undefined ||
@@ -102,7 +110,7 @@ export async function applyOverrides(articles: Article[]) {
     }
     // A label correction must not change collection or publication decisions.
     if (
-      o.advertorial &&
+      (o.advertorial || o.aiScreen) &&
       o.status === undefined &&
       o.hidden === undefined &&
       o.topics === undefined
@@ -177,6 +185,7 @@ export async function applyOverrides(articles: Article[]) {
       version: "manual-1",
     };
   }
+  return screening;
 }
 export async function ingest(
   snapshot: Snapshot,

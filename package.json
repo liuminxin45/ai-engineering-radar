@@ -12,6 +12,7 @@
     "dev": "pnpm --filter @radar/web dev",
     "registry:check": "tsx scripts/cli.ts registry",
     "ingest": "tsx scripts/cli.ts ingest",
+    "ai:screen": "tsx scripts/cli.ts ai-screen",
     "bodies:backfill": "tsx scripts/cli.ts bodies",
     "bodies:reclassify": "tsx scripts/cli.ts reclassify-bodies",
     "rsshub:check": "tsx scripts/check-rsshub.ts",

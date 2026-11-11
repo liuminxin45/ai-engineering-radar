@@ -1,7 +1,7 @@
 import { mkdir, writeFile, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { Feed } from "feed";
-import type { Article, Snapshot } from "../shared/types.js";
+import type { AiScreenOverride, Article, Snapshot } from "../shared/types.js";
 import {
   articleCompanyIds,
   compareArticles,
@@ -10,6 +10,7 @@ import {
 } from "../shared/types.js";
 import type { Registry } from "../source-registry/index.js";
 import { assessAdvertorial } from "../classifier/advertorial.js";
+import { screenMode } from "../classifier/ai-screen.js";
 export function publishedArticles(articles: Article[], registry: Registry) {
   return articles
     .filter(
@@ -79,13 +80,25 @@ export async function exportSite(
   registry: Registry,
   root: string,
   siteUrl: string,
+  screeningOverrides: ReadonlyMap<string, AiScreenOverride> = new Map(),
 ) {
-  const articles = publishedArticles(snapshot.articles, registry).map(
-    (article) => ({
+  const mode = screenMode();
+  const candidates = publishedArticles(snapshot.articles, registry);
+  const articles = candidates
+    .filter(
+      (article) =>
+        mode !== "enforce" ||
+        (screeningOverrides.get(article.id) ??
+          article.aiScreen?.answer.decision) === "keep",
+    )
+    .map(({ aiScreen: _internalDecision, ...article }) => ({
       ...article,
       advertorial: assessAdvertorial(article),
-    }),
-  );
+    }));
+  if (mode === "enforce" && candidates.length > 0 && articles.length === 0)
+    throw new Error(
+      "AI screening would publish an empty catalog. Complete shadow review before enforcing.",
+    );
   const generatedAt = snapshot.manifest.generatedAt;
   const publicDir = join(root, "apps/web/public");
   const dataDir = join(publicDir, "data");

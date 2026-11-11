@@ -9,7 +9,12 @@ import {
   validateRelations,
 } from "../packages/database/snapshot.js";
 import { ingest, applyOverrides } from "../packages/crawler/ingest.js";
-import { exportSite } from "../packages/publisher/export.js";
+import { exportSite, publishedArticles } from "../packages/publisher/export.js";
+import {
+  screenArticles,
+  screeningConfig,
+  screenMode,
+} from "../packages/classifier/ai-screen.js";
 import { resolveSiteUrl } from "../packages/shared/site.js";
 import { collectBodies } from "../packages/crawler/bodies.js";
 import { upgradeBodyPolicy } from "../packages/crawler/body-policy.js";
@@ -155,15 +160,62 @@ async function run() {
       console.log(
         `Body backfill: ${result.attempted} attempted; ${counts.ready} ready, ${counts.partial} partial, ${counts.unavailable} unavailable`,
       );
+    } else if (command === "ai-screen") {
+      const mode = screenMode();
+      if (mode === "off") {
+        console.log("AI screening is off");
+        return;
+      }
+      const limit = Number(
+        process.argv.find((arg) => arg.startsWith("--limit="))?.slice(8) ?? 100,
+      );
+      if (!Number.isSafeInteger(limit) || limit < 1 || limit > 300)
+        throw new Error("AI screening limit must be an integer from 1 to 300");
+      const config = screeningConfig();
+      // Apply editorial overrides to a copy; persist only machine decisions.
+      const articles = structuredClone(snapshot.articles);
+      const overrides = await applyOverrides(articles);
+      const candidates = publishedArticles(articles, registry).filter(
+        (a) => !overrides.has(a.id),
+      );
+      const stats = await screenArticles(
+        candidates,
+        snapshot.bodies,
+        config,
+        limit,
+      );
+      const decisions = new Map(candidates.map((a) => [a.id, a.aiScreen]));
+      if (stats.attempted > stats.failed) {
+        for (const article of snapshot.articles)
+          if (decisions.has(article.id))
+            article.aiScreen = decisions.get(article.id);
+        await saveSnapshot(
+          dir,
+          snapshot.articles,
+          snapshot.states,
+          registry,
+          snapshot.bodies,
+        );
+      }
+      const summary = `AI screening (${mode}): ${stats.total} candidates, ${stats.keep} keep, ${stats.drop} drop, ${stats.review} review, ${stats.pending} pending; ${stats.failed}/${stats.attempted} requests failed.`;
+      console.log(summary);
+      if (process.env.GITHUB_STEP_SUMMARY)
+        await appendFile(process.env.GITHUB_STEP_SUMMARY, summary + "\n");
     } else if (command === "export") {
-      await applyOverrides(snapshot.articles);
+      const screeningOverrides = await applyOverrides(snapshot.articles);
       validateRelations(
         snapshot.articles,
         snapshot.states,
         registry,
         snapshot.bodies,
       );
-      await exportSite(snapshot, registry, root, resolveSiteUrl());
+      await exportSite(
+        snapshot,
+        registry,
+        root,
+        resolveSiteUrl(),
+        screeningOverrides,
+      );
     } else throw new Error(`Unknown command: ${command}`);
   }
 }

@@ -88,9 +88,25 @@ jobs:
           RSSHUB_URL: http://127.0.0.1:1200
           BROWSER_FETCH_URL: http://127.0.0.1:1201
         run: pnpm ingest --daily
+      - name: Screen articles with AI
+        if: vars.RADAR_AI_SCREEN_MODE != '' && vars.RADAR_AI_SCREEN_MODE != 'off' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect))
+        env:
+          RADAR_AI_SCREEN_MODE: ${{ vars.RADAR_AI_SCREEN_MODE }}
+          RADAR_AI_API_URL: ${{ vars.RADAR_AI_API_URL }}
+          RADAR_AI_LLM: ${{ vars.RADAR_AI_LLM }}
+          RADAR_AI_API_KEY: ${{ secrets.RADAR_AI_API_KEY }}
+        run: pnpm ai:screen
       - run: pnpm data:check && pnpm build && pnpm typecheck && pnpm check:public
+        env:
+          RADAR_AI_SCREEN_MODE: off
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm test:e2e
+      # Browser regression tests use the full catalog, including the soft-ad samples.
+      - name: Build and validate screened publication
+        if: vars.RADAR_AI_SCREEN_MODE == 'enforce'
+        env:
+          RADAR_AI_SCREEN_MODE: enforce
+        run: pnpm build && pnpm check:public
       - name: Preserve failure diagnostics
         if: failure()
         uses: actions/upload-artifact@v4
