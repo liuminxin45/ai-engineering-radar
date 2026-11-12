@@ -2,17 +2,121 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "bc8ba9a9b0527b4f162b",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "<p>作者：澄潭</p><p><br></p><p><span><span>一项 Agent 任务，从查资料、读代码，到做设计、修问题，每一步对模型能力的要求并不一样。一直用主力模型，常规工作也在消耗宝贵的订阅额度；换成经济模型，又担心卡在关键判断和疑难问题上。手里有多个 Agent、几份订阅和不同厂商的 API，如何组合使用，也成了一项额外工作。</span></span></p><p><span><span><br></span></span></p><p><span><span>为此，Higress 团队打造了 HiRoute：一个运行在本地的 Agent 智能路由与协作引擎。继续使用你熟悉的 Agent，让经济模型承担常规工作，让主力模型处理关键阶段；需要分工时，还可以把独立任务交给其他 Agent。</span></span><strong><span><strong>我们希望让你已有的工具与算力配合起来，在把工作做好的同时，减少不必要的开销和手动接力。</strong></span></strong></p><p><strong><span><strong><br></strong></span></strong></p><p><span><span>HiRoute 此前在 AGNTCon + MCPCon China 的 Keynote 演讲中预告开源，并在云栖大会宣布开源。现在，你可以下载使用，也可以参与共建。</span></span></p><p><span><span><br></span></span></p><p><span><strong>项目地址：</strong><em><a href=\"https://github.com/higress-group/HiRoute?spm=a2c6h.13046898.publish-article.22.210e6ffaNRxeWR\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/higress-group/HiRoute</a></em></span></p><p><strong><span><span>hiroute 文档链接：</span></span></strong><a href=\"https://hiroute.ai/zh/docs/?spm=a2c6h.13046898.publish-article.27.210e6ffaNRxeWR\" target=\"_blank\" rel=\"noopener noreferrer\"><span>https://hiroute.ai/zh/docs/</span></a></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_97d7d3e9a8c449c2b4d3e40b942b3772.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span>图 1 任务路由与模型路由可以独立启用，也可以组合使用。</span></span><span><strong><span><br></span></strong></span></p><h2 id=\"section-为什么要做-hiroute\">为什么要做 HiRoute<a class=\"heading-anchor\" href=\"#section-为什么要做-hiroute\" aria-label=\"链接到本节：为什么要做 HiRoute\">#</a></h2><p><span><span>做 HiRoute，源于我们每天都在面对的三种碎片化。</span></span></p><ul><li><span><strong>模型碎片化：</strong><span>模型各有所长，资料归纳、复杂推理、编码、长上下文处理，对能力和成本的要求不同。</span></span></li><li><span><strong>Agent 碎片化：</strong><span>Agent 也各有工作方式，有人习惯 Codex 的执行流程，有人更熟悉 Claude Code，也会为研究或特定工程任务使用其他工具。</span></span></li><li><span><strong>算力碎片化：</strong><span>算力则分散在订阅、不同厂商的 API Key 和本地服务中。已经购买、已经配置好的能力，往往很难组合起来使用。</span></span></li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_0ed324fcf8cc40d080cb8639737c13b0.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span>图 2 Agent 应用、框架与运行基础设施持续分化，用户需要更简单的组合方式。</span></span></p><p><span><span><br></span></span></p><p><span><span>长程任务又为这些选择增加了时间维度的计算参数。一项工作可能从调研开始，经过设计、实现、验证，最后进入疑难修复。整理资料时合适的模型，到了架构判断时未必足够；难点解决以后，后续步骤也未必还需要持续消耗最昂贵的能力。</span></span></p><p><span><span><br></span></span></p><p><span><span>用户开始关心整项任务的代价：主力模型是否用在关键处，订阅额度能否留给难题，失败时能否按规则接续，以及下次选模型时有什么事实可参考。</span></span></p><p><span><span><br></span></span></p><p><span><span>HiRoute 希望把这些选择变成可以配置、复用和检查的日常能力。我们选择开源，也希望开发者能够审查路由行为、接入自己的工作流，并用真实任务检验和改进这套机制。配置、执行与观测在本地运行，模型推理由所连接的服务完成；</span></span><strong><span><strong>个人开发者和自建 Agent 的团队，都可以从已有工具开始。</strong></span></strong></p><p><br></p><h2 id=\"section-让已有的-agent-和算力更好用\">让已有的 Agent 和算力更好用<a class=\"heading-anchor\" href=\"#section-让已有的-agent-和算力更好用\" aria-label=\"链接到本节：让已有的 Agent 和算力更好用\">#</a></h2><h3 id=\"section-让订阅更耐用-把主力能力留给关键工作\"><span><span><span>▍</span></span><span><strong><strong>让订阅更耐用 把主力能力留给关键工作</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-让订阅更耐用-把主力能力留给关键工作\" aria-label=\"链接到本节：▍让订阅更耐用 把主力能力留给关键工作\">#</a></h3><p><span><span>HiRoute 最直接的价值，是把主力能力留给真正需要它的工作。</span></span></p><p><span><span><br></span></span></p><p><span><span>如果你已经购买 Codex 等受支持的订阅，又配置了价格更低的 API，HiRoute 可以通过 CLIProxyAPI（CPA）接入受支持的订阅，把这些来源放进同一份路由计划。</span></span></p><p><span><span><br></span></span></p><p><span><span>让经济 API 承担资料整理、常规修改，把订阅中的主力模型用于复杂分析与关键修复，就有机会减少高价调用，也让订阅额度用得更久。</span></span><strong><span><strong>比如将 Qwen3.8 Flash 放进省钱组，主力组则选择适合自己任务的强模型。</strong></span></strong></p><h3 id=\"section-hiroute-jev-让决策模型负责选择\"><span><span><span>▍</span></span><span><strong><strong>HiRoute × Jev 让决策模型负责选择</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-hiroute-jev-让决策模型负责选择\" aria-label=\"链接到本节：▍HiRoute × Jev 让决策模型负责选择\">#</a></h3><p><span><span>随着 Agent 工作越来越长，专门承担快速判断的 System One 模型开始进入开发者视野。</span></span><span><span>Jev</span></span><span><span>&nbsp;就是其中一个代表：它擅长输出类别、概率与评分，适合用来判断下一步该如何执行。</span></span><strong><span><strong>HiRoute 已将 Jev 纳入内置决策模型体系。</strong></span></strong></p><p><strong><span><strong><br></strong></span></strong></p><p><span><span>在“模型 → 决策模型”中，可以连接百炼或 TypeSafe 提供的 Jev 等决策模型，无需自行部署决策服务。</span></span></p><p><span><span><br></span></span></p><p><span><span>决策模型判断当前任务的类别和程度，并可评价上一实际执行阶段；HiRoute 根据你设定的阈值、模型组和候选顺序执行选择。任务简单时使用省钱组，任务复杂或上一阶段未达到胜任标准时使用主力组。你可以修改判断条件和评分提示词，让“简单”、“复杂”、“做得好”符合自己的业务。</span></span></p><p><span><span><br></span></span></p><p><span><span>这也适用于编码之外的工作。写一篇文章，可以给“写稿”和“审稿”配置不同分支：写稿侧重结构、表达和素材组织，审稿侧重论证、事实与遗漏；再为每类任务设置常规与主力模型。类别由你定义，标准由你掌握。</span></span></p><p><span><span><br></span></span></p><p><span><span>一次写稿阶段的评分归属于那次实际执行，不会被随意套用到审稿任务上。</span></span></p><h3 id=\"section-上下文保持-兼顾智能换模与-kv-cache-高命中\"><span><span><span>▍</span></span><span><strong><strong>上下文保持，兼顾智能换模与 KV Cache 高命中</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-上下文保持-兼顾智能换模与-kv-cache-高命中\" aria-label=\"链接到本节：▍上下文保持，兼顾智能换模与 KV Cache 高命中\">#</a></h3><p><span><span>Agent 完成一项工作，往往需要反复调用工具、读取结果、继续推理，前面的上下文会不断积累。保持 KV Cache 高命中，能够降低输入成本与响应等待。</span></span></p><p><span><span><br></span></span></p><p><strong><span><strong>HiRoute 通过“上下文保持”（ContextHold）识别同一轮中历史连续的调用，沿用已有路由决策，并尽量继续使用当前模型，让不断增长的上下文前缀持续复用缓存。</strong></span></strong></p><p><strong><span><strong><br></strong></span></strong></p><p><span><span>当上下文压缩或重建导致旧的完整前缀断裂、原有决策无法续用时，HiRoute 会在这一边界重新判断模型。此时，无论继续原模型还是选择新模型，后续都沿着新的上下文保持连续执行，持续积累缓存命中。</span></span></p><p><span><span><br></span></span></p><p><span><span>新用户请求也会触发重新决策。不过，仅追加新消息时，原有前缀未必失效；继续原模型仍可能复用已有缓存。</span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_6fc15288c6834f33b0b7abf04d6b5787.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span>图 3 连续上下文内保持模型稳定；旧完整前缀断裂后，重新选模，再沿新前缀持续复用 KV Cache。</span></span></p><h3 id=\"section-保留熟悉的工作方式-用不同-agent-分工\"><span><span><span>▍</span></span><span><strong><strong>保留熟悉的工作方式 用不同 Agent 分工</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-保留熟悉的工作方式-用不同-agent-分工\" aria-label=\"链接到本节：▍保留熟悉的工作方式 用不同 Agent 分工\">#</a></h3><p><span><span>Agent 的选择同样可以围绕工作展开。你保留惯用的主 Agent，把研究、实现或测试等独立任务委派给已配置的 Worker，再继续整合结果。任务路由回答“交给谁做”，模型路由负责“这个阶段用什么能力”；两层能力可以分别使用，也可以组合起来。</span></span></p><h3 id=\"section-减少手动接力-让每次选择都有迹可循\"><span><span><span>▍</span></span><span><strong><strong>减少手动接力 让每次选择都有迹可循</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-减少手动接力-让每次选择都有迹可循\" aria-label=\"链接到本节：▍减少手动接力 让每次选择都有迹可循\">#</a></h3><p><span><span>遇到限流或候选不可用，HiRoute 会在计划允许的范围内有序接力；候选耗尽时明确停止。每段工作实际用了哪个模型、发生了怎样的选择、消耗多少用量，以及是否获得阶段评分，都能在会话和模型表现中核对。这样，</span></span><strong><span><strong>调整下一份路由计划时，用户可以依据自己的执行记录，而不只依赖通用榜单。</strong></span></strong></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b6c65257b16a4aa09be6d3d85711938c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span>图 4 会话中的模型表现按执行阶段呈现，可继续查看评分依据和执行过程。</span></span></p><p><span><span><br></span></span></p><h2 id=\"section-两项实战检验成本与持续交付\">两项实战检验成本与持续交付<a class=\"heading-anchor\" href=\"#section-两项实战检验成本与持续交付\" aria-label=\"链接到本节：两项实战检验成本与持续交付\">#</a></h2><h3 id=\"section-消息系统调研-达标运行的-api-等价成本降低超过-90\"><span><span><span>▍</span></span><span><strong><strong>消息系统调研：达标运行的 API 等价成本降低超过 90%</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-消息系统调研-达标运行的-api-等价成本降低超过-90\" aria-label=\"链接到本节：▍消息系统调研：达标运行的 API 等价成本降低超过 90%\">#</a></h3><p><span><span>第一项实战是专门设计的工程调研任务：研究六种消息系统，每种完成 60 张资料核验卡，最后交付一份 Kafka 与 SQL 一致性决策备忘录。</span></span></p><p><span><span><br></span></span></p><p><span><span>前面的工作需要仔细查证官方资料，最后则要回答更难的问题：系统故障并重试时，方案能否避免业务重复处理或遗漏？发现某个组件“支持事务”，还需要进一步判断这项保证能否覆盖整个业务流程。大量资料整理，最终服务于少数关键判断，这也是技术选型和系统迁移中常见的工作结构。</span></span></p><p><span><span><br></span></span></p><p><span><span>我们让三种模式处理相同任务：固定使用 GPT-6 Astra、由 HiRoute 混合路由，以及固定使用 Qwen-3.8 Flash。混合模式中，六份资料整理由 Qwen 完成，关键决策备忘录交给 Astra。</span></span></p><p><span><span><br></span></span></p><p><strong><span><strong>结果显示，在双方均通过原定整单验收的两次配对运行中，混合模式相较全 Astra 的 API 等价成本分别降低&nbsp;</strong><strong>92.01%</strong><strong>&nbsp;和&nbsp;</strong><strong>91.39%</strong><strong>。</strong></span></strong></p><p><strong><span><strong><br></strong></span></strong></p><p><span><span>在这两次达标运行中，混合模式和全 Astra 的资料核验平均正确率分别为 99.03% 和 99.72%，关键决策均通过验收。</span></span></p><p><span><span><br></span></span></p><p><span><span>三次关键决策审查更能说明分工的价值：混合模式与全 Astra 都是 3/3 无重大错误，全 Qwen Flash 为 1/3。经济模型能够承担大量资料工作，关键判断仍需要足够的推理能力。把能力分配到合适环节，才有机会同时守住交付标准和成本。</span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_c48d7649fc784499a57af4461d0b28bb.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span>图 5 成本图比较两次达标运行的平均成本；正文百分比是各次降幅。统计包含受试尝试与路由评估，按冻结价格折算 API 等价成本，不代表订阅账单节省比例。完整过程与实验记录入口见</span></span><span><span>HiRoute 官网实战详解</span></span><sup><strong><span>[</span></strong></sup><sup><strong><span>1]</span></strong></sup><span><span>。</span></span></p><h3 id=\"section-httpx-长任务-三次自动切换完成-343-项独立验收\"><span><span><span>▍</span></span><span><strong><strong>HTTPX 长任务：三次自动切换完成 343 项独立验收</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-httpx-长任务-三次自动切换完成-343-项独立验收\" aria-label=\"链接到本节：▍HTTPX 长任务：三次自动切换完成 343 项独立验收\">#</a></h3><p><span><span>第二项实战关注持续交付。任务要求在 HTTPX 中增加同步与异步 JSON 流式迭代，支持不同流格式、处理编码和消费状态，并在后续数据尚未到达时就产出已经解析的值。我们只向原生 Codex 下达一次任务，让它持续执行。</span></span></p><p><span><span><br></span></span></p><p><span><span>这次采用经济模型优先的计划，实际经过&nbsp;</span></span><strong><span><strong>Qwen → Astra → Qwen → Astra</strong><span>&nbsp;</span></span></strong><span><span>四个连续阶段。Qwen 先阅读源码和测试；第一次切到 Astra 时，处理的是上下文摘要，随后按当时的策略回到 Qwen。</span></span></p><p><span><span><br></span></span></p><p><span><span>继续执行后，工作仍主要停留在研究和探查。第二次上下文交接时，记录的阶段胜任度为 0.485，低于 0.5 下限，HiRoute 再次选择 Astra。</span></span></p><p><span><span><br></span></span></p><p><span><span>这次接手之后，Astra 写入流式解析实现，运行测试，并继续修复异步迭代器关闭、编码边界与类型检查等问题。</span></span></p><p><span><span><br></span></span></p><p><strong><span><strong>整项任务耗时 31 分 36 秒，中途没有人工追加提示，也没有人工代码补丁。最终独立验收的 108 项功能、229 项回归与 6 项增量性断言，合计 343 项全部通过。</strong></span></strong></p><p><strong><span><strong><br></strong></span></strong></p><p><span><span>这项实战让阶段反馈的价值变得具体：经济模型先承担工作，在可以重新判断的交接点检查进展，让主力模型接续实现与验证。执行记录同时保留了摘要、研究和真正写入代码的区别，方便用户回看每次切换究竟带来了什么。</span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_94fa2cda942249cf82920420533225a1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span>图 6 一次任务经历四个模型阶段，在执行反馈后接续实现与验证。</span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_8592fc3bbdc84518ad65e639ec6b7000.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span>图 7 历史实验的原生会话记录。首轮 Astra 只生成摘要；最终实现阶段尚未评分，不同阶段分数不构成模型排名。该任务保留当时配置，且没有全 Astra 成本对照，不作降本结论。</span></span><span><span>接力过程与验收记录</span></span><sup><strong><span>[</span></strong></sup><sup><strong><span>2]</span></strong></sup><span><span>已公开。</span></span></p><p><br></p><h2 id=\"section-三步接入继续使用熟悉的-agent\">三步接入继续使用熟悉的 Agent<a class=\"heading-anchor\" href=\"#section-三步接入继续使用熟悉的-agent\" aria-label=\"链接到本节：三步接入继续使用熟悉的 Agent\">#</a></h2><p><span><span>HiRoute 提供 macOS Desktop，以及面向 Linux 的无界面 CLI 和后台服务。你可以在桌面上完成配置，也可以把同一套能力接入服务器和自动化流程。</span></span></p><p><span><span><br></span></span></p><p><span><span>第一次使用，从一份简单的“智能省钱”计划开始即可。</span></span></p><h3 id=\"section-第一步-接入已有模型\"><span><span><span>▍</span></span><span><strong><strong>第一步，接入已有模型</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-第一步-接入已有模型\" aria-label=\"链接到本节：▍第一步，接入已有模型\">#</a></h3><p><span><span>在“模型”页添加 API、受支持的订阅或本地模型服务。例如，用 Qwen3.8 Flash 作为省钱模型，Qwen3.8 Max 作为主力模型；也可以把经济型 API 与已有 Codex 订阅组合起来。模型来源统一管理，一次接入后可用于多份路由计划。</span></span></p><h3 id=\"section-第二步-创建并发布路由\"><span><span><span>▍</span></span><span><strong><strong>第二步，创建并发布路由</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-第二步-创建并发布路由\" aria-label=\"链接到本节：▍第二步，创建并发布路由\">#</a></h3><p><span><span>在“智能路由”中选择“智能省钱”，分别加入省钱和主力模型，再选择决策模型。百炼、OpenRouter Jev 等内置接入只需配置连接，无需自行部署扩展服务。判断阈值、评分标准等进阶设置默认收起，先选好两组模型就能开始；需要精细控制时，再展开调整。发布后，这份计划就成为可以重复使用的模型入口。</span></span></p><h3 id=\"section-第三步-连接-agent-查看实际执行\"><span><span><span>▍</span></span><span><strong><strong>第三步，连接 Agent，查看实际执行</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-第三步-连接-agent-查看实际执行\" aria-label=\"链接到本节：▍第三步，连接 Agent，查看实际执行\">#</a></h3><p><span><span>在“Agent”页启用模型路由，选择刚发布的计划，然后继续用熟悉的 Agent 下达任务。进入“会话”，可以看到真正执行的模型、用量和成本；进入“模型表现”，还可以沿具体阶段查看胜任评分与执行证据，为下一次调整组合提供依据。</span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a6549f1598bc403fbda10a9c6fd29288.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span>图 8 选择省钱与主力模型即可配置组合，判断阈值与进阶设置按需展开。</span></span></p><p><br></p><h2 id=\"section-把-higress-的网关工程经验带到开发者本机\">把 Higress 的网关工程经验带到开发者本机<a class=\"heading-anchor\" href=\"#section-把-higress-的网关工程经验带到开发者本机\" aria-label=\"链接到本节：把 Higress 的网关工程经验带到开发者本机\">#</a></h2><p><strong><span><span>HiRoute 采用本地优先的架构：配置管理、路由执行和观测记录都在本机运行，无需部署 HiRoute 云端中转服务。</span></span></strong><span><span>Agent 的模型请求先进入本地网关，再前往你选择的模型服务。</span></span></p><p><span><span><br></span></span></p><p><span><span>选择云端执行模型或决策模型时，完成推理或判断所需的请求会发送到相应服务；选择本地模型时，也可以复用自己的本地算力。</span></span></p><p><span><span><br></span></span></p><p><span><span>HiRoute Gateway 使用 Rust 构建，将&nbsp;</span></span><span><span>Higress AI Gateway</span></span><sup><strong><span>[</span></strong></sup><sup><strong><span>3]</span></strong></sup><span><span>积累的网关工程经验用于本地 Agent 工作流：统一处理协议适配、模型能力与资格检查、有边界的候选接力、流式交付和执行观测。Desktop 基于 Tauri，CLI 与桌面端共享同一套核心，让可视化操作与自动化调用遵循一致的执行规则。</span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a917e818481c482bbf22884c98628080.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span>图 9 配置、路由与执行记录保留在本机；模型推理和决策由所连接的服务完成，也可以接入本地模型。</span></span></p><p><span><span>这些工程能力最终服务于四个产品原则。</span></span></p><h3 id=\"section-任务与模型分层-计划可以审阅和复用\"><span><span><span>▍</span></span><span><strong><strong>任务与模型分层，计划可以审阅和复用</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-任务与模型分层-计划可以审阅和复用\" aria-label=\"链接到本节：▍任务与模型分层，计划可以审阅和复用\">#</a></h3><p><span><span>任务路由安排由哪个 Agent 承担工作，模型路由安排每个阶段使用什么能力。模型组、候选顺序、任务条件和评分标准都可以在计划中明确表达；发布时保存确定的配置快照。后续修改草稿不会悄悄改变已发布计划，也不会改写历史记录，让一次有效的组合能够复用到后续任务。</span></span></p><h3 id=\"section-决策模型负责判断-hiroute-负责执行\"><span><span><span>▍</span></span><span><strong><strong>决策模型负责判断，HiRoute 负责执行</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-决策模型负责判断-hiroute-负责执行\" aria-label=\"链接到本节：▍决策模型负责判断，HiRoute 负责执行\">#</a></h3><p><span><span>决策模型判断当前任务类别、处理难度，并在证据充分时评价上一阶段。HiRoute 根据你设定的阈值选择模型组，再检查候选是否满足请求要求、按顺序调用，并在可用性故障时进行有限接力。候选耗尽就明确失败，判断结果不会绕过已发布计划的执行边界。</span></span></p><h3 id=\"section-上下文保持与重新决策-各有边界\"><span><span><span>▍</span></span><span><strong><strong>上下文保持与重新决策，各有边界</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-上下文保持与重新决策-各有边界\" aria-label=\"链接到本节：▍上下文保持与重新决策，各有边界\">#</a></h3><p><span><span>ContextHold（上下文保持）识别同轮历史续接，在授权、计划和候选仍适用时，沿用已有决策并尽量保持当前模型。每条新用户消息都会触发重新判断；历史重建导致原有决策无法复用时，也会重新判断。一次模型升级不会永久锁住后续轮次。</span></span></p><h3 id=\"section-根据实际执行反馈调整-把依据留给用户\"><span><span><span>▍</span></span><span><strong><strong>根据实际执行反馈调整，把依据留给用户</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-根据实际执行反馈调整-把依据留给用户\" aria-label=\"链接到本节：▍根据实际执行反馈调整，把依据留给用户\">#</a></h3><p><span><span>上一阶段的有效低分可以触发主力保护，缺少证据时明确保留未评分状态。评分绑定实际执行的任务与模型，可以回到具体过程核对；新一轮仍会重新决策，一次升级不会永久锁住后续选择。</span></span></p><p><span><span><br></span></span></p><p><strong><span><strong>需要自己的判断算法时，开发者还可以通过开放的 HTTP 决策扩展协议接入服务。</strong></span></strong><span><span>扩展负责对接自己的决策服务并实现判断与评分，HiRoute 保留阈值策略与执行控制。项目提供&nbsp;</span></span><span><span>OpenAPI 文档和可部署的 Jev 参考实现</span></span><sup><strong><span>[</span></strong></sup><sup><strong><span>4]</span></strong></sup><span><span>，方便把领域经验接入同一条路由流程。</span></span></p><p><br></p><h2 id=\"section-连接企业网关-扩大-agent-与模型生态\">连接企业网关 扩大 Agent 与模型生态<a class=\"heading-anchor\" href=\"#section-连接企业网关-扩大-agent-与模型生态\" aria-label=\"链接到本节：连接企业网关 扩大 Agent 与模型生态\">#</a></h2><p><span><span>HiRoute 已适配&nbsp;</span></span><strong><span><strong>Codex、Claude Code、Qoder、Pi、DeepSeek Harness 五类 Agent</strong></span></strong><span><strong>，</strong><span>内置模型目录覆盖</span><strong>&nbsp;</strong></span><strong><span><strong>100 多家服务商、700 多种模型配置</strong></span></strong><span><strong>，</strong><span>包括 GPT、Claude、Qwen、DeepSeek、Kimi、GLM 等模型家族；同时提供</span><strong>&nbsp;</strong></span><strong><span><strong>7 款免费额度模型接入</strong></span></strong><span><strong>，</strong><span>可以与已有订阅、API 和本地模型组合使用。</span></span></p><p><span><span><br></span></span></p><p><span><span>接下来，HiRoute 将沿两条路线继续演进。</span></span></p><p><span><span><br></span></span></p><p><span><span>一条是</span></span><strong><span><strong>连接企业 AI 基础设施</strong></span></strong><span><strong>。</strong><span>通过对接 Higress 等企业 AI Gateway，让团队集中管理授权与凭据、统一发布智能路由计划，并形成可追踪的成本治理。员工仍从自己熟悉的本地 Agent 发起工作，团队验证有效的模型组合则可以共享给更多成员。</span></span></p><p><span><span><br></span></span></p><p><span><span>另一条是</span></span><strong><span><strong>持续扩大开放生态</strong></span></strong><span><strong>。</strong><span>继续接入更多 Agent、模型、订阅与决策服务，推进 OpenCode、Hermes、OpenClaw 等后续方向，让开发者能够随任务和模型能力的变化调整组合，也让社区贡献的决策算法与集成能力获得共同的运行基础。</span></span></p><p><span><span><br></span></span></p><p><span><span>HiRoute 以&nbsp;</span></span><strong><span><strong>Apache 2.0</strong></span></strong><span><strong>&nbsp;</strong><span>协议开源。欢迎从自己的第一份路由计划开始，把已有 Agent、模型和订阅用得更好，也欢迎带着真实工作流参与共建。</span></span></p><p><span><span><br></span></span></p><p><span><span>与我们交流，</span><strong>钉群群号：</strong><span>186730010226，</span><strong>微信群</strong><span>扫描下方二维码。</span></span><span><br></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_f2601a2ac7954024badca1d2015216da.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><strong><span><span>相关资料：</span></span></strong></p><p><span></span><span><span><span>[1]&nbsp;</span></span><span><span>HiRoute 官网实战详解</span></span></span></p><p><em><a href=\"https://hiroute.ai/news/astra-qwen-smart-routing/?spm=a2c6h.13046898.publish-article.23.210e6ffaNRxeWR\" target=\"_blank\" rel=\"noopener noreferrer\">https://hiroute.ai/news/astra-qwen-smart-routing/</a></em></p><p><span></span><span><span><span>[2]&nbsp;</span></span><span><span>接力过程与验收记录</span></span></span></p><p><em><a href=\"https://hiroute.ai/news/astra-qwen-smart-routing/?spm=a2c6h.13046898.publish-article.24.210e6ffaNRxeWR\" target=\"_blank\" rel=\"noopener noreferrer\">https://hiroute.ai/news/astra-qwen-smart-routing/</a></em></p><p><span></span><span><span><span>[3]&nbsp;</span></span><span><span>Higress AI Gateway</span></span></span></p><p><em><a href=\"https://github.com/higress-group/higress?spm=a2c6h.13046898.publish-article.25.210e6ffaNRxeWR\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/higress-group/higress</a></em></p><p><span></span><span><span><span>[4]&nbsp;</span></span><span><span>OpenAPI 文档和可部署的 Jev 参考实现</span></span></span></p><p><em><a href=\"https://hiroute.ai/docs/decision-api/?spm=a2c6h.13046898.publish-article.26.210e6ffaNRxeWR\" target=\"_blank\" rel=\"noopener noreferrer\">https://hiroute.ai/docs/decision-api/</a></em></p>",
+    "headings": [
+      {
+        "id": "section-为什么要做-hiroute",
+        "level": 2,
+        "text": "为什么要做 HiRoute"
+      },
+      {
+        "id": "section-让已有的-agent-和算力更好用",
+        "level": 2,
+        "text": "让已有的 Agent 和算力更好用"
+      },
+      {
+        "id": "section-让订阅更耐用-把主力能力留给关键工作",
+        "level": 3,
+        "text": "▍让订阅更耐用 把主力能力留给关键工作"
+      },
+      {
+        "id": "section-hiroute-jev-让决策模型负责选择",
+        "level": 3,
+        "text": "▍HiRoute × Jev 让决策模型负责选择"
+      },
+      {
+        "id": "section-上下文保持-兼顾智能换模与-kv-cache-高命中",
+        "level": 3,
+        "text": "▍上下文保持，兼顾智能换模与 KV Cache 高命中"
+      },
+      {
+        "id": "section-保留熟悉的工作方式-用不同-agent-分工",
+        "level": 3,
+        "text": "▍保留熟悉的工作方式 用不同 Agent 分工"
+      },
+      {
+        "id": "section-减少手动接力-让每次选择都有迹可循",
+        "level": 3,
+        "text": "▍减少手动接力 让每次选择都有迹可循"
+      },
+      {
+        "id": "section-两项实战检验成本与持续交付",
+        "level": 2,
+        "text": "两项实战检验成本与持续交付"
+      },
+      {
+        "id": "section-消息系统调研-达标运行的-api-等价成本降低超过-90",
+        "level": 3,
+        "text": "▍消息系统调研：达标运行的 API 等价成本降低超过 90%"
+      },
+      {
+        "id": "section-httpx-长任务-三次自动切换完成-343-项独立验收",
+        "level": 3,
+        "text": "▍HTTPX 长任务：三次自动切换完成 343 项独立验收"
+      },
+      {
+        "id": "section-三步接入继续使用熟悉的-agent",
+        "level": 2,
+        "text": "三步接入继续使用熟悉的 Agent"
+      },
+      {
+        "id": "section-第一步-接入已有模型",
+        "level": 3,
+        "text": "▍第一步，接入已有模型"
+      },
+      {
+        "id": "section-第二步-创建并发布路由",
+        "level": 3,
+        "text": "▍第二步，创建并发布路由"
+      },
+      {
+        "id": "section-第三步-连接-agent-查看实际执行",
+        "level": 3,
+        "text": "▍第三步，连接 Agent，查看实际执行"
+      },
+      {
+        "id": "section-把-higress-的网关工程经验带到开发者本机",
+        "level": 2,
+        "text": "把 Higress 的网关工程经验带到开发者本机"
+      },
+      {
+        "id": "section-任务与模型分层-计划可以审阅和复用",
+        "level": 3,
+        "text": "▍任务与模型分层，计划可以审阅和复用"
+      },
+      {
+        "id": "section-决策模型负责判断-hiroute-负责执行",
+        "level": 3,
+        "text": "▍决策模型负责判断，HiRoute 负责执行"
+      },
+      {
+        "id": "section-上下文保持与重新决策-各有边界",
+        "level": 3,
+        "text": "▍上下文保持与重新决策，各有边界"
+      },
+      {
+        "id": "section-根据实际执行反馈调整-把依据留给用户",
+        "level": 3,
+        "text": "▍根据实际执行反馈调整，把依据留给用户"
+      },
+      {
+        "id": "section-连接企业网关-扩大-agent-与模型生态",
+        "level": 2,
+        "text": "连接企业网关 扩大 Agent 与模型生态"
+      }
+    ],
+    "textLength": 6398,
+    "readingMinutes": 15,
     "sourceId": "aliyun-apphub",
     "sourceUrl": "https://developer.aliyun.com/article/1781679",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-11T07:46:29.841Z",
-    "nextRetryAt": "2026-11-18T07:46:29.841Z",
-    "error": "No body matched parser rule: aliyun",
+    "contentHash": "ab747abfdc58f1e179df80a0c2538811fa877e80cc157ce30b184d47c5c308e2",
+    "fetchedAt": "2026-11-12T08:20:44.178Z",
+    "checkedAt": "2026-11-12T08:20:44.178Z",
+    "nextRetryAt": "2026-12-12T08:20:44.178Z",
     "warnings": []
   }
 }

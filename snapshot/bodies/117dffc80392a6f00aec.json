@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "117dffc80392a6f00aec",
+    "status": "ready",
+    "html": "<p>作者：刘军、姜泰航</p><p><br></p><p>大语言模型让&nbsp;Agent 能够理解任务、生成内容和调用工具。随着任务流程变长，另一类需求也越来越突出：在每个执行节点，系统需要做出一个具体判断。当前该暴露哪些工具？检索材料是否支持这句话？这次操作是否满足执行条件？这些问题的结果最终要进入程序，决定下一步如何运行。</p><p><br></p><p>TypeSafe 推出的&nbsp;JEV&nbsp;正是面向这类需求的模型。TypeSafe 将这一模型类别称为&nbsp;System One：接收上下文与类型化问题，直接返回选项、评分和概率，供软件进行分支、排序和路由。这个名字借用了《思考，快与慢》中“系统一”的概念，强调快速、聚焦的判断。它适合把一个大问题拆成若干具体判断，再由代码组合结果。概念定义见 TypeSafe System One 官方介绍。</p><p><br></p><p>普通生成模型主要围绕文本生成工作，可以写回答、代码和解释，也能通过结构化输出返回&nbsp;JSON。JEV 则围绕类型化决策和概率校准训练：开发者预先定义问题和答案空间，模型对给定材料进行判断，返回程序可直接使用的结果。比如，对客服工单选择处理团队，对回答检查事实依据，或对风险给出等级评分，都可以用这种方式表达。它与生成模型在 Agent 流程中承担不同职责，复杂分析和内容生成仍由生成模型完成。</p><p><br></p><p>概率让应用有机会把“不确定”纳入流程。当证据不足时，系统可以保留原路线、补充材料或请求人工复核。TypeSafe 所说的概率校准，关注一组预测的概率与实际结果频率是否相符，并不保证某一次判断正确；应用仍需用自己的业务样本验证阈值和采用策略。</p><p><br></p><p><strong>AgentScope 现已正式支持 JEV，将 System One 的结构化判断接入 Agent 的完整任务流程。</strong> 具体来说，通过 AgentScope Java 中的 <code>agentscope-extensions-jev</code>，开发者可以直接调用 JEV Client 和评审组件，也可以在 Harness 中使用工具选择、模型路由、执行防护、上下文治理、检索证据处理、回答修订、任务监督与轨迹评估等能力。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_fbc020635fbc4539a57908db1baa9ca3.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这项支持让开发者能够明确组织判断与执行的关系：应用提供候选、事实和约束，JEV 返回类型化结果，Harness 在对应环节采用结果，并留下可供评估的运行记录。下面从基础概念、典型场景和实际接入三个方面，介绍如何在 AgentScope Java 中使用 JEV。完整能力入口见 JEV 模块文档。</p><h2 id=\"section-结构化判断如何进入-agent-系统\">结构化判断如何进入 Agent 系统<a class=\"heading-anchor\" href=\"#section-结构化判断如何进入-agent-系统\" aria-label=\"链接到本节：结构化判断如何进入 Agent 系统\">#</a></h2><p>JEV 接收上下文和结构化问题，返回概率、选项或评分。AgentScope 没有把它注册为聊天 <code>Model</code> provider，而是通过 <code>JevClient</code> 和上层组件接入；用户回答、代码补丁和复杂分析仍由生成模型完成。</p><h3 id=\"section-jev-生成模型与-harness-各自负责什么\">JEV、生成模型与 Harness 各自负责什么<a class=\"heading-anchor\" href=\"#section-jev-生成模型与-harness-各自负责什么\" aria-label=\"链接到本节：JEV、生成模型与 Harness 各自负责什么\">#</a></h3><p>可以把&nbsp;JEV 理解为通过 TypeSafe System One 接口提供结构化判断的模型。调用方先定义“需要判断什么”，再提供业务材料；结果遵循预先定义的问题类型，适合进入程序分支。比如应用已经拿到订单记录和一份回答草稿，此时需要的是“记录是否支持这份回答”的判断，而不是再生成一段面向用户的回复。</p><p><br></p><p>生成模型负责分析、生成回答和提出工具调用；JEV 负责对指定问题给出结构化判断；Harness 则负责把这些判断放在合适的执行位置，管理工具、上下文、预算和状态。三者可以配合使用，也可以分开接入：一个普通 Java 服务只做草稿审核时，直接调用客户端或 Judge 就够了。</p><p><br></p><p>确定性的规则仍有自己的位置。用户是否有退款权限、订单是否已经退款，可以由身份系统和业务数据库直接检查；回答是否遗漏退款条件、检索材料是否包含诱导指令，则需要理解语义。接入时应先明确哪些事实由代码核验，再把需要语义判断的问题交给&nbsp;JEV。</p><h3 id=\"section-用-state-提供材料-用-question-定义标准\">用 state 提供材料，用 question 定义标准<a class=\"heading-anchor\" href=\"#section-用-state-提供材料-用-question-定义标准\" aria-label=\"链接到本节：用 state 提供材料，用 question 定义标准\">#</a></h3><p>一次 <code>SystemOneRequest</code> 包含共享的 <code>state</code> 和按&nbsp;ID&nbsp;命名的问题。<code>state</code> 可以放用户请求、工具结果、政策或草稿；问题描述这些材料应满足的条件。问题 ID 用于在结果中找到对应答案，同一次请求可以包含多个不同 ID 的问题。</p><p><br></p><p>例如，state 中放入“业务记录：尚未执行退款”和“草稿：退款已经完成”，问题应是“业务记录是否支持草稿中的退款状态”。这样得到的概率针对一个明确命题。只问“这个回答好吗”，却不提供政策、事实或评价标准，难以形成可复用的判断。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_25bab711c9dd4c90b9c0a26bf3056660.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-如何理解概率-置信度与不确定性\">如何理解概率、置信度与不确定性<a class=\"heading-anchor\" href=\"#section-如何理解概率-置信度与不确定性\" aria-label=\"链接到本节：如何理解概率、置信度与不确定性\">#</a></h3><p>假设某次 <code>NoulAnswer.noul()</code> 返回 <code>0.92</code>，它表示模型对当前陈述为真的概率判断，不表示操作已经成功，也不表示在你的业务上测得了 92% 的准确率。Choice 返回的是给定候选集合内的选择及分布；Score 的数值要结合定义的等级理解。概率与置信度是决策输入，是否足以采用仍取决于业务阈值和独立评测。</p><p><br></p><p>类型化结果便于程序直接处理，但格式正确不等于判断正确。比如查询订单与条件退款可能同时适用，需要逐工具独立判断；选择一个模型路线才适合用单选。概率阈值需要用自己的业务样本校准，不能把示例中的 <code>0.8</code> 当作通用标准。</p><p><br></p><p>在基本类型之上，<code>JevJudge</code> 支持复用评审条件，并区分 <code>PASS</code>、<code>FAIL</code>、<code>INCONCLUSIVE</code> 和 <code>ERROR</code>。应用能够分别处理通过、明确失败、证据不足和调用故障。详见问题类型与状态契约和评审定义。</p><h2 id=\"section-从一次条件退款看完整流程\">从一次条件退款看完整流程<a class=\"heading-anchor\" href=\"#section-从一次条件退款看完整流程\" aria-label=\"链接到本节：从一次条件退款看完整流程\">#</a></h2><p>假设用户要求：“查一下订单，如果还没发货就退款，并告诉我结果。”完整的处理过程需要把判断放在不同位置。</p><p><br></p><p>推理前，工具选择保留查询和退款工具；执行退款前，防护检查当前证据是否支持这次调用。知识检索提供退款政策，证据处理过滤可疑指令，同时保留与用户预期冲突但有用的政策。生成回答后，审核器检查是否遗漏条件、是否把“已提交申请”说成“退款已到账”；必要时只修订草稿。调用结束后，轨迹评估再检查工具使用、回答依据与需求覆盖。</p><p><br></p><p>这些环节可以分别启用。退款工具适用，不代表退款条件已经满足；一次调用获准执行，不代表业务操作已经成功；回答审核通过，也不能代替订单系统的执行收据。</p><h3 id=\"section-执行前-选工具-选模型-再检查具体操作\">执行前：选工具、选模型，再检查具体操作<a class=\"heading-anchor\" href=\"#section-执行前-选工具-选模型-再检查具体操作\" aria-label=\"链接到本节：执行前：选工具、选模型，再检查具体操作\">#</a></h3><h4 id=\"article-anchor-7\">工具选择支持多选与有界上下文</h4><p><code>JevToolSelectionMiddleware</code> 在每轮推理前对可选工具逐一评估适用性，再按数量限制筛选。它可以同时保留查询与退款，也可以在普通问候时明确不提供业务工具。必要工具另行保留，不计入可选数量。</p><p><br></p><p>当前默认上下文策略为 <code>RECENT_WINDOW</code>：最近 8 条非空文本消息，总文本预算 8000 字符。应用可以调整预算，改为只发送最新用户文本，或使用完整会话。较小窗口能限制判断输入，但也可能丢失早期线索，需要结合任务长度评测。</p><p><br></p><p>明确判断所有业务工具都不适用，与判断失败采用不同处理：前者可以只保留必要工具；不确定、超时或非法响应则回退原工具目录。筛选改变的是主模型能看到的候选，不改变工具权限。配置与分支示例见工具选择指南。</p><h4 id=\"article-anchor-8\">路由结合阶段、能力、容量和配额</h4><p>除了调用级模型选择，<code>JevPhaseRouting</code> 支持为规划、执行等路线设置有序候选池。宿主提供模型能力、上下文容量、输出预留和配额，先排除不合格候选，再进行选择。开发者可以显式开始阶段，也可以让 JEV 在合格路线中判断，并在候选支持的范围内建议思考等级。</p><p><br></p><p>同一次&nbsp;Agent 调用复用选择，实际派发前仍复核候选条件；候选失效后回退原模型。阶段由应用显式切换，不会因为中间工具输出而自行换阶段。<code>JevTeamPlanner</code> 则可为明确阶段推荐已授权、可用的团队成员，实际分派仍由调度方负责。详见阶段路由和团队建议。</p><h4 id=\"article-anchor-9\">执行防护检查已经形成的调用</h4><p>JevAutoModeMiddleware&nbsp;面向具体工具调用做执行前检查。例如，退款工具虽然进入了候选目录，但订单状态尚未查明时，实际退款调用仍需要被检查。</p><p><br></p><p>在&nbsp;ENFORCE 模式下，被拒绝的调用不会派发；判断失败时也拒绝受保护调用。业务权限、参数校验和幂等处理继续由原执行链承担。判断通过只表示可以继续进入执行流程，不能当作授权或业务成功证明。详见执行防护指南。</p><h3 id=\"section-执行中-治理上下文-记忆与检索证据\">执行中：治理上下文、记忆与检索证据<a class=\"heading-anchor\" href=\"#section-执行中-治理上下文-记忆与检索证据\" aria-label=\"链接到本节：执行中：治理上下文、记忆与检索证据\">#</a></h3><h4 id=\"article-anchor-11\">历史压缩保留约束，并支持恢复原始材料</h4><p>长任务会积累大量文件读取、搜索结果和工具历史。<code>JevContextCompactor</code> 接到 Harness 现有压缩入口，在宿主指定的可处理工具范围内，判断历史调用与结果应该保留、截短，还是成对移出当前上下文。</p><p><br></p><p>最近消息、系统消息、固定约束和不完整工具结果等有明确保护规则；不确定的材料保留。ENFORCE 采用压缩前必须成功归档，归档失败或没有足够缩减时保留当前历史。后续恢复读取的是已保存消息，不会重新执行历史工具。</p><p><br></p><p>截短保留的是结果前缀，不等于生成摘要。最终请求仍经过&nbsp;Harness 的预算检查。应用可以选择文件或 BaseStore 归档实现，按用户、会话和 Agent 隔离材料。详见上下文压缩、归档恢复及显式交换对规划。</p><p><br></p><p>长期记忆另有独立入口：<code>JevMemoryGate</code> 同时评审候选事实的持久价值和与已有事实的冲突。它提供准入建议，实际写入由应用负责，不会因为上下文压缩而自动把材料转成长期记忆。详见记忆准入。</p><h4 id=\"article-anchor-12\">检索处理保留能够纠正前提的证据</h4><p>RAG 场景需要的不只是相关性排序。用户问“退款一定成功吗”，政策中“退款需要满足条件并经审核”虽然否定了问题的前提，却是关键证据。</p><p><br></p><p><code>JevEvidenceProcessor</code> 支持对授权材料分类、过滤和重排，区分提示注入、答案证据与前提冲突。宿主先执行 ACL，JEV 再处理可见材料。开发者可以直接处理段落，通过 <code>search_evidence</code> 工具提供给 Agent，或使用 Knowledge 适配接入检索流程。</p><p><br></p><p>证据被保留后，还需要检查生成回答是否真正获得支持。这两步分别解决“给模型什么材料”和“模型是否忠实使用材料”。详见证据处理、相关性与依据检查和Knowledge 适配。</p><h3 id=\"section-输出时-审核草稿-并只修订需要修订的文本\">输出时：审核草稿，并只修订需要修订的文本<a class=\"heading-anchor\" href=\"#section-输出时-审核草稿-并只修订需要修订的文本\" aria-label=\"链接到本节：输出时：审核草稿，并只修订需要修订的文本\">#</a></h3><p>当政策是“未使用且七天内可以退款”，Agent 却写成“可以无条件退款”，需要修正的是回答。重跑整个 Agent 可能重复执行已经完成的业务操作。</p><p><br></p><p><code>JevResponseMiddleware</code> 对没有工具调用的最终文本进行质量评审。在 ENFORCE 下，原稿明确失败时可以进入有限次数的纯文本修订，修订调用不携带工具，也不重跑 Agent 工具循环。修订稿再次通过审核才发布；证据不足、审核错误或修订耗尽时，不发布未经认可的原稿。</p><p><br></p><p>这也影响流式体验：修订过程不会逐字向用户发布，通过审核后才输出文本。应用需要设置评审与修订预算，并处理拒绝或转人工结果。SHADOW 只评审原稿，不修订，也不阻止发布。</p><p><br></p><p>内容护栏可以与回答质量审核组合使用；已有草稿的应用还可以直接接入独立草稿管线。详见回答修订、内容护栏和草稿管线。</p><h3 id=\"section-长任务与交付-监督进展-评估完整轨迹\">长任务与交付：监督进展，评估完整轨迹<a class=\"heading-anchor\" href=\"#section-长任务与交付-监督进展-评估完整轨迹\" aria-label=\"链接到本节：长任务与交付：监督进展，评估完整轨迹\">#</a></h3><h4 id=\"article-anchor-15\">持续监督关注进展和验证证据</h4><p><code>JevSupervisionMiddleware</code> 在任务运行期间观察是否有实质进展、是否停滞或偏航、是否需要补充验证，并给出继续工作、复核方向、请求验证或完成复核等建议。</p><p><br></p><p>监督器只支持&nbsp;OFF/SHADOW，不会自行停止任务或把任务改成完成。完成复核需要宿主提供与当前版本和作用域匹配的验证证据；只有 Agent 声称“完成”，不能形成可信交付结论。应用也可以独立发起一次任务复核，按自己的调度规则消费建议。详见持续监督、验证证据接入和单次任务复核。</p><h4 id=\"article-anchor-16\">轨迹评估把工具行为与回答质量分开衡量</h4><p><code>JevTraceEvaluator</code> 可以评估历史轨迹，也可以通过中间件采集本次真实调用。内置指标覆盖工具选择、工具结果利用、回答依据、范围遵循、相关性、完整性和间接提示注入，还可增加不调用模型的确定性工具轨迹对照。</p><p><br></p><p>同一组定义可以用于在线观察与离线批量评估，自定义指标则支持自己的业务标准。结果保留分类、分数、是否通过与状态，避免把跳过、弃权和错误混成一个低分。</p><p>事后评估不会撤销工具执行，也不会为提高分数重跑业务流程；在线中间件只支持OFF/SHADOW。其价值是帮助发现问题、比较版本和建立回归样本。详见轨迹评估、指标定义和批量评估。</p><h4 id=\"article-anchor-17\">进一步扩展：代码评审与只读浏览器任务</h4><p>结构化判断也可以用于有明确候选和证据边界的专业任务。</p><p><br></p><p><code>JevCodeReviewer</code> 对 diff 或源码快照分阶段筛选风险，再从解析出的真实区域定位证据，输出机制、严重度和待复核项。它只支持 OFF/SHADOW，不自动发布评审或批准合并；没有发现也不能当作代码安全证明。这个能力用于组织评审线索，复杂因果分析与测试验证仍需要后续核查。详见代码评审指南。</p><p><br></p><p><code>JevBrowserNavigator</code> 从授权页面的可见候选中选择只读导航、滚动或等待，并通过 <code>read_browser</code> 工具接入 Agent。宿主提供独占浏览器会话和独立完成验证器；页面变化后，旧建议需要重新观察。只有独立验证通过才返回 VERIFIED，模型选择 DONE 本身不构成完成。它适合帮助中心和政策查询等受控任务。详见浏览器执行和动作建议。</p><p>对于业务入口的多标签分流、条件性诉求和客服回复承诺检查，也可以直接组合候选分类与客服评审，不必先搭建完整&nbsp;Agent。</p><h2 id=\"section-接入实操-从一个用途开始\">接入实操：从一个用途开始<a class=\"heading-anchor\" href=\"#section-接入实操-从一个用途开始\" aria-label=\"链接到本节：接入实操：从一个用途开始\">#</a></h2><h3 id=\"section-1-添加依赖包\">1. 添加依赖包<a class=\"heading-anchor\" href=\"#section-1-添加依赖包\" aria-label=\"链接到本节：1. 添加依赖包\">#</a></h3><p>下面先完成一次独立判断，再接入已有&nbsp;Agent。使用 Java 17 或更高版本；<code>${agentscope.version}</code> 应替换为项目采用且包含这些 API 的 AgentScope 版本，并保持各模块版本一致。业务代码直接使用客户端、Judge 或评估器时，引入扩展模块：</p><pre><code>&lt;dependency&gt;\n    &lt;groupId&gt;io.agentscope&lt;/groupId&gt;\n    &lt;artifactId&gt;agentscope-extensions-jev&lt;/artifactId&gt;\n    &lt;version&gt;${agentscope.version}&lt;/version&gt;\n&lt;/dependency&gt;</code></pre><p>通过&nbsp;TypeSafe 获取 API 凭据后，在启动 Java 进程的环境中设置 <code>TYPESAFE_API_KEY</code>。这个凭据供 JEV 判断接口使用；Agent 原有生成模型仍使用自身配置。客户端未显式设置 key 时依次读取 <code>TYPESAFE_API_KEY</code>、<code>JEV_API_KEY</code>，两者都没有有效值时无法构建客户端。</p><h3 id=\"section-2-发起第一次真实判断\">2. 发起第一次真实判断<a class=\"heading-anchor\" href=\"#section-2-发起第一次真实判断\" aria-label=\"链接到本节：2. 发起第一次真实判断\">#</a></h3><p>下面是一个独立&nbsp;Java 入口，放入已添加上述依赖的项目后可从 IDE 运行。它请求真实接口，需要配置凭据并会产生接口用量。</p><pre><code>import io.agentscope.extensions.judge.jev.JevClient;\nimport io.agentscope.extensions.judge.jev.JevRetryPolicy;\nimport io.agentscope.extensions.judge.jev.NoulAnswer;\nimport io.agentscope.extensions.judge.jev.NoulQuestion;\nimport io.agentscope.extensions.judge.jev.SystemOneRequest;\nimport java.time.Duration;\nimport java.util.Map;\npublic class JevQuickStart {\n    public static void main(String[] args) {\n        var client = JevClient.builder()\n                .baseUrl(\"https://api.typesafe.ai\")\n                .model(\"jev-latest\")\n                .timeout(Duration.ofSeconds(5))\n                .retryPolicy(new JevRetryPolicy(2, Duration.ofMillis(500)))\n                .build();\n        var request = SystemOneRequest.builder()\n                .state(Map.of(\n                        \"business_record\", \"尚未执行退款\",\n                        \"assistant_answer\", \"退款已经完成\"))\n                .question(\"supported\", new NoulQuestion(\n                        \"Does business_record support the refund status claimed in assistant_answer?\",\n                        null))\n                .build();\n        var result = client.systemOneBlocking(request);\n        var answer = (NoulAnswer) result.answers().get(\"supported\");\n        System.out.println(\"记录支持草稿的概率：\" + answer.noul());\n    }\n}</code></pre><p>成功调用后会打印 <code>supported</code> 对应的概率。这个输入刻意包含事实冲突，预期是较低的支持概率，但具体数值由真实模型返回，不能写死为验收结果。可以把草稿改为“目前尚未执行退款”，比较同一问题下两次输出，再加入真实业务样本评测。</p><p><br></p><p><code>systemOneBlocking</code> 适合这个独立入口；响应式服务应组合 <code>client.systemOne(request)</code> 返回的 <code>Mono</code>，避免阻塞事件循环。客户端会校验答案类型、题目集合和概率等字段；请求或响应失败时抛出 <code>JevException</code>，不能把接口错误解释成概率为零。</p><p><br></p><p>这里的5 秒是单次请求超时，重试可能增加总耗时。上层 Judge 或 <code>JevExecution</code> 可对包含重试、退避的整个逻辑判断设置预算。更多选项见客户端指南。</p><h3 id=\"section-3-将概率变成可复用的评审结果\">3. 将概率变成可复用的评审结果<a class=\"heading-anchor\" href=\"#section-3-将概率变成可复用的评审结果\" aria-label=\"链接到本节：3. 将概率变成可复用的评审结果\">#</a></h3><p>应用如果需要判断草稿是否进入下一步，可以复用上面的 <code>client</code>，定义一个 <code>JevJudge</code> 条件：</p><pre><code>import io.agentscope.extensions.judge.jev.JevJudge;\nimport io.agentscope.extensions.judge.jev.NoulQuestion;\nimport java.time.Duration;\nimport java.util.List;\nimport java.util.Map;\nvar definition = new JevJudge.Definition(\"refund-answer-v1\", List.of(\n        new JevJudge.Criterion(\n                \"supported\",\n                new NoulQuestion(\n                        \"Does business_record support the refund status claimed in assistant_answer?\",\n                        null),\n                true, 0.2, 0.8)));\nvar judge = new JevJudge(client, Duration.ofSeconds(2));\nvar review = judge.judge(\n        Map.of(\"business_record\", \"尚未执行退款\", \"assistant_answer\", \"退款已经完成\"),\n        definition);\nvar observed = review.doOnNext(result -&gt; {\n    System.out.println(\"评审状态：\" + result.status());\n    System.out.println(\"条件明细：\" + result.findings());\n});\n// 响应式服务返回或组合 observed；独立命令行可调用 observed.block()。</code></pre><p><code>true</code> 表示期望条件成立；示例中不高于 <code>0.2</code> 为 FAIL，不低于 <code>0.8</code> 为 PASS，中间区间为 INCONCLUSIVE。请求故障返回 ERROR。这两个阈值只是展示状态分支，需要用业务样本校准。</p><p><br></p><p>Judge 返回结果，不自动发布或修订回答。应用应对 PASS 继续后续发布检查，对 FAIL 修订或复核，对 INCONCLUSIVE 补充证据，对 ERROR 采用失败处理。修改标准或阈值时更新定义版本，方便离线回归比较。一个 <code>Mono</code> 不要为日志重复订阅，否则会重复评审。</p><h3 id=\"section-4-把判断挂到已有-harness\">4. 把判断挂到已有 Harness<a class=\"heading-anchor\" href=\"#section-4-把判断挂到已有-harness\" aria-label=\"链接到本节：4. 把判断挂到已有 Harness\">#</a></h3><p>当判断需要自动发生在每轮推理前，再使用中间件。Harness 集成需要额外引入同版本依赖：</p><pre><code>&lt;dependency&gt;\n    &lt;groupId&gt;io.agentscope&lt;/groupId&gt;\n    &lt;artifactId&gt;agentscope-harness&lt;/artifactId&gt;\n    &lt;version&gt;${agentscope.version}&lt;/version&gt;\n&lt;/dependency&gt;</code></pre><p>下面使用前面创建的 <code>client</code>，<code>model</code> 和 <code>toolkit</code> 是应用已有的生成模型与工具注册表。工具名和 schema 必须已注册；中间件负责筛选，不负责创建工具。</p><pre><code>import io.agentscope.extensions.judge.jev.JevExecution;\nimport io.agentscope.extensions.judge.jev.example.JevToolSelectionMiddleware;\nimport io.agentscope.harness.agent.HarnessAgent;\nimport java.time.Duration;\nvar options = new JevExecution.Options(\n        JevExecution.Mode.SHADOW,\n        Duration.ofSeconds(2),\n        \"order-tools-v1\",\n        (ctx, record) -&gt; System.out.println(record));\nvar selector = JevToolSelectionMiddleware.builder(client)\n        .execution(options)\n        .maxTools(2)\n        .confidenceThreshold(0.8)\n        .rejectionThreshold(0.2)\n        .build();\nvar agent = HarnessAgent.builder()\n        .name(\"order-support\")\n        .model(model)\n        .toolkit(toolkit)\n        .middleware(selector)\n        .build();</code></pre><p>这里的阈值仅用于演示，SHADOW 下主模型仍收到原工具目录。生产观察器应快速返回，并将判断版本、耗时和建议关联到当前运行。普通中间件默认 OFF；SHADOW 记录建议，ENFORCE 才按具体用途采用建议。直接调用 Judge 等应用 API 会发起评审，不隐式受一个全局模式控制。详见运行模式。</p><p><br></p><p>要验证这个接线是否生效，可以用“查订单”“未发货则退款”和普通问候分别运行现有 Agent，观察记录中是否出现相应工具建议。SHADOW 下实际工具目录应保持不变；校准后把模式改为 ENFORCE 并重新构建中间件和 Agent，再核对实际传给模型的工具。原 Agent 的调用方式保持不变，注册中间件本身不会执行一次任务。</p><h3 id=\"section-5-spring-boot-使用自动配置的客户端\">5. Spring Boot 使用自动配置的客户端<a class=\"heading-anchor\" href=\"#section-5-spring-boot-使用自动配置的客户端\" aria-label=\"链接到本节：5. Spring Boot 使用自动配置的客户端\">#</a></h3><p>Spring Boot 项目可用下面的 Starter 引入客户端集成：</p><pre><code>&lt;dependency&gt;\n    &lt;groupId&gt;io.agentscope&lt;/groupId&gt;\n    &lt;artifactId&gt;agentscope-jev-spring-boot-starter&lt;/artifactId&gt;\n    &lt;version&gt;${agentscope.version}&lt;/version&gt;\n&lt;/dependency&gt;</code></pre><p>在 <code>application.yml</code> 中配置：</p><pre><code>agentscope:\n  jev:\n    api-key: ${TYPESAFE_API_KEY:}\n    base-url: https://api.typesafe.ai\n    model: jev-latest\n    timeout: 5s\n    retry:\n      max-retries: 2\n      initial-backoff: 500ms</code></pre><p>Starter 默认在没有自定义 <code>JevClient</code> Bean 时创建客户端。可以通过构造器注入，复用前面的请求和 Judge 定义：</p><pre><code>import io.agentscope.extensions.judge.jev.JevClient;\nimport io.agentscope.extensions.judge.jev.SystemOneRequest;\nimport io.agentscope.extensions.judge.jev.SystemOneResult;\nimport org.springframework.stereotype.Service;\nimport reactor.core.publisher.Mono;\n@Service\npublic class DecisionService {\n    private final JevClient client;\n    public DecisionService(JevClient client) {\n        this.client = client;\n    }\n    public Mono&lt;SystemOneResult&gt; decide(SystemOneRequest request) {\n        return client.systemOne(request);\n    }\n}</code></pre><p>Starter 配置的是客户端，不会自动给所有 Agent 注册工具筛选或开启 ENFORCE。中间件仍需显式装配；需要定制客户端时可提供 <code>JevClientBuilderCustomizer</code> Bean。<code>agentscope.jev.enabled=false</code> 可关闭 Starter 的客户端自动创建，依赖该 Bean 的业务组件也应相应调整。</p><h3 id=\"section-6-service-配置与无需密钥的体验入口\">6. Service 配置与无需密钥的体验入口<a class=\"heading-anchor\" href=\"#section-6-service-配置与无需密钥的体验入口\" aria-label=\"链接到本节：6. Service 配置与无需密钥的体验入口\">#</a></h3><p>AgentScope Service 用户可以通过 Session 的 <code>agentOverrides.jev</code> 分别配置工具选择、防护、路由、内容与质量审核、评估、压缩、监督、代码评审、检索和浏览器用途。密钥由部署环境提供；检索源、模型目录、浏览器会话与验证证据仍需宿主接入。详见 Service 配置。</p><p><br></p><p>如果想先看流程如何运转，<code>agentscope-examples/jev</code> 提供无需密钥的离线案例，覆盖检索与回答修订、压缩归档、阶段路由、监督和轨迹评估等场景。按案例指南构建运行即可。案例中的脚本模型和合成判断用于验证流程，不代表真实模型效果。</p><h2 id=\"section-用实际任务判断是否值得接管\">用实际任务判断是否值得接管<a class=\"heading-anchor\" href=\"#section-用实际任务判断是否值得接管\" aria-label=\"链接到本节：用实际任务判断是否值得接管\">#</a></h2><p>增加判断也会增加请求和等待时间。工具描述变少不必然意味着端到端更快，更多审核也不必然提高任务成功率。应对相同输入比较原流程与增强流程，分别测量判断质量、实际派发行为和最终业务结果。</p><p><br></p><p>例如退款防护既要统计错误放行，也要统计正常退款被阻止的比例；回答修订要观察最终正确率及附加等待；压缩要检查关键事实保留与后续答案质量。评估时保留错误、弃权和跳过，区分判断耗时与整体耗时，用量缺失时不要记成零成本。</p><p><br></p><p>可以先使用&nbsp;SHADOW 积累样本，再按用途决定是否 ENFORCE，并验证回退是否符合业务要求：工具选择与路由失败保留原流程，受保护工具检查失败拒绝派发，发布前审核失败不发布文本。</p><p><br></p><p>官方文档有提供的完整评测指南与预算和观测。欢迎在&nbsp;Issue #3251 分享你的使用场景、缺少的能力和实际评测结果。无论是自定义中间件、完整示例，还是一次没有带来收益的尝试，都能帮助我们继续完善 AgentScope Java 的判断流程。</p><p><br></p><p>欢迎加入&nbsp;Agent x JEV 钉钉群与我们交流，群号：200975007516。</p>",
+    "headings": [
+      {
+        "id": "section-结构化判断如何进入-agent-系统",
+        "level": 2,
+        "text": "结构化判断如何进入 Agent 系统"
+      },
+      {
+        "id": "section-jev-生成模型与-harness-各自负责什么",
+        "level": 3,
+        "text": "JEV、生成模型与 Harness 各自负责什么"
+      },
+      {
+        "id": "section-用-state-提供材料-用-question-定义标准",
+        "level": 3,
+        "text": "用 state 提供材料，用 question 定义标准"
+      },
+      {
+        "id": "section-如何理解概率-置信度与不确定性",
+        "level": 3,
+        "text": "如何理解概率、置信度与不确定性"
+      },
+      {
+        "id": "section-从一次条件退款看完整流程",
+        "level": 2,
+        "text": "从一次条件退款看完整流程"
+      },
+      {
+        "id": "section-执行前-选工具-选模型-再检查具体操作",
+        "level": 3,
+        "text": "执行前：选工具、选模型，再检查具体操作"
+      },
+      {
+        "id": "section-执行中-治理上下文-记忆与检索证据",
+        "level": 3,
+        "text": "执行中：治理上下文、记忆与检索证据"
+      },
+      {
+        "id": "section-输出时-审核草稿-并只修订需要修订的文本",
+        "level": 3,
+        "text": "输出时：审核草稿，并只修订需要修订的文本"
+      },
+      {
+        "id": "section-长任务与交付-监督进展-评估完整轨迹",
+        "level": 3,
+        "text": "长任务与交付：监督进展，评估完整轨迹"
+      },
+      {
+        "id": "section-接入实操-从一个用途开始",
+        "level": 2,
+        "text": "接入实操：从一个用途开始"
+      },
+      {
+        "id": "section-1-添加依赖包",
+        "level": 3,
+        "text": "1. 添加依赖包"
+      },
+      {
+        "id": "section-2-发起第一次真实判断",
+        "level": 3,
+        "text": "2. 发起第一次真实判断"
+      },
+      {
+        "id": "section-3-将概率变成可复用的评审结果",
+        "level": 3,
+        "text": "3. 将概率变成可复用的评审结果"
+      },
+      {
+        "id": "section-4-把判断挂到已有-harness",
+        "level": 3,
+        "text": "4. 把判断挂到已有 Harness"
+      },
+      {
+        "id": "section-5-spring-boot-使用自动配置的客户端",
+        "level": 3,
+        "text": "5. Spring Boot 使用自动配置的客户端"
+      },
+      {
+        "id": "section-6-service-配置与无需密钥的体验入口",
+        "level": 3,
+        "text": "6. Service 配置与无需密钥的体验入口"
+      },
+      {
+        "id": "section-用实际任务判断是否值得接管",
+        "level": 2,
+        "text": "用实际任务判断是否值得接管"
+      }
+    ],
+    "textLength": 11518,
+    "readingMinutes": 26,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1782242",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "e378a3f57f23b84fed30fc049be861bf04709fe387bf28bf6812ba2ae078a902",
+    "fetchedAt": "2026-11-12T08:20:42.421Z",
+    "checkedAt": "2026-11-12T08:20:42.421Z",
+    "nextRetryAt": "2026-12-12T08:20:42.422Z",
+    "warnings": []
+  }
+}

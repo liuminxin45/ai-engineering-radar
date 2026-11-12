@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -61,7 +61,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -72,15 +80,7 @@
           "listingHash": "8dcd85307ca82d359c240caf92ed389ba37d31248b49809347fa4c0cc4d5af2c"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "34d623bd3e49efa28693",
@@ -101,7 +101,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -141,7 +141,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -163,6 +163,47 @@
       "duplicateCandidates": []
     },
     {
+      "id": "595f4ddd5dc23d6da4cd",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "contentType": "blog",
+      "title": "双11囤Token火了：京东搜索量暴涨7倍，AI生产力成新刚需",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/23632506",
+      "author": "jcloud",
+      "description": "写方案、做PPT、跑代码，AI已成为办公和创作中越来越离不开的好帮手，“囤Token”也成了今年11.11的新话题。京东消费趋势显示，自京东11.11开启以来，不少用户来平台上搜索AI服务相关商品，关键词“Token”的搜索量环比提升超7倍。 为更好满足消费者对AI硬件和服务商品的需求，今年京东11",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-11T12:10:00.000Z",
+      "discoveredAt": "2026-11-12T08:20:29.055Z",
+      "updatedAt": "2026-11-12T08:20:29.055Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "23632506",
+          "url": "https://www.cnblogs.com/Jcloud/p/23632506",
+          "listingHash": "a4d9e656d93926f1567a2321c89cfc1580ac4a580577428dd3da7eb401d14739"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "61bc1feab997f2291120",
       "publisherId": "jd-official",
       "companyId": "jd",
@@ -181,7 +222,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -222,7 +263,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -262,7 +303,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -302,7 +343,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -342,7 +383,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -383,7 +424,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -423,7 +464,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -463,7 +504,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -503,7 +544,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -543,7 +584,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "4bebf0640bdef5a68a46",
+    "status": "ready",
+    "html": "<p>作者：无哲</p><p><br></p><p><span><span><span>也许你也曾经遇到过这样的场景：线上突发故障，你顺着线索一路排查，终于锁定了一个随新版本上线、包含关键信息的日志字段。但点击查询时，系统却提示：“该字段未配置索引，无法进行分析”。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>在半结构化日志日益普及的今天，写入端可以灵活扩展字段，分析端却仍然依赖预先配置的索引。每次发版带来新字段，都要手动补索引，对于历史数据可能还要再等待索引重建。这使得</span><strong>“</strong></span></span><span><span><strong>写入的灵活</strong></span></span><span><span><strong>”</strong><span>并没有完全转化为</span><strong>“</strong></span></span><span><span><strong>分析的便利</strong></span></span><span><span><strong>”</strong><span>。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>AI Agent 的兴起，则让这个矛盾更加突出。Agent 在执行任务时会动态生成新的日志字段，在多轮“推理—检索”中也会根据中间结果不断调整查询分析路径。这些字段和分析需求都在运行时产生，难以提前预设，也无法每次都依靠人工实时跟进索引配置。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>为此，</span><strong>阿里云日志服务 SLS 推出</strong></span></span><span><span><strong>自动发现字段索引</strong></span></span><span><span><strong>功能，</strong><span>让索引具备自适应数据变化的能力，自动为新写入的字段创建索引并开启统计，无需手动干预。无论是开发运维人员还是 Agent，都无需逐个配置字段索引，就能使用新字段进行分析，从而实现数据的开箱即用。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b244f1c0ab84445c9cc6b97dff579033.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><span></span><p></p><p><br></p><h2 id=\"section-01-手动维护索引-越来越难跟上变化\">01 手动维护索引，越来越难跟上变化<br><a class=\"heading-anchor\" href=\"#section-01-手动维护索引-越来越难跟上变化\" aria-label=\"链接到本节：01 手动维护索引，越来越难跟上变化\">#</a></h2><h3 id=\"section-字段很难在接入时一次确定\"><span><span><span>▍</span></span><span><strong><span>字段很难在接入时一次确定</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-字段很难在接入时一次确定\" aria-label=\"链接到本节：▍字段很难在接入时一次确定\">#</a></h3><p><span><span><span>通过字段索引进行日志查询和 SQL 分析，通常需要先确定字段，再配置索引。当日志结构稳定、查询需求明确时，这套方式很容易落实。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>但实际业务中的字段往往是逐步增加的。应用升级会带来新的观测信息，接入不同数据源会引入新的日志结构，还有一些字段只在特定条件下出现。接入时看到的日志样本，很难覆盖后续所有数据。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>于是，维护索引也成了一项持续的工作：每次新增字段，都要考虑是否需要查询、是否用于分析，以及相应的索引是否已经配置。业务变化越快，这项工作就越难做全。</span></span></span></p><h3 id=\"section-用到字段时-才发现还没有索引\"><span><span><span>▍</span></span><span><strong><span>用到字段时，才发现还没有索引</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-用到字段时-才发现还没有索引\" aria-label=\"链接到本节：▍用到字段时，才发现还没有索引\">#</a></h3><p><span><span><span>字段有没有索引，往往到真正使用时才会被注意到。新的查询需要增加一个过滤条件，统计需要换一个分组维度，却发现对应字段还没有建立索引。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>此时再添加索引，分析就要等待；如果还需要覆盖已经写入的历史数据，则可能需要重建索引，当历史数据量较大时，等待的时间也会被拉长。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>数据已经存在，却不能马上分析。原本可以继续深入的问题，卡在了索引准备这一步。</span></span></span></p><h3 id=\"section-agent-让日志字段和查询需求更难预先确定\"><span><span><span>▍</span></span><span><strong><span>Agent 让日志字段和查询需求更难预先确定</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-agent-让日志字段和查询需求更难预先确定\" aria-label=\"链接到本节：▍Agent 让日志字段和查询需求更难预先确定\">#</a></h3><p><span><span><span>当日志由 Agent 生成和写入时，日志内容会随着任务、工具调用和执行结果变化。不同任务可能记录不同的字段，执行过程中也可能增加新的状态和中间结果，很难在接入之初就完整确定日志结构。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>当 Agent 负责分析日志时，分析路径同样难以提前预设。分析过程中，Agent 通过多轮\"推理—调用工具—观察结果\"推进任务，借助字段检索缩小范围，再通过 SQL 完成聚合、排序和对比。每一轮结果又会决定下一步查询哪些字段、验证什么假设，查询需求随着推理过程动态产生。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>如果分析过程中发现字段没有索引，就可能需要暂停查询，等待索引补建或重建，甚至由人工介入处理，打断原本连续推进的推理与工具调用。</span></span></span></p><p><br></p><h2 id=\"section-02-sls-自动发现索引-新字段自动建索引-无需逐个配置\">02 SLS 自动发现索引：新字段自动建索引，无需逐个配置<br><a class=\"heading-anchor\" href=\"#section-02-sls-自动发现索引-新字段自动建索引-无需逐个配置\" aria-label=\"链接到本节：02 SLS 自动发现索引：新字段自动建索引，无需逐个配置\">#</a></h2><p><span><span><span>开启自动发现索引后，SLS 会在数据写入时自动识别未配置索引的新字段，为其构建索引并更新索引配置。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b1f0bee327e24ec38bb7a5b97e0a61da.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-持续发现-自动创建索引并开启统计\"><span><span><span>▍</span></span><span><strong><span>持续发现：自动创建索引并开启统计</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-持续发现-自动创建索引并开启统计\" aria-label=\"链接到本节：▍持续发现：自动创建索引并开启统计\">#</a></h3><p><span><span><span>自动发现索引会持续检查新写入的日志。遇到尚未配置字段索引的顶层字段时，SLS 自动为其创建字段索引并开启统计，使其能够参与字段查询和 SQL 分析。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>这项能力会随着日志写入持续工作。应用后续增加的字段、不同数据源带来的字段，以及接入时尚未出现的字段，都可以在实际写入时被发现，无需每次新增字段后再手动补充配置。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>对于应用开发者，新增日志字段时少了一项同步维护工作；对于数据使用者，分析时可以直接使用这些新字段，自由调整查询条件和统计维度。</span></span></span></p><h3 id=\"section-写入即构建-无缝覆盖配置可见前的数据\"><span><span><span>▍</span></span><span><strong><span>写入即构建：无缝覆盖配置可见前的数据</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-写入即构建-无缝覆盖配置可见前的数据\" aria-label=\"链接到本节：▍写入即构建：无缝覆盖配置可见前的数据\">#</a></h3><p><span><span><span>开启自动发现索引后，SLS 会在日志写入时立即为新字段构建索引。索引构建与字段配置的生效是两个独立的过程——构建会随写入立即开始，配置可见需要一定的同步时间。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>这意味着，在配置尚未可见的这段时间里写入的数据，索引同样会被构建。待配置生效后，这部分数据可以直接用于查询和分析，无需补建或重建索引。</span></span></span></p><h3 id=\"section-统一按-text-建索引-兼容类型不确定的字段\"><span><span><span>▍</span></span><span><strong><span>统一按 text 建索引：兼容类型不确定的字段</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-统一按-text-建索引-兼容类型不确定的字段\" aria-label=\"链接到本节：▍统一按 text 建索引：兼容类型不确定的字段\">#</a></h3><p><span><span><span>在自动发现字段时，仅凭字段首次出现时的值，很难准确判断其真实的业务类型。例如，某新字段写入的第一条日志值是&nbsp;</span></span></span><span><span><span>123</span></span></span><span><span><span>，看似是数值，但后续写入的完全可能是&nbsp;</span></span></span><code><span><span><span>abc</span></span></span></code><span><span><span>（例如随机 ID）。如果贸然在首次探测时将索引类型固定为数值型，后续遇到非数字字符时就会面临类型冲突。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>为此，SLS 对自动发现的字段统一采用 text 类型建立索引。这种高兼容性的设计能够包容各种格式的字段值，确保任何格式的新字段都能顺利写入并生成索引，避免因类型判断不准而导致的冲突与漏建。</span></span></span></p><h3 id=\"section-sql-类型自适应转换-免去类型声明\"><span><span><span>▍</span></span><span><strong><span>SQL 类型自适应转换：免去类型声明</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-sql-类型自适应转换-免去类型声明\" aria-label=\"链接到本节：▍SQL 类型自适应转换：免去类型声明\">#</a></h3><p><span><span><span>虽然底层统一以 text 类型存储，但这并不影响数值类计算的便利性。在进行 SQL 分析时，针对自动探测出来的字段，SLS 引擎在遇到数值类表达式时，会自动在运行时将字段值转换为数值类型。对于无法转换为数值的值，会自动跳过。相当于将&nbsp;</span></span></span><code><span><span><span>sum(x)</span></span></span></code><span><span><span>&nbsp;自动转换为&nbsp;</span></span></span><code><span><span><span>sum(try_cast(x as double))</span></span></span></code><span><span><span>。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>这样，通常情况下，无需专门将自动探测出的字段改为数字类型，就可以直接按照数字类型去写 SQL，使用起来更加方便。</span></span></span></p><p><br></p><h2 id=\"section-03-如何开启和使用自动发现索引\">03 如何开启和使用自动发现索引<br><a class=\"heading-anchor\" href=\"#section-03-如何开启和使用自动发现索引\" aria-label=\"链接到本节：03 如何开启和使用自动发现索引\">#</a></h2><h3 id=\"section-在控制台开启自动发现索引\"><span><span><span>▍</span></span><span><strong><span>在控制台开启自动发现索引</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-在控制台开启自动发现索引\" aria-label=\"链接到本节：▍在控制台开启自动发现索引\">#</a></h3><p><span><span><span>进入目标 Logstore 的索引配置页面，确认全文索引已开启，勾选“非指定字段自动发现（需开启全文索引）”并保存，即可开始持续发现新写入日志中的字段。</span></span></span></p><p><span><span><span><br></span></span></span></p><blockquote><p><span>控制台开启入口按账号分批开放中，如果暂未被灰度到，可以提交工单联系开启白名单。</span></p></blockquote><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_526372aa60ad473590a294536236b6c2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-查看自动发现的字段\"><span><span><span>▍</span></span><span><strong><span>查看自动发现的字段</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-查看自动发现的字段\" aria-label=\"链接到本节：▍查看自动发现的字段\">#</a></h3><p><span><span><span>开启后，继续向 Logstore 写入日志。新出现的字段会自动建立索引，随后可以在索引配置页面的“自动探测字段”区域查看。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>这些字段索引的类型都是 text 类型，分词符、是否大小写敏感、包含中文这些属性，和全文索引相同，并且默认开启了统计。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_375d9b9ce23e4cc2ae420385fc506a6c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span><span>如果需要修改自动探测出的字段属性，可以点击字段上面的 + 号，提升为手动配置字段，然后再进行修改其相关属性。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_f9c65ef6117b4148b6531d07290a052a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-使用自动发现的字段进行查询分析\"><span><span><span>▍</span></span><span><strong><span>使用自动发现的字段进行查询分析</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-使用自动发现的字段进行查询分析\" aria-label=\"链接到本节：▍使用自动发现的字段进行查询分析\">#</a></h3><p><span><span><span>待字段配置可见后，就可以在日志查询界面使用这些自动探测字段，进行字段查询、快速分析和常规 SQL 分析，使用方式与手动创建的字段索引完全一致。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_dcbee6aca28c4fbcaf179b42ec64b769.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span><span>自动探测字段默认开启统计，可以进行 SQL 分析。自动探测字段在索引层面是 text 类型，但在 SQL 中也可以直接视为数字类型去使用。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_2985caef56ba4943919e4fb08b3fec7a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-通过-sdk-开启和管理自动发现的字段\"><span><span><span>▍</span></span><span><strong><span>通过 SDK 开启和管理自动发现的字段</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-通过-sdk-开启和管理自动发现的字段\" aria-label=\"链接到本节：▍通过 SDK 开启和管理自动发现的字段\">#</a></h3><blockquote><p><span>SDK 方式已经全地域支持，无需添加白名单即可使用。</span></p></blockquote><p><span><span><span><br></span></span></span></p><p><span><span><span>在索引配置的 json 中，line字段的&nbsp;</span></span></span><code><span><span><span>\"auto_key_detect\": true</span></span></span></code><span><span><span>&nbsp;表示开启自动发现索引的能力。</span></span></span><code><span><span><span>auto_text_key</span></span><span><span>s</span></span><span>&nbsp;</span></span></code><span><span><span>表示自动发现出来的索引字段。</span></span></span></p><p><br></p><pre><code>{\n  \"line\": {\n    \"auto_key_detect\": true,\n    \"auto_text_keys\": [\"status\", \"code\", \"latency\"]\n  },\n  \"keys\": {\n  }\n}</code></pre><p><span><span><span><br></span></span></span></p><p><span><span><span>SDK 也提供了相关接口来操作，以 python sdk 为例（</span></span></span><code><span><span><span>0.9.52</span></span></span></code><span><span><span>&nbsp;版本及以上）。</span></span></span></p><p><br></p><pre><code>from aliyun.log import IndexConfig, IndexLineConfig\n#开启自动发现索引\nclient.create_index(\n    project, logstore,\n    IndexConfig(line_config=IndexLineConfig(\n        token_list=[\" \", \",\", \";\", \"\\n\", \"\\t\"],\n        auto_key_detect=True,\n    ))\n)\n#获取自动发现索引相关配置\nindex = client.get_index_config(project, logstore).get_index_config()\nprint(\"是否开启自动发现:\", index.line_config.auto_key_detect)\nprint(\"已发现的字段:\", index.line_config.auto_text_keys)</code></pre><p><span><span><span><br></span></span></span></p><p><span><span><span>关于自动发现索引的更多配置细节、使用限制、常见问题等说明，请参考</span></span></span><span><span><span>官网文档</span><em>（</em></span><em><a href=\"https://help.aliyun.com/zh/sls/automatic-field-indexing?spm=a2c6h.13046898.publish-article.14.4d566ffauEFZ7l\" target=\"_blank\" rel=\"noopener noreferrer\">https://help.aliyun.com/zh/sls/automatic-field-indexing</a></em><span><em>）</em></span></span><span><span><span>。</span></span></span></p><p><br></p><h2 id=\"section-04-总结\">04 总结<a class=\"heading-anchor\" href=\"#section-04-总结\" aria-label=\"链接到本节：04 总结\">#</a></h2><p><span><span><span>随着 AI Agent 深度参与到任务规划与问题分析中，底层数据系统正迎来一次角色转变：查询需求不再能够被提前预设，而是在运行时动态产生的。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>为了支撑这种高频、不确定的探索，现代数据系统不仅要利用弹性容量和高效检索，去处理大模型无法直接消化的大规模数据，更要把字段识别、索引构建等前置工作自动完成，减少分析过程中的等待与人工干预。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_763c9871c3a547459054436d51312aec.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span><span>自动发现索引正 SLS 沿着“数据自适应”方向迈出的一步。弹性容量应对规模变化，灵活 Schema 允许结构演进，而索引自动发现则保证了新增字段的即时可用。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>当底层配置不再成为探索的限制，无论是开发者还是 AI Agent，都能更纯粹地专注于业务问题本身，真正实现数据的开箱即用与自由分析。</span></span></span></p>",
+    "headings": [
+      {
+        "id": "section-01-手动维护索引-越来越难跟上变化",
+        "level": 2,
+        "text": "01 手动维护索引，越来越难跟上变化"
+      },
+      {
+        "id": "section-字段很难在接入时一次确定",
+        "level": 3,
+        "text": "▍字段很难在接入时一次确定"
+      },
+      {
+        "id": "section-用到字段时-才发现还没有索引",
+        "level": 3,
+        "text": "▍用到字段时，才发现还没有索引"
+      },
+      {
+        "id": "section-agent-让日志字段和查询需求更难预先确定",
+        "level": 3,
+        "text": "▍Agent 让日志字段和查询需求更难预先确定"
+      },
+      {
+        "id": "section-02-sls-自动发现索引-新字段自动建索引-无需逐个配置",
+        "level": 2,
+        "text": "02 SLS 自动发现索引：新字段自动建索引，无需逐个配置"
+      },
+      {
+        "id": "section-持续发现-自动创建索引并开启统计",
+        "level": 3,
+        "text": "▍持续发现：自动创建索引并开启统计"
+      },
+      {
+        "id": "section-写入即构建-无缝覆盖配置可见前的数据",
+        "level": 3,
+        "text": "▍写入即构建：无缝覆盖配置可见前的数据"
+      },
+      {
+        "id": "section-统一按-text-建索引-兼容类型不确定的字段",
+        "level": 3,
+        "text": "▍统一按 text 建索引：兼容类型不确定的字段"
+      },
+      {
+        "id": "section-sql-类型自适应转换-免去类型声明",
+        "level": 3,
+        "text": "▍SQL 类型自适应转换：免去类型声明"
+      },
+      {
+        "id": "section-03-如何开启和使用自动发现索引",
+        "level": 2,
+        "text": "03 如何开启和使用自动发现索引"
+      },
+      {
+        "id": "section-在控制台开启自动发现索引",
+        "level": 3,
+        "text": "▍在控制台开启自动发现索引"
+      },
+      {
+        "id": "section-查看自动发现的字段",
+        "level": 3,
+        "text": "▍查看自动发现的字段"
+      },
+      {
+        "id": "section-使用自动发现的字段进行查询分析",
+        "level": 3,
+        "text": "▍使用自动发现的字段进行查询分析"
+      },
+      {
+        "id": "section-通过-sdk-开启和管理自动发现的字段",
+        "level": 3,
+        "text": "▍通过 SDK 开启和管理自动发现的字段"
+      },
+      {
+        "id": "section-04-总结",
+        "level": 2,
+        "text": "04 总结"
+      }
+    ],
+    "textLength": 3736,
+    "readingMinutes": 9,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1782210",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "0abfd3e1285653967ac02d3b3965c76b7e8645feb919fab4d379b3224b2758a5",
+    "fetchedAt": "2026-11-12T08:20:38.658Z",
+    "checkedAt": "2026-11-12T08:20:38.658Z",
+    "nextRetryAt": "2026-12-12T08:20:38.658Z",
+    "warnings": []
+  }
+}

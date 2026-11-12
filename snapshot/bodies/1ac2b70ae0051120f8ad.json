@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "1ac2b70ae0051120f8ad",
+    "status": "ready",
+    "html": "<h2 id=\"section-本月可观测热文回顾\">本月可观测热文回顾<a class=\"heading-anchor\" href=\"#section-本月可观测热文回顾\" aria-label=\"链接到本节：本月可观测热文回顾\">#</a></h2><p><br></p><p><strong><span>文章一览：</span></strong></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.3.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247587683&amp;idx=1&amp;sn=0e910cf6f0cfd72474bb7a1c14fb7050&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">告别手动补索引：SLS 支持索引自动发现，让数据开箱即用、自由分析</a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.4.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247587677&amp;idx=1&amp;sn=235b2cf8ae60323f85a52fde310fd211&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">从 HTTP 200 到第一个有效输出：AI SSE 拨测如何量化流式体验</a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.5.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247587564&amp;idx=1&amp;sn=68e1233103f69e8f7b6dced1ad766dda&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">AI 语音一直“正在连接”？用 RUM 排查 WebSocket 建连问题</a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.6.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247587510&amp;idx=1&amp;sn=da0ddd3b3efed9d9d14c5bf0cc7b921c&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">从页面渲染到智能体：ARMS Node.js 探针解锁 SSR + AI 全链路可观测</a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.7.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247587485&amp;idx=1&amp;sn=7838aa907d18bf5a9822aa7d98f798e0&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">阿里云发布 AgenticOps 全栈能力，让 Agent 成为运维与研发的第一用户</a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.8.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247587425&amp;idx=1&amp;sn=e0cc8ed663aaed44634b4f5ef102cbf9&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">阿里云日志服务 SLS 全新升级，打造 Agent 时代的</a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.8.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247587425&amp;idx=1&amp;sn=e0cc8ed663aaed44634b4f5ef102cbf9&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">智能数据引擎</a></span><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.9.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247587226&amp;idx=1&amp;sn=c2dcaa61af1d61cd4a205b5f0f5211c1&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">智能聚类：从海量 Trace 中理解 Agent 的行为和表现</a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.10.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247587148&amp;idx=1&amp;sn=0be6b77b44ecbc278e727c00924325f4&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">周五 21:47，checkout 又慢了：云监控 MCP 想接住的那二十分钟</a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.11.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247586997&amp;idx=1&amp;sn=3ae0c264039e68d91d6449f959ddd56c&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">玩家说“充值没到账”，日志只回了一句 BAG_FULL</a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.12.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247586896&amp;idx=1&amp;sn=3268dc413365ebae2b1a018fbe606777&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">从容面对收银高峰，乐檬的零售连锁智能运维实践</a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.13.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247586804&amp;idx=1&amp;sn=e54c469eb9c9734b173f651867d26d29&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">AI Agent 时代，需要的不是更多数据，而是一个语义层</a></span></p><p><span><a href=\"https://mp.weixin.qq.com/s?spm=a2c6h.13046898.publish-article.14.14586ffajfdbS8&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247586529&amp;idx=1&amp;sn=f935ec97b3189bb7f9000ba5ad599aa6&amp;scene=21#wechat_redirect\" target=\"_blank\" rel=\"noopener noreferrer\">从查账单到运营云成本：STAROps 如何把 FinOps 跑成一条闭环</a></span></p><p><em><strong><span><br></span></strong></em></p><h2 id=\"section-功能快报\">功能快报<a class=\"heading-anchor\" href=\"#section-功能快报\" aria-label=\"链接到本节：功能快报\">#</a></h2><p><em></em></p><figure><em><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_7d9447bebeb941e58cb2548f7e90c640.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></em></figure><p></p><p><span><span><span>点击</span></span></span><a href=\"https://www.aliyun.com/product/arms?spm=a1z389.11499242.0.0.65452413yOc5rP&amp;utm_content=g_1000408142\" target=\"_blank\" rel=\"noopener noreferrer\"><strong><span><strong>此处</strong></span></strong></a><strong><span><span>，了解更多产品详情。</span></span></strong></p>",
+    "headings": [
+      {
+        "id": "section-本月可观测热文回顾",
+        "level": 2,
+        "text": "本月可观测热文回顾"
+      },
+      {
+        "id": "section-功能快报",
+        "level": 2,
+        "text": "功能快报"
+      }
+    ],
+    "textLength": 445,
+    "readingMinutes": 1,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1782259",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "1dc3c7ca0334f895d462907b1c1ea6e0a7723a94f4b4d23950b109eb7149c2c4",
+    "fetchedAt": "2026-11-12T08:20:40.416Z",
+    "checkedAt": "2026-11-12T08:20:40.416Z",
+    "nextRetryAt": "2026-12-12T08:20:40.416Z",
+    "warnings": []
+  }
+}

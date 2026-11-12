@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -82,6 +82,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "28fe7c1334a39bd21003",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "contentType": "blog",
+      "title": "开发者实测｜把视频处理交给 Agent：AI MediaKit Skill 深度评测",
+      "canonicalUrl": "https://www.toutiao.com/article/7706969170482643506",
+      "author": "字节跳动技术团队",
+      "description": "AI MediaKit Skill 的载体是火山引擎开源的命令行工具 mediakit-cli:技能包装进 Agent 后，Agent 通过自然语言理解需求，再调用 CLI 完成实际处理。",
+      "publishedAt": "2026-11-11T17:36:53.000Z",
+      "discoveredAt": "2026-11-12T08:20:29.387Z",
+      "updatedAt": "2026-11-12T08:20:29.387Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7706969170482643506",
+          "url": "https://www.toutiao.com/article/7706969170482643506",
+          "listingHash": "04fc6e392d9780e99a8d0cc9d8d28fccfd613994bc2b3285effc7c717619fb92"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "3838acc073bc9b6b6eaf",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
@@ -100,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -180,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -260,7 +300,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -300,7 +340,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -340,7 +380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -380,7 +420,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -420,7 +460,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -460,7 +500,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -500,7 +540,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-11T07:46:27.423Z"
+        "classifiedAt": "2026-11-12T08:20:33.187Z"
       },
       "advertorial": {
         "status": "unmarked",

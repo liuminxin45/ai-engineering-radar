@@ -2,17 +2,81 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "c243610b951ac8953c4f",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "<p><span><span><span>AI Agent 正从“能演示”迈向“进生产”。跨越这一步，依靠的不只是更强的模型，而是一套可靠、安全、低成本，并且可构建、可运行、可观测、可治理的企业级基础设施。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>本届云栖大会期间，阿里云云原生应用平台围绕企业级 Agent 规模化进入生产，集中发布和升级 11 项产品与能力。从 Alibaba Cloud AgentCore、AI Agent Handbook，到可观测、研发、运维、网关、数据与消息基础设施，为企业提供一套贯穿 Agent 构建、运行、治理与持续优化的云原生底座。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><strong><span>关注</span><strong>“阿里云云原生”</strong><span>公众号，私信发送</span><strong>“2026云栖”</strong><span>，获取【Agent 工程化：AgentCore 让企业级智能体走进生产】、【可观测与智能开发运维】、【AI 实时数据智能】论坛演讲资料合集回顾现场精华，系统了解企业级 Agent 从技术架构到生产实践的完整路径。</span></strong></p><p><br></p><h2 id=\"section-11-项发布-升级-为-agent-规模化生产夯实底座\">11 项发布 &amp; 升级，为 Agent 规模化生产夯实底座<a class=\"heading-anchor\" href=\"#section-11-项发布-升级-为-agent-规模化生产夯实底座\" aria-label=\"链接到本节：11 项发布 &amp; 升级，为 Agent 规模化生产夯实底座\">#</a></h2><p><span><em><span><br></span></em></span></p><h3 id=\"section-云栖大会主论坛重磅发布-alibaba-cloud-agentcore\"><span><span><span>▍</span></span><span><strong><strong>云栖大会主论坛重磅发布 Alibaba Cloud AgentCore</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-云栖大会主论坛重磅发布-alibaba-cloud-agentcore\" aria-label=\"链接到本节：▍云栖大会主论坛重磅发布 Alibaba Cloud AgentCore\">#</a></h3><p><span><span><span>9 月 22 日云栖大会主论坛开幕式，阿里云 CTO 李飞飞系统性阐述 Agentic Cloud 战略布局，宣布全新推出企业级 Agent 构建和治理平台 Alibaba Cloud AgentCore，将企业级 Agent 基础设施标准化、托管化，支持长任务、失败重试、断点恢复和异步执行；提供安全执行环境、资源隔离、身份权限和全链路审计，统一管理模型、MCP Server、Skill 等资产，</span></span></span><span><span><span>可</span><strong>提升任务完成率&nbsp;</strong></span></span><span><span><strong>99%</strong></span></span><span><span><strong>，TCO 成本降低 70%。</strong></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_805f1485cc3945f3ab210a4f2a39bf81.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span><span>Agentic Cloud 技术主论坛上，阿里云研发副总裁、云原生应用平台负责人周琦在主题演讲中介绍，Alibaba Cloud&nbsp;</span></span></span><span><span><span>AgentCore 将构建、运行、协作、资产、评估和治理连接起来，对所有 Agent 和其构建方式保持开放。平台承载任务执行，让知识和经验进入任务，人与多个 Agent 围绕目标协作，生产数据再用于评估和改进，让智能体的不确定性能够被看见，让行动受到约束，让结果可以验收，让有效经验以留下来，加速智能体成为企业生产力。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_30a7160dae7347788a55ec7712c876a5.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-agentic-cloud-技术主论坛重磅发布-alibaba-cloud-ai-agent-handbook\"><span><span><span>▍</span></span><span><strong><strong>Agentic Cloud 技术主论坛重磅发布 Alibaba Cloud AI Agent Handbook</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-agentic-cloud-技术主论坛重磅发布-alibaba-cloud-ai-agent-handbook\" aria-label=\"链接到本节：▍Agentic Cloud 技术主论坛重磅发布 Alibaba Cloud AI Agent Handbook\">#</a></h3><p><span><span><span>《Alibaba Cloud AI Agent Handbook》技术主论坛同步发布，旨在为企业级 Agent 落地路线选型、内部立项与价值创造提供参考。白皮书围绕智能体应用全生命周期展开，依次为架构、构建、运行、治理、调优五大篇章。白皮书将以更开放的社区协作方式长期维护，持续输出 AI 原生应用架构的前沿思考与落地实践。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_270cb8f740f74748a371aa944be20920.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-云监控-2-0-agentic-observability-全域统一可观测平台\"><span><span><span>▍</span></span><span><strong><strong>云监控 2.0 Agentic Observability：全域统一可观测平台</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-云监控-2-0-agentic-observability-全域统一可观测平台\" aria-label=\"链接到本节：▍云监控 2.0 Agentic Observability：全域统一可观测平台\">#</a></h3><p><span><span><span>面向 Observability by/of Agents，以“接入—治理—语义—巡检—根因”一条链路把生产事实交给 Agent：智能接入 500+ 云服务、支持跨云跨账号；UModel 内置 3200+ 模型定义，覆盖 10 大观测域、214 个模型分组；智能巡检覆盖 117 类生产实体，根因定位构建证据化可验证闭环。</span></span></span><span><span><span>既让系统被 Agent 看懂，也让 Agent 自身被看懂。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_fbedbc62e335431091addb55e9c0c51e.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-agent-观测能力升级-从-看得见-到-评得准-改得动\"><span><span><span>▍</span></span><span><strong><strong>Agent 观测能力升级：从“看得见”到“评得准、改得动”</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-agent-观测能力升级-从-看得见-到-评得准-改得动\" aria-label=\"链接到本节：▍Agent 观测能力升级：从“看得见”到“评得准、改得动”\">#</a></h3><p><span><span><span>企业级 Agent 观测与优化平台以全栈观测、效果评估、持续优化、实验回测为主线：LoongSuite×AgentSight 以四语言探针加 eBPF 零代码插桩，</span><strong>去重覆盖 40+ 框架</strong><span>；Agent-as-a-Judge 自动评估经专家复核</span><strong>正确率达 90%+</strong><span>，归因分析沿 Prompt/Tool/Model 等逐一定位,实验回测五步门禁确保每次变更都是正向优化。</span></span></span></p><p><span><span><span><br></span></span></span></p><h3 id=\"section-全域运维平台-starops-能力升级-把事实变成受控的行动\"><span><span><span>▍</span></span><span><strong><strong>全域运维平台 STAROps 能力升级：把事实变成受控的行动</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-全域运维平台-starops-能力升级-把事实变成受控的行动\" aria-label=\"链接到本节：▍全域运维平台 STAROps 能力升级：把事实变成受控的行动\">#</a></h3><p><span><span><span>STAROps 以统一运维上下文、跨域诊断、持续闭环处置为核心升级：统一连接器打通跨账号、企业 IDC 与外部系统，统一建模指标、日志、链路、事件等多域数据；Agentic Ops Engine 串联意图理解、任务拆解、分析诊断与执行验证；低风险操作自动放行、关键变更人工确认、禁止操作直接拦截，真正做到从事实到行动的安全可控闭环。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_9e204d0fc4ab4405b0be8b3403e99a73.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-云效研发智能体正式发布-让专属数字分身自主工作\"><span><span><span>▍</span></span><span><strong><strong>云效研发智能体正式发布：让专属数字分身自主工作</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-云效研发智能体正式发布-让专属数字分身自主工作\" aria-label=\"链接到本节：▍云效研发智能体正式发布：让专属数字分身自主工作\">#</a></h3><p><span><span><span>基于 STAROps 数字员工打造，拥有与使用者一致的云效资源权限，无需单独维护智能体权限；覆盖需求拆分、智能编码、CI 失败修复、MR 评审、功能验收与发布风险评估全链路；支持定时任务与事件触发，自主介入研发活动，并将交互和验收脚本沉淀为团队知识、持续复用。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_dea3db787e7a43b6ad8bd630b200aa1e.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-agentbridge-全新发布-为生产级-agent-构建多源实时上下文\"><span><span><span>▍</span></span><span><strong><strong>AgentBridge 全新发布：为生产级 Agent 构建多源实时上下文</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-agentbridge-全新发布-为生产级-agent-构建多源实时上下文\" aria-label=\"链接到本节：▍AgentBridge 全新发布：为生产级 Agent 构建多源实时上下文\">#</a></h3><p><span><span><span>一站式 Agent 实时数据上下文服务，AgentBridge 连接企业分散的数据源，围绕业务任务组织实时事件、业务事实、历史信息和规则，为 Agent 提供可信、可追溯、持续更新的上下文，并让每一次回答都能被观测和核查，帮助企业将 Agent 应用于实际业务。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_bb68811bece04b5d9b880f609ae91c10.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-ai-网关发布四大新能力-提供跨多厂商的企业级-ai-服务\"><span><span><span>▍</span></span><span><strong><strong>AI 网关发布四大新能力，提供跨多厂商的企业级 AI 服务</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-ai-网关发布四大新能力-提供跨多厂商的企业级-ai-服务\" aria-label=\"链接到本节：▍AI 网关发布四大新能力，提供跨多厂商的企业级 AI 服务\">#</a></h3><p><span><span><span>打造 Agent 时代连接模型、Agent 与 MCP 的流量中枢：智能路由让每次请求都选对模型，</span><strong>最高节省 80% Token 成本</strong><span>；</span></span></span><span><span><span>Agent 管理提供会话级的模型调用、MCP 工具调用与 Multi Agent 协作的全链路观测</span></span></span><span><span><span>；AI FinOps 以“一本账”贯穿用量与成本,支持超限熔断、会话级明细；全新 Serverless 实例 0 元起步、按量计费，把规模化用 AI 门槛降到最低。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_991e3699135a4c69acc821b9d137fdcf.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-阿里云日志服务-sls-全新升级-打造-agent-时代智能数据引擎\"><span><span><span>▍</span></span><span><strong><strong>阿里云日志服务 SLS 全新升级，打造 Agent 时代智能数据引擎</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-阿里云日志服务-sls-全新升级-打造-agent-时代智能数据引擎\" aria-label=\"链接到本节：▍阿里云日志服务 SLS 全新升级，打造 Agent 时代智能数据引擎\">#</a></h3><p><span><span><span>全新发布三大 Agent 原生能力，面向 Agent 运行数据对象的 SLS SessionStore、面向业务上下文的 SLS 语义层，以及面向 Agent 原生接口的 SLS MCP Server 与可编排 Skills 体系；以及对话式智能体 SLS DataAgent。面向 Agent 提供实时数据、业务上下文与标准化工具能力，升级为同时服务人与 Agent 的智能数据引擎。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_5c91899493c14ac69f42d12ceedc78e9.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-阿里云-kafka-发布流算湖一体化实时数据\"><span><span><span>▍</span></span><span><strong><strong>阿里云 Kafka 发布流算湖一体化实时数据</strong></strong></span></span><span><br></span><a class=\"heading-anchor\" href=\"#section-阿里云-kafka-发布流算湖一体化实时数据\" aria-label=\"链接到本节：▍阿里云 Kafka 发布流算湖一体化实时数据\">#</a></h3><p><span><span>围绕同一份实时数据构建“流、算、湖”三层能力：以 Kafka 为数据流量入口，在平台内完成实时计算，再将原始数据或处理结果原生沉淀到数据湖。适用于实时数仓与湖仓一体、AI 应用实时供给、IoT 和车联网、日志实时分析等多类实时数据场景。</span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_22d1c4d776a64c3aaa2778af47ed84a8.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-rocketmq-for-ai-发布多项-litetopic-新特性\"><span><span><span>▍</span></span><span><strong><strong>RocketMQ for AI 发布多项 LiteTopic 新特性</strong></strong></span></span><a class=\"heading-anchor\" href=\"#section-rocketmq-for-ai-发布多项-litetopic-新特性\" aria-label=\"链接到本节：▍RocketMQ for AI 发布多项 LiteTopic 新特性\">#</a></h3><p><span><span><span>LiteTopic 面向海量 Agent 会话，提供百万级轻量资源、按需自动创建与 TTL 自动回收能力，并支持队列级暂停消费、全量订阅、差异化订阅、排它订阅及只读消息拉取，实现会话队列从创建、调度、隔离到清理与状态探查的全生命周期精细化管理。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_65141a799bb74f72bb0bcc0eb59377b0.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p>",
+    "headings": [
+      {
+        "id": "section-11-项发布-升级-为-agent-规模化生产夯实底座",
+        "level": 2,
+        "text": "11 项发布 & 升级，为 Agent 规模化生产夯实底座"
+      },
+      {
+        "id": "section-云栖大会主论坛重磅发布-alibaba-cloud-agentcore",
+        "level": 3,
+        "text": "▍云栖大会主论坛重磅发布 Alibaba Cloud AgentCore"
+      },
+      {
+        "id": "section-agentic-cloud-技术主论坛重磅发布-alibaba-cloud-ai-agent-handbook",
+        "level": 3,
+        "text": "▍Agentic Cloud 技术主论坛重磅发布 Alibaba Cloud AI Agent Handbook"
+      },
+      {
+        "id": "section-云监控-2-0-agentic-observability-全域统一可观测平台",
+        "level": 3,
+        "text": "▍云监控 2.0 Agentic Observability：全域统一可观测平台"
+      },
+      {
+        "id": "section-agent-观测能力升级-从-看得见-到-评得准-改得动",
+        "level": 3,
+        "text": "▍Agent 观测能力升级：从“看得见”到“评得准、改得动”"
+      },
+      {
+        "id": "section-全域运维平台-starops-能力升级-把事实变成受控的行动",
+        "level": 3,
+        "text": "▍全域运维平台 STAROps 能力升级：把事实变成受控的行动"
+      },
+      {
+        "id": "section-云效研发智能体正式发布-让专属数字分身自主工作",
+        "level": 3,
+        "text": "▍云效研发智能体正式发布：让专属数字分身自主工作"
+      },
+      {
+        "id": "section-agentbridge-全新发布-为生产级-agent-构建多源实时上下文",
+        "level": 3,
+        "text": "▍AgentBridge 全新发布：为生产级 Agent 构建多源实时上下文"
+      },
+      {
+        "id": "section-ai-网关发布四大新能力-提供跨多厂商的企业级-ai-服务",
+        "level": 3,
+        "text": "▍AI 网关发布四大新能力，提供跨多厂商的企业级 AI 服务"
+      },
+      {
+        "id": "section-阿里云日志服务-sls-全新升级-打造-agent-时代智能数据引擎",
+        "level": 3,
+        "text": "▍阿里云日志服务 SLS 全新升级，打造 Agent 时代智能数据引擎"
+      },
+      {
+        "id": "section-阿里云-kafka-发布流算湖一体化实时数据",
+        "level": 3,
+        "text": "▍阿里云 Kafka 发布流算湖一体化实时数据"
+      },
+      {
+        "id": "section-rocketmq-for-ai-发布多项-litetopic-新特性",
+        "level": 3,
+        "text": "▍RocketMQ for AI 发布多项 LiteTopic 新特性"
+      }
+    ],
+    "textLength": 2836,
+    "readingMinutes": 7,
     "sourceId": "aliyun-apphub",
     "sourceUrl": "https://developer.aliyun.com/article/1781657",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-11T07:46:28.945Z",
-    "nextRetryAt": "2026-11-18T07:46:28.945Z",
-    "error": "No body matched parser rule: aliyun",
+    "contentHash": "b938da16a514a688fd696ce2828245cd9b7e23516e9a60e5b490cc16f6849c3d",
+    "fetchedAt": "2026-11-12T08:20:43.158Z",
+    "checkedAt": "2026-11-12T08:20:43.158Z",
+    "nextRetryAt": "2026-12-12T08:20:43.158Z",
     "warnings": []
   }
 }

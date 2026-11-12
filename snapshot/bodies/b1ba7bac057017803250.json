@@ -2,17 +2,71 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "b1ba7bac057017803250",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "<p>作者：元泊</p><h2 id=\"section-ai-语音交互中的建连问题\">AI 语音交互中的建连问题<a class=\"heading-anchor\" href=\"#section-ai-语音交互中的建连问题\" aria-label=\"链接到本节：AI 语音交互中的建连问题\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b00ea75f24f8495086cc8375484acd54.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><em>本图由AI生成</em></p><p><em><br></em></p><p>考虑这样一个智能眼镜语音助手场景：眼镜负责采音与播放，配套手机 App 通过 WebSocket 连接云端语音服务。用户按下眼镜上的语音键，问“今天需要带伞吗？”，却迟迟听不到回复；打开配套 App，页面停在“正在连接”，重试后偶尔恢复。模型侧指标看起来正常，常规接口中也找不到与这次操作对应的失败请求，问题该从哪里查？</p><p><br></p><p>对采用 WebSocket 的应用，这次等待可能发生在音频发出前的建连阶段。本文通过阿里云 CMS 2.0 用户体验监控（RUM）的自定义资源记录握手，确认连接结果、尝试耗时和受影响的用户环境；具备端云追踪条件后，再通过 Trace 检查对应的服务端处理。</p><p><br></p><p>语音助手需要持续上传音频、接收结果，还要处理用户打断，WebSocket 适合这类双向交互。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_1dea3c0a9826472abbe37051289b2ccd.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这里以 ASR、Agent、模型和 TTS 组成的级联语音架构为例，实时多模态模型可能合并部分环节。</p><h2 id=\"section-握手记录-连接结果与用户现场\">握手记录：连接结果与用户现场<a class=\"heading-anchor\" href=\"#section-握手记录-连接结果与用户现场\" aria-label=\"链接到本节：握手记录：连接结果与用户现场\">#</a></h2><p>继续用上述示意场景说明。先确认本次语音操作触发了新连接，而不是复用已有连接，再从已采集的用户会话与操作找到对应握手记录。假设记录中有以下结果：</p><div><div class=\"markdown-table-wrap\"><table><thead><tr><td>字段</td><td>示意值</td><td>能说明什么</td></tr></thead><tbody><tr><td><code>success</code></td><td><code>false</code></td><td>本次握手未成功</td></tr><tr><td><code>statusCode</code></td><td><code>403</code></td><td>收到了 HTTP 拒绝响应</td></tr><tr><td><code>errorMessage</code></td><td><code>auth-rejected</code></td><td>按本文约定归类，具体拒绝原因仍需核查</td></tr></tbody></table></div></div><p>这条记录将笼统的“AI 没有响应”收敛到握手拒绝，排查由此转向服务端的握手处理，而非模型推理。仅凭 <code>403</code> 还无法判断是否签名过期，具体原因需要进一步的诊断证据。</p><p>单条日志也能记录 <code>403</code>。接入 RUM 的价值，是将这个结果与已采集的用户会话、App 版本、设备和网络环境放在一起分析，判断影响范围，并为回归验证提供方向。按实际可用字段聚合，还可以观察异常是否集中出现：</p><div><div class=\"markdown-table-wrap\"><table><thead><tr><td>聚合现象</td><td>继续核对</td></tr></thead><tbody><tr><td><code>429/rate-limited</code> 增多</td><td>网关限流规则、连接配额与同期尝试量</td></tr><tr><td>蜂窝网络中 <code>-1/transport-error</code> 集中</td><td>客户端诊断、网络切换与网关记录；分类本身不足以定位 DNS/TLS 根因</td></tr><tr><td>某个 App 版本技术失败增多</td><td>同口径下的网络、设备分布，以及版本变更和回归结果</td></tr></tbody></table></div></div><h2 id=\"section-trace-关联-网关与鉴权处理\">Trace 关联：网关与鉴权处理<a class=\"heading-anchor\" href=\"#section-trace-关联-网关与鉴权处理\" aria-label=\"链接到本节：Trace 关联：网关与鉴权处理\">#</a></h2><p>沿着前面的 <code>403</code>，握手资源携带的 Trace Context 可以关联实际采集的网关、鉴权 Span。Span 记录操作的耗时、状态和调用关系，既用于检查拒绝发生在哪个环节，也用于观察握手期间的鉴权、路由或初始化是否变慢。</p><p><br></p><p>若脱敏诊断证据指向签名过期，排查再转向凭据刷新、签名有效期和设备时间，并结合受影响的版本或用户环境做回归验证。</p><h3 id=\"section-上下文传播与关联条件\">上下文传播与关联条件<a class=\"heading-anchor\" href=\"#section-上下文传播与关联条件\" aria-label=\"链接到本节：上下文传播与关联条件\">#</a></h3><p>Upgrade 请求的 <code>traceparent</code> 与 RUM 资源保留同一 Context。网关提取入站上下文后创建自己的 Span：入站标识为 <code>trace-id=T, parent-id=A</code> 时，网关使用 <code>trace-id=T, span-id=B, parent=A</code>，其中 <code>A</code> 是父标识，<code>B</code> 是网关自身的 Span ID。以下流程以服务端已接入追踪为前提。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_9dffd9e98b0e4965b27e2f408987ecf0.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这条流程将客户端的握手结果与服务端处理联系起来：端侧在请求和 RUM 资源中保留同一份 Trace Context，网关和鉴权服务则通过各自的 Span 记录处理过程。Context 提供关联标识，Span 提供处理耗时、状态和调用关系。在服务端追踪与后台关联配置生效后，就可以从一条握手记录继续核查对应的拒绝位置和处理耗时。</p><h2 id=\"section-采集口径-连接尝试-终态与指标\">采集口径：连接尝试、终态与指标<a class=\"heading-anchor\" href=\"#section-采集口径-连接尝试-终态与指标\" aria-label=\"链接到本节：采集口径：连接尝试、终态与指标\">#</a></h2><p>前面的分析依赖口径一致的握手记录。将连接存活时间作为握手耗时，难以反映连接建立的快慢；多个回调重复上报，则会放大尝试量和失败数。因此，本文以一次连接尝试为采集单位，只统计发起连接到首个终态的耗时，并通过统一完成函数对回调去重，使每次尝试最多上报一条握手资源。</p><h3 id=\"section-在首个终态结束计时\">在首个终态结束计时<a class=\"heading-anchor\" href=\"#section-在首个终态结束计时\" aria-label=\"链接到本节：在首个终态结束计时\">#</a></h3><p>本文按 HTTP/1.1 Upgrade 建模：从 <code>connect</code> 开始，到 <code>open</code>、失败或主动终止等首个终态结束，形成一次 attempt（连接尝试）。每个 attempt 最多上报一次；<code>open</code> 后的关闭或失败不补报握手资源，重连另建 attempt。连接存活时间、消息收发和 AI 回合不计入这次握手耗时。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_4b601fdd48df46698a80d5e0a9ae23c4.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>取消、超时和系统失败回调可能先后甚至并发到达。本文将终态事件收敛到统一完成函数，避免同一次尝试重复上报。取消底层连接前保存触发原因，可以区分用户退出与业务超时：前者归为主动终止，后者归为 <code>timeout</code>，系统取消回调本身不足以说明用户为何终止连接。<code>replaced</code> 仅表示未完成的旧 attempt 被替换，不代表全部重连。</p><h3 id=\"section-保留能支撑排障的字段\">保留能支撑排障的字段<a class=\"heading-anchor\" href=\"#section-保留能支撑排障的字段\" aria-label=\"链接到本节：保留能支撑排障的字段\">#</a></h3><p>资源类型采用 <code>websocket</code>，核心分析字段如下。</p><div><div class=\"markdown-table-wrap\"><table><thead><tr><td>字段</td><td>含义与约定</td></tr></thead><tbody><tr><td><code>url</code></td><td>脱敏后的连接地址，用于按 Endpoint 聚合</td></tr><tr><td><code>success</code></td><td>以 <code>open</code> 回调确认握手成功</td></tr><tr><td><code>statusCode</code></td><td>可用的 HTTP 状态码；无可用响应时，示例记为 <code>-1</code></td></tr><tr><td><code>errorMessage</code></td><td>稳定、低基数的分类，如 <code>auth-rejected</code>、<code>timeout</code>、<code>cancelled</code>，不上传异常原文</td></tr><tr><td><code>duration</code></td><td><code>connect</code> 到首个终态的毫秒数，使用单调时钟</td></tr></tbody></table></div></div><p>客户端收到 <code>101</code> 后仍可能因 Upgrade 校验失败进入失败回调，因此本文以 <code>open</code> 确认握手成功。<code>-1</code> 表示没有可用 HTTP 响应，不直接代表网络故障；WebSocket Close Code 不写入该字段。错误分类是本文约定，不是产品固定枚举。</p><h3 id=\"section-按结果分组统计\">按结果分组统计<a class=\"heading-anchor\" href=\"#section-按结果分组统计\" aria-label=\"链接到本节：按结果分组统计\">#</a></h3><p>比较不同版本、网络和时间段的数据时，本文采用以下口径：</p><ul><li>成功比例：成功数除以已上报终态的尝试总数，<code>cancelled/replaced</code> 保留在分母中，并单独展示占比。如另算排除主动放弃后的技术成功率，仅剔除已确认的业务主动终止，保留超时和原因不明的取消。</li><li>耗时分组：成功、失败和主动终止分别计算分位数，原因不明的事件保留独立分组。混算 P95 可能让快速取消掩盖成功连接变慢。</li><li>数据范围：注明采集范围、采样和时间窗口，统计结果仅覆盖已上报记录，不代表全部用户尝试。</li></ul><h2 id=\"section-接入方式\">接入方式<a class=\"heading-anchor\" href=\"#section-接入方式\" aria-label=\"链接到本节：接入方式\">#</a></h2><p>以 Android 的 OkHttp 和 iOS 的 <code>URLSessionWebSocketTask</code> 为例，采集逻辑围绕建连过程与终态回调展开，两端遵循相同流程：</p><ol><li>发起连接：为本次连接尝试开始计时，在握手请求发出前准备并注入 Trace Context。</li><li>处理终态：统一处理握手成功、失败或主动终止，保留首个结果并结束计时，避免后续回调重复上报。</li><li>上报资源：将连接结果、耗时及与握手请求一致的 Trace Context，通过 RUM 自定义资源接口上报。</li></ol><p><br></p><p>以下为终态去重后的核心上报调用，结果字段、耗时测量对象及上下文由上述流程准备。</p><p><br></p><p>Android：</p><pre><code>// resourceUrl 为脱敏地址，measuring 记录本次握手耗时（毫秒）。\nAlibabaCloudRum.reportCustomResource(\n    \"websocket\", resourceUrl, \"GET\", statusCode, errorMessage,\n    success, \"OkHttp3\", traceContext, measuring);</code></pre><p>iOS：</p><pre><code>// resourceURL 为脱敏地址，measure 记录本次握手耗时（毫秒）。\n_ = AlibabaCloudRUM.setCustomResource(\n    \"websocket\", success: success, url: resourceURL, method: \"GET\",\n    statusCode: statusCode, errorMessage: errorMessage,\n    provider: \"URLSessionWebSocketTask\", tracing: traceContext, measure: measure)</code></pre><p><br></p><p>接入时保留原有业务回调、消息收发和连接管理逻辑。具体接口用法与配置说明参见文档中心：</p><ul><li>Android：自定义资源：<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.3.47426ffaYNWGH3&amp;enc=d6x6kauCQDsK0DQY3O41iw%3D%3D.oOO5iWE1K21PaNB296OKBGkqZfxTN9dN%2BFsGOZWBk5wsOKLI9T7pDY4L57NgEP3kWJdAvDAbyIiWmuJ44H9fiDbXZZGdbJ%2FNi4k3BUknMxIbRVwRxtAVU7027KhMGeKLu%2BLO7yWA9y9XbKCbyTPeSA%3D%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://help.aliyun.com/zh/cms/cloudmonitor-2-0/monitor-andro...</a></li><li>iOS：自定义资源：<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.4.47426ffaYNWGH3&amp;enc=9uLMElRhRu09Seddp4p9yQ%3D%3D.44kR83Qo9DvTyKh0WZB4neQGz3omwoKPDfQQUmuJL7%2FuE%2BqiZ9WcMLnfs01quvbsme7QNns50iI2FblF%2Bur%2BdBfOjfe24v24JD0IqDrQTqoFI0fM4zpk0M7Jj9FRS5u6\" target=\"_blank\" rel=\"noopener noreferrer\">https://help.aliyun.com/zh/cms/cloudmonitor-2-0/ios-sdk-confi...</a></li></ul><h2 id=\"section-总结\">总结<a class=\"heading-anchor\" href=\"#section-总结\" aria-label=\"链接到本节：总结\">#</a></h2><p>移动端 AI 语音交互停在“正在连接”时，排查可以从 WebSocket 握手开始。以一次连接尝试为单位记录结果和耗时，再结合 App 版本、设备与网络环境，可以逐步确认连接是否建立、异常是否集中出现在某类用户环境中，为这段等待找到更具体的排查方向。</p><p><br></p><p>阿里云 CMS 2.0 用户体验监控（RUM）的自定义资源接入方式，可以将握手结果与用户会话关联起来；具备端云关联条件后，再通过 Trace 检查对应的网关与鉴权处理。RUM 提供客户端的连接结果和用户现场，Trace 补充服务端的处理依据。沿着“用户反馈—握手记录—服务端处理”展开分析，可以将笼统的“AI 没有响应”逐步收敛为有明确范围、有具体线索的问题。</p>",
+    "headings": [
+      {
+        "id": "section-ai-语音交互中的建连问题",
+        "level": 2,
+        "text": "AI 语音交互中的建连问题"
+      },
+      {
+        "id": "section-握手记录-连接结果与用户现场",
+        "level": 2,
+        "text": "握手记录：连接结果与用户现场"
+      },
+      {
+        "id": "section-trace-关联-网关与鉴权处理",
+        "level": 2,
+        "text": "Trace 关联：网关与鉴权处理"
+      },
+      {
+        "id": "section-上下文传播与关联条件",
+        "level": 3,
+        "text": "上下文传播与关联条件"
+      },
+      {
+        "id": "section-采集口径-连接尝试-终态与指标",
+        "level": 2,
+        "text": "采集口径：连接尝试、终态与指标"
+      },
+      {
+        "id": "section-在首个终态结束计时",
+        "level": 3,
+        "text": "在首个终态结束计时"
+      },
+      {
+        "id": "section-保留能支撑排障的字段",
+        "level": 3,
+        "text": "保留能支撑排障的字段"
+      },
+      {
+        "id": "section-按结果分组统计",
+        "level": 3,
+        "text": "按结果分组统计"
+      },
+      {
+        "id": "section-接入方式",
+        "level": 2,
+        "text": "接入方式"
+      },
+      {
+        "id": "section-总结",
+        "level": 2,
+        "text": "总结"
+      }
+    ],
+    "textLength": 3770,
+    "readingMinutes": 9,
     "sourceId": "aliyun-apphub",
     "sourceUrl": "https://developer.aliyun.com/article/1781647",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-11T07:46:30.641Z",
-    "nextRetryAt": "2026-11-18T07:46:30.641Z",
-    "error": "No body matched parser rule: aliyun",
+    "contentHash": "5cc3c1461c9d6b2587fdfd039958b62c7b412a9ae308c34a28c73d1e0c35b11f",
+    "fetchedAt": "2026-11-12T08:20:44.915Z",
+    "checkedAt": "2026-11-12T08:20:44.915Z",
+    "nextRetryAt": "2026-12-12T08:20:44.915Z",
     "warnings": []
   }
 }

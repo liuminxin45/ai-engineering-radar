@@ -2,17 +2,41 @@
   "schemaVersion": 1,
   "body": {
     "articleId": "854140dba9dc1aac995d",
-    "status": "unavailable",
-    "html": "",
-    "headings": [],
-    "textLength": 0,
-    "readingMinutes": 0,
+    "status": "ready",
+    "html": "<p><span><span><span>2026 年 9 月 22 日至 23 日，由阿里云承办的2026世界人工智能开源大赛（GOAI）在杭州云谷中心迎来收官。作为大赛核心赛道之一、由阿里云独立策划、运营的「新智基座（Agent Infra）」赛道，在这里完成了决赛路演与颁奖。15 支决赛队伍同台亮相，围绕多 Agent 如何协同完成复杂任务、保障执行过程可靠与结果可信，交出了各具特色的答卷。</span></span></span></p><p><span><span><span><br></span></span></span></p><h2 id=\"section-从-7802-支队伍到-15-项决赛作品\">从 7802 支队伍到 15 项决赛作品<a class=\"heading-anchor\" href=\"#section-从-7802-支队伍到-15-项决赛作品\" aria-label=\"链接到本节：从 7802 支队伍到 15 项决赛作品\">#</a></h2><p><span><span><span>GOAI 「新智基座」赛道共吸引&nbsp;</span></span></span><span><span><strong>7802 支队伍、8346 名</strong><span>选手</span></span></span><span><span><span>报名，提交作品&nbsp;</span></span></span><span><span><strong>848 个</strong></span></span><span><span><span>，覆盖全球&nbsp;</span></span></span><span><span><strong>38 个国家和地区</strong></span></span><span><span><strong>。</strong><span>历经初赛与复赛的层层选拔，最终于 9 月产生&nbsp;</span></span></span><span><span><strong>15 项决赛晋级作品</strong></span></span><span><span><span>。从选手构成看，30 位决赛选手中，</span></span></span><span><span><strong>17 位来自 11 所高校</strong></span></span><span><span><strong>，</strong></span></span><span><span><strong>8 位来自 7 家企业及科研机构</strong></span></span><span><span><strong>，</strong></span></span><span><span><strong>另有 5 位独立开发者</strong></span></span><span><span><strong>。</strong></span></span></p><p><span><span><strong><br></strong></span></span></p><h2 id=\"section-决赛路演-诞生赛道冠亚季军\">决赛路演，诞生赛道冠亚季军<a class=\"heading-anchor\" href=\"#section-决赛路演-诞生赛道冠亚季军\" aria-label=\"链接到本节：决赛路演，诞生赛道冠亚季军\">#</a></h2><p><span><span><span>9.22-9.23，GOAI 决赛路演暨颁奖典礼在云谷中心举行。赛道一新智基座评审席由 5 位来自产业界、学术界与开源社区的专家组成，包括</span></span></span><span><span><strong>阿里云智能高级技术专家邢学超</strong></span></span><span><span><strong>、</strong><span>Nowledge Labs CTO 王维真、新加坡科技研究员黄佳、中国科学院软件研究所高级工程师郑森文、北京智源人工智能研究院研究员李韬。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_95882e0614434a68bfc87c14a2c9b167.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><span><br></span><p></p><p><span></span></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_52a8d7ec02b04bcfaa7f7c134b4faf0b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span>经过激烈的现场角逐，北京大学 PKU-DCAI 团队的「</span></span><span><span><strong>DataFlow-Agent</strong><span>&nbsp;</span></span></span><span><span><span>智能数据治理」获得本赛道冠军。获奖选手为强美伊、梁昊、徐畅，均来自北京大学；</span></span></span><span><span><strong>阿里云智能集团副总裁唐洪为团队颁发冠军奖项。</strong></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_5c79a15fad2d4a708b6dbd135aa1a17b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span><span><span>疯狂猫咪队凭借「</span></span></span><span><span><strong>RepoMesh</strong><span>&nbsp;</span></span></span><span><span><span>多智能体交付团队」获得亚军，获奖选手分别为吕祎晗（杭州电子科技大学）、徐柏瀚（大连理工大学）、陈文惠（湖南大学）；逆律成调团队凭借「</span></span></span><span><span><strong>CyberGuard 智能体</strong></span></span><span><span><span>」获得季军，获奖选手为吴林斌、陈培琛，均来自杭州电子科技大学。</span></span></span></p><p><span><span><span>此外，多项决赛作品凭借各具特色的创新实践获得相关奖项。「新智基座」赛道完整获奖名单如下：</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b12dad8093ba404d86d4e5535c8fd55b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-从云谷到云栖-大赛成果集中亮相\">从云谷到云栖，大赛成果集中亮相<a class=\"heading-anchor\" href=\"#section-从云谷到云栖-大赛成果集中亮相\" aria-label=\"链接到本节：从云谷到云栖，大赛成果集中亮相\">#</a></h2><p><span><span><span>总决赛之外，「新智基座」赛道还亮相2026云栖大会：Top 15作品在云栖1号馆集中展示，获奖团队登上云栖小舞台路演；推出 Apsara Live GOAI大赛专场直播，</span><strong>邀请冠军战队与</strong></span><span><strong>阿里云智能集团云原生应用平台负责人周琦</strong></span><span><strong>深度对谈，</strong><span>集中呈现多Agent协同在真实场景中的创新实践与落地价值。</span></span></span></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a0367907f91d4d999960b5954d0a7346.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_652c6917fa534aca8cfa96bfbd610c16.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_2b00d466b80842dc99a498ebe5a5dde5.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><span><br></span><p></p><p><span></span></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_0ef9832ba90a4460bf845573f2d63278.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-获奖作品观察\">获奖作品观察<a class=\"heading-anchor\" href=\"#section-获奖作品观察\" aria-label=\"链接到本节：获奖作品观察\">#</a></h2><p><span><span><span>15 项决赛作品覆盖 11 个领域。虽然应用场景不同，但在走向生产的路径上呈现出四点共性。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><strong>一是，执行与验证分离。</strong></span></span><span><span><span>多支队伍将开发、执行和复核交给不同角色，避免由同一方自证结果。</span></span></span></p><p><span><span><strong>二是，风险控制前置。</strong></span></span><span><span><span>授权与具体动作、目标绑定；证据不足时暂停，验证未通过时回滚。</span></span></span></p><p><span><span><strong>三是，模型与专业工具各司其职。</strong></span></span><span><span><span>模型负责理解需求和组织流程，精确计算交给优化器、规则引擎等确定性工具。</span></span></span></p><p><span><span><strong>四是，交付标准从“能演示”走向“可复查”。</strong></span></span><span><span><span>过程与结果能够关联、回放，做到可观测、可验证、可恢复、可审计。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>这些共同选择指向一个趋势：随着单点模型能力逐渐普及，智能体竞争的重点正从“能力有多强”转向“系统是否可靠”，</span></span></span><span><span><strong>可观测、可验证、可恢复、可审计</strong></span></span><span><span><span>将成为走向规模化应用的重要基础。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>决赛落幕，探索仍在继续。赛事中形成的工程实践，也将以开源方式回到社区，在真实场景中持续迭代。</span></span></span><span><span><strong>正如阿里云智能集团云原生应用平台负责人周琦所说，「让 Agent 从『看着惊艳』走到『用着放心』，才是它真正上岗的那一步」。</strong></span></span><span><span><span>从赛场走向产业、从探索走向应用，这场比赛的落幕，也将成为更多可靠智能体迈向真实世界的新起点。</span></span></span></p>",
+    "headings": [
+      {
+        "id": "section-从-7802-支队伍到-15-项决赛作品",
+        "level": 2,
+        "text": "从 7802 支队伍到 15 项决赛作品"
+      },
+      {
+        "id": "section-决赛路演-诞生赛道冠亚季军",
+        "level": 2,
+        "text": "决赛路演，诞生赛道冠亚季军"
+      },
+      {
+        "id": "section-从云谷到云栖-大赛成果集中亮相",
+        "level": 2,
+        "text": "从云谷到云栖，大赛成果集中亮相"
+      },
+      {
+        "id": "section-获奖作品观察",
+        "level": 2,
+        "text": "获奖作品观察"
+      }
+    ],
+    "textLength": 1435,
+    "readingMinutes": 4,
     "sourceId": "aliyun-apphub",
     "sourceUrl": "https://developer.aliyun.com/article/1781652",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
     "engineVersion": "radar-reader-2",
-    "checkedAt": "2026-11-11T07:46:31.372Z",
-    "nextRetryAt": "2026-11-18T07:46:31.372Z",
-    "error": "No body matched parser rule: aliyun",
+    "contentHash": "ffa07cd4bc8f9a3ce489b7b1c6a1898ea55a214fe58bf29f246adf0fe4356322",
+    "fetchedAt": "2026-11-12T08:20:45.690Z",
+    "checkedAt": "2026-11-12T08:20:45.690Z",
+    "nextRetryAt": "2026-12-12T08:20:45.690Z",
     "warnings": []
   }
 }
