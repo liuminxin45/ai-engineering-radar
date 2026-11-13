@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "aliyun-apphub",
-    "lastCheckedAt": "2026-11-12T08:20:30.609Z",
-    "lastSuccessAt": "2026-11-12T08:20:30.609Z",
-    "nextRunAt": "2026-11-13T08:20:30.609Z",
+    "lastCheckedAt": "2026-11-13T07:57:39.148Z",
+    "lastSuccessAt": "2026-11-13T07:57:39.148Z",
+    "nextRunAt": "2026-11-14T07:57:39.148Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 50,

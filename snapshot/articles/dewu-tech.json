@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -82,6 +82,47 @@
       "duplicateCandidates": []
     },
     {
+      "id": "08921441d6e5dbb55aed",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "contentType": "blog",
+      "title": "压测AI Agent 治理与评测调优实践",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2783389",
+      "author": "得物技术",
+      "description": "压测智能分析Agent接入真实业务后，分析结果跑偏可能是证据采集、工具调用、规则校验或模型推理中任意一环出了问题。只看最终结论，很难定位根因，也没法验证改动是否...",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-13T03:42:24.000Z",
+      "discoveredAt": "2026-11-13T07:57:36.168Z",
+      "updatedAt": "2026-11-13T07:57:36.168Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2783389",
+          "url": "https://developer.cloud.tencent.com/article/2783389",
+          "listingHash": "6df1a28abcb95eff6b12d3a1922e524a4927ab44a76b3ff9fa346b96074e6d45"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "148eb52d0678735c5926",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
@@ -100,7 +141,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +181,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -180,7 +221,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +261,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -260,7 +301,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -300,7 +341,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -340,7 +381,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -380,7 +421,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -420,7 +461,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -461,7 +502,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -501,7 +542,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -541,7 +582,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -581,7 +622,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -621,7 +662,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -661,7 +702,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -701,7 +742,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -741,7 +782,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -781,7 +822,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -821,7 +862,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "unmarked",

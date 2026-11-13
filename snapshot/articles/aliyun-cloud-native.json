@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -59,7 +59,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -99,7 +99,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -138,7 +138,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -178,7 +178,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -218,7 +218,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -257,7 +257,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -297,7 +297,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -336,7 +336,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -375,7 +375,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -386,15 +394,7 @@
           "listingHash": "162bf107017b442a53945781a0645b4ca319e601019b629a8986bb6081e1b999"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "131a7f2faf46d676b725",
@@ -415,7 +415,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -454,7 +454,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -493,7 +493,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -533,7 +533,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -573,7 +573,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -613,7 +613,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -652,7 +652,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -663,15 +671,7 @@
           "listingHash": "16555432cb7962d2956f58852bd9038ebda57375610900e2d1567b1635fd57ca"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "179eaf38af7cfe8d4b76",
@@ -692,7 +692,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -732,7 +732,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -772,7 +772,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -785,15 +793,7 @@
       ],
       "duplicateCandidates": [
         "853a2bec303778cc1280"
-      ],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      ]
     },
     {
       "id": "1eb11a0d0d05a0790966",
@@ -814,7 +814,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -853,7 +853,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -893,7 +893,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -933,7 +933,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -973,7 +973,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1013,7 +1013,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1052,7 +1052,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1091,7 +1091,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1131,7 +1131,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1170,7 +1170,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1209,7 +1209,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1248,7 +1248,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1288,7 +1288,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "suspected",
@@ -1332,7 +1332,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1371,7 +1371,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1410,7 +1410,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1449,7 +1449,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1488,7 +1488,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1528,7 +1528,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1567,7 +1567,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1607,7 +1607,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1618,15 +1626,7 @@
           "listingHash": "0ce61422029e7e868a4d1b2ae8fc7d981e7efee9a03da8ed410663a9b683bb06"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "4602eb23a6f547fec68e",
@@ -1647,7 +1647,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1687,7 +1687,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1726,7 +1726,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1766,7 +1766,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -1777,15 +1785,7 @@
           "listingHash": "d17d98d5866284e507aa911ac3a9a82bb92bb8734f77b37ab77e33b7af9080b4"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "5050c1a3d1e819ad37db",
@@ -1806,7 +1806,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1846,7 +1846,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1886,7 +1886,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1925,7 +1925,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1964,7 +1964,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2005,7 +2005,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2045,7 +2045,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2085,7 +2085,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2125,7 +2125,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2164,7 +2164,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2175,15 +2183,7 @@
           "listingHash": "2d487c97478fe420a5fce69505522b1b78855e1336ce9451726cf6b7ad66f3e7"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "6bc8d268f4eaeec90775",
@@ -2204,7 +2204,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2243,7 +2243,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2283,7 +2283,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2322,7 +2322,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2362,7 +2362,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2384,6 +2384,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "74b0b0a5ce180edfa256",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "contentType": "blog",
+      "title": "用自然语言驾驭日志：阿里云 SLS Agent Skills 实践指南",
+      "canonicalUrl": "https://developer.aliyun.com/article/1782838",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-11T16:00:00.000Z",
+      "discoveredAt": "2026-11-13T07:57:39.148Z",
+      "updatedAt": "2026-11-13T07:57:39.148Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-apphub",
+          "externalId": "1782838",
+          "url": "https://developer.aliyun.com/article/1782838",
+          "listingHash": "ffaa6319fbac6b53df31865d58ca13ce819580a491c4046556ba43dbbb1682ca"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "76e55bcad35339932d92",
       "publisherId": "aliyun-cloud-native",
       "companyId": "alibaba",
@@ -2402,7 +2442,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2442,7 +2482,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2481,7 +2521,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2521,7 +2561,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2561,7 +2601,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2601,7 +2641,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2641,7 +2681,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2680,7 +2720,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2720,7 +2760,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2742,6 +2782,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "8a652768eebeb77c983c",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "contentType": "blog",
+      "title": "STAROps 前端排障实战：从 React 报错到源码定位与修复验证",
+      "canonicalUrl": "https://developer.aliyun.com/article/1782814",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-11T16:00:00.000Z",
+      "discoveredAt": "2026-11-13T07:57:39.148Z",
+      "updatedAt": "2026-11-13T07:57:39.148Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-apphub",
+          "externalId": "1782814",
+          "url": "https://developer.aliyun.com/article/1782814",
+          "listingHash": "f9f51769f65fe24c9f83dd9a90887bbc5442c78739689a3a50584b45dd9a85a1"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "8c0770545ad965a822ac",
       "publisherId": "aliyun-cloud-native",
       "companyId": "alibaba",
@@ -2760,7 +2840,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2782,6 +2862,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "8f27835c7769d47e0641",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "contentType": "blog",
+      "title": "15 个 Agent 组成研发小队：多智能体协作的端到端研发体系",
+      "canonicalUrl": "https://developer.aliyun.com/article/1782806",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-11T16:00:00.000Z",
+      "discoveredAt": "2026-11-13T07:57:39.148Z",
+      "updatedAt": "2026-11-13T07:57:39.148Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-apphub",
+          "externalId": "1782806",
+          "url": "https://developer.aliyun.com/article/1782806",
+          "listingHash": "07d7f9499d1e34914b3a538d2d4dfa6e340f5ff9d42f7e2751d4fdde89c575fc"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "95ef3957235105633ed1",
       "publisherId": "aliyun-cloud-native",
       "companyId": "alibaba",
@@ -2800,7 +2920,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2840,7 +2960,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2880,7 +3000,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2919,7 +3039,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -2930,15 +3058,7 @@
           "listingHash": "b806e37881b9a8c62bb7975fd3670c1ef7b30ada08dc33601522368aedd0dc45"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "9bbdbb757364e6bb4d0f",
@@ -2959,7 +3079,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2999,7 +3119,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3010,15 +3138,7 @@
           "listingHash": "e23947731c3adefe3443591a722195ce3b233337c72cf392bb79b11dcea95a25"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "a05f1c039372ab036924",
@@ -3039,7 +3159,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3079,7 +3199,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3119,7 +3239,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3159,7 +3279,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3198,7 +3318,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3238,7 +3358,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3277,7 +3397,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3317,7 +3437,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3357,7 +3477,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3397,7 +3517,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3437,7 +3557,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3477,7 +3597,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3516,7 +3636,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3555,7 +3675,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3594,7 +3714,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3634,7 +3754,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3673,7 +3793,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3712,7 +3832,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3752,7 +3872,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3793,7 +3913,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -3804,15 +3932,7 @@
           "listingHash": "8983e595faf180039ab3d7a0b848a3343cfc7bbc4ee08025c21143d72ef0bb30"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "cb7ec9dece5a5bab60e6",
@@ -3833,7 +3953,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3872,7 +3992,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3911,7 +4031,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3951,7 +4071,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3991,7 +4111,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4030,7 +4150,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4070,7 +4190,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4110,7 +4230,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4149,7 +4269,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4188,7 +4308,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4227,7 +4347,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4267,7 +4387,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4306,7 +4426,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4345,7 +4465,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4384,7 +4504,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4423,7 +4543,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4463,7 +4583,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4502,7 +4622,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4541,7 +4661,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4581,7 +4701,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-12T08:20:33.187Z"
+        "classifiedAt": "2026-11-13T07:57:41.966Z"
       },
       "advertorial": {
         "status": "insufficient",
