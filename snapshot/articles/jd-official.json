@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -61,7 +61,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -101,7 +101,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -141,7 +141,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -182,7 +182,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -222,7 +222,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -263,7 +263,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -303,7 +303,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -343,7 +343,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -365,6 +365,47 @@
       "duplicateCandidates": []
     },
     {
+      "id": "a2ca5535a5388b80dcd5",
+      "publisherId": "jd-official",
+      "companyId": "jd",
+      "contentType": "blog",
+      "title": "京东云推出全新JoyCode智能编码工具，让AI Coding从代码生成走向成果交付",
+      "canonicalUrl": "https://www.cnblogs.com/Jcloud/p/23680557",
+      "author": "jcloud",
+      "description": "今日，京东云正式发布全新升级的JoyCode智能编码工具，打造以端到端自主决策为核心的Code Agent平台。全新JoyCode结合项目背景与任务目标，通过Agent Loop持续规划、执行、验证与迭代，并支持多智能体并行协作、模型灵活配置及工具与流程复用，贯通从需求分析到开发验证的任务链路，推动",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-16T05:33:00.000Z",
+      "discoveredAt": "2026-11-16T07:59:36.068Z",
+      "updatedAt": "2026-11-16T07:59:36.068Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "jd-cnblogs",
+          "externalId": "23680557",
+          "url": "https://www.cnblogs.com/Jcloud/p/23680557",
+          "listingHash": "07c404a1dfbdb0ecee9aba689df3f1f6fa20a9ec69820edc8c44715ca25f34b6"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "aa8a35284b4992716a21",
       "publisherId": "jd-official",
       "companyId": "jd",
@@ -383,7 +424,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -424,7 +465,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -464,7 +505,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -504,7 +545,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -544,7 +585,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -584,7 +625,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-15T07:52:05.564Z"
+        "classifiedAt": "2026-11-16T07:59:41.083Z"
       },
       "advertorial": {
         "status": "unmarked",
