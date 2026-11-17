@@ -19,7 +19,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-16T07:59:41.082Z"
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -58,7 +58,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-16T07:59:41.082Z"
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -97,7 +97,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-16T07:59:41.082Z"
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -136,7 +136,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-16T07:59:41.082Z"
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -176,7 +176,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-16T07:59:41.082Z"
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -198,6 +198,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "35a5dbcdf628b2c0ca20",
+      "publisherId": "meituan-official",
+      "companyId": "meituan",
+      "contentType": "blog",
+      "title": "《Agent评测白皮书》系列02：商家 AI 助手的评测与优化闭环实践",
+      "canonicalUrl": "https://tech.meituan.com/2026/11/17/Agent-Evaluation-White-Paper-02.html",
+      "description": "本文以商家 AI 助手的巡检任务为贯穿案例，介绍如何构建业务 Benchmark，通过评测器校准和错误分析，同时推动评测体系完善与 Agent 能力提升，并借助图灵支撑持续回归与模型选型，为上述方法在具体业务中的落地提供参考。",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-16T16:00:00.000Z",
+      "discoveredAt": "2026-11-17T09:13:43.013Z",
+      "updatedAt": "2026-11-17T09:13:43.013Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "meituan",
+          "externalId": "https://tech.meituan.com/2026/11/17/Agent-Evaluation-White-Paper-02.html",
+          "url": "https://tech.meituan.com/2026/11/17/Agent-Evaluation-White-Paper-02.html",
+          "listingHash": "dbcdf219d2fd3ba86a6fd5813a2fee52d43a6c83076e8b3c020446c631181f28"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "4065906b9056ddb2e87e",
       "publisherId": "meituan-official",
       "companyId": "meituan",
@@ -215,7 +255,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-16T07:59:41.082Z"
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -254,7 +294,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-16T07:59:41.082Z"
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -294,7 +334,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-16T07:59:41.082Z"
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -333,7 +373,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-16T07:59:41.082Z"
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -372,7 +412,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-16T07:59:41.082Z"
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -411,7 +451,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-16T07:59:41.082Z"
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -450,7 +490,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-16T07:59:41.082Z"
+        "classifiedAt": "2026-11-17T09:13:48.191Z"
       },
       "advertorial": {
         "status": "unmarked",
