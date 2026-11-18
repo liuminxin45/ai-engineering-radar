@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "bilibili-csdn",
-    "lastCheckedAt": "2026-11-17T09:13:43.021Z",
-    "lastSuccessAt": "2026-11-17T09:13:43.021Z",
-    "nextRunAt": "2026-11-18T09:13:43.021Z",
+    "lastCheckedAt": "2026-11-18T08:33:29.742Z",
+    "lastSuccessAt": "2026-11-18T08:33:29.742Z",
+    "nextRunAt": "2026-11-19T08:33:29.742Z",
     "consecutiveFailures": 0,
     "etag": "\"1ab56b08b0cfa97d83045aec86a6389e9a7b51bdf2a92b5e7b3044a1df2b9ad1\"",
     "status": "not-modified",

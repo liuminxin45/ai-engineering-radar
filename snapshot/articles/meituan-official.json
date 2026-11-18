@@ -19,7 +19,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -58,7 +58,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -97,7 +97,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -136,7 +136,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -176,7 +176,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -216,7 +216,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -227,15 +235,7 @@
           "listingHash": "dbcdf219d2fd3ba86a6fd5813a2fee52d43a6c83076e8b3c020446c631181f28"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "4065906b9056ddb2e87e",
@@ -255,7 +255,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -294,7 +294,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -334,7 +334,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -373,7 +373,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -395,6 +395,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "c8c7e61cdda65f11511b",
+      "publisherId": "meituan-official",
+      "companyId": "meituan",
+      "contentType": "blog",
+      "title": "EMNLP 2026 | 美团技术团队学术论文精选",
+      "canonicalUrl": "https://tech.meituan.com/2026/11/18/Papers-EMNLP-2026.html",
+      "description": "2026 年，美团技术团队共计 20 余篇论文被 EMNLP 2026 收录，我们从中精选了 12 篇主会论文（Long Paper）分享给大家。",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-17T16:00:00.000Z",
+      "discoveredAt": "2026-11-18T08:33:29.730Z",
+      "updatedAt": "2026-11-18T08:33:29.730Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "meituan",
+          "externalId": "https://tech.meituan.com/2026/11/18/Papers-EMNLP-2026.html",
+          "url": "https://tech.meituan.com/2026/11/18/Papers-EMNLP-2026.html",
+          "listingHash": "499ccd79744039904c3c4c20a05dc12612b6cf4e6ae078c1a21cb21c251e5d96"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "dd3bc2f78abce9a2cddc",
       "publisherId": "meituan-official",
       "companyId": "meituan",
@@ -412,7 +452,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -451,7 +491,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -490,7 +530,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",

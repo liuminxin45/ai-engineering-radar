@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -100,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -180,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -260,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -300,7 +300,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -340,7 +340,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -380,7 +380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -402,6 +402,86 @@
       "duplicateCandidates": []
     },
     {
+      "id": "a780fdbe3bf453c66b4a",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "contentType": "blog",
+      "title": "让数据按业务流动：EFS 数据流动重塑 AI 时代的文件存储",
+      "canonicalUrl": "https://www.toutiao.com/article/7709087516753756708",
+      "author": "字节跳动技术团队",
+      "description": "从训练样本读取、Checkpoint 写入与恢复，到推理服务启动、扩容时的模型权重加载，企业需要的不只是更多容量，更需要让高性能存储资源服务于真正需要它的业务环节。",
+      "publishedAt": "2026-11-17T10:36:58.000Z",
+      "discoveredAt": "2026-11-18T08:33:31.526Z",
+      "updatedAt": "2026-11-18T08:33:31.526Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7709087516753756708",
+          "url": "https://www.toutiao.com/article/7709087516753756708",
+          "listingHash": "3c71b28bf949f58757202b104223b20fd313495fb15217838105fdffcace9650"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "c5508f751f14692225d8",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "contentType": "blog",
+      "title": "让算力说同一种管理语言：共建 XPU 带外管理标准",
+      "canonicalUrl": "https://www.toutiao.com/article/7709087489671168522",
+      "author": "字节跳动技术团队",
+      "description": "围绕这一问题，阿里，字节跳动，腾讯三家云计算及AI服务商共同推动三份 XPU 带外管理规范的联合发布与开放共建，覆盖模组 Redfish 接口、卡级 PLDM/PDRs 定义，以及不带独立管理控制器的 XPU 带外能力。",
+      "publishedAt": "2026-11-17T10:36:53.000Z",
+      "discoveredAt": "2026-11-18T08:33:31.526Z",
+      "updatedAt": "2026-11-18T08:33:31.526Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7709087489671168522",
+          "url": "https://www.toutiao.com/article/7709087489671168522",
+          "listingHash": "fb94ea391000b8b252b741525d91a965333cbde7601ac0332cc33bbaa365d220"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "ce71e1ffebe7d55cbf22",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
@@ -420,7 +500,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -460,7 +540,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -500,7 +580,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -540,7 +620,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-17T09:13:48.191Z"
+        "classifiedAt": "2026-11-18T08:33:35.618Z"
       },
       "advertorial": {
         "status": "unmarked",
