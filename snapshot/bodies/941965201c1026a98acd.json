@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "941965201c1026a98acd",
+    "status": "ready",
+    "html": "<p>作者：靖泉</p><p><br></p><p>AI Agent 调用一个工具，有时几百毫秒就能返回，有时却要运行好几分钟——比如检索一大批资料、生成一段长内容，或执行一次批处理。让请求一直挂着等结果，会长期占用连接和资源，也很难支撑大规模并发。</p><p><br></p><p><strong>模型上下文协议（Model Context Protocol，MCP）</strong> 被广泛用于 AI Agent 的工具调用。它通过 Tasks 扩展定义了一套异步任务机制，解决了“请求不必原地等待”的问题，却留下了一个更关键的实现问题：<strong>任务状态到底存在哪里？</strong></p><p><strong><br></strong></p><p>本文将讲清楚这个问题是什么、为什么必须解决，以及我们如何用 RocketMQ LiteTopic 来解决。</p><h2 id=\"section-mcp-tasks-让长调用不再原地等待\">MCP Tasks：让长调用不再原地等待<a class=\"heading-anchor\" href=\"#section-mcp-tasks-让长调用不再原地等待\" aria-label=\"链接到本节：MCP Tasks：让长调用不再原地等待\">#</a></h2><p>这套机制的官方名称是 <strong>Tasks 扩展（SEP-2663，状态已 Final）</strong> 。</p><p><br></p><p>在没有 Tasks 扩展时，MCP 的工具调用（<code>tools/call</code>）通常是同步的：请求发出去，工具执行完，结果沿原链路返回；工具运行得越久，这次调用占用连接和资源的时间就越长。</p><p><br></p><p>Tasks 扩展改变了这一点：服务端判定某个调用是长任务后，不再当场返回结果，而是先返回一个<strong>任务句柄</strong>——本质就是一个任务 ID（<code>taskId</code>）。</p><p><br></p><p>拿到句柄后，客户端有两条官方途径获知最终结果：</p><ul><li><strong>轮询</strong> <code>tasks/get</code>：拿着 <code>taskId</code> 反复去问“好了没”；</li><li><strong>订阅</strong> <code>notifications/tasks</code>：任务状态一变，服务端主动推送，客户端不必反复问。</li></ul><p><br></p><p>协议本身设计得很干净。但它只定义到“句柄长什么样、结果怎么取”，没有定义一件更要紧的事——<strong>任务从</strong> <code>working</code> <strong>到</strong> <code>completed</code> <strong>的这套状态，具体存在哪里。</strong></p><h2 id=\"section-问题-mcp-协议要无状态-任务却有状态\">问题：MCP 协议要无状态，任务却有状态<a class=\"heading-anchor\" href=\"#section-问题-mcp-协议要无状态-任务却有状态\" aria-label=\"链接到本节：问题：MCP 协议要无状态，任务却有状态\">#</a></h2><p>最省事的做法，是把任务状态放在<strong>处理这次请求的服务副本的内存里</strong>。</p><p><br></p><p>单机跑 Demo 没问题，可一旦上生产、后端有多个副本，就会同时踩到三个坑：</p><ul><li><strong>换个副本就查不到。</strong> 客户端第二次轮询被负载均衡打到另一个副本，那个副本内存里没有这个任务。协议为此要求客户端带上 Mcp-Name 头做路由亲和（尽量把同一任务的请求引到同一副本）——但亲和是网关行为，扩缩容、重启或网关没认这个头，任一情况发生，查询就失败。</li><li><strong>副本宕机，状态就丢。</strong> 任务可能仍在被执行、结果仍会产出，但记着它的那个副本没了，客户端拿着合法句柄却被告知“任务不存在”。</li><li><strong>客户端无法自证。</strong> 它分不清“任务真的不存在”和“只是打错了副本”，只能停止轮询、放弃任务。</li></ul><p><br></p><p>MCP 在同一时期还明确了另一项要求：<strong>服务端必须无状态（SEP-2575《Make MCP Stateless》）</strong> ——任何副本都要能处理任何请求，不能把状态绑在某个进程里；需要持久化的负载，被明确要求“改由 Tasks 承担”。</p><p><br></p><p>于是矛盾摆上台面：<strong>一边要求任何副本都能应答，一边任务状态却只活在某一个副本的内存里。</strong></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_8080ca61dff141d69110b7ccd29ff34a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>这是 MCP 协议有意的留白：<strong>MCP 只定义任务如何被创建、查询、通知，至于状态存在哪台机器、哪个存储，明确划归实现方负责，官方 SDK 也明确说明“不提供任何跨进程的消息总线”。</strong></p><p><strong><br></strong></p><p>这个空缺，适合用<strong>消息基础设施</strong>来填——<strong>持久、有序、失败可重试、跨副本可达</strong>，这些 Agent 场景的通用诉求，本就是消息队列的能力。</p><h2 id=\"section-方案-task-as-litetopic-一项任务一条状态通道\">方案：Task as LiteTopic，一项任务一条状态通道<a class=\"heading-anchor\" href=\"#section-方案-task-as-litetopic-一项任务一条状态通道\" aria-label=\"链接到本节：方案：Task as LiteTopic，一项任务一条状态通道\">#</a></h2><p>我们的做法是把任务状态交给 RocketMQ 保管，这套思路称为 <strong>Task as LiteTopic</strong>：<strong>一个任务对应一条专属的 LiteTopic 通道；这条通道里的消息序列，就是这个任务的状态账本。</strong></p><p><strong><br></strong></p><p><strong>LiteTopic（轻量主题）</strong> 是 RocketMQ 面向 AI 场景推出的队列形态：<strong>单台 Broker 就能支撑百万级的独立通道，按需自动创建、按 TTL 过期自动回收，几乎无需额外维护。</strong> 即使给每个任务分配一条以 <code>taskId</code> 命名的通道，也能从容承载。</p><p><br></p><p>一个任务的核心流转，就是三步：</p><p><strong>1. 提交：</strong> 客户端调一个慢工具，服务副本往这条任务的通道写入第一条消息（ <code>working</code> + 创建时间），随后把任务句柄返回给客户端；</p><p><strong>2. 执行：</strong> 执行池拿到指令、跑完工具，把结果消息写回同一条通道（终态 + 结果）；</p><p><strong>3. 查询：</strong> 任何副本被问到这个任务，若本地没有，就去读这条通道，拿到完整的消息序列，直接应答。</p><p><strong><br></strong></p><p><strong>消息本身就是状态，RocketMQ 就是状态存储。</strong> “换副本查不到”解决了——任务状态不再只存在某一个副本上；“副本宕机丢状态”也解决了——状态存在消息系统里，不会随某个副本的退出而消失。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_55318b5c1a3c45e5ae768d28c534d175.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-为什么-litetopic-通道能成为任务账本\">为什么 LiteTopic 通道能成为任务账本？<a class=\"heading-anchor\" href=\"#section-为什么-litetopic-通道能成为任务账本\" aria-label=\"链接到本节：为什么 LiteTopic 通道能成为任务账本？\">#</a></h3><p><strong>通道内有序，最后一条即当前状态</strong></p><p>一条通道唯一映射到一台 Broker 的单个队列，写入顺序就是读出顺序，所以最后一条记录就是任务的当前状态，不需要按序回放，也不需要按状态优先级归约。协议允许任务从“等待用户补充输入”回退到“进行中”，在这套账本里只是自然地追加一条新记录。</p><p><br></p><p><strong>一次写入，两个消费面</strong></p><p>LiteTopic 消息在内核里天然写两份索引（父 Topic 自己的队列 + LiteTopic 通道队列），所以同一条消息能被两拨人各取所需，不用第二个 Topic，也不用冗余快照：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_3c09344cbae74ceebb1534c69b1e9690.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-一套账本-带来四项能力\">一套账本，带来四项能力<a class=\"heading-anchor\" href=\"#section-一套账本-带来四项能力\" aria-label=\"链接到本节：一套账本，带来四项能力\">#</a></h3><p><strong>1. 任务不丢：</strong> 任务句柄只在提交消息<strong>成功持久化写入 RocketMQ&nbsp;之后</strong>才返回，副本重启、缩容都不会丢任务。</p><p><strong>2. 可自动重试：</strong> 执行失败的任务消息会被自动重新投递，不需要客户端重新发起——这是“状态记在内存里”的做法给不了的语义。（前提是工具幂等：至少一次投递下重跑只会追加一条内容相同的记录；转账、发邮件这类有外部副作用的工具，需业务侧自行保证幂等。）</p><p><strong>3. 可迁移：</strong> 由共享消费组决定谁执行，任务的执行副本与创建副本彻底解绑，执行能力可随 Worker 水平扩展。</p><p><strong>4. 可寻址：</strong> 结果永久留在该任务的通道里，任意副本都能应答这个任务的查询，副本自身无需保存任务状态。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_bd6c2b6d28b44e84af61d4499d476db4.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-开源实现-mcp-tasks-rocketmq\">开源实现：mcp-tasks-rocketmq<a class=\"heading-anchor\" href=\"#section-开源实现-mcp-tasks-rocketmq\" aria-label=\"链接到本节：开源实现：mcp-tasks-rocketmq\">#</a></h2><p>这套方案已经开源在 Apache RocketMQ 的 AI 仓库：apache/rocketmq-ai <strong>[</strong><strong>1]</strong> 。</p><p><br></p><p>其中 <code>mcp-tasks-rocketmq/</code> 就是本文讲的 MCP Tasks 扩展（SEP-2663）在 RocketMQ LiteTopic 上的 Python 实现：一个 RocketMQ 执行池负责任务执行，每个任务映射为一条 LiteTopic 通道，充当它的状态账本。</p><p><br></p><p>具体用法见该目录下的 <code>README.md</code>，可直接运行的端到端示例见 <code>examples/</code>。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_dc9af3abedd543819bf96b912304b446.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_4626d7f7ce2640978eeaae6a4def4c6b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-写在最后-让消息通道成为任务状态底座\">写在最后：让消息通道成为任务状态底座<a class=\"heading-anchor\" href=\"#section-写在最后-让消息通道成为任务状态底座\" aria-label=\"链接到本节：写在最后：让消息通道成为任务状态底座\">#</a></h2><p>MCP 把异步任务的语义定义得清清楚楚，而将“状态存哪”这一具体而关键的问题留给实现方，划清了协议层与基础设施层的职责边界。</p><p><br></p><p>我们的思路很直接：<strong>给每个任务一条专属通道，让任务全生命周期的消息成为它自己的状态账本，把账本交给 RocketMQ 保管。</strong></p><p><strong><br></strong></p><p>因此，MCP 服务端的副本能始终保持无状态，随意重启、随意扩缩；任务分发和状态存储都落在同一套消息底座上——而这套底座已经支撑过数万级并发的 AI 推理实例，接到 MCP 上需要做的只是一层协议适配：不改一行协议、不扩一点语义，只实现官方已经定义好的扩展点。</p><p><br></p><p>对 RocketMQ 来说，这也是它从消息中间件走向 AI Agent 协作基础设施的又一步：LiteTopic 已合入 Apache RocketMQ 主分支，围绕 MCP 的这套实现也已开源在 apache/rocketmq-ai。</p><p><br></p><p>当 Agent 真正走进生产——任务一跑就是几小时甚至几天、会话数量成千上万——可靠承载这些消息、状态和事件，仍需要一套经过生产规模反复验证的消息底座。</p><p><br></p><p>🔗 加入 RocketMQ for AI 钉钉交流群（钉钉群号：110085036316），交流 LiteTopic 实践经验、获取最新动态！</p><p><br></p><p><strong>相关链接：</strong></p><p>[1]&nbsp;apache/rocketmq-ai</p><p><a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.10.ae3d6ffaLw2XSP&amp;enc=CVoUV%2FfV%2BYzZXY3QSj86VQ%3D%3D.NGeWXpbU3mQpI2Z5boInjokP9A29KVGFbzcPJBGIp8nE7%2B9vJ8qHULhsYQ4mLR4G\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/apache/rocketmq-ai</a></p><p><br></p><p>📖 点击<a href=\"https://www.aliyun.com/activity/middleware/ai-mq?spm=a2c6h.13046898.publish-article.13.ae3d6ffaLw2XSP\" target=\"_blank\" rel=\"noopener noreferrer\">「此处」</a>了解 RocketMQ for AI 完整方案。</p>",
+    "headings": [
+      {
+        "id": "section-mcp-tasks-让长调用不再原地等待",
+        "level": 2,
+        "text": "MCP Tasks：让长调用不再原地等待"
+      },
+      {
+        "id": "section-问题-mcp-协议要无状态-任务却有状态",
+        "level": 2,
+        "text": "问题：MCP 协议要无状态，任务却有状态"
+      },
+      {
+        "id": "section-方案-task-as-litetopic-一项任务一条状态通道",
+        "level": 2,
+        "text": "方案：Task as LiteTopic，一项任务一条状态通道"
+      },
+      {
+        "id": "section-为什么-litetopic-通道能成为任务账本",
+        "level": 3,
+        "text": "为什么 LiteTopic 通道能成为任务账本？"
+      },
+      {
+        "id": "section-一套账本-带来四项能力",
+        "level": 3,
+        "text": "一套账本，带来四项能力"
+      },
+      {
+        "id": "section-开源实现-mcp-tasks-rocketmq",
+        "level": 2,
+        "text": "开源实现：mcp-tasks-rocketmq"
+      },
+      {
+        "id": "section-写在最后-让消息通道成为任务状态底座",
+        "level": 2,
+        "text": "写在最后：让消息通道成为任务状态底座"
+      }
+    ],
+    "textLength": 3313,
+    "readingMinutes": 8,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1785771",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "12b7551a95fcc62f7e6b3e54a277ea14b15da4251bc792406fc35dc56a8b96eb",
+    "fetchedAt": "2026-11-20T08:34:01.550Z",
+    "checkedAt": "2026-11-20T08:34:01.550Z",
+    "nextRetryAt": "2026-12-20T08:34:01.550Z",
+    "warnings": []
+  }
+}

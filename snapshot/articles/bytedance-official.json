@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -100,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -180,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -260,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -300,7 +300,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -340,7 +340,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -380,7 +380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -409,10 +409,10 @@
       "title": "让数据按业务流动：EFS 数据流动重塑 AI 时代的文件存储",
       "canonicalUrl": "https://www.toutiao.com/article/7709087516753756708",
       "author": "字节跳动技术团队",
-      "description": "从训练样本读取、Checkpoint 写入与恢复，到推理服务启动、扩容时的模型权重加载，企业需要的不只是更多容量，更需要让高性能存储资源服务于真正需要它的业务环节。",
+      "description": "01 | AI 业务提速，存储也要跟上节奏随着大模型训练和推理业务高速发展、数据规模持续增长，提升业务效率不仅依赖算力，也需要与业务需求相匹配的存储能力。",
       "publishedAt": "2026-11-17T10:36:58.000Z",
       "discoveredAt": "2026-11-18T08:33:31.526Z",
-      "updatedAt": "2026-11-18T08:33:31.526Z",
+      "updatedAt": "2026-11-20T08:33:55.296Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -420,7 +420,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -428,7 +436,39 @@
           "sourceId": "bytedance-tech-toutiao",
           "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7709087516753756708",
           "url": "https://www.toutiao.com/article/7709087516753756708",
-          "listingHash": "3c71b28bf949f58757202b104223b20fd313495fb15217838105fdffcace9650"
+          "listingHash": "4d79df625e7c7e2e9c4d4d3014b51e9360998df747bd50a24a5ad36b18167d94"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "be97f4b949a939fc9e13",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "contentType": "blog",
+      "title": "把 80+ 项音视频能力装进 Claude Code 后，我合上了 FFmpeg 手册",
+      "canonicalUrl": "https://www.toutiao.com/article/7709474165664842281",
+      "author": "字节跳动技术团队",
+      "description": "AI MediaKit Skill 发布以来，我们陆续收到了许多开发者用户的投稿，他们结合真实使用场景，分享了自己从接入到成片的体验和测试记录。我们从中精选了几篇，陆续与大家分享。",
+      "publishedAt": "2026-11-18T11:37:20.000Z",
+      "discoveredAt": "2026-11-20T08:33:55.296Z",
+      "updatedAt": "2026-11-20T08:33:55.296Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7709474165664842281",
+          "url": "https://www.toutiao.com/article/7709474165664842281",
+          "listingHash": "207ac93ad22c893f359b3641d046b800d8b45241d7cc7f5f97847967a63eedae"
         }
       ],
       "duplicateCandidates": [],
@@ -460,7 +500,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -471,15 +519,7 @@
           "listingHash": "fb94ea391000b8b252b741525d91a965333cbde7601ac0332cc33bbaa365d220"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "ce71e1ffebe7d55cbf22",
@@ -500,7 +540,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -540,7 +580,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -580,7 +620,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -620,7 +660,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-18T08:33:35.618Z"
+        "classifiedAt": "2026-11-20T08:33:59.645Z"
       },
       "advertorial": {
         "status": "unmarked",

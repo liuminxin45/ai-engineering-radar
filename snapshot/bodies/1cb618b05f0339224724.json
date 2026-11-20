@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "1cb618b05f0339224724",
+    "status": "ready",
+    "html": "<h2 id=\"section-一-引言\">一、引言<a class=\"heading-anchor\" href=\"#section-一-引言\" aria-label=\"链接到本节：一、引言\">#</a></h2>\n<p>随着AI越来越多地参与日常研发，团队知识逐渐分散在代码、文档和研发对话中：代码承载实现方式，文档沉淀架构和规则，对话则保留问题背后的取舍、边界和经验。实际研发中我们发现，仅靠人工很难将代码变更和对话结论及时沉淀到知识库中：代码变更后，相关说明可能遗漏；研发过程中确认的结论，也可能只停留在某次对话里。换一个任务或同事，仍然需要重新补充上下文、核对边界。</p>\n<p>为了减少研发过程中的重复补充和核对的情况，我们开展了Akashic知识工程实践：先按统一结构建立工程知识库，为AI研发任务提供可靠的上下文；代码变更时检查相关知识是否需要同步更新；研发会话归档后，从对话中提取可复用的经验，经确认后回写到知识库。<strong>由此形成一条持续累积的闭环：知识库支撑研发任务，任务产生代码和对话，代码与对话再推动知识库更新，让一个人走通的路径或踩过的坑成为团队成员在后续任务里复用的经验。</strong></p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/6f10d7872806bc8467288991a87da062.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<h2 id=\"section-二-系统架构\">二、系统架构<a class=\"heading-anchor\" href=\"#section-二-系统架构\" aria-label=\"链接到本节：二、系统架构\">#</a></h2>\n<p>整体系统由Akashic CLI、本地研发、工程知识、会话管理、知识演进、对话洞察六个模块组成。</p>\n<ul>\n<li><strong>本机基座（Akashic CLI）：</strong> 研发人员本机的接入工具，统一管理配置、Skill和Git Hook，负责扫描、筛选并上传Codex与Claude Code的研发会话。</li>\n<li><strong>本地研发层：</strong> 研发人员借助AI完成方案设计、编码和排障，过程中按任务类型读取知识库对应部分，并产生研发对话和代码变更两类产物。</li>\n<li><strong>工程知识层：</strong> 在Git仓库中维护L1入口、L2文档与Skill、L3源码注释三层知识库结构，通过知识工程Skill完成初始化和编码知识持续回写，供团队成员及其Agent按需读取。</li>\n<li><strong>会话管理层：</strong> 提供会话管理统一API，将原始对话归档到OSS，形成团队数据资产，为对话知识演进和对话洞察提供数据源。</li>\n<li><strong>知识演进层：</strong> 从归档会话中提炼可复用的候选知识，由Session Agent提炼、Audit Agent复核与整合，最终以MR形式提交，经Owner审核后合入仓库。</li>\n<li><strong>对话洞察层：</strong> 计算会话轮次、Token和时间跨度等指标，结合Agent提炼的主题、摘要与标签形成报告，帮助团队发现知识缺口和研发中反复出现的问题，确定后续需要优化的AI协作能力。</li>\n</ul>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/3bd35fb12949e5e8b013a60761ce916e.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<h2 id=\"section-三-知识库结构\">三、知识库结构<a class=\"heading-anchor\" href=\"#section-三-知识库结构\" aria-label=\"链接到本节：三、知识库结构\">#</a></h2>\n<p>要让知识持续沉淀和更新，首先需要设计知识库结构，建设知识库的基线版本。</p>\n<p>我们建设知识库的核心原则是：<strong>知识统一在Git仓库中维护，以源码为依据，最新知识永远跟着代码走。</strong> 仓库里的知识既有全局约定，也有模块规则和局部实现细节，它们的使用频率、适用范围和变化频率各不相同。把这些内容都放进AGENTS.md，会让每次任务加载大量无关上下文，并增加维护成本。因此，我们按知识的适用范围和读取时机分成三层：L1（AGENTS.md）提供入口，管全局路由；L2（Skills + 仓库MD）承载按任务复用的知识；L3贴近代码演进，解释具体实现中的约束。最终让Agent根据任务逐步深入。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/d92c6f288bb9cf62f1b2d36de5098346.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p>L2结构示例：</p>\n<pre><code>knowledge/\n├── README.md                  # L2 总索引\n├── docs/\n│   ├── 01-定位与目标.md         # 基础定位\n│   ├── 02-整体架构.md           # 链路架构\n│   ├── 03-子模块索引.md         # 源码导航\n│   ├── 04-核心概念与术语.md      # 术语说明\n│   ├── 05-关键数据流.md          # 请求和字段流转\n│   ├── 06-配置与扩展点.md        # 配置和扩展\n│   ├── 07-依赖关系.md            # 跨仓依赖\n│   ├── 08-开发指南.md            # 开发和验证\n│   ├── modules/                  # 模块知识\n│   │   ├── foundation/           # 通用基础能力\n│   │   ├── init/                 # 请求初始化\n│   │   ├── recall/               # 多路召回\n│   │   ├── merge/                # 候选融合与去重\n│   │   ├── berank/               # 粗排\n│   │   ├── aerank/               # 精排\n│   │   ├── rerank/               # 重排\n│   │   └── ...\n│   └── topics/                   # 技术专题和业务领域\n│       ├── ab-params/            # 实验参数\n│       ├── coldstart/            # 冷启动\n│       ├── ad-fusion/            # 广告融合\n│       └── ...\n└── skills/                       # 面向任务的操作流程\n    ├── recall-channel-dev/       # 召回路开发\n    │   ├── SKILL.md\n    │   └── script/               # 配套执行脚本\n    ├── metric-anomaly-debug/     # 指标异常排查\n    │   ├── SKILL.md\n    │   └── script/\n    ├── feature-field-add/        # 特征字段添加\n    │   ├── SKILL.md\n    │   └── script/\n    └── ...\n</code></pre>\n<p><strong>实际执行任务时，Agent将根据任务类型渐进式加载知识库信息。</strong> 以新增一路召回为例，Agent先从AGENTS.md找到召回模块入口，阅读模块文档，了解召回结果如何进入后续链路；再使用“召回路开发”Skill，按约定完成接入和验证。涉及实验参数时，补充读取Ab-Params专题；定位到具体实现后，再通过源码注释确认局部约束。这样，模块文档提供背景，Skill提供执行方法，源码和注释提供实现依据。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/fa40140a22a8b3a684427196373895d6.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<h2 id=\"section-四-知识库初始化与代码更新同步\">四、知识库初始化与代码更新同步<a class=\"heading-anchor\" href=\"#section-四-知识库初始化与代码更新同步\" aria-label=\"链接到本节：四、知识库初始化与代码更新同步\">#</a></h2>\n<p>确定知识库结构后，下一步是建立并持续维护知识库。为统一初始化方法，并将知识更新接入日常研发流程，我们开发了Akashic-Knowledge Skill，覆盖两类流程：首次接入仓库时建立全仓知识基线，日常提交时根据本轮代码变更检查并更新相关知识。</p>\n<ul>\n<li><strong>首次接入初始化：</strong> 在仓库目录下，调用Akashic-Knowledge Skill。Agent结合已有文档、源码、配置和测试用例等资料核对工程事实，建立 L1 知识入口、L2 模块与专题文档，并补充必要的 L3 源码注释。经确认和校验后写入仓库，记录初始化状态，作为后续增量同步的起点。</li>\n</ul>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/cd35ab0495b5b1c3eae5d0f82236b4c5.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<ul>\n<li><strong>代码提交同步：</strong> 在Agent准备提交本轮代码变更时，脚本根据变更文件和知识库中的映射关系，定位可能受影响的文档，并提供diff证据；Agent再结合源码判断模块职责、配置规则或实现边界是否发生变化。需要更新时，生成对应的知识修改，经确认和校验后与业务代码一起提交；无需更新时，仅记录本轮判断结果。让知识随时与代码保持一致，无需人工主动维护。</li>\n</ul>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/4e9d42be876b48897e37c1ce94639704.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<h2 id=\"section-五-对话知识回写\">五、对话知识回写<a class=\"heading-anchor\" href=\"#section-五-对话知识回写\" aria-label=\"链接到本节：五、对话知识回写\">#</a></h2>\n<p>上一章介绍了代码变更时如何同步相关知识，但很多知识并不一定伴随代码修改产生，而是藏在研发对话里。我们对团队平时的研发对话进行了深入分析，发现对话中存在大量人工补充和纠偏的情况。例如：开发者在排障时确认某项配置的生效范围，或纠正Agent对字段含义和生效链路的判断。<strong>如果这些结论只留在历史会话中，后续任务仍要重新解释和核对。</strong> 因此，我们从归档在OSS的团队会话中提取候选知识，结合对话证据，按需核对源码和现有知识，经过复核后生成MR，交由Owner审核。</p>\n<p>对话知识回写的分工是：模型负责知识提炼与复核，限定Agent权限仅包括读取、检索和编辑；程序负责外部系统交互（OSS、MySQL、GitLab）、流程编排和变更校验，Owner负责最终审核。具体流程如下：</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/7d011a252ff0858f41bd7bd01eedaf98.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p>提炼和复核使用同一份OSS会话快照，以及固定版本的源码和已有知识，避免前后依据不一致。每段会话在独立工作区生成候选修改。</p>\n<p>知识沉淀分提炼与复核两个阶段完成，Session Agent读取原始对话，按需通过知识库路由定向查看已有知识，提炼结论并给出证据；Audit Agent再检查证据是否充分、是否与已有知识重复或冲突，最终给出纳入或排除的决策和原因。如果没有可靠、可复用的结论，则不修改知识库。</p>\n<p>从对话中发现的知识缺口，可以按内容归入知识库的不同层级，典型对应关系如下：</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/1ac84cd6bb8d2e58bc44bc328f7c682d.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<h2 id=\"section-六-本地能力基座\">六、本地能力基座<a class=\"heading-anchor\" href=\"#section-六-本地能力基座\" aria-label=\"链接到本节：六、本地能力基座\">#</a></h2>\n<p>Akashic知识工程建立的两条知识回写链路，都依赖成员本机的能力：代码变更时，需要调用知识工程 Skill；从对话中提炼知识前，需要先完成研发会话的归档。如果安装、升级和上传都依赖成员手动执行，就容易出现工具版本不一致、Skill未更新、会话忘记上传等问题。</p>\n<p>因此，我们建设了Akashic CLI，统一管理工具的安装更新、配置同步和会话采集。成员继续使用原有的AI编码工具和Git提交流程，相关能力随日常操作自动运行。</p>\n<p>整个接入过程分为首次接入、日常触发和集中更新三个环节。</p>\n<p><strong>首次接入时，由Agent自动完成安装。</strong> 仓库的AGENTS.md约定安装检查与执行方式，Agent在日常任务中检查本机环境，缺少CLI时执行统一安装脚本。脚本根据下载预编译程序，完成配置初始化、Skill同步和Git Hook安装，并触发首次会话扫描。成员无需分别安装CLI、复制Skill或配置上报命令。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/5a92bd94e3c3c3f483c05320fa08ff9b.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>日常研发时，由Git提交触发后台维护。</strong> 接入范围内的仓库完成Git Commit后，Post-Commit Hook 启动后台任务，检查工具版本和配置更新，并扫描符合条件的Claude Code与Codex会话进行上传，不影响代码提交。</p>\n<p>CLI 通过本地状态记录控制重复上报和失败补报。同一会话当天成功上传后不再重复上报。近期活跃的会话可在默认三天的可调窗口内形成新快照，后续提炼知识时选取最新快照。单个文件最多尝试上传三次，仍失败则记录状态，留待下次触发时补报。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/a52c3f3d1bb6ffc3c58b1fdb8e898bc9.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p><strong>能力调整后，通过统一分发自动生效。</strong> CLI版本、Skill、仓库白名单和会话采集时间窗口等配置集中维护。配置发布后，本机在下一次日常触发时自动获取更新。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/cb8893cfd6c5815e56efcfd9b1193a17.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p>这样，知识工程能力的分发与会话采集都接入了已有研发动作，对团队成员的日常研发流程无侵入，团队成员不需要感知额外的操作流程。</p>\n<h2 id=\"section-七-对话洞察\">七、对话洞察<a class=\"heading-anchor\" href=\"#section-七-对话洞察\" aria-label=\"链接到本节：七、对话洞察\">#</a></h2>\n<p>为了进一步从对话中挖掘团队在AI应用中的经验与问题，为团队AI工程的建设提供依据，我们还建设了对话洞察链路：归档后的会话由程序统计用户轮次、时长、Token等指标，再由只读Agent归纳主题、摘要，并标注会话类型和会话过程中“补充知识”“调整方向”“要求重做”“确认有效”等多类信号。报告支持按时间、仓库和标签筛选，团队1可以从汇总数据回到具体会话，核对问题发生时的上下文。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/e49a85cf98403d4b66fc4ccecebc0e02.png\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<p>对话洞察报告可以帮助团队发现AI应用上的问题，例如：</p>\n<ul>\n<li>轮次增加，同时“补充知识”增多：可能是业务背景或模块说明需要反复由开发者补充，需要回看知识库相关链路是否覆盖。</li>\n<li>轮次增加，同时“要求重做”增多：可能是任务理解、执行路径或结果验证出了问题，需要下钻相关对话判断，必要时建设相关工具解决。</li>\n</ul>\n<p>也能帮助团队回看实践效果，例如：在某个仓库引入知识工程建设后，随着知识闭环写入更新，同类任务的轮次和纠偏标签有效下降。</p>\n<p><img src=\"https://developer.qcloudimg.com/http-save/yehe-9927536/bb0e8beb0cc2e99ee2b2487371b60654.jpg\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n<h2 id=\"section-八-结语\">八、结语<a class=\"heading-anchor\" href=\"#section-八-结语\" aria-label=\"链接到本节：八、结语\">#</a></h2>\n<p>过去，知识维护往往要等开发者完成任务后再手动整理。代码持续变化，会话结论和方案取舍不断产生，知识库文档和Skill能力却很难靠人及时跟上。<strong>Akashic把知识库初始化、代码变更检查、会话采集和候选知识提炼接入研发流程，让需要维护的内容随研发流程被发现并更新，不再依赖事后补充。</strong></p>\n<p>当前阶段，Agent 负责提炼和复核候选内容，代码与会话提供核对依据，Owner 审核后再入库。随着证据核对、冲突检测和变更验证逐步完善，我们希望让依据充分、风险可控的更新自动完成，把人工判断留给证据不足或涉及业务取舍的情况。</p>\n<h2 id=\"section-往期回顾\">往期回顾<a class=\"heading-anchor\" href=\"#section-往期回顾\" aria-label=\"链接到本节：往期回顾\">#</a></h2>\n<p>1.<a href=\"https://cloud.tencent.com/developer/article/2783389\" target=\"_blank\" rel=\"noopener noreferrer\">压测AI Agent 治理与评测调优实践</a></p>\n<p>2.<a href=\"https://cloud.tencent.com/developer/article/2776678\" target=\"_blank\" rel=\"noopener noreferrer\">多 Agent 架构的三次反转：从中心调度到自驱协作｜得物技术</a></p>\n<p>3.<a href=\"https://cloud.tencent.com/developer/article/2771331\" target=\"_blank\" rel=\"noopener noreferrer\">Jev 实战：为AI工作流引入轻量决策层 x10倍提速｜得物技术</a></p>\n<p>4.<a href=\"https://cloud.tencent.com/developer/article/2769661\" target=\"_blank\" rel=\"noopener noreferrer\">国产算力·昇腾 910C 大模型推理优化（下）：源码修改与算子优化，提速30%｜得物技术</a></p>\n<p>5.<a href=\"https://cloud.tencent.com/developer/article/2766437\" target=\"_blank\" rel=\"noopener noreferrer\">国产算力·昇腾 910C 大模型推理优化（上）：镜像更新与参数调优，提速 40%｜得物技术</a></p>\n<h2 id=\"section-文-知瑜\">文 /知瑜<a class=\"heading-anchor\" href=\"#section-文-知瑜\" aria-label=\"链接到本节：文 /知瑜\">#</a></h2>\n<p>关注得物技术，每周四更新技术干货</p>\n<p>要是觉得文章对你有帮助的话，欢迎评论转发点赞～</p>\n<p>未经得物技术许可严禁转载，否则依法追究法律责任。</p>\n",
+    "headings": [
+      {
+        "id": "section-一-引言",
+        "level": 2,
+        "text": "一、引言"
+      },
+      {
+        "id": "section-二-系统架构",
+        "level": 2,
+        "text": "二、系统架构"
+      },
+      {
+        "id": "section-三-知识库结构",
+        "level": 2,
+        "text": "三、知识库结构"
+      },
+      {
+        "id": "section-四-知识库初始化与代码更新同步",
+        "level": 2,
+        "text": "四、知识库初始化与代码更新同步"
+      },
+      {
+        "id": "section-五-对话知识回写",
+        "level": 2,
+        "text": "五、对话知识回写"
+      },
+      {
+        "id": "section-六-本地能力基座",
+        "level": 2,
+        "text": "六、本地能力基座"
+      },
+      {
+        "id": "section-七-对话洞察",
+        "level": 2,
+        "text": "七、对话洞察"
+      },
+      {
+        "id": "section-八-结语",
+        "level": 2,
+        "text": "八、结语"
+      },
+      {
+        "id": "section-往期回顾",
+        "level": 2,
+        "text": "往期回顾"
+      },
+      {
+        "id": "section-文-知瑜",
+        "level": 2,
+        "text": "文 /知瑜"
+      }
+    ],
+    "textLength": 4934,
+    "readingMinutes": 11,
+    "sourceId": "dewu-tencent",
+    "sourceUrl": "https://developer.cloud.tencent.com/article/2788169",
+    "ruleId": "tencent-article-json",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "47c8bdbf805931657c052345f5f52eca12f79d217c40d3e2c2cb843847d81021",
+    "fetchedAt": "2026-11-20T08:34:00.440Z",
+    "checkedAt": "2026-11-20T08:34:00.440Z",
+    "nextRetryAt": "2026-12-20T08:34:00.441Z",
+    "warnings": []
+  }
+}

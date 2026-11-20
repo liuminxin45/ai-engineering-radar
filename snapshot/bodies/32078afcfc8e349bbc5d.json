@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "32078afcfc8e349bbc5d",
+    "status": "ready",
+    "html": "<p>作者：乾以</p><h2 id=\"section-agent-自进化-需要持续积累的运行数据\">Agent 自进化，需要持续积累的运行数据<a class=\"heading-anchor\" href=\"#section-agent-自进化-需要持续积累的运行数据\" aria-label=\"链接到本节：Agent 自进化，需要持续积累的运行数据\">#</a></h2><p>一个 Coding Agent 在修复分页筛选问题时，会搜索代码、修改实现、运行测试，再根据反馈继续行动。这些执行记录，可以成为它改进后续任务处理方式的起点。</p><p><br></p><p>围绕<strong>RSI（Recursive Self-Improvement，递归自我改进）</strong>，研究者正在探索让系统利用自身执行与评估反馈，形成持久的能力改进，并让改进后的系统继续参与下一轮自我改进。进一步的目标，是把“如何产生改进”本身也纳入迭代。</p><p><br></p><p>对于 Agent 应用，这意味着提示词、工具、任务策略乃至改进流程，都可能成为持续优化的对象。每轮执行中做过什么、获得了哪些反馈、修改之后表现如何，需要留下可供下一轮使用的依据。</p><p><br></p><p>一次用户请求可以包含数十轮模型与工具交互。要让分散在 Trace / Log 中的信息进入自进化流程，团队需要持续积累这些数据，按任务找到、读懂，并交给下游系统使用。</p><p><strong>阿里云 SLS Session Store 将 Agent 的运行记录组织为可查询、可复用的标准轨迹，为观测、数据集、LLM 评估和 RSI 自进化提供共同的数据底座。</strong></p><h2 id=\"section-阿里云-sls-session-store-从-trace-log-到标准轨迹\">阿里云 SLS Session Store：从 Trace / Log 到标准轨迹<a class=\"heading-anchor\" href=\"#section-阿里云-sls-session-store-从-trace-log-到标准轨迹\" aria-label=\"链接到本节：阿里云 SLS Session Store：从 Trace / Log 到标准轨迹\">#</a></h2><p><strong>阿里云日志服务（Simple Log Service，简称 SLS）</strong> 是一站式云原生数据平台，为日志、指标、链路等运行数据提供采集、加工、存储、查询分析与消费能力。团队可以在 SLS 中持续积累应用运行记录，用于观测排障、性能分析和业务监控。</p><p><br></p><p>随着 AI 应用从单次问答走向 Agent 驱动的多步任务，运行数据的使用需求也在变化。一次用户请求可能包含多次模型调用、工具执行和结果反馈。团队既需要分析耗时与 Token 消耗，也需要理解 Agent 怎样推进任务、工具反馈如何影响后续行动，以及最终结果是否符合要求。分散的调用记录需要进一步组织成可读、可分析的执行过程。</p><p><br></p><p>面向这一需求，<strong>阿里云 SLS 推出了 Session Store。</strong> 它将接入的 OpenTelemetry Trace / Log 解析、关联为标准化的 Trajectory，也就是执行轨迹，把任务输入、模型与工具交互、执行结果及运行指标组织在一起，既供开发者阅读，也供程序和 LLM 分析。</p><p><br></p><p>依托 SLS 的存储、查询分析与数据消费能力，团队可以持续积累这些轨迹，按任务查找和复查细节，也可以筛选典型案例和关键片段，整理成数据集、评估样本，供 AgentLoop 等下游系统使用。日常运行的数据由此能够持续参与观测、评估和改进，为 Agent 自进化积累依据。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a8c82fc5272547a989916323d3241888.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><strong>把分散记录组织为执行过程。</strong></p><p>在一次长任务中，模型行动与工具反馈会反复交替。标准轨迹把这些已记录的行动和反馈联系起来，让开发者能够理解前后发生了什么、后续行动基于什么信息。</p><p><br></p><p>不同应用按接入约定提供运行记录后，共同的轨迹表示为分析提供了统一起点。下游评估和自进化系统可以围绕任务、行动和反馈读取数据，减少重新理解记录格式、拼接执行过程的工作。</p><p><br></p><p><strong>在 SLS 中积累数据，按需要查询和读取。</strong></p><p>随着运行数据不断积累，团队可以使用 SLS 的查询分析能力，通过输入输出、模型、工具、耗时或 Token 等已记录的信息定位任务，再读取具体行动与反馈，必要时回查原始记录核对事实；也可以通过 SLS 的数据消费接口读取轨迹，供下游应用持续处理。</p><p><br></p><p>面向不同需求，可以从几个相互联系的角度使用这些数据：</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_342bbb87a5574063b9f808480c74eca9.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>用户一次输入后发生的多次搜索、修改和测试，属于这一轮内部的执行过程；用户继续追问或补充要求，则形成新的交互。在会话与轮次关系明确时，可以结合相关轨迹理解任务上下文与进展。</p><p><br></p><p><strong>让开发者与自进化系统共同使用。</strong></p><p><strong><br></strong></p><p>开发者可以根据问题阅读执行过程，下游应用则可以按照数据约定读取任务所需的摘要、明细和运行指标。查询中找到的任务，可以继续整理成样本；评价要求变化后，已经积累的轨迹也可以重新分析。</p><p><br></p><p>面向 RSI，这种复用尤为关键：历史轨迹可以帮助生成改进方案，新一轮轨迹可以用于检查方案效果。两者建立在共同的数据表示上，便于下游系统持续比较、选择和迭代。</p><p><strong>组织执行过程、积累并查询数据、支持人与工具复用，共同构成 Session Store 的数据底座价值。</strong></p><h2 id=\"section-从一条轨迹-找到值得改进的环节\">从一条轨迹，找到值得改进的环节<a class=\"heading-anchor\" href=\"#section-从一条轨迹-找到值得改进的环节\" aria-label=\"链接到本节：从一条轨迹，找到值得改进的环节\">#</a></h2><p>回到分页筛选修复任务。Agent 检查页面状态与请求逻辑，发现翻页请求未保留筛选条件。修改后，相关组件测试通过；继续运行浏览器验证时，却遇到了运行依赖缺失的问题。</p><p><br></p><p>在环境条件没有变化的情况下，Agent 又重复执行了相同的测试命令，仍然得到启动错误，最后却概括为“测试验证通过”。</p><p><br></p><p>在 Session Store 的轨迹数据中，开发者可以沿着测试调用查看返回内容，再结合后续行动和最终输出核对：组件测试有了结果，浏览器验证仍未完成；重复尝试没有带来新的验证信息，完成回复也没有说明这一差别。</p><p><br></p><p>这就为改进提供了具体方向：补充环境检查，调整重试方式，准确报告验证范围。已经取得进展的修改与测试，也有记录可以保留和参考。</p><p><br></p><p>资源分析同样需要过程信息。结合调用内容、返回结果与已记录的耗时和用量，团队能够判断哪些消耗推动了任务，哪些尝试一直受阻于相同条件。任务质量和资源消耗，由此可以一起纳入后续改进目标。</p><h2 id=\"section-用数据集与-llm-评估-为自进化建立反馈\">用数据集与 LLM 评估，为自进化建立反馈<a class=\"heading-anchor\" href=\"#section-用数据集与-llm-评估-为自进化建立反馈\" aria-label=\"链接到本节：用数据集与 LLM 评估，为自进化建立反馈\">#</a></h2><h3 id=\"section-将日常执行整理成可反复使用的样本\">▍将日常执行整理成可反复使用的样本<a class=\"heading-anchor\" href=\"#section-将日常执行整理成可反复使用的样本\" aria-label=\"链接到本节：▍将日常执行整理成可反复使用的样本\">#</a></h3><p>Session Store 为样本建设提供可查询、可追溯的数据来源。团队可以选取典型问题、高频任务和可靠完成的案例，按业务目标核验、分类并补充评价要求。</p><p><br></p><p>对于这条修复轨迹，可以保留任务要求、必要的代码与环境背景、测试反馈以及后续行动，整理成环境异常处理的评估样本。可靠完成类似修复的轨迹，也可以一起纳入，覆盖正常场景和困难场景。</p><p><br></p><p>完整任务适合检查整体完成情况，关键片段适合研究下一步行动。保留样本与原轨迹的关联，便于复查上下文，也让新出现的问题能够持续补充进数据集。</p><h3 id=\"section-借助-llm-评价结果与执行过程\">▍借助 LLM，评价结果与执行过程<a class=\"heading-anchor\" href=\"#section-借助-llm-评价结果与执行过程\" aria-label=\"链接到本节：▍借助 LLM，评价结果与执行过程\">#</a></h3><p>标准轨迹可以用于 <strong>LLM-as-a-Judge，让大模型担任评估者。</strong> 团队将任务要求、执行数据和业务评分标准提供给评估模型，按需要补充参考答案或预期结果，让它分析结果质量与行动过程，给出评分和判断依据。</p><p><br></p><p>在修复任务中，评估可以关注 Agent 是否理解了工具报错，是否据此采取合理行动，以及最终回复是否准确说明验证范围。开放任务则可以关注工具选择、资料依据和任务推进情况，为不同的有效完成路径保留空间。</p><p><br></p><p>围绕积累的轨迹，下游工具可以批量分析日常运行质量，筛选需要关注的任务；当模型、提示词或工具发生变化后，也可以在同一任务集上运行不同版本，比较结果、轨迹和消耗。对关键任务多次运行，还能观察表现是否稳定。</p><p><br></p><p>代码修复是否生效，可以结合实际测试检查；业务规则是否满足，可以通过规则校验；人工抽检则用于核对 LLM 判断是否符合团队标准。</p><p><br></p><p>这些反馈能够帮助自进化系统确定优先处理的问题，并在候选改进之间作出选择。<strong>Session Store 提供执行数据，评估工具形成判断，两者共同为后续迭代提供依据。</strong></p><h2 id=\"section-面向-rsi-让每轮改进支撑下一轮自进化\">面向 RSI，让每轮改进支撑下一轮自进化<a class=\"heading-anchor\" href=\"#section-面向-rsi-让每轮改进支撑下一轮自进化\" aria-label=\"链接到本节：面向 RSI，让每轮改进支撑下一轮自进化\">#</a></h2><p>面向 RSI，执行数据可以进入一个持续运转的流程：<strong>执行任务、分析反馈、生成候选改进、验证与选择、更新 Agent，再由更新后的系统参与后续执行和改进。</strong></p><p><strong><br></strong></p><p>在这一流程中，经验总结是提出候选方案的起点。下游自进化系统还需要把方案转化为可保留的改变，并验证它在新任务中的表现，让下一轮从已经验证过的能力出发。</p><p><br></p><p>Session Store 为这个过程持续提供运行数据：从哪些任务中发现了问题，候选方案改变了哪些行动，新一轮执行又带来了什么反馈，都可以围绕轨迹展开分析。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_44b8eb93d0aa40a3b8c769b0636f1dc7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h3 id=\"section-从运行反馈中生成具体改进\">▍从运行反馈中生成具体改进<a class=\"heading-anchor\" href=\"#section-从运行反馈中生成具体改进\" aria-label=\"链接到本节：▍从运行反馈中生成具体改进\">#</a></h3><p>继续看环境依赖缺失的例子。下游自进化系统可以结合多条相似轨迹，归纳哪些条件经常导致验证受阻，并生成不同的候选方案：为任务策略增加环境检查，为工具补充依赖诊断，或调整提示词，让最终回复明确区分已经验证和仍然受阻的部分。</p><p><br></p><p>改进的对象由此落到 Agent 的实际工作方式上。提示词、工具代码和执行策略都可以成为候选修改；团队可以先围绕一个高频问题开展迭代，再逐步扩展到更复杂的任务。</p><p>Session Store 中的轨迹为这些方案提供上下文。有效处理和受阻过程都能成为分析素材，帮助系统理解一种做法在什么条件下适用，减少反复提出已经尝试过的方案。</p><h3 id=\"section-用新任务验证-再选择保留的改变\">▍用新任务验证，再选择保留的改变<a class=\"heading-anchor\" href=\"#section-用新任务验证-再选择保留的改变\" aria-label=\"链接到本节：▍用新任务验证，再选择保留的改变\">#</a></h3><p>候选方案生成后，自进化系统可以安排不同版本执行同一组任务，结合实际测试、LLM 评估和运行消耗比较表现，并选择符合目标的改进。</p><p><br></p><p>对于环境检查方案，验证应同时覆盖依赖齐全和依赖缺失的任务：正常任务能否继续完成，受阻任务能否获得有效诊断，重试是否合理，最终报告是否准确。通过未参与方案生成的任务检查效果，也有助于判断改进能否适用于更多场景。</p><p><br></p><p>团队将运行轨迹与 Agent 版本、候选修改和评估结果关联后，就能够追溯一次选择的依据。没有带来收益、影响其他任务或显著增加成本的尝试，同样值得留下记录，供后续改进参考。</p><h3 id=\"section-让改进后的系统继续参与改进\">▍让改进后的系统继续参与改进<a class=\"heading-anchor\" href=\"#section-让改进后的系统继续参与改进\" aria-label=\"链接到本节：▍让改进后的系统继续参与改进\">#</a></h3><p>经过验证的修改可以成为后续执行使用的新版本。新版本产生的 Trace / Log 再进入 Session Store，形成新的标准轨迹，继续供评估和自进化系统读取。</p><p><br></p><p>由此，后续迭代可以围绕新的问题展开：环境检查已经补齐，是否仍有工具反馈被忽略；重复尝试减少后，是否又出现了过早终止验证的情况。系统能够结合新旧轨迹提出下一批候选方案，并再次检查效果。</p><p><br></p><p>在任务目标和评估条件可比较的前提下，持续积累的数据让团队看到多轮变化的过程，理解收益来自哪里、适用范围有多大，也为保留有效版本和重新考察未选方案提供依据。</p><h3 id=\"section-让-agent-更善于改进自己\">▍让 Agent 更善于改进自己<a class=\"heading-anchor\" href=\"#section-让-agent-更善于改进自己\" aria-label=\"链接到本节：▍让 Agent 更善于改进自己\">#</a></h3><p>RSI 更进一步的探索，是让系统修改自身生成改进的方法。例如，调整挑选问题样本的策略，改进分析失败原因的提示词，或优化候选方案的生成与实验安排。改进后的机制继续产生新的改进，构成更深一层的递归。</p><p><br></p><p>在这种探索中，团队可以将改进流程自身产生的运行记录也纳入采集。符合接入约定的记录进入 Session Store 后，下游系统就有数据分析哪些实验提供了有效信息，哪些搜索路径值得继续投入。</p><p><br></p><p>这要求任务执行与改进过程都留下可追溯的依据，并在变化过程中保留独立的效果检验。Session Store 的数据组织与复用能力，为逐步构建这样的流程提供基础。</p><h2 id=\"section-为-agent-rsi-自进化-持续积累数据\">为 Agent RSI 自进化，持续积累数据<a class=\"heading-anchor\" href=\"#section-为-agent-rsi-自进化-持续积累数据\" aria-label=\"链接到本节：为 Agent RSI 自进化，持续积累数据\">#</a></h2><p>从一次执行的 Trace / Log，到可查询的标准轨迹，再到样本、评估反馈与多轮改进，运行数据可以持续参与 Agent 能力的演进。</p><p><br></p><p>阿里云&nbsp;SLS Session Store&nbsp;依托 SLS 的存储与分析能力，组织和供给执行数据；AgentLoop 等下游系统可以围绕这些数据开展评估、生成候选改进并验证效果。团队可以从具体任务起步，逐步把更多反馈、选择和更新环节纳入自进化流程。</p><p><br></p><p>当改进后的 Agent 继续执行任务、产生反馈，并参与下一轮改进时，持续积累的数据就成为连接各轮迭代的基础。</p><p><br></p><p><strong>阿里云 SLS Session Store，为 Agent RSI 自进化积累每一轮改进的依据。</strong></p><p><br></p><p>相关文档：</p><p>[1] 阿里云日志服务 SLS：<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.3.1b076ffaeasKVh&amp;enc=OFgBjkP2hcm75bqDpV5oXw%3D%3D.6VHEABBDFJhl8TaYa%2Fent5BiiyFGD7fO%2Bud9GADCW%2BcrcxXHiaF1U0Yq58sMi6UA\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.aliyun.com/product/sls</a></p><p>[2] SLS 官方文档：<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.4.1b076ffaeasKVh&amp;enc=TlwOGciL5YbasFmpQ3h00Q%3D%3D.zLud0RevKCBsAOk1Wt4e07E9HawZUISt94a4ZIYresjQD3tH9kUDrdpBpFxOEl53qnb6DG0c3D%2FwDkxWAnN2sA%3D%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://help.aliyun.com/zh/sls/what-is-log-service</a></p>",
+    "headings": [
+      {
+        "id": "section-agent-自进化-需要持续积累的运行数据",
+        "level": 2,
+        "text": "Agent 自进化，需要持续积累的运行数据"
+      },
+      {
+        "id": "section-阿里云-sls-session-store-从-trace-log-到标准轨迹",
+        "level": 2,
+        "text": "阿里云 SLS Session Store：从 Trace / Log 到标准轨迹"
+      },
+      {
+        "id": "section-从一条轨迹-找到值得改进的环节",
+        "level": 2,
+        "text": "从一条轨迹，找到值得改进的环节"
+      },
+      {
+        "id": "section-用数据集与-llm-评估-为自进化建立反馈",
+        "level": 2,
+        "text": "用数据集与 LLM 评估，为自进化建立反馈"
+      },
+      {
+        "id": "section-将日常执行整理成可反复使用的样本",
+        "level": 3,
+        "text": "▍将日常执行整理成可反复使用的样本"
+      },
+      {
+        "id": "section-借助-llm-评价结果与执行过程",
+        "level": 3,
+        "text": "▍借助 LLM，评价结果与执行过程"
+      },
+      {
+        "id": "section-面向-rsi-让每轮改进支撑下一轮自进化",
+        "level": 2,
+        "text": "面向 RSI，让每轮改进支撑下一轮自进化"
+      },
+      {
+        "id": "section-从运行反馈中生成具体改进",
+        "level": 3,
+        "text": "▍从运行反馈中生成具体改进"
+      },
+      {
+        "id": "section-用新任务验证-再选择保留的改变",
+        "level": 3,
+        "text": "▍用新任务验证，再选择保留的改变"
+      },
+      {
+        "id": "section-让改进后的系统继续参与改进",
+        "level": 3,
+        "text": "▍让改进后的系统继续参与改进"
+      },
+      {
+        "id": "section-让-agent-更善于改进自己",
+        "level": 3,
+        "text": "▍让 Agent 更善于改进自己"
+      },
+      {
+        "id": "section-为-agent-rsi-自进化-持续积累数据",
+        "level": 2,
+        "text": "为 Agent RSI 自进化，持续积累数据"
+      }
+    ],
+    "textLength": 4666,
+    "readingMinutes": 11,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1785236",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "279bafe488214d67f565a161f1a91b250a1f38e3ff0c7bb0fee0feefc9e3b79d",
+    "fetchedAt": "2026-11-20T08:34:08.877Z",
+    "checkedAt": "2026-11-20T08:34:08.877Z",
+    "nextRetryAt": "2026-12-20T08:34:08.877Z",
+    "warnings": []
+  }
+}

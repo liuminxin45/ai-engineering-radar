@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "7a030f5d66695001a83d",
+    "status": "ready",
+    "html": "<blockquote>作者：vivo 互联网搜索团队- Yang Zhan<br>\n针对研发人员被问题排查、资料核对等重复性事务大量挤占核心开发时间的痛点，本文基于 OpenTask 大模型构建轻量化「研发数字人 Agent 系统」。系统采用「离线知识库静态支撑 + MCP 动态接口调用 + 个性化 Skill 推理」三层架构，将个人私有经验结构化沉淀、实时联动线上业务系统、并复刻本人排查思路与工作习惯，实现问题受理、信息检索、逻辑分析、方案输出的全流程自动化闭环。系统已替代 80%以上繁琐事务，具备低侵入、可自进化特性，让研发真正聚焦核心技术工作。</blockquote>\n\n<p>1分钟看图掌握核心要点👇</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"1018\" src=\"https://i-blog.csdnimg.cn/img_convert/d10cd6a3f0ec17cca1db05cb87a82f09.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-一-项目背景\">一、项目背景<a class=\"heading-anchor\" href=\"#section-一-项目背景\" aria-label=\"链接到本节：一、项目背景\">#</a></h3>\n\n<p>在日常软件开发与运维工作中，研发人员长期面临<strong>重复性、事务性繁琐工作占比</strong>过高的痛点，严重挤占核心开发与架构设计工作时间。大量精力被问题排查、需求核对、日志分析、问题定位、资料查阅、接口校验等低价值事务消耗，导致专注编码、技术攻坚、架构优化等高价值工作效率大幅降低，研发工作流冗余、专注力碎片化问题突出。</p>\n\n<p>传统 AI 编程辅助工具仅支持<strong>代码补全、语法纠错、代码编写</strong>，无法适配研发全流程产研需求，不具备私有化离线知识适配、在线业务接口联动、个性化问题分析逻辑等能力，难以贴合个人研发工作习惯。</p>\n\n<p>基于以上痛点，依托 OpenTask(与WorkBuddy/</p>\n\n<p>CodeX类似) 智能 Agent 办公工具，自主<strong>研发轻量化研发数字人 Agent 系统</strong>，将其打造为研发人员的个人数字镜像——像本人一样思考与处理问题。围绕这一目标，期望系统具备三项核心能力：</p>\n\n<ul><li><strong>沉淀个人知识积累：</strong>将服务架构文档、流程图、RAG拓扑关系、业务场景、历史案例中的私有经验结构化封装为离线知识库，形成可随时调用、持续累积的个人知识资产。</li><li><strong>学习排查思路与工作习惯：</strong>通过个性化 Skill 复刻个人的问题分析步骤、排查优先级与解答逻辑，让输出贴合本人的思维方式与工作习惯。</li><li><strong>具备自我优化能力：</strong>在日常使用中持续沉淀高频问题、迭代推理规则、修正解答逻辑，实现越用越精准、越用越适配的自我进化。</li></ul>\n\n<p>让这一数字镜像替代人工完成问题接收、信息检索、逻辑分析、方案输出全流程工作，实现繁琐研发事务自动化处理，解放研发专注力，聚焦核心技术开发工作。</p>\n\n<h3 id=\"section-二-整体设计方案\">二、整体设计方案<a class=\"heading-anchor\" href=\"#section-二-整体设计方案\" aria-label=\"链接到本节：二、整体设计方案\">#</a></h3>\n\n<p>本系统以<strong> OpenTask 大模型为核心推理引擎</strong>，采用「知识库静态支撑 + MCP 动态调用 + 个性化 Skill 推理」的三层架构，兼顾离线知识稳定性、在线业务实时性和个人研发工作适配性，整体架构轻量化、低侵入，适配个人研发日常办公场景。</p>\n\n<h3 id=\"section-2-1-设计思路\">2.1 设计思路<a class=\"heading-anchor\" href=\"#section-2-1-设计思路\" aria-label=\"链接到本节：2.1 设计思路\">#</a></h3>\n\n<p></p>\n\n<p><img alt=\"\" height=\"231\" src=\"https://i-blog.csdnimg.cn/img_convert/a427fb0082d213d53fca39b0a3a683b7.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>流程步骤：</p>\n\n<pre><code>1. 用户提问：简易指令发起咨询\n2. Agent 解析：识别类型 · 拆解诉求\n3. 知识匹配 + 接口校验：离线检索 · MCP 实时数据\n4. Skill 推理：按个人技能逻辑逐步推导\n5. 方案输出：标准化结果 · 问题闭环\n6. 自我进化：沉淀高频问题 · 迭代规则</code></pre>\n\n<h3 id=\"section-2-2-整体架构组成\">2.2 整体架构组成<a class=\"heading-anchor\" href=\"#section-2-2-整体架构组成\" aria-label=\"链接到本节：2.2 整体架构组成\">#</a></h3>\n\n<p><strong>OpenTask 大模型（核心推理层）：</strong>支持长代码上下文、日志文本、技术文档超长上下文窗口，兼顾离线本地推理模式。</p>\n\n<p><strong>数字人私有本地知识库（静态支撑层）：</strong>承载研发人员个人沉淀私有知识，完全离线本地运行，不依赖外网、无数据泄露风险，为大模型提供专属、私密、长期静态知识素材，解决通用大模型不掌握个人历史经验、内部项目私有资料的痛点。简单理解：是数字人的\"私人笔记本 + 项目档案室\"，所有个人排查经验、内部私有文档本地存储，随时调取。</p>\n\n<p><strong>MCP 在线接口封装（动态能力层）：</strong>MCP 可理解为多端协作协议 / 统一工具网关，是数字人连接企业线上业务系统、第三方工具、在线服务的标准化通道，弥补离线知识库只有静态历史数据、无法获取实时动态信息的短板。</p>\n\n<p><strong>自定义 Skill 技能体系（个性化规则层）：</strong>Skill 即可复用、可自定义的研发专属任务技能，是复刻研发人员独有的排查思路、工作流程、操作习惯的核心载体，区别于通用大模型泛化能力，代表该研发人员独有的做事逻辑。</p>\n\n<p><strong>四层架构组成（核心辐射式）</strong></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"200\" src=\"https://i-blog.csdnimg.cn/img_convert/45e04f46d54ca208875bf7a6987ac99f.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>数字人私有本地知识库组成</strong></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"710\" src=\"https://i-blog.csdnimg.cn/img_convert/c83f7256b0630a94945b252d9c8d63e1.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>MCP 在线接口封装组成</strong></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"848\" src=\"https://i-blog.csdnimg.cn/img_convert/55a67906b801455d02fcb4275054cf97.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>自定义 Skill 技能体系组成</strong></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"632\" src=\"https://i-blog.csdnimg.cn/img_convert/2fc92abb6ca1bcc84e5c4e97de3bb498.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-三-核心功能实现\">三、核心功能实现<a class=\"heading-anchor\" href=\"#section-三-核心功能实现\" aria-label=\"链接到本节：三、核心功能实现\">#</a></h3>\n\n<p>系统基于四层架构，实现了<strong>问题智能受理、多源信息融合分析、个性化逻辑推理、标准化方案输出</strong>四大核心能力，全流程自动化替代人工繁琐操作。</p>\n\n<h3 id=\"section-3-1-智能问题受理与语义解析\">3.1 智能问题受理与语义解析<a class=\"heading-anchor\" href=\"#section-3-1-智能问题受理与语义解析\" aria-label=\"链接到本节：3.1 智能问题受理与语义解析\">#</a></h3>\n\n<p>用户通过简易指令发起咨询，Agent 依托 OpenTask 语义理解能力，精准识别问题类型（代码报错、业务异常、运维问题、流程咨询、语法疑问等），自动拆解核心诉求、问题场景、关键参数，过滤无效信息，锁定分析方向，降低沟通成本。</p>\n\n<p><strong>1.指令理解 · 服务初始化</strong></p>\n\n<p><strong>提问</strong> 初始化筛选器服务 music-xxx</p>\n\n<pre><code>初始化完成\n根目录：/Users/****/Documents/work/opentask\n服务名称：&lt;your-business-service-name&gt;\nService ID：&lt;your-business-service-name&gt;\nDAG ID：&lt;your-dag-id&gt;\n流程类型：首次初始化</code></pre>\n\n<p>Agent 准确理解该指令意图——锁定目标服务、加载其架构与知识上下文，为后续问题分析做好准备。</p>\n\n<p><strong>2.问题受理 · 关键信息提取</strong></p>\n\n<p><strong>提问：</strong>在联想词服务中输入「iQOO 120W 充电器」，商品卡片却提示「iQOO12 原装配件」，需定位提示语来源。</p>\n\n<pre><code>很好，找到了服务ID：portal-xxx\n\n现在让我提取问题的关键信息：\n\n用户输入：\"iQOO 120W 充电器\"\n结果：商品卡片提示语为 \"iQOO12 原装配件\"\n核心问题：为什么提示语是 \"iQOO12 原装配件\"</code></pre>\n\n<p>Agent 定位服务 ID（portal-xxx）后，自动从用户描述中拆解出「用户输入 / 结果 / 核心问题」三要素，锁定分析方向。</p>\n\n<h3 id=\"section-3-2-离线本地知识库\">3.2 离线本地知识库<a class=\"heading-anchor\" href=\"#section-3-2-离线本地知识库\" aria-label=\"链接到本节：3.2 离线本地知识库\">#</a></h3>\n\n<p>大模型存在知识盲区，Agent 优先检索本地结构化离线知识库，解决通用大模型不懂私有项目、个人积累经验的痛点。本节从<strong>内容与检索方式</strong>两部分展开。</p>\n\n<p><strong>1. 离线库的内容</strong></p>\n\n<p>离线知识库目录结构：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"465\" src=\"https://i-blog.csdnimg.cn/img_convert/f9380606b0e285564c7ce8b0eb22db28.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>换一个角度看离线知识库的目录结构，按「项目私有库 / 个人沉淀库 / 团队离线文档库」三类组织：</p>\n\n<pre><code>1.1 项目私有库\n1.1.1 公共信息\n  ·黑话 / 暗语\n  ·场景 ⇄ 服务 之间的关系\n  ·业务专用名词\n1.1.2 服务信息\n  ·源代码\n  ·服务基础信息：名称、版本、发布时间、代码 commit 信息 …\n  ·服务架构\n    -服务节点 —— 尽可能拆分为独立的、小粒度的局部节点\n    -RAG 拓扑关系 —— 点之间的连接线\n1.2 个人沉淀库\n  ·局部环节执行规范\n    -代码逻辑 code-logic interpreted 目录下\n    -业务逻辑 business-logic interpreted 目录下\n  ·个人排障笔记（docs 目录下）\n    -问题描述\n    -定位思路\n1.3 团队离线文档库\n  ·需求文档\n  ·概要设计文档</code></pre>\n\n<p><strong>2. 基于预定义流程图的确定性检索</strong></p>\n\n<p>流程与节点建模：将一次完整 RAG 任务拆解为一个有向节点序列（可以是链式或 DAG），为每个节点定义明确的规范，至少包含：</p>\n\n<ul><li><strong>触发条件 / 输入：</strong>参数来源、输入输出规范性判断（可否为空、格式判断等）。</li><li><strong>职责范围：</strong>逻辑概要解释 —— code-logic + business-logic。</li><li><strong>输出声明（重点）：</strong>结构化数据（字段名、字段格式判断、判空）。</li></ul>\n\n<p>整个流程构成一张<strong>检索导航图</strong>，实际上是把「在哪里查、查什么、输出什么格式」固化为节点规范。真正执行的时候，需要依赖<strong>知识库、MCP、Skill </strong>共同完成。</p>\n\n<h3 id=\"section-3-3-mcp-在线接口动态调用校验\">3.3 MCP 在线接口动态调用校验<a class=\"heading-anchor\" href=\"#section-3-3-mcp-在线接口动态调用校验\" aria-label=\"链接到本节：3.3 MCP 在线接口动态调用校验\">#</a></h3>\n\n<p>MCP 可理解为<strong>多端协作协议</strong>，是打通数字人与在线系统的通路，实现<strong>实时数据查询（读）与线上工具自动化操作（写）</strong>，让数字人不只靠历史经验，弥补离线知识库只有静态历史数据、无法获取实时动态信息的短板。</p>\n\n<p><strong>核心作用</strong></p>\n\n<p><strong>① 服务基本信息：</strong>见文件 service-info.json，包含服务名称、版本、发布时间、commit 等元信息。</p>\n\n<pre><code>{\n  \"serviceId\": \"portal-xxx\",\n  \"version\": \"10\",\n  \"DAGId\": \"4228\",\n  \"PROJECT_NAME\": \"search-biz\",\n  \"git_address\": \"https://gitlab.your-company.com/java-project/search-biz.git\",\n  \"git_branch\": \"portal-branch\",\n  \"commit_id\": \"e792fcd70597663e1a032898f5427cce9d2bc6\",\n  \"updateTime\": \"2026-01-14 20:01:50.0\",\n  \"flowStatus\": \"true\",\n  \"moduleInfo\": {\n    \"module_name\": \"portal-xxx-3.4.5\",\n    \"module_version\": \"\",\n    \"desc\": \"v3.4.5 完成大容量电池解析\\r\\nTT杨\\r\\n2026-01-14 19:20:26\"\n  },\n  \"gateway\": {\n    \"name\": \"公用集群(search)\",\n    \"group\": \"common\"\n  },\n  \"fetchTime\": \"2026-06-17T07:14:39Z\"\n}</code></pre>\n\n<p><strong>② 服务 RAG 拓扑关系：</strong>见文件 dag-structure</p>\n\n<p>.json，渲染为服务流程图，呈现节点间的调用与连接关系。</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"465\" src=\"https://i-blog.csdnimg.cn/img_convert/a09f388db4ea4cf90e9f63d1eca047a8.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>③ 局部节点详细信息：</strong>见文件 flowNodesInfo</p>\n\n<p>.json，逐节点记录职责、输入输出契约与判空规范。</p>\n\n<pre><code>{\n  \"nodeId\": \"main\",\n  \"nodeName\": \"参数初始化\",\n  \"dagId\": \"DAG-0327290e\",\n  \"codeLogic\": \"解析请求入参，初始化上下文与默认配置\",\n  \"businessLogic\": \"校验来源渠道、关键词、分页参数，缺省时填充业务默认值\",\n  \"input\": {\n    \"keyword\":  { \"type\": \"string\",  \"nullable\": false },\n    \"channel\":  { \"type\": \"string\",  \"nullable\": false },\n    \"pageSize\": { \"type\": \"integer\", \"nullable\": true, \"default\": 10 }\n  },\n  \"output\": {\n    \"ctx\":      { \"type\": \"object\", \"nullable\": false },\n    \"valid\":    { \"type\": \"boolean\",\"nullable\": false }\n  }\n}</code></pre>\n\n<p><strong>④ 源代码获取：</strong>通过 git 下载代码至 sourceCode 目录，供代码级分析与定位。</p>\n\n<p><strong>⑤ 在线服务请求：</strong>实时返回各节点的执行状态、输入参数、输出参数、耗时等信息。在线请求实时返回各节点的执行状态、输入 / 输出参数与耗时，支撑静态知识 + 动态数据的融合分析。</p>\n\n<p><strong>⑥ 在线文档内容：</strong>拉取需求文档等线上文档，补充实时业务上下文。</p>\n\n<p><strong>核心要求</strong></p>\n\n<p><strong>MCP 提供者：</strong></p>\n\n<ul><li><strong>接口统一：</strong>统一接口规范与返回结构，便于使用方统一请求、统一解析，降低对接成本。</li><li><strong>数据实时性：</strong>保证返回数据为线上实时状态，避免使用方拿到过期、缓存失真的数据。</li><li><strong>大内容返链接：</strong>当 MCP 返回内容较大时，返回下载链接而非原始内容，避免上下文膨胀与传输阻塞。</li></ul>\n\n<p><strong>MCP 使用者：</strong></p>\n\n<ul><li><strong>超时熔断：</strong>为每次调用设定超时阈值，超时即熔断，避免单点接口阻塞导致整个系统卡死。</li><li><strong>失败降级：</strong>调用失败或熔断后可降级到离线知识库，保障流程不中断。</li></ul>\n\n<h3 id=\"section-3-4-自定义-skill-分步推理分析\">3.4 自定义 Skill 分步推理分析<a class=\"heading-anchor\" href=\"#section-3-4-自定义-skill-分步推理分析\" aria-label=\"链接到本节：3.4 自定义 Skill 分步推理分析\">#</a></h3>\n\n<p><strong>目标：</strong>个性化 Skill 推理就是数字人 Agent 专属的<strong>研发行为、逻辑引擎</strong>，能够复刻研发人员独有排查思路、工作习惯、业务处理方式的核心差异化引擎。</p>\n\n<p>Skill 是把以下三者按照<strong>研发本人固定做事逻辑</strong>串联调度的执行载体：</p>\n\n<ul><li><strong>智能体大模型：</strong>提供通用理解、规划、总结能力。</li><li><strong>离线知识库：</strong>提供私有静态经验。</li><li><strong>MCP 接口：</strong>提供线上实时数据。</li></ul>\n\n<p>在全生命周期运行中，<strong>Skill 无法脱离 Prompt 体系独立工作</strong>，二者深度绑定、互相驱动，共同定义数字人的行为边界、思考方式与输出标准。</p>\n\n<p><strong>1. Skills 约定准入条件</strong></p>\n\n<ul><li><strong>隐式自动触发：</strong>匹配关键字、语义理解触发。</li><li><strong>显式手动调用：</strong>在对话框中输入 /help 或 @code-review 直接触发对应 Skill，如 /init-flow user-svc-001。</li></ul>\n\n<p>Skill 设置准入条件：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"359\" src=\"https://i-blog.csdnimg.cn/img_convert/9acefc7366e22d84852a2c0d15d5be2d.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>2. Skill 全局流程编排层</strong></p>\n\n<ul><li><strong>任务拆解 &amp; 分步执行：</strong>将复杂研发任务拆解并分步执行。</li><li><strong>多场景分支：</strong>支持多场景分支判断、条件流转。</li><li><strong>统一调度：</strong>统一调度离线知识库、MCP 接口、Prompt 规则、Script 脚本，实现全流程自动化串联。</li><li><strong>容错机制：</strong>内置重试、超时、降级步骤机制。</li></ul>\n\n<p>Skill 设置执行步骤 &amp; 顺序：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"236\" src=\"https://i-blog.csdnimg.cn/img_convert/9cbdb3119a6c722ece385d03fa750f20.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>3. Prompt 设置执行方案</strong></p>\n\n<ul><li><strong>填充流程骨架：</strong>Skill 是\"流程骨架\"，Prompt 是填充骨架的\"大脑逻辑\"，定义每一步的执行方案、约束规则、分析维度与交付标准。</li><li><strong>为脚本提供决策依据：</strong>为 Script 脚本执行提供决策依据和规则约束。</li></ul>\n\n<p>Prompt 设置执行方案：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"301\" src=\"https://i-blog.csdnimg.cn/img_convert/e4db21dba211fea4ca0d3e8ca42c1b60.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"184\" src=\"https://i-blog.csdnimg.cn/img_convert/6ccfb506b252f10d498a3274afaa3c35.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p><strong>4. Script 脚本配置执行固定动作</strong></p>\n\n<ul><li><strong>标准化批量动作：</strong>批量执行标准化的固定动作。</li><li><strong>可复用执行：</strong>用于多次执行相同动作的场景，保障一致性与可复用性。</li></ul>\n\n<h3 id=\"section-3-5-标准化结果输出\">3.5 标准化结果输出<a class=\"heading-anchor\" href=\"#section-3-5-标准化结果输出\" aria-label=\"链接到本节：3.5 标准化结果输出\">#</a></h3>\n\n<p>分析完成后，Agent 输出结构化结果，内容清晰、可直接落地执行，直接完成问题闭环。本节从<strong>输出内容</strong>与<strong>表达方式</strong>两个维度说明。</p>\n\n<p><strong>1. 输出哪些内容</strong></p>\n\n<ul><li><strong>结论输出：</strong>直接给出问题原因解析与最终结论。</li><li><strong>修改建议（修改建议.md）：</strong>具体代码 / 配置修改建议，可直接应用。</li><li><strong>概要设计（概要设计.md）：</strong>针对需求或方案输出标准概要设计文档。</li><li><strong>关键 case 整理（关键case整理.md）：</strong>沉淀关键案例与排查过程，便于复用与回溯。</li></ul>\n\n<p><strong>2. 表达方式</strong></p>\n\n<p>输出的表达风格可在<strong>技术范</strong>与<strong>通俗化</strong>之间切换，让同一份分析结果按受众自适应呈现。通过以下两种方法控制：</p>\n\n<ul><li><strong>人设差异化：</strong>通过不同人设控制表达维度（语气、专业度、受众视角）。</li><li><strong>Skill + Prompt 差异化：</strong>通过 Skill 与 Prompt 的差异化配置，控制输出内容的形式（结构、详略、术语取舍）。</li></ul>\n\n<p></p>\n\n<p><img alt=\"\" height=\"184\" src=\"https://i-blog.csdnimg.cn/img_convert/1f673e7c5439bc8b55f10f88195f37fb.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<ul><li><strong>技术范表达方式：</strong>保留专业术语、代码片段与字段细节，强调根因与调用链路，可直接进入评审与落地。</li><li><strong>通俗化表达方式：</strong>弱化术语、用业务语言转述，突出影响与结论，便于非技术受众快速理解与决策。</li></ul>\n\n<p><strong>完整业务流程</strong></p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"925\" src=\"https://i-blog.csdnimg.cn/img_convert/871beb0d9fcb5572e2feb01d934e03c4.webp?x-oss-process=image/format,png\" width=\"479\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<h3 id=\"section-3-6-功能展示\">3.6 功能展示<a class=\"heading-anchor\" href=\"#section-3-6-功能展示\" aria-label=\"链接到本节：3.6 功能展示\">#</a></h3>\n\n<p><strong>手机价格筛选器逻辑</strong></p>\n\n<p>背景：当前用户在领取 6000+ 政府补贴资格后，希望直接跳转至对应 6000+ 可用机型商品列表，打通领取与使用环节，提高转化效率。</p>\n\n<p>问：在过滤器服务中，能否精准地过滤出 6000 元以上的手机，而不包含 5000-6000 元的？</p>\n\n<p>🔴 不能精准地过滤出 6000 元以上的手机而不包含 5000-6000 元的</p>\n\n<p>原因有三层：</p>\n\n<p>1. 价格分类体系中没有\"6000元以上\"</p>\n\n<p>系统使用的价格分类（FilterItemEnum.MIN_PRICE，即 filterMap key=2）只有 6 个硬编码区间：</p>\n\n<p></p>\n\n<p><img alt=\"\" height=\"318\" src=\"https://i-blog.csdnimg.cn/img_convert/16334b0741e87ec2727a7bf95c10d188.webp?x-oss-process=image/format,png\" width=\"720\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></p>\n\n<p>没有\"6000及以上\"这个分类选项。5000及以上是一个兜底区间，包含了所有 ≥5000 的手机，无法区分 5000-6000 和 6000+。</p>\n\n<p>2. 过滤逻辑中 inPriceRange 是硬编码的</p>\n\n<p>在 FilterStrategy.java 的 inPriceRange 方法中，价格区间判断是硬编码的：</p>\n\n<pre><code>1. 用户提问：简易指令发起咨询\n2. Agent 解析：识别类型 · 拆解诉求\n3. 知识匹配 + 接口校验：离线检索 · MCP 实时数据\n4. Skill 推理：按个人技能逻辑逐步推导\n5. 方案输出：标准化结果 · 问题闭环\n6. 自我进化：沉淀高频问题 · 迭代规则</code></pre>\n\n<p>只要选择了\"5000及以上\"，所有 price ≥ 5000 的手机都会通过过滤，包括 5000-6000 元区间的，也无法将 5000-6000 和 6000+ 拆开——因为分类粒度不够。</p>\n\n<h3 id=\"section-四-agent-的扩展能力-他还可以做什么\">四、Agent 的扩展能力：他还可以做什么<a class=\"heading-anchor\" href=\"#section-四-agent-的扩展能力-他还可以做什么\" aria-label=\"链接到本节：四、Agent 的扩展能力：他还可以做什么\">#</a></h3>\n\n<p>前述核心功能聚焦于\"问题排查与解答\"主场景，但 OpenTask 驱动的 Agent 能力远不止于此。凭借强大的代码理解、逻辑推理和上下文生成能力，Agent 实现**从\"被动回答\"到\"主动赋能\"**的角色跃迁，覆盖研发全流程关键环节。</p>\n\n<h3 id=\"section-4-1-方案输出-从问题到方案的完整闭环\">4.1 方案输出 —— 从问题到方案的完整闭环<a class=\"heading-anchor\" href=\"#section-4-1-方案输出-从问题到方案的完整闭环\" aria-label=\"链接到本节：4.1 方案输出 —— 从问题到方案的完整闭环\">#</a></h3>\n\n<ul><li><strong>即时修复方案：</strong>针对具体 bug、配置错误、逻辑缺陷，直接给出修复代码或配置建议，确认后可直接应用。</li><li><strong>架构优化方案：</strong>针对模块耦合、扩展性差、性能瓶颈等系统性问题，给出模块拆分、接口重构、缓存策略建议。</li><li><strong>技术选型对比：</strong>基于项目上下文，对比可选方案的性能、维护性、兼容性、团队适配度，辅助决策。</li><li><strong>方案权衡分析：</strong>给出多方案的收益、代价、风险、实施难度对比矩阵，帮助权衡后做出最优选择。</li></ul>\n\n<h3 id=\"section-4-2-概要设计-根据需求生成标准设计文档\">4.2 概要设计 —— 根据需求生成标准设计文档<a class=\"heading-anchor\" href=\"#section-4-2-概要设计-根据需求生成标准设计文档\" aria-label=\"链接到本节：4.2 概要设计 —— 根据需求生成标准设计文档\">#</a></h3>\n\n<ul><li><strong>需求分析与拆解：</strong>识别功能点、非功能需求、约束条件、依赖关系，将模糊业务语言拆解为清晰技术需求。</li><li><strong>系统架构设计：</strong>给出模块划分、职责边界、接口定义、数据流设计、部署拓扑，输出架构图与说明文档。</li><li><strong>接口与数据设计：</strong>定义接口契约与数据模型（表结构、索引策略、生命周期），输出可评审接口文档与数据字典。</li><li><strong>评审要点 &amp; 模板化输出：</strong>生成评审 Checklist，标注关键决策点与风险点；按团队模板输出完整概要设计文档。</li></ul>\n\n<h3 id=\"section-4-3-代码生成-从设计到实现的最后一公里\">4.3 代码生成 —— 从设计到实现的最后一公里<a class=\"heading-anchor\" href=\"#section-4-3-代码生成-从设计到实现的最后一公里\" aria-label=\"链接到本节：4.3 代码生成 —— 从设计到实现的最后一公里\">#</a></h3>\n\n<ul><li><strong>脚手架代码生成：</strong>根据模块划分与接口定义，自动生成目录结构、配置文件、基础类、接口骨架。</li><li><strong>核心逻辑代码草稿：</strong>生成数据校验、业务流程控制、异常处理、日志记录等骨架代码，供精炼完善。</li><li><strong>单元测试用例生成：</strong>根据代码与接口契约生成正常路径、边界条件、异常场景的测试用例。</li><li><strong>配置与部署脚本：</strong>生成配置模板、Dockerfile、CI/CD 流水线脚本，实现从代码到部署全链路辅助。</li></ul>\n\n<blockquote>在贴出需求文档后，Agent 可一次性给出<strong>完整的概要设计与代码改动</strong>——从需求拆解、架构与接口设计，到落地代码草稿，端到端覆盖「设计 → 实现」全链路。</blockquote>\n\n<pre><code>概要设计输出：基于贴出的需求文档，Agent 自动产出完整概要设计文档，覆盖需求拆解与架构、接口设计。\n已生成两个详细文档：\n1.功率识别对联想词意图识别的影响和修复方案.md (334行)\n2.功率识别代码实现示例.md (724行)\n\n🎯 修改要求对应方案\n✅ 要求1：型号词和系列词跳过功率判断\n核心逻辑: 增加功率模式检测 detectPower-Pattern() 和移除 extractPowerAnd-Remove()\n正则表达式: \\\\d+[安aA瓦wW]（匹配数字+安/a/A/瓦/w/W，中间无空格）\n\n✅ 要求2：意图判断确保包含配件类型\n数据线配件: 检测 \\\\d+[安aA] → 设置 dataCableIntentionFlag\n充电器配件: 检测 \\\\d+[瓦wW] → 设置 chargerIntentionFlag\n\n✅ 要求3：排序文本得分考虑a和w字段的加成\n加成逻辑: 识别到功率信息后在 mix_score 基础上加 0.05\n排序优化: 去重和最终排序时优先保留功率相关联想词</code></pre>\n\n<h3 id=\"section-五-落地应用成效\">五、落地应用成效<a class=\"heading-anchor\" href=\"#section-五-落地应用成效\" aria-label=\"链接到本节：五、落地应用成效\">#</a></h3>\n\n<p><strong>减负增效：</strong>替代人工完成 80% 以上的问题查阅、排查、资料核对等繁琐事务，大幅减少碎片化工作时间，有效聚焦核心编码、架构优化、技术攻坚等高价值工作。</p>\n\n<p><strong>降低失误：</strong>依托标准化知识库与固定 Skill 推理逻辑，规避人工排查疏忽、经验偏差、记忆遗漏，问题排查准确率与效率显著提升。</p>\n\n<p><strong>经验沉淀：</strong>将个人零散研发经验结构化封装为知识库，通过 Agent 复用沉淀个人技术经验，实现经验固化、高效复用。</p>\n\n<p><strong>适配性强：</strong>轻量化部署、无业务侵入，完全适配个人研发工作场景，无需改造现有业务系统，上手即用。</p>\n\n<h3 id=\"section-六-后续优化迭代\">六、后续优化迭代<a class=\"heading-anchor\" href=\"#section-六-后续优化迭代\" aria-label=\"链接到本节：六、后续优化迭代\">#</a></h3>\n\n<p>基于当前落地使用效果，结合研发场景痛点，后续将<strong>从知识库智能化、Skill 精细化推理与 Prompt 决策、服务化与对外服务能力、Loop 闭环监控、自主学习能力</strong>共五个维度持续优化迭代。</p>\n\n<h3 id=\"section-6-1-知识库智能化升级\">6.1 知识库智能化升级<a class=\"heading-anchor\" href=\"#section-6-1-知识库智能化升级\" aria-label=\"链接到本节：6.1 知识库智能化升级\">#</a></h3>\n\n<p>优化结构化能力，新增<strong>自动增量更新</strong>，自动抓取新问题、新方案、新文档；优化向量检索精度，提升复杂、模糊场景匹配准确率；对知识库内容分类分级，实现精准场景化匹配。</p>\n\n<h3 id=\"section-6-2-skill-推理精细化迭代与-prompt-决策机制\">6.2 Skill 推理精细化迭代与 Prompt 决策机制<a class=\"heading-anchor\" href=\"#section-6-2-skill-推理精细化迭代与-prompt-决策机制\" aria-label=\"链接到本节：6.2 Skill 推理精细化迭代与 Prompt 决策机制\">#</a></h3>\n\n<p>丰富自定义 Skill 规则库，定制专属推理模板；新增优先级机制、场景自适应切换、可视化编辑。进一步引入 Skill + Prompt 联合决策机制：</p>\n\n<ul><li><strong>Skill 拆解与细化：</strong>将粗粒度 Skill 拆解为原子技能（如\"代码报错排查\"拆为编译错误分析、运行时异常定位、依赖冲突排查），各自独立推理逻辑。</li><li><strong>Prompt 决策\"是否要做\"：</strong>执行 Skill 前判断问题是否属职责范围、是否值得动用，对边界模糊问题做出接受/拒绝/转判断决策。</li><li><strong>Prompt 决策\"怎么做\"：</strong>选择最优执行策略——用哪个 Skill、是否组合、调用顺序、是否需 MCP 辅助，让执行路径更智能。</li><li><strong>Skill 组合与编排：</strong>多个细粒度 Skill 按条件动态组合，应对复杂场景的多步推理、多技能协作。</li><li><strong>Skill 效果反馈闭环：</strong>记录满意度、采纳率、闭环率，持续优化规则与决策逻辑，实现自我迭代进化。</li></ul>\n\n<h3 id=\"section-6-3-服务化与对外服务能力\">6.3 服务化与对外服务能力<a class=\"heading-anchor\" href=\"#section-6-3-服务化与对外服务能力\" aria-label=\"链接到本节：6.3 服务化与对外服务能力\">#</a></h3>\n\n<p>当前 Agent 本地化运行，本质是研发人员的个人数字镜像。后续计划通过微信公众号等渠道对外输出分析能力，重点解决：</p>\n\n<ul><li><strong>只读能力边界：</strong>对外严格限定为只读查询与分析，不开放写入/修改/删除权限，确保无副作用。</li><li><strong>问题边界划定：</strong>对无关问题（闲聊、非技术咨询、超范围）直接返回明确边界提示，不做无效尝试。</li><li><strong>渠道适配：</strong>适配公众号消息格式、交互方式、响应时效，确保体验一致性。</li><li><strong>身份与权限管控：</strong>区分内外部用户权限，外部仅开放只读公开接口，保障私有知识与敏感数据安全。</li></ul>\n\n<h3 id=\"section-6-4-loop-闭环监控能力\">6.4 Loop 闭环监控能力<a class=\"heading-anchor\" href=\"#section-6-4-loop-闭环监控能力\" aria-label=\"链接到本节：6.4 Loop 闭环监控能力\">#</a></h3>\n\n<p>当前为单次触发式流程，后续引入 Loop 闭环监控，让 Agent 持续监督流程是否真正执行完成、问题是否彻底闭环：</p>\n\n<ul><li><strong>执行状态跟踪：</strong>持续跟踪方案是否采纳、修改是否落地、问题是否验证解决。</li><li><strong>闭环验证机制：</strong>对代码/配置/架构类方案设定验证节点，检查是否真正解决，避免\"假闭环\"。</li><li><strong>异常中断恢复：</strong>流程因接口超时、网络中断、用户离开等中断后，可从断点继续，保障长流程连续性。</li><li><strong>定期巡检提醒：</strong>对历史问题设定巡检周期，检查复发与新异常，从\"一次性解决\"升级为\"持续保障\"。</li><li><strong>Loop 超时与退出机制：</strong>设定超时阈值与最大循环次数，避免无限循环；无法闭环时主动退出并请求人工介入。</li></ul>\n\n<h3 id=\"section-6-5-自主学习能力优化\">6.5 自主学习能力优化<a class=\"heading-anchor\" href=\"#section-6-5-自主学习能力优化\" aria-label=\"链接到本节：6.5 自主学习能力优化\">#</a></h3>\n\n<p>引入小样本自主学习能力，让 Agent 在日常使用中自动沉淀高频问题、优化解答逻辑、迭代 Skill 规则，实现越用越精准、越用越适配个人工作习惯，逐步实现全流程自主化、智能化辅助。</p>\n\n<h3 id=\"section-七-结语\">七、结语<a class=\"heading-anchor\" href=\"#section-七-结语\" aria-label=\"链接到本节：七、结语\">#</a></h3>\n\n<p>本次基于 OpenTask 搭建的研发辅助智能 Agent，精准解决了研发人员日常繁琐事务过多、核心工作被挤占的核心痛点。通过离线知识库 + MCP 在线接口 + 个性化 Skill 推理的创新架构，实现了研发问题排查、咨询分析工作的<strong>自动化、标准化、个性化</strong>落地，有效提升个人研发效率、降低重复工作量。后续通过持续迭代优化，可进一步拓展场景、提升智能化水平，打造个人专属的全流程研发智能辅助工具，最大化解放研发生产力。</p>",
+    "headings": [
+      {
+        "id": "section-一-项目背景",
+        "level": 3,
+        "text": "一、项目背景"
+      },
+      {
+        "id": "section-二-整体设计方案",
+        "level": 3,
+        "text": "二、整体设计方案"
+      },
+      {
+        "id": "section-2-1-设计思路",
+        "level": 3,
+        "text": "2.1 设计思路"
+      },
+      {
+        "id": "section-2-2-整体架构组成",
+        "level": 3,
+        "text": "2.2 整体架构组成"
+      },
+      {
+        "id": "section-三-核心功能实现",
+        "level": 3,
+        "text": "三、核心功能实现"
+      },
+      {
+        "id": "section-3-1-智能问题受理与语义解析",
+        "level": 3,
+        "text": "3.1 智能问题受理与语义解析"
+      },
+      {
+        "id": "section-3-2-离线本地知识库",
+        "level": 3,
+        "text": "3.2 离线本地知识库"
+      },
+      {
+        "id": "section-3-3-mcp-在线接口动态调用校验",
+        "level": 3,
+        "text": "3.3 MCP 在线接口动态调用校验"
+      },
+      {
+        "id": "section-3-4-自定义-skill-分步推理分析",
+        "level": 3,
+        "text": "3.4 自定义 Skill 分步推理分析"
+      },
+      {
+        "id": "section-3-5-标准化结果输出",
+        "level": 3,
+        "text": "3.5 标准化结果输出"
+      },
+      {
+        "id": "section-3-6-功能展示",
+        "level": 3,
+        "text": "3.6 功能展示"
+      },
+      {
+        "id": "section-四-agent-的扩展能力-他还可以做什么",
+        "level": 3,
+        "text": "四、Agent 的扩展能力：他还可以做什么"
+      },
+      {
+        "id": "section-4-1-方案输出-从问题到方案的完整闭环",
+        "level": 3,
+        "text": "4.1 方案输出 —— 从问题到方案的完整闭环"
+      },
+      {
+        "id": "section-4-2-概要设计-根据需求生成标准设计文档",
+        "level": 3,
+        "text": "4.2 概要设计 —— 根据需求生成标准设计文档"
+      },
+      {
+        "id": "section-4-3-代码生成-从设计到实现的最后一公里",
+        "level": 3,
+        "text": "4.3 代码生成 —— 从设计到实现的最后一公里"
+      },
+      {
+        "id": "section-五-落地应用成效",
+        "level": 3,
+        "text": "五、落地应用成效"
+      },
+      {
+        "id": "section-六-后续优化迭代",
+        "level": 3,
+        "text": "六、后续优化迭代"
+      },
+      {
+        "id": "section-6-1-知识库智能化升级",
+        "level": 3,
+        "text": "6.1 知识库智能化升级"
+      },
+      {
+        "id": "section-6-2-skill-推理精细化迭代与-prompt-决策机制",
+        "level": 3,
+        "text": "6.2 Skill 推理精细化迭代与 Prompt 决策机制"
+      },
+      {
+        "id": "section-6-3-服务化与对外服务能力",
+        "level": 3,
+        "text": "6.3 服务化与对外服务能力"
+      },
+      {
+        "id": "section-6-4-loop-闭环监控能力",
+        "level": 3,
+        "text": "6.4 Loop 闭环监控能力"
+      },
+      {
+        "id": "section-6-5-自主学习能力优化",
+        "level": 3,
+        "text": "6.5 自主学习能力优化"
+      },
+      {
+        "id": "section-七-结语",
+        "level": 3,
+        "text": "七、结语"
+      }
+    ],
+    "textLength": 9744,
+    "readingMinutes": 22,
+    "sourceId": "vivo-csdn",
+    "sourceUrl": "https://blog.csdn.net/vivo_tech/article/details/171027687",
+    "ruleId": "csdn",
+    "ruleVersion": "3",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "09282874934da1143481a842d4d545cb704164e62c56b6b4772b809dbbaeec8d",
+    "fetchedAt": "2026-11-20T08:34:02.870Z",
+    "checkedAt": "2026-11-20T08:34:02.870Z",
+    "nextRetryAt": "2026-12-20T08:34:02.870Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "e729857445006454dd99",
+    "status": "ready",
+    "html": "<p>作者：澄潭</p><p><br></p><p><span>HiRoute官网文档链接：</span><a href=\"https://hiroute.ai/zh/docs/?spm=a2c6h.13046898.publish-article.34.637c6ffaUfhiD0\" target=\"_blank\" rel=\"noopener noreferrer\"><strong><span>https://hiroute.ai/zh/docs/</span></strong></a></p><p><br></p><p>智能路由会把不同的工作交给不同的模型。很多人随之会问：模型一换，之前积累的缓存就用不上了，这笔损失会不会把省下的钱又花回去？</p><p><br></p><p><strong>简短回答：会损失一些，但远远抵不掉省下的钱。</strong></p><p><strong><br></strong></p><ul><li><strong>切换本来就不多。</strong> HiRoute 在同一轮任务的连续工具调用中不换模型，只在用户发来新消息、上下文压缩这类节点重新选择。在一次 40 次请求的编码任务中，有 35 次直接沿用了已有选择。</li><li><strong>损失只有一次，会被摊薄。</strong> 缓存损失只发生在切换后的第一次请求，后续调用又能用上缓存。</li><li><strong>往便宜的模型切，旧上下文反而更省钱。</strong> 便宜模型从头处理一遍，常常比贵模型读缓存还便宜。</li><li><strong>缓存只让省钱比例变化几个百分点。</strong> 在 Astra × Qwen 实验中，混合路由里的 Qwen 一次缓存都没命中，仍然省下约 91%；就算输入全部命中缓存，也只是变成约 94%。</li></ul><p><br></p><p>什么时候切换由 HiRoute 决定，开启智能省钱不需要自己先算一遍账。下面逐条说明。</p><h2 id=\"section-先弄清楚-缓存省的是什么钱\">先弄清楚：缓存省的是什么钱<a class=\"heading-anchor\" href=\"#section-先弄清楚-缓存省的是什么钱\" aria-label=\"链接到本节：先弄清楚：缓存省的是什么钱\">#</a></h2><p>Agent 每次调用模型，都要把整段对话历史重新发一遍，包括系统提示词、工具定义、之前的消息和工具结果。对话越长，每次重复发送的内容就越多。</p><p><br></p><p>KV Cache 让模型记住已经处理过的开头部分，下文称为“前缀”。下一次请求的开头相同，就可以直接读取缓存，按缓存读取价计费，通常只有普通输入价的十分之一左右。</p><p><br></p><p>缓存是跟着模型走的。换到一个没处理过这段历史的模型，它只能从头处理一遍，之后的请求才能读取它自己的缓存。所以切换的缓存损失是：<strong>本来能按缓存价读取的那段前缀，在新模型上要按全价重新处理一次。</strong> 这是一次性费用，不会在之后每次调用中重复发生。</p><h2 id=\"section-hiroute-怎么减少切换\">HiRoute 怎么减少切换<a class=\"heading-anchor\" href=\"#section-hiroute-怎么减少切换\" aria-label=\"链接到本节：HiRoute 怎么减少切换\">#</a></h2><p>HiRoute 的上下文保持机制（ContextHold）按照对话的节奏决定何时可以换模型：</p><p><br></p><div><div class=\"markdown-table-wrap\"><table><thead><tr><td>什么时候</td><td>HiRoute 怎么做</td><td>对缓存的影响</td></tr></thead><tbody><tr><td>同一轮里连续的工具调用</td><td>沿用本轮已经做出的选择，继续使用当前模型</td><td>不切换，缓存随对话增长持续复用</td></tr><tr><td>用户发来新消息</td><td>重新判断任务，可能继续，也可能更换</td><td>继续就没有损失；更换则损失一次旧前缀</td></tr><tr><td>上下文压缩或重建后</td><td>原选择仍适用就保持，否则重新判断</td><td>历史本来就要部分重建，换模型的额外损失更小</td></tr></tbody></table></div></div><p><br></p><p>一轮任务中的大多数调用是工具往返，这部分不会换模型。在一次 40 次请求的无人值守编码实验中，路由只在开头和两次上下文压缩前后做了决策，其余 35 次直接沿用了已有选择，占 87.5%。</p><p><br></p><p>实际能否命中缓存，还取决于模型服务商的缓存规则和有效期；当前模型不可用时，也会自动接力到备用模型。具体规则见模型路由指南[1]。</p><h2 id=\"section-切换一次-损失会被后续调用摊薄\">切换一次，损失会被后续调用摊薄<a class=\"heading-anchor\" href=\"#section-切换一次-损失会被后续调用摊薄\" aria-label=\"链接到本节：切换一次，损失会被后续调用摊薄\">#</a></h2><p>设想这样一个场景：你和 Agent 的对话已经积累了 10 万 token，这时你发了一条新消息，路由决定换一个模型。</p><p><br></p><ul><li><strong>切换后的第一次请求：</strong> 10 万 token 都要重新处理，这次请求的缓存命中率从 99% 降到 0。单看这一次，损失很大。</li><li><strong>之后的工具调用：</strong> 新模型已经缓存了这段对话，命中情况和不切换时一样。</li></ul><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_6c6b9c0966454ba2a64e6f7f6a24bd89.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>切换一次后，整轮命中率随调用次数回升：1 次调用相差 99 个百分点，20 次调用只差 4.2 个百分点。</p><p><br></p><p>一轮调用越多，这次损失摊得越薄：<strong>一轮调用 n 次，切换一次造成的整轮命中率下降不超过 1/n。</strong> 从实验记录看，写稿、审稿类任务一轮平均约 7 次调用，长时间编码任务可以连续十几次。</p><p><br></p><p>需要留意的是对话很长、每轮只有一两次调用、又频繁换模型的情况，这时损失摊不开。HiRoute 只在新消息和压缩等节点重新选择，正是为了避免这种来回切换。</p><h2 id=\"section-压缩之后再切换-损失更小\">压缩之后再切换，损失更小<a class=\"heading-anchor\" href=\"#section-压缩之后再切换-损失更小\" aria-label=\"链接到本节：压缩之后再切换，损失更小\">#</a></h2><p>上下文太长时，Agent 会把早期历史压缩成摘要。压缩之后，即使不换模型，摘要和后续内容也要重新处理。还能继续命中缓存的，通常只剩系统提示词、工具定义这类没有变化的部分（参见 Claude 的压缩与缓存说明[2]）。</p><p><br></p><p>所以在压缩节点换模型，额外损失的只是这段剩余前缀，而不是整段历史。<strong>连续执行减少切换的次数，在压缩节点切换则减少每次损失的大小。</strong></p><h2 id=\"section-往便宜的模型切-账反而更好看\">往便宜的模型切，账反而更好看<a class=\"heading-anchor\" href=\"#section-往便宜的模型切-账反而更好看\" aria-label=\"链接到本节：往便宜的模型切，账反而更好看\">#</a></h2><p>真正换模型时，还要算上两个模型本身的价差。按 Astra × Qwen 实验冻结的价格，Qwen 3.8 Flash 每 token 的价格大约只有 Astra 的 1%。同样是 10 万 token 的旧前缀：</p><p><br></p><div><div class=\"markdown-table-wrap\"><table><thead><tr><td>切换方向</td><td>不切换：原模型读缓存</td><td>切换：新模型重新处理</td><td>结果</td></tr></thead><tbody><tr><td>Astra → Qwen</td><td>0.10 美元</td><td>约 0.019 美元</td><td><strong>反而省下约 0.08 美元</strong></td></tr><tr><td>Qwen → Astra</td><td>约 0.0015 美元</td><td>1.25 美元</td><td>多花约 1.25 美元</td></tr></tbody></table></div></div><p><strong><br></strong></p><p><strong>智能路由省钱，主要靠把工作交给便宜模型，而在这个方向上，缓存损失几乎可以忽略；升级到 Astra，则是为更强的能力付费。</strong></p><h2 id=\"section-放回整单-缓存只影响几个百分点\">放回整单：缓存只影响几个百分点<a class=\"heading-anchor\" href=\"#section-放回整单-缓存只影响几个百分点\" aria-label=\"链接到本节：放回整单：缓存只影响几个百分点\">#</a></h2><p>最终要看的是整个任务的总账。在 Astra × Qwen 实验[3]中，Qwen 负责六份资料核验，Astra 负责关键决策，并与全程只用 Astra 的方案对比。三组配对运行中，有两组的两种方案都达到了验收标准；另一组未达标的结果也完整保留在实验说明[4]中。</p><p><br></p><div><div class=\"markdown-table-wrap\"><table><thead><tr><td>两种方案都达标的运行</td><td>混合路由</td><td>全用 Astra</td><td>节省</td></tr></thead><tbody><tr><td>第 2 组</td><td>约 0.147 美元</td><td>约 1.84 美元</td><td>92%</td></tr><tr><td>第 3 组</td><td>约 0.178 美元</td><td>约 2.07 美元</td><td>91%</td></tr></tbody></table></div></div><p><br></p><p>这里混合路由的账单没有享受任何 Qwen 缓存折扣：每次 Qwen 调用记录的缓存命中都是 0。假如混合路由一次缓存都没丢，会怎样？</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_28a2c16eb72740eb8f8cbf6547730554.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>同一次混合运行有无缓存的对比：全用 Astra 2.067 美元；混合路由 0.178 美元，省 91%；混合路由输入全部命中缓存 0.124 美元，省 94%。</p><p><br></p><p>第 3 组会从 0.178 美元降到 0.124 美元，节省比例从 91% 变成 94%；第 2 组从 92% 变成 93%。<strong>在这个实验里，混合路由无论保住还是丢掉缓存，都能省下 90% 以上。</strong> 原因很简单：缓存只给输入打折，而便宜模型的账单大头是输出。</p><h2 id=\"section-主力模型降价了-还划算吗\">主力模型降价了，还划算吗？<a class=\"heading-anchor\" href=\"#section-主力模型降价了-还划算吗\" aria-label=\"链接到本节：主力模型降价了，还划算吗？\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_b2935def69bb454ca0f51d8fb906099c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>Astra 降价后，全用 Astra 的花费是混合路由的几倍：今天约 10.3 倍，降到 20% 时约 3.4 倍，降到约 5.1% 时打平。</p><p><br></p><p>假设 Astra 的各项单价按同一比例下调。即使按对全用 Astra 最有利的方式计算，也就是它的输入全部命中缓存，<strong>Astra 也要降价约 95%，两种方案才打平。</strong></p><h2 id=\"section-结论-便宜模型持续干活-需要时再升级\">结论：便宜模型持续干活，需要时再升级<a class=\"heading-anchor\" href=\"#section-结论-便宜模型持续干活-需要时再升级\" aria-label=\"链接到本节：结论：便宜模型持续干活，需要时再升级\">#</a></h2><p>HiRoute 的目标，是让适合经济模型的工作尽量由经济模型持续完成，任务需要更强能力时再交给主力模型。复杂任务可以一开始就用主力模型；经济模型表现不足时也可以升级，避免为了省单次调用的费用而反复返工。</p><p><br></p><ul><li><strong>阶段内保持模型稳定</strong>，持续积累缓存收益。</li><li><strong>在压缩等重建节点重新判断</strong>，减少可以避免的缓存损失。</li><li><strong>必要时升级能力</strong>，守住交付标准。</li></ul><p><br></p><p>缓存损失是一次性的、有上限的小额开销，切换节点也由 HiRoute 控制。<strong>把适合的工作交给明显更便宜的模型，省下的钱远多于缓存重建、路由判断和返工的开销。</strong> 在上面的实验中，这个差距大约是一个数量级。</p><h2 id=\"section-动手试试\">动手试试<a class=\"heading-anchor\" href=\"#section-动手试试\" aria-label=\"链接到本节：动手试试\">#</a></h2><p>在“智能路由”页面选择<strong>智能省钱</strong>，再添加<strong>省钱模型</strong>和<strong>主力模型</strong>。任务运行后，在对应会话中打开<strong>运行记录</strong>，就能看到每次请求的缓存命中、实际模型和预估费用。详细说明见模型路由指南[1]。</p><p><br></p><p><strong>相关链接：</strong></p><p><span><span>[1]&nbsp;</span></span><span><span>模型路由指南</span></span></p><p><span><em><a href=\"https://hiroute.ai/docs/model-routing/?spm=a2c6h.13046898.publish-article.12.2e516ffajeiBVv\" target=\"_blank\" rel=\"noopener noreferrer\">https://hiroute.ai/docs/model-routing/</a></em></span></p><p><span><span>[2]&nbsp;</span></span><span><span>Claude 的压缩与缓存说明</span></span></p><p><span><em><a href=\"https://platform.claude.com/docs/en/build-with-claude/compaction-threshold?spm=a2c6h.13046898.publish-article.13.2e516ffajeiBVv#maximizing-cache-hits-with-system-prompts\" target=\"_blank\" rel=\"noopener noreferrer\">https://platform.claude.com/docs/en/build-with-claude/compaction-threshold#maximizing-cache-hits-with-system-prompts</a></em></span></p><p><span><span>[3]&nbsp;</span></span><span><span>Astra × Qwen 实验</span></span></p><p><span><em><a href=\"https://hiroute.ai/news/astra-qwen-smart-routing/?spm=a2c6h.13046898.publish-article.14.2e516ffajeiBVv\" target=\"_blank\" rel=\"noopener noreferrer\">https://hiroute.ai/news/astra-qwen-smart-routing/</a></em></span></p><p><span><span>[4]&nbsp;</span></span><span><span>实验说明</span></span></p><p><span><em><a href=\"https://github.com/higress-group/HiRoute/blob/main/experiments/cases/research-cost-quality/README.md?spm=a2c6h.13046898.publish-article.15.2e516ffajeiBVv&amp;file=README.md\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/higress-group/HiRoute/blob/main/experiments/cases/research-cost-quality/README.md</a></em></span></p>",
+    "headings": [
+      {
+        "id": "section-先弄清楚-缓存省的是什么钱",
+        "level": 2,
+        "text": "先弄清楚：缓存省的是什么钱"
+      },
+      {
+        "id": "section-hiroute-怎么减少切换",
+        "level": 2,
+        "text": "HiRoute 怎么减少切换"
+      },
+      {
+        "id": "section-切换一次-损失会被后续调用摊薄",
+        "level": 2,
+        "text": "切换一次，损失会被后续调用摊薄"
+      },
+      {
+        "id": "section-压缩之后再切换-损失更小",
+        "level": 2,
+        "text": "压缩之后再切换，损失更小"
+      },
+      {
+        "id": "section-往便宜的模型切-账反而更好看",
+        "level": 2,
+        "text": "往便宜的模型切，账反而更好看"
+      },
+      {
+        "id": "section-放回整单-缓存只影响几个百分点",
+        "level": 2,
+        "text": "放回整单：缓存只影响几个百分点"
+      },
+      {
+        "id": "section-主力模型降价了-还划算吗",
+        "level": 2,
+        "text": "主力模型降价了，还划算吗？"
+      },
+      {
+        "id": "section-结论-便宜模型持续干活-需要时再升级",
+        "level": 2,
+        "text": "结论：便宜模型持续干活，需要时再升级"
+      },
+      {
+        "id": "section-动手试试",
+        "level": 2,
+        "text": "动手试试"
+      }
+    ],
+    "textLength": 3359,
+    "readingMinutes": 8,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1785828",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "4cba8e7b98abd826df0ac4aea83a41188205046d5d905943d276350703298116",
+    "fetchedAt": "2026-11-20T08:34:00.590Z",
+    "checkedAt": "2026-11-20T08:34:00.590Z",
+    "nextRetryAt": "2026-12-20T08:34:00.590Z",
+    "warnings": []
+  }
+}

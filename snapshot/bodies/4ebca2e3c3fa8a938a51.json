@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "4ebca2e3c3fa8a938a51",
+    "status": "ready",
+    "html": "<p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_4323b7f9c6db4bed8b7c98857b156946.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p><span>点击</span><a href=\"https://www.aliyun.com/product/mse?spm=a2c6h.13046898.publish-article.3.1b076ffapDkjpY&amp;utm_content=g_1000408145\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>此处</strong></a><span>，了解微服务引擎 MSE 产品详情。</span></p>",
+    "headings": [],
+    "textLength": 22,
+    "readingMinutes": 1,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1785229",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "1b263aa7486e37c8f326a9e3a91e62b6c0e8a58e56d2088956750ebd93a52630",
+    "fetchedAt": "2026-11-20T08:34:08.096Z",
+    "checkedAt": "2026-11-20T08:34:08.096Z",
+    "nextRetryAt": "2026-12-20T08:34:08.096Z",
+    "warnings": []
+  }
+}
