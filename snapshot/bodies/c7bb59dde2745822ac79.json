@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "c7bb59dde2745822ac79",
+    "status": "ready",
+    "html": "<p>作者：贾明国、元乙</p><p><br></p><p>大促前一周，老板拍板：这次促销要上新服务。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_6dbedc88e8f54d4ea89dbc3d66e00e5c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>你打开电脑，开始排兵布阵。ECS 选什么规格、VPC 怎么划、SLB 怎么配、RDS 开多大、监控接哪些指标——五个控制台，十几张表单，中间哪个依赖关系没理清楚就得回头重来。三天后服务上线了，凌晨你还在补监控大盘和告警规则。又过了四天，促销开始，凌晨两点四十七分，告警响了。CPU 打满。</p><p><br></p><p>你摸出手机，看指标、翻日志、对着资源拓扑找线索。三张标签页四块大盘拼到一起，才勉强回答出三个问题：发生了什么，严重吗，现在该干什么。需要扩容，但哪些资源可以横向扩展？扩多少合适？有没有配额？又是一轮控制台切换。</p><p><br></p><p>选规格、配网络、接监控、查告警、做扩容——单看都不难，难在它们同时压在一个人身上。从部署到上线，从监控到扩容，每个阶段都在重复同样的模式：找控制台、填表单、等执行、再确认。</p><p><br></p><p>如果有一个搭档，能替你记住所有控制台的位置、所有资源的依赖关系、所有参数的默认值，你只需要说清楚要什么、然后在关键节点拍板——剩下的事，它来做。</p><p><strong>这个搭档就是 STAROps 数字员工加上 ROS Agent。</strong></p><p><strong><br></strong></p><p>STAROps 是阿里云基于大模型和智能体技术打造的全域智能运维平台。它深度融合跨域可观测数据与大语言模型推理能力，突破传统运维工具使用门槛高、数据孤岛严重等局限，支持用户通过自然语言定义目标，由运维智能体自主完成动态规划、安全执行与结果验证的全闭环。STAROps 实现运维模式从被动响应向主动自治的根本性转型，为企业提供 7x24 小时的自主运维能力，实时守护客户的业务系统韧性。</p><p><br></p><blockquote><p><strong>ROS</strong> 是阿里云的基础设施即代码（IaC）服务，通过模板描述云资源及其依赖关系，自动完成资源的创建、更新和删除。</p><p><strong>ROS Agent</strong> 是面向云基础设施的资源管理智能体，通过自然语言交互，辅助完成资源规划与选型、ROS／Terraform 模板生成与校验、费用评估，以及授权后的资源创建、变更、查询和清理。</p></blockquote><p><br></p><p>STAROps 数字员工提供统一的运维对话入口，结合日志、指标、告警等信息理解问题，并通过 alibabacloud-ros-agent 技能，将基础设施规划和变更任务委派给 ROS Agent。ROS Agent 围绕资源目标进行必要澄清，规划资源及其依赖关系，展示方案、关键参数和预估费用，并在获得授权后执行资源操作。双方通过会话上下文衔接多轮任务，执行范围受账号权限和授权策略约束。</p><p><br></p><p>对你来说，你面对的始终是 STAROps 的对话框。哪个控制台管什么、下一步该去哪个页面，这些路由归它管；说清楚要什么、然后拍板，这两件事归你。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_7f189ea2d33049bb812dc461eb23ee11.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>下面用一个电商促销服务串联三个场景：大促前一周部署上线，上线后第三天接入数据和告警，促销当天应对容量瓶颈。每个场景展示你说了什么、Agent 做了什么、最终交付了什么。</p><h2 id=\"section-场景一-大促倒计时-7-天-新服务怎么稳稳上线\">场景一：大促倒计时 7 天，新服务怎么稳稳上线？<a class=\"heading-anchor\" href=\"#section-场景一-大促倒计时-7-天-新服务怎么稳稳上线\" aria-label=\"链接到本节：场景一：大促倒计时 7 天，新服务怎么稳稳上线？\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_91264b8954cd4cdf8e69ade0334e8f7f.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>距离大促只剩一周，运维同学接到任务：新促销服务要上线，杭州地域，日常 2000 QPS，峰值 8000 QPS。机器选多大？要几台？网段怎么划？数据库扛得住吗？翻文档、问同事、照着去年的方案改参数，改完还是心里没底：万一开场被打挂了呢？</p><h3 id=\"section-提问\">▍提问<a class=\"heading-anchor\" href=\"#section-提问\" aria-label=\"链接到本节：▍提问\">#</a></h3><p>杭州地域部署电商促销服务，日常 2000 QPS，峰值 8000 QPS，要负载均衡和数据库。参考去年的活动服务，但今年流量更大，帮我看看哪里要改。</p><h3 id=\"section-agent-回复\">▍Agent 回复<a class=\"heading-anchor\" href=\"#section-agent-回复\" aria-label=\"链接到本节：▍Agent 回复\">#</a></h3><p>ROS Agent 收到需求后，分五步推进：</p><p><br></p><ol><li><strong>明确目标和参考依据：</strong> 确认历史方案、已有资源和可用的监控数据；针对高可用、预算及应用部署方式等关键要求进行必要澄清。历史运行数据可由 STAROps 查询后提供给 ROS Agent，作为规划参考。</li><li><strong>提出基础设施方案：</strong> 围绕负载均衡、计算、数据库及弹性伸缩设计资源架构，说明提前准备容量与按需扩容的取舍。容量建议需结合应用特征和压测结果验证；如建议引入 Redis，还需明确业务接入和一致性要求，创建缓存资源本身并不等于完成业务改造。</li><li><strong>核对资源约束：</strong> 查询相关规格、可用区和库存，结合可获取的网络规划及配额信息检查部署约束。发现冲突或资源不可用时，说明影响并提出替代方案；涉及网段、可用区等关键调整时，经用户确认后修改。</li><li><strong>将方案变成可审查的执行计划：</strong> 生成并校验模板，展示资源架构、关键参数和预估费用。对可以合理推断的参数给出建议并说明依据，对需要用户决定的事项继续澄清，不预设固定的追问数量。</li><li><strong>确认后执行，查询真实结果：</strong> 用户确认方案并授权后，ROS Agent 通过 ROS 执行部署，跟踪资源栈和资源状态，返回执行结果。应用发布、预发压测和业务验收，需要结合实际应用及相应工具另行完成；模板校验和资源部署成功不等于业务压测通过。</li></ol><h3 id=\"section-小结\">▍小结<a class=\"heading-anchor\" href=\"#section-小结\" aria-label=\"链接到本节：▍小结\">#</a></h3><p>交付物包括：一套可复用的基础设施模板、一份关键配置及预估费用说明，以及资源栈执行结果和相关资源信息，便于后续复用和迭代。若任务还包含应用部署，则进一步验证并返回应用访问入口。</p><p><br></p><p>点击链接，查看视频：<a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.3.248c6ffaKo3dtc&amp;enc=jnyZ9Sy2DRApxS7mXkVrrQ%3D%3D.N2EiPg8oesxxfGCKgRMeUiNbtca1tOSxRfkOsUIWDCxf8UA7rK6cXDdlnylyOkRl4t7FMOZzD7DaHd1DJUJTUA%3D%3D\" target=\"_blank\" rel=\"noopener noreferrer\">https://mp.weixin.qq.com/s/SoIlSElG8J9C-5cGVChFSg</a></p><h2 id=\"section-场景二-一句话接入数据和告警\">场景二：一句话接入数据和告警<a class=\"heading-anchor\" href=\"#section-场景二-一句话接入数据和告警\" aria-label=\"链接到本节：场景二：一句话接入数据和告警\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_143387ce632d4389801d378a90118f9f.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>服务上线后，还要让运行状态看得见。先接入<strong>日志、指标和 APM 应用监控</strong>，才能知道请求慢在哪里、错误发生在哪个环节；随后配置告警，在异常发生时及时通知到人。</p><h3 id=\"section-提问-2\">▍提问<a class=\"heading-anchor\" href=\"#section-提问-2\" aria-label=\"链接到本节：▍提问\">#</a></h3><p>/数据接入 帮我给刚才部署的促销服务接入日志、指标和 APM 应用监控，再配置告警，通知发到运维钉钉群。</p><h3 id=\"section-agent-回复-2\">▍Agent 回复<a class=\"heading-anchor\" href=\"#section-agent-回复-2\" aria-label=\"链接到本节：▍Agent 回复\">#</a></h3><p>STAROps 提供专门的&nbsp; <strong>/数据接入</strong> 技能。Agent 复用当前会话中的资源栈信息，确认服务、主机和依赖资源的范围，检查已有指标，并引导完成日志采集、所需客户端和 APM 探针的接入。待日志、指标和调用链数据能够正常查询后，再配置 CPU、内存、负载均衡及应用错误率、响应时间等告警，并确认阈值、持续时长和通知渠道。</p><p><br></p><p>建议先确认日志、指标和调用链数据能正常查询，再配置基础资源与应用告警。我会先列出采集范围、接入方式、告警规则和通知渠道，确认后执行。</p><h3 id=\"section-小结-2\">▍小结<a class=\"heading-anchor\" href=\"#section-小结-2\" aria-label=\"链接到本节：▍小结\">#</a></h3><p><strong>先有可查询的数据，再有可用的告警。</strong> 通过 /数据接入 技能，用户可以围绕同一个促销服务说明需求，由 Agent 引导完成数据接入和告警配置；后续排障也有了日志、指标和调用链作为依据。</p><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ca1852b149c449c1bce6d78594523e40.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><h2 id=\"section-场景三-告警响起-快速定位根因并恢复\">场景三：告警响起，快速定位根因并恢复<a class=\"heading-anchor\" href=\"#section-场景三-告警响起-快速定位根因并恢复\" aria-label=\"链接到本节：场景三：告警响起，快速定位根因并恢复\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a4e6cb01a3494f9d846857ae0902b236.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>促销正式开始。这里以<strong>开场前预热未及时完成</strong>的情况为例：伸缩组的 CPU 目标值为 60%，但流量到来时，只有 6 台 ECS 实例在承接请求，CPU 已超过 85%。伸缩组已经触发扩容，新实例还在启动和应用就绪过程中，告警先于扩容完成触发。下文数量和目标值用于说明决策过程，实际容量需结合实时流量和压测结果确定。</p><h3 id=\"section-提问-3\">▍提问<a class=\"heading-anchor\" href=\"#section-提问-3\" aria-label=\"链接到本节：▍提问\">#</a></h3><p>促销服务 CPU 告警了，帮我查一下根因、业务影响，以及现在有哪些恢复方案。</p><h3 id=\"section-agent-回复-3\">▍Agent 回复<a class=\"heading-anchor\" href=\"#section-agent-回复-3\" aria-label=\"链接到本节：▍Agent 回复\">#</a></h3><p>STAROps 关联告警、日志、指标、APM 调用链和资源拓扑，判断业务影响及瓶颈位置，并核对近期变更。ROS Agent 根据诊断信息，按需查询相关资源状态、可用性及约束，辅助制定基础设施变更方案。在这个示例中，诊断指向开场已就绪容量不足：流量增长快于新增实例投入服务的速度。下面给出三种处置思路，实际方案需结合查询结果、执行条件和业务要求确定。</p><blockquote>当前 6 台 ECS 实例 CPU 均已超过 85%，负载均衡后端出现健康检查超时，数据库和网络指标未见明显异常。伸缩组已触发扩容，新实例尚未就绪。调低 CPU 目标值不能缩短这批实例的启动时间。下面按对现有运行环境的变更幅度，从激进到保守给出三种方案。</blockquote><div><div class=\"markdown-table-wrap\"><table><thead><tr><td><strong>策略</strong></td><td><strong>具体操作</strong></td><td><strong>适用情况</strong></td><td><strong>代价与边界</strong></td></tr></thead><tbody><tr><td><strong>方案一：激进，滚动升配</strong></td><td>确认有冗余容量后，逐台摘除流量、提升 ECS 规格并重启，健康检查通过后恢复流量；同步后续扩容使用的规格。</td><td>单机规格偏小、横向扩展受限，且具备维护窗口或足够冗余容量。</td><td>涉及停机或重启，切换期间可用容量会减少，成本和变更风险较高。仅修改伸缩配置不会升配现有实例。</td></tr><tr><td><strong>方案二：折中，同规格扩容</strong></td><td>根据实时负载和压测结果确定目标总容量，计入正在启动的实例后补足缺口；必要时同步调整最大实例数。</td><td>本例的主要候选：服务可横向扩展，需要增加承载容量，同时避免对现有实例变配。</td><td>增加实例费用，仍受配额、库存和就绪时间约束。若当前伸缩活动不允许并发，须等待其完成后再补足容量。</td></tr><tr><td><strong>方案三：保守，调整伸缩策略</strong></td><td>例如将 CPU 目标值由 60% 下调至 50%，让后续伸缩保留更多容量余量，并观察本轮扩容结果。</td><td>当前扩容即将完成、在途容量已足够，且业务错误率和响应时间仍在可接受范围。</td><td>目标值更低通常需要更多实例。对当前缺口的缓解取决于新增容量就绪，无法直接加快实例启动。</td></tr></tbody></table></div></div><p>在这个场景中，Agent 优先推荐方案二，按容量缺口补足同规格实例。如果核对发现正在启动的实例已足够承接流量，且业务指标仍可接受，则可以选择方案三继续观察。</p><p><br></p><p>用户选定方案后，ROS Agent 说明目标容量、预估费用及执行条件，获得确认和授权后执行，并查询资源变更结果。STAROps 再结合应用就绪状态、后端健康检查、错误率和响应时间等观测数据验证恢复效果。资源变更成功不等于业务已经恢复。</p><h2 id=\"section-三个场景-一条主线\">三个场景，一条主线<a class=\"heading-anchor\" href=\"#section-三个场景-一条主线\" aria-label=\"链接到本节：三个场景，一条主线\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_313c28a917704dd3b6901dd4d30bf08c.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><div><div class=\"markdown-table-wrap\"><table><thead><tr><td></td><td><strong>场景一</strong></td><td><strong>场景二</strong></td><td><strong>场景三</strong></td></tr></thead><tbody><tr><td><strong>你做的事</strong></td><td>说出部署需求，回答关键决策，审批方案</td><td>通过 /数据接入 说明日志、指标、APM 和告警需求</td><td>一句话问根因，确认恢复方案</td></tr><tr><td><strong>传统方式</strong></td><td>翻去年方案改参数、五个控制台填表单、担心开场被打挂</td><td>分别配置日志采集、指标、APM 和告警</td><td>多控制台交叉排查，再开会对齐方案、手动扩容</td></tr><tr><td><strong>可协助完成的工作</strong></td><td>资源规划与选型、部署约束核对、模板生成与校验、费用评估、资源部署及结果查询</td><td>梳理采集范围、核对接入状态、配置告警与通知</td><td>交叉查证日志、指标、调用链和拓扑；比较升配、扩容与策略调整</td></tr></tbody></table></div></div><h2 id=\"section-适用范围\">适用范围<a class=\"heading-anchor\" href=\"#section-适用范围\" aria-label=\"链接到本节：适用范围\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_30774db9d3d84d1791db8de4a07402bb.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><p>ROS Agent 适合需要资源规划、依赖编排和多步骤执行的基础设施任务。典型场景包括：根据业务目标规划云资源；生成、解释、校验和修改 ROS／Terraform 模板；创建、更新、查询和清理云资源；通过多轮对话澄清需求、调整方案和确认操作。资源数量不是能力门槛。</p><p><br></p><p>对于单个确定资源的简单查询或普通云产品知识问答，STAROps 可以使用自身已有能力直接处理，无需额外委派；与基础设施无关的任务不属于本文介绍的范围。</p><p><br></p><p>本文介绍和验证的集成范围为阿里云资源管理，涉及 ECS、RDS、负载均衡、VPC、Redis、OSS 等云产品。具体可执行操作取决于资源类型、服务能力及账号权限。涉及创建、更新、删除等资源变更时，Agent 会展示操作范围及影响，并按授权策略请求确认；执行仍受 RAM 权限约束。</p><h2 id=\"section-快速开始\">快速开始<a class=\"heading-anchor\" href=\"#section-快速开始\" aria-label=\"链接到本节：快速开始\">#</a></h2><p></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_5e6c577f77554686a09ac4e7a6e15bc0.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><p></p><ol><li>登录 STAROps 控制台（ <a href=\"https://link.segmentfault.com/?spm=a2c6h.13046898.publish-article.4.248c6ffaKo3dtc&amp;enc=47tH6diu9gVq8%2BZh%2BuS2wQ%3D%3D.rEfMtRU1TjP1jJjfEq3NSa%2B7Y%2B%2F%2FNZNN5dLXwYKsbAn8eQikxMQa3rKHMF91KGc3\" target=\"_blank\" rel=\"noopener noreferrer\">https://starops.console.aliyun.com/</a> ），创建一个数字员工。</li><li>在技能中心搜索 <code>alibabacloud-ros-agent</code> 并挂载。</li><li>在对话框里描述你的部署或排障需求。</li></ol><p><br></p><p>实际耗时与结果取决于你账号内的资源规模、监控数据完整度和所选方案，建议先用一个非生产需求验证流程。</p>",
+    "headings": [
+      {
+        "id": "section-场景一-大促倒计时-7-天-新服务怎么稳稳上线",
+        "level": 2,
+        "text": "场景一：大促倒计时 7 天，新服务怎么稳稳上线？"
+      },
+      {
+        "id": "section-提问",
+        "level": 3,
+        "text": "▍提问"
+      },
+      {
+        "id": "section-agent-回复",
+        "level": 3,
+        "text": "▍Agent 回复"
+      },
+      {
+        "id": "section-小结",
+        "level": 3,
+        "text": "▍小结"
+      },
+      {
+        "id": "section-场景二-一句话接入数据和告警",
+        "level": 2,
+        "text": "场景二：一句话接入数据和告警"
+      },
+      {
+        "id": "section-提问-2",
+        "level": 3,
+        "text": "▍提问"
+      },
+      {
+        "id": "section-agent-回复-2",
+        "level": 3,
+        "text": "▍Agent 回复"
+      },
+      {
+        "id": "section-小结-2",
+        "level": 3,
+        "text": "▍小结"
+      },
+      {
+        "id": "section-场景三-告警响起-快速定位根因并恢复",
+        "level": 2,
+        "text": "场景三：告警响起，快速定位根因并恢复"
+      },
+      {
+        "id": "section-提问-3",
+        "level": 3,
+        "text": "▍提问"
+      },
+      {
+        "id": "section-agent-回复-3",
+        "level": 3,
+        "text": "▍Agent 回复"
+      },
+      {
+        "id": "section-三个场景-一条主线",
+        "level": 2,
+        "text": "三个场景，一条主线"
+      },
+      {
+        "id": "section-适用范围",
+        "level": 2,
+        "text": "适用范围"
+      },
+      {
+        "id": "section-快速开始",
+        "level": 2,
+        "text": "快速开始"
+      }
+    ],
+    "textLength": 4482,
+    "readingMinutes": 10,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1789050",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "f097853d6e094e21fa4ffc749f8ec4b1e3ed099e8f4aeaadb16e5d116a7d8b62",
+    "fetchedAt": "2026-11-25T15:08:19.791Z",
+    "checkedAt": "2026-11-25T15:08:19.791Z",
+    "nextRetryAt": "2026-12-25T15:08:19.791Z",
+    "warnings": []
+  }
+}

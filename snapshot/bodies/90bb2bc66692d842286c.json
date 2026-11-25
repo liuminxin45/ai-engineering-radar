@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "90bb2bc66692d842286c",
+    "status": "ready",
+    "html": "<p>清华大学深圳国际研究生院 mmlab@SIGS 牵头的具身智能评测平台 Mind2Act World 于 11 月 11 日正式上线，同步公布首批模型的评测结果，并于 11 月 18 日全面开源评测代码与评测资产。</p>\n\n<p>Mind2Act World&nbsp;平台把「想」（Mind）和「做」（Act）分开检验，再检验二者能否协同（Mind2Act），并为每个模型生成一张模型画像卡，说清短板在哪、失败发生在哪一步、下一步该补什么。</p>\n\n<p>Mind2Act World 全面开源当天，百度百舸即完成适配，并上线评测镜像。评测镜像里打包了评测代码和 Isaac Sim 等运行环境，百度百舸还在云端提供了官方评测资产。开发者在百度百舸上选用该镜像、申请多张 GPU，就能并行跑完 Mind2Act World 的仿真评测。</p>\n\n<hr>\n<p>Mind2Act World 是面向「想」与「做」协同的跨架构诊断 Benchmark，可评测 Agent、VLA 等不同架构的模型。基准包含 30&nbsp;个双臂操作任务、180 种任务配置与 4,500 条专家示范。与只报告成败的评测不同，Mind2Act World 把「想」与「做」拆开检验，成败由环境侧判据在隐藏状态上判定，并为每个被测模型生成一张画像卡，指出短板在想、做还是二者的衔接，失败卡在感知、推理、执行、验证与恢复中的哪一步，以及下一步该补什么。</p>\n\n<blockquote>\n<p>官网地址 &nbsp;https://mind2act-world.com</p>\n\n<p>论文地址 &nbsp;https://arxiv.org/pdf/2611.26444&nbsp;</p>\n\n<p>项目地址 &nbsp;https://github.com/Mind2Act/Mind2Act_World</p>\n</blockquote>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"1019\" src=\"https://i-blog.csdnimg.cn/img_convert/d410f184340adc6611fc4762ddb0e014.jpeg\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h2 id=\"section-1-mind2act-world-诊断机器人怎么想-怎么做-以及如何把想法变成行动\">1. &nbsp; &nbsp;Mind2Act World：诊断机器人怎么想、怎么做，以及如何把想法变成行动<a class=\"heading-anchor\" href=\"#section-1-mind2act-world-诊断机器人怎么想-怎么做-以及如何把想法变成行动\" aria-label=\"链接到本节：1. Mind2Act World：诊断机器人怎么想、怎么做，以及如何把想法变成行动\">#</a></h2>\n\n<p>真实任务很少只考验单一能力：配餐要记住订单，同时把餐品准确放到位。产线作业要读懂仪表，再把旋钮调到精确位置。现有基准要么把推理和物理执行混在同一个任务里，失败时分不清是哪种能力出了问题。要么把二者分开评测，却很少检验它们能否衔接。通常也只报告是否成功，难以说明失败的原因。</p>\n\n<p>Mind2Act World 把操作过程拆成三个视角分别检验、逐级加压，三个视角共享任务语义，由此判断失败出在想、做，还是二者的衔接：</p>\n\n<ul><li>\n\t<p>Mind（想），10 个任务：记住看到的信息、推断规则、决定下一步，如订单配餐、翻牌配对。</p>\n\t</li><li>\n\t<p>Act（做），10 个任务：在时序、接触和精度约束下，把动作落实为物理效果，如传送带连续取件、旋钮调压。</p>\n\t</li><li>\n\t<p>Mind2Act（协同），10 个任务：在长程任务中依据实际执行结果调整后续决策，如传送带配餐、双臂烹饪。</p>\n\t</li></ul>\n\n<p>评测完成后，每个模型都会得到一张画像卡，回答三个问题：短板在哪一侧，Mind、Act、Mind2Act 的成绩分别与同等水平模型的预期对照；闭环在哪一步断开，每个失败回合都被追溯到「此后再也不可能成功」的第一个阶段，即感知、推理、执行，还是验证与恢复；下一步补什么，对 Agent 建议补哪个智能体模块，对端到端策略建议补哪类训练数据。画像卡上还附有一栏四字母行为画像，概括模型偏想还是偏做、按计划推进还是看反馈调整。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"1307\" src=\"https://i-blog.csdnimg.cn/img_convert/896f21ba1dee092c1acd7b96d8a15053.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>具体来看，Mind2Act World 的主要特点包括：</p>\n\n<ul><li>\n\t<p>评测流程更公正：官方榜单使用的测试案例不公开，所有模型由项目组用同一套代码和预算统一运行。Clean 与 Random 两种设置分开报告（Random 场景保持任务实例不变，增加杂物并改变材质和光照），Agent 与 VLA/WAM 分榜排名，成绩不互相比较。</p>\n\t</li><li>\n\t<p>判定标准更严格：任务在 Isaac Sim 中运行，完成与否由环境侧判据在隐藏状态上判定，放稳、读数保持、按键生效才计分，模型自称完成不算数。</p>\n\t</li><li>\n\t<p>评测证据更丰富：环境侧评分器除记录是否成功外，还记录阶段进度和事件证据，看清任务走到了哪一步、在哪个阶段失败。</p>\n\t</li><li>\n\t<p>任务规模更完整：30 个双臂操作任务来自家居餐饮、制造物流、仪器工具、装配与物理推理、陪伴教育 5 类真实场景，覆盖 12 类能力。每个任务分简单、中等、困难三档，并分别在 Clean 与 Random 两种场景下运行，共 180 种配置，全部配齐经仿真校验的专家示范。</p>\n\t</li><li>\n\t<p>排行榜持续更新：目前已公布 9 个模型的评测结果，更多模型持续更新中。</p>\n\t</li></ul>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"537\" src=\"https://i-blog.csdnimg.cn/img_convert/54bc5cd150e311f45659847076a07ece.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<h2 id=\"section-2-在百度百舸上评测-vla-模型-开箱即用的-mind2act-world-评测镜像\">2. &nbsp; &nbsp;在百度百舸上评测 VLA 模型：开箱即用的 Mind2Act World 评测镜像<a class=\"heading-anchor\" href=\"#section-2-在百度百舸上评测-vla-模型-开箱即用的-mind2act-world-评测镜像\" aria-label=\"链接到本节：2. 在百度百舸上评测 VLA 模型：开箱即用的 Mind2Act World 评测镜像\">#</a></h2>\n\n<p>11 月 18 日，百度百舸上线的评测镜像打包社区版评测代码与完整运行环境，内置 Isaac Sim 运行时，支持对 VLA 及具身智能模型做标准化、可复现的仿真评测与诊断。</p>\n\n<p></p>\n\n<p><img alt=\"图片\" height=\"460\" src=\"https://i-blog.csdnimg.cn/img_convert/08d3e98a417a6a4138a10459340022cc.png\" width=\"1080\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p>\n\n<p>开发者在百度百舸上创建任务、选用该镜像并申请多卡资源，即可启动评测。镜像的主要特性包括：</p>\n\n<ul><li>\n\t<p>环境开箱即用：镜像打包社区版评测代码，以及 Isaac Sim 5.1、PyTorch 2.7（CUDA 12.8）等完整运行环境，内置一键评测脚本，拿到镜像即可启动评测。</p>\n\t</li><li>\n\t<p>评测资产就绪且可校验：官方评测资产（约 70 GB）独立于镜像，由百度百舸在对象存储 BOS 中提供，免去从 HuggingFace 下载。资产就位后可逐文件校验完整性，并核对评测代码与资产的版本配对，两项校验通过后再开始评测。</p>\n\t</li><li>\n\t<p>多卡并行评测：同一个百度百舸任务内可指定多张 GPU，并行运行多个评测任务与难度，每张卡同时运行一局。启动前自动检查 GPU 是否空闲，并按并行局数设置内存上限。</p>\n\t</li><li>\n\t<p>自有模型灵活接入：通过 adapter 接入自有 VLA 模型（端到端关节控制接口），在统一预算下与他人结果对齐比较。Mind2Act 评测镜像内置 AgentOS adapter，配置 API Key 后，评测任务即可调用 BCC 中 AgentOS 上提供的模型并获取评测结果。</p>\n\t</li></ul>\n\n<p>截至目前，百度百舸已适配 RoboDojo、RoboTwin、RLinf、BEHAVIOR-1K、RoboCasa、Libero、Isaac Sim、Isaac Lab、MuJoCo、Genesis World 等社区主流的仿真评测平台。</p>\n\n<h2 id=\"section-3-完整评测一遍仅仿真就需约-86-小时-ai-infra-的工程优化决定评测效率\">3. &nbsp; &nbsp;完整评测一遍仅仿真就需约 86 小时，AI Infra 的工程优化决定评测效率<a class=\"heading-anchor\" href=\"#section-3-完整评测一遍仅仿真就需约-86-小时-ai-infra-的工程优化决定评测效率\" aria-label=\"链接到本节：3. 完整评测一遍仅仿真就需约 86 小时，AI Infra 的工程优化决定评测效率\">#</a></h2>\n\n<p>Mind2Act World 的每一局都要在 Isaac Sim 中完成完整的物理仿真与图像渲染，仅计仿真运行，单局耗时 430 至 630 秒。按单局耗时估算，完整跑一遍 Clean 模式的 4,500 个评测实例，按 8 卡并行约需 86 小时，模型推理时间另计。具身模型的结构与技术路线仍在快速变化，每次调整之后都要回到同一套基准上重新验证，评测效率因此直接决定迭代的节奏。</p>\n\n<p>算法创新来自开源社区、学术界和众多企业，新方法能否被快速验证、能否以合理成本进入生产环境，取决于 AI Infra 的工程优化能力。百度百舸通过系统性的 AI Infra 优化与高扩展性集群架构设计，致力于为各类具身智能场景找到高性价比的算力解决方案，把每一份算力更充分地转化为模型研发与迭代效率。</p>\n\n<p>基于高性能计算、极致存储系统及超大规模高速互联网络，百度百舸 AI 计算平台已搭建起完整的具身智能工作流，覆盖从数据准备、开发训练、仿真验证到推理部署的研发全链路，每个环节都有已经落地的实践：</p>\n\n<ul><li>\n\t<p>数据准备：百度百舸通过算子广场和工作流加速数据准备，已验证的算子和工作流可以复用，新管线不必从头编写脚本、配置资源；各步骤按 CPU/GPU 需求独立配置，瓶颈步骤可单独扩容，失败步骤可单独重试。除提供这些能力外，百度百舸还对具体环节做优化，比如对第一视角（Egocentric）视频的相机位姿恢复管线做算子级优化，处理每小时视频所需的 GPU 时间最多下降 43%。</p>\n\t</li><li>\n\t<p>开发训练：例如，围绕 Cosmos 3 完成单机调优、512 卡 Scaling 与异构流水线三轮优化，MFU 达到 0.42，64 节点扩展效率 97.48%。基于 RLinf 精度对齐的 PyTorch 原生 OpenPI，将 Pi0.5 单机 8 卡训练吞吐提升 2.37 倍。针对越来越多具身模型采用的 Muon 优化器，在未配置 NVLink 的实例上，LingBot-VLA 2.0 双机、四机训练步时相比原版 Muon + FSDP 缩短 62.2%～63.7%。对 VLA 与 WAM 的 DataLoader 做全链路优化，FastWAM 单样本视频处理耗时缩短一半以上。</p>\n\t</li><li>\n\t<p>仿真验证：例如，针对 Isaac、MuJoCo 等主流仿真生态做专项优化，Isaac Sim 任务启动时长减少 83.3%，Isaac Lab 相关场景 FPS 提升 43.9%。RLinf v0.4 发布当天即完成适配并上线预置镜像，联合上海交通大学、地瓜机器人发布的 dVLA-RL 框架全部实验基于百度百舸平台完成。</p>\n\t</li><li>\n\t<p>推理部署：例如，与上海交通大学穆尧团队合作的 AHA-WAM，单步动作推理延迟从 415 毫秒压缩至 41 毫秒。</p>\n\t</li></ul>\n\n<p>除了各环节自身的优化，百度百舸还从数据资产的维度加速这条研发全链路。百度百舸多模态数据湖，统一管理<strong>研发各环节的</strong>多模态数据，<strong>让</strong>数据生产链路可观测、可恢复、可追溯，并把加工能力与阶段产物沉淀为可复用的资产。质量标准变化时，可<strong>直接</strong>在已有数据上追加字段。各环节可以从同一份数据取数，数据准备的结果可直接用于训练，减少重复加工和搬运，缩短每一轮迭代花在数据上的时间。</p>\n\n<h2 id=\"section-4-结语\">4. &nbsp; &nbsp;结语<a class=\"heading-anchor\" href=\"#section-4-结语\" aria-label=\"链接到本节：4. 结语\">#</a></h2>\n\n<p>目前，百度百舸已经服务超过 70 家具身智能产业链重点企业。</p>\n\n<p>未来，百度百舸将联合 Mind2Act World 团队，依托百度百舸 AI 计算平台的性能与 AI Infra 工程优化能力，持续提升 Mind2Act World 的评测性能，加速端到端模型的评测与迭代。</p>",
+    "headings": [
+      {
+        "id": "section-1-mind2act-world-诊断机器人怎么想-怎么做-以及如何把想法变成行动",
+        "level": 2,
+        "text": "1. Mind2Act World：诊断机器人怎么想、怎么做，以及如何把想法变成行动"
+      },
+      {
+        "id": "section-2-在百度百舸上评测-vla-模型-开箱即用的-mind2act-world-评测镜像",
+        "level": 2,
+        "text": "2. 在百度百舸上评测 VLA 模型：开箱即用的 Mind2Act World 评测镜像"
+      },
+      {
+        "id": "section-3-完整评测一遍仅仿真就需约-86-小时-ai-infra-的工程优化决定评测效率",
+        "level": 2,
+        "text": "3. 完整评测一遍仅仿真就需约 86 小时，AI Infra 的工程优化决定评测效率"
+      },
+      {
+        "id": "section-4-结语",
+        "level": 2,
+        "text": "4. 结语"
+      }
+    ],
+    "textLength": 4000,
+    "readingMinutes": 9,
+    "sourceId": "baidu-cloud-csdn-candidate",
+    "sourceUrl": "https://blog.csdn.net/2301_82040283/article/details/171374039",
+    "ruleId": "csdn",
+    "ruleVersion": "3",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "c8232d00a64315d4f6630093d3ce975676ef7bd858dd4439ffded7ff77d49740",
+    "fetchedAt": "2026-11-25T15:08:21.879Z",
+    "checkedAt": "2026-11-25T15:08:21.879Z",
+    "nextRetryAt": "2026-12-25T15:08:21.879Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
+  }
+}

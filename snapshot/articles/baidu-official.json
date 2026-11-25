@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -100,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -142,7 +142,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -182,7 +182,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -222,7 +222,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -262,7 +262,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -302,7 +302,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -342,7 +342,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -382,7 +382,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -422,7 +422,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -462,7 +462,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -502,7 +502,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -541,7 +541,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "suspected",
@@ -568,6 +568,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "90bb2bc66692d842286c",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "contentType": "blog",
+      "title": "云厂商首家！百度百舸第一时间适配具身智能评测平台 Mind2Act World",
+      "canonicalUrl": "https://blog.csdn.net/2301_82040283/article/details/171374039",
+      "author": "2301_82040283",
+      "description": "目前，百度百舸已经服务超过 70 家具身智能产业链重点企业。未来，百度百舸将联合 Mind2Act World 团队，依托百度百舸 AI 计算平台的性能与 AI Infra 工程优化能力，持续提升 Mind2Act World 的评测性能，加速端到端模型的评测与迭代。",
+      "publishedAt": "2026-11-25T09:09:06.000Z",
+      "discoveredAt": "2026-11-25T15:08:11.993Z",
+      "updatedAt": "2026-11-25T15:08:11.993Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-cloud-csdn-candidate",
+          "externalId": "https://blog.csdn.net/2301_82040283/article/details/171374039",
+          "url": "https://blog.csdn.net/2301_82040283/article/details/171374039",
+          "listingHash": "7e43dc7a641539a4541d1c0453de0e3faaa43082aba7dfe34e379c966465d2e6"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "931ebd46710f79b591e8",
       "publisherId": "baidu-official",
       "companyId": "baidu",
@@ -586,7 +626,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -626,7 +666,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -666,7 +706,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -706,7 +746,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -746,7 +786,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -786,7 +826,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -826,7 +866,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -866,7 +906,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -888,6 +928,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "c7d86b0fa745643fcd48",
+      "publisherId": "baidu-official",
+      "companyId": "baidu",
+      "contentType": "blog",
+      "title": "百度正式开源 ERNIE 5.5 Flash Preview，同步完成昆仑芯 Day0 适配",
+      "canonicalUrl": "https://blog.csdn.net/2301_82040283/article/details/171312391",
+      "author": "2301_82040283",
+      "description": "未来，百度将在昆仑芯硬件平台上围绕 ERNIE 5.5 Flash Preview 持续深化软硬协同，从算子、框架到系统部署不断优化迭代，把前沿大模型能力更高效地释放在国产算力之上，让 AI 真正成为产业发展的新动能。",
+      "publishedAt": "2026-11-24T08:38:00.000Z",
+      "discoveredAt": "2026-11-25T15:08:11.993Z",
+      "updatedAt": "2026-11-25T15:08:11.993Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "baidu-cloud-csdn-candidate",
+          "externalId": "https://blog.csdn.net/2301_82040283/article/details/171312391",
+          "url": "https://blog.csdn.net/2301_82040283/article/details/171312391",
+          "listingHash": "944a60eb496d5aba29fb5b62d67fa07333a68c95ed27444572a49690dec4de46"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "e64acdb57fbebd7d2e31",
       "publisherId": "baidu-official",
       "companyId": "baidu",
@@ -906,7 +986,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -946,7 +1026,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-23T09:04:36.012Z"
+        "classifiedAt": "2026-11-25T15:08:18.821Z"
       },
       "advertorial": {
         "status": "unmarked",

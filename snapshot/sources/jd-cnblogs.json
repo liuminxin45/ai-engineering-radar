@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "jd-cnblogs",
-    "lastCheckedAt": "2026-11-23T09:04:32.106Z",
-    "lastSuccessAt": "2026-11-23T09:04:32.106Z",
-    "nextRunAt": "2026-11-24T09:04:32.106Z",
+    "lastCheckedAt": "2026-11-25T15:08:10.279Z",
+    "lastSuccessAt": "2026-11-25T15:08:10.279Z",
+    "nextRunAt": "2026-11-26T15:08:10.279Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 11,

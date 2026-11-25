@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "c7d86b0fa745643fcd48",
+    "status": "ready",
+    "html": "<p>11 月 24 日，百度正式开源文心 ERNIE 5.5 Flash Preview。ERNIE 5.5 Flash Preview 是 ERNIE 5.5 Flash 的首个后训练版本：该模型是一个稀疏混合专家（MoE）模型，总参数量 280B，每个 token 激活 14B 参数，支持 1M token 上下文，会先思考再作答，并能通过工具调用完成长程 Agent 任务。</p> \n<ul><li> <p><strong><strong>模型架构：</strong></strong>&nbsp;模型共 43 层，其中 37 层采用 HCA（重度压缩注意力），6 层使用 MLA-DSA（多头潜在稀疏注意力）。此外，模型还引入了低秩注意力门控、VHA（虚拟头注意力）、Multi-Router Latent MoE、mHC 残差流以及 MultiMax 输出头。</p> </li><li> <p><strong><strong>投机解码：</strong></strong>随权重开源发布的基于 MoE 架构的 3 层 DSpark 草稿模型，每步最多可产出 7 个 token，可显著提升推理解码速度。</p> </li><li> <p><strong><strong>知识工作：</strong></strong>&nbsp;模型的后训练覆盖金融、法律等专业领域，使用了包含 40 余种文件类型、30 万个工作空间及 1000 万份文件的数据。基于此，模型具备了强大的自主规划与执行能力，能够从分散的材料中理清线索，调度应用、MCP 工具与 Skill，直接输出可投入使用的表格、文档和报告。</p> </li><li> <p><strong><strong>视频创作</strong></strong><strong><strong>：</strong></strong>&nbsp;面向内容创作者的视频创作需求，ERNIE 5.5 Flash Preview 能够搜集、合成和编排素材，调整画面和节奏，输出成片。模型在覆盖创意、脚本、分镜、素材和配音的全流程环境中接受训练，适配上千个创作 skill。</p> </li><li> <p><strong><strong>1M tokens 长上下文：</strong></strong>&nbsp;模型可在上下文窗口内保留任务涉及的文件内容、工具调用记录及返回结果，支持需要持续引用历史信息的长任务。混合稀疏注意力架构可降低长上下文推理时 KV Cache 的显存占用。</p> </li></ul> \n<p>百度基于昆仑芯硬件平台，率先完成 ERNIE 5.5 Flash Preview 的模型适配与集群部署，支持 P/D 分离、W4A8 量化、DSpark、MegaMoE，以及 TP、CP、EP、DPA 等并行策略；针对模型在注意力机制和 MoE 中的多项新结构特性，百度进一步基于昆仑芯架构完成融合算子开发与性能优化，加速最新开源大模型在国产算力平台上的部署落地与规模化应用。</p> \n<p>INT4 权重：</p> \n<p><a title=\"https://modelscope.cn/models/baidu-aicapx/ERNIE-5.5-Flash-Preview-INT4\" href=\"https://modelscope.cn/models/baidu-aicapx/ERNIE-5.5-Flash-Preview-INT4\" target=\"_blank\" rel=\"noopener noreferrer\">https://modelscope.cn/models/baidu-aicapx/ERNIE-5.5-Flash-Preview-INT4</a></p> \n<p>开源代码：</p> \n<p><a title=\"https://github.com/baidu-baige/sglang-kunlun/tree/v0.5.23-dev-ernie55\" href=\"https://github.com/baidu-baige/sglang-kunlun/tree/v0.5.23-dev-ernie55\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/baidu-baige/sglang-kunlun/tree/v0.5.23-dev-ernie55</a></p> \n<p></p> \n<h3 id=\"section-1-极速模型适配\">1. &nbsp; &nbsp;极速模型适配<a class=\"heading-anchor\" href=\"#section-1-极速模型适配\" aria-label=\"链接到本节：1. 极速模型适配\">#</a></h3> \n<p>为实现高性能模型的快速开发与适配，百度联合昆仑芯基于 SGLang 多芯扩展架构开源了 SGLang-Kunlun 项目。SGLang-Kunlun 将 SGLang 社区版与昆仑芯 XPU 后端完全解耦，并依托 CUDA-like 特性和 OOT Plugin 机制，将模型适配与硬件差异统一收敛于 SGLang-Kunlun，使开发者能够像使用通用 GPU 一样便捷地使用昆仑芯 XPU。</p> \n<p>得益于 SGLang-Kunlun 的架构设计和成熟的高性能算子库，我们在昆仑芯上快速跑通了 ERNIE 5.5 Flash Preview，并借助 torch_xray 精度对齐工具与 PyTorch Profiler 性能分析工具，为模型正确运行与性能表现提供了全方位保障，同时支持投机解码、低精度量化等部署能力。</p> \n<p></p> \n<p><img alt=\"图片\" height=\"393\" src=\"https://i-blog.csdnimg.cn/img_convert/b1b01407522213c457fba7c5cd46710c.png\" width=\"886\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></p> \n<h3 id=\"section-2-全链路性能提升\">2. &nbsp; &nbsp;全链路性能提升<a class=\"heading-anchor\" href=\"#section-2-全链路性能提升\" aria-label=\"链接到本节：2. 全链路性能提升\">#</a></h3> \n<p>为充分发挥昆仑芯硬件算力，支撑 ERNIE 5.5 Flash Preview 高效运行，我们从算子、Kernel Launch、框架及系统等不同维度开展全链路优化：依据昆仑芯硬件单元特性为各类算子制定专属优化策略；通过消除 CPU 调度开销显著缩短 Kernel Launch 耗时；针对框架原生实现的性能瓶颈开发昆仑芯定制算子；并在系统层面上大幅提升并行计算能力。</p> \n<p>基于昆仑芯 XPU 的计算特性，我们对 ERNIE 5.5 Flash Preview 中的 Multi-Router Latent MoE、VHA 等相关模块和特性进行融合优化。借助昆仑芯自研量化工具链实现高精度、高效率的模型量化，能够快速和轻松的针对模型不同组件采用不同的量化精度，在确保精度基本无损的前提下尽量降低权重的显存占用。具体到 ERNIE 5.5 Flash Preview，其&nbsp;Attention 与 Dense FFN 主体采用 W8A8，MoE 专家使用 W4A8 量化，以避免出现不可接受的精度损失。在性能优化中，我们还基于 ERNIE Evolve 在低延时场景下开展了 RSI 自动优化探索，性能达到基线的 623.6%。</p> \n<h3 id=\"section-3-高效规模化部署\">3. &nbsp; &nbsp;高效规模化部署<a class=\"heading-anchor\" href=\"#section-3-高效规模化部署\" aria-label=\"链接到本节：3. 高效规模化部署\">#</a></h3> \n<p>在完成模型适配并实现性能提升的基础上，针对标准 8 卡与超节点硬件平台提供了 ERNIE 5.5 Flash Preview 的 P/D 分离架构部署方案。同时，百度百舸构建了覆盖本机内存与远端池化存储（G2.5 共享内存池、G3.5 全闪 SSD 池、G4 并行文件存储池）的多级 KV Cache 调度与加速引擎，将缓存容量与算力规模解耦，实现高达 80% ～ 90% 的缓存命中率。</p> \n<p>在 Agent 与长上下文多轮对话场景下，该方案可将 TTFT 大幅缩短 80% 以上，为 AI Agent 及复杂 Coding 等高并发、极长文本业务提供多种缓存解决方案，并带来稳健的响应保障。&nbsp;此外，针对业务流量波动，百度百舸对昆仑芯集群的弹性扩缩容能力进行了系统性优化，将实例拉起时间从分钟级压缩至秒级。</p> \n<h3 id=\"section-4-结语\">4. &nbsp; &nbsp;结语<a class=\"heading-anchor\" href=\"#section-4-结语\" aria-label=\"链接到本节：4. 结语\">#</a></h3> \n<p>未来，百度将在昆仑芯硬件平台上围绕 ERNIE 5.5 Flash Preview 持续深化软硬协同，从算子、框架到系统部署不断优化迭代，把前沿大模型能力更高效地释放在国产算力之上，让 AI 真正成为产业发展的新动能。</p>",
+    "headings": [
+      {
+        "id": "section-1-极速模型适配",
+        "level": 3,
+        "text": "1. 极速模型适配"
+      },
+      {
+        "id": "section-2-全链路性能提升",
+        "level": 3,
+        "text": "2. 全链路性能提升"
+      },
+      {
+        "id": "section-3-高效规模化部署",
+        "level": 3,
+        "text": "3. 高效规模化部署"
+      },
+      {
+        "id": "section-4-结语",
+        "level": 3,
+        "text": "4. 结语"
+      }
+    ],
+    "textLength": 2477,
+    "readingMinutes": 6,
+    "sourceId": "baidu-cloud-csdn-candidate",
+    "sourceUrl": "https://blog.csdn.net/2301_82040283/article/details/171312391",
+    "ruleId": "csdn",
+    "ruleVersion": "3",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "6bfe036bbaffe8b388cbfc126562dc555ed1482def33c0e5740b8a06308a7da4",
+    "fetchedAt": "2026-11-25T15:08:22.624Z",
+    "checkedAt": "2026-11-25T15:08:22.624Z",
+    "nextRetryAt": "2026-12-25T15:08:22.624Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "rsshub-http",
+      "attempts": [
+        {
+          "provider": "rsshub-http",
+          "status": "success"
+        }
+      ]
+    }
+  }
+}

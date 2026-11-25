@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "f2312bd7d36a80d8f73c",
+    "status": "ready",
+    "html": "<p><span>在 <span><span><span>v0.7.0</span></span></span> 中，我们让<span><span><span>沙箱</span></span></span>跨机流动：基于 <span><span><span>S3vol</span></span></span> 后端，沙箱可以在 <span><span><span>A 节点</span></span></span>暂停、<span><span><span>B 节点</span></span></span>恢复；<span><span><span>组件多版本共存</span></span></span>让升级不再打断<span><span><span>存量资产</span></span></span>。</span></p><p><span>但当<span><span><span>集群规模</span></span></span>继续扩大、真正逼近<span><span><span>生产</span></span></span>时，更深层的问题会浮出。例如，跨机暂停恢复依赖 S3vol 后端，性能与稳定性仍有提升空间；<span><span><span>调度策略</span></span></span>为内置实现，<span><span><span>装箱率</span></span></span>和<span><span><span>碎片率</span></span></span>却没法按业务定制，策略调整后也缺乏验证手段；沙箱跑起来之后，指标和日志散落在各节点，排查问题需要逐台登录主机；沙箱内的服务崩了，只能靠上层平台自己做心跳拉起……</span></p><p><span><span><span><span>CubeSandbox</span></span></span>在今天正式发布的 <span><span><span>v0.8.0</span></span></span> 里，对这些方向逐一作出回应：</span><strong><span>存储后端新增 <span><span><span>JuiceFS</span></span></span>，调度策略支持插件化定制，运行状态支持<span><span><span>统一采集</span></span></span>，<span><span><span>异常恢复</span></span></span>交还给沙箱自身；同时补齐了沙箱间通信能力，<span><span><span>E2B</span></span></span> 兼容性进一步增强。</span></strong><span>这一版共 128 个 <span><span><span>PR</span></span></span>、来自 46 位贡献者，包含 8 项<span><span><span>核心特性</span></span></span>以及大量功能增强与问题修复。</span></p><section><h2 id=\"section-1-juicefs-存储后端-预览版\"><span><span>◆</span></span><span>1、JuiceFS 存储后端（预览版）</span><span><span>◆</span></span><a class=\"heading-anchor\" href=\"#section-1-juicefs-存储后端-预览版\" aria-label=\"链接到本节：◆1、JuiceFS 存储后端（预览版）◆\">#</a></h2></section><p><span>此前，<span><span><span>模板分发</span></span></span>依赖 <span><span><span>CubeMaster</span></span></span> 向各节点推送<span><span><span>制品</span></span></span>，跨机恢复与<span><span><span>跨机快照启动</span></span></span>依赖 S3vol 后端。v0.8.0 新增基于 JuiceFS 存储后端，在延续跨机暂停恢复、从快照跨机启动等能力的基础上，带来两方面提升：一是</span><strong><span>模板支持跨节点共享</span></strong><span>，无需再逐节点分发；</span><strong><span>二是</span></strong><strong><span>跨机</span></strong><strong><span>暂停</span></strong><strong><span>恢复</span></strong><strong><span>的</span></strong><strong><span>性能</span></strong><strong><span>与</span></strong><strong><span>稳定性</span></strong><strong><span>进一步</span></strong><strong><span>优化</span></strong><strong><span>、</span></strong><strong><span>方案</span></strong><strong><span>更加</span></strong><strong><span>成熟</span></strong><strong><span>。</span></strong><span><span><span><span>元数据引擎</span></span></span>支持 <span><span><span>Redis</span></span></span>、MySQL、<span><span><span>TiKV</span></span></span> 等多种选择；<span><span><span>对象存储</span></span></span>支持 <span><span><span>MinIO</span></span></span>、<span><span><span>腾讯云 COS</span></span></span> 等。</span></p><p><span>模板跨节点共享意味着制品无需再逐节点分发；对于已经部署 JuiceFS 的团队，也可以直接复用现有<span><span><span>基础设施</span></span></span>。该能力当前为预览版。</span></p><section><h2 id=\"section-2-可扩展的调度插件系统与调度质量评估框架\"><span><span>◆</span></span><span>2、可扩展的调度插件系统与调度质量评估框架</span><span><span>◆</span></span><a class=\"heading-anchor\" href=\"#section-2-可扩展的调度插件系统与调度质量评估框架\" aria-label=\"链接到本节：◆2、可扩展的调度插件系统与调度质量评估框架◆\">#</a></h2></section><p><span>随着集群规模扩大，调度策略往往需要结合业务特点进行定制。</span><strong><span>v0.8.0 支持三种方式自定义沙箱调度策略：</span></strong><strong><span>内置插件、CEL 表达式、外部 gRPC 插件</span></strong><span>。 前两者适合实现较简单的节点选择规则；外部插件则将调度决策完整交给外部服务，集群拓扑、租户画像等信息都可以参与决策，集群的调度行为因此可以灵活、动态地调整。</span></p><p><span>配套新增的调度质量评估框架解决的是另一个问题：策略调整后的效果，如何在上线前得到验证。框架通过模拟集群拓扑、负载，在开发阶段即可衡量某种调度策略的装箱率、碎片、羊群度、调度延迟等指标，从而提高调度策略的开发效率。</span></p><section><h2 id=\"section-3-沙箱指标与日志采集\"><span><span>◆</span></span><span>3、沙箱指标与日志采集</span><span><span>◆</span></span><a class=\"heading-anchor\" href=\"#section-3-沙箱指标与日志采集\" aria-label=\"链接到本节：◆3、沙箱指标与日志采集◆\">#</a></h2></section><p><span>沙箱进入生产环境后，缺少统一的指标与日志是问题排查的主要障碍。v0.8.0 支持采集沙箱资源指标与日志，提供默认看板配置，可直接在 Prometheus、Grafana 中查看；同时支持灵活对接用户已有的监控与日志运维系统，为生产化提供统一的运行监测与问题排查手段。</span></p><section><h2 id=\"section-4-沙箱重启策略\"><span><span>◆</span></span><span>4、沙箱重启策略</span><span><span>◆</span></span><a class=\"heading-anchor\" href=\"#section-4-沙箱重启策略\" aria-label=\"链接到本节：◆4、沙箱重启策略◆\">#</a></h2></section><p><span>在此前的使用中，沙箱内的服务发生故障时，沙箱实例本身仍在运行，上层平台需要自行实现故障检测与拉起逻辑。v0.8.0 支持为沙箱设置重启策略，当沙箱内的服务故障时，自动在同一节点上重启沙箱，将这一环节交还给沙箱基础设施自身。</span></p><section><h2 id=\"section-5-fs-only-快照\"><span><span>◆</span></span><span>5、FS-only 快照</span><span><span>◆</span></span><a class=\"heading-anchor\" href=\"#section-5-fs-only-快照\" aria-label=\"链接到本节：◆5、FS-only 快照◆\">#</a></h2></section><p><span>完整快照同时保存内存状态与文件系统，但不少场景只需要文件系统：例如将配置完成的运行环境固化下来，再基于它批量冷启动新的沙箱，此时内存状态无需保留。v0.8.0 支持</span><strong><span>仅对沙箱文件系统进行快照（FS-only），降低快照存储成本</span></strong><span>；用户可以通过 FS-only 快照冷启动新的沙箱。</span></p><section><h2 id=\"section-6-沙箱间端口映射互访\"><span><span>◆</span></span><span>6、沙箱间端口映射互访</span><span><span>◆</span></span><a class=\"heading-anchor\" href=\"#section-6-沙箱间端口映射互访\" aria-label=\"链接到本节：◆6、沙箱间端口映射互访◆\">#</a></h2></section><p><span>在多 Agent 协作场景中，沙箱之间经常需要直接通信。v0.8.0 支持沙箱之间通过</span><strong><span>母机端口映射</span></strong><strong><span>（Port-Mapping）相互访问</span></strong><span>：这是一种 TCP 四层通信，</span><strong><span>任何基于 TCP 协议的服务都可以通过这种方式实现</span></strong><span>，不再局限于 CubeProxy 所支持的&nbsp;</span><code><span>HTTP/HTTPS/gRPC</span></code><span>。同母机的沙箱之间，通过 hairpin 方式同样支持这种通信。</span></p><p><span>自此，一个沙箱访问另一个沙箱有两种方式可选：需要七层转发时使用 CubeProxy，需要承载任意 TCP 服务时使用端口映射。两种方式均支持同节点与跨节点的沙箱间访问。</span></p><section><h2 id=\"section-7-volume-框架增强-支持传递用户私有数据\"><span><span>◆</span></span><span>7、Volume 框架增强：支持传递用户私有数据</span><span><span>◆</span></span><a class=\"heading-anchor\" href=\"#section-7-volume-框架增强-支持传递用户私有数据\" aria-label=\"链接到本节：◆7、Volume 框架增强：支持传递用户私有数据◆\">#</a></h2></section><p><span>沙箱与外部存储交互时，鉴权、分桶等业务逻辑往往需要用户身份信息。v0.8.0 的 Volume 框架支持传递用户私有数据，</span><strong><span>可用于实现鉴权、分桶等业务逻辑</span></strong><span>。</span></p><section><h2 id=\"section-8-e2b-sdk-兼容性进一步增强\"><span><span>◆</span></span><span>8、E2B SDK 兼容性进一步增强</span><span><span>◆</span></span><a class=\"heading-anchor\" href=\"#section-8-e2b-sdk-兼容性进一步增强\" aria-label=\"链接到本节：◆8、E2B SDK 兼容性进一步增强◆\">#</a></h2></section><p><span>v0.8.0 新增支持 E2B 的&nbsp;</span><code><span>/v2/sandboxes</span></code><span>&nbsp;与</span><span>/v2/sandboxes/{id}/connect</span><span>两个接口，使用 E2B SDK 2.51.0 及以上版本的用户可以直接创建和连接沙箱，无需再做适配层。此外，Python / Node / Go 三种语言的 SDK 同步新增了 E2B 兼容的&nbsp;</span><code><span>Sandbox.fork</span></code><span>&nbsp;与&nbsp;</span><code><span>Sandbox.is_running</span></code><span>&nbsp;能力。</span></p><p><span>兼容性详情见：</span><span><span>https://cubesandbox</span></span><span><span>.</span></span><code><span><span>com/guide/e2b-compatibility</span></span></code></p><section><h2 id=\"section-其他值得一提的特性\"><span><span>◆</span></span><span>其他值得一提的特性</span><span><span>◆</span></span><a class=\"heading-anchor\" href=\"#section-其他值得一提的特性\" aria-label=\"链接到本节：◆其他值得一提的特性◆\">#</a></h2></section><section><p><span><span>◆&nbsp;</span></span><strong><span>模板级沙箱 QoS</span></strong><span>。 可为特定模板创建的沙箱设置网络带宽、网络包速率、磁盘吞吐、IOPS 上限，避免单个沙箱占用宿主机全部资源、影响同机其他沙箱。</span></p><p><span><span>◆&nbsp;</span></span><strong><span>节点超卖配置</span></strong><span>。 支持 CLI 和 Web 两种方式设置；新增节点侧常驻进程 ops-agent，承接 CubeOps 下发的配置指令并修改 Cubelet 配置文件。</span></p><p><span><span>◆&nbsp;</span></span><strong><span>性能持续提升</span></strong><span>。 vsock 启用 VIRTIO_RING_F_EVENT_IDX，减少 guest 侧不必要的中断，双向吞吐从约 5.7 Gbps 提升至约 9.3 Gbps；解决 AMD 等 CPU 上资源采集读取 cgroup 导致并发创建耗时升高的问题；精简 ARM 沙箱快照恢复的 ioctl 数量；guest 内核日志统一重定向至 virtio-console，降低冷启动开销。</span></p><p><span><span>◆&nbsp;</span></span><strong><span>部署与运维</span></strong><span>。 K8s 部署支持私有 CA 镜像仓库，在 Helm 中配置 trustedCACerts 即可正常拉取镜像；控制面原生支持 Redis Cluster；DNS 解析流程迁移至控制面，沙箱可直接使用 K8s 集群 DNS；计算节点组件启动提速。</span></p><p><span><span>◆&nbsp;</span></span><strong><span>模板与存储。</span></strong><span>&nbsp;快照链优化：同节点派生快照共用父快照、通过共享内存优化写流程、使用快照时自动预热；模板可指定沙箱以哪个用户（UID 或用户名）运行；制品分发并发数可配置。</span></p><p><span><span>◆&nbsp;</span></span><strong><span>高频问题、稳定性问题等 bug 修复</span></strong><span>。 v0.8.0 集中处理了超过 40 个生产环境里出现频率较高的问题：沙箱日志过多导致 panic、卷激活与删除并发时 panic 毒化锁、gRPC 连接池并发关闭偶发 panic、创建失败时 shim 泄漏、多 CLM 实例下 auto-pause 失灵等（详情可参考Changelog完整内容）。</span></p></section><section><h2 id=\"section-coming-soon\"><span><span>◆</span></span><span>Coming Soon……</span><span><span>◆</span></span><a class=\"heading-anchor\" href=\"#section-coming-soon\" aria-label=\"链接到本节：◆Coming Soon……◆\">#</a></h2></section><p><span>v0.8.0 之后，Cube 计划是在今年内发布 v1.0.0（GA），大致的规划方向是：</span></p><section><p><span><span>◆&nbsp;</span></span><span>功能完整：完整兼容 E2B API，多语言 SDK 能力一致；</span></p><p><span><span>◆&nbsp;</span></span><span>稳定性：面向生产的高可用，沙箱异常自动恢复，全部组件高可用；</span></p><p><span><span>◆&nbsp;</span></span><span>可观测性：日志、指标、事件开源对接，关键链路全程可观测；</span></p><p><span><span>◆&nbsp;</span></span><span>性能：核心操作持续提速，跨机能力接近本机。</span></p></section><p><span>敬请期待！欢迎大家体验或升级到全新的 v0.8.0，也欢迎给 Cube 提 PR 或 Issue，参与 Roadmap 设计讨论，一起推动 Cube Sandbox 的演进。</span></p><p><span>完整Changelog：</span><code><span><br></span></code><span><span>https://github.com/TencentCloud/CubeSandbox/blob/master/docs/zh/changelog/v0.8.0.md</span></span></p><p><span>Cube Sandbox 开源仓库地址：</span><span><span><span>https://github.com/TencentCloud/CubeSandbox</span></span></span></p><p><span><span><span>Cube Sandbox 是腾讯云开源的一款基于 RustVMM 与 KVM 构建的高性能、开箱即用的安全沙箱服务。它既支持单机部署，也能方便地扩展到多机集群。对外兼容 E2B SDK，可在 60ms 内创建具备完整服务能力的硬件隔离沙箱，并将内存开销控制在 5MB 以内。</span></span></span></p><section><span><img src=\"https://inews.gtimg.com/om_bt/OAwz5wh6cqSkemMDj1U36JyXV6JEnR9qQ1Pl358xnBm_gAA/1000\" alt=\"图片\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：图片\"></span></section>",
+    "headings": [
+      {
+        "id": "section-1-juicefs-存储后端-预览版",
+        "level": 2,
+        "text": "◆1、JuiceFS 存储后端（预览版）◆"
+      },
+      {
+        "id": "section-2-可扩展的调度插件系统与调度质量评估框架",
+        "level": 2,
+        "text": "◆2、可扩展的调度插件系统与调度质量评估框架◆"
+      },
+      {
+        "id": "section-3-沙箱指标与日志采集",
+        "level": 2,
+        "text": "◆3、沙箱指标与日志采集◆"
+      },
+      {
+        "id": "section-4-沙箱重启策略",
+        "level": 2,
+        "text": "◆4、沙箱重启策略◆"
+      },
+      {
+        "id": "section-5-fs-only-快照",
+        "level": 2,
+        "text": "◆5、FS-only 快照◆"
+      },
+      {
+        "id": "section-6-沙箱间端口映射互访",
+        "level": 2,
+        "text": "◆6、沙箱间端口映射互访◆"
+      },
+      {
+        "id": "section-7-volume-框架增强-支持传递用户私有数据",
+        "level": 2,
+        "text": "◆7、Volume 框架增强：支持传递用户私有数据◆"
+      },
+      {
+        "id": "section-8-e2b-sdk-兼容性进一步增强",
+        "level": 2,
+        "text": "◆8、E2B SDK 兼容性进一步增强◆"
+      },
+      {
+        "id": "section-其他值得一提的特性",
+        "level": 2,
+        "text": "◆其他值得一提的特性◆"
+      },
+      {
+        "id": "section-coming-soon",
+        "level": 2,
+        "text": "◆Coming Soon……◆"
+      }
+    ],
+    "textLength": 3365,
+    "readingMinutes": 8,
+    "sourceId": "tencent-qqnews",
+    "sourceUrl": "https://news.qq.com/rain/a/20261123A0C77L00",
+    "ruleId": "tencent-news",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "53f9fe650744c5114647e57faeb23d4398e17d0050494d5ed3aa96d5c68f4d88",
+    "fetchedAt": "2026-11-25T15:08:22.032Z",
+    "checkedAt": "2026-11-25T15:08:22.032Z",
+    "nextRetryAt": "2026-12-25T15:08:22.032Z",
+    "warnings": []
+  }
+}
