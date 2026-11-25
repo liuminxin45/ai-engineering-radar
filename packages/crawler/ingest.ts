@@ -187,6 +187,10 @@ export async function applyOverrides(articles: Article[]) {
   }
   return screening;
 }
+// Public publishing hold: this article repeatedly failed the raw output gate.
+// Keep it out of the durable public snapshot until reviewed; never exempt it
+// from the scanner. See docs/operations.md before removing the hold.
+const publicationHoldIds = new Set(["e4f280037ca231ed6be9"]);
 export async function ingest(
   snapshot: Snapshot,
   registry: Registry,
@@ -201,6 +205,9 @@ export async function ingest(
 ) {
   const articles = structuredClone(snapshot.articles);
   const states = structuredClone(snapshot.states);
+  const heldArticleIds = new Set(
+    articles.filter((a) => publicationHoldIds.has(a.id)).map((a) => a.id),
+  );
   let successes = 0,
     attempted = 0;
   let added = 0,
@@ -310,6 +317,10 @@ export async function ingest(
               continue;
             }
             const article = upsert(staged, item, source, registry, now);
+            if (publicationHoldIds.has(article.id)) {
+              heldArticleIds.add(article.id);
+              continue;
+            }
             changes.push({ id: article.id, added: !previous });
           }
           articles.splice(0, articles.length, ...staged);
@@ -362,15 +373,17 @@ export async function ingest(
       }
     }),
   );
-  for (const article of articles) {
+  const acceptedArticles = articles.filter((a) => !publicationHoldIds.has(a.id));
+  for (const article of acceptedArticles) {
     if (article.publicationStatus === "hidden") continue;
     article.classification = indexOfficialArticle(article);
     article.publicationStatus = "published";
   }
-  markAdvertorials(articles);
-  await applyOverrides(articles);
+  markAdvertorials(acceptedArticles);
+  await applyOverrides(acceptedArticles);
   return {
-    articles,
+    articles: acceptedArticles,
+    heldArticleIds: [...heldArticleIds],
     states,
     successes,
     attempted,

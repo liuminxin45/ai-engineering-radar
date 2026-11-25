@@ -50,9 +50,10 @@ async function run() {
         sourceId: process.argv.find((a) => a.startsWith("--source="))?.slice(9),
         contentType: "blog",
       });
+      const held = new Set(result.heldArticleIds);
       const bodyResult = await collectBodies(
         result.articles,
-        snapshot.bodies ?? [],
+        (snapshot.bodies ?? []).filter((body) => !held.has(body.articleId)),
         registry,
         {
           incremental: !process.argv.includes("--full"),
@@ -79,7 +80,7 @@ async function run() {
         registry,
         bodyResult.bodies,
       );
-      const summary = `## AI Engineering Radar\n\nCollection mode: ${process.argv.includes("--full") ? "full" : "incremental"}\n\nSuccessful sources: ${result.successes}/${result.attempted}\n\nMetadata: ${result.added} added, ${result.updated} updated, ${result.unchanged} unchanged\n\nBodies: ${bodyResult.attempted} attempted, ${bodyResult.ready} ready, ${bodyResult.partial} partial, ${bodyResult.unavailable} unavailable\n\nArticles stored: ${result.articles.length}\n`;
+      const summary = `## AI Engineering Radar\n\nCollection mode: ${process.argv.includes("--full") ? "full" : "incremental"}\n\nSuccessful sources: ${result.successes}/${result.attempted}\n\nMetadata: ${result.added} added, ${result.updated} updated, ${result.unchanged} unchanged\n\nPublication hold: ${held.size ? [...held].join(", ") : "none"}\n\nBodies: ${bodyResult.attempted} attempted, ${bodyResult.ready} ready, ${bodyResult.partial} partial, ${bodyResult.unavailable} unavailable\n\nArticles stored: ${result.articles.length}\n`;
       if (process.env.GITHUB_STEP_SUMMARY)
         await appendFile(process.env.GITHUB_STEP_SUMMARY, summary);
       console.log(summary);

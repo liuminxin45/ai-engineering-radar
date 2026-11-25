@@ -161,3 +161,29 @@ it("publishes legacy review entries without a model or content rules", async () 
     vi.unstubAllGlobals();
   }
 });
+
+it("holds the flagged article without dropping healthy items from the same source", async () => {
+  const data = snapshot();
+  const heldId = "e4f280037ca231ed6be9";
+  data.articles[0].id = heldId;
+  vi.mocked(collect).mockResolvedValue({
+    items: [
+      { ...candidate, title: "Updated article pending publication review" },
+      { ...candidate, url: "https://tech.meituan.com/healthy-new" },
+    ],
+    response: { status: 200, text: "", url: source.url },
+    warnings: [],
+  });
+  const result = await ingest(data, registry, {
+    force: true,
+    sourceId: source.id,
+  });
+  expect(result.heldArticleIds).toEqual([heldId]);
+  expect(result.articles.map((article) => article.canonicalUrl)).toEqual([
+    "https://tech.meituan.com/healthy-new",
+  ]);
+  expect(result.changedArticleIds).toEqual([result.articles[0].id]);
+  expect(result.added).toBe(1);
+  expect(result.updated).toBe(0);
+  expect(data.articles[0].id).toBe(heldId);
+});

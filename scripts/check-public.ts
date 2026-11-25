@@ -27,6 +27,13 @@ const forbidden = [
   /[A-Z]:[\\/](?:Users|Neo|Leo|UF)[\\/]/i,
   /https?:\/\/(?:localhost|127\.0\.0\.1|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|[^\s/"']+\.tp-link\.com\.cn)(?::\d+)?/i,
 ];
+const ruleNames = [
+  "github-credential-like",
+  "api-key-like",
+  "private-key-header",
+  "local-windows-path",
+  "private-network-address",
+];
 let count = 0;
 async function scan(dir: string) {
   for (const e of await readdir(dir, { withFileTypes: true }).catch(() => [])) {
@@ -61,12 +68,13 @@ async function scan(dir: string) {
       )?.[1];
       const siteText =
         id && bodies.has(id) ? maskPublisherBody(text, bodies.get(id)!) : text;
-      if (
-        patterns.some((pattern, index) =>
-          pattern.test(index < 3 ? text : siteText),
-        )
-      )
-        throw new Error(`Public content check failed: ${file}`);
+      const matchedRules = patterns.flatMap((pattern, index) =>
+        pattern.test(index < 3 ? text : siteText) ? [ruleNames[index]] : [],
+      );
+      if (matchedRules.length)
+        throw new Error(
+          `Public content check failed: ${file} [${matchedRules.join(", ")}]`,
+        );
       if (
         !process.env.RADAR_ALLOW_FIXTURES &&
         file.split(/[\\/]/).includes("out") &&
