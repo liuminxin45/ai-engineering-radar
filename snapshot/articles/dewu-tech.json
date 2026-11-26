@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -101,7 +101,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -141,7 +141,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -181,7 +181,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -222,7 +222,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -262,7 +262,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -302,7 +302,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -342,7 +342,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -382,7 +382,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -404,6 +404,47 @@
       "duplicateCandidates": []
     },
     {
+      "id": "545a84f9ea248a502a60",
+      "publisherId": "dewu-tech",
+      "companyId": "dewu",
+      "contentType": "blog",
+      "title": "Computer Use与Browser Use：揭秘Agent如何操作电脑和浏览器｜得物技术",
+      "canonicalUrl": "https://developer.cloud.tencent.com/article/2794090",
+      "author": "得物技术",
+      "description": "从网站下载报表，打开Excel整理，再把结果填进另一个系统。这样的活，单看每一步都不难，但天天都要找入口、切窗口、复制粘贴，多少有点烦人。",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-26T02:16:05.000Z",
+      "discoveredAt": "2026-11-26T09:32:24.094Z",
+      "updatedAt": "2026-11-26T09:32:24.094Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "dewu-tencent",
+          "externalId": "2794090",
+          "url": "https://developer.cloud.tencent.com/article/2794090",
+          "listingHash": "b3523a687925e3a48c11ca1f8bde75c47be68b6c2e0c926e3d1839a300760ff1"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "6d19abd5e1c95b36f6ce",
       "publisherId": "dewu-tech",
       "companyId": "dewu",
@@ -422,7 +463,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -462,7 +503,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -502,7 +543,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -543,7 +584,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -583,7 +624,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -623,7 +664,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -663,7 +704,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -703,7 +744,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -743,7 +784,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -783,7 +824,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -823,7 +864,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -863,7 +904,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -903,7 +944,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",

@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "meituan",
-    "lastCheckedAt": "2026-11-25T15:08:09.069Z",
-    "lastSuccessAt": "2026-11-25T15:08:09.069Z",
-    "nextRunAt": "2026-11-26T15:08:09.069Z",
+    "lastCheckedAt": "2026-11-26T09:32:24.091Z",
+    "lastSuccessAt": "2026-11-26T09:32:24.091Z",
+    "nextRunAt": "2026-11-27T09:32:24.092Z",
     "consecutiveFailures": 0,
-    "lastModified": "Wed, 18 Nov 2026 05:49:03 GMT",
+    "lastModified": "Thu, 26 Nov 2026 06:57:26 GMT",
     "status": "success",
     "discovered": 10,
     "httpStatus": 200

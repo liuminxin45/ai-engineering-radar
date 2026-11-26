@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -100,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -180,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -260,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -300,7 +300,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -340,7 +340,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -380,7 +380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -420,7 +420,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -442,6 +442,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "b6f1c9634c20f6cb26ce",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "contentType": "blog",
+      "title": "一个向量库，两种检索：VikingDB 关键词检索实践",
+      "canonicalUrl": "https://www.toutiao.com/article/7712164480108511778",
+      "author": "字节跳动技术团队",
+      "description": "给 content 字段加上 FullText 配置，指定 analyzer 为 standard，就可以使用关键词检索。",
+      "publishedAt": "2026-11-25T17:37:09.000Z",
+      "discoveredAt": "2026-11-26T09:32:25.608Z",
+      "updatedAt": "2026-11-26T09:32:25.608Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7712164480108511778",
+          "url": "https://www.toutiao.com/article/7712164480108511778",
+          "listingHash": "71285f3a1ea60e2f30e07ab300cce937b2e40c4216b888eaac34d91da1583c20"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "be97f4b949a939fc9e13",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
@@ -460,7 +500,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -482,17 +522,17 @@
       "duplicateCandidates": []
     },
     {
-      "id": "c5508f751f14692225d8",
+      "id": "bf9dbdd7388c7191e1a3",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
       "contentType": "blog",
-      "title": "让算力说同一种管理语言：共建 XPU 带外管理标准",
-      "canonicalUrl": "https://www.toutiao.com/article/7709087489671168522",
+      "title": "不用自建后端，前端页面也能接入云端数据了：Pages Data SDK 正式上线",
+      "canonicalUrl": "https://www.toutiao.com/article/7712164445190947370",
       "author": "字节跳动技术团队",
-      "description": "围绕这一问题，阿里，字节跳动，腾讯三家云计算及AI服务商共同推动三份 XPU 带外管理规范的联合发布与开放共建，覆盖模组 Redfish 接口、卡级 PLDM/PDRs 定义，以及不带独立管理控制器的 XPU 带外能力。",
-      "publishedAt": "2026-11-17T10:36:53.000Z",
-      "discoveredAt": "2026-11-18T08:33:31.526Z",
-      "updatedAt": "2026-11-18T08:33:31.526Z",
+      "description": "IGA Pages 是火山引擎全站加速产品体系中的 Web 应用托管和部署能力。Pages Data SDK 让你在 Web 页面应用里直接创建、查询、更新和删除云端数据，不需要额外搭建后端服务和数据库。",
+      "publishedAt": "2026-11-25T17:37:03.000Z",
+      "discoveredAt": "2026-11-26T09:32:25.608Z",
+      "updatedAt": "2026-11-26T09:32:25.608Z",
       "classification": {
         "status": "accepted",
         "topics": [],
@@ -500,7 +540,47 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7712164445190947370",
+          "url": "https://www.toutiao.com/article/7712164445190947370",
+          "listingHash": "a01cb671f0f4dadd16cf45bdf98cf89558bdd54b25fb1e3f48bcfd7fb69b96d7"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
+      "id": "c5508f751f14692225d8",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "contentType": "blog",
+      "title": "让算力说同一种管理语言：共建 XPU 带外管理标准",
+      "canonicalUrl": "https://www.toutiao.com/article/7709087489671168522",
+      "author": "字节跳动技术团队",
+      "description": "摘要： 从算力模组到加速卡，从数据采集到诊断与升级，异构算力需要共同的带外管理语言。阿里、字节跳动、腾讯共同推动三份规范联合发布，以共同能力、协议与接口约定，降低跨厂商管理成本，面向业界开放共建、持续迭代。",
+      "publishedAt": "2026-11-17T10:36:53.000Z",
+      "discoveredAt": "2026-11-18T08:33:31.526Z",
+      "updatedAt": "2026-11-26T09:32:25.608Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -516,7 +596,7 @@
           "sourceId": "bytedance-tech-toutiao",
           "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7709087489671168522",
           "url": "https://www.toutiao.com/article/7709087489671168522",
-          "listingHash": "fb94ea391000b8b252b741525d91a965333cbde7601ac0332cc33bbaa365d220"
+          "listingHash": "56035625877d72fa795b156d781feb89164dea9c552c8edd1df2c7165e628e5c"
         }
       ],
       "duplicateCandidates": []
@@ -540,7 +620,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -580,7 +660,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -620,7 +700,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -660,7 +740,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",

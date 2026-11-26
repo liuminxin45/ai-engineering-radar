@@ -19,7 +19,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -58,7 +58,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -97,7 +97,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -136,7 +136,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -158,6 +158,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "29063fa22e6014a4e8ec",
+      "publisherId": "meituan-official",
+      "companyId": "meituan",
+      "contentType": "blog",
+      "title": "从模仿到自我纠错：Keeta客服模型的RSI实践",
+      "canonicalUrl": "https://tech.meituan.com/2026/11/26/Agent-RSI-practice-in-meituan.html",
+      "description": "一个客服模型，能不能越用越聪明？递归自我改进（RSI）的难点不在“学”，而在“判”：错没错、错在谁、按哪一版规则算错。我们团队的闭环是：上线服务 → 巡检找错 → 归因定责 → 构造修复 → 在线自蒸馏（OPSD）→ 评估上线，周而复始。",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "discoveredAt": "2026-11-26T09:32:24.091Z",
+      "updatedAt": "2026-11-26T09:32:24.091Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "meituan",
+          "externalId": "https://tech.meituan.com/2026/11/26/Agent-RSI-practice-in-meituan.html",
+          "url": "https://tech.meituan.com/2026/11/26/Agent-RSI-practice-in-meituan.html",
+          "listingHash": "fa44a76810175088a01ecaf901cdffd01c077530c777781e4659f578893fe9ff"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "334657a119fb5bacd6ba",
       "publisherId": "meituan-official",
       "companyId": "meituan",
@@ -176,7 +216,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -216,7 +256,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -255,7 +295,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -294,7 +334,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -334,7 +374,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -373,7 +413,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -413,7 +453,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -452,7 +492,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -491,7 +531,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -530,7 +570,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-25T15:08:18.821Z"
+        "classifiedAt": "2026-11-26T09:32:32.019Z"
       },
       "advertorial": {
         "status": "unmarked",
