@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "145d038fe74152b23db9",
+    "status": "ready",
+    "html": "<p><span><span><span>当人工智能真正进入企业生产环境，衡量技术价值的标准已不只是模型能力，更在于能否稳定运行、精细调度、安全运维并持续进化。近日，</span><strong>第五届“鼎新杯”数字化转型应用征集成果公布，阿里云云原生应用平台团队四项实践案例获奖，</strong><span>覆盖智能体运行、大模型流量治理、数智运维和智能体全生命周期优化，集中展现支撑推动企业级AI应用规模化落地的工程能力。</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>第五届“鼎新杯”由中国通信标准化协会主办、中国信息通信研究院承办，自2026年05月正式启动，历时近 5 个月，聚焦国内政企数智化转型领域的创新成果，旨在为行业提供可复制、可推广的实践参考。</span></span></span></p><p><br></p><h2 id=\"section-四项创新实践获奖案例-覆盖智能体生命周期\">四项创新实践获奖案例，覆盖智能体生命周期<br><a class=\"heading-anchor\" href=\"#section-四项创新实践获奖案例-覆盖智能体生命周期\" aria-label=\"链接到本节：四项创新实践获奖案例，覆盖智能体生命周期\">#</a></h2><h3 id=\"section-qoder-cloud-agents-基于-rocketmq-litetopic-的大规模智能体托管与运行实践\"><span><span><span>▍</span></span><span><strong><span>Qoder Cloud Agents 基于 RocketMQ LiteTopic 的大规模智能体托管与运行实践</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-qoder-cloud-agents-基于-rocketmq-litetopic-的大规模智能体托管与运行实践\" aria-label=\"链接到本节：▍Qoder Cloud Agents 基于 RocketMQ LiteTopic 的大规模智能体托管与运行实践\">#</a></h3><p><span><span><span>让智能体大规模“跑起来”，首先要解决长程任务、高并发会话与算力成本之间的矛盾。阿里云 Qoder Cloud Agents 基于</span><strong>&nbsp;RocketMQ LiteTopic&nbsp;</strong><span>构建“手脑分离、事件驱动”的云端运行架构：智能体负责决策，执行节点按需领取任务、完成后即释放资源；每个会话拥有独立的有序执行通道，故障后可由其他节点无损接续。目前，</span><strong>该方案已支撑万级会话并发，</strong><span>实现“会话常驻、计算流动、状态可续”，将消息中间件从异步通信工具拓展为智能体运行底座。</span></span></span></p><p><span></span><span></span></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_fcd6cf744b6a4599a4d1df0d43e3bdfe.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><span></span><p></p><h3 id=\"section-rocketmq-litetopic-支撑大模型服务平台精细化流量治理\"><span><span><span>▍</span></span><span><strong><span>RocketMQ LiteTopic 支撑大模型服务平台精细化流量治理</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-rocketmq-litetopic-支撑大模型服务平台精细化流量治理\" aria-label=\"链接到本节：▍RocketMQ LiteTopic 支撑大模型服务平台精细化流量治理\">#</a></h3><p><span><span><span>面对百万级租户同时调用大模型，传统限流只能决定“放行还是拒绝”，却难以兼顾稀缺算力的平稳利用与租户体验。阿里云大模型服务平台百炼基于&nbsp;</span><strong>RocketMQ LiteTopic</strong><span>，以“用户＋模型”为维度构建分布式漏桶，将限流重构为精细化节奏调度。海量租户共享资源池，单个租户的拥塞不会影响其他租户。生产实践中，</span><strong>单个消息代理节点可承载 200 万队列，消费延迟稳定在 12 毫秒，</strong><span>为百万级租户调用数十种大模型提供高隔离、低成本的流量保障。</span></span></span></p><p><span></span><span></span></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_c6eebe80bc8c49f5b2265e9750417155.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><span></span><p></p><h3 id=\"section-阿里云-starops-助力企业打造业务数智运维体系\"><span><span><span>▍</span></span><span><strong><span>阿里云 STAROps 助力企业打造业务数智运维体系</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-阿里云-starops-助力企业打造业务数智运维体系\" aria-label=\"链接到本节：▍阿里云 STAROps 助力企业打造业务数智运维体系\">#</a></h3><p><span><span><span>当业务系统与 AI 应用日益复杂，运维也需要从事后救火转向主动治理。阿里云全域智能运维平台&nbsp;</span><strong>STAROps</strong><span>&nbsp;以统一可观测数据为底座，通过&nbsp;</span><strong>UModel</strong><span>&nbsp;运维数字孪生还原应用、资源、告警和变更之间的关系，结合 AI 分析算子与运维智能体，形成“故障诊断—人工确认—自动处置—效果验证”的闭环。该体系已在塔斯汀、畅捷通、精臣等企业落地。其中，</span><strong>畅捷通的故障定位时间由平均&nbsp;</strong><strong>10 分钟以上</strong><strong>缩短至&nbsp;</strong><strong>30 秒以内</strong><strong>，</strong><span>验证了智能运维在复杂生产环境中的可用性与可控性。</span></span></span></p><p><span></span><span></span></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_bf2602fa66fc4c40a0b2ccf8f7cc0d72.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><span></span><p></p><h3 id=\"section-阿里云-agentloop-支撑企业级智能体全生命周期观测与优化\"><span><span><span>▍</span></span><span><strong><span>阿里云 AgentLoop 支撑企业级智能体全生命周期观测与优化</span></strong></span></span><a class=\"heading-anchor\" href=\"#section-阿里云-agentloop-支撑企业级智能体全生命周期观测与优化\" aria-label=\"链接到本节：▍阿里云 AgentLoop 支撑企业级智能体全生命周期观测与优化\">#</a></h3><p><span><span><span>智能体上线并非终点，如何发现质量退化、归因成本变化、拦截高风险变更，是规模化运营的新课题。阿里云智能体观测与优化平台&nbsp;</span><strong>AgentLoop</strong><span>&nbsp;以智能体运行轨迹为核心，连接观测审计、自动化评估与经验回灌，将推理、工具调用和数据访问从“黑盒”转化为全链路可追溯过程，并把真实业务轨迹沉淀为可回归的评估资产。在阿里云多智能体研发流水线中，团队在保持交付质量的前提下，</span><strong>将单次任务 Token 消耗降低</strong><strong>23.4%，</strong><span>让智能体优化从人工试错走向数据驱动的持续进化。</span></span></span></p><p><span></span><span></span></p><figure><img src=\"https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_ca9d42f8f6ee44a29479500dbe23e11d.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"></figure><span></span><p></p><p><span><span><span>从让智能体跑起来，到跑得稳、管得住、持续进化，四项获奖实践覆盖了 AI 应用从运行、调度、运维到优化的生产级全生命周期，它们既源于阿里云内部及客户真实场景，也已沉淀为可复制的产品能力。阿里云云原生应用平台将继续推进云原生基础设施面向 Agent 时代的创新升级，为企业智能化转型提供更可靠的技术底座。</span></span></span></p>",
+    "headings": [
+      {
+        "id": "section-四项创新实践获奖案例-覆盖智能体生命周期",
+        "level": 2,
+        "text": "四项创新实践获奖案例，覆盖智能体生命周期"
+      },
+      {
+        "id": "section-qoder-cloud-agents-基于-rocketmq-litetopic-的大规模智能体托管与运行实践",
+        "level": 3,
+        "text": "▍Qoder Cloud Agents 基于 RocketMQ LiteTopic 的大规模智能体托管与运行实践"
+      },
+      {
+        "id": "section-rocketmq-litetopic-支撑大模型服务平台精细化流量治理",
+        "level": 3,
+        "text": "▍RocketMQ LiteTopic 支撑大模型服务平台精细化流量治理"
+      },
+      {
+        "id": "section-阿里云-starops-助力企业打造业务数智运维体系",
+        "level": 3,
+        "text": "▍阿里云 STAROps 助力企业打造业务数智运维体系"
+      },
+      {
+        "id": "section-阿里云-agentloop-支撑企业级智能体全生命周期观测与优化",
+        "level": 3,
+        "text": "▍阿里云 AgentLoop 支撑企业级智能体全生命周期观测与优化"
+      }
+    ],
+    "textLength": 1469,
+    "readingMinutes": 4,
+    "sourceId": "aliyun-apphub",
+    "sourceUrl": "https://developer.aliyun.com/article/1790257",
+    "ruleId": "aliyun-lake",
+    "ruleVersion": "2",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "aff4df7b5ea571cd36af100c5e09341b077eb53af2eb34e47499a38b7714e6d9",
+    "fetchedAt": "2026-11-27T09:41:56.112Z",
+    "checkedAt": "2026-11-27T09:41:56.112Z",
+    "nextRetryAt": "2026-12-27T09:41:56.112Z",
+    "warnings": []
+  }
+}

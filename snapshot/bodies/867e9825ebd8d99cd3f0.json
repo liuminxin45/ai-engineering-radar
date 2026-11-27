@@ -95,8 +95,8 @@
     "engineVersion": "radar-reader-2",
     "contentHash": "040dfcf21d33b6198242e33a1a39a127f5d7046296cd89c991fc1d51c9e31bfa",
     "fetchedAt": "2026-11-20T08:34:03.182Z",
-    "checkedAt": "2026-11-26T09:33:11.184Z",
-    "nextRetryAt": "2026-12-03T09:33:11.184Z",
+    "checkedAt": "2026-11-27T09:41:58.786Z",
+    "nextRetryAt": "2026-12-04T09:41:58.786Z",
     "warnings": [
       "部分嵌入内容无法转换，请在原文中查看。"
     ]

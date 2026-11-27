@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "state": {
     "sourceId": "tencent-qqnews",
-    "lastCheckedAt": "2026-11-26T09:32:24.100Z",
-    "lastSuccessAt": "2026-11-26T09:32:24.100Z",
-    "nextRunAt": "2026-11-27T09:32:24.100Z",
+    "lastCheckedAt": "2026-11-27T09:41:49.887Z",
+    "lastSuccessAt": "2026-11-27T09:41:49.887Z",
+    "nextRunAt": "2026-11-28T09:41:49.887Z",
     "consecutiveFailures": 0,
     "status": "success",
     "discovered": 20,
