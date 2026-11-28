@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -60,7 +60,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -100,7 +100,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -140,7 +140,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -180,7 +180,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -220,7 +220,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -260,7 +260,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -282,6 +282,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "66a0e45241a65cfc33ea",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "contentType": "blog",
+      "title": "让 SSD 读懂业务优先级——NeoHint 的设计与实践",
+      "canonicalUrl": "https://www.toutiao.com/article/7712798327888216576",
+      "author": "字节跳动技术团队",
+      "description": "服务器 STE 固件团队在 FMS 2026 分享 NeoHint:让主机侧I/O优先级贯穿设备执行链路。在今年美国 FMS 2026峰会上，字节跳动 服务器 STE固件 团队分享了 NeoHint:一种面向主机需求的 NVMe SSD I/O 时延架构设计。",
+      "publishedAt": "2026-11-27T10:36:50.000Z",
+      "discoveredAt": "2026-11-28T08:55:39.669Z",
+      "updatedAt": "2026-11-28T08:55:39.669Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7712798327888216576",
+          "url": "https://www.toutiao.com/article/7712798327888216576",
+          "listingHash": "801eb9dc8b98a537c705ed7a4b9b8ab233bc612f2293cac05d78b2861f9769a9"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "7c6ba5f124dcaa6d63da",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
@@ -300,7 +340,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -340,7 +380,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -380,7 +420,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -420,7 +460,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -460,7 +500,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -482,6 +522,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "be299b7baf168f6150a6",
+      "publisherId": "bytedance-official",
+      "companyId": "bytedance",
+      "contentType": "blog",
+      "title": "直播预告｜字节跳动 ByteKMP 技术沙龙：从基建优化到业务落地",
+      "canonicalUrl": "https://www.toutiao.com/article/7712813768966668810",
+      "author": "字节跳动技术团队",
+      "description": "12 月 1 日 14:00–17:00，我们邀请到了来自 JetBrains 团队的 Frederik Pietzko 及字节跳动多位工程师，一起聊聊 Kotlin 生态的演进路线，字节跳动 ByteKMP 一码多端技术的基础技术优化与业务落地实践。",
+      "publishedAt": "2026-11-27T11:36:42.000Z",
+      "discoveredAt": "2026-11-28T08:55:39.669Z",
+      "updatedAt": "2026-11-28T08:55:39.669Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "bytedance-tech-toutiao",
+          "externalId": "MS4wLjABAAAAVKlHQZBJGZmdsWK7YD2J35tCaIoSsZnMTKNkAzw6qEE:7712813768966668810",
+          "url": "https://www.toutiao.com/article/7712813768966668810",
+          "listingHash": "1bfc564eda57d88378dafb773a69e476ccecdd10ea96e5af3a69f21a3cd74bed"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "be97f4b949a939fc9e13",
       "publisherId": "bytedance-official",
       "companyId": "bytedance",
@@ -500,7 +580,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -540,7 +620,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -580,7 +660,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -620,7 +700,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -660,7 +740,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
+      },
+      "advertorial": {
+        "status": "unmarked",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -671,15 +759,7 @@
           "listingHash": "0a26d0d35cd360eb460636f1728bf55ba47863f625b6b35e56756f0d69d6d463"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "unmarked",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "标题摘要未命中试运行标记规则；不代表全文已经审查。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "df466bac9edf71fe52c2",
@@ -700,7 +780,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -740,7 +820,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",
@@ -780,7 +860,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.134Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "unmarked",

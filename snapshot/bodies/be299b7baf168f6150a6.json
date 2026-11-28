@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "body": {
+    "articleId": "be299b7baf168f6150a6",
+    "status": "ready",
+    "html": "<div><article><img src=\"https://p3-sign.toutiaoimg.com/tos-cn-i-axegupay5k/408cf447b9fd469fb6d65cf13efccb07~tplv-tt-origin-web:gif.jpeg?_iz=58558&amp;from=article.pc_detail&amp;lk3s=953192f4&amp;x-expires=1796460959&amp;x-signature=GR0sKWAxWTOiFxurR56W9W3Hsu0%3D\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" role=\"button\" tabindex=\"0\" aria-label=\"查看大图：文章图片\"><p>12 月 1 日 14:00–17:00，我们邀请到了来自 JetBrains 团队的 Frederik Pietzko 及字节跳动多位工程师，一起聊聊 Kotlin 生态的演进路线，字节跳动 ByteKMP 一码多端技术的基础技术优化与业务落地实践。</p><p>在本次技术沙龙中，ByteKMP 团队将一次性分享团队在上游社区开源软件的基础上，针对性能、构建、工程化做了哪些优化，并探讨跨端技术如何与 AI 结合实现 1+1 &gt; 2 的效果，业务团队分享如何在快速迭代的业务中做好渐进式演进，欢迎大家一起交流。</p><p>值此 Kotlin 15 周年，我们特邀 JetBrains 嘉宾参与，从 Kotlin 的发展与未来方向开启这次技术沙龙。</p><p><strong>开场议题：</strong><strong>Kotlin 15 Years, roadmap to future</strong></p><p>邀请嘉宾：Frederik Pietzko，JetBrains</p><p><strong>主题二：</strong><strong>ByteKMP 技术优化与未来演进</strong></p><p>彭成寒、王龙海、汪康宁、倪妙根</p><p><strong>主题三：</strong><strong>AI 与跨端技术思考与落地</strong></p><p>周博</p><p><strong>主题四：</strong><strong>抖音 AI 创作：业务高频迭代下的 KMP 演进实践</strong></p><p>孔健</p><p><strong>主题五：</strong><strong>AI 抖音业务实践与跨场景复用</strong></p><p>刘硕（Sure）</p><p><strong>主题六：</strong><strong>小说 KMP 业务实践与模块化编译分享</strong></p><p>寿康、梁海滨</p><p><strong>12 月 1 日 14:00，我们线上见。</strong></p><p><strong>招贤纳士！欢迎加入我们：</strong></p><ol> <li><p>AI Infra建设：深度参与研发全流程建设，重构AI友好的基础设施与代码规范，提供相应的洞察与分析能力；</p></li></ol><ol> <li><p>Compose专家：负责Compose Multiplatform在多端场景下的渲染性能与一致性，持续扩展业务UI能力，建设线上、线下性能分析能力，辅助研发编写高质量代码；</p></li></ol><ol> <li><p>编译器优化：围绕Kotlin Multiplatform，提升多端编译速度、构建稳定性、可观测性与运行性能，降低产物体积；</p></li></ol><ol> <li><p>客户端架构师：负责抖音客户端在AI时代的中长期架构规划与关键技术选型，涵盖应用同类架构、模块化与依赖治理、动态化与容器体系、性能与稳定性约束，以及新编译器、新UI框架、端侧模型等新技术的评估、预研与落地。</p></li></ol><p><strong>直播链接&amp;二维码</strong></p><p><strong>复制链接至浏览器查看：</strong></p><p>https://live.livesaasvolccdn.com/5478/1156402</p></article></div>",
+    "headings": [],
+    "textLength": 928,
+    "readingMinutes": 3,
+    "sourceId": "bytedance-tech-toutiao",
+    "sourceUrl": "https://www.toutiao.com/article/7712813768966668810/",
+    "ruleId": "toutiao",
+    "ruleVersion": "1",
+    "engineVersion": "radar-reader-2",
+    "contentHash": "f03dca14a7d2493d9d8aabd93558752a56fbc7ce58c7486d6562629c8aaba2a9",
+    "fetchedAt": "2026-11-28T08:56:02.813Z",
+    "checkedAt": "2026-11-28T08:56:02.813Z",
+    "nextRetryAt": "2026-12-28T08:56:02.813Z",
+    "warnings": [],
+    "acquisition": {
+      "provider": "camoufox",
+      "attempts": [
+        {
+          "provider": "camoufox",
+          "status": "success"
+        }
+      ]
+    }
+  }
+}

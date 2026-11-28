@@ -20,7 +20,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -41,6 +41,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "00de0d865425a010a067",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "contentType": "blog",
+      "title": "完整还原已经服务千家企业的 AIOps Agent 的评测和调优实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1790905",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "discoveredAt": "2026-11-28T08:55:40.566Z",
+      "updatedAt": "2026-11-28T08:55:40.566Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-apphub",
+          "externalId": "1790905",
+          "url": "https://developer.aliyun.com/article/1790905",
+          "listingHash": "f2a69009a7af11d9cdf663900d344ecc99bf842c991e06c50a41b0c5023e17fc"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "02bbdd062a7ed6ecf0fd",
       "publisherId": "aliyun-cloud-native",
       "companyId": "alibaba",
@@ -59,7 +99,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -99,7 +139,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -138,7 +178,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -149,15 +197,7 @@
           "listingHash": "a26e03d18471983e78484d671f3ad3125f90c25c2321c9240f322b1124fe2691"
         }
       ],
-      "duplicateCandidates": [],
-      "advertorial": {
-        "status": "insufficient",
-        "method": "rules",
-        "basis": "title-description",
-        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
-        "evidence": [],
-        "version": "advertorial-trial-1"
-      }
+      "duplicateCandidates": []
     },
     {
       "id": "073e6318f89775eb9193",
@@ -178,7 +218,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -218,7 +258,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -258,7 +298,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -297,7 +337,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -337,7 +377,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -376,7 +416,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -397,6 +437,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "108cf29293dceaa0532b",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "contentType": "blog",
+      "title": "排查提效 50%：淘大集新核心系统的观测护航之路",
+      "canonicalUrl": "https://developer.aliyun.com/article/1790928",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "discoveredAt": "2026-11-28T08:55:40.566Z",
+      "updatedAt": "2026-11-28T08:55:40.566Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-apphub",
+          "externalId": "1790928",
+          "url": "https://developer.aliyun.com/article/1790928",
+          "listingHash": "ac27d8aee3a57b1ae81292b40c27614423eadfa3d41883fa182519c71342fb5f"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "117dffc80392a6f00aec",
       "publisherId": "aliyun-cloud-native",
       "companyId": "alibaba",
@@ -415,7 +495,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -455,7 +535,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -494,7 +574,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -533,7 +613,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -573,7 +653,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -613,7 +693,15 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
+      },
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
       },
       "publicationStatus": "published",
       "locations": [
@@ -622,6 +710,38 @@
           "externalId": "1790257",
           "url": "https://developer.aliyun.com/article/1790257",
           "listingHash": "43013f56a42c6c297433be600fe61845071979177405c18ea81f3d4a75c9b90c"
+        }
+      ],
+      "duplicateCandidates": []
+    },
+    {
+      "id": "146e2929b1d2263ce30c",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "contentType": "blog",
+      "title": "Durable Agent 详解：如何让 Agent 在云端长期稳定运行",
+      "canonicalUrl": "https://developer.aliyun.com/article/1790923",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "discoveredAt": "2026-11-28T08:55:40.566Z",
+      "updatedAt": "2026-11-28T08:55:40.566Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-apphub",
+          "externalId": "1790923",
+          "url": "https://developer.aliyun.com/article/1790923",
+          "listingHash": "41b69751e07f83d2b6c859675c05b7aa905723797869733b27e62e997fa4ad1b"
         }
       ],
       "duplicateCandidates": [],
@@ -653,7 +773,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -693,7 +813,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -732,7 +852,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -772,7 +892,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -812,7 +932,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -852,7 +972,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -892,7 +1012,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -934,7 +1054,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -973,7 +1093,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1013,7 +1133,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1053,7 +1173,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1093,7 +1213,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1133,7 +1253,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1173,7 +1293,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1212,7 +1332,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1251,7 +1371,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1291,7 +1411,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1330,7 +1450,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1369,7 +1489,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1408,7 +1528,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1448,7 +1568,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1488,7 +1608,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "suspected",
@@ -1532,7 +1652,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1571,7 +1691,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1611,7 +1731,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1650,7 +1770,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1689,7 +1809,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1728,7 +1848,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1768,7 +1888,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1808,7 +1928,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1847,7 +1967,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1887,7 +2007,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1927,7 +2047,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -1967,7 +2087,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2006,7 +2126,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2046,7 +2166,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2068,6 +2188,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "4b861221fa29b37006ba",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "contentType": "blog",
+      "title": "Qoder × AgentLoop：智能体规模化应用，敏感数据保护如何跟上？",
+      "canonicalUrl": "https://developer.aliyun.com/article/1790919",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "discoveredAt": "2026-11-28T08:55:40.566Z",
+      "updatedAt": "2026-11-28T08:55:40.566Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-apphub",
+          "externalId": "1790919",
+          "url": "https://developer.aliyun.com/article/1790919",
+          "listingHash": "c6abe8bad63a9b0f9255c8d0fd43123ec7e69d58e6e15d7dab041d0b17b7560c"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "4bebf0640bdef5a68a46",
       "publisherId": "aliyun-cloud-native",
       "companyId": "alibaba",
@@ -2086,7 +2246,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2126,7 +2286,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2169,7 +2329,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2209,7 +2369,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2249,7 +2409,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2289,7 +2449,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2329,7 +2489,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2369,7 +2529,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2408,7 +2568,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2447,7 +2607,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2487,7 +2647,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2528,7 +2688,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2568,7 +2728,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2608,7 +2768,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2648,7 +2808,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2687,7 +2847,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2727,7 +2887,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2766,7 +2926,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2806,7 +2966,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2845,7 +3005,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2885,7 +3045,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2925,7 +3085,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -2965,7 +3125,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3005,7 +3165,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3044,7 +3204,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3084,7 +3244,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3124,7 +3284,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3164,7 +3324,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3204,7 +3364,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3243,7 +3403,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3283,7 +3443,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3323,7 +3483,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3363,7 +3523,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3403,7 +3563,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3443,7 +3603,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3483,7 +3643,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3523,7 +3683,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3563,7 +3723,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3603,7 +3763,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3643,7 +3803,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3683,7 +3843,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3722,7 +3882,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3762,7 +3922,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3802,7 +3962,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3842,7 +4002,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3882,7 +4042,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3922,7 +4082,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -3962,7 +4122,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4002,7 +4162,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4041,7 +4201,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4081,7 +4241,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4120,7 +4280,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4160,7 +4320,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4200,7 +4360,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4240,7 +4400,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4262,6 +4422,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "b6ced79f52d42ddf1cb4",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "contentType": "blog",
+      "title": "概率、插座与 5000 个爱因斯坦：专访阿里云研发副总裁周琦",
+      "canonicalUrl": "https://developer.aliyun.com/article/1790927",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "discoveredAt": "2026-11-28T08:55:40.566Z",
+      "updatedAt": "2026-11-28T08:55:40.566Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-apphub",
+          "externalId": "1790927",
+          "url": "https://developer.aliyun.com/article/1790927",
+          "listingHash": "bf04e6fe9ba4a247bb0475cea9e5015354b36d1590f0e2b20eef5d01b393e116"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "b88c350ff9bd8a5535ba",
       "publisherId": "aliyun-cloud-native",
       "companyId": "alibaba",
@@ -4280,7 +4480,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4320,7 +4520,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4360,7 +4560,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4400,7 +4600,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4439,7 +4639,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4478,7 +4678,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4517,7 +4717,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4557,7 +4757,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4596,7 +4796,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4635,7 +4835,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4675,7 +4875,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4716,7 +4916,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4756,7 +4956,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4796,7 +4996,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4835,7 +5035,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4874,7 +5074,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4914,7 +5114,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4954,7 +5154,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -4993,7 +5193,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5033,7 +5233,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5073,7 +5273,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5112,7 +5312,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5152,7 +5352,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5191,7 +5391,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5230,7 +5430,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5270,7 +5470,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5292,6 +5492,46 @@
       "duplicateCandidates": []
     },
     {
+      "id": "e4a4bf26b51205861ab2",
+      "publisherId": "aliyun-cloud-native",
+      "companyId": "alibaba",
+      "contentType": "blog",
+      "title": "Agent 数据飞轮平台的选型和实践",
+      "canonicalUrl": "https://developer.aliyun.com/article/1790926",
+      "author": "阿里云云原生",
+      "language": "zh-CN",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "discoveredAt": "2026-11-28T08:55:40.566Z",
+      "updatedAt": "2026-11-28T08:55:40.566Z",
+      "classification": {
+        "status": "accepted",
+        "topics": [],
+        "reason": "收录自已核验的国内官方技术账号；首批不进行文章内容筛选或自动主题分类。",
+        "evidence": [],
+        "method": "source",
+        "version": "source-index-1",
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
+      },
+      "publicationStatus": "published",
+      "locations": [
+        {
+          "sourceId": "aliyun-apphub",
+          "externalId": "1790926",
+          "url": "https://developer.aliyun.com/article/1790926",
+          "listingHash": "32e4628dd7914d3148699361766fe35c45114a1e77bcb34db91a3f6f00777852"
+        }
+      ],
+      "duplicateCandidates": [],
+      "advertorial": {
+        "status": "insufficient",
+        "method": "rules",
+        "basis": "title-description",
+        "reason": "缺少短摘要且标题没有明确营销信号，暂不标记；待补充材料复核。",
+        "evidence": [],
+        "version": "advertorial-trial-1"
+      }
+    },
+    {
       "id": "e729857445006454dd99",
       "publisherId": "aliyun-cloud-native",
       "companyId": "alibaba",
@@ -5310,7 +5550,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5350,7 +5590,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5389,7 +5629,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5428,7 +5668,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5467,7 +5707,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5506,7 +5746,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5546,7 +5786,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5585,7 +5825,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5624,7 +5864,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5664,7 +5904,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
@@ -5704,7 +5944,7 @@
         "evidence": [],
         "method": "source",
         "version": "source-index-1",
-        "classifiedAt": "2026-11-27T09:41:55.135Z"
+        "classifiedAt": "2026-11-28T08:55:45.082Z"
       },
       "advertorial": {
         "status": "insufficient",
